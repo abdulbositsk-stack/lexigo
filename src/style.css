@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fredoka:wght@500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme { --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif; --font-display: 'Fredoka', ui-rounded, sans-serif; --color-lexi: #5b4bea; --color-ink: #20233a; }
+@layer base { body { @apply min-h-screen bg-slate-50 font-sans text-ink antialiased; } button, input, select, textarea { font: inherit; } }
