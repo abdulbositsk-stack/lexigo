@@ -1,0 +1,5082 @@
+{
+  "level": "Kids 1",
+  "source": "Smart English - 4. Intermediate (Lessons 109-144).pdf",
+  "units": [
+    {
+      "id": "kids-1-lesson-109",
+      "name": "Lesson 109 - Sounds And Spelling: I-E",
+      "words": [
+        {
+          "word": "stuck",
+          "uzb": "ilashib qolgan",
+          "emoji": "📌",
+          "examples": {
+            "easy": "This is a stuck.",
+            "normal": "I can see a stuck in the picture."
+          }
+        },
+        {
+          "word": "windy",
+          "uzb": "shamolli",
+          "emoji": "🌬",
+          "examples": {
+            "easy": "This is a windy.",
+            "normal": "I can see a windy in the picture."
+          }
+        },
+        {
+          "word": "breeze",
+          "uzb": "shabada",
+          "emoji": "🍃",
+          "examples": {
+            "easy": "This is a breeze.",
+            "normal": "I can see a breeze in the picture."
+          }
+        },
+        {
+          "word": "lamp post",
+          "uzb": "chiroq ustuni",
+          "emoji": "🏮",
+          "examples": {
+            "easy": "I know lamp post.",
+            "normal": "We use the words lamp post in class."
+          }
+        },
+        {
+          "word": "handlebars",
+          "uzb": "rul",
+          "emoji": "🚲",
+          "examples": {
+            "easy": "These are handlebars.",
+            "normal": "I can see handlebars in the picture."
+          }
+        },
+        {
+          "word": "treetop",
+          "uzb": "daraxt uchi",
+          "emoji": "🌳",
+          "examples": {
+            "easy": "This is a treetop.",
+            "normal": "I can see a treetop in the picture."
+          }
+        },
+        {
+          "word": "daisy",
+          "uzb": "moychechak",
+          "emoji": "🌼",
+          "examples": {
+            "easy": "This is a daisy.",
+            "normal": "I can see a daisy in the picture."
+          }
+        },
+        {
+          "word": "streamer",
+          "uzb": "lentacha",
+          "emoji": "🎏",
+          "examples": {
+            "easy": "This is a streamer.",
+            "normal": "I can see a streamer in the picture."
+          }
+        },
+        {
+          "word": "hive",
+          "uzb": "asalari uyasi",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a hive.",
+            "normal": "I can see a hive in the picture."
+          }
+        },
+        {
+          "word": "pine",
+          "uzb": "qarag'ay",
+          "emoji": "🌲",
+          "examples": {
+            "easy": "This is a pine.",
+            "normal": "I can see a pine in the picture."
+          }
+        },
+        {
+          "word": "invite",
+          "uzb": "taklif qilmoq",
+          "emoji": "✉",
+          "examples": {
+            "easy": "Please invite.",
+            "normal": "The teacher asks us to invite."
+          }
+        },
+        {
+          "word": "twice",
+          "uzb": "ikki marta",
+          "emoji": "✌",
+          "examples": {
+            "easy": "This is a twice.",
+            "normal": "I can see a twice in the picture."
+          }
+        },
+        {
+          "word": "mile",
+          "uzb": "mil",
+          "emoji": "🛣",
+          "examples": {
+            "easy": "This is a mile.",
+            "normal": "I can see a mile in the picture."
+          }
+        },
+        {
+          "word": "sunshine",
+          "uzb": "quyosh nuri",
+          "emoji": "☀",
+          "examples": {
+            "easy": "This is a sunshine.",
+            "normal": "I can see a sunshine in the picture."
+          }
+        },
+        {
+          "word": "pavement",
+          "uzb": "yo'lka",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a pavement.",
+            "normal": "I can see a pavement in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-110",
+      "name": "Lesson 110 - Metal Mouth",
+      "words": [
+        {
+          "word": "metal",
+          "uzb": "metall",
+          "emoji": "🔩",
+          "examples": {
+            "easy": "This is a metal.",
+            "normal": "I can see a metal in the picture."
+          }
+        },
+        {
+          "word": "silver",
+          "uzb": "kumush",
+          "emoji": "🥈",
+          "examples": {
+            "easy": "This is a silver.",
+            "normal": "I can see a silver in the picture."
+          }
+        },
+        {
+          "word": "rude",
+          "uzb": "qo'pol",
+          "emoji": "😠",
+          "examples": {
+            "easy": "This is a rude.",
+            "normal": "I can see a rude in the picture."
+          }
+        },
+        {
+          "word": "unkind",
+          "uzb": "mehrsiz",
+          "emoji": "😾",
+          "examples": {
+            "easy": "This is a unkind.",
+            "normal": "I can see a unkind in the picture."
+          }
+        },
+        {
+          "word": "forgive",
+          "uzb": "kechirmoq",
+          "emoji": "🕊",
+          "examples": {
+            "easy": "Please forgive.",
+            "normal": "The teacher asks us to forgive."
+          }
+        },
+        {
+          "word": "upset",
+          "uzb": "xafa",
+          "emoji": "😢",
+          "examples": {
+            "easy": "This is a upset.",
+            "normal": "I can see a upset in the picture."
+          }
+        },
+        {
+          "word": "clever",
+          "uzb": "aqlli",
+          "emoji": "🧠",
+          "examples": {
+            "easy": "This is a clever.",
+            "normal": "I can see a clever in the picture."
+          }
+        },
+        {
+          "word": "battery",
+          "uzb": "batareya",
+          "emoji": "🔋",
+          "examples": {
+            "easy": "This is a battery.",
+            "normal": "I can see a battery in the picture."
+          }
+        },
+        {
+          "word": "switch",
+          "uzb": "tugmacha",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a switch.",
+            "normal": "I can see a switch in the picture."
+          }
+        },
+        {
+          "word": "screw",
+          "uzb": "vint",
+          "emoji": "🪛",
+          "examples": {
+            "easy": "This is a screw.",
+            "normal": "I can see a screw in the picture."
+          }
+        },
+        {
+          "word": "speech bubble",
+          "uzb": "gap pufakchasi",
+          "emoji": "📖",
+          "examples": {
+            "easy": "I know speech bubble.",
+            "normal": "We use the words speech bubble in class."
+          }
+        },
+        {
+          "word": "act out",
+          "uzb": "sahnalashtirmoq",
+          "emoji": "🎭",
+          "examples": {
+            "easy": "Please act out.",
+            "normal": "The teacher asks us to act out."
+          }
+        },
+        {
+          "word": "actor",
+          "uzb": "aktyor",
+          "emoji": "🎬",
+          "examples": {
+            "easy": "This is a actor.",
+            "normal": "I can see a actor in the picture."
+          }
+        },
+        {
+          "word": "superpower",
+          "uzb": "super kuch",
+          "emoji": "🦸",
+          "examples": {
+            "easy": "This is a superpower.",
+            "normal": "I can see a superpower in the picture."
+          }
+        },
+        {
+          "word": "proud",
+          "uzb": "faxrlanmoq",
+          "emoji": "📖",
+          "examples": {
+            "easy": "Please proud.",
+            "normal": "The teacher asks us to proud."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-111",
+      "name": "Lesson 111 - At Home",
+      "words": [
+        {
+          "word": "furniture",
+          "uzb": "mebel",
+          "emoji": "🪑",
+          "examples": {
+            "easy": "This is a furniture.",
+            "normal": "I can see a furniture in the picture."
+          }
+        },
+        {
+          "word": "toilet",
+          "uzb": "hojatxona",
+          "emoji": "🚽",
+          "examples": {
+            "easy": "This is a toilet.",
+            "normal": "I can see a toilet in the picture."
+          }
+        },
+        {
+          "word": "teapot",
+          "uzb": "choynak",
+          "emoji": "🫖",
+          "examples": {
+            "easy": "This is a teapot.",
+            "normal": "I can see a teapot in the picture."
+          }
+        },
+        {
+          "word": "saucer",
+          "uzb": "likopcha",
+          "emoji": "🍽",
+          "examples": {
+            "easy": "This is a saucer.",
+            "normal": "I can see a saucer in the picture."
+          }
+        },
+        {
+          "word": "upstairs",
+          "uzb": "yuqori qavat",
+          "emoji": "🔼",
+          "examples": {
+            "easy": "These are upstairs.",
+            "normal": "I can see upstairs in the picture."
+          }
+        },
+        {
+          "word": "downstairs",
+          "uzb": "pastki qavat",
+          "emoji": "🔽",
+          "examples": {
+            "easy": "These are downstairs.",
+            "normal": "I can see downstairs in the picture."
+          }
+        },
+        {
+          "word": "staircase",
+          "uzb": "zinapoya",
+          "emoji": "🪜",
+          "examples": {
+            "easy": "This is a staircase.",
+            "normal": "I can see a staircase in the picture."
+          }
+        },
+        {
+          "word": "dollhouse",
+          "uzb": "qo'g'irchoq uy",
+          "emoji": "🏠",
+          "examples": {
+            "easy": "This is a dollhouse.",
+            "normal": "I can see a dollhouse in the picture."
+          }
+        },
+        {
+          "word": "bedside table",
+          "uzb": "karavot yonidagi stol",
+          "emoji": "📖",
+          "examples": {
+            "easy": "I know bedside table.",
+            "normal": "We use the words bedside table in class."
+          }
+        },
+        {
+          "word": "cabinet",
+          "uzb": "javon",
+          "emoji": "🗄",
+          "examples": {
+            "easy": "This is a cabinet.",
+            "normal": "I can see a cabinet in the picture."
+          }
+        },
+        {
+          "word": "tile",
+          "uzb": "kafel",
+          "emoji": "🟦",
+          "examples": {
+            "easy": "This is a tile.",
+            "normal": "I can see a tile in the picture."
+          }
+        },
+        {
+          "word": "handle",
+          "uzb": "dasta",
+          "emoji": "🚪",
+          "examples": {
+            "easy": "This is a handle.",
+            "normal": "I can see a handle in the picture."
+          }
+        },
+        {
+          "word": "headphones",
+          "uzb": "quloqchin",
+          "emoji": "🎧",
+          "examples": {
+            "easy": "These are headphones.",
+            "normal": "I can see headphones in the picture."
+          }
+        },
+        {
+          "word": "dishwasher",
+          "uzb": "idish yuvish mashinasi",
+          "emoji": "🧽",
+          "examples": {
+            "easy": "This is a dishwasher.",
+            "normal": "I can see a dishwasher in the picture."
+          }
+        },
+        {
+          "word": "dining room",
+          "uzb": "ovqatxona",
+          "emoji": "🍽",
+          "examples": {
+            "easy": "I know dining room.",
+            "normal": "We use the words dining room in class."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-112",
+      "name": "Lesson 112 - Things In Every Room",
+      "words": [
+        {
+          "word": "toilet paper",
+          "uzb": "hojatxona qog'ozi",
+          "emoji": "🧻",
+          "examples": {
+            "easy": "I know toilet paper.",
+            "normal": "We use the words toilet paper in class."
+          }
+        },
+        {
+          "word": "lampshade",
+          "uzb": "abajur",
+          "emoji": "💡",
+          "examples": {
+            "easy": "This is a lampshade.",
+            "normal": "I can see a lampshade in the picture."
+          }
+        },
+        {
+          "word": "doormat",
+          "uzb": "eshik gilamchasi",
+          "emoji": "🚪",
+          "examples": {
+            "easy": "This is a doormat.",
+            "normal": "I can see a doormat in the picture."
+          }
+        },
+        {
+          "word": "banister",
+          "uzb": "zina panjarasi",
+          "emoji": "🪜",
+          "examples": {
+            "easy": "This is a banister.",
+            "normal": "I can see a banister in the picture."
+          }
+        },
+        {
+          "word": "violin",
+          "uzb": "skripka",
+          "emoji": "🎻",
+          "examples": {
+            "easy": "This is a violin.",
+            "normal": "I can see a violin in the picture."
+          }
+        },
+        {
+          "word": "fairy lights",
+          "uzb": "chiroqchalar",
+          "emoji": "✨",
+          "examples": {
+            "easy": "These are fairy lights.",
+            "normal": "I can see fairy lights in the picture."
+          }
+        },
+        {
+          "word": "ceiling",
+          "uzb": "shift",
+          "emoji": "🏠",
+          "examples": {
+            "easy": "This is a ceiling.",
+            "normal": "I can see a ceiling in the picture."
+          }
+        },
+        {
+          "word": "duvet",
+          "uzb": "ko'rpa",
+          "emoji": "🛏",
+          "examples": {
+            "easy": "This is a duvet.",
+            "normal": "I can see a duvet in the picture."
+          }
+        },
+        {
+          "word": "headphones",
+          "uzb": "quloqchin",
+          "emoji": "📖",
+          "examples": {
+            "easy": "These are headphones.",
+            "normal": "I can see headphones in the picture."
+          }
+        },
+        {
+          "word": "dishwasher",
+          "uzb": "idish yuvish mashinasi",
+          "emoji": "🧽",
+          "examples": {
+            "easy": "This is a dishwasher.",
+            "normal": "I can see a dishwasher in the picture."
+          }
+        },
+        {
+          "word": "dining room",
+          "uzb": "ovqatxona",
+          "emoji": "🍽",
+          "examples": {
+            "easy": "I know dining room.",
+            "normal": "We use the words dining room in class."
+          }
+        },
+        {
+          "word": "videogame",
+          "uzb": "videoo'yin",
+          "emoji": "🎮",
+          "examples": {
+            "easy": "This is a videogame.",
+            "normal": "I can see a videogame in the picture."
+          }
+        },
+        {
+          "word": "living room",
+          "uzb": "mehmonxona",
+          "emoji": "🛋",
+          "examples": {
+            "easy": "I know living room.",
+            "normal": "We use the words living room in class."
+          }
+        },
+        {
+          "word": "naughty",
+          "uzb": "sho'x",
+          "emoji": "😈",
+          "examples": {
+            "easy": "This is a naughty.",
+            "normal": "I can see a naughty in the picture."
+          }
+        },
+        {
+          "word": "bathroom",
+          "uzb": "hammom",
+          "emoji": "🚿",
+          "examples": {
+            "easy": "This is a bathroom.",
+            "normal": "I can see a bathroom in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-113",
+      "name": "Lesson 113 - Is It Mine Or Yours?",
+      "words": [
+        {
+          "word": "mine",
+          "uzb": "meniki",
+          "emoji": "🙋",
+          "examples": {
+            "easy": "This is a mine.",
+            "normal": "I can see a mine in the picture."
+          }
+        },
+        {
+          "word": "yours",
+          "uzb": "seniki",
+          "emoji": "👉",
+          "examples": {
+            "easy": "These are yours.",
+            "normal": "I can see yours in the picture."
+          }
+        },
+        {
+          "word": "washing machine",
+          "uzb": "kir yuvish mashinasi",
+          "emoji": "📖",
+          "examples": {
+            "easy": "I know washing machine.",
+            "normal": "We use the words washing machine in class."
+          }
+        },
+        {
+          "word": "laundry",
+          "uzb": "kir",
+          "emoji": "🧺",
+          "examples": {
+            "easy": "This is a laundry.",
+            "normal": "I can see a laundry in the picture."
+          }
+        },
+        {
+          "word": "clothes peg",
+          "uzb": "kir qisqich",
+          "emoji": "📌",
+          "examples": {
+            "easy": "I know clothes peg.",
+            "normal": "We use the words clothes peg in class."
+          }
+        },
+        {
+          "word": "dryer",
+          "uzb": "quritgich",
+          "emoji": "💨",
+          "examples": {
+            "easy": "This is a dryer.",
+            "normal": "I can see a dryer in the picture."
+          }
+        },
+        {
+          "word": "drying rack",
+          "uzb": "kir ilgich",
+          "emoji": "🧷",
+          "examples": {
+            "easy": "I know drying rack.",
+            "normal": "We use the words drying rack in class."
+          }
+        },
+        {
+          "word": "fruit bowl",
+          "uzb": "meva idishi",
+          "emoji": "🍎",
+          "examples": {
+            "easy": "I know fruit bowl.",
+            "normal": "We use the words fruit bowl in class."
+          }
+        },
+        {
+          "word": "coffee table",
+          "uzb": "past stol",
+          "emoji": "☕",
+          "examples": {
+            "easy": "I know coffee table.",
+            "normal": "We use the words coffee table in class."
+          }
+        },
+        {
+          "word": "whose",
+          "uzb": "kimning",
+          "emoji": "❓",
+          "examples": {
+            "easy": "This is a whose.",
+            "normal": "I can see a whose in the picture."
+          }
+        },
+        {
+          "word": "videogame",
+          "uzb": "videoo'yin",
+          "emoji": "🎮",
+          "examples": {
+            "easy": "This is a videogame.",
+            "normal": "I can see a videogame in the picture."
+          }
+        },
+        {
+          "word": "living room",
+          "uzb": "mehmonxona",
+          "emoji": "🛋",
+          "examples": {
+            "easy": "I know living room.",
+            "normal": "We use the words living room in class."
+          }
+        },
+        {
+          "word": "naughty",
+          "uzb": "sho'x",
+          "emoji": "😈",
+          "examples": {
+            "easy": "This is a naughty.",
+            "normal": "I can see a naughty in the picture."
+          }
+        },
+        {
+          "word": "bathroom",
+          "uzb": "hammom",
+          "emoji": "🚿",
+          "examples": {
+            "easy": "This is a bathroom.",
+            "normal": "I can see a bathroom in the picture."
+          }
+        },
+        {
+          "word": "cook",
+          "uzb": "pishirmoq",
+          "emoji": "👨‍🍳",
+          "examples": {
+            "easy": "Please cook.",
+            "normal": "The teacher asks us to cook."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-114",
+      "name": "Lesson 114 - Whose Shoes Are These?",
+      "words": [
+        {
+          "word": "hers",
+          "uzb": "uniki",
+          "emoji": "👧",
+          "examples": {
+            "easy": "These are hers.",
+            "normal": "I can see hers in the picture."
+          }
+        },
+        {
+          "word": "muddy",
+          "uzb": "loyli",
+          "emoji": "🟤",
+          "examples": {
+            "easy": "This is a muddy.",
+            "normal": "I can see a muddy in the picture."
+          }
+        },
+        {
+          "word": "shoe rack",
+          "uzb": "poyabzal javoni",
+          "emoji": "👟",
+          "examples": {
+            "easy": "I know shoe rack.",
+            "normal": "We use the words shoe rack in class."
+          }
+        },
+        {
+          "word": "magnet",
+          "uzb": "magnit",
+          "emoji": "🧲",
+          "examples": {
+            "easy": "This is a magnet.",
+            "normal": "I can see a magnet in the picture."
+          }
+        },
+        {
+          "word": "mushroom",
+          "uzb": "qo'ziqorin",
+          "emoji": "🍄",
+          "examples": {
+            "easy": "This is a mushroom.",
+            "normal": "I can see a mushroom in the picture."
+          }
+        },
+        {
+          "word": "footprint",
+          "uzb": "iz",
+          "emoji": "👣",
+          "examples": {
+            "easy": "This is a footprint.",
+            "normal": "I can see a footprint in the picture."
+          }
+        },
+        {
+          "word": "which",
+          "uzb": "qaysi",
+          "emoji": "❓",
+          "examples": {
+            "easy": "This is a which.",
+            "normal": "I can see a which in the picture."
+          }
+        },
+        {
+          "word": "cook",
+          "uzb": "pishirmoq",
+          "emoji": "👨‍🍳",
+          "examples": {
+            "easy": "Please cook.",
+            "normal": "The teacher asks us to cook."
+          }
+        },
+        {
+          "word": "outside",
+          "uzb": "tashqari",
+          "emoji": "🏞",
+          "examples": {
+            "easy": "This is a outside.",
+            "normal": "I can see a outside in the picture."
+          }
+        },
+        {
+          "word": "cooker",
+          "uzb": "plita",
+          "emoji": "🍲",
+          "examples": {
+            "easy": "This is a cooker.",
+            "normal": "I can see a cooker in the picture."
+          }
+        },
+        {
+          "word": "bedroom",
+          "uzb": "yotoqxona",
+          "emoji": "🛌",
+          "examples": {
+            "easy": "This is a bedroom.",
+            "normal": "I can see a bedroom in the picture."
+          }
+        },
+        {
+          "word": "kitchen",
+          "uzb": "oshxona",
+          "emoji": "🍳",
+          "examples": {
+            "easy": "This is a kitchen.",
+            "normal": "I can see a kitchen in the picture."
+          }
+        },
+        {
+          "word": "dinner",
+          "uzb": "kechki ovqat",
+          "emoji": "🥘",
+          "examples": {
+            "easy": "This is a dinner.",
+            "normal": "I can see a dinner in the picture."
+          }
+        },
+        {
+          "word": "remote",
+          "uzb": "pult",
+          "emoji": "🎛",
+          "examples": {
+            "easy": "This is a remote.",
+            "normal": "I can see a remote in the picture."
+          }
+        },
+        {
+          "word": "magic",
+          "uzb": "sehr",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a magic.",
+            "normal": "I can see a magic in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-115",
+      "name": "Lesson 115 - Sounds And Spelling: -Se",
+      "words": [
+        {
+          "word": "earring",
+          "uzb": "sirg'a",
+          "emoji": "💎",
+          "examples": {
+            "easy": "This is a earring.",
+            "normal": "I can see a earring in the picture."
+          }
+        },
+        {
+          "word": "wooden",
+          "uzb": "yog'och",
+          "emoji": "🪵",
+          "examples": {
+            "easy": "This is a wooden.",
+            "normal": "I can see a wooden in the picture."
+          }
+        },
+        {
+          "word": "outside",
+          "uzb": "tashqari",
+          "emoji": "🏞",
+          "examples": {
+            "easy": "This is a outside.",
+            "normal": "I can see a outside in the picture."
+          }
+        },
+        {
+          "word": "cooker",
+          "uzb": "plita",
+          "emoji": "🍲",
+          "examples": {
+            "easy": "This is a cooker.",
+            "normal": "I can see a cooker in the picture."
+          }
+        },
+        {
+          "word": "bedroom",
+          "uzb": "yotoqxona",
+          "emoji": "🛌",
+          "examples": {
+            "easy": "This is a bedroom.",
+            "normal": "I can see a bedroom in the picture."
+          }
+        },
+        {
+          "word": "kitchen",
+          "uzb": "oshxona",
+          "emoji": "🍳",
+          "examples": {
+            "easy": "This is a kitchen.",
+            "normal": "I can see a kitchen in the picture."
+          }
+        },
+        {
+          "word": "dinner",
+          "uzb": "kechki ovqat",
+          "emoji": "🥘",
+          "examples": {
+            "easy": "This is a dinner.",
+            "normal": "I can see a dinner in the picture."
+          }
+        },
+        {
+          "word": "remote",
+          "uzb": "pult",
+          "emoji": "🎛",
+          "examples": {
+            "easy": "This is a remote.",
+            "normal": "I can see a remote in the picture."
+          }
+        },
+        {
+          "word": "magic",
+          "uzb": "sehr",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a magic.",
+            "normal": "I can see a magic in the picture."
+          }
+        },
+        {
+          "word": "knife",
+          "uzb": "pichoq",
+          "emoji": "🔪",
+          "examples": {
+            "easy": "This is a knife.",
+            "normal": "I can see a knife in the picture."
+          }
+        },
+        {
+          "word": "stairs",
+          "uzb": "zina",
+          "emoji": "🪜",
+          "examples": {
+            "easy": "These are stairs.",
+            "normal": "I can see stairs in the picture."
+          }
+        },
+        {
+          "word": "castle",
+          "uzb": "qal'a",
+          "emoji": "🏰",
+          "examples": {
+            "easy": "This is a castle.",
+            "normal": "I can see a castle in the picture."
+          }
+        },
+        {
+          "word": "roar",
+          "uzb": "o'kirmoq",
+          "emoji": "🦁",
+          "examples": {
+            "easy": "Please roar.",
+            "normal": "The teacher asks us to roar."
+          }
+        },
+        {
+          "word": "steam",
+          "uzb": "bug'",
+          "emoji": "💨",
+          "examples": {
+            "easy": "This is a steam.",
+            "normal": "I can see a steam in the picture."
+          }
+        },
+        {
+          "word": "juice",
+          "uzb": "sharbat",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a juice.",
+            "normal": "I can see a juice in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-116",
+      "name": "Lesson 116 - Story: Hide And Seek",
+      "words": [
+        {
+          "word": "hide and seek",
+          "uzb": "berkinmachoq",
+          "emoji": "🙈",
+          "examples": {
+            "easy": "I know hide and seek.",
+            "normal": "We use the words hide and seek in class."
+          }
+        },
+        {
+          "word": "well done",
+          "uzb": "barakalla",
+          "emoji": "👏",
+          "examples": {
+            "easy": "I know well done.",
+            "normal": "We use the words well done in class."
+          }
+        },
+        {
+          "word": "rocking horse",
+          "uzb": "tebranma ot",
+          "emoji": "🎠",
+          "examples": {
+            "easy": "I know rocking horse.",
+            "normal": "We use the words rocking horse in class."
+          }
+        },
+        {
+          "word": "radiator",
+          "uzb": "radiator",
+          "emoji": "♨",
+          "examples": {
+            "easy": "This is a radiator.",
+            "normal": "I can see a radiator in the picture."
+          }
+        },
+        {
+          "word": "come out",
+          "uzb": "chiqmoq",
+          "emoji": "🚪",
+          "examples": {
+            "easy": "Please come out.",
+            "normal": "The teacher asks us to come out."
+          }
+        },
+        {
+          "word": "knife",
+          "uzb": "pichoq",
+          "emoji": "🔪",
+          "examples": {
+            "easy": "This is a knife.",
+            "normal": "I can see a knife in the picture."
+          }
+        },
+        {
+          "word": "stairs",
+          "uzb": "zina",
+          "emoji": "🪜",
+          "examples": {
+            "easy": "These are stairs.",
+            "normal": "I can see stairs in the picture."
+          }
+        },
+        {
+          "word": "castle",
+          "uzb": "qal'a",
+          "emoji": "🏰",
+          "examples": {
+            "easy": "This is a castle.",
+            "normal": "I can see a castle in the picture."
+          }
+        },
+        {
+          "word": "roar",
+          "uzb": "o'kirmoq",
+          "emoji": "🦁",
+          "examples": {
+            "easy": "Please roar.",
+            "normal": "The teacher asks us to roar."
+          }
+        },
+        {
+          "word": "steam",
+          "uzb": "bug'",
+          "emoji": "💨",
+          "examples": {
+            "easy": "This is a steam.",
+            "normal": "I can see a steam in the picture."
+          }
+        },
+        {
+          "word": "juice",
+          "uzb": "sharbat",
+          "emoji": "🧃",
+          "examples": {
+            "easy": "This is a juice.",
+            "normal": "I can see a juice in the picture."
+          }
+        },
+        {
+          "word": "oven",
+          "uzb": "duxovka",
+          "emoji": "🔥",
+          "examples": {
+            "easy": "This is a oven.",
+            "normal": "I can see a oven in the picture."
+          }
+        },
+        {
+          "word": "hall",
+          "uzb": "dahliz",
+          "emoji": "🚪",
+          "examples": {
+            "easy": "This is a hall.",
+            "normal": "I can see a hall in the picture."
+          }
+        },
+        {
+          "word": "vase",
+          "uzb": "vaza",
+          "emoji": "🏺",
+          "examples": {
+            "easy": "This is a vase.",
+            "normal": "I can see a vase in the picture."
+          }
+        },
+        {
+          "word": "kettle",
+          "uzb": "choynak",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a kettle.",
+            "normal": "I can see a kettle in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-117",
+      "name": "Lesson 117 - Marie'S Art: Origami",
+      "words": [
+        {
+          "word": "origami",
+          "uzb": "origami",
+          "emoji": "🎏",
+          "examples": {
+            "easy": "This is a origami.",
+            "normal": "I can see a origami in the picture."
+          }
+        },
+        {
+          "word": "crane",
+          "uzb": "turna",
+          "emoji": "🕊",
+          "examples": {
+            "easy": "This is a crane.",
+            "normal": "I can see a crane in the picture."
+          }
+        },
+        {
+          "word": "cube",
+          "uzb": "kub",
+          "emoji": "🧊",
+          "examples": {
+            "easy": "This is a cube.",
+            "normal": "I can see a cube in the picture."
+          }
+        },
+        {
+          "word": "paper plane",
+          "uzb": "qog'oz samolyot",
+          "emoji": "✈",
+          "examples": {
+            "easy": "I know paper plane.",
+            "normal": "We use the words paper plane in class."
+          }
+        },
+        {
+          "word": "paper boat",
+          "uzb": "qog'oz qayiq",
+          "emoji": "⛵",
+          "examples": {
+            "easy": "I know paper boat.",
+            "normal": "We use the words paper boat in class."
+          }
+        },
+        {
+          "word": "world",
+          "uzb": "dunyo",
+          "emoji": "🌍",
+          "examples": {
+            "easy": "This is a world.",
+            "normal": "I can see a world in the picture."
+          }
+        },
+        {
+          "word": "corner",
+          "uzb": "burchak",
+          "emoji": "📏",
+          "examples": {
+            "easy": "This is a corner.",
+            "normal": "I can see a corner in the picture."
+          }
+        },
+        {
+          "word": "tulip",
+          "uzb": "lola",
+          "emoji": "🌷",
+          "examples": {
+            "easy": "This is a tulip.",
+            "normal": "I can see a tulip in the picture."
+          }
+        },
+        {
+          "word": "model",
+          "uzb": "model",
+          "emoji": "🏗",
+          "examples": {
+            "easy": "This is a model.",
+            "normal": "I can see a model in the picture."
+          }
+        },
+        {
+          "word": "oven",
+          "uzb": "duxovka",
+          "emoji": "🔥",
+          "examples": {
+            "easy": "This is a oven.",
+            "normal": "I can see a oven in the picture."
+          }
+        },
+        {
+          "word": "hall",
+          "uzb": "dahliz",
+          "emoji": "🚪",
+          "examples": {
+            "easy": "This is a hall.",
+            "normal": "I can see a hall in the picture."
+          }
+        },
+        {
+          "word": "vase",
+          "uzb": "vaza",
+          "emoji": "🏺",
+          "examples": {
+            "easy": "This is a vase.",
+            "normal": "I can see a vase in the picture."
+          }
+        },
+        {
+          "word": "kettle",
+          "uzb": "choynak",
+          "emoji": "🫖",
+          "examples": {
+            "easy": "This is a kettle.",
+            "normal": "I can see a kettle in the picture."
+          }
+        },
+        {
+          "word": "trick",
+          "uzb": "hiyla",
+          "emoji": "🎩",
+          "examples": {
+            "easy": "This is a trick.",
+            "normal": "I can see a trick in the picture."
+          }
+        },
+        {
+          "word": "jar",
+          "uzb": "banka",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a jar.",
+            "normal": "I can see a jar in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-118",
+      "name": "Lesson 118 - Trevor'S Values: Reuse And",
+      "words": [
+        {
+          "word": "reuse",
+          "uzb": "qayta ishlatmoq",
+          "emoji": "🔁",
+          "examples": {
+            "easy": "Please reuse.",
+            "normal": "The teacher asks us to reuse."
+          }
+        },
+        {
+          "word": "plastic",
+          "uzb": "plastik",
+          "emoji": "🧴",
+          "examples": {
+            "easy": "This is a plastic.",
+            "normal": "I can see a plastic in the picture."
+          }
+        },
+        {
+          "word": "plastic bag",
+          "uzb": "plastik xalta",
+          "emoji": "🛍",
+          "examples": {
+            "easy": "I know plastic bag.",
+            "normal": "We use the words plastic bag in class."
+          }
+        },
+        {
+          "word": "newspaper",
+          "uzb": "gazeta",
+          "emoji": "📰",
+          "examples": {
+            "easy": "This is a newspaper.",
+            "normal": "I can see a newspaper in the picture."
+          }
+        },
+        {
+          "word": "plastic bottle",
+          "uzb": "plastik shisha",
+          "emoji": "🍾",
+          "examples": {
+            "easy": "I know plastic bottle.",
+            "normal": "We use the words plastic bottle in class."
+          }
+        },
+        {
+          "word": "vegetable",
+          "uzb": "sabzavot",
+          "emoji": "🥬",
+          "examples": {
+            "easy": "This is a vegetable.",
+            "normal": "I can see a vegetable in the picture."
+          }
+        },
+        {
+          "word": "flowerpot",
+          "uzb": "guldon",
+          "emoji": "🪴",
+          "examples": {
+            "easy": "This is a flowerpot.",
+            "normal": "I can see a flowerpot in the picture."
+          }
+        },
+        {
+          "word": "trick",
+          "uzb": "hiyla",
+          "emoji": "🎩",
+          "examples": {
+            "easy": "This is a trick.",
+            "normal": "I can see a trick in the picture."
+          }
+        },
+        {
+          "word": "jar",
+          "uzb": "banka",
+          "emoji": "🥫",
+          "examples": {
+            "easy": "This is a jar.",
+            "normal": "I can see a jar in the picture."
+          }
+        },
+        {
+          "word": "sink",
+          "uzb": "rakovina",
+          "emoji": "🚰",
+          "examples": {
+            "easy": "This is a sink.",
+            "normal": "I can see a sink in the picture."
+          }
+        },
+        {
+          "word": "fork",
+          "uzb": "vilka",
+          "emoji": "🍴",
+          "examples": {
+            "easy": "This is a fork.",
+            "normal": "I can see a fork in the picture."
+          }
+        },
+        {
+          "word": "pot",
+          "uzb": "qozon",
+          "emoji": "🍲",
+          "examples": {
+            "easy": "This is a pot.",
+            "normal": "I can see a pot in the picture."
+          }
+        },
+        {
+          "word": "pan",
+          "uzb": "tova",
+          "emoji": "🍳",
+          "examples": {
+            "easy": "This is a pan.",
+            "normal": "I can see a pan in the picture."
+          }
+        },
+        {
+          "word": "apologise",
+          "uzb": "kechirim so'ramoq",
+          "emoji": "🙇‍♂️",
+          "examples": {
+            "easy": "Please apologise.",
+            "normal": "The teacher asks us to apologise."
+          }
+        },
+        {
+          "word": "hot air balloon",
+          "uzb": "havo shari",
+          "emoji": "📖",
+          "examples": {
+            "easy": "I know hot air balloon.",
+            "normal": "We use the words hot air balloon in class."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-119",
+      "name": "Lesson 119 - Review: Units 1-4",
+      "words": [
+        {
+          "word": "fireplace",
+          "uzb": "kamin",
+          "emoji": "🔥",
+          "examples": {
+            "easy": "This is a fireplace.",
+            "normal": "I can see a fireplace in the picture."
+          }
+        },
+        {
+          "word": "alarm clock",
+          "uzb": "budilnik",
+          "emoji": "⏰",
+          "examples": {
+            "easy": "I know alarm clock.",
+            "normal": "We use the words alarm clock in class."
+          }
+        },
+        {
+          "word": "telephone",
+          "uzb": "telefon",
+          "emoji": "☎",
+          "examples": {
+            "easy": "This is a telephone.",
+            "normal": "I can see a telephone in the picture."
+          }
+        },
+        {
+          "word": "sink",
+          "uzb": "rakovina",
+          "emoji": "🚰",
+          "examples": {
+            "easy": "This is a sink.",
+            "normal": "I can see a sink in the picture."
+          }
+        },
+        {
+          "word": "fork",
+          "uzb": "vilka",
+          "emoji": "🍴",
+          "examples": {
+            "easy": "This is a fork.",
+            "normal": "I can see a fork in the picture."
+          }
+        },
+        {
+          "word": "pot",
+          "uzb": "qozon",
+          "emoji": "🍲",
+          "examples": {
+            "easy": "This is a pot.",
+            "normal": "I can see a pot in the picture."
+          }
+        },
+        {
+          "word": "pan",
+          "uzb": "tova",
+          "emoji": "🍳",
+          "examples": {
+            "easy": "This is a pan.",
+            "normal": "I can see a pan in the picture."
+          }
+        },
+        {
+          "word": "washing machine",
+          "uzb": "kir yuvish mashinasi",
+          "emoji": "📖",
+          "examples": {
+            "easy": "I know washing machine.",
+            "normal": "We use the words washing machine in class."
+          }
+        },
+        {
+          "word": "apologise",
+          "uzb": "kechirim so'ramoq",
+          "emoji": "🙇‍♂️",
+          "examples": {
+            "easy": "Please apologise.",
+            "normal": "The teacher asks us to apologise."
+          }
+        },
+        {
+          "word": "hot air balloon",
+          "uzb": "havo shari",
+          "emoji": "📖",
+          "examples": {
+            "easy": "I know hot air balloon.",
+            "normal": "We use the words hot air balloon in class."
+          }
+        },
+        {
+          "word": "wrapping paper",
+          "uzb": "o'rov qog'ozi",
+          "emoji": "📖",
+          "examples": {
+            "easy": "I know wrapping paper.",
+            "normal": "We use the words wrapping paper in class."
+          }
+        },
+        {
+          "word": "ice cream",
+          "uzb": "muzqaymoq",
+          "emoji": "🍦",
+          "examples": {
+            "easy": "Please ice cream.",
+            "normal": "The teacher asks us to ice cream."
+          }
+        },
+        {
+          "word": "bedside table",
+          "uzb": "karavot yonidagi stol",
+          "emoji": "🛏",
+          "examples": {
+            "easy": "I know bedside table.",
+            "normal": "We use the words bedside table in class."
+          }
+        },
+        {
+          "word": "here you are",
+          "uzb": "mana",
+          "emoji": "🤲",
+          "examples": {
+            "easy": "I know here you are.",
+            "normal": "We use the words here you are in class."
+          }
+        },
+        {
+          "word": "everybody",
+          "uzb": "hamma",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a everybody.",
+            "normal": "I can see a everybody in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-120",
+      "name": "Lesson 120 - Review Game: Units 1-4",
+      "words": [
+        {
+          "word": "washbasin",
+          "uzb": "qo'l yuvgich",
+          "emoji": "🚰",
+          "examples": {
+            "easy": "This is a washbasin.",
+            "normal": "I can see a washbasin in the picture."
+          }
+        },
+        {
+          "word": "quilt",
+          "uzb": "ko'rpacha",
+          "emoji": "🛏",
+          "examples": {
+            "easy": "This is a quilt.",
+            "normal": "I can see a quilt in the picture."
+          }
+        },
+        {
+          "word": "headboard",
+          "uzb": "karavot boshi",
+          "emoji": "🛋",
+          "examples": {
+            "easy": "This is a headboard.",
+            "normal": "I can see a headboard in the picture."
+          }
+        },
+        {
+          "word": "washing machine",
+          "uzb": "kir yuvish mashinasi",
+          "emoji": "📖",
+          "examples": {
+            "easy": "I know washing machine.",
+            "normal": "We use the words washing machine in class."
+          }
+        },
+        {
+          "word": "wrapping paper",
+          "uzb": "o'rov qog'ozi",
+          "emoji": "📖",
+          "examples": {
+            "easy": "I know wrapping paper.",
+            "normal": "We use the words wrapping paper in class."
+          }
+        },
+        {
+          "word": "ice cream",
+          "uzb": "muzqaymoq",
+          "emoji": "🍦",
+          "examples": {
+            "easy": "Please ice cream.",
+            "normal": "The teacher asks us to ice cream."
+          }
+        },
+        {
+          "word": "bedside table",
+          "uzb": "karavot yonidagi stol",
+          "emoji": "🛏",
+          "examples": {
+            "easy": "I know bedside table.",
+            "normal": "We use the words bedside table in class."
+          }
+        },
+        {
+          "word": "here you are",
+          "uzb": "mana",
+          "emoji": "🤲",
+          "examples": {
+            "easy": "I know here you are.",
+            "normal": "We use the words here you are in class."
+          }
+        },
+        {
+          "word": "everybody",
+          "uzb": "hamma",
+          "emoji": "👨‍👩‍👧‍👦",
+          "examples": {
+            "easy": "This is a everybody.",
+            "normal": "I can see a everybody in the picture."
+          }
+        },
+        {
+          "word": "toilet paper",
+          "uzb": "hojatxona qog'ozi",
+          "emoji": "🧻",
+          "examples": {
+            "easy": "I know toilet paper.",
+            "normal": "We use the words toilet paper in class."
+          }
+        },
+        {
+          "word": "dictionary",
+          "uzb": "lug'at",
+          "emoji": "📔",
+          "examples": {
+            "easy": "This is a dictionary.",
+            "normal": "I can see a dictionary in the picture."
+          }
+        },
+        {
+          "word": "lost property",
+          "uzb": "topilgan buyumlar",
+          "emoji": "🧳",
+          "examples": {
+            "easy": "I know lost property.",
+            "normal": "We use the words lost property in class."
+          }
+        },
+        {
+          "word": "shop assistant",
+          "uzb": "sotuvchi",
+          "emoji": "📖",
+          "examples": {
+            "easy": "I know shop assistant.",
+            "normal": "We use the words shop assistant in class."
+          }
+        },
+        {
+          "word": "give back",
+          "uzb": "qaytarib bermoq",
+          "emoji": "🤝",
+          "examples": {
+            "easy": "Please give back.",
+            "normal": "The teacher asks us to give back."
+          }
+        },
+        {
+          "word": "clothes peg",
+          "uzb": "kir qisqich",
+          "emoji": "📌",
+          "examples": {
+            "easy": "I know clothes peg.",
+            "normal": "We use the words clothes peg in class."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-121",
+      "name": "Lesson 121 - Meet My Family",
+      "words": [
+        {
+          "word": "cousin",
+          "uzb": "amakivachcha",
+          "emoji": "👦",
+          "examples": {
+            "easy": "This is a cousin.",
+            "normal": "I can see a cousin in the picture."
+          }
+        },
+        {
+          "word": "aunt",
+          "uzb": "xola",
+          "emoji": "👩",
+          "examples": {
+            "easy": "This is a aunt.",
+            "normal": "I can see a aunt in the picture."
+          }
+        },
+        {
+          "word": "uncle",
+          "uzb": "amaki",
+          "emoji": "👨",
+          "examples": {
+            "easy": "This is a uncle.",
+            "normal": "I can see a uncle in the picture."
+          }
+        },
+        {
+          "word": "pushchair",
+          "uzb": "bolalar aravachasi",
+          "emoji": "🚼",
+          "examples": {
+            "easy": "This is a pushchair.",
+            "normal": "I can see a pushchair in the picture."
+          }
+        },
+        {
+          "word": "bald",
+          "uzb": "kal",
+          "emoji": "🧑‍🦲",
+          "examples": {
+            "easy": "This is a bald.",
+            "normal": "I can see a bald in the picture."
+          }
+        },
+        {
+          "word": "chain",
+          "uzb": "zanjir",
+          "emoji": "⛓",
+          "examples": {
+            "easy": "This is a chain.",
+            "normal": "I can see a chain in the picture."
+          }
+        },
+        {
+          "word": "stone",
+          "uzb": "tosh",
+          "emoji": "🪨",
+          "examples": {
+            "easy": "This is a stone.",
+            "normal": "I can see a stone in the picture."
+          }
+        },
+        {
+          "word": "grandparents",
+          "uzb": "buvi-bobo",
+          "emoji": "👵",
+          "examples": {
+            "easy": "These are grandparents.",
+            "normal": "I can see grandparents in the picture."
+          }
+        },
+        {
+          "word": "parents",
+          "uzb": "ota-ona",
+          "emoji": "👨‍👩‍👧",
+          "examples": {
+            "easy": "These are parents.",
+            "normal": "I can see parents in the picture."
+          }
+        },
+        {
+          "word": "ponytail",
+          "uzb": "dumcha soch",
+          "emoji": "💇",
+          "examples": {
+            "easy": "This is a ponytail.",
+            "normal": "I can see a ponytail in the picture."
+          }
+        },
+        {
+          "word": "grandmother",
+          "uzb": "buvi",
+          "emoji": "👵",
+          "examples": {
+            "easy": "This is a grandmother.",
+            "normal": "I can see a grandmother in the picture."
+          }
+        },
+        {
+          "word": "grandfather",
+          "uzb": "bobo",
+          "emoji": "👴",
+          "examples": {
+            "easy": "This is a grandfather.",
+            "normal": "I can see a grandfather in the picture."
+          }
+        },
+        {
+          "word": "beautiful",
+          "uzb": "chiroyli",
+          "emoji": "🌸",
+          "examples": {
+            "easy": "This is a beautiful.",
+            "normal": "I can see a beautiful in the picture."
+          }
+        },
+        {
+          "word": "homework",
+          "uzb": "uy vazifasi",
+          "emoji": "📝",
+          "examples": {
+            "easy": "This is homework.",
+            "normal": "We can see homework in the picture."
+          }
+        },
+        {
+          "word": "briefcase",
+          "uzb": "portfel",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a briefcase.",
+            "normal": "I can see a briefcase in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-122",
+      "name": "Lesson 122 - Our Family Tree",
+      "words": [
+        {
+          "word": "family tree",
+          "uzb": "oila daraxti",
+          "emoji": "🌳",
+          "examples": {
+            "easy": "I know family tree.",
+            "normal": "We use the words family tree in class."
+          }
+        },
+        {
+          "word": "son",
+          "uzb": "o'g'il",
+          "emoji": "🧒",
+          "examples": {
+            "easy": "This is a son.",
+            "normal": "I can see a son in the picture."
+          }
+        },
+        {
+          "word": "daughter",
+          "uzb": "qiz",
+          "emoji": "👧",
+          "examples": {
+            "easy": "This is a daughter.",
+            "normal": "I can see a daughter in the picture."
+          }
+        },
+        {
+          "word": "wife",
+          "uzb": "xotin",
+          "emoji": "👰",
+          "examples": {
+            "easy": "This is a wife.",
+            "normal": "I can see a wife in the picture."
+          }
+        },
+        {
+          "word": "husband",
+          "uzb": "er",
+          "emoji": "🤵",
+          "examples": {
+            "easy": "This is a husband.",
+            "normal": "I can see a husband in the picture."
+          }
+        },
+        {
+          "word": "grandson",
+          "uzb": "nabira",
+          "emoji": "👦",
+          "examples": {
+            "easy": "This is a grandson.",
+            "normal": "I can see a grandson in the picture."
+          }
+        },
+        {
+          "word": "granddaughter",
+          "uzb": "nabira qiz",
+          "emoji": "👱‍♀️",
+          "examples": {
+            "easy": "This is a granddaughter.",
+            "normal": "I can see a granddaughter in the picture."
+          }
+        },
+        {
+          "word": "nephew",
+          "uzb": "jiyan",
+          "emoji": "🧑",
+          "examples": {
+            "easy": "This is a nephew.",
+            "normal": "I can see a nephew in the picture."
+          }
+        },
+        {
+          "word": "niece",
+          "uzb": "jiyan qiz",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a niece.",
+            "normal": "I can see a niece in the picture."
+          }
+        },
+        {
+          "word": "earring",
+          "uzb": "sirg'a",
+          "emoji": "💎",
+          "examples": {
+            "easy": "This is a earring.",
+            "normal": "I can see a earring in the picture."
+          }
+        },
+        {
+          "word": "teeth",
+          "uzb": "tishlar",
+          "emoji": "🦷",
+          "examples": {
+            "easy": "These are teeth.",
+            "normal": "I can see teeth in the picture."
+          }
+        },
+        {
+          "word": "ponytail",
+          "uzb": "dumcha soch",
+          "emoji": "💇",
+          "examples": {
+            "easy": "This is a ponytail.",
+            "normal": "I can see a ponytail in the picture."
+          }
+        },
+        {
+          "word": "grandmother",
+          "uzb": "buvi",
+          "emoji": "👵",
+          "examples": {
+            "easy": "This is a grandmother.",
+            "normal": "I can see a grandmother in the picture."
+          }
+        },
+        {
+          "word": "grandfather",
+          "uzb": "bobo",
+          "emoji": "👴",
+          "examples": {
+            "easy": "This is a grandfather.",
+            "normal": "I can see a grandfather in the picture."
+          }
+        },
+        {
+          "word": "beautiful",
+          "uzb": "chiroyli",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a beautiful.",
+            "normal": "I can see a beautiful in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-123",
+      "name": "Lesson 123 - What Are You Doing?",
+      "words": [
+        {
+          "word": "catching",
+          "uzb": "ushlamoq",
+          "emoji": "🥎",
+          "examples": {
+            "easy": "Please catching.",
+            "normal": "The teacher asks us to catching."
+          }
+        },
+        {
+          "word": "throwing",
+          "uzb": "uloqtirmoq",
+          "emoji": "🤾",
+          "examples": {
+            "easy": "Please throwing.",
+            "normal": "The teacher asks us to throwing."
+          }
+        },
+        {
+          "word": "running",
+          "uzb": "yugurmoq",
+          "emoji": "🏃",
+          "examples": {
+            "easy": "Please running.",
+            "normal": "The teacher asks us to running."
+          }
+        },
+        {
+          "word": "sitting",
+          "uzb": "o'tirmoq",
+          "emoji": "🪑",
+          "examples": {
+            "easy": "Please sitting.",
+            "normal": "The teacher asks us to sitting."
+          }
+        },
+        {
+          "word": "hitting",
+          "uzb": "urmoq",
+          "emoji": "🏏",
+          "examples": {
+            "easy": "Please hitting.",
+            "normal": "The teacher asks us to hitting."
+          }
+        },
+        {
+          "word": "getting",
+          "uzb": "olmoq",
+          "emoji": "🤲",
+          "examples": {
+            "easy": "Please getting.",
+            "normal": "The teacher asks us to getting."
+          }
+        },
+        {
+          "word": "eating",
+          "uzb": "yemoq",
+          "emoji": "🍴",
+          "examples": {
+            "easy": "Please eating.",
+            "normal": "The teacher asks us to eating."
+          }
+        },
+        {
+          "word": "making",
+          "uzb": "yasamoq",
+          "emoji": "🎂",
+          "examples": {
+            "easy": "Please making.",
+            "normal": "The teacher asks us to making."
+          }
+        },
+        {
+          "word": "drawing",
+          "uzb": "chizmoq",
+          "emoji": "📖",
+          "examples": {
+            "easy": "Please drawing.",
+            "normal": "The teacher asks us to drawing."
+          }
+        },
+        {
+          "word": "tissue",
+          "uzb": "salfetka",
+          "emoji": "🧻",
+          "examples": {
+            "easy": "This is a tissue.",
+            "normal": "I can see a tissue in the picture."
+          }
+        },
+        {
+          "word": "easel",
+          "uzb": "molbert",
+          "emoji": "🖼",
+          "examples": {
+            "easy": "This is a easel.",
+            "normal": "I can see a easel in the picture."
+          }
+        },
+        {
+          "word": "magnet",
+          "uzb": "magnit",
+          "emoji": "🧲",
+          "examples": {
+            "easy": "This is a magnet.",
+            "normal": "I can see a magnet in the picture."
+          }
+        },
+        {
+          "word": "homework",
+          "uzb": "uy vazifasi",
+          "emoji": "📝",
+          "examples": {
+            "easy": "This is homework.",
+            "normal": "We can see homework in the picture."
+          }
+        },
+        {
+          "word": "briefcase",
+          "uzb": "portfel",
+          "emoji": "💼",
+          "examples": {
+            "easy": "This is a briefcase.",
+            "normal": "I can see a briefcase in the picture."
+          }
+        },
+        {
+          "word": "scissors",
+          "uzb": "qaychi",
+          "emoji": "📖",
+          "examples": {
+            "easy": "These are scissors.",
+            "normal": "I can see scissors in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-124",
+      "name": "Lesson 124 - My Grandpa Isn'T Walking",
+      "words": [
+        {
+          "word": "kicking",
+          "uzb": "tepmoq",
+          "emoji": "⚽",
+          "examples": {
+            "easy": "Please kicking.",
+            "normal": "The teacher asks us to kicking."
+          }
+        },
+        {
+          "word": "sleeping",
+          "uzb": "uxlamoq",
+          "emoji": "😴",
+          "examples": {
+            "easy": "Please sleeping.",
+            "normal": "The teacher asks us to sleeping."
+          }
+        },
+        {
+          "word": "playing",
+          "uzb": "o'ynamoq",
+          "emoji": "🤸",
+          "examples": {
+            "easy": "Please playing.",
+            "normal": "The teacher asks us to playing."
+          }
+        },
+        {
+          "word": "reading",
+          "uzb": "o'qimoq",
+          "emoji": "📖",
+          "examples": {
+            "easy": "Please reading.",
+            "normal": "The teacher asks us to reading."
+          }
+        },
+        {
+          "word": "listening",
+          "uzb": "tinglamoq",
+          "emoji": "👂",
+          "examples": {
+            "easy": "Please listening.",
+            "normal": "The teacher asks us to listening."
+          }
+        },
+        {
+          "word": "watching",
+          "uzb": "tomosha qilmoq",
+          "emoji": "📺",
+          "examples": {
+            "easy": "Please watching.",
+            "normal": "The teacher asks us to watching."
+          }
+        },
+        {
+          "word": "drinking",
+          "uzb": "ichmoq",
+          "emoji": "🥤",
+          "examples": {
+            "easy": "Please drinking.",
+            "normal": "The teacher asks us to drinking."
+          }
+        },
+        {
+          "word": "cycling",
+          "uzb": "velosiped haydamoq",
+          "emoji": "🚴",
+          "examples": {
+            "easy": "Please cycling.",
+            "normal": "The teacher asks us to cycling."
+          }
+        },
+        {
+          "word": "bicycle",
+          "uzb": "velosiped",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a bicycle.",
+            "normal": "I can see a bicycle in the picture."
+          }
+        },
+        {
+          "word": "scissors",
+          "uzb": "qaychi",
+          "emoji": "✂",
+          "examples": {
+            "easy": "These are scissors.",
+            "normal": "I can see scissors in the picture."
+          }
+        },
+        {
+          "word": "tidy",
+          "uzb": "yig'ishtirmoq",
+          "emoji": "🧹",
+          "examples": {
+            "easy": "Please tidy.",
+            "normal": "The teacher asks us to tidy."
+          }
+        },
+        {
+          "word": "necklace",
+          "uzb": "marjon",
+          "emoji": "📿",
+          "examples": {
+            "easy": "This is a necklace.",
+            "normal": "I can see a necklace in the picture."
+          }
+        },
+        {
+          "word": "different",
+          "uzb": "boshqacha",
+          "emoji": "↔",
+          "examples": {
+            "easy": "This is a different.",
+            "normal": "I can see a different in the picture."
+          }
+        },
+        {
+          "word": "dance",
+          "uzb": "raqsga tushmoq",
+          "emoji": "💃",
+          "examples": {
+            "easy": "Please dance.",
+            "normal": "The teacher asks us to dance."
+          }
+        },
+        {
+          "word": "clap",
+          "uzb": "qarsak chalmoq",
+          "emoji": "📖",
+          "examples": {
+            "easy": "Please clap.",
+            "normal": "The teacher asks us to clap."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-125",
+      "name": "Lesson 125 - Sounds And Spelling: C, Ck, K",
+      "words": [
+        {
+          "word": "talking",
+          "uzb": "gaplashmoq",
+          "emoji": "💬",
+          "examples": {
+            "easy": "Please talking.",
+            "normal": "The teacher asks us to talking."
+          }
+        },
+        {
+          "word": "taking",
+          "uzb": "olib ketmoq",
+          "emoji": "🤝",
+          "examples": {
+            "easy": "Please taking.",
+            "normal": "The teacher asks us to taking."
+          }
+        },
+        {
+          "word": "sponge",
+          "uzb": "gubka",
+          "emoji": "🧽",
+          "examples": {
+            "easy": "This is a sponge.",
+            "normal": "I can see a sponge in the picture."
+          }
+        },
+        {
+          "word": "night",
+          "uzb": "tun",
+          "emoji": "🌙",
+          "examples": {
+            "easy": "This is a night.",
+            "normal": "I can see a night in the picture."
+          }
+        },
+        {
+          "word": "vest",
+          "uzb": "jilet",
+          "emoji": "🦺",
+          "examples": {
+            "easy": "This is a vest.",
+            "normal": "I can see a vest in the picture."
+          }
+        },
+        {
+          "word": "teapot",
+          "uzb": "choynak",
+          "emoji": "🫖",
+          "examples": {
+            "easy": "This is a teapot.",
+            "normal": "I can see a teapot in the picture."
+          }
+        },
+        {
+          "word": "tidy",
+          "uzb": "yig'ishtirmoq",
+          "emoji": "🧹",
+          "examples": {
+            "easy": "Please tidy.",
+            "normal": "The teacher asks us to tidy."
+          }
+        },
+        {
+          "word": "necklace",
+          "uzb": "marjon",
+          "emoji": "📿",
+          "examples": {
+            "easy": "This is a necklace.",
+            "normal": "I can see a necklace in the picture."
+          }
+        },
+        {
+          "word": "different",
+          "uzb": "boshqacha",
+          "emoji": "↔",
+          "examples": {
+            "easy": "This is a different.",
+            "normal": "I can see a different in the picture."
+          }
+        },
+        {
+          "word": "dance",
+          "uzb": "raqsga tushmoq",
+          "emoji": "💃",
+          "examples": {
+            "easy": "Please dance.",
+            "normal": "The teacher asks us to dance."
+          }
+        },
+        {
+          "word": "clap",
+          "uzb": "qarsak chalmoq",
+          "emoji": "👏",
+          "examples": {
+            "easy": "Please clap.",
+            "normal": "The teacher asks us to clap."
+          }
+        },
+        {
+          "word": "tomato",
+          "uzb": "pomidor",
+          "emoji": "🍅",
+          "examples": {
+            "easy": "This is a tomato.",
+            "normal": "I can see a tomato in the picture."
+          }
+        },
+        {
+          "word": "cupcake",
+          "uzb": "keks",
+          "emoji": "🧁",
+          "examples": {
+            "easy": "This is a cupcake.",
+            "normal": "I can see a cupcake in the picture."
+          }
+        },
+        {
+          "word": "trophy",
+          "uzb": "kubok",
+          "emoji": "🏆",
+          "examples": {
+            "easy": "This is a trophy.",
+            "normal": "I can see a trophy in the picture."
+          }
+        },
+        {
+          "word": "carrot",
+          "uzb": "sabzi",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a carrot.",
+            "normal": "I can see a carrot in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-126",
+      "name": "Lesson 126 - Story: Oh No, Trevor!",
+      "words": [
+        {
+          "word": "doll's house",
+          "uzb": "qo'g'irchoq uyi",
+          "emoji": "🏠",
+          "examples": {
+            "easy": "I know doll's house.",
+            "normal": "We use the words doll's house in class."
+          }
+        },
+        {
+          "word": "tin",
+          "uzb": "quti",
+          "emoji": "🥫",
+          "examples": {
+            "easy": "This is a tin.",
+            "normal": "I can see a tin in the picture."
+          }
+        },
+        {
+          "word": "polish",
+          "uzb": "poyabzal kremi",
+          "emoji": "👞",
+          "examples": {
+            "easy": "This is a polish.",
+            "normal": "I can see a polish in the picture."
+          }
+        },
+        {
+          "word": "mess",
+          "uzb": "tartibsizlik",
+          "emoji": "🗑",
+          "examples": {
+            "easy": "This is a mess.",
+            "normal": "I can see a mess in the picture."
+          }
+        },
+        {
+          "word": "progress",
+          "uzb": "yutuq",
+          "emoji": "📈",
+          "examples": {
+            "easy": "This is a progress.",
+            "normal": "I can see a progress in the picture."
+          }
+        },
+        {
+          "word": "clean",
+          "uzb": "toza",
+          "emoji": "✨",
+          "examples": {
+            "easy": "This is a clean.",
+            "normal": "I can see a clean in the picture."
+          }
+        },
+        {
+          "word": "tomato",
+          "uzb": "pomidor",
+          "emoji": "🍅",
+          "examples": {
+            "easy": "This is a tomato.",
+            "normal": "I can see a tomato in the picture."
+          }
+        },
+        {
+          "word": "cupcake",
+          "uzb": "keks",
+          "emoji": "🧁",
+          "examples": {
+            "easy": "This is a cupcake.",
+            "normal": "I can see a cupcake in the picture."
+          }
+        },
+        {
+          "word": "trophy",
+          "uzb": "kubok",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a trophy.",
+            "normal": "I can see a trophy in the picture."
+          }
+        },
+        {
+          "word": "carrot",
+          "uzb": "sabzi",
+          "emoji": "🥕",
+          "examples": {
+            "easy": "This is a carrot.",
+            "normal": "I can see a carrot in the picture."
+          }
+        },
+        {
+          "word": "cardboard",
+          "uzb": "karton",
+          "emoji": "📦",
+          "examples": {
+            "easy": "This is a cardboard.",
+            "normal": "I can see a cardboard in the picture."
+          }
+        },
+        {
+          "word": "moustache",
+          "uzb": "mo'ylov",
+          "emoji": "🥸",
+          "examples": {
+            "easy": "This is a moustache.",
+            "normal": "I can see a moustache in the picture."
+          }
+        },
+        {
+          "word": "trainers",
+          "uzb": "krossovka",
+          "emoji": "👟",
+          "examples": {
+            "easy": "These are trainers.",
+            "normal": "I can see trainers in the picture."
+          }
+        },
+        {
+          "word": "hairband",
+          "uzb": "sochbog'",
+          "emoji": "🎀",
+          "examples": {
+            "easy": "This is a hairband.",
+            "normal": "I can see a hairband in the picture."
+          }
+        },
+        {
+          "word": "science",
+          "uzb": "fan",
+          "emoji": "🔬",
+          "examples": {
+            "easy": "This is a science.",
+            "normal": "I can see a science in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-127",
+      "name": "Lesson 127 - Food In The Kitchen",
+      "words": [
+        {
+          "word": "rice",
+          "uzb": "guruch",
+          "emoji": "🍚",
+          "examples": {
+            "easy": "This is rice.",
+            "normal": "We can see rice in the picture."
+          }
+        },
+        {
+          "word": "chips",
+          "uzb": "kartoshka fri",
+          "emoji": "🍟",
+          "examples": {
+            "easy": "These are chips.",
+            "normal": "I can see chips in the picture."
+          }
+        },
+        {
+          "word": "meat",
+          "uzb": "go'sht",
+          "emoji": "🥩",
+          "examples": {
+            "easy": "This is a meat.",
+            "normal": "I can see a meat in the picture."
+          }
+        },
+        {
+          "word": "potato",
+          "uzb": "kartoshka",
+          "emoji": "🥔",
+          "examples": {
+            "easy": "This is a potato.",
+            "normal": "I can see a potato in the picture."
+          }
+        },
+        {
+          "word": "lemon",
+          "uzb": "limon",
+          "emoji": "🍋",
+          "examples": {
+            "easy": "This is a lemon.",
+            "normal": "I can see a lemon in the picture."
+          }
+        },
+        {
+          "word": "orange juice",
+          "uzb": "apelsin sharbati",
+          "emoji": "🍊",
+          "examples": {
+            "easy": "I know orange juice.",
+            "normal": "We use the words orange juice in class."
+          }
+        },
+        {
+          "word": "apple juice",
+          "uzb": "olma sharbati",
+          "emoji": "🍏",
+          "examples": {
+            "easy": "I know apple juice.",
+            "normal": "We use the words apple juice in class."
+          }
+        },
+        {
+          "word": "shopping list",
+          "uzb": "xarid ro'yxati",
+          "emoji": "📝",
+          "examples": {
+            "easy": "I know shopping list.",
+            "normal": "We use the words shopping list in class."
+          }
+        },
+        {
+          "word": "loaf",
+          "uzb": "bo'lka non",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a loaf.",
+            "normal": "I can see a loaf in the picture."
+          }
+        },
+        {
+          "word": "carton",
+          "uzb": "paket",
+          "emoji": "🧃",
+          "examples": {
+            "easy": "This is a carton.",
+            "normal": "I can see a carton in the picture."
+          }
+        },
+        {
+          "word": "fresh",
+          "uzb": "yangi",
+          "emoji": "🌿",
+          "examples": {
+            "easy": "This is a fresh.",
+            "normal": "I can see a fresh in the picture."
+          }
+        },
+        {
+          "word": "tile",
+          "uzb": "kafel",
+          "emoji": "🟦",
+          "examples": {
+            "easy": "This is a tile.",
+            "normal": "I can see a tile in the picture."
+          }
+        },
+        {
+          "word": "magnet",
+          "uzb": "magnit",
+          "emoji": "🧲",
+          "examples": {
+            "easy": "This is a magnet.",
+            "normal": "I can see a magnet in the picture."
+          }
+        },
+        {
+          "word": "watermelon",
+          "uzb": "tarvuz",
+          "emoji": "🍉",
+          "examples": {
+            "easy": "This is a watermelon.",
+            "normal": "I can see a watermelon in the picture."
+          }
+        },
+        {
+          "word": "strawberry",
+          "uzb": "qulupnay",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a strawberry.",
+            "normal": "I can see a strawberry in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-128",
+      "name": "Lesson 128 - Meals Of The Day",
+      "words": [
+        {
+          "word": "morning",
+          "uzb": "ertalab",
+          "emoji": "🌅",
+          "examples": {
+            "easy": "This is a morning.",
+            "normal": "I can see a morning in the picture."
+          }
+        },
+        {
+          "word": "breakfast",
+          "uzb": "nonushta",
+          "emoji": "🥣",
+          "examples": {
+            "easy": "This is a breakfast.",
+            "normal": "I can see a breakfast in the picture."
+          }
+        },
+        {
+          "word": "lunchtime",
+          "uzb": "tushlik vaqti",
+          "emoji": "🕛",
+          "examples": {
+            "easy": "This is a lunchtime.",
+            "normal": "I can see a lunchtime in the picture."
+          }
+        },
+        {
+          "word": "afternoon",
+          "uzb": "tushdan keyin",
+          "emoji": "☀",
+          "examples": {
+            "easy": "This is a afternoon.",
+            "normal": "I can see a afternoon in the picture."
+          }
+        },
+        {
+          "word": "chocolate cake",
+          "uzb": "shokoladli tort",
+          "emoji": "📖",
+          "examples": {
+            "easy": "I know chocolate cake.",
+            "normal": "We use the words chocolate cake in class."
+          }
+        },
+        {
+          "word": "canteen",
+          "uzb": "oshxona",
+          "emoji": "🍽",
+          "examples": {
+            "easy": "This is a canteen.",
+            "normal": "I can see a canteen in the picture."
+          }
+        },
+        {
+          "word": "slice",
+          "uzb": "bo'lak",
+          "emoji": "🍞",
+          "examples": {
+            "easy": "This is a slice.",
+            "normal": "I can see a slice in the picture."
+          }
+        },
+        {
+          "word": "cabbage",
+          "uzb": "karam",
+          "emoji": "🥬",
+          "examples": {
+            "easy": "This is a cabbage.",
+            "normal": "I can see a cabbage in the picture."
+          }
+        },
+        {
+          "word": "teapot",
+          "uzb": "choynak",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a teapot.",
+            "normal": "I can see a teapot in the picture."
+          }
+        },
+        {
+          "word": "spill",
+          "uzb": "to'kmoq",
+          "emoji": "🫗",
+          "examples": {
+            "easy": "Please spill.",
+            "normal": "The teacher asks us to spill."
+          }
+        },
+        {
+          "word": "queue",
+          "uzb": "navbat",
+          "emoji": "🚶",
+          "examples": {
+            "easy": "This is a queue.",
+            "normal": "I can see a queue in the picture."
+          }
+        },
+        {
+          "word": "watermelon",
+          "uzb": "tarvuz",
+          "emoji": "🍉",
+          "examples": {
+            "easy": "This is a watermelon.",
+            "normal": "I can see a watermelon in the picture."
+          }
+        },
+        {
+          "word": "strawberry",
+          "uzb": "qulupnay",
+          "emoji": "🍓",
+          "examples": {
+            "easy": "This is a strawberry.",
+            "normal": "I can see a strawberry in the picture."
+          }
+        },
+        {
+          "word": "chocolate",
+          "uzb": "shokolad",
+          "emoji": "🍫",
+          "examples": {
+            "easy": "This is a chocolate.",
+            "normal": "I can see a chocolate in the picture."
+          }
+        },
+        {
+          "word": "pineapple",
+          "uzb": "ananas",
+          "emoji": "🍍",
+          "examples": {
+            "easy": "This is a pineapple.",
+            "normal": "I can see a pineapple in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-129",
+      "name": "Lesson 129 - Can I Have Some Bread, Please?",
+      "words": [
+        {
+          "word": "some",
+          "uzb": "bir oz",
+          "emoji": "🤏",
+          "examples": {
+            "easy": "This is a some.",
+            "normal": "I can see a some in the picture."
+          }
+        },
+        {
+          "word": "napkin",
+          "uzb": "salfetka",
+          "emoji": "🧻",
+          "examples": {
+            "easy": "This is a napkin.",
+            "normal": "I can see a napkin in the picture."
+          }
+        },
+        {
+          "word": "brown bread",
+          "uzb": "qora non",
+          "emoji": "🥖",
+          "examples": {
+            "easy": "I know brown bread.",
+            "normal": "We use the words brown bread in class."
+          }
+        },
+        {
+          "word": "drumstick",
+          "uzb": "tovuq oyog'i",
+          "emoji": "🍗",
+          "examples": {
+            "easy": "This is a drumstick.",
+            "normal": "I can see a drumstick in the picture."
+          }
+        },
+        {
+          "word": "placemat",
+          "uzb": "stol to'shamasi",
+          "emoji": "🟩",
+          "examples": {
+            "easy": "This is a placemat.",
+            "normal": "I can see a placemat in the picture."
+          }
+        },
+        {
+          "word": "polite",
+          "uzb": "odobli",
+          "emoji": "🙏",
+          "examples": {
+            "easy": "This is a polite.",
+            "normal": "I can see a polite in the picture."
+          }
+        },
+        {
+          "word": "chocolate",
+          "uzb": "shokolad",
+          "emoji": "🍫",
+          "examples": {
+            "easy": "This is a chocolate.",
+            "normal": "I can see a chocolate in the picture."
+          }
+        },
+        {
+          "word": "pineapple",
+          "uzb": "ananas",
+          "emoji": "🍍",
+          "examples": {
+            "easy": "This is a pineapple.",
+            "normal": "I can see a pineapple in the picture."
+          }
+        },
+        {
+          "word": "bakery",
+          "uzb": "nonvoyxona",
+          "emoji": "🥐",
+          "examples": {
+            "easy": "This is a bakery.",
+            "normal": "I can see a bakery in the picture."
+          }
+        },
+        {
+          "word": "barbecue",
+          "uzb": "mangal",
+          "emoji": "🔥",
+          "examples": {
+            "easy": "This is a barbecue.",
+            "normal": "I can see a barbecue in the picture."
+          }
+        },
+        {
+          "word": "healthy",
+          "uzb": "sog'lom",
+          "emoji": "💪",
+          "examples": {
+            "easy": "This is a healthy.",
+            "normal": "I can see a healthy in the picture."
+          }
+        },
+        {
+          "word": "country",
+          "uzb": "mamlakat",
+          "emoji": "🌍",
+          "examples": {
+            "easy": "This is a country.",
+            "normal": "I can see a country in the picture."
+          }
+        },
+        {
+          "word": "chicken",
+          "uzb": "tovuq",
+          "emoji": "🐔",
+          "examples": {
+            "easy": "This is a chicken.",
+            "normal": "I can see a chicken in the picture."
+          }
+        },
+        {
+          "word": "dessert",
+          "uzb": "shirinlik",
+          "emoji": "🍮",
+          "examples": {
+            "easy": "This is a dessert.",
+            "normal": "I can see a dessert in the picture."
+          }
+        },
+        {
+          "word": "like",
+          "uzb": "yoqmoq",
+          "emoji": "📖",
+          "examples": {
+            "easy": "Please like.",
+            "normal": "The teacher asks us to like."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-130",
+      "name": "Lesson 130 - Food Bingo",
+      "words": [
+        {
+          "word": "meatballs",
+          "uzb": "kufta",
+          "emoji": "🧆",
+          "examples": {
+            "easy": "These are meatballs.",
+            "normal": "I can see meatballs in the picture."
+          }
+        },
+        {
+          "word": "bingo",
+          "uzb": "bingo o'yini",
+          "emoji": "🎲",
+          "examples": {
+            "easy": "This is a bingo.",
+            "normal": "I can see a bingo in the picture."
+          }
+        },
+        {
+          "word": "coffee",
+          "uzb": "qahva",
+          "emoji": "☕",
+          "examples": {
+            "easy": "This is a coffee.",
+            "normal": "I can see a coffee in the picture."
+          }
+        },
+        {
+          "word": "egg cup",
+          "uzb": "tuxum qadahi",
+          "emoji": "🥚",
+          "examples": {
+            "easy": "I know egg cup.",
+            "normal": "We use the words egg cup in class."
+          }
+        },
+        {
+          "word": "fruit bowl",
+          "uzb": "meva idishi",
+          "emoji": "🍎",
+          "examples": {
+            "easy": "I know fruit bowl.",
+            "normal": "We use the words fruit bowl in class."
+          }
+        },
+        {
+          "word": "bakery",
+          "uzb": "nonvoyxona",
+          "emoji": "🥐",
+          "examples": {
+            "easy": "This is a bakery.",
+            "normal": "I can see a bakery in the picture."
+          }
+        },
+        {
+          "word": "barbecue",
+          "uzb": "mangal",
+          "emoji": "🔥",
+          "examples": {
+            "easy": "This is a barbecue.",
+            "normal": "I can see a barbecue in the picture."
+          }
+        },
+        {
+          "word": "healthy",
+          "uzb": "sog'lom",
+          "emoji": "💪",
+          "examples": {
+            "easy": "This is a healthy.",
+            "normal": "I can see a healthy in the picture."
+          }
+        },
+        {
+          "word": "country",
+          "uzb": "mamlakat",
+          "emoji": "🌍",
+          "examples": {
+            "easy": "This is a country.",
+            "normal": "I can see a country in the picture."
+          }
+        },
+        {
+          "word": "chicken",
+          "uzb": "tovuq",
+          "emoji": "🐔",
+          "examples": {
+            "easy": "This is a chicken.",
+            "normal": "I can see a chicken in the picture."
+          }
+        },
+        {
+          "word": "dessert",
+          "uzb": "shirinlik",
+          "emoji": "🍮",
+          "examples": {
+            "easy": "This is a dessert.",
+            "normal": "I can see a dessert in the picture."
+          }
+        },
+        {
+          "word": "bake",
+          "uzb": "pishirmoq",
+          "emoji": "🧁",
+          "examples": {
+            "easy": "Please bake.",
+            "normal": "The teacher asks us to bake."
+          }
+        },
+        {
+          "word": "like",
+          "uzb": "yoqmoq",
+          "emoji": "❤",
+          "examples": {
+            "easy": "Please like.",
+            "normal": "The teacher asks us to like."
+          }
+        },
+        {
+          "word": "pick",
+          "uzb": "uzmoq",
+          "emoji": "✋",
+          "examples": {
+            "easy": "Please pick.",
+            "normal": "The teacher asks us to pick."
+          }
+        },
+        {
+          "word": "sugar",
+          "uzb": "shakar",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a sugar.",
+            "normal": "I can see a sugar in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-131",
+      "name": "Lesson 131 - Sounds And Spelling: Ch",
+      "words": [
+        {
+          "word": "fish and chips",
+          "uzb": "baliq va kartoshka fri (балиқ ва картошка",
+          "emoji": "🐟",
+          "examples": {
+            "easy": "These are fish and chips.",
+            "normal": "I can see fish and chips in the picture."
+          }
+        },
+        {
+          "word": "bib",
+          "uzb": "peshband",
+          "emoji": "🧣",
+          "examples": {
+            "easy": "This is a bib.",
+            "normal": "I can see a bib in the picture."
+          }
+        },
+        {
+          "word": "bake",
+          "uzb": "pishirmoq",
+          "emoji": "🧁",
+          "examples": {
+            "easy": "Please bake.",
+            "normal": "The teacher asks us to bake."
+          }
+        },
+        {
+          "word": "pick",
+          "uzb": "uzmoq",
+          "emoji": "✋",
+          "examples": {
+            "easy": "Please pick.",
+            "normal": "The teacher asks us to pick."
+          }
+        },
+        {
+          "word": "apron",
+          "uzb": "fartuk",
+          "emoji": "🦺",
+          "examples": {
+            "easy": "This is a apron.",
+            "normal": "I can see a apron in the picture."
+          }
+        },
+        {
+          "word": "sugar",
+          "uzb": "shakar",
+          "emoji": "🍬",
+          "examples": {
+            "easy": "This is a sugar.",
+            "normal": "I can see a sugar in the picture."
+          }
+        },
+        {
+          "word": "pie",
+          "uzb": "pirog",
+          "emoji": "🥧",
+          "examples": {
+            "easy": "This is a pie.",
+            "normal": "I can see a pie in the picture."
+          }
+        },
+        {
+          "word": "thermometer",
+          "uzb": "termometr",
+          "emoji": "🌡",
+          "examples": {
+            "easy": "This is a thermometer.",
+            "normal": "I can see a thermometer in the picture."
+          }
+        },
+        {
+          "word": "apple",
+          "uzb": "olma",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a apple.",
+            "normal": "I can see a apple in the picture."
+          }
+        },
+        {
+          "word": "spade",
+          "uzb": "belcha",
+          "emoji": "⛏",
+          "examples": {
+            "easy": "This is a spade.",
+            "normal": "I can see a spade in the picture."
+          }
+        },
+        {
+          "word": "place",
+          "uzb": "joy",
+          "emoji": "📍",
+          "examples": {
+            "easy": "This is a place.",
+            "normal": "I can see a place in the picture."
+          }
+        },
+        {
+          "word": "cake",
+          "uzb": "tort",
+          "emoji": "🎂",
+          "examples": {
+            "easy": "This is a cake.",
+            "normal": "I can see a cake in the picture."
+          }
+        },
+        {
+          "word": "flour",
+          "uzb": "un",
+          "emoji": "🌾",
+          "examples": {
+            "easy": "This is a flour.",
+            "normal": "I can see a flour in the picture."
+          }
+        },
+        {
+          "word": "ground",
+          "uzb": "yer",
+          "emoji": "🟤",
+          "examples": {
+            "easy": "This is a ground.",
+            "normal": "I can see a ground in the picture."
+          }
+        },
+        {
+          "word": "pear",
+          "uzb": "nok",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a pear.",
+            "normal": "I can see a pear in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-132",
+      "name": "Lesson 132 - The Picnic Story",
+      "words": [
+        {
+          "word": "chocolate ice cream",
+          "uzb": "shokoladli muzqaymoq",
+          "emoji": "📖",
+          "examples": {
+            "easy": "Please chocolate ice cream.",
+            "normal": "The teacher asks us to chocolate ice cream."
+          }
+        },
+        {
+          "word": "tablecloth",
+          "uzb": "dasturxon",
+          "emoji": "🧺",
+          "examples": {
+            "easy": "This is a tablecloth.",
+            "normal": "I can see a tablecloth in the picture."
+          }
+        },
+        {
+          "word": "cake stand",
+          "uzb": "tort tagligi",
+          "emoji": "🎂",
+          "examples": {
+            "easy": "I know cake stand.",
+            "normal": "We use the words cake stand in class."
+          }
+        },
+        {
+          "word": "any",
+          "uzb": "biror",
+          "emoji": "❓",
+          "examples": {
+            "easy": "This is a any.",
+            "normal": "I can see a any in the picture."
+          }
+        },
+        {
+          "word": "apron",
+          "uzb": "fartuk",
+          "emoji": "🦺",
+          "examples": {
+            "easy": "This is a apron.",
+            "normal": "I can see a apron in the picture."
+          }
+        },
+        {
+          "word": "pie",
+          "uzb": "pirog",
+          "emoji": "🥧",
+          "examples": {
+            "easy": "This is a pie.",
+            "normal": "I can see a pie in the picture."
+          }
+        },
+        {
+          "word": "thermometer",
+          "uzb": "termometr",
+          "emoji": "🌡",
+          "examples": {
+            "easy": "This is a thermometer.",
+            "normal": "I can see a thermometer in the picture."
+          }
+        },
+        {
+          "word": "apple",
+          "uzb": "olma",
+          "emoji": "🍎",
+          "examples": {
+            "easy": "This is a apple.",
+            "normal": "I can see a apple in the picture."
+          }
+        },
+        {
+          "word": "spade",
+          "uzb": "belcha",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a spade.",
+            "normal": "I can see a spade in the picture."
+          }
+        },
+        {
+          "word": "place",
+          "uzb": "joy",
+          "emoji": "📍",
+          "examples": {
+            "easy": "This is a place.",
+            "normal": "I can see a place in the picture."
+          }
+        },
+        {
+          "word": "cake",
+          "uzb": "tort",
+          "emoji": "🎂",
+          "examples": {
+            "easy": "This is a cake.",
+            "normal": "I can see a cake in the picture."
+          }
+        },
+        {
+          "word": "flour",
+          "uzb": "un",
+          "emoji": "🌾",
+          "examples": {
+            "easy": "This is a flour.",
+            "normal": "I can see a flour in the picture."
+          }
+        },
+        {
+          "word": "ground",
+          "uzb": "yer",
+          "emoji": "🟤",
+          "examples": {
+            "easy": "This is a ground.",
+            "normal": "I can see a ground in the picture."
+          }
+        },
+        {
+          "word": "pear",
+          "uzb": "nok",
+          "emoji": "🍐",
+          "examples": {
+            "easy": "This is a pear.",
+            "normal": "I can see a pear in the picture."
+          }
+        },
+        {
+          "word": "chef",
+          "uzb": "oshpaz",
+          "emoji": "👨‍🍳",
+          "examples": {
+            "easy": "This is a chef.",
+            "normal": "I can see a chef in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-133",
+      "name": "Lesson 133 - Where Does Food Come From?",
+      "words": [
+        {
+          "word": "yoghurt",
+          "uzb": "yogurt",
+          "emoji": "🥣",
+          "examples": {
+            "easy": "This is a yoghurt.",
+            "normal": "I can see a yoghurt in the picture."
+          }
+        },
+        {
+          "word": "pasta",
+          "uzb": "makaron",
+          "emoji": "🍝",
+          "examples": {
+            "easy": "This is a pasta.",
+            "normal": "I can see a pasta in the picture."
+          }
+        },
+        {
+          "word": "noodles",
+          "uzb": "ugra",
+          "emoji": "🍜",
+          "examples": {
+            "easy": "These are noodles.",
+            "normal": "I can see noodles in the picture."
+          }
+        },
+        {
+          "word": "menu",
+          "uzb": "menyu",
+          "emoji": "📋",
+          "examples": {
+            "easy": "This is a menu.",
+            "normal": "I can see a menu in the picture."
+          }
+        },
+        {
+          "word": "farmer",
+          "uzb": "dehqon",
+          "emoji": "👨‍🌾",
+          "examples": {
+            "easy": "This is a farmer.",
+            "normal": "I can see a farmer in the picture."
+          }
+        },
+        {
+          "word": "grapes",
+          "uzb": "uzum",
+          "emoji": "🍇",
+          "examples": {
+            "easy": "These are grapes.",
+            "normal": "I can see grapes in the picture."
+          }
+        },
+        {
+          "word": "vegetarian",
+          "uzb": "vegetarian",
+          "emoji": "🥗",
+          "examples": {
+            "easy": "This is a vegetarian.",
+            "normal": "I can see a vegetarian in the picture."
+          }
+        },
+        {
+          "word": "flavour",
+          "uzb": "ta'm",
+          "emoji": "😋",
+          "examples": {
+            "easy": "This is a flavour.",
+            "normal": "I can see a flavour in the picture."
+          }
+        },
+        {
+          "word": "vegetable",
+          "uzb": "sabzavot",
+          "emoji": "🥬",
+          "examples": {
+            "easy": "This is a vegetable.",
+            "normal": "I can see a vegetable in the picture."
+          }
+        },
+        {
+          "word": "tray",
+          "uzb": "patnis",
+          "emoji": "🍽",
+          "examples": {
+            "easy": "This is a tray.",
+            "normal": "I can see a tray in the picture."
+          }
+        },
+        {
+          "word": "salt",
+          "uzb": "tuz",
+          "emoji": "🧂",
+          "examples": {
+            "easy": "This is a salt.",
+            "normal": "I can see a salt in the picture."
+          }
+        },
+        {
+          "word": "chef",
+          "uzb": "oshpaz",
+          "emoji": "👨‍🍳",
+          "examples": {
+            "easy": "This is a chef.",
+            "normal": "I can see a chef in the picture."
+          }
+        },
+        {
+          "word": "hut",
+          "uzb": "kulba",
+          "emoji": "🛖",
+          "examples": {
+            "easy": "This is a hut.",
+            "normal": "I can see a hut in the picture."
+          }
+        },
+        {
+          "word": "packet",
+          "uzb": "paket",
+          "emoji": "📦",
+          "examples": {
+            "easy": "This is a packet.",
+            "normal": "I can see a packet in the picture."
+          }
+        },
+        {
+          "word": "banana",
+          "uzb": "banan",
+          "emoji": "🍌",
+          "examples": {
+            "easy": "This is a banana.",
+            "normal": "I can see a banana in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-134",
+      "name": "Lesson 134 - Eat Good Food",
+      "words": [
+        {
+          "word": "bad",
+          "uzb": "yomon",
+          "emoji": "👎",
+          "examples": {
+            "easy": "This is a bad.",
+            "normal": "I can see a bad in the picture."
+          }
+        },
+        {
+          "word": "meal",
+          "uzb": "ovqat",
+          "emoji": "🍽",
+          "examples": {
+            "easy": "This is a meal.",
+            "normal": "I can see a meal in the picture."
+          }
+        },
+        {
+          "word": "toast",
+          "uzb": "tost non",
+          "emoji": "🍞",
+          "examples": {
+            "easy": "This is a toast.",
+            "normal": "I can see a toast in the picture."
+          }
+        },
+        {
+          "word": "doughnut",
+          "uzb": "ponchik",
+          "emoji": "🍩",
+          "examples": {
+            "easy": "This is a doughnut.",
+            "normal": "I can see a doughnut in the picture."
+          }
+        },
+        {
+          "word": "avocado",
+          "uzb": "avokado",
+          "emoji": "🥑",
+          "examples": {
+            "easy": "This is a avocado.",
+            "normal": "I can see a avocado in the picture."
+          }
+        },
+        {
+          "word": "cola",
+          "uzb": "kola",
+          "emoji": "🥤",
+          "examples": {
+            "easy": "This is a cola.",
+            "normal": "I can see a cola in the picture."
+          }
+        },
+        {
+          "word": "stew",
+          "uzb": "dimlama",
+          "emoji": "🍲",
+          "examples": {
+            "easy": "This is a stew.",
+            "normal": "I can see a stew in the picture."
+          }
+        },
+        {
+          "word": "pepper",
+          "uzb": "qalampir",
+          "emoji": "🫑",
+          "examples": {
+            "easy": "This is a pepper.",
+            "normal": "I can see a pepper in the picture."
+          }
+        },
+        {
+          "word": "tray",
+          "uzb": "patnis",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a tray.",
+            "normal": "I can see a tray in the picture."
+          }
+        },
+        {
+          "word": "salt",
+          "uzb": "tuz",
+          "emoji": "🧂",
+          "examples": {
+            "easy": "This is a salt.",
+            "normal": "I can see a salt in the picture."
+          }
+        },
+        {
+          "word": "hut",
+          "uzb": "kulba",
+          "emoji": "🛖",
+          "examples": {
+            "easy": "This is a hut.",
+            "normal": "I can see a hut in the picture."
+          }
+        },
+        {
+          "word": "packet",
+          "uzb": "paket",
+          "emoji": "📦",
+          "examples": {
+            "easy": "This is a packet.",
+            "normal": "I can see a packet in the picture."
+          }
+        },
+        {
+          "word": "banana",
+          "uzb": "banan",
+          "emoji": "🍌",
+          "examples": {
+            "easy": "This is a banana.",
+            "normal": "I can see a banana in the picture."
+          }
+        },
+        {
+          "word": "picnic",
+          "uzb": "piknik",
+          "emoji": "🧺",
+          "examples": {
+            "easy": "This is a picnic.",
+            "normal": "I can see a picnic in the picture."
+          }
+        },
+        {
+          "word": "radio",
+          "uzb": "radio",
+          "emoji": "📻",
+          "examples": {
+            "easy": "This is a radio.",
+            "normal": "I can see a radio in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-135",
+      "name": "Lesson 135 - At The Farm",
+      "words": [
+        {
+          "word": "cow",
+          "uzb": "sigir",
+          "emoji": "🐄",
+          "examples": {
+            "easy": "This is a cow.",
+            "normal": "I can see a cow in the picture."
+          }
+        },
+        {
+          "word": "donkey",
+          "uzb": "eshak",
+          "emoji": "🫏",
+          "examples": {
+            "easy": "This is a donkey.",
+            "normal": "I can see a donkey in the picture."
+          }
+        },
+        {
+          "word": "goat",
+          "uzb": "echki",
+          "emoji": "🐐",
+          "examples": {
+            "easy": "This is a goat.",
+            "normal": "I can see a goat in the picture."
+          }
+        },
+        {
+          "word": "lizard",
+          "uzb": "kaltakesak",
+          "emoji": "🦎",
+          "examples": {
+            "easy": "This is a lizard.",
+            "normal": "I can see a lizard in the picture."
+          }
+        },
+        {
+          "word": "frog",
+          "uzb": "qurbaqa",
+          "emoji": "🐸",
+          "examples": {
+            "easy": "This is a frog.",
+            "normal": "I can see a frog in the picture."
+          }
+        },
+        {
+          "word": "lamb",
+          "uzb": "qo'zi",
+          "emoji": "🐑",
+          "examples": {
+            "easy": "This is a lamb.",
+            "normal": "I can see a lamb in the picture."
+          }
+        },
+        {
+          "word": "duckling",
+          "uzb": "o'rdakcha",
+          "emoji": "🐥",
+          "examples": {
+            "easy": "This is a duckling.",
+            "normal": "I can see a duckling in the picture."
+          }
+        },
+        {
+          "word": "hamster",
+          "uzb": "xomyak",
+          "emoji": "🐹",
+          "examples": {
+            "easy": "This is a hamster.",
+            "normal": "I can see a hamster in the picture."
+          }
+        },
+        {
+          "word": "moo",
+          "uzb": "mu-mu",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a moo.",
+            "normal": "I can see a moo in the picture."
+          }
+        },
+        {
+          "word": "entrance",
+          "uzb": "kirish",
+          "emoji": "🚪",
+          "examples": {
+            "easy": "This is a entrance.",
+            "normal": "I can see a entrance in the picture."
+          }
+        },
+        {
+          "word": "stable",
+          "uzb": "otxona",
+          "emoji": "🏚",
+          "examples": {
+            "easy": "This is a stable.",
+            "normal": "I can see a stable in the picture."
+          }
+        },
+        {
+          "word": "straw",
+          "uzb": "somon",
+          "emoji": "🌾",
+          "examples": {
+            "easy": "This is a straw.",
+            "normal": "I can see a straw in the picture."
+          }
+        },
+        {
+          "word": "crow",
+          "uzb": "qarg'a",
+          "emoji": "🐦",
+          "examples": {
+            "easy": "This is a crow.",
+            "normal": "I can see a crow in the picture."
+          }
+        },
+        {
+          "word": "trough",
+          "uzb": "oxur",
+          "emoji": "🪣",
+          "examples": {
+            "easy": "This is a trough.",
+            "normal": "I can see a trough in the picture."
+          }
+        },
+        {
+          "word": "fluffy",
+          "uzb": "momiq",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a fluffy.",
+            "normal": "I can see a fluffy in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-136",
+      "name": "Lesson 136 - Animals In The House",
+      "words": [
+        {
+          "word": "quack",
+          "uzb": "g'a-g'a",
+          "emoji": "🦆",
+          "examples": {
+            "easy": "This is a quack.",
+            "normal": "I can see a quack in the picture."
+          }
+        },
+        {
+          "word": "baa",
+          "uzb": "ma'-ma'",
+          "emoji": "🐑",
+          "examples": {
+            "easy": "This is a baa.",
+            "normal": "I can see a baa in the picture."
+          }
+        },
+        {
+          "word": "croak",
+          "uzb": "qur-qur",
+          "emoji": "🐸",
+          "examples": {
+            "easy": "This is a croak.",
+            "normal": "I can see a croak in the picture."
+          }
+        },
+        {
+          "word": "cluck",
+          "uzb": "qoq-qoq",
+          "emoji": "🐔",
+          "examples": {
+            "easy": "This is a cluck.",
+            "normal": "I can see a cluck in the picture."
+          }
+        },
+        {
+          "word": "farmhouse",
+          "uzb": "ferma uyi",
+          "emoji": "🏡",
+          "examples": {
+            "easy": "This is a farmhouse.",
+            "normal": "I can see a farmhouse in the picture."
+          }
+        },
+        {
+          "word": "furniture",
+          "uzb": "mebel",
+          "emoji": "🪑",
+          "examples": {
+            "easy": "This is a furniture.",
+            "normal": "I can see a furniture in the picture."
+          }
+        },
+        {
+          "word": "downstairs",
+          "uzb": "pastki qavat",
+          "emoji": "🔽",
+          "examples": {
+            "easy": "These are downstairs.",
+            "normal": "I can see downstairs in the picture."
+          }
+        },
+        {
+          "word": "upstairs",
+          "uzb": "yuqori qavat",
+          "emoji": "🔼",
+          "examples": {
+            "easy": "These are upstairs.",
+            "normal": "I can see upstairs in the picture."
+          }
+        },
+        {
+          "word": "crocodile",
+          "uzb": "timsoh",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a crocodile.",
+            "normal": "I can see a crocodile in the picture."
+          }
+        },
+        {
+          "word": "elephant",
+          "uzb": "fil",
+          "emoji": "🐘",
+          "examples": {
+            "easy": "This is a elephant.",
+            "normal": "I can see a elephant in the picture."
+          }
+        },
+        {
+          "word": "excited",
+          "uzb": "hayajonlangan",
+          "emoji": "🤩",
+          "examples": {
+            "easy": "This is a excited.",
+            "normal": "I can see a excited in the picture."
+          }
+        },
+        {
+          "word": "sunflower",
+          "uzb": "kungaboqar",
+          "emoji": "🌻",
+          "examples": {
+            "easy": "This is a sunflower.",
+            "normal": "I can see a sunflower in the picture."
+          }
+        },
+        {
+          "word": "peacock",
+          "uzb": "tovus",
+          "emoji": "🦚",
+          "examples": {
+            "easy": "This is a peacock.",
+            "normal": "I can see a peacock in the picture."
+          }
+        },
+        {
+          "word": "evening",
+          "uzb": "kechqurun",
+          "emoji": "🌆",
+          "examples": {
+            "easy": "This is a evening.",
+            "normal": "I can see a evening in the picture."
+          }
+        },
+        {
+          "word": "choose",
+          "uzb": "tanlamoq",
+          "emoji": "🤔",
+          "examples": {
+            "easy": "Please choose.",
+            "normal": "The teacher asks us to choose."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-137",
+      "name": "Lesson 137 - I Love Horses",
+      "words": [
+        {
+          "word": "agree",
+          "uzb": "rozi bo'lmoq",
+          "emoji": "🤝",
+          "examples": {
+            "easy": "Please agree.",
+            "normal": "The teacher asks us to agree."
+          }
+        },
+        {
+          "word": "disagree",
+          "uzb": "rozi bo'lmaslik",
+          "emoji": "🙅",
+          "examples": {
+            "easy": "This is a disagree.",
+            "normal": "I can see a disagree in the picture."
+          }
+        },
+        {
+          "word": "check",
+          "uzb": "tekshirmoq",
+          "emoji": "✅",
+          "examples": {
+            "easy": "Please check.",
+            "normal": "The teacher asks us to check."
+          }
+        },
+        {
+          "word": "flowerpot",
+          "uzb": "guldon",
+          "emoji": "🪴",
+          "examples": {
+            "easy": "This is a flowerpot.",
+            "normal": "I can see a flowerpot in the picture."
+          }
+        },
+        {
+          "word": "tulip",
+          "uzb": "lola",
+          "emoji": "🌷",
+          "examples": {
+            "easy": "This is a tulip.",
+            "normal": "I can see a tulip in the picture."
+          }
+        },
+        {
+          "word": "crocodile",
+          "uzb": "timsoh",
+          "emoji": "🐊",
+          "examples": {
+            "easy": "This is a crocodile.",
+            "normal": "I can see a crocodile in the picture."
+          }
+        },
+        {
+          "word": "elephant",
+          "uzb": "fil",
+          "emoji": "🐘",
+          "examples": {
+            "easy": "This is a elephant.",
+            "normal": "I can see a elephant in the picture."
+          }
+        },
+        {
+          "word": "excited",
+          "uzb": "hayajonlangan",
+          "emoji": "🤩",
+          "examples": {
+            "easy": "This is a excited.",
+            "normal": "I can see a excited in the picture."
+          }
+        },
+        {
+          "word": "sunflower",
+          "uzb": "kungaboqar",
+          "emoji": "🌻",
+          "examples": {
+            "easy": "This is a sunflower.",
+            "normal": "I can see a sunflower in the picture."
+          }
+        },
+        {
+          "word": "peacock",
+          "uzb": "tovus",
+          "emoji": "🦚",
+          "examples": {
+            "easy": "This is a peacock.",
+            "normal": "I can see a peacock in the picture."
+          }
+        },
+        {
+          "word": "evening",
+          "uzb": "kechqurun",
+          "emoji": "🌆",
+          "examples": {
+            "easy": "This is a evening.",
+            "normal": "I can see a evening in the picture."
+          }
+        },
+        {
+          "word": "choose",
+          "uzb": "tanlamoq",
+          "emoji": "🤔",
+          "examples": {
+            "easy": "Please choose.",
+            "normal": "The teacher asks us to choose."
+          }
+        },
+        {
+          "word": "catch",
+          "uzb": "tutmoq",
+          "emoji": "🤾",
+          "examples": {
+            "easy": "Please catch.",
+            "normal": "The teacher asks us to catch."
+          }
+        },
+        {
+          "word": "goldfish",
+          "uzb": "oltin baliq",
+          "emoji": "🐠",
+          "examples": {
+            "easy": "This is a goldfish.",
+            "normal": "I can see a goldfish in the picture."
+          }
+        },
+        {
+          "word": "shine",
+          "uzb": "yaltiramoq",
+          "emoji": "📖",
+          "examples": {
+            "easy": "Please shine.",
+            "normal": "The teacher asks us to shine."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-138",
+      "name": "Lesson 138 - I Love Mangoes",
+      "words": [
+        {
+          "word": "mango",
+          "uzb": "mango",
+          "emoji": "🥭",
+          "examples": {
+            "easy": "This is a mango.",
+            "normal": "I can see a mango in the picture."
+          }
+        },
+        {
+          "word": "coconut",
+          "uzb": "kokos",
+          "emoji": "🥥",
+          "examples": {
+            "easy": "This is a coconut.",
+            "normal": "I can see a coconut in the picture."
+          }
+        },
+        {
+          "word": "onion",
+          "uzb": "piyoz",
+          "emoji": "🧅",
+          "examples": {
+            "easy": "This is a onion.",
+            "normal": "I can see a onion in the picture."
+          }
+        },
+        {
+          "word": "lime",
+          "uzb": "laym",
+          "emoji": "🍋‍🟩",
+          "examples": {
+            "easy": "This is a lime.",
+            "normal": "I can see a lime in the picture."
+          }
+        },
+        {
+          "word": "sour",
+          "uzb": "nordon",
+          "emoji": "😖",
+          "examples": {
+            "easy": "This is a sour.",
+            "normal": "I can see a sour in the picture."
+          }
+        },
+        {
+          "word": "vegetable",
+          "uzb": "sabzavot",
+          "emoji": "🥬",
+          "examples": {
+            "easy": "This is a vegetable.",
+            "normal": "I can see a vegetable in the picture."
+          }
+        },
+        {
+          "word": "lemon",
+          "uzb": "limon",
+          "emoji": "🍋",
+          "examples": {
+            "easy": "This is a lemon.",
+            "normal": "I can see a lemon in the picture."
+          }
+        },
+        {
+          "word": "catch",
+          "uzb": "tutmoq",
+          "emoji": "🤾",
+          "examples": {
+            "easy": "Please catch.",
+            "normal": "The teacher asks us to catch."
+          }
+        },
+        {
+          "word": "goldfish",
+          "uzb": "oltin baliq",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a goldfish.",
+            "normal": "I can see a goldfish in the picture."
+          }
+        },
+        {
+          "word": "shine",
+          "uzb": "yaltiramoq",
+          "emoji": "✨",
+          "examples": {
+            "easy": "Please shine.",
+            "normal": "The teacher asks us to shine."
+          }
+        },
+        {
+          "word": "wash",
+          "uzb": "yuvmoq",
+          "emoji": "🚿",
+          "examples": {
+            "easy": "Please wash.",
+            "normal": "The teacher asks us to wash."
+          }
+        },
+        {
+          "word": "whiskers",
+          "uzb": "mo'ylov",
+          "emoji": "🥸",
+          "examples": {
+            "easy": "These are whiskers.",
+            "normal": "I can see whiskers in the picture."
+          }
+        },
+        {
+          "word": "hatch",
+          "uzb": "tuxumdan chiqmoq",
+          "emoji": "🐣",
+          "examples": {
+            "easy": "Please hatch.",
+            "normal": "The teacher asks us to hatch."
+          }
+        },
+        {
+          "word": "animal",
+          "uzb": "hayvon",
+          "emoji": "🐾",
+          "examples": {
+            "easy": "This is a animal.",
+            "normal": "I can see a animal in the picture."
+          }
+        },
+        {
+          "word": "vowel",
+          "uzb": "unli harf",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a vowel.",
+            "normal": "I can see a vowel in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-139",
+      "name": "Lesson 139 - Sounds And Spelling: Sl, Sn, Sc, Sp",
+      "words": [
+        {
+          "word": "speedy",
+          "uzb": "chaqqon",
+          "emoji": "💨",
+          "examples": {
+            "easy": "This is a speedy.",
+            "normal": "I can see a speedy in the picture."
+          }
+        },
+        {
+          "word": "winner",
+          "uzb": "g'olib",
+          "emoji": "🏅",
+          "examples": {
+            "easy": "This is a winner.",
+            "normal": "I can see a winner in the picture."
+          }
+        },
+        {
+          "word": "stadium",
+          "uzb": "stadion",
+          "emoji": "🏟",
+          "examples": {
+            "easy": "This is a stadium.",
+            "normal": "I can see a stadium in the picture."
+          }
+        },
+        {
+          "word": "wash",
+          "uzb": "yuvmoq",
+          "emoji": "🚿",
+          "examples": {
+            "easy": "Please wash.",
+            "normal": "The teacher asks us to wash."
+          }
+        },
+        {
+          "word": "whiskers",
+          "uzb": "mo'ylov",
+          "emoji": "🥸",
+          "examples": {
+            "easy": "These are whiskers.",
+            "normal": "I can see whiskers in the picture."
+          }
+        },
+        {
+          "word": "hatch",
+          "uzb": "tuxumdan chiqmoq",
+          "emoji": "🐣",
+          "examples": {
+            "easy": "Please hatch.",
+            "normal": "The teacher asks us to hatch."
+          }
+        },
+        {
+          "word": "animal",
+          "uzb": "hayvon",
+          "emoji": "🐾",
+          "examples": {
+            "easy": "This is a animal.",
+            "normal": "I can see a animal in the picture."
+          }
+        },
+        {
+          "word": "vowel",
+          "uzb": "unli harf",
+          "emoji": "🅰",
+          "examples": {
+            "easy": "This is a vowel.",
+            "normal": "I can see a vowel in the picture."
+          }
+        },
+        {
+          "word": "mountain",
+          "uzb": "tog'",
+          "emoji": "🏔",
+          "examples": {
+            "easy": "This is a mountain.",
+            "normal": "I can see a mountain in the picture."
+          }
+        },
+        {
+          "word": "example",
+          "uzb": "misol",
+          "emoji": "📝",
+          "examples": {
+            "easy": "This is a example.",
+            "normal": "I can see a example in the picture."
+          }
+        },
+        {
+          "word": "feather",
+          "uzb": "pat",
+          "emoji": "🪶",
+          "examples": {
+            "easy": "This is a feather.",
+            "normal": "I can see a feather in the picture."
+          }
+        },
+        {
+          "word": "idea",
+          "uzb": "fikr",
+          "emoji": "💡",
+          "examples": {
+            "easy": "This is a idea.",
+            "normal": "I can see a idea in the picture."
+          }
+        },
+        {
+          "word": "float",
+          "uzb": "suzib yurmoq",
+          "emoji": "🛟",
+          "examples": {
+            "easy": "Please float.",
+            "normal": "The teacher asks us to float."
+          }
+        },
+        {
+          "word": "giraffe",
+          "uzb": "jirafa",
+          "emoji": "🦒",
+          "examples": {
+            "easy": "This is a giraffe.",
+            "normal": "I can see a giraffe in the picture."
+          }
+        },
+        {
+          "word": "gloves",
+          "uzb": "qo'lqop",
+          "emoji": "📖",
+          "examples": {
+            "easy": "These are gloves.",
+            "normal": "I can see gloves in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-140",
+      "name": "Lesson 140 - Can You Be Quiet, Please?",
+      "words": [
+        {
+          "word": "goodnight",
+          "uzb": "xayrli tun",
+          "emoji": "🌙",
+          "examples": {
+            "easy": "This is a goodnight.",
+            "normal": "I can see a goodnight in the picture."
+          }
+        },
+        {
+          "word": "tired",
+          "uzb": "charchagan",
+          "emoji": "😴",
+          "examples": {
+            "easy": "This is a tired.",
+            "normal": "I can see a tired in the picture."
+          }
+        },
+        {
+          "word": "awake",
+          "uzb": "uyg'oq",
+          "emoji": "👀",
+          "examples": {
+            "easy": "This is a awake.",
+            "normal": "I can see a awake in the picture."
+          }
+        },
+        {
+          "word": "try",
+          "uzb": "urinmoq",
+          "emoji": "💪",
+          "examples": {
+            "easy": "Please try.",
+            "normal": "The teacher asks us to try."
+          }
+        },
+        {
+          "word": "bedtime",
+          "uzb": "uyqu vaqti",
+          "emoji": "🛏",
+          "examples": {
+            "easy": "This is a bedtime.",
+            "normal": "I can see a bedtime in the picture."
+          }
+        },
+        {
+          "word": "know",
+          "uzb": "bilmoq",
+          "emoji": "🧠",
+          "examples": {
+            "easy": "Please know.",
+            "normal": "The teacher asks us to know."
+          }
+        },
+        {
+          "word": "night",
+          "uzb": "tun",
+          "emoji": "🌙",
+          "examples": {
+            "easy": "This is a night.",
+            "normal": "I can see a night in the picture."
+          }
+        },
+        {
+          "word": "mountain",
+          "uzb": "tog'",
+          "emoji": "🏔",
+          "examples": {
+            "easy": "This is a mountain.",
+            "normal": "I can see a mountain in the picture."
+          }
+        },
+        {
+          "word": "example",
+          "uzb": "misol",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a example.",
+            "normal": "I can see a example in the picture."
+          }
+        },
+        {
+          "word": "feather",
+          "uzb": "pat",
+          "emoji": "🪶",
+          "examples": {
+            "easy": "This is a feather.",
+            "normal": "I can see a feather in the picture."
+          }
+        },
+        {
+          "word": "idea",
+          "uzb": "fikr",
+          "emoji": "💡",
+          "examples": {
+            "easy": "This is a idea.",
+            "normal": "I can see a idea in the picture."
+          }
+        },
+        {
+          "word": "float",
+          "uzb": "suzib yurmoq",
+          "emoji": "🛟",
+          "examples": {
+            "easy": "Please float.",
+            "normal": "The teacher asks us to float."
+          }
+        },
+        {
+          "word": "giraffe",
+          "uzb": "jirafa",
+          "emoji": "🦒",
+          "examples": {
+            "easy": "This is a giraffe.",
+            "normal": "I can see a giraffe in the picture."
+          }
+        },
+        {
+          "word": "monkey",
+          "uzb": "maymun",
+          "emoji": "🐒",
+          "examples": {
+            "easy": "This is a monkey.",
+            "normal": "I can see a monkey in the picture."
+          }
+        },
+        {
+          "word": "gloves",
+          "uzb": "qo'lqop",
+          "emoji": "📖",
+          "examples": {
+            "easy": "These are gloves.",
+            "normal": "I can see gloves in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-141",
+      "name": "Lesson 141 - My Town",
+      "words": [
+        {
+          "word": "flat",
+          "uzb": "kvartira",
+          "emoji": "🏢",
+          "examples": {
+            "easy": "This is a flat.",
+            "normal": "I can see a flat in the picture."
+          }
+        },
+        {
+          "word": "pet shop",
+          "uzb": "uy hayvonlari do'koni",
+          "emoji": "🐶",
+          "examples": {
+            "easy": "I know pet shop.",
+            "normal": "We use the words pet shop in class."
+          }
+        },
+        {
+          "word": "shoe shop",
+          "uzb": "poyabzal do'koni",
+          "emoji": "👟",
+          "examples": {
+            "easy": "I know shoe shop.",
+            "normal": "We use the words shoe shop in class."
+          }
+        },
+        {
+          "word": "flower shop",
+          "uzb": "gul do'koni",
+          "emoji": "💐",
+          "examples": {
+            "easy": "I know flower shop.",
+            "normal": "We use the words flower shop in class."
+          }
+        },
+        {
+          "word": "clothes shop",
+          "uzb": "kiyim do'koni",
+          "emoji": "👕",
+          "examples": {
+            "easy": "I know clothes shop.",
+            "normal": "We use the words clothes shop in class."
+          }
+        },
+        {
+          "word": "awning",
+          "uzb": "soyabon",
+          "emoji": "⛱",
+          "examples": {
+            "easy": "This is a awning.",
+            "normal": "I can see a awning in the picture."
+          }
+        },
+        {
+          "word": "pavement",
+          "uzb": "yo'lka",
+          "emoji": "🚶",
+          "examples": {
+            "easy": "This is a pavement.",
+            "normal": "I can see a pavement in the picture."
+          }
+        },
+        {
+          "word": "toy shop",
+          "uzb": "o'yinchoq do'koni",
+          "emoji": "🏪",
+          "examples": {
+            "easy": "I know toy shop.",
+            "normal": "We use the words toy shop in class."
+          }
+        },
+        {
+          "word": "activity",
+          "uzb": "mashg'ulot",
+          "emoji": "🎲",
+          "examples": {
+            "easy": "This is a activity.",
+            "normal": "I can see a activity in the picture."
+          }
+        },
+        {
+          "word": "lightning",
+          "uzb": "chaqmoq",
+          "emoji": "⚡",
+          "examples": {
+            "easy": "Please lightning.",
+            "normal": "The teacher asks us to lightning."
+          }
+        },
+        {
+          "word": "hovercraft",
+          "uzb": "havo yostiqli qayiq",
+          "emoji": "🚤",
+          "examples": {
+            "easy": "This is a hovercraft.",
+            "normal": "I can see a hovercraft in the picture."
+          }
+        },
+        {
+          "word": "helicopter",
+          "uzb": "vertolyot",
+          "emoji": "🚁",
+          "examples": {
+            "easy": "This is a helicopter.",
+            "normal": "I can see a helicopter in the picture."
+          }
+        },
+        {
+          "word": "complete",
+          "uzb": "tugatmoq",
+          "emoji": "📝",
+          "examples": {
+            "easy": "Please complete.",
+            "normal": "The teacher asks us to complete."
+          }
+        },
+        {
+          "word": "design",
+          "uzb": "loyihalamoq",
+          "emoji": "🎨",
+          "examples": {
+            "easy": "Please design.",
+            "normal": "The teacher asks us to design."
+          }
+        },
+        {
+          "word": "roundabout",
+          "uzb": "karusel",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a roundabout.",
+            "normal": "I can see a roundabout in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-142",
+      "name": "Lesson 142 - How Many Are There?",
+      "words": [
+        {
+          "word": "skateboard",
+          "uzb": "skeytbord",
+          "emoji": "🛹",
+          "examples": {
+            "easy": "This is a skateboard.",
+            "normal": "I can see a skateboard in the picture."
+          }
+        },
+        {
+          "word": "bus stop",
+          "uzb": "bekat",
+          "emoji": "🚏",
+          "examples": {
+            "easy": "I know bus stop.",
+            "normal": "We use the words bus stop in class."
+          }
+        },
+        {
+          "word": "bookshop",
+          "uzb": "kitob do'koni",
+          "emoji": "📚",
+          "examples": {
+            "easy": "This is a bookshop.",
+            "normal": "I can see a bookshop in the picture."
+          }
+        },
+        {
+          "word": "furniture",
+          "uzb": "mebel",
+          "emoji": "🪑",
+          "examples": {
+            "easy": "This is a furniture.",
+            "normal": "I can see a furniture in the picture."
+          }
+        },
+        {
+          "word": "man",
+          "uzb": "erkak",
+          "emoji": "👨",
+          "examples": {
+            "easy": "This is a man.",
+            "normal": "I can see a man in the picture."
+          }
+        },
+        {
+          "word": "lemon",
+          "uzb": "limon",
+          "emoji": "🍋",
+          "examples": {
+            "easy": "This is a lemon.",
+            "normal": "I can see a lemon in the picture."
+          }
+        },
+        {
+          "word": "activity",
+          "uzb": "mashg'ulot",
+          "emoji": "🎲",
+          "examples": {
+            "easy": "This is a activity.",
+            "normal": "I can see a activity in the picture."
+          }
+        },
+        {
+          "word": "lightning",
+          "uzb": "chaqmoq",
+          "emoji": "⚡",
+          "examples": {
+            "easy": "Please lightning.",
+            "normal": "The teacher asks us to lightning."
+          }
+        },
+        {
+          "word": "hovercraft",
+          "uzb": "havo yostiqli qayiq",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a hovercraft.",
+            "normal": "I can see a hovercraft in the picture."
+          }
+        },
+        {
+          "word": "helicopter",
+          "uzb": "vertolyot",
+          "emoji": "🚁",
+          "examples": {
+            "easy": "This is a helicopter.",
+            "normal": "I can see a helicopter in the picture."
+          }
+        },
+        {
+          "word": "complete",
+          "uzb": "tugatmoq",
+          "emoji": "📝",
+          "examples": {
+            "easy": "Please complete.",
+            "normal": "The teacher asks us to complete."
+          }
+        },
+        {
+          "word": "design",
+          "uzb": "loyihalamoq",
+          "emoji": "🎨",
+          "examples": {
+            "easy": "Please design.",
+            "normal": "The teacher asks us to design."
+          }
+        },
+        {
+          "word": "roundabout",
+          "uzb": "karusel",
+          "emoji": "🎠",
+          "examples": {
+            "easy": "This is a roundabout.",
+            "normal": "I can see a roundabout in the picture."
+          }
+        },
+        {
+          "word": "travel",
+          "uzb": "sayohat qilmoq",
+          "emoji": "🧳",
+          "examples": {
+            "easy": "Please travel.",
+            "normal": "The teacher asks us to travel."
+          }
+        },
+        {
+          "word": "trampoline",
+          "uzb": "batut",
+          "emoji": "🤸",
+          "examples": {
+            "easy": "This is a trampoline.",
+            "normal": "I can see a trampoline in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-143",
+      "name": "Lesson 143 - Where Are They?",
+      "words": [
+        {
+          "word": "in front of",
+          "uzb": "oldida",
+          "emoji": "➡",
+          "examples": {
+            "easy": "I know in front of.",
+            "normal": "We use the words in front of in class."
+          }
+        },
+        {
+          "word": "behind",
+          "uzb": "orqasida",
+          "emoji": "🔙",
+          "examples": {
+            "easy": "This is a behind.",
+            "normal": "I can see a behind in the picture."
+          }
+        },
+        {
+          "word": "between",
+          "uzb": "o'rtasida",
+          "emoji": "↔",
+          "examples": {
+            "easy": "This is a between.",
+            "normal": "I can see a between in the picture."
+          }
+        },
+        {
+          "word": "concert",
+          "uzb": "konsert",
+          "emoji": "🎸",
+          "examples": {
+            "easy": "This is a concert.",
+            "normal": "I can see a concert in the picture."
+          }
+        },
+        {
+          "word": "audience",
+          "uzb": "tomoshabinlar",
+          "emoji": "👏",
+          "examples": {
+            "easy": "This is a audience.",
+            "normal": "I can see a audience in the picture."
+          }
+        },
+        {
+          "word": "fish tank",
+          "uzb": "akvarium",
+          "emoji": "🐠",
+          "examples": {
+            "easy": "I know fish tank.",
+            "normal": "We use the words fish tank in class."
+          }
+        },
+        {
+          "word": "travel",
+          "uzb": "sayohat qilmoq",
+          "emoji": "🧳",
+          "examples": {
+            "easy": "Please travel.",
+            "normal": "The teacher asks us to travel."
+          }
+        },
+        {
+          "word": "trampoline",
+          "uzb": "batut",
+          "emoji": "🤸",
+          "examples": {
+            "easy": "This is a trampoline.",
+            "normal": "I can see a trampoline in the picture."
+          }
+        },
+        {
+          "word": "propeller",
+          "uzb": "parrak",
+          "emoji": "🌀",
+          "examples": {
+            "easy": "This is a propeller.",
+            "normal": "I can see a propeller in the picture."
+          }
+        },
+        {
+          "word": "driving",
+          "uzb": "haydamoq",
+          "emoji": "🚗",
+          "examples": {
+            "easy": "Please driving.",
+            "normal": "The teacher asks us to driving."
+          }
+        },
+        {
+          "word": "riding",
+          "uzb": "minmoq",
+          "emoji": "🏍",
+          "examples": {
+            "easy": "Please riding.",
+            "normal": "The teacher asks us to riding."
+          }
+        },
+        {
+          "word": "hospital",
+          "uzb": "shifoxona",
+          "emoji": "🏥",
+          "examples": {
+            "easy": "This is a hospital.",
+            "normal": "I can see a hospital in the picture."
+          }
+        },
+        {
+          "word": "station",
+          "uzb": "bekat",
+          "emoji": "🚉",
+          "examples": {
+            "easy": "This is a station.",
+            "normal": "I can see a station in the picture."
+          }
+        },
+        {
+          "word": "crossing",
+          "uzb": "o'tish joyi",
+          "emoji": "🚸",
+          "examples": {
+            "easy": "This is a crossing.",
+            "normal": "I can see a crossing in the picture."
+          }
+        },
+        {
+          "word": "journey",
+          "uzb": "sayohat",
+          "emoji": "🧭",
+          "examples": {
+            "easy": "This is a journey.",
+            "normal": "I can see a journey in the picture."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kids-1-lesson-144",
+      "name": "Lesson 144 - Put The Book On The Table",
+      "words": [
+        {
+          "word": "waiter",
+          "uzb": "ofitsiant",
+          "emoji": "🤵",
+          "examples": {
+            "easy": "This is a waiter.",
+            "normal": "I can see a waiter in the picture."
+          }
+        },
+        {
+          "word": "sit down",
+          "uzb": "o'tirmoq",
+          "emoji": "🪑",
+          "examples": {
+            "easy": "Please sit down.",
+            "normal": "The teacher asks us to sit down."
+          }
+        },
+        {
+          "word": "menu",
+          "uzb": "menyu",
+          "emoji": "📋",
+          "examples": {
+            "easy": "This is a menu.",
+            "normal": "I can see a menu in the picture."
+          }
+        },
+        {
+          "word": "propeller",
+          "uzb": "parrak",
+          "emoji": "🌀",
+          "examples": {
+            "easy": "This is a propeller.",
+            "normal": "I can see a propeller in the picture."
+          }
+        },
+        {
+          "word": "driving",
+          "uzb": "haydamoq",
+          "emoji": "🚗",
+          "examples": {
+            "easy": "Please driving.",
+            "normal": "The teacher asks us to driving."
+          }
+        },
+        {
+          "word": "riding",
+          "uzb": "minmoq",
+          "emoji": "🏍",
+          "examples": {
+            "easy": "Please riding.",
+            "normal": "The teacher asks us to riding."
+          }
+        },
+        {
+          "word": "hospital",
+          "uzb": "shifoxona",
+          "emoji": "🏥",
+          "examples": {
+            "easy": "This is a hospital.",
+            "normal": "I can see a hospital in the picture."
+          }
+        },
+        {
+          "word": "station",
+          "uzb": "bekat",
+          "emoji": "🚉",
+          "examples": {
+            "easy": "This is a station.",
+            "normal": "I can see a station in the picture."
+          }
+        },
+        {
+          "word": "crossing",
+          "uzb": "o'tish joyi",
+          "emoji": "📖",
+          "examples": {
+            "easy": "This is a crossing.",
+            "normal": "I can see a crossing in the picture."
+          }
+        },
+        {
+          "word": "journey",
+          "uzb": "sayohat",
+          "emoji": "🧭",
+          "examples": {
+            "easy": "This is a journey.",
+            "normal": "I can see a journey in the picture."
+          }
+        },
+        {
+          "word": "traffic",
+          "uzb": "yo'l harakati",
+          "emoji": "🚦",
+          "examples": {
+            "easy": "This is a traffic.",
+            "normal": "I can see a traffic in the picture."
+          }
+        },
+        {
+          "word": "dancing",
+          "uzb": "raqsga tushish",
+          "emoji": "💃",
+          "examples": {
+            "easy": "This is a dancing.",
+            "normal": "I can see a dancing in the picture."
+          }
+        },
+        {
+          "word": "funfair",
+          "uzb": "attraksion",
+          "emoji": "🎡",
+          "examples": {
+            "easy": "This is a funfair.",
+            "normal": "I can see a funfair in the picture."
+          }
+        },
+        {
+          "word": "scooter",
+          "uzb": "samokat",
+          "emoji": "🛴",
+          "examples": {
+            "easy": "This is a scooter.",
+            "normal": "I can see a scooter in the picture."
+          }
+        },
+        {
+          "word": "lorry",
+          "uzb": "yuk mashinasi",
+          "emoji": "🚚",
+          "examples": {
+            "easy": "This is a lorry.",
+            "normal": "I can see a lorry in the picture."
+          }
+        }
+      ]
+    }
+  ]
+}
