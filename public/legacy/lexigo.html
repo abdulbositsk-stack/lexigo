@@ -2645,12 +2645,16 @@
     </div>
     <div class="card">
       <p class="add-form-title">&#127974; Ready-made vocabulary</p>
-      <p class="hint">Browse verified vocabulary packs. A pack is protected here; <strong>Add to My Library</strong> creates your own editable copy.</p>
-      <div class="search-bar" style="margin:12px 0 0;">
-        <input id="wordBankSearch" type="search" placeholder="&#128269; Search a word, lesson, or topic..." oninput="renderWordBank()" />
+      <p class="hint">Choose the learner group first. Vocabulary packs stay separate, while <strong>Add to My Library</strong> makes an editable copy for you.</p>
+      <div id="wordBankBreadcrumb" style="margin-top:12px;"></div>
+      <div id="wordBankCategoryGrid" class="class-grid" style="margin-top:12px;"></div>
+      <div id="wordBankUnitsPanel" style="display:none;">
+        <div class="search-bar" style="margin:12px 0 0;">
+          <input id="wordBankSearch" type="search" placeholder="&#128269; Search a word, lesson, or topic..." oninput="renderWordBank()" />
+        </div>
       </div>
     </div>
-    <div class="class-grid" id="wordBankGrid"></div>
+    <div class="class-grid" id="wordBankGrid" style="display:none;"></div>
     <div id="wordBankPreview"></div>
   </div>
 
@@ -9727,19 +9731,74 @@ function menuGoLibrary() {
 
 /* ===== WORD BANK ===== */
 const WORD_BANK_FILES = [
-  { id: 'kids-1-1-36', label: 'Kids 1', path: '/word-bank/kids-1-lessons-1-36.json' },
-  { id: 'kids-1-37-72', label: 'Kids 1', path: '/word-bank/kids-1-lessons-37-72.json' },
-  { id: 'kids-1-73-108', label: 'Kids 1', path: '/word-bank/kids-1-lessons-73-108.json' },
-  { id: 'kids-1-109-144', label: 'Kids 1', path: '/word-bank/kids-1-lessons-109-144.json' },
-  { id: 'kids-1-145-180', label: 'Kids 1', path: '/word-bank/kids-1-lessons-145-180.json' }
+  { id: 'kids-1-1-36', category: 'kids-1', label: 'Kids 1', path: '/word-bank/kids-1-lessons-1-36.json' },
+  { id: 'kids-1-37-72', category: 'kids-1', label: 'Kids 1', path: '/word-bank/kids-1-lessons-37-72.json' },
+  { id: 'kids-1-73-108', category: 'kids-1', label: 'Kids 1', path: '/word-bank/kids-1-lessons-73-108.json' },
+  { id: 'kids-1-109-144', category: 'kids-1', label: 'Kids 1', path: '/word-bank/kids-1-lessons-109-144.json' },
+  { id: 'kids-1-145-180', category: 'kids-1', label: 'Kids 1', path: '/word-bank/kids-1-lessons-145-180.json' },
+  { id: 'kids-2-1-192', category: 'kids-2', label: 'Kids 2', path: '/word-bank/kids-2-lessons-1-192.json' }
+];
+const WORD_BANK_CATEGORIES = [
+  { id: 'kids-1', label: 'Kids 1', emoji: '🧒', detail: 'Lessons 1–180' },
+  { id: 'kids-2', label: 'Kids 2', emoji: '🧑', detail: 'Lessons 1–192' },
+  { id: 'adults', label: 'Adults', emoji: '🧑‍🏫', detail: 'Vocabulary packs coming soon' }
 ];
 let wordBankUnits = [];
 let wordBankLoading = false;
 let wordBankSelectedId = null;
+let wordBankActiveCategory = null;
 
 function menuGoWordBank() {
   stopMenuMusic();
   showSection('sec-word-bank');
+  wordBankActiveCategory = null;
+  wordBankSelectedId = null;
+  const search = document.getElementById('wordBankSearch');
+  if (search) search.value = '';
+  renderWordBankCategories();
+}
+
+function renderWordBankCategories() {
+  const categoryGrid = document.getElementById('wordBankCategoryGrid');
+  const unitsPanel = document.getElementById('wordBankUnitsPanel');
+  const grid = document.getElementById('wordBankGrid');
+  const preview = document.getElementById('wordBankPreview');
+  const breadcrumb = document.getElementById('wordBankBreadcrumb');
+  if (!categoryGrid) return;
+  categoryGrid.style.display = '';
+  if (unitsPanel) unitsPanel.style.display = 'none';
+  if (grid) { grid.style.display = 'none'; grid.innerHTML = ''; }
+  if (preview) preview.innerHTML = '';
+  if (breadcrumb) breadcrumb.innerHTML = '<span class="hint">Select a group to browse its ready-made vocabulary.</span>';
+  categoryGrid.innerHTML = WORD_BANK_CATEGORIES.map(category =>
+    '<div class="class-card" onclick="openWordBankCategory(\'' + category.id + '\')">'
+      + '<div class="class-card-icon">' + category.emoji + '</div><div class="class-card-body">'
+      + '<div class="class-card-name">' + esc(category.label) + '</div>'
+      + '<div class="class-card-meta">' + esc(category.detail) + '</div>'
+      + '</div></div>'
+  ).join('');
+}
+
+function openWordBankCategory(categoryId) {
+  const category = WORD_BANK_CATEGORIES.find(item => item.id === categoryId);
+  if (!category) return;
+  wordBankActiveCategory = categoryId;
+  wordBankSelectedId = null;
+  const categoryGrid = document.getElementById('wordBankCategoryGrid');
+  const unitsPanel = document.getElementById('wordBankUnitsPanel');
+  const grid = document.getElementById('wordBankGrid');
+  const breadcrumb = document.getElementById('wordBankBreadcrumb');
+  const preview = document.getElementById('wordBankPreview');
+  if (categoryGrid) categoryGrid.style.display = 'none';
+  if (unitsPanel) unitsPanel.style.display = '';
+  if (grid) grid.style.display = '';
+  if (preview) preview.innerHTML = '';
+  if (breadcrumb) breadcrumb.innerHTML = '<button class="btn btn-sm" onclick="renderWordBankCategories()">← All groups</button> <span class="hint" style="margin-left:8px;">' + esc(category.label) + '</span>';
+  const hasPacks = WORD_BANK_FILES.some(source => source.category === categoryId);
+  if (!hasPacks) {
+    if (grid) grid.innerHTML = '<div class="card"><p class="hint">' + esc(category.label) + ' vocabulary packs will appear here soon.</p></div>';
+    return;
+  }
   loadWordBank();
 }
 
@@ -9754,7 +9813,7 @@ async function loadWordBank() {
       const response = await fetch(source.path, { cache: 'no-store' });
       if (!response.ok) throw new Error(source.label + ' could not be loaded.');
       const data = await response.json();
-      return (data.units || []).map(unit => ({ ...unit, bankId: source.id, bankLabel: source.label }));
+      return (data.units || []).map(unit => ({ ...unit, bankId: source.id, bankCategory: source.category, bankLabel: source.label }));
     }));
     wordBankUnits = loaded.flat();
     renderWordBank();
@@ -9770,6 +9829,7 @@ function renderWordBank() {
   if (!grid) return;
   const query = ((document.getElementById('wordBankSearch') || {}).value || '').trim().toLowerCase();
   const list = wordBankUnits.filter(unit => {
+    if (unit.bankCategory !== wordBankActiveCategory) return false;
     const words = unit.words || [];
     const haystack = [unit.name, unit.bankLabel].concat(words.flatMap(w => [w.word, w.uzb])).join(' ').toLowerCase();
     return !query || haystack.includes(query);
@@ -9795,18 +9855,35 @@ function selectWordBankUnit(id, silent) {
   const preview = document.getElementById('wordBankPreview');
   if (!unit || !preview) return;
   wordBankSelectedId = id;
-  const exampleHtml = word => {
-    if (word.examples && !Array.isArray(word.examples)) return '<div class="hint" style="margin-top:3px;">Easy: ' + esc(word.examples.easy || '') + '<br/>Normal: ' + esc(word.examples.normal || '') + '</div>';
-    return word.examples && word.examples.length ? '<div class="hint" style="margin-top:3px;">' + esc(word.examples[0]) + '</div>' : '';
-  };
   const safeId = esc(unit.id).replace(/'/g, "\\'");
   preview.innerHTML = '<div class="card" style="margin-top:14px;"><div class="row" style="align-items:center;gap:8px;flex-wrap:wrap;">'
     + '<div><p class="add-form-title" style="margin:0;">' + esc(unit.name) + '</p><p class="hint" style="margin:3px 0 0;">' + esc(unit.bankLabel) + ' · ' + unit.words.length + ' ready-to-use words</p></div>'
     + '<span style="flex:1;"></span><button class="btn btn-primary btn-sm" onclick="addWordBankUnitToLibrary(\'' + safeId + '\')">➕ Add to My Library</button></div>'
-    + '<div class="word-list" style="margin-top:12px;">' + unit.words.map(word =>
-      '<div class="word-item"><span class="word-emoji">' + esc(word.emoji || '📖') + '</span><div class="word-info"><div><strong>' + esc(word.word) + '</strong> <span class="hint">— ' + esc(word.uzb) + '</span></div>' + exampleHtml(word) + '</div></div>'
-    ).join('') + '</div></div>';
+    + '<div class="word-list" style="margin-top:12px;">' + unit.words.map((word, index) => {
+      const examples = word.examples && !Array.isArray(word.examples) ? word.examples : { easy: (word.examples || [])[0] };
+      const actions = ['easy', 'normal', 'hard'].filter(level => examples[level]).map(level =>
+        '<button class="btn btn-sm" onclick="showWordBankWordInfo(\'' + safeId + '\',' + index + ',\'' + level + '\')">' + level.charAt(0).toUpperCase() + level.slice(1) + '</button>'
+      ).join(' ');
+      const synonymAction = Array.isArray(word.synonyms) && word.synonyms.length
+        ? ' <button class="btn btn-sm" onclick="showWordBankWordInfo(\'' + safeId + '\',' + index + ',\'synonyms\')">Synonyms</button>' : '';
+      return '<div class="word-item"><span class="word-emoji">' + esc(word.emoji || '📖') + '</span><div class="word-info"><div><strong>' + esc(word.word) + '</strong> <span class="hint">— ' + esc(word.uzb) + '</span></div>'
+        + (actions || synonymAction ? '<div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:6px;">' + actions + synonymAction + '</div><div id="wordBankWordInfo-' + esc(unit.id) + '-' + index + '" class="hint" style="margin-top:5px;"></div>' : '')
+        + '</div></div>';
+    }).join('') + '</div></div>';
   if (!silent) preview.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function showWordBankWordInfo(unitId, wordIndex, kind) {
+  const unit = wordBankUnits.find(item => item.id === unitId);
+  const word = unit && unit.words ? unit.words[wordIndex] : null;
+  const target = document.getElementById('wordBankWordInfo-' + unitId + '-' + wordIndex);
+  if (!word || !target) return;
+  if (kind === 'synonyms') {
+    target.innerHTML = '<strong>Synonyms:</strong> ' + esc((word.synonyms || []).slice(0, 2).join(' · '));
+    return;
+  }
+  const examples = word.examples && !Array.isArray(word.examples) ? word.examples : { easy: (word.examples || [])[0] };
+  target.innerHTML = '<strong>' + esc(kind.charAt(0).toUpperCase() + kind.slice(1)) + ':</strong> ' + esc(examples[kind] || '');
 }
 
 function addWordBankUnitToLibrary(id) {
