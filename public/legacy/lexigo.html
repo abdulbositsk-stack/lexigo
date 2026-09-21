@@ -3105,16 +3105,14 @@ const DEFAULT_WORDS = [
 let allWords = [];
 
 /* ============================================================
-   APP MODE + ONE-WAY DATA VISIBILITY (Kids -> Adult)
+   APP MODE + DATA ISOLATION
    Declared up here (before any loader runs) so every data loader
    below can consult the current mode safely.
 
-   Rule: everything created in Kids mode is visible in BOTH modes.
-   Anything created in Adult mode is tagged sourceMode:'adult' and
-   is visible ONLY in Adult mode. Records with no sourceMode field
-   (all pre-existing data) are treated as Kids data, so nothing a
-   teacher already has ever disappears — no destructive migration
-   is needed and the rule is idempotent by construction.
+   Rule: Kids and Teenagers & Adults are separate workspaces. Units,
+   classes, rosters and saved progress only appear in the mode where they
+   were created. Older records are safely treated as Kids records, so no
+   existing teacher data disappears during this non-destructive migration.
    ============================================================ */
 let appMode = null; // 'kids' | 'adult' — chosen on the selection screen each time LexiGo opens
 
@@ -3128,7 +3126,7 @@ function recordVisibleInMode(rec) {
   // predate modes, so they remain safely available in Kids by default.
   return !rec || (rec.sourceMode || 'kids') === currentSourceMode();
 }
-function visibleClasses()    { return classes; }
+function visibleClasses()    { return classes.filter(recordVisibleInMode); }
 function visibleGroupTypes() { return groupTypes.filter(recordVisibleInMode); }
 function visibleUnits()      { return units.filter(recordVisibleInMode); }
 
@@ -4821,7 +4819,8 @@ function wordCountForClass(classId) {
 function renderDashboard() {
   const grid = document.getElementById('classGrid');
   if (!grid) return;
-  grid.innerHTML = visibleClasses().map(c => {
+  const modeClasses = visibleClasses();
+  grid.innerHTML = (modeClasses.length ? modeClasses.map(c => {
     const count = wordCountForClass(c.id);
     return '<div class="class-card" onclick="openClass(\'' + c.id + '\')">'
       + '<div class="class-card-actions">'
@@ -4838,7 +4837,7 @@ function renderDashboard() {
       + '<span class="class-card-report-status" id="cardReportStatus-' + c.id + '"></span>'
       + '</div>'
       + '</div>';
-  }).join('')
+  }).join('') : '<div class="card" style="grid-column:1/-1;"><p class="add-form-title">No groups in this mode yet</p><p class="hint">Groups, students and results from the other teaching mode are kept private and do not appear here.</p></div>')
   + '<div class="class-card class-add-card" onclick="addClass()">'
   + '<div class="class-card-icon">&#43;</div>'
   + '<div class="class-card-body">'
@@ -5449,7 +5448,7 @@ function addUnitWord() {
   const word = wordInput.value.trim();
   if (!word) { wordInput.focus(); return; }
   const uzb = uzbInput.value.trim();
-  const emoji = emojiInput.value.trim() || '📖';
+  const emoji = emojiInput.value.trim() || '💬';
   const example = exampleInput.value.trim();
   u.words.push({ id: generateId(), word: word, emoji: emoji, uzb: uzb, examples: example ? [example] : [] });
   saveUnits();
@@ -5520,7 +5519,7 @@ function renderUnitWordList() {
   }
   container.innerHTML = list.map(w => {
     return '<div class="wli">'
-      + '<span class="wli-emoji">' + esc(w.emoji || '📖') + '</span>'
+      + '<span class="wli-emoji">' + esc(w.emoji || '💬') + '</span>'
       + '<span class="wli-word">' + esc(w.word) + adultWordMetaChips(w) + '</span>'
       + '<span class="wli-uzb">' + esc(w.uzb || '') + '</span>'
       + '<div class="wli-actions">'
@@ -6103,7 +6102,7 @@ function multiGenCreateUnits() {
   const mk = (name, words) => {
     const u = {
       id: generateId(), groupTypeId: gt, sourceMode: currentSourceMode(), name,
-      words: words.map(w => ({ ...w, id: w.id || generateId(), emoji: w.emoji || '📖', uzb: w.uzb || '', examples: w.examples || [] }))
+      words: words.map(w => ({ ...w, id: w.id || generateId(), emoji: w.emoji || '💬', uzb: w.uzb || '', examples: w.examples || [] }))
     };
     units.push(u);
     return u;
@@ -6313,7 +6312,7 @@ function normalizeImportedWordItem(it) {
     id: generateId(),
     word: String(wordVal).trim(),
     uzb: uzbVal ? String(uzbVal).trim() : '',
-    emoji: it.emoji ? String(it.emoji).trim() : '📖',
+    emoji: it.emoji ? String(it.emoji).trim() : '💬',
     examples: Array.isArray(it.examples) ? it.examples.map(e => String(e).trim()).filter(Boolean) : []
   };
   // Optional Teens/Adult enrichment — kept only when present, so old simple
@@ -6911,7 +6910,7 @@ function adultWordAskedHtml(w, i, total, reviewBadge, timerHtml, dir) {
     '<button class="awa-facet-btn' + (extraCls ? ' ' + extraCls : '') + (st[key] ? ' on' : '')
     + '" onclick="toggleAdultFacet(' + i + ',\'' + key + '\')">' + label + '</button>';
 
-  let facets = facetBtn('meaning', uz2en ? '&#128161; English word' : '&#128161; Meaning');
+  let facets = facetBtn('meaning', uz2en ? '&#128161; English word / emoji' : '&#128161; Meaning / emoji');
   if (lev && lev.easy)   facets += facetBtn('easy', 'Easy', 'fb-easy');
   if (lev && lev.normal) facets += facetBtn('normal', 'Normal', 'fb-normal');
   if (lev && lev.hard)   facets += facetBtn('hard', 'Hard', 'fb-hard');
@@ -6970,6 +6969,45 @@ function adultWordAskedHtml(w, i, total, reviewBadge, timerHtml, dir) {
     + '<div class="awa-facets">' + facets + '</div>'
     + (panels ? '<div class="awa-panels">' + panels + '</div>' : '')
     + '</div>';
+}
+
+/* Kids keeps its familiar quiz card, but its help is deliberately hidden
+   until a teacher chooses a hint. This prevents three examples and the
+   translation from giving away the answer as soon as the word appears. */
+function kidsQuizHintHtml(w, i, dir) {
+  const st = adultFacetState[i] || {};
+  const uz2en = dir === 'uz2en';
+  const levelled = getLeveledExamples(w);
+  const legacy = getLegacyExamples(w);
+  const examples = levelled || {
+    easy: legacy[0] || '',
+    normal: legacy[1] || '',
+    hard: legacy[2] || ''
+  };
+  const btn = (key, label, extra) => '<button class="awa-facet-btn' + (extra ? ' ' + extra : '')
+    + (st[key] ? ' on' : '') + '" onclick="toggleAdultFacet(' + i + ',\'' + key + '\')">' + label + '</button>';
+
+  let controls = btn('meaning', uz2en ? '&#128161; English word / emoji' : '&#128161; Meaning / emoji');
+  if (examples.easy) controls += btn('easy', 'Easy', 'fb-easy');
+  if (examples.normal) controls += btn('normal', 'Normal', 'fb-normal');
+  if (examples.hard) controls += btn('hard', 'Hard', 'fb-hard');
+
+  let panels = '';
+  if (st.meaning) {
+    const answer = uz2en ? w.word : (w.uzb || '—');
+    panels += '<div class="awa-block"><div class="awa-block-label">' + (uz2en ? 'English word' : 'Meaning') + '</div>'
+      + '<div class="awa-meaning">' + (w.emoji ? '<span class="awa-meaning-emoji">' + esc(w.emoji) + '</span>' : '') + esc(answer)
+      + (uz2en ? ' <button class="btn-speak" onclick="speakWord(this)" data-word="' + esc(w.word) + '" title="Pronounce">&#128266;</button>' : '')
+      + '</div></div>';
+  }
+  ['easy', 'normal', 'hard'].forEach(level => {
+    if (st[level] && examples[level]) {
+      panels += '<div class="awa-block"><div class="awa-block-label">' + level.charAt(0).toUpperCase() + level.slice(1) + ' example</div>'
+        + '<div class="awa-ex"><span class="example-level-tag tag-' + level + '">' + level + '</span><div class="awa-ex-text">' + esc(examples[level]) + '</div></div></div>';
+    }
+  });
+  return '<div class="awa-facets" style="margin-top:12px;">' + controls + '</div>'
+    + (panels ? '<div class="awa-panels">' + panels + '</div>' : '');
 }
 
 function renderQuiz() {
@@ -7052,38 +7090,12 @@ function renderQuiz() {
     // In UZ->EN the English word IS the answer — never speak it up front.
     if (dir === 'en2uz') speakText(w.word);
   }
-  const backHtml = revealed[i]
-    ? (dir === 'uz2en'
-        ? '<div class="word-back"><div class="word-back-emoji">' + w.emoji + '</div><div class="word-back-meaning">' + esc(w.word)
-          + ' <button class="btn-speak" onclick="speakWord(this)" data-word="' + esc(w.word) + '" title="Pronounce">&#128266;</button></div></div>'
-        : '<div class="word-back"><div class="word-back-emoji">' + w.emoji + '</div><div class="word-back-meaning">' + esc(w.uzb) + '</div></div>')
-    : '<div class="word-back hidden" onclick="revealWord(' + i + ')">&#128064; tap to reveal ' + (dir === 'uz2en' ? 'the English word' : 'image &amp; meaning') + '</div>';
-
   let reviewBadge = '';
   if (smartReviewEnabled) {
     const hist = (wordHistory[studentKey(currentStudent)] || {})[w.id];
     if (!hist) reviewBadge = '<span class="review-badge review-new">&#127793; New</span>';
     else if (hist.lastResult === false) reviewBadge = '<span class="review-badge review-weak">&#127919; Review</span>';
     else if ((hist.correctStreak || 0) >= 3) reviewBadge = '<span class="review-badge review-mastered">&#11088; Mastered</span>';
-  }
-
-  // Show examples only if the word has them saved; no buttons.
-  // Words can carry examples two ways: a plain array (added by hand, or by
-  // the basic importer) or a levelled {easy,normal,hard} object (from the
-  // AI enhanced-vocabulary tools). Kids mode used to only understand the
-  // array form, so any word saved in the levelled form silently showed no
-  // example at all — this now falls back to the levelled examples too.
-  let exHtml = '';
-  let exList = getLegacyExamples(w);
-  if (!exList.length) {
-    const lev = getLeveledExamples(w);
-    if (lev) exList = [lev.easy, lev.normal, lev.hard].filter(Boolean);
-  }
-  if (exList.length) {
-    const lines = exList.map((s, idx) =>
-      '<div class="ex-line"><span class="ex-num">' + (idx+1) + '.</span><span class="ex-text">' + esc(s) + '</span></div>'
-    ).join('');
-    exHtml = '<div class="example-bubble visible">' + lines + '</div>';
   }
 
   const markHtml = '<div class="mark-row">'
@@ -7113,8 +7125,7 @@ function renderQuiz() {
     + (dir === 'en2uz' ? '<button class="btn-speak" onclick="speakWord(this)" data-word="' + esc(w.word) + '" title="Pronounce">&#128266;</button>' : '')
     + '</div>'
     + timerHtml
-    + backHtml
-    + exHtml
+    + kidsQuizHintHtml(w, i, dir)
     + '</div>'
     + markHtml;
 
@@ -9737,9 +9748,9 @@ const WORD_BANK_FILES = [
   { id: 'kids-2-1-192', category: 'kids-2', label: 'Kids 2', path: '/word-bank/kids-2-lessons-1-192.json' }
 ];
 const WORD_BANK_CATEGORIES = [
-  { id: 'kids-1', label: 'Kids 1', emoji: '🧒', detail: 'Lessons 1–180' },
-  { id: 'kids-2', label: 'Kids 2', emoji: '🧑', detail: 'Lessons 1–192' },
-  { id: 'adults', label: 'Adults', emoji: '🧑‍🏫', detail: 'Vocabulary packs coming soon' }
+  { id: 'kids-1', mode: 'kids', label: 'Kids 1', emoji: '🧒', detail: 'Lessons 1–180' },
+  { id: 'kids-2', mode: 'kids', label: 'Kids 2', emoji: '🧑', detail: 'Lessons 1–192' },
+  { id: 'adults', mode: 'adult', label: 'Teenagers & Adults', emoji: '🧑‍🏫', detail: 'Vocabulary packs will be added here' }
 ];
 let wordBankUnits = [];
 let wordBankLoading = false;
@@ -9768,7 +9779,8 @@ function renderWordBankCategories() {
   if (grid) { grid.style.display = 'none'; grid.innerHTML = ''; }
   if (preview) preview.innerHTML = '';
   if (breadcrumb) breadcrumb.innerHTML = '<span class="hint">Select a group to browse its ready-made vocabulary.</span>';
-  categoryGrid.innerHTML = WORD_BANK_CATEGORIES.map(category =>
+  const availableCategories = WORD_BANK_CATEGORIES.filter(category => category.mode === currentSourceMode());
+  categoryGrid.innerHTML = availableCategories.map(category =>
     '<div class="class-card" onclick="openWordBankCategory(\'' + category.id + '\')">'
       + '<div class="class-card-icon">' + category.emoji + '</div><div class="class-card-body">'
       + '<div class="class-card-name">' + esc(category.label) + '</div>'
@@ -9794,7 +9806,7 @@ function openWordBankCategory(categoryId) {
   if (breadcrumb) breadcrumb.innerHTML = '<button class="btn btn-sm" onclick="renderWordBankCategories()">← All groups</button> <span class="hint" style="margin-left:8px;">' + esc(category.label) + '</span>';
   const hasPacks = WORD_BANK_FILES.some(source => source.category === categoryId);
   if (!hasPacks) {
-    if (grid) grid.innerHTML = '<div class="card"><p class="hint">' + esc(category.label) + ' vocabulary packs will appear here soon.</p></div>';
+    if (grid) grid.innerHTML = '<div class="card"><p class="hint">No ' + esc(category.label) + ' vocabulary has been uploaded yet. When it is ready, it will appear here without mixing with Kids materials.</p></div>';
     return;
   }
   loadWordBank();
@@ -9864,7 +9876,7 @@ function selectWordBankUnit(id, silent) {
       ).join(' ');
       const synonymAction = Array.isArray(word.synonyms) && word.synonyms.length
         ? ' <button class="btn btn-sm" onclick="showWordBankWordInfo(\'' + safeId + '\',' + index + ',\'synonyms\')">Synonyms</button>' : '';
-      return '<div class="word-item"><span class="word-emoji">' + esc(word.emoji || '📖') + '</span><div class="word-info"><div><strong>' + esc(word.word) + '</strong> <span class="hint">— ' + esc(word.uzb) + '</span></div>'
+      return '<div class="word-item"><span class="word-emoji">' + esc(word.emoji || '💬') + '</span><div class="word-info"><div><strong>' + esc(word.word) + '</strong> <span class="hint">— ' + esc(word.uzb) + '</span></div>'
         + (actions || synonymAction ? '<div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:6px;">' + actions + synonymAction + '</div><div id="wordBankWordInfo-' + esc(unit.id) + '-' + index + '" class="hint" style="margin-top:5px;"></div>' : '')
         + '</div></div>';
     }).join('') + '</div></div>';
@@ -10659,7 +10671,7 @@ function pkgWordsFromPlainText(rawText) {
     const k = english.toLowerCase();
     if (seen.has(k)) continue;
     seen.add(k);
-    out.push(normalizeImportedWordItem({ word: english, uzb: parts.length > 1 ? uzbek : '', emoji: '📖', examples: [] }));
+    out.push(normalizeImportedWordItem({ word: english, uzb: parts.length > 1 ? uzbek : '', emoji: '💬', examples: [] }));
   }
   return out.filter(Boolean);
 }
@@ -10724,7 +10736,7 @@ async function pkgHandleFiles(files) {
           groupTypeId,
           sourceMode: currentSourceMode(),
           name: u.name || pkgUnitNameFromFileName(f.name),
-          words: u.words.map(w => ({ ...w, id: w.id || generateId(), emoji: w.emoji || '📖', uzb: w.uzb || '', examples: w.examples || [] }))
+          words: u.words.map(w => ({ ...w, id: w.id || generateId(), emoji: w.emoji || '💬', uzb: w.uzb || '', examples: w.examples || [] }))
         });
         made++;
       });
@@ -10893,13 +10905,13 @@ function pkgLocalParse(rawText) {
     if (parts.length < 1) continue;
     const word = parts[0].replace(/^\d+[.)\s]+/, '').trim();
     if (!word || word.length > 60) continue;
-    let emoji = '📖', uzb = '';
+    let emoji = '💬', uzb = '';
     if (parts.length === 2) {
       uzb = parts[1];
     } else if (parts.length >= 3) {
       const maybeEmoji = parts[1];
       const looksLikeEmoji = maybeEmoji.length <= 4 || (/[^\x00-\x7F]/.test(maybeEmoji) && maybeEmoji.length <= 8);
-      if (looksLikeEmoji) { emoji = maybeEmoji || '📖'; uzb = parts[2] || ''; }
+      if (looksLikeEmoji) { emoji = maybeEmoji || '💬'; uzb = parts[2] || ''; }
       else { uzb = parts[1] || ''; }
     }
     out.push({ id: generateId(), word, emoji, uzb, examples: [] });
@@ -10935,7 +10947,7 @@ function renderPkgPreview() {
     return;
   }
   el.innerHTML = pkgImportedWords.map(w =>
-    '<div class="import-preview-item"><span>' + (w.emoji || '📖') + '</span><strong>' + esc(w.word) + '</strong><span>' + esc(w.uzb) + '</span></div>'
+    '<div class="import-preview-item"><span>' + (w.emoji || '💬') + '</span><strong>' + esc(w.word) + '</strong><span>' + esc(w.uzb) + '</span></div>'
   ).join('');
   if (actions) actions.style.display = 'flex';
 }
@@ -10988,7 +11000,7 @@ function pkgConfirmCreate() {
     groupTypeId,
     sourceMode: currentSourceMode(),
     name,
-    words: pkgImportedWords.map(w => ({ ...w, id: w.id || generateId(), word: w.word, emoji: w.emoji || '📖', uzb: w.uzb || '', examples: w.examples || [] }))
+    words: pkgImportedWords.map(w => ({ ...w, id: w.id || generateId(), word: w.word, emoji: w.emoji || '💬', uzb: w.uzb || '', examples: w.examples || [] }))
   };
   units.push(newUnit);
   saveUnits();
@@ -11285,8 +11297,8 @@ function currentAiGroupName() {
 
 function lexigoJsonSchemaInstruction() {
   return 'Return ONLY strict JSON with no markdown or commentary. Use this LexiGo schema: '
-    + '{"units":[{"name":"Unit 1","words":[{"word":"English word","uzb":"Uzbek meaning","emoji":"📖","examples":["Example sentence."]}]}]}. '
-    + 'For Teens/Adult, optional word fields may include pronunciation, partOfSpeech, level, collocations, synonyms, and examples may be an object with easy/normal/hard strings. '
+    + '{"units":[{"name":"Unit 1","words":[{"word":"English word","uzb":"Natural Uzbek meaning","emoji":"one matching emoji","examples":{"easy":"Short easy example.","normal":"Natural example.","hard":"Slightly harder example."},"synonyms":["synonym one","synonym two"]}]}]}. '
+    + 'Give every word one visually relevant emoji. Never use a book, notebook, or generic learning emoji unless the word itself is about a book or learning material. '
     + 'Every unit must have a non-empty name and at least one valid word.';
 }
 
@@ -11463,7 +11475,7 @@ function cleanUnitForCopy(unit) {
   return {
     name: unit.name,
     words: (unit.words || []).map(w => {
-      const x = { word:w.word, uzb:w.uzb || '', emoji:w.emoji || '📖', examples:w.examples || [] };
+      const x = { word:w.word, uzb:w.uzb || '', emoji:w.emoji || '💬', examples:w.examples || [] };
       ['pronunciation','partOfSpeech','level','collocations','synonyms'].forEach(k => { if (w[k] != null) x[k] = w[k]; });
       return x;
     })
@@ -12745,9 +12757,9 @@ function dedupeVocabItems(items) {
 }
 
 function toImportedWordItem(it) {
-  const base = { id: generateId(), word: it.english, emoji: '📖', uzb: it.uzbek, examples: [] };
-  // Carry any Teens/Adult enrichment the AI returned alongside english/uzbek.
   const rich = normalizeImportedWordItem(it);
+  const base = { id: generateId(), word: it.english, emoji: (rich && rich.emoji) || '💬', uzb: it.uzbek, examples: [] };
+  // Carry any Teens/Adult enrichment the AI returned alongside english/uzbek.
   if (rich) {
     ['pronunciation', 'partOfSpeech', 'level', 'collocations', 'synonyms'].forEach(k => {
       if (rich[k] != null) base[k] = rich[k];
@@ -12819,7 +12831,7 @@ function parseImportText(raw) {
     const word = parts[0].replace(/^\d+[.)\s]+/, '').trim();
     if (!word || word.length > 60) continue; // skip headers / garbage
 
-    let emoji = '📖', uzb = '', examples = [];
+    let emoji = '💬', uzb = '', examples = [];
 
     if (parts.length === 2) {
       uzb = parts[1];
@@ -12828,7 +12840,7 @@ function parseImportText(raw) {
       const maybeEmoji = parts[1];
       const looksLikeEmoji = maybeEmoji.length <= 4 || (/[^\x00-\x7F]/.test(maybeEmoji) && maybeEmoji.length <= 8);
       if (looksLikeEmoji) {
-        emoji = maybeEmoji || '📖';
+        emoji = maybeEmoji || '💬';
         uzb = parts[2] || '';
         if (parts.length >= 4) {
           examples = parts.slice(3).join(',').split(';').map(e => e.trim()).filter(Boolean);
@@ -12893,7 +12905,7 @@ function confirmImport() {
   let added = 0;
   for (const w of importedWords) {
     if (!existingWords.includes(w.word.toLowerCase())) {
-      allWords.push({ ...w, id: w.id || generateId(), word: w.word, emoji: w.emoji || '📖', uzb: w.uzb || '', examples: w.examples || [] });
+      allWords.push({ ...w, id: w.id || generateId(), word: w.word, emoji: w.emoji || '💬', uzb: w.uzb || '', examples: w.examples || [] });
       added++;
     }
   }
@@ -12910,13 +12922,6 @@ function confirmImport() {
     document.getElementById('importBody').classList.remove('open');
     btn.innerHTML = '&#128229; Import a list of words';
   }
-}
-</script>
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js').catch(err => console.warn('SW registration failed:', err));
-  });
 }
 </script>
 <script>
@@ -12995,7 +13000,7 @@ function copyCurrentUnitToOtherMode() {
   };
 
   lexigoJsonSchemaInstruction = function () {
-    return 'Return exactly ONE RAW valid JSON object and nothing else. No title, explanation, markdown fence, code block, or text before/after JSON. Do not wrap JSON in quotes. Use real line breaks, never visible \\n, and normal double quotes, never \\\". No trailing commas. Use this exact schema: {"units":[{"name":"Unit 1","words":[{"word":"English word or short phrase","uzb":"Natural Uzbek Latin translation","emoji":"📖","examples":["One short A1-B1 English example."]}]}]}. Every word item must contain exactly word, uzb, emoji, examples; examples must contain exactly one sentence. Extract only clear material words; do not invent or duplicate words.';
+    return 'Return exactly ONE RAW valid JSON object and nothing else. No title, explanation, markdown fence, code block, or text before/after JSON. Do not wrap JSON in quotes. Use real line breaks, never visible \\n, and normal double quotes, never \\\". No trailing commas. Use this exact schema: {"units":[{"name":"Unit 1","words":[{"word":"English word or short phrase","uzb":"Natural Uzbek Latin translation","emoji":"one visually matching emoji","examples":{"easy":"short A1 example","normal":"natural example","hard":"slightly harder example"},"synonyms":["synonym 1","synonym 2"]}]}]}. Every word item must contain word, uzb, emoji, examples and synonyms. Give each word an emoji that matches its own meaning; never use a book or generic learning emoji unless the word is itself about a book/learning material. Extract only clear material words; do not invent or duplicate words.';
   };
 
   /* Battle champions hear the supplied natural applause once, in full. */
@@ -13201,16 +13206,51 @@ function copyCurrentUnitToOtherMode() {
     }
   };
 
+  // On supported desktop/mobile systems this opens the operating system's
+  // share panel with the PNG and its caption together. Telegram remains a
+  // manual choice, so a teacher is always in control of the destination.
+  window.shareGroupReportImage = async function (classId, mode, statusTarget) {
+    const data = simpleReport(classId, mode);
+    if (!data) { setSimpleReportStatus(statusTarget, 'No completed quiz results are available for this report yet.'); return; }
+    if (!navigator.share || !window.File) {
+      setSimpleReportStatus(statusTarget, 'This browser cannot share an image directly. Use Download images, then attach the PNG in Telegram.');
+      return;
+    }
+    const dom = buildTelegramReportDOM(data.report);
+    document.body.appendChild(dom);
+    setSimpleReportStatus(statusTarget, '⏳ Preparing image and caption…');
+    try {
+      await loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
+      const canvas = await html2canvas(dom, { backgroundColor: '#ffffff', scale: 1.5 });
+      const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+      if (!blob) throw new Error('Image could not be created.');
+      const file = new File([blob], reportFileStem(data.report) + '.png', { type: 'image/png' });
+      const payload = { title: 'LexiGo progress report', text: buildTelegramCaption(data.report), files: [file] };
+      if (navigator.canShare && !navigator.canShare({ files: [file] })) {
+        setSimpleReportStatus(statusTarget, 'This browser cannot share PNG files directly. Use Download images, then attach the PNG in Telegram.');
+        return;
+      }
+      await navigator.share(payload);
+      setSimpleReportStatus(statusTarget, '✅ Share opened with the report image and caption. Choose Telegram and the correct group.');
+    } catch (error) {
+      if (error && error.name === 'AbortError') setSimpleReportStatus(statusTarget, 'Sharing cancelled. Nothing was sent.');
+      else setSimpleReportStatus(statusTarget, 'Could not open image sharing here. Use Download images, then attach the PNG in Telegram.');
+    } finally {
+      dom.remove();
+    }
+  };
+
   window.renderReporter = function () {
     const host = document.getElementById('reporterCard');
     if (!host) return;
     if (!currentClassId) { host.innerHTML = ''; return; }
     const cls = classes.find(c => c.id === currentClassId);
     const classId = String(currentClassId).replace(/'/g, "\\'");
-    host.innerHTML = '<div class="rep-head"><span class="rep-title">📤 Share today\'s progress</span><span class="rep-status on">No bot needed</span></div>'
-      + '<p class="hint rep-hint">LexiGo prepares the students\' scores, missed words, and Battle winner. Telegram opens so you can choose the correct group and send it yourself.</p>'
+    host.innerHTML = '<div class="rep-head"><span class="rep-title">📤 Share today\'s progress</span><span class="rep-status on">Manual share</span></div>'
+      + '<p class="hint rep-hint">LexiGo prepares scores, missed words, and Battle results. Choose your Telegram group yourself — no token or group ID is needed.</p>'
       + '<div class="rep-send-row" style="display:flex;gap:8px;flex-wrap:wrap;">'
       + '<button class="btn btn-primary" onclick="shareGroupReport(\'' + classId + '\',\'today\',\'reporterStatus\')">📤 Telegramga yuborish</button>'
+      + '<button class="btn btn-sm" onclick="shareGroupReportImage(\'' + classId + '\',\'today\',\'reporterStatus\')">🖼️ Share image + caption</button>'
       + '<button class="btn btn-sm" onclick="downloadGroupReportImages(\'' + classId + '\',\'today\',\'reporterStatus\')">🖼️ Download images</button>'
       + '<button class="btn btn-sm" onclick="copyGroupReport(\'' + classId + '\',\'today\',\'reporterStatus\')">📋 Copy report</button>'
       + '</div><p class="hint" id="reporterStatus" style="margin:10px 0 0;"></p>';
@@ -13229,7 +13269,8 @@ function copyCurrentUnitToOtherMode() {
   const settingsCard = document.getElementById('telegramSyncCard');
   if (settingsCard) {
     settingsCard.innerHTML = '<p class="add-form-title">📤 Telegram sharing</p>'
-      + '<p class="hint" style="margin:0;">No bot, token, server, group ID, or connection is needed. Finish a quiz, open the group page, then use <strong>Telegramga yuborish</strong>. Telegram Desktop lets you choose the exact group and send the prepared report.</p>';
+      + '<p class="hint" style="margin:0;">Default: no bot, token, server, group ID, or connection is needed. Finish a quiz, open the group page, then use <strong>Telegramga yuborish</strong>. Telegram Desktop lets you choose the exact group and send the prepared report.</p>'
+      + '<details class="rep-advanced" style="margin-top:12px;"><summary>🤖 Advanced: Auto Send with My Bot</summary><p class="hint" style="margin:10px 0 0;">This option requires a secure teacher account and server-side token storage. The token must never be placed in this browser or GitHub. Once that secure service is connected, a teacher will add their own bot, send <code>/connect</code> in each group, choose the group once, then send reports automatically.</p></details>';
   }
 })();
 </script>
