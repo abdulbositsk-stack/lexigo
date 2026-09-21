@@ -2585,7 +2585,7 @@
     </div>
 
     <div class="card" style="margin-top:14px;">
-      <p class="hint" style="margin:0;">&#128228; Telegram reporting for this group lives on the group page &mdash; open the group and use the <strong>Class Progress Reporter</strong> card (connect, change group, send today's / weekly / custom reports).</p>
+      <p class="hint" style="margin:0;">&#128228; To share a daily report, open the group and use <strong>Share Report</strong>. Telegram opens for the teacher to choose the correct group and send the prepared report.</p>
     </div>
   </div>
 
@@ -4834,9 +4834,7 @@ function renderDashboard() {
       + '<div class="class-card-meta">' + count + ' word' + (count !== 1 ? 's' : '') + '</div>'
       + '</div>'
       + '<div class="class-card-report">'
-      + (isClassTelegramReady(c.id)
-          ? '<button class="btn btn-sm btn-primary" onclick="sendReportFromCard(\'' + c.id + '\', event)">&#128228; Send Report</button>'
-          : '<button class="btn btn-sm" onclick="openTelegramSettingsForClass(\'' + c.id + '\', event)">&#9881;&#65039; Connect Telegram</button>')
+      + '<button class="btn btn-sm btn-primary" onclick="sendReportFromCard(\'' + c.id + '\', event)">&#128228; Share Report</button>'
       + '<span class="class-card-report-status" id="cardReportStatus-' + c.id + '"></span>'
       + '</div>'
       + '</div>';
@@ -13084,6 +13082,155 @@ function copyCurrentUnitToOtherMode() {
     card.innerHTML = '<p class="add-form-title">📱 Telegram reports</p><p class="hint">LexiGo keeps the bot token only in Netlify’s protected environment. Add the bot to a teacher group, send <code>/connect</code> in that group, then choose it here. Each class is linked by Telegram chat ID, so identical group names stay separate.</p><div class="row" style="margin-top:10px;"><input id="telegramRelayKeyInput" type="password" placeholder="Telegram report access key" value="' + esc(key) + '" style="flex:1;"/><button class="btn btn-sm btn-primary" onclick="localStorage.setItem(\'lexigo_telegram_relay_key\',document.getElementById(\'telegramRelayKeyInput\').value.trim());alert(\'Telegram access key saved in this browser.\');">Save</button></div><p class="hint" style="margin:8px 0 0;">Admin setup: add <code>TELEGRAM_BOT_TOKEN</code> and <code>TELEGRAM_RELAY_KEY</code> in Netlify environment variables, then redeploy. The bot token is never stored in LexiGo or GitHub.</p>';
   }
   secureTelegramCard();
+})();
+
+/* ===== SIMPLE TELEGRAM SHARING =====
+   Teachers choose the Telegram group themselves. No bot, chat ID, server,
+   API key, or background connection is needed. */
+(function () {
+  const OLD_TELEGRAM_KEYS = [
+    'vqt_telegram_server_url_v1', 'vqt_telegram_api_key_v1',
+    'vqt_telegram_bot_token_v1', 'vqt_telegram_known_groups_v1',
+    'lexigo_telegram_relay_key'
+  ];
+  OLD_TELEGRAM_KEYS.forEach(key => { try { localStorage.removeItem(key); } catch (e) {} });
+  try {
+    for (let index = localStorage.length - 1; index >= 0; index--) {
+      const key = localStorage.key(index) || '';
+      if (key.indexOf('vqt_telegram_chatid_') === 0 || key.indexOf('vqt_telegram_meta_v1__') === 0) {
+        localStorage.removeItem(key);
+      }
+    }
+  } catch (e) {}
+  telegramSyncPost = function () {};
+
+  function simpleReport(classId, mode) {
+    const range = reporterRangeFor(mode || 'today');
+    if (!range) return null;
+    const report = computeTelegramReportForRange(classId, range);
+    if (!report.completed.length) return null;
+    return { report: report, range: range };
+  }
+
+  function setSimpleReportStatus(target, message) {
+    const el = typeof target === 'string' ? document.getElementById(target) : target;
+    if (el) el.textContent = message;
+  }
+
+  async function copySimpleReportText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      try { await navigator.clipboard.writeText(text); return true; } catch (e) {}
+    }
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.cssText = 'position:fixed;left:-9999px;top:0;';
+    document.body.appendChild(textarea);
+    textarea.select();
+    let copied = false;
+    try { copied = document.execCommand('copy'); } catch (e) {}
+    textarea.remove();
+    return copied;
+  }
+
+  function reportFileStem(report) {
+    return ('lexigo-' + report.className + '-' + report.dateLabel)
+      .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'lexigo-report';
+  }
+
+  window.copyGroupReport = async function (classId, mode, statusTarget) {
+    const data = simpleReport(classId, mode);
+    if (!data) { setSimpleReportStatus(statusTarget, 'No completed quiz results are available for this report yet.'); return; }
+    const copied = await copySimpleReportText(buildTelegramCaption(data.report));
+    setSimpleReportStatus(statusTarget, copied ? '✅ Full report copied. Paste it anywhere you need.' : '⚠️ Could not copy automatically.');
+  };
+
+  window.shareGroupReport = async function (classId, mode, statusTarget) {
+    const data = simpleReport(classId, mode);
+    if (!data) { setSimpleReportStatus(statusTarget, 'No completed quiz results are available for this report yet.'); return; }
+    const fullText = buildTelegramCaption(data.report);
+    const canPrefillAll = fullText.length <= 3500;
+    const shareText = canPrefillAll ? fullText : buildTelegramCaptionShort(data.report);
+    const copied = await copySimpleReportText(fullText);
+    const shareUrl = 'https://t.me/share/url?url=' + encodeURIComponent('https://lexi-go-smart.netlify.app/')
+      + '&text=' + encodeURIComponent(shareText);
+    const popup = window.open(shareUrl, '_blank', 'noopener');
+    if (!popup) {
+      setSimpleReportStatus(statusTarget, copied ? 'Report copied. Please allow pop-ups, then press Share Report again.' : 'Please allow pop-ups, then press Share Report again.');
+      return;
+    }
+    setSimpleReportStatus(statusTarget, canPrefillAll
+      ? '✅ Telegram opened. Choose the correct group, review the report, then send it.'
+      : '✅ Telegram opened. The full report is copied too — choose the group, then paste it with Ctrl+V before sending.');
+  };
+
+  window.downloadGroupReportImages = async function (classId, mode, statusTarget) {
+    const data = simpleReport(classId, mode);
+    if (!data) { setSimpleReportStatus(statusTarget, 'No completed quiz results are available for this report yet.'); return; }
+    const dom = buildTelegramReportDOM(data.report);
+    document.body.appendChild(dom);
+    setSimpleReportStatus(statusTarget, '⏳ Creating report image…');
+    try {
+      await loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
+      const canvas = await html2canvas(dom, { backgroundColor: '#ffffff', scale: 2 });
+      const pageHeight = Math.round(canvas.width * 1.35);
+      const totalPages = Math.max(1, Math.ceil(canvas.height / pageHeight));
+      const stem = reportFileStem(data.report);
+      for (let page = 0; page < totalPages; page++) {
+        const offsetY = page * pageHeight;
+        const height = Math.min(pageHeight, canvas.height - offsetY);
+        const image = document.createElement('canvas');
+        image.width = canvas.width;
+        image.height = height;
+        const context = image.getContext('2d');
+        context.fillStyle = '#ffffff';
+        context.fillRect(0, 0, image.width, image.height);
+        context.drawImage(canvas, 0, offsetY, canvas.width, height, 0, 0, image.width, height);
+        const link = document.createElement('a');
+        link.download = stem + (totalPages > 1 ? '-page-' + (page + 1) : '') + '.png';
+        link.href = image.toDataURL('image/png');
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+      }
+      setSimpleReportStatus(statusTarget, '✅ ' + totalPages + ' report image' + (totalPages === 1 ? '' : 's') + ' downloaded. Attach it in Telegram after choosing your group.');
+    } catch (error) {
+      setSimpleReportStatus(statusTarget, '⚠️ Could not create the image. Check your internet connection and try again.');
+    } finally {
+      dom.remove();
+    }
+  };
+
+  window.renderReporter = function () {
+    const host = document.getElementById('reporterCard');
+    if (!host) return;
+    if (!currentClassId) { host.innerHTML = ''; return; }
+    const cls = classes.find(c => c.id === currentClassId);
+    const classId = String(currentClassId).replace(/'/g, "\\'");
+    host.innerHTML = '<div class="rep-head"><span class="rep-title">📤 Share today\'s progress</span><span class="rep-status on">No bot needed</span></div>'
+      + '<p class="hint rep-hint">LexiGo prepares the students\' scores, missed words, and Battle winner. Telegram opens so you can choose the correct group and send it yourself.</p>'
+      + '<div class="rep-send-row" style="display:flex;gap:8px;flex-wrap:wrap;">'
+      + '<button class="btn btn-primary" onclick="shareGroupReport(\'' + classId + '\',\'today\',\'reporterStatus\')">📤 Telegramga yuborish</button>'
+      + '<button class="btn btn-sm" onclick="downloadGroupReportImages(\'' + classId + '\',\'today\',\'reporterStatus\')">🖼️ Download images</button>'
+      + '<button class="btn btn-sm" onclick="copyGroupReport(\'' + classId + '\',\'today\',\'reporterStatus\')">📋 Copy report</button>'
+      + '</div><p class="hint" id="reporterStatus" style="margin:10px 0 0;"></p>';
+  };
+
+  isClassTelegramReady = function () { return true; };
+  window.sendReportFromCard = function (classId, event) {
+    if (event) event.stopPropagation();
+    window.shareGroupReport(classId, 'today', 'cardReportStatus-' + classId);
+  };
+  window.reporterSend = function (mode) { return window.shareGroupReport(currentClassId, mode || 'today', 'reporterStatus'); };
+  window.sendTelegramReportNow = function (statusEl) {
+    return window.shareGroupReport(currentClassId || currentProgressGroupId, 'today', statusEl);
+  };
+
+  const settingsCard = document.getElementById('telegramSyncCard');
+  if (settingsCard) {
+    settingsCard.innerHTML = '<p class="add-form-title">📤 Telegram sharing</p>'
+      + '<p class="hint" style="margin:0;">No bot, token, server, group ID, or connection is needed. Finish a quiz, open the group page, then use <strong>Telegramga yuborish</strong>. Telegram Desktop lets you choose the exact group and send the prepared report.</p>';
+  }
 })();
 </script>
 </body>
