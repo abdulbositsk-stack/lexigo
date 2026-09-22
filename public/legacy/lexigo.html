@@ -13206,6 +13206,124 @@ function copyCurrentUnitToOtherMode() {
     }
   };
 
+  /* ===== OPTIONAL AUTO SEND WITH THE TEACHER'S OWN BOT =====
+     The browser receives no saved token back from the server. Its random
+     connection key simply identifies its encrypted server-side record. */
+  const AUTO_BOT_KEY = 'lexigo_auto_bot_connection_key_v1';
+  let autoBotFoundGroups = [];
+  function autoBotTeacherKey() {
+    let key = '';
+    try { key = localStorage.getItem(AUTO_BOT_KEY) || ''; } catch (e) {}
+    if (/^[a-f0-9]{64}$/i.test(key)) return key;
+    const bytes = new Uint8Array(32);
+    crypto.getRandomValues(bytes);
+    key = Array.from(bytes, b => b.toString(16).padStart(2, '0')).join('');
+    try { localStorage.setItem(AUTO_BOT_KEY, key); } catch (e) {}
+    return key;
+  }
+  async function autoBotRequest(action, payload) {
+    const response = await fetch('/.netlify/functions/auto-telegram', {
+      method: 'POST', headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ action, teacherKey: autoBotTeacherKey(), ...(payload || {}) })
+    });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok || data.ok === false) throw new Error(data.error || 'Auto Bot connection failed.');
+    return data;
+  }
+  function autoBotStatus(message, good) {
+    const status = document.getElementById('autoBotStatus');
+    if (!status) return;
+    status.textContent = message || '';
+    status.style.color = good === false ? 'var(--red-text)' : good === true ? 'var(--green-text)' : '';
+  }
+  function autoBotClassId() {
+    const select = document.getElementById('autoBotClassSelect');
+    return String((select && select.value) || currentClassId || '').trim();
+  }
+  function autoBotGroupChoices() {
+    const host = document.getElementById('autoBotGroupChoices');
+    if (!host) return;
+    if (!autoBotFoundGroups.length) { host.innerHTML = ''; return; }
+    host.innerHTML = '<p class="hint" style="margin:10px 0 6px;">Choose the group for this class:</p>'
+      + autoBotFoundGroups.map((group, index) => '<button class="btn btn-sm" style="margin:0 6px 6px 0;" onclick="autoBotSaveGroupByIndex(' + index + ')">📌 ' + esc(group.title) + '</button>').join('');
+  }
+  window.autoBotConfigure = async function () {
+    const input = document.getElementById('autoBotTokenInput');
+    const token = String((input && input.value) || '').trim();
+    if (!token) { autoBotStatus('Paste the token from BotFather first.', false); return; }
+    autoBotStatus('⏳ Checking and securely saving your bot…');
+    try {
+      const data = await autoBotRequest('configure', { token });
+      if (input) input.value = '';
+      autoBotStatus('✅ ' + (data.bot.name || 'Your bot') + ' is connected securely. Add it to a group, send /connect there, then choose Find my groups.', true);
+    } catch (error) { autoBotStatus('⚠️ ' + error.message, false); }
+  };
+  window.autoBotFindGroups = async function () {
+    if (!autoBotClassId()) { autoBotStatus('Choose the LexiGo class first.', false); return; }
+    autoBotStatus('⏳ Looking for groups where you sent /connect…');
+    try {
+      const data = await autoBotRequest('groups');
+      autoBotFoundGroups = Array.isArray(data.groups) ? data.groups : [];
+      autoBotGroupChoices();
+      autoBotStatus(autoBotFoundGroups.length
+        ? 'Choose the Telegram group below. Same-named groups remain separate.'
+        : 'No group found. Add the bot to your Telegram group, send /connect in that group, then try again.', !!autoBotFoundGroups.length);
+    } catch (error) { autoBotStatus('⚠️ ' + error.message, false); }
+  };
+  window.autoBotSaveGroupByIndex = async function (index) {
+    const group = autoBotFoundGroups[index];
+    const classId = autoBotClassId();
+    if (!group || !classId) return;
+    autoBotStatus('⏳ Saving the group for this class…');
+    try {
+      await autoBotRequest('save-group', { classId, chatId: group.id, title: group.title });
+      autoBotStatus('✅ ' + group.title + ' is saved. Future Auto send reports will go there.', true);
+      autoBotGroupChoices();
+    } catch (error) { autoBotStatus('⚠️ ' + error.message, false); }
+  };
+  window.autoBotLoadStatus = async function () {
+    const classId = autoBotClassId();
+    if (!classId) return;
+    try {
+      const data = await autoBotRequest('status', { classId });
+      if (data.group) autoBotStatus('✅ Saved group: ' + data.group.title, true);
+      else autoBotStatus('No Telegram group saved for this class yet.');
+    } catch (error) { autoBotStatus(''); }
+  };
+  window.autoBotSendGroupReport = async function (classId, mode, statusTarget) {
+    const data = simpleReport(classId, mode);
+    if (!data) { setSimpleReportStatus(statusTarget, 'No completed quiz results are available for this report yet.'); return; }
+    setSimpleReportStatus(statusTarget, '⏳ Preparing report for your saved Telegram group…');
+    const dom = buildTelegramReportDOM(data.report);
+    document.body.appendChild(dom);
+    try {
+      await loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
+      const canvas = await html2canvas(dom, { backgroundColor: '#ffffff', scale: 1 });
+      const imageDataUrl = canvas.toDataURL('image/png');
+      const result = await autoBotRequest('send', {
+        classId,
+        text: buildTelegramCaption(data.report),
+        shortText: buildTelegramCaptionShort(data.report),
+        imageDataUrl
+      });
+      setSimpleReportStatus(statusTarget, '✅ Report sent automatically to ' + (result.group && result.group.title ? result.group.title : 'your saved group') + '.');
+    } catch (error) { setSimpleReportStatus(statusTarget, '⚠️ ' + error.message); }
+    finally { dom.remove(); }
+  };
+  function renderAutoBotSettings() {
+    const classesForMode = visibleClasses();
+    const selected = currentClassId || (classesForMode[0] && classesForMode[0].id) || '';
+    const options = classesForMode.length
+      ? classesForMode.map(cls => '<option value="' + esc(cls.id) + '"' + (cls.id === selected ? ' selected' : '') + '>' + esc(cls.name) + '</option>').join('')
+      : '<option value="">Create a class first</option>';
+    return '<details class="rep-advanced" style="margin-top:12px;" id="autoBotDetails">'
+      + '<summary>🤖 Auto Send with My Bot</summary><div style="padding-top:10px;">'
+      + '<p class="hint" style="margin:0 0 10px;">Optional. Your token is encrypted on LexiGo’s secure server and is never put in GitHub. Create a bot in BotFather, save it here, add it to a Telegram group, and send <code>/connect</code> in that group.</p>'
+      + '<div class="row" style="gap:8px;align-items:center;"><input id="autoBotTokenInput" type="password" autocomplete="off" placeholder="BotFather token" style="flex:1;"><button class="btn btn-primary btn-sm" onclick="autoBotConfigure()">Save my bot</button></div>'
+      + '<div class="row" style="margin-top:10px;gap:8px;align-items:center;"><select id="autoBotClassSelect" onchange="autoBotLoadStatus()" style="flex:1;min-width:160px;">' + options + '</select><button class="btn btn-sm" onclick="autoBotFindGroups()">🔎 Find my groups</button></div>'
+      + '<div id="autoBotGroupChoices"></div><p class="hint" id="autoBotStatus" style="margin:10px 0 0;"></p></div></details>';
+  }
+
   // On supported desktop/mobile systems this opens the operating system's
   // share panel with the PNG and its caption together. Telegram remains a
   // manual choice, so a teacher is always in control of the destination.
@@ -13250,6 +13368,7 @@ function copyCurrentUnitToOtherMode() {
       + '<p class="hint rep-hint">LexiGo prepares scores, missed words, and Battle results. Choose your Telegram group yourself — no token or group ID is needed.</p>'
       + '<div class="rep-send-row" style="display:flex;gap:8px;flex-wrap:wrap;">'
       + '<button class="btn btn-primary" onclick="shareGroupReport(\'' + classId + '\',\'today\',\'reporterStatus\')">📤 Telegramga yuborish</button>'
+      + '<button class="btn btn-sm" onclick="autoBotSendGroupReport(\'' + classId + '\',\'today\',\'reporterStatus\')">🤖 Auto send report</button>'
       + '<button class="btn btn-sm" onclick="shareGroupReportImage(\'' + classId + '\',\'today\',\'reporterStatus\')">🖼️ Share image + caption</button>'
       + '<button class="btn btn-sm" onclick="downloadGroupReportImages(\'' + classId + '\',\'today\',\'reporterStatus\')">🖼️ Download images</button>'
       + '<button class="btn btn-sm" onclick="copyGroupReport(\'' + classId + '\',\'today\',\'reporterStatus\')">📋 Copy report</button>'
@@ -13266,12 +13385,19 @@ function copyCurrentUnitToOtherMode() {
     return window.shareGroupReport(currentClassId || currentProgressGroupId, 'today', statusEl);
   };
 
-  const settingsCard = document.getElementById('telegramSyncCard');
-  if (settingsCard) {
+  function renderTelegramSettingsCard() {
+    const settingsCard = document.getElementById('telegramSyncCard');
+    if (!settingsCard) return;
     settingsCard.innerHTML = '<p class="add-form-title">📤 Telegram sharing</p>'
       + '<p class="hint" style="margin:0;">Default: no bot, token, server, group ID, or connection is needed. Finish a quiz, open the group page, then use <strong>Telegramga yuborish</strong>. Telegram Desktop lets you choose the exact group and send the prepared report.</p>'
-      + '<details class="rep-advanced" style="margin-top:12px;"><summary>🤖 Advanced: Auto Send with My Bot</summary><p class="hint" style="margin:10px 0 0;">This option requires a secure teacher account and server-side token storage. The token must never be placed in this browser or GitHub. Once that secure service is connected, a teacher will add their own bot, send <code>/connect</code> in each group, choose the group once, then send reports automatically.</p></details>';
+      + renderAutoBotSettings();
   }
+  const legacyMenuGoSettings = menuGoSettings;
+  menuGoSettings = function () {
+    legacyMenuGoSettings();
+    renderTelegramSettingsCard();
+  };
+  renderTelegramSettingsCard();
 })();
 </script>
 </body>
