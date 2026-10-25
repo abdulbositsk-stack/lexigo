@@ -1,0 +1,5537 @@
+{
+  "level": "Teenagers & Adults - Elementary",
+  "track": "MT",
+  "source": "Elementary MT.pdf",
+  "units": [
+    {
+      "id": "adult-mt-elementary-lesson-25",
+      "lesson": 25,
+      "name": "Lesson 25 - Famous people and achievements",
+      "source": "Main Lesson (MT) p. 6, 7",
+      "words": [
+        {
+          "word": "haircut",
+          "uzb": "soch oldirish/kaltalattirish",
+          "emoji": "💇",
+          "examples": {
+            "easy": "I need a haircut.",
+            "normal": "I see you've had a haircut, and it really suits you.",
+            "hard": "He hadn't had a haircut for months, so his mother booked him an appointment at the barber's."
+          },
+          "synonyms": [],
+          "collocations": [
+            "get a haircut",
+            "short haircut"
+          ]
+        },
+        {
+          "word": "famous",
+          "uzb": "mashhur, taniqli",
+          "emoji": "🌟",
+          "examples": {
+            "easy": "She is a famous singer.",
+            "normal": "Samarkand is famous for its beautiful old buildings and squares.",
+            "hard": "Although he became famous all over the world, he never forgot the small village where he grew up."
+          },
+          "synonyms": [
+            "well-known",
+            "celebrated"
+          ],
+          "collocations": [
+            "famous for",
+            "world-famous"
+          ]
+        },
+        {
+          "word": "against",
+          "uzb": "qarshi",
+          "emoji": "🚫",
+          "examples": {
+            "easy": "Smoking here is against the rules.",
+            "normal": "Most people in the village voted against the new road.",
+            "hard": "Driving without a licence is against the law, and you could face a heavy fine if the police stop you."
+          },
+          "synonyms": [],
+          "collocations": [
+            "against the law",
+            "vote against"
+          ]
+        },
+        {
+          "word": "fight",
+          "uzb": "urushmoq, jang qilmoq",
+          "emoji": "🥊",
+          "examples": {
+            "easy": "The two boys fight a lot.",
+            "normal": "My brother and I used to fight over the TV remote.",
+            "hard": "The soldiers fought bravely for three days before the enemy finally withdrew from the city."
+          },
+          "synonyms": [
+            "battle",
+            "struggle"
+          ],
+          "collocations": [
+            "fight for",
+            "fight against"
+          ]
+        },
+        {
+          "word": "attempt",
+          "uzb": "urinish, harakat",
+          "emoji": "🎯",
+          "examples": {
+            "easy": "This is my first attempt.",
+            "normal": "She passed her driving test at the second attempt.",
+            "hard": "After several failed attempts to climb the mountain, the team finally reached the top in June."
+          },
+          "synonyms": [
+            "try",
+            "effort"
+          ],
+          "collocations": [
+            "first attempt",
+            "make an attempt"
+          ]
+        },
+        {
+          "word": "surfing",
+          "uzb": "to‘lqinda maxsus taxtacha bilan uchish mashg‘uloti",
+          "emoji": "🏄",
+          "examples": {
+            "easy": "We went surfing in Hawaii.",
+            "normal": "My cousin goes surfing every weekend when the waves are big.",
+            "hard": "Surfing looks easy on television, but it takes months of practice to stand up on the board."
+          },
+          "synonyms": [],
+          "collocations": [
+            "go surfing",
+            "surfing lessons"
+          ]
+        },
+        {
+          "word": "well-built",
+          "uzb": "kelishgan, hushbichim",
+          "emoji": "💪",
+          "examples": {
+            "easy": "Her brother is tall and well-built.",
+            "normal": "The new security guard is a well-built man in his thirties.",
+            "hard": "The police described the suspect as a well-built man of about thirty with short dark hair."
+          },
+          "synonyms": [
+            "muscular",
+            "strong"
+          ],
+          "collocations": [
+            "tall and well-built",
+            "well-built man"
+          ]
+        },
+        {
+          "word": "refuse",
+          "uzb": "rad etmoq, inkor qilmoq",
+          "emoji": "🙅",
+          "examples": {
+            "easy": "She refused to help me.",
+            "normal": "He refused to answer any questions about his private life.",
+            "hard": "The bank refused to give them a loan because they had no regular income at the time."
+          },
+          "synonyms": [
+            "decline",
+            "reject"
+          ],
+          "collocations": [
+            "refuse to do",
+            "flatly refuse"
+          ]
+        },
+        {
+          "word": "glider",
+          "uzb": "motorsiz samolyot",
+          "emoji": "🪂",
+          "examples": {
+            "easy": "A glider flew over the hills.",
+            "normal": "My uncle learnt to fly a glider when he was twenty.",
+            "hard": "Because a glider has no engine, the pilot must use rising warm air to stay in the sky for longer."
+          },
+          "synonyms": [],
+          "collocations": [
+            "fly a glider",
+            "glider pilot"
+          ]
+        },
+        {
+          "word": "accident",
+          "uzb": "falokat, baxtsiz hodisa",
+          "emoji": "🚑",
+          "examples": {
+            "easy": "He had a car accident.",
+            "normal": "Sorry, it was an accident — I didn't mean to break the cup.",
+            "hard": "Nobody was seriously hurt in the accident, but the road was closed for several hours afterwards."
+          },
+          "synonyms": [
+            "crash",
+            "mishap"
+          ],
+          "collocations": [
+            "car accident",
+            "by accident"
+          ]
+        },
+        {
+          "word": "leader",
+          "uzb": "lider, boshchi, yetakchi",
+          "emoji": "🧑‍💼",
+          "examples": {
+            "easy": "She is a good leader.",
+            "normal": "The team leader explained the plan to everyone on Monday morning.",
+            "hard": "A good leader listens carefully to people's ideas before making any important decisions for the group."
+          },
+          "synonyms": [
+            "head",
+            "chief"
+          ],
+          "collocations": [
+            "team leader",
+            "world leader"
+          ]
+        },
+        {
+          "word": "adventure",
+          "uzb": "sarguzasht, qiziq voqea",
+          "emoji": "🧭",
+          "examples": {
+            "easy": "Our trip was a real adventure.",
+            "normal": "She had some exciting adventures while she was travelling in Egypt.",
+            "hard": "Crossing the desert by camel was the greatest adventure of his life, and he still talks about it."
+          },
+          "synonyms": [],
+          "collocations": [
+            "great adventure",
+            "sense of adventure"
+          ]
+        },
+        {
+          "word": "civil",
+          "uzb": "fuqarolik",
+          "emoji": "🏛️",
+          "examples": {
+            "easy": "He works as a civil engineer.",
+            "normal": "These planes are used for civil flights, not military ones.",
+            "hard": "Helicopters are mainly used for military rather than civil purposes in many countries around the world."
+          },
+          "synonyms": [
+            "civilian"
+          ],
+          "collocations": [
+            "civil rights",
+            "civil war"
+          ]
+        },
+        {
+          "word": "right",
+          "uzb": "haq-huquq",
+          "emoji": "⚖️",
+          "examples": {
+            "easy": "Everyone has the right to vote.",
+            "normal": "Workers have the right to a safe and healthy workplace.",
+            "hard": "Martin Luther King fought for the civil rights of black Americans and became a symbol of peaceful protest."
+          },
+          "synonyms": [],
+          "collocations": [
+            "human rights",
+            "civil rights"
+          ]
+        },
+        {
+          "word": "education",
+          "uzb": "taʼlim",
+          "emoji": "🎓",
+          "examples": {
+            "easy": "Education is very important.",
+            "normal": "She hopes her children will get a good education abroad.",
+            "hard": "The government has promised to spend more money on education, especially on schools in rural areas."
+          },
+          "synonyms": [
+            "schooling"
+          ],
+          "collocations": [
+            "higher education",
+            "good education"
+          ]
+        },
+        {
+          "word": "flight",
+          "uzb": "parvoz",
+          "emoji": "🛫",
+          "examples": {
+            "easy": "The flight was very long.",
+            "normal": "Our flight to Istanbul leaves at seven in the morning.",
+            "hard": "The flight was delayed for three hours because of heavy snow, so we missed our connection in Dubai."
+          },
+          "synonyms": [],
+          "collocations": [
+            "long flight",
+            "book a flight"
+          ]
+        },
+        {
+          "word": "article",
+          "uzb": "maqola",
+          "emoji": "📰",
+          "examples": {
+            "easy": "I read an article about sleep.",
+            "normal": "My mum often writes articles about child psychology for a magazine.",
+            "hard": "The article she wrote about plastic in the ocean was shared thousands of times on social media."
+          },
+          "synonyms": [],
+          "collocations": [
+            "newspaper article",
+            "write an article"
+          ]
+        },
+        {
+          "word": "return",
+          "uzb": "qaytmoq",
+          "emoji": "🔙",
+          "examples": {
+            "easy": "He returned home late.",
+            "normal": "She returned from her holiday in Turkey last Sunday.",
+            "hard": "His father went to war in 1941 and never returned, so he grew up with his mother and grandparents."
+          },
+          "synonyms": [
+            "come back",
+            "go back"
+          ],
+          "collocations": [
+            "return home",
+            "return from"
+          ]
+        },
+        {
+          "word": "painting",
+          "uzb": "surat, rasm",
+          "emoji": "🖼️",
+          "examples": {
+            "easy": "I love this painting.",
+            "normal": "He wanted me to come in and see his new paintings.",
+            "hard": "The painting was sold at auction for two million pounds, much more than anyone had expected."
+          },
+          "synonyms": [
+            "picture"
+          ],
+          "collocations": [
+            "oil painting",
+            "famous painting"
+          ]
+        },
+        {
+          "word": "writer",
+          "uzb": "yozuvchi, adib",
+          "emoji": "✍️",
+          "examples": {
+            "easy": "My favourite writer is Orwell.",
+            "normal": "She is a writer, and her new novel comes out next month.",
+            "hard": "J.K. Rowling was an unknown writer living in Edinburgh before the first Harry Potter book made her famous."
+          },
+          "synonyms": [
+            "author"
+          ],
+          "collocations": [
+            "famous writer",
+            "children's writer"
+          ]
+        },
+        {
+          "word": "self-portrait",
+          "uzb": "avtoportret",
+          "emoji": "🤳",
+          "examples": {
+            "easy": "He painted a self-portrait.",
+            "normal": "Many of Frida Kahlo's best-known paintings are self-portraits.",
+            "hard": "Rembrandt painted dozens of self-portraits, which show how his face changed as he grew older."
+          },
+          "synonyms": [],
+          "collocations": [
+            "paint a self-portrait",
+            "famous self-portrait"
+          ]
+        },
+        {
+          "word": "artist",
+          "uzb": "rassom",
+          "emoji": "🎨",
+          "examples": {
+            "easy": "My sister is an artist.",
+            "normal": "There is an exhibition of paintings by local artists at the library.",
+            "hard": "The artist spent two years working on the huge painting that now hangs in the city museum."
+          },
+          "synonyms": [
+            "painter"
+          ],
+          "collocations": [
+            "local artist",
+            "famous artist"
+          ]
+        },
+        {
+          "word": "dream",
+          "uzb": "orzu",
+          "emoji": "💭",
+          "examples": {
+            "easy": "His dream is to travel.",
+            "normal": "Becoming a doctor has always been her biggest dream.",
+            "hard": "After years of saving money, they finally achieved their dream of opening a small café by the sea."
+          },
+          "synonyms": [
+            "ambition",
+            "wish"
+          ],
+          "collocations": [
+            "dream come true",
+            "childhood dream"
+          ]
+        },
+        {
+          "word": "be born",
+          "uzb": "tug‘ilmoq",
+          "emoji": "👶",
+          "examples": {
+            "easy": "I was born in Bukhara.",
+            "normal": "My daughter was born in May, two weeks before we moved.",
+            "hard": "She was born in a small village, but her family moved to Tashkent when she was only three years old."
+          },
+          "synonyms": [],
+          "collocations": [
+            "be born in",
+            "born and raised"
+          ]
+        },
+        {
+          "word": "scientist",
+          "uzb": "olim",
+          "emoji": "🔬",
+          "examples": {
+            "easy": "Her father is a scientist.",
+            "normal": "Some scientists are working on a new vaccine for the disease.",
+            "hard": "Scientists have warned that rising temperatures could cause serious problems for farmers in Central Asia."
+          },
+          "synonyms": [
+            "researcher"
+          ],
+          "collocations": [
+            "famous scientist",
+            "research scientist"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-elementary-lesson-26",
+      "lesson": 26,
+      "name": "Lesson 26 - Shopping, money and school",
+      "source": "Main Lesson (MT) p. 13",
+      "words": [
+        {
+          "word": "go on a trip",
+          "uzb": "sayohatga chiqmoq",
+          "emoji": "🧳",
+          "examples": {
+            "easy": "We went on a trip.",
+            "normal": "We went on a trip to Morocco last year with our friends.",
+            "hard": "If you go on a trip abroad, make sure your passport is valid for at least six months."
+          },
+          "synonyms": [
+            "travel"
+          ],
+          "collocations": [
+            "go on a business trip",
+            "go on a school trip"
+          ]
+        },
+        {
+          "word": "ring",
+          "uzb": "jiringlamoq",
+          "emoji": "🔔",
+          "examples": {
+            "easy": "The phone is ringing.",
+            "normal": "The doorbell is ringing — can you open the door, please?",
+            "hard": "My phone rang in the middle of the meeting, and everyone turned to look at me."
+          },
+          "synonyms": [],
+          "collocations": [
+            "phone rings",
+            "doorbell rings"
+          ]
+        },
+        {
+          "word": "literature",
+          "uzb": "adabiyot",
+          "emoji": "📚",
+          "examples": {
+            "easy": "I like English literature.",
+            "normal": "We are studying English literature at university this year.",
+            "hard": "Russian literature of the nineteenth century includes some of the greatest novels ever written."
+          },
+          "synonyms": [],
+          "collocations": [
+            "English literature",
+            "classic literature"
+          ]
+        },
+        {
+          "word": "butcher's",
+          "uzb": "go‘sht do‘koni",
+          "emoji": "🥩",
+          "examples": {
+            "easy": "I went to the butcher's.",
+            "normal": "When I need meat, I always go to the butcher's near my house.",
+            "hard": "The butcher's on the corner sells fresh lamb, and the owner will cut it exactly the way you want."
+          },
+          "synonyms": [],
+          "collocations": [
+            "local butcher's",
+            "go to the butcher's"
+          ]
+        },
+        {
+          "word": "sales",
+          "uzb": "sotuv; sotilgan narsalar miqdori",
+          "emoji": "📈",
+          "examples": {
+            "easy": "Car sales are up this year.",
+            "normal": "Sales of electric cars have grown quickly in the last five years.",
+            "hard": "The company's sales fell sharply during the winter, so the managers decided to cut prices."
+          },
+          "synonyms": [],
+          "collocations": [
+            "sales figures",
+            "sales rise"
+          ]
+        },
+        {
+          "word": "impossible",
+          "uzb": "ilojsiz, bo‘lishi mumkin emas",
+          "emoji": "❌",
+          "examples": {
+            "easy": "That's impossible!",
+            "normal": "It was impossible to shop online a hundred years ago.",
+            "hard": "It's almost impossible to find a parking space in the city centre on a Saturday afternoon."
+          },
+          "synonyms": [],
+          "collocations": [
+            "almost impossible",
+            "impossible to do"
+          ]
+        },
+        {
+          "word": "space",
+          "uzb": "fazo, koinot",
+          "emoji": "🚀",
+          "examples": {
+            "easy": "He wants to go into space.",
+            "normal": "Who was the first person to travel into space?",
+            "hard": "Yuri Gagarin became the first person in space in 1961, when his flight lasted just over an hour and a half."
+          },
+          "synonyms": [],
+          "collocations": [
+            "outer space",
+            "space travel"
+          ]
+        },
+        {
+          "word": "discount",
+          "uzb": "chegirma, bonus, skidka",
+          "emoji": "🏷️",
+          "examples": {
+            "easy": "Students get a discount.",
+            "normal": "The winners will get a fifteen per cent discount on all products.",
+            "hard": "If you buy three or more books, the shop will give you a ten per cent discount on the whole order."
+          },
+          "synonyms": [
+            "reduction"
+          ],
+          "collocations": [
+            "get a discount",
+            "student discount"
+          ]
+        },
+        {
+          "word": "newsagent's",
+          "uzb": "matbuot do‘koni",
+          "emoji": "🗞️",
+          "examples": {
+            "easy": "I'll go to the newsagent's.",
+            "normal": "I'll pop into the newsagent's on my way home for a paper.",
+            "hard": "The newsagent's on our street sells magazines, sweets and phone cards, and it opens at six every morning."
+          },
+          "synonyms": [],
+          "collocations": [
+            "local newsagent's",
+            "corner newsagent's"
+          ]
+        },
+        {
+          "word": "cash",
+          "uzb": "naqd pul, naqd",
+          "emoji": "💵",
+          "examples": {
+            "easy": "Can I pay in cash?",
+            "normal": "How much cash do you have on you right now?",
+            "hard": "Many small shops in the market still only accept cash, so take some money from the cash machine first."
+          },
+          "synonyms": [
+            "money"
+          ],
+          "collocations": [
+            "pay in cash",
+            "cash machine"
+          ]
+        },
+        {
+          "word": "vending machine",
+          "uzb": "ichimlik va yegulik sotadigan apparat",
+          "emoji": "🥤",
+          "examples": {
+            "easy": "The vending machine is broken.",
+            "normal": "He put some coins in the vending machine and got a cola.",
+            "hard": "There is a vending machine on every floor of the office, but the snacks are quite expensive."
+          },
+          "synonyms": [],
+          "collocations": [
+            "use a vending machine",
+            "drinks vending machine"
+          ]
+        },
+        {
+          "word": "similar",
+          "uzb": "o‘xshash, o‘xshagan",
+          "emoji": "🟰",
+          "examples": {
+            "easy": "Our jobs are very similar.",
+            "normal": "My sister and I have very similar interests and hobbies.",
+            "hard": "The two cities are similar in size, but they have very different histories and ways of life."
+          },
+          "synonyms": [
+            "alike"
+          ],
+          "collocations": [
+            "similar to",
+            "very similar"
+          ]
+        },
+        {
+          "word": "maybe",
+          "uzb": "balki",
+          "emoji": "🤷",
+          "examples": {
+            "easy": "Maybe they are right.",
+            "normal": "Maybe we can meet for coffee after work on Friday.",
+            "hard": "Maybe it would be better to take the train, because the roads are always busy on holiday weekends."
+          },
+          "synonyms": [
+            "perhaps",
+            "possibly"
+          ],
+          "collocations": [
+            "maybe not",
+            "maybe next time"
+          ]
+        },
+        {
+          "word": "fix",
+          "uzb": "tuzatmoq",
+          "emoji": "🔧",
+          "examples": {
+            "easy": "Can you fix my bike?",
+            "normal": "My brother is good at fixing things around the house.",
+            "hard": "It took the mechanic two days to fix the car, and the bill was much higher than we had expected."
+          },
+          "synonyms": [
+            "repair",
+            "mend"
+          ],
+          "collocations": [
+            "fix a problem",
+            "fix the car"
+          ]
+        },
+        {
+          "word": "euro",
+          "uzb": "(Yevropa ittifoqi pul birligi) yevro",
+          "emoji": "💶",
+          "examples": {
+            "easy": "It costs five euros.",
+            "normal": "I paid fifty euros for the hotel room in Rome.",
+            "hard": "When we were in Spain, we changed our dollars into euros at the airport, which was a mistake."
+          },
+          "synonyms": [],
+          "collocations": [
+            "pay in euros",
+            "euro coins"
+          ]
+        },
+        {
+          "word": "random",
+          "uzb": "tasodifiy",
+          "emoji": "🎲",
+          "examples": {
+            "easy": "Pick a random number.",
+            "normal": "The teacher chose a random student to answer the question.",
+            "hard": "The researchers asked a random selection of shoppers what they thought about the new opening hours."
+          },
+          "synonyms": [],
+          "collocations": [
+            "random selection",
+            "at random"
+          ]
+        },
+        {
+          "word": "yell",
+          "uzb": "baqirib aytmoq",
+          "emoji": "📢",
+          "examples": {
+            "easy": "Don't yell at me!",
+            "normal": "He yelled for help when he fell into the river.",
+            "hard": "The coach yelled instructions at the players, but they couldn't hear him because the crowd was so loud."
+          },
+          "synonyms": [
+            "shout",
+            "scream"
+          ],
+          "collocations": [
+            "yell at",
+            "yell out"
+          ]
+        },
+        {
+          "word": "kindergarten",
+          "uzb": "bolalar bog‘chasi",
+          "emoji": "🧸",
+          "examples": {
+            "easy": "She goes to kindergarten.",
+            "normal": "My little sister is four, and she goes to kindergarten every morning.",
+            "hard": "Places at the new kindergarten filled up quickly, because it is close to the metro and has a big playground."
+          },
+          "synonyms": [
+            "nursery school"
+          ],
+          "collocations": [
+            "go to kindergarten",
+            "kindergarten teacher"
+          ]
+        },
+        {
+          "word": "anthem",
+          "uzb": "madhiya",
+          "emoji": "🎶",
+          "examples": {
+            "easy": "We sang the national anthem.",
+            "normal": "On Monday mornings we sing our national anthem at school.",
+            "hard": "The players stood in a line and sang the national anthem before the final match of the tournament began."
+          },
+          "synonyms": [],
+          "collocations": [
+            "national anthem",
+            "sing the anthem"
+          ]
+        },
+        {
+          "word": "recess",
+          "uzb": "dars tanaffusi",
+          "emoji": "🔕",
+          "examples": {
+            "easy": "We play football at recess.",
+            "normal": "I had a sandwich with my friend during recess.",
+            "hard": "The children ran out into the playground as soon as the bell rang for recess."
+          },
+          "synonyms": [
+            "break",
+            "playtime"
+          ],
+          "collocations": [
+            "during recess",
+            "at recess"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-elementary-lesson-27",
+      "lesson": 27,
+      "name": "Lesson 27 - Health and lifestyle",
+      "source": "Main Lesson (MT) p. 18, 19",
+      "words": [
+        {
+          "word": "promise",
+          "uzb": "vaʼda bermoq, so‘z bermoq",
+          "emoji": "🤞",
+          "examples": {
+            "easy": "I promise to call you.",
+            "normal": "She promised to come to the party, but she didn't.",
+            "hard": "He promised his parents that he would study harder and get better marks next term."
+          },
+          "synonyms": [
+            "swear",
+            "vow"
+          ],
+          "collocations": [
+            "promise to do",
+            "keep a promise"
+          ]
+        },
+        {
+          "word": "supper",
+          "uzb": "kechki ovqat",
+          "emoji": "🍲",
+          "examples": {
+            "easy": "We had supper at eight.",
+            "normal": "We had supper in a small Italian restaurant near the river.",
+            "hard": "By the time we had finished supper and washed the dishes, the children were already asleep."
+          },
+          "synonyms": [
+            "dinner"
+          ],
+          "collocations": [
+            "have supper",
+            "late supper"
+          ]
+        },
+        {
+          "word": "possibly",
+          "uzb": "ehtimol, balki, bo‘lishi mumkin",
+          "emoji": "❓",
+          "examples": {
+            "easy": "It was possibly a mistake.",
+            "normal": "It was possibly their worst performance ever on that stage.",
+            "hard": "The new hospital will possibly open next spring, but the builders still haven't given an exact date."
+          },
+          "synonyms": [
+            "perhaps",
+            "maybe"
+          ],
+          "collocations": [
+            "quite possibly",
+            "very possibly"
+          ]
+        },
+        {
+          "word": "evidence",
+          "uzb": "asos, dalil, isbot",
+          "emoji": "🔍",
+          "examples": {
+            "easy": "There is no evidence.",
+            "normal": "Doctors found no evidence of infection in the blood test.",
+            "hard": "The police could not arrest him, because there was not enough evidence that he had stolen the money."
+          },
+          "synonyms": [
+            "proof"
+          ],
+          "collocations": [
+            "find evidence",
+            "no evidence"
+          ]
+        },
+        {
+          "word": "unemployed",
+          "uzb": "ishsiz, ish bilan taʼminlanmagan",
+          "emoji": "📉",
+          "examples": {
+            "easy": "He is unemployed now.",
+            "normal": "I need a job — I've been unemployed since March.",
+            "hard": "After the factory closed, hundreds of people in the town were unemployed for more than a year."
+          },
+          "synonyms": [
+            "jobless",
+            "out of work"
+          ],
+          "collocations": [
+            "long-term unemployed",
+            "become unemployed"
+          ]
+        },
+        {
+          "word": "well-paid",
+          "uzb": "yaxshi to‘lanadigan, maoshi yaxshi",
+          "emoji": "💰",
+          "examples": {
+            "easy": "She has a well-paid job.",
+            "normal": "He left his well-paid job in a bank to become a teacher.",
+            "hard": "Although the job is well-paid, the hours are long and he rarely sees his family during the week."
+          },
+          "synonyms": [],
+          "collocations": [
+            "well-paid job",
+            "well-paid work"
+          ]
+        },
+        {
+          "word": "prediction",
+          "uzb": "bashorat",
+          "emoji": "🔮",
+          "examples": {
+            "easy": "Her prediction was right.",
+            "normal": "That old lady made a prediction about his future.",
+            "hard": "Most experts' predictions about the election were wrong, and the result surprised almost everyone."
+          },
+          "synonyms": [
+            "forecast"
+          ],
+          "collocations": [
+            "make a prediction",
+            "weather prediction"
+          ]
+        },
+        {
+          "word": "air hostess",
+          "uzb": "styuardessa, samolyot xizmatchisi",
+          "emoji": "👩‍✈️",
+          "examples": {
+            "easy": "My sister is an air hostess.",
+            "normal": "The air hostess brought us water and a blanket during the flight.",
+            "hard": "She worked as an air hostess for ten years and visited more than forty countries before she settled down."
+          },
+          "synonyms": [
+            "flight attendant",
+            "stewardess"
+          ],
+          "collocations": [
+            "work as an air hostess",
+            "friendly air hostess"
+          ]
+        },
+        {
+          "word": "make a decision",
+          "uzb": "qaror qilmoq",
+          "emoji": "🧠",
+          "examples": {
+            "easy": "I need to make a decision.",
+            "normal": "It is difficult to make a decision in her position.",
+            "hard": "You shouldn't make a decision about such an important job offer until you have talked to your family."
+          },
+          "synonyms": [
+            "decide"
+          ],
+          "collocations": [
+            "make a quick decision",
+            "make the right decision"
+          ]
+        },
+        {
+          "word": "state",
+          "uzb": "bildirmoq, aytmoq",
+          "emoji": "🗣️",
+          "examples": {
+            "easy": "Please state your name.",
+            "normal": "Please state your name and address clearly on the form.",
+            "hard": "The report clearly states that the building is not safe and must be repaired before anyone can use it."
+          },
+          "synonyms": [
+            "declare"
+          ],
+          "collocations": [
+            "clearly state",
+            "state your name"
+          ]
+        },
+        {
+          "word": "event",
+          "uzb": "voqea-hodisa",
+          "emoji": "📅",
+          "examples": {
+            "easy": "It was a big event.",
+            "normal": "The conference was an important social event for the city.",
+            "hard": "The wedding was the biggest event of the year in the village, and almost everyone was invited."
+          },
+          "synonyms": [
+            "occasion"
+          ],
+          "collocations": [
+            "social event",
+            "sporting event"
+          ]
+        },
+        {
+          "word": "caring",
+          "uzb": "g‘amxo‘r, mehribon",
+          "emoji": "🤗",
+          "examples": {
+            "easy": "She is a caring mother.",
+            "normal": "Tom's dad is a polite and caring man who loves children.",
+            "hard": "The nurses on the children's ward were so caring that the young patients felt at home there."
+          },
+          "synonyms": [
+            "kind",
+            "loving"
+          ],
+          "collocations": [
+            "caring person",
+            "kind and caring"
+          ]
+        },
+        {
+          "word": "knock",
+          "uzb": "taqillatmoq",
+          "emoji": "🚪",
+          "examples": {
+            "easy": "Someone is knocking.",
+            "normal": "Someone is knocking on the door — can you see who it is?",
+            "hard": "Please knock before you come into the office, because I might be on the phone with a client."
+          },
+          "synonyms": [
+            "tap"
+          ],
+          "collocations": [
+            "knock on the door",
+            "knock twice"
+          ]
+        },
+        {
+          "word": "faint",
+          "uzb": "hushidan ketmoq",
+          "emoji": "😵",
+          "examples": {
+            "easy": "She fainted in the heat.",
+            "normal": "He fainted when the burglar hit him over the head.",
+            "hard": "Several people in the crowd fainted because they had been standing in the hot sun for hours without water."
+          },
+          "synonyms": [
+            "pass out"
+          ],
+          "collocations": [
+            "nearly faint",
+            "faint from hunger"
+          ]
+        },
+        {
+          "word": "look for",
+          "uzb": "qidirmoq",
+          "emoji": "👀",
+          "examples": {
+            "easy": "I'm looking for my keys.",
+            "normal": "What are you looking for under the bed?",
+            "hard": "She has been looking for a new flat for months, but everything in the city centre is too expensive."
+          },
+          "synonyms": [
+            "search for",
+            "seek"
+          ],
+          "collocations": [
+            "look for a job",
+            "look for work"
+          ]
+        },
+        {
+          "word": "gale",
+          "uzb": "bo‘ron",
+          "emoji": "🌬️",
+          "examples": {
+            "easy": "There was a gale last night.",
+            "normal": "We should stay at home — it's blowing a gale outside.",
+            "hard": "The gale blew down several trees in the park, and some of them fell across the main road."
+          },
+          "synonyms": [
+            "storm"
+          ],
+          "collocations": [
+            "blowing a gale",
+            "strong gale"
+          ]
+        },
+        {
+          "word": "toast",
+          "uzb": "qovurilgan/isitilgan non bo‘lagi",
+          "emoji": "🍞",
+          "examples": {
+            "easy": "I had toast for breakfast.",
+            "normal": "I had two pieces of toast with butter and jam this morning.",
+            "hard": "He burnt the toast again, so the whole kitchen smelt of smoke when we came down for breakfast."
+          },
+          "synonyms": [],
+          "collocations": [
+            "piece of toast",
+            "buttered toast"
+          ]
+        },
+        {
+          "word": "have a chat",
+          "uzb": "suhbatlashmoq, gurunglashmoq",
+          "emoji": "☕",
+          "examples": {
+            "easy": "Let's have a chat.",
+            "normal": "I often go to the café and have a chat with my friends.",
+            "hard": "Before the meeting started, the manager had a quick chat with each new employee to make them feel welcome."
+          },
+          "synonyms": [
+            "chat",
+            "talk"
+          ],
+          "collocations": [
+            "have a quick chat",
+            "have a chat with"
+          ]
+        },
+        {
+          "word": "kit",
+          "uzb": "zarur anjomlar to‘plami",
+          "emoji": "🧰",
+          "examples": {
+            "easy": "Where is the first aid kit?",
+            "normal": "Sally always keeps a first aid kit in her car.",
+            "hard": "Before you go camping in the mountains, check that your first aid kit has bandages and painkillers."
+          },
+          "synonyms": [
+            "set"
+          ],
+          "collocations": [
+            "first aid kit",
+            "tool kit"
+          ]
+        },
+        {
+          "word": "bucket",
+          "uzb": "chelak",
+          "emoji": "🪣",
+          "examples": {
+            "easy": "Fill the bucket with water.",
+            "normal": "We need a bucket of water to plant this tree.",
+            "hard": "The roof was leaking so badly that we had to put buckets on the floor to catch the rain."
+          },
+          "synonyms": [
+            "pail"
+          ],
+          "collocations": [
+            "bucket of water",
+            "plastic bucket"
+          ]
+        },
+        {
+          "word": "spade",
+          "uzb": "belkurak",
+          "emoji": "🏗️",
+          "examples": {
+            "easy": "He has an old spade.",
+            "normal": "He is digging in his garden with an old spade.",
+            "hard": "You'll need a strong spade to dig through this soil, because it is full of stones and roots."
+          },
+          "synonyms": [
+            "shovel"
+          ],
+          "collocations": [
+            "garden spade",
+            "dig with a spade"
+          ]
+        },
+        {
+          "word": "have fun",
+          "uzb": "zavqlanmoq, o‘yin-kulgu qilmoq",
+          "emoji": "🎉",
+          "examples": {
+            "easy": "We had fun at the party.",
+            "normal": "We often play volleyball and have fun with friends.",
+            "hard": "The children had so much fun at the water park that they didn't want to go home in the evening."
+          },
+          "synonyms": [
+            "enjoy yourself"
+          ],
+          "collocations": [
+            "have great fun",
+            "have fun with"
+          ]
+        },
+        {
+          "word": "cartwheel",
+          "uzb": "umbaloq oshmoq / umbaloq",
+          "emoji": "🤸",
+          "examples": {
+            "easy": "She can do a cartwheel.",
+            "normal": "Her twins love cartwheeling across the grass in the park.",
+            "hard": "She was so happy about her exam results that she did a cartwheel in the middle of the school yard."
+          },
+          "synonyms": [],
+          "collocations": [
+            "do a cartwheel",
+            "turn cartwheels"
+          ]
+        },
+        {
+          "word": "bunch",
+          "uzb": "bog‘lam, dasta",
+          "emoji": "💐",
+          "examples": {
+            "easy": "He gave me a bunch of flowers.",
+            "normal": "She brought me a bunch of flowers when I was in hospital.",
+            "hard": "I bought a bunch of bananas at the market, but they went brown before we could eat them all."
+          },
+          "synonyms": [],
+          "collocations": [
+            "bunch of flowers",
+            "bunch of keys"
+          ]
+        },
+        {
+          "word": "health",
+          "uzb": "sog‘lik, salomatlik",
+          "emoji": "❤️‍🩹",
+          "examples": {
+            "easy": "Health is important.",
+            "normal": "She is worried about her mother's health these days.",
+            "hard": "Smoking is bad for your health, and it also harms the people who live and work around you."
+          },
+          "synonyms": [],
+          "collocations": [
+            "good health",
+            "mental health"
+          ]
+        },
+        {
+          "word": "healthy lifestyle",
+          "uzb": "sog‘lom turmush tarzi",
+          "emoji": "🥗",
+          "examples": {
+            "easy": "I have a healthy lifestyle.",
+            "normal": "To have a healthy lifestyle, you must give up smoking.",
+            "hard": "A healthy lifestyle includes eating lots of fruit and vegetables, sleeping well and doing regular exercise."
+          },
+          "synonyms": [],
+          "collocations": [
+            "lead a healthy lifestyle",
+            "promote a healthy lifestyle"
+          ]
+        },
+        {
+          "word": "mind",
+          "uzb": "aql-idrok",
+          "emoji": "🧘",
+          "examples": {
+            "easy": "Healthy body, healthy mind.",
+            "normal": "Yoga is good for both the mind and the body.",
+            "hard": "Reading every day keeps the mind active, and it may even help to protect your memory as you get older."
+          },
+          "synonyms": [
+            "intellect"
+          ],
+          "collocations": [
+            "healthy mind",
+            "peace of mind"
+          ]
+        },
+        {
+          "word": "calorie",
+          "uzb": "kaloriya, quvvatlik miqdor",
+          "emoji": "🔥",
+          "examples": {
+            "easy": "A potato has 90 calories.",
+            "normal": "This burger contains more than five hundred calories.",
+            "hard": "If you want to lose weight, you need to burn more calories than you eat each day."
+          },
+          "synonyms": [],
+          "collocations": [
+            "count calories",
+            "burn calories"
+          ]
+        },
+        {
+          "word": "take the stairs",
+          "uzb": "zinadan chiqmoq",
+          "emoji": "🪜",
+          "examples": {
+            "easy": "I always take the stairs.",
+            "normal": "I often take the stairs instead of the lift at work.",
+            "hard": "If you take the stairs every day instead of using the lift, you will soon notice that you feel fitter."
+          },
+          "synonyms": [
+            "walk up the stairs"
+          ],
+          "collocations": [
+            "take the stairs every day",
+            "take the stairs, not the lift"
+          ]
+        },
+        {
+          "word": "mayor",
+          "uzb": "hokim",
+          "emoji": "🏙️",
+          "examples": {
+            "easy": "The mayor gave a speech.",
+            "normal": "The mayor of our town is making a speech in public tomorrow.",
+            "hard": "The new mayor promised to build more parks and cycle lanes to make the city a healthier place to live."
+          },
+          "synonyms": [],
+          "collocations": [
+            "city mayor",
+            "elect a mayor"
+          ]
+        },
+        {
+          "word": "ban",
+          "uzb": "taqiqlamoq",
+          "emoji": "⛔",
+          "examples": {
+            "easy": "Smoking is banned here.",
+            "normal": "The city banned cars from the old town centre last year.",
+            "hard": "The government banned smoking in all public places, including restaurants, cafés and bus stops."
+          },
+          "synonyms": [
+            "forbid",
+            "prohibit"
+          ],
+          "collocations": [
+            "ban smoking",
+            "be banned from"
+          ]
+        },
+        {
+          "word": "public place",
+          "uzb": "jamoat joyi",
+          "emoji": "🚉",
+          "examples": {
+            "easy": "A park is a public place for everyone.",
+            "normal": "Talking loudly on the phone in public places is impolite.",
+            "hard": "Smoking is not allowed in public places such as hospitals, schools and railway stations."
+          },
+          "synonyms": [],
+          "collocations": [
+            "in a public place",
+            "crowded public place"
+          ]
+        },
+        {
+          "word": "reduce",
+          "uzb": "kamaytirmoq",
+          "emoji": "🔽",
+          "examples": {
+            "easy": "We must reduce costs.",
+            "normal": "The new law will reduce car accidents, I hope.",
+            "hard": "Doctors say that you can reduce the risk of heart disease by walking for thirty minutes every day."
+          },
+          "synonyms": [
+            "cut",
+            "lower"
+          ],
+          "collocations": [
+            "reduce the risk",
+            "reduce costs"
+          ]
+        },
+        {
+          "word": "survey",
+          "uzb": "so‘rovnoma",
+          "emoji": "📋",
+          "examples": {
+            "easy": "We did a short survey.",
+            "normal": "The survey showed that most people want more parks in the city.",
+            "hard": "According to a recent survey, sixty-seven per cent of people in the city say they lead a healthy lifestyle."
+          },
+          "synonyms": [
+            "poll"
+          ],
+          "collocations": [
+            "carry out a survey",
+            "survey shows"
+          ]
+        },
+        {
+          "word": "snack",
+          "uzb": "yengil taom, yegulik",
+          "emoji": "🥨",
+          "examples": {
+            "easy": "I need a quick snack.",
+            "normal": "She sells drinks and snacks like crisps and peanuts.",
+            "hard": "Nutritionists recommend healthy snacks such as nuts and fruit instead of biscuits and sweets between meals."
+          },
+          "synonyms": [],
+          "collocations": [
+            "healthy snack",
+            "quick snack"
+          ]
+        },
+        {
+          "word": "strict",
+          "uzb": "qattiqqo‘l",
+          "emoji": "🧑‍🏫",
+          "examples": {
+            "easy": "My teacher was very strict.",
+            "normal": "My first English teacher was very strict and always on time.",
+            "hard": "Her parents were quite strict, so she was never allowed to stay out after ten o'clock as a teenager."
+          },
+          "synonyms": [
+            "firm",
+            "harsh"
+          ],
+          "collocations": [
+            "strict parents",
+            "strict rules"
+          ]
+        },
+        {
+          "word": "shy",
+          "uzb": "uyatchan, tortinchoq",
+          "emoji": "😳",
+          "examples": {
+            "easy": "She is very shy.",
+            "normal": "She is very shy with strangers but chatty with her friends.",
+            "hard": "He was too shy to speak in front of the class, so the teacher let him write his answers down instead."
+          },
+          "synonyms": [
+            "timid",
+            "bashful"
+          ],
+          "collocations": [
+            "too shy to",
+            "shy with"
+          ]
+        },
+        {
+          "word": "ski",
+          "uzb": "chang‘i uchmoq",
+          "emoji": "⛷️",
+          "examples": {
+            "easy": "They ski every winter.",
+            "normal": "They didn't go skiing last winter because there was no snow.",
+            "hard": "We usually ski in Chimgan in January, when the slopes are covered with fresh snow."
+          },
+          "synonyms": [],
+          "collocations": [
+            "go skiing",
+            "learn to ski"
+          ]
+        },
+        {
+          "word": "do yoga",
+          "uzb": "yoga bilan shug‘ullanmoq",
+          "emoji": "🧘‍♀️",
+          "examples": {
+            "easy": "I do yoga every morning.",
+            "normal": "My sister often does yoga to relax after a long day.",
+            "hard": "Since she started doing yoga three times a week, her back pain has almost completely disappeared."
+          },
+          "synonyms": [],
+          "collocations": [
+            "do yoga regularly",
+            "do yoga at home"
+          ]
+        },
+        {
+          "word": "glad",
+          "uzb": "mamnun, xursand",
+          "emoji": "😊",
+          "examples": {
+            "easy": "I'm glad to see you.",
+            "normal": "When I visited my aunt, she was glad to see me.",
+            "hard": "I'm really glad that you decided to come with us, because the trip wouldn't be the same without you."
+          },
+          "synonyms": [
+            "happy",
+            "pleased"
+          ],
+          "collocations": [
+            "glad to hear",
+            "really glad"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-elementary-lesson-28",
+      "lesson": 28,
+      "name": "Lesson 28 - Hobbies, records and everyday objects",
+      "source": "Main Lesson (MT) p. 25, 26",
+      "words": [
+        {
+          "word": "bracket",
+          "uzb": "qavs (...)",
+          "emoji": "🔣",
+          "examples": {
+            "easy": "Write the answer in brackets.",
+            "normal": "You must use the words in brackets to complete the sentences.",
+            "hard": "Put the verbs in brackets into the correct form, and then check your answers with a partner."
+          },
+          "synonyms": [
+            "parenthesis"
+          ],
+          "collocations": [
+            "in brackets",
+            "round brackets"
+          ]
+        },
+        {
+          "word": "perhaps",
+          "uzb": "balki, ehtimol",
+          "emoji": "🤔",
+          "examples": {
+            "easy": "Perhaps he is right.",
+            "normal": "\"I don't think you understand.\" \"Well, perhaps not.\"",
+            "hard": "Perhaps we should leave earlier tomorrow, because the traffic on the motorway is always heavy on Mondays."
+          },
+          "synonyms": [
+            "maybe",
+            "possibly"
+          ],
+          "collocations": [
+            "perhaps not",
+            "perhaps so"
+          ]
+        },
+        {
+          "word": "risk",
+          "uzb": "tavakkal qilmoq",
+          "emoji": "🎰",
+          "examples": {
+            "easy": "Don't risk your life.",
+            "normal": "I can't risk it — I need some time to think.",
+            "hard": "He risked losing all his savings when he decided to open his own restaurant in the city centre."
+          },
+          "synonyms": [
+            "gamble",
+            "chance"
+          ],
+          "collocations": [
+            "risk your life",
+            "risk losing"
+          ]
+        },
+        {
+          "word": "spare",
+          "uzb": "qo‘shimcha, ortiqcha, bo‘sh",
+          "emoji": "🕒",
+          "examples": {
+            "easy": "What do you do in your spare time?",
+            "normal": "I play golf with my friends in my spare time.",
+            "hard": "Always keep a spare key with a neighbour in case you lock yourself out of the house."
+          },
+          "synonyms": [
+            "free",
+            "extra"
+          ],
+          "collocations": [
+            "spare time",
+            "spare key"
+          ]
+        },
+        {
+          "word": "model",
+          "uzb": "model, namuna",
+          "emoji": "🏠",
+          "examples": {
+            "easy": "He made a model ship.",
+            "normal": "They showed us a model of the new building.",
+            "hard": "The architect spent weeks building a detailed model of the new airport to show to the investors."
+          },
+          "synonyms": [
+            "replica"
+          ],
+          "collocations": [
+            "scale model",
+            "model of"
+          ]
+        },
+        {
+          "word": "surprise",
+          "uzb": "hayron qoldirmoq",
+          "emoji": "😲",
+          "examples": {
+            "easy": "His question surprised me.",
+            "normal": "It surprised me that she didn't come to the wedding.",
+            "hard": "The news of his sudden resignation surprised everyone, because he had seemed so happy in his job."
+          },
+          "synonyms": [
+            "amaze",
+            "astonish"
+          ],
+          "collocations": [
+            "surprise everyone",
+            "pleasantly surprise"
+          ]
+        },
+        {
+          "word": "railroad",
+          "uzb": "temiryo‘l",
+          "emoji": "🛤️",
+          "examples": {
+            "easy": "The railroad crosses the river.",
+            "normal": "The new railroad connects the capital with the coast.",
+            "hard": "It was the worst railroad disaster in Indian history, and the government ordered an immediate investigation."
+          },
+          "synonyms": [
+            "railway"
+          ],
+          "collocations": [
+            "railroad station",
+            "railroad track"
+          ]
+        },
+        {
+          "word": "stamp",
+          "uzb": "marka",
+          "emoji": "📮",
+          "examples": {
+            "easy": "I need a stamp.",
+            "normal": "Could I have three first-class stamps, please?",
+            "hard": "My grandfather has been collecting stamps for fifty years and has more than ten thousand in his albums."
+          },
+          "synonyms": [],
+          "collocations": [
+            "collect stamps",
+            "postage stamp"
+          ]
+        },
+        {
+          "word": "collect",
+          "uzb": "yig‘moq, to‘plamoq",
+          "emoji": "🗂️",
+          "examples": {
+            "easy": "I collect old coins.",
+            "normal": "We are collecting information about our customers' needs.",
+            "hard": "She started collecting postcards as a child, and now she has cards from almost every country in the world."
+          },
+          "synonyms": [
+            "gather"
+          ],
+          "collocations": [
+            "collect stamps",
+            "collect information"
+          ]
+        },
+        {
+          "word": "make-believe",
+          "uzb": "xayoliy, tasavvurdagi",
+          "emoji": "🦄",
+          "examples": {
+            "easy": "Children love make-believe games.",
+            "normal": "The children built a make-believe castle out of boxes.",
+            "hard": "As a child she lived in a make-believe world full of dragons, princesses and talking animals."
+          },
+          "synonyms": [
+            "pretend",
+            "imaginary"
+          ],
+          "collocations": [
+            "make-believe world",
+            "game of make-believe"
+          ]
+        },
+        {
+          "word": "dressmaker",
+          "uzb": "tikuvchi, chevar",
+          "emoji": "🧵",
+          "examples": {
+            "easy": "My aunt is a dressmaker.",
+            "normal": "My dressmaker sews my dresses without any mistakes.",
+            "hard": "She asked a local dressmaker to make her wedding dress, because she couldn't find one she liked in the shops."
+          },
+          "synonyms": [
+            "seamstress"
+          ],
+          "collocations": [
+            "local dressmaker",
+            "skilled dressmaker"
+          ]
+        },
+        {
+          "word": "acquaintance",
+          "uzb": "tanish-bilish",
+          "emoji": "🤝",
+          "examples": {
+            "easy": "He is just an acquaintance.",
+            "normal": "He isn't really a friend — just a business acquaintance.",
+            "hard": "I got the job through an old acquaintance who knew the manager of the company."
+          },
+          "synonyms": [],
+          "collocations": [
+            "business acquaintance",
+            "casual acquaintance"
+          ]
+        },
+        {
+          "word": "thunderstorm",
+          "uzb": "momaqaldiroq",
+          "emoji": "⛈️",
+          "examples": {
+            "easy": "There was a thunderstorm.",
+            "normal": "The thunderstorm woke the baby up in the middle of the night.",
+            "hard": "The match was stopped after twenty minutes because a heavy thunderstorm made the pitch too dangerous."
+          },
+          "synonyms": [
+            "storm"
+          ],
+          "collocations": [
+            "heavy thunderstorm",
+            "violent thunderstorm"
+          ]
+        },
+        {
+          "word": "gain",
+          "uzb": "qo‘lga kiritmoq, olmoq",
+          "emoji": "🏅",
+          "examples": {
+            "easy": "She gained a lot of experience.",
+            "normal": "He gained a doctorate in chemical engineering at the age of thirty.",
+            "hard": "Working abroad for two years helped her gain the confidence and experience she needed to start her own business."
+          },
+          "synonyms": [
+            "get",
+            "obtain"
+          ],
+          "collocations": [
+            "gain experience",
+            "gain a degree"
+          ]
+        },
+        {
+          "word": "wealthy",
+          "uzb": "boy-badavlat",
+          "emoji": "🤑",
+          "examples": {
+            "easy": "He comes from a wealthy family.",
+            "normal": "He is poor, but he has wealthy friends and relatives.",
+            "hard": "The area is full of wealthy families who live in large houses with swimming pools and private gardens."
+          },
+          "synonyms": [
+            "rich",
+            "well-off"
+          ],
+          "collocations": [
+            "wealthy family",
+            "extremely wealthy"
+          ]
+        },
+        {
+          "word": "keep fit",
+          "uzb": "sog‘lom bo‘lmoq, sog‘likni saqlamoq",
+          "emoji": "🏃",
+          "examples": {
+            "easy": "I swim to keep fit.",
+            "normal": "I swim twice a week to keep fit and stay healthy.",
+            "hard": "My grandmother keeps fit by walking for an hour every morning and doing exercises in the garden."
+          },
+          "synonyms": [
+            "stay in shape"
+          ],
+          "collocations": [
+            "keep fit class",
+            "try to keep fit"
+          ]
+        },
+        {
+          "word": "activity",
+          "uzb": "mashg‘ulot",
+          "emoji": "🚴",
+          "examples": {
+            "easy": "Swimming is my favourite activity.",
+            "normal": "At weekends I try to do outdoor activities like walking or cycling.",
+            "hard": "The summer camp offers a wide range of activities, from horse riding and climbing to painting and music."
+          },
+          "synonyms": [
+            "pastime",
+            "hobby"
+          ],
+          "collocations": [
+            "outdoor activities",
+            "physical activity"
+          ]
+        },
+        {
+          "word": "sail",
+          "uzb": "dengizda safar qilmoq, kemada suzmoq",
+          "emoji": "⛵",
+          "examples": {
+            "easy": "We sailed across the lake.",
+            "normal": "We are taking two months off to sail around the Caribbean.",
+            "hard": "They sailed across the Atlantic in a small boat, which took them nearly a month in difficult weather."
+          },
+          "synonyms": [],
+          "collocations": [
+            "sail across",
+            "go sailing"
+          ]
+        },
+        {
+          "word": "break a record",
+          "uzb": "rekordni yangilamoq",
+          "emoji": "🏆",
+          "examples": {
+            "easy": "He broke a record.",
+            "normal": "Usain Bolt broke the world record for the 100 metres in 2008.",
+            "hard": "The young swimmer broke the national record twice in one week, and everyone expects her to win a medal."
+          },
+          "synonyms": [],
+          "collocations": [
+            "break the world record",
+            "break a national record"
+          ]
+        },
+        {
+          "word": "slow down",
+          "uzb": "sekinlashmoq",
+          "emoji": "🐢",
+          "examples": {
+            "easy": "Please slow down!",
+            "normal": "Because of the ice on the road, we slowed down.",
+            "hard": "The doctor told him to slow down and work fewer hours, otherwise his health would get worse."
+          },
+          "synonyms": [
+            "decelerate"
+          ],
+          "collocations": [
+            "slow down the car",
+            "slow right down"
+          ]
+        },
+        {
+          "word": "lightning",
+          "uzb": "chaqmoq",
+          "emoji": "⚡",
+          "examples": {
+            "easy": "Lightning flashed in the sky.",
+            "normal": "The old tree in our garden was hit by lightning last summer.",
+            "hard": "During the storm, lightning struck the church tower, but fortunately nobody was inside at the time."
+          },
+          "synonyms": [],
+          "collocations": [
+            "flash of lightning",
+            "struck by lightning"
+          ]
+        },
+        {
+          "word": "race",
+          "uzb": "musobaqa",
+          "emoji": "🏁",
+          "examples": {
+            "easy": "He won the race.",
+            "normal": "He will be the youngest runner in the race on Saturday.",
+            "hard": "She trained every day for six months, but she had to drop out of the race because of a knee injury."
+          },
+          "synonyms": [
+            "competition"
+          ],
+          "collocations": [
+            "win a race",
+            "horse race"
+          ]
+        },
+        {
+          "word": "worth",
+          "uzb": "arziydigan",
+          "emoji": "👍",
+          "examples": {
+            "easy": "This book is worth reading.",
+            "normal": "The museum is definitely worth a visit if you are in Khiva.",
+            "hard": "It was a long and expensive journey, but the view from the top of the mountain made it worth it."
+          },
+          "synonyms": [],
+          "collocations": [
+            "worth reading",
+            "worth a visit"
+          ]
+        },
+        {
+          "word": "magnifying glass",
+          "uzb": "zarrabin (kattalashtirib ko‘rsatadi)",
+          "emoji": "🔎",
+          "examples": {
+            "easy": "He used a magnifying glass.",
+            "normal": "I looked at the old stamps with a magnifying glass.",
+            "hard": "My grandfather needs a magnifying glass to read the small print on medicine bottles these days."
+          },
+          "synonyms": [],
+          "collocations": [
+            "through a magnifying glass",
+            "use a magnifying glass"
+          ]
+        },
+        {
+          "word": "dime",
+          "uzb": "10 sentlik tanga",
+          "emoji": "🪙",
+          "examples": {
+            "easy": "I found a dime on the floor.",
+            "normal": "I have some old dimes in my coin collection.",
+            "hard": "In the United States, a dime is worth ten cents, but it is actually smaller than a one-cent coin."
+          },
+          "synonyms": [],
+          "collocations": [
+            "a dime a dozen",
+            "silver dime"
+          ]
+        },
+        {
+          "word": "lead to",
+          "uzb": "sabab bo‘lmoq",
+          "emoji": "➡️",
+          "examples": {
+            "easy": "Stress can lead to illness.",
+            "normal": "Sometimes people's hobbies lead to their future careers.",
+            "hard": "Eating too much sugar can lead to serious health problems, such as diabetes and heart disease."
+          },
+          "synonyms": [
+            "cause",
+            "result in"
+          ],
+          "collocations": [
+            "lead to problems",
+            "lead to success"
+          ]
+        },
+        {
+          "word": "whenever",
+          "uzb": "har qachon, qachon bo‘lsa ham",
+          "emoji": "🔁",
+          "examples": {
+            "easy": "Call me whenever you want.",
+            "normal": "Whenever I ask him for help, he never says no.",
+            "hard": "Whenever we visit my grandparents in the village, my grandmother cooks plov for the whole family."
+          },
+          "synonyms": [],
+          "collocations": [
+            "whenever possible",
+            "whenever you like"
+          ]
+        },
+        {
+          "word": "hit",
+          "uzb": "urmoq",
+          "emoji": "👊",
+          "examples": {
+            "easy": "He hit the ball hard.",
+            "normal": "He picked up the stick and hit the snake.",
+            "hard": "The car skidded on the ice and hit a tree, but luckily the driver was wearing a seatbelt."
+          },
+          "synonyms": [
+            "strike",
+            "punch"
+          ],
+          "collocations": [
+            "hit the ball",
+            "hit hard"
+          ]
+        },
+        {
+          "word": "grow up",
+          "uzb": "ulg‘aymoq",
+          "emoji": "🌱",
+          "examples": {
+            "easy": "I grew up in Fergana.",
+            "normal": "They grew up in a poor family in a small village.",
+            "hard": "Children who grow up with pets often learn to be responsible and caring from an early age."
+          },
+          "synonyms": [],
+          "collocations": [
+            "grow up in",
+            "grow up together"
+          ]
+        },
+        {
+          "word": "killer",
+          "uzb": "qotil",
+          "emoji": "🔪",
+          "examples": {
+            "easy": "The police caught the killer.",
+            "normal": "The police finally caught the killer after a long investigation.",
+            "hard": "The film is about a detective who spends twenty years trying to find the killer of a young woman."
+          },
+          "synonyms": [
+            "murderer"
+          ],
+          "collocations": [
+            "serial killer",
+            "catch the killer"
+          ]
+        },
+        {
+          "word": "ladle",
+          "uzb": "sho‘rva qoshiq (kattakon qoshiq)",
+          "emoji": "🥄",
+          "examples": {
+            "easy": "Pass me the ladle, please.",
+            "normal": "She used a ladle to serve the hot soup.",
+            "hard": "My grandmother always uses the same old wooden ladle when she serves shurpa to the whole family."
+          },
+          "synonyms": [],
+          "collocations": [
+            "soup ladle",
+            "wooden ladle"
+          ]
+        },
+        {
+          "word": "peacock",
+          "uzb": "tovus",
+          "emoji": "🦚",
+          "examples": {
+            "easy": "The peacock is beautiful.",
+            "normal": "The peacock spread its colourful feathers in the garden.",
+            "hard": "Visitors to the palace gardens always stop to take photos when the peacocks open their tails."
+          },
+          "synonyms": [],
+          "collocations": [
+            "peacock feather",
+            "proud as a peacock"
+          ]
+        },
+        {
+          "word": "tangerine",
+          "uzb": "mandarin",
+          "emoji": "🍊",
+          "examples": {
+            "easy": "I ate a tangerine.",
+            "normal": "I had a sweet tangerine with my lunch today.",
+            "hard": "In winter the markets are full of tangerines, and the whole house smells of them at New Year."
+          },
+          "synonyms": [
+            "mandarin"
+          ],
+          "collocations": [
+            "peel a tangerine",
+            "sweet tangerine"
+          ]
+        },
+        {
+          "word": "desktop",
+          "uzb": "stol kompyuteri / ish stoli",
+          "emoji": "🖥️",
+          "examples": {
+            "easy": "I have a new desktop.",
+            "normal": "I keep all my work files in a folder on my desktop.",
+            "hard": "He prefers working on a desktop rather than a laptop, because the screen is bigger and the keyboard is more comfortable."
+          },
+          "synonyms": [],
+          "collocations": [
+            "desktop computer",
+            "desktop icon"
+          ]
+        },
+        {
+          "word": "chain",
+          "uzb": "zanjir",
+          "emoji": "⛓️",
+          "examples": {
+            "easy": "The dog is on a chain.",
+            "normal": "He wore a gold chain around his neck.",
+            "hard": "She locked her bicycle to the railings with a heavy chain, but someone still managed to steal it."
+          },
+          "synonyms": [],
+          "collocations": [
+            "gold chain",
+            "bicycle chain"
+          ]
+        },
+        {
+          "word": "earring",
+          "uzb": "sirga",
+          "emoji": "💎",
+          "examples": {
+            "easy": "She lost an earring.",
+            "normal": "She wore a pair of silver earrings to the party.",
+            "hard": "Her grandmother gave her a pair of gold earrings on her wedding day, and she has kept them ever since."
+          },
+          "synonyms": [],
+          "collocations": [
+            "pair of earrings",
+            "gold earrings"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-elementary-lesson-29",
+      "lesson": 29,
+      "name": "Lesson 29 - Documents, goals and work",
+      "source": "Main Lesson (MT) p. 31",
+      "words": [
+        {
+          "word": "give a try",
+          "uzb": "urinib ko‘rmoq",
+          "emoji": "🤞",
+          "examples": {
+            "easy": "Give the new app a try.",
+            "normal": "I'm not sure I'll like yoga, but I'll give it a try.",
+            "hard": "If the first recipe doesn't work, don't give up; give a different one a try next weekend."
+          },
+          "synonyms": [
+            "attempt",
+            "have a go"
+          ],
+          "collocations": [
+            "give it a try",
+            "worth a try"
+          ]
+        },
+        {
+          "word": "guest",
+          "uzb": "mehmon",
+          "emoji": "🧳",
+          "examples": {
+            "easy": "We have a guest tonight.",
+            "normal": "Our guests are arriving at seven, so let's start cooking now.",
+            "hard": "Every guest at the hotel receives a free breakfast and a map of the old town."
+          },
+          "synonyms": [
+            "visitor"
+          ],
+          "collocations": [
+            "hotel guest",
+            "special guest"
+          ]
+        },
+        {
+          "word": "sign",
+          "uzb": "imzo qo‘ymoq",
+          "emoji": "✍️",
+          "examples": {
+            "easy": "Please sign here.",
+            "normal": "You need to sign the form before you hand it in.",
+            "hard": "The manager refused to sign the contract until the lawyers had checked every page."
+          },
+          "synonyms": [],
+          "collocations": [
+            "sign a contract",
+            "sign your name"
+          ]
+        },
+        {
+          "word": "registration",
+          "uzb": "ro‘yxatga olish",
+          "emoji": "📋",
+          "examples": {
+            "easy": "Registration starts at nine.",
+            "normal": "Online registration for the conference closes next Friday.",
+            "hard": "Late registration is possible, but students who miss the deadline have to pay an extra fee."
+          },
+          "synonyms": [
+            "enrolment"
+          ],
+          "collocations": [
+            "online registration",
+            "registration form"
+          ]
+        },
+        {
+          "word": "credit card",
+          "uzb": "plastik kartochka",
+          "emoji": "💳",
+          "examples": {
+            "easy": "Can I pay by credit card?",
+            "normal": "I left my credit card at home, so I paid in cash.",
+            "hard": "If you lose your credit card, call the bank immediately so that nobody else can use it."
+          },
+          "synonyms": [],
+          "collocations": [
+            "pay by credit card",
+            "credit card details"
+          ]
+        },
+        {
+          "word": "be on business",
+          "uzb": "biznes safarida bo‘lmoq",
+          "emoji": "💼",
+          "examples": {
+            "easy": "My father is on business.",
+            "normal": "I'm in London on business, so I don't have much free time.",
+            "hard": "She is often on business abroad, which means her children spend a lot of time with their grandparents."
+          },
+          "synonyms": [],
+          "collocations": [
+            "be away on business",
+            "travel on business"
+          ]
+        },
+        {
+          "word": "reason",
+          "uzb": "sabab",
+          "emoji": "🤔",
+          "examples": {
+            "easy": "What is the reason?",
+            "normal": "There is no reason to worry about the exam.",
+            "hard": "The main reason she left the company was that she wanted to start her own business."
+          },
+          "synonyms": [
+            "cause"
+          ],
+          "collocations": [
+            "good reason",
+            "for some reason"
+          ]
+        },
+        {
+          "word": "signature",
+          "uzb": "dastxat, imzo",
+          "emoji": "🖊️",
+          "examples": {
+            "easy": "Is this your signature?",
+            "normal": "The bank won't accept the cheque without your signature.",
+            "hard": "The police discovered that the signature on the document had been copied from an old letter."
+          },
+          "synonyms": [],
+          "collocations": [
+            "add your signature",
+            "forged signature"
+          ]
+        },
+        {
+          "word": "sequence",
+          "uzb": "ketma-ketlik",
+          "emoji": "🔢",
+          "examples": {
+            "easy": "Put the pictures in sequence.",
+            "normal": "Words like first, then and finally show the sequence of events.",
+            "hard": "The detective tried to work out the exact sequence of events that led to the accident."
+          },
+          "synonyms": [
+            "order",
+            "series"
+          ],
+          "collocations": [
+            "sequence of events",
+            "in sequence"
+          ]
+        },
+        {
+          "word": "set a goal",
+          "uzb": "maqsad qo‘ymoq",
+          "emoji": "🏆",
+          "examples": {
+            "easy": "I set a goal every year.",
+            "normal": "This year I set a goal to read twenty books.",
+            "hard": "Coaches say it is better to set a goal that is challenging but realistic than one you can never reach."
+          },
+          "synonyms": [],
+          "collocations": [
+            "set a realistic goal",
+            "set a long-term goal"
+          ]
+        },
+        {
+          "word": "cover",
+          "uzb": "qoplamoq, berkitmoq",
+          "emoji": "🙈",
+          "examples": {
+            "easy": "Cover the pot with a lid.",
+            "normal": "She covered her eyes during the scary part of the film.",
+            "hard": "Before painting the walls, we covered all the furniture with old sheets to protect it."
+          },
+          "synonyms": [],
+          "collocations": [
+            "cover your mouth",
+            "cover with a blanket"
+          ]
+        },
+        {
+          "word": "app",
+          "uzb": "kompyuter yoki telefondagi dastur",
+          "emoji": "📱",
+          "examples": {
+            "easy": "I use a weather app.",
+            "normal": "This app helps me learn ten new English words every day.",
+            "hard": "Many banks now have an app that lets you pay bills and check your balance from your phone."
+          },
+          "synonyms": [
+            "application"
+          ],
+          "collocations": [
+            "download an app",
+            "mobile app"
+          ]
+        },
+        {
+          "word": "gadget",
+          "uzb": "gadjet, uskuna, moslama",
+          "emoji": "🔌",
+          "examples": {
+            "easy": "He loves new gadgets.",
+            "normal": "My brother spends all his money on the latest gadgets.",
+            "hard": "Smart watches are popular gadgets, but many people stop wearing them after a few months."
+          },
+          "synonyms": [
+            "device"
+          ],
+          "collocations": [
+            "kitchen gadget",
+            "electronic gadget"
+          ]
+        },
+        {
+          "word": "step",
+          "uzb": "qadam tashlamoq, yurmoq",
+          "emoji": "👣",
+          "examples": {
+            "easy": "Step inside, please.",
+            "normal": "Be careful not to step on the wet floor.",
+            "hard": "As soon as he stepped off the plane, he felt the hot, humid air of the tropics."
+          },
+          "synonyms": [
+            "walk"
+          ],
+          "collocations": [
+            "step outside",
+            "step forward"
+          ]
+        },
+        {
+          "word": "target",
+          "uzb": "mo‘ljal; maqsad",
+          "emoji": "🎯",
+          "examples": {
+            "easy": "My target is band seven.",
+            "normal": "The team reached its sales target two weeks early.",
+            "hard": "If we want to meet our target by December, everyone will have to work a little harder."
+          },
+          "synonyms": [
+            "goal",
+            "aim"
+          ],
+          "collocations": [
+            "meet a target",
+            "sales target"
+          ]
+        },
+        {
+          "word": "deep",
+          "uzb": "chuqur",
+          "emoji": "🌊",
+          "examples": {
+            "easy": "The lake is very deep.",
+            "normal": "Don't swim here, the water is too deep for children.",
+            "hard": "The divers went deeper and deeper until they could hardly see anything in the dark water."
+          },
+          "synonyms": [],
+          "collocations": [
+            "deep water",
+            "deep end"
+          ]
+        },
+        {
+          "word": "gap",
+          "uzb": "bo‘sh joy, bo‘shliq",
+          "emoji": "🕳️",
+          "examples": {
+            "easy": "Fill in the gaps.",
+            "normal": "There is a small gap between the door and the floor.",
+            "hard": "The cat squeezed through a narrow gap in the fence and disappeared into the neighbour's garden."
+          },
+          "synonyms": [
+            "space"
+          ],
+          "collocations": [
+            "fill in the gaps",
+            "narrow gap"
+          ]
+        },
+        {
+          "word": "mystery",
+          "uzb": "sir, sinoat",
+          "emoji": "🕵️",
+          "examples": {
+            "easy": "It is still a mystery.",
+            "normal": "Nobody knows where the money went; it's a complete mystery.",
+            "hard": "How the ancient builders moved such huge stones remains one of the great mysteries of history."
+          },
+          "synonyms": [],
+          "collocations": [
+            "remain a mystery",
+            "solve a mystery"
+          ]
+        },
+        {
+          "word": "messy",
+          "uzb": "tartibsiz",
+          "emoji": "🧦",
+          "examples": {
+            "easy": "His desk is always messy.",
+            "normal": "My son's bedroom is so messy that I can't find the floor.",
+            "hard": "Working in a messy kitchen is stressful, so I always clean up as I cook."
+          },
+          "synonyms": [
+            "untidy"
+          ],
+          "collocations": [
+            "messy room",
+            "messy hair"
+          ]
+        },
+        {
+          "word": "colleague",
+          "uzb": "hamkasb",
+          "emoji": "🧑‍💼",
+          "examples": {
+            "easy": "She is my colleague.",
+            "normal": "I usually have lunch with my colleagues from the office.",
+            "hard": "When I was ill, my colleagues took over my work so that nothing important was delayed."
+          },
+          "synonyms": [
+            "co-worker"
+          ],
+          "collocations": [
+            "work colleague",
+            "former colleague"
+          ]
+        },
+        {
+          "word": "neat",
+          "uzb": "toza, ozoda",
+          "emoji": "🧺",
+          "examples": {
+            "easy": "Her room is always neat.",
+            "normal": "He keeps his notes neat so he can find things quickly.",
+            "hard": "Although she was in a hurry, her handwriting was neat and easy for everyone to read."
+          },
+          "synonyms": [
+            "tidy"
+          ],
+          "collocations": [
+            "neat and tidy",
+            "neat handwriting"
+          ]
+        },
+        {
+          "word": "spread",
+          "uzb": "yoymoq, tarqalmoq",
+          "emoji": "🗺️",
+          "examples": {
+            "easy": "Spread the map on the table.",
+            "normal": "We spread a blanket on the grass and had a picnic.",
+            "hard": "The children spread out large sheets of paper on the floor and started painting."
+          },
+          "synonyms": [],
+          "collocations": [
+            "spread out",
+            "spread butter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-elementary-lesson-30",
+      "lesson": 30,
+      "name": "Lesson 30 - Home, work and everyday things",
+      "source": "Main Lesson (MT) p. 37",
+      "words": [
+        {
+          "word": "rob",
+          "uzb": "o‘g‘irlamoq, talamoq",
+          "emoji": "🦹",
+          "examples": {
+            "easy": "Two men robbed the bank.",
+            "normal": "Someone robbed the shop on our street last night.",
+            "hard": "The gang had been planning to rob the museum for months, but the police arrested them the day before."
+          },
+          "synonyms": [
+            "steal from"
+          ],
+          "collocations": [
+            "rob a bank",
+            "rob someone of something"
+          ]
+        },
+        {
+          "word": "engine",
+          "uzb": "mashina motori, motor",
+          "emoji": "⚙️",
+          "examples": {
+            "easy": "The engine won't start.",
+            "normal": "My car has been having engine trouble for weeks.",
+            "hard": "The mechanic said the engine was too old to repair, so it would be cheaper to buy a new car."
+          },
+          "synonyms": [
+            "motor"
+          ],
+          "collocations": [
+            "start the engine",
+            "engine trouble"
+          ]
+        },
+        {
+          "word": "appointment",
+          "uzb": "uchrashuv",
+          "emoji": "📅",
+          "examples": {
+            "easy": "I have a doctor's appointment.",
+            "normal": "Could I make an appointment with the manager for Monday?",
+            "hard": "If you can't come to your appointment, please call at least a day in advance to cancel it."
+          },
+          "synonyms": [],
+          "collocations": [
+            "make an appointment",
+            "dental appointment"
+          ]
+        },
+        {
+          "word": "fireplace",
+          "uzb": "kamin",
+          "emoji": "🔥",
+          "examples": {
+            "easy": "We sat by the fireplace.",
+            "normal": "In winter, the whole family gathers around the fireplace.",
+            "hard": "The old house still has its original stone fireplace, which keeps the living room warm on cold evenings."
+          },
+          "synonyms": [],
+          "collocations": [
+            "sit by the fireplace",
+            "stone fireplace"
+          ]
+        },
+        {
+          "word": "iron",
+          "uzb": "temir",
+          "emoji": "🔩",
+          "examples": {
+            "easy": "The gate is made of iron.",
+            "normal": "Red meat and spinach are good sources of iron.",
+            "hard": "Doctors often tell people who feel tired all the time to check whether they are getting enough iron."
+          },
+          "synonyms": [],
+          "collocations": [
+            "iron gate",
+            "rich in iron"
+          ]
+        },
+        {
+          "word": "splash",
+          "uzb": "shovullamoq, chalpillamoq",
+          "emoji": "💦",
+          "examples": {
+            "easy": "The kids splashed in the pool.",
+            "normal": "Water splashed all over the floor when he dropped the bucket.",
+            "hard": "A passing bus drove through a puddle and splashed muddy water all over my new trousers."
+          },
+          "synonyms": [],
+          "collocations": [
+            "splash water",
+            "splash around"
+          ]
+        },
+        {
+          "word": "surface",
+          "uzb": "yuzaga chiqmoq",
+          "emoji": "🐋",
+          "examples": {
+            "easy": "The whale surfaced near our boat.",
+            "normal": "The diver surfaced after two minutes under the water.",
+            "hard": "Old problems often surface again when a team is under pressure and people are tired."
+          },
+          "synonyms": [
+            "emerge",
+            "come up"
+          ],
+          "collocations": [
+            "surface again",
+            "problems surface"
+          ]
+        },
+        {
+          "word": "revised",
+          "uzb": "qaytadan ko‘rib chiqilib o‘zgartirilgan",
+          "emoji": "📝",
+          "examples": {
+            "easy": "Here is the revised plan.",
+            "normal": "The teacher gave us a revised timetable for the exams.",
+            "hard": "After many complaints from customers, the company published a revised version of its rules on refunds."
+          },
+          "synonyms": [
+            "updated",
+            "amended"
+          ],
+          "collocations": [
+            "revised version",
+            "revised edition"
+          ]
+        },
+        {
+          "word": "obvious",
+          "uzb": "ochiq-oydin, aniq, ravshan",
+          "emoji": "💡",
+          "examples": {
+            "easy": "The answer is obvious.",
+            "normal": "It was obvious that she was tired after the long trip.",
+            "hard": "For reasons that weren't obvious at first, the new system made the work slower rather than faster."
+          },
+          "synonyms": [
+            "clear",
+            "evident"
+          ],
+          "collocations": [
+            "obvious reason",
+            "quite obvious"
+          ]
+        },
+        {
+          "word": "laundry",
+          "uzb": "kir",
+          "emoji": "🧺",
+          "examples": {
+            "easy": "I do the laundry on Sundays.",
+            "normal": "There's a pile of laundry waiting to be ironed.",
+            "hard": "Since the washing machine broke, we've been taking our laundry to the launderette on the corner."
+          },
+          "synonyms": [
+            "washing"
+          ],
+          "collocations": [
+            "do the laundry",
+            "laundry basket"
+          ]
+        },
+        {
+          "word": "carry",
+          "uzb": "olib yurmoq, olib bormoq",
+          "emoji": "🛍️",
+          "examples": {
+            "easy": "Can you carry this bag?",
+            "normal": "I never carry much cash with me these days.",
+            "hard": "The nurse carried the sleeping child upstairs and put him gently into bed."
+          },
+          "synonyms": [],
+          "collocations": [
+            "carry a bag",
+            "carry cash"
+          ]
+        },
+        {
+          "word": "familiar",
+          "uzb": "tanish (biror narsa haqida maʼlumoti bor)",
+          "emoji": "👋",
+          "examples": {
+            "easy": "Your face looks familiar.",
+            "normal": "Are you familiar with this part of the city?",
+            "hard": "When I returned to my hometown after twenty years, very few streets still looked familiar."
+          },
+          "synonyms": [],
+          "collocations": [
+            "look familiar",
+            "familiar with"
+          ]
+        },
+        {
+          "word": "basement",
+          "uzb": "yerto‘la, padval",
+          "emoji": "🏚️",
+          "examples": {
+            "easy": "We keep old boxes in the basement.",
+            "normal": "The washing machine is down in the basement.",
+            "hard": "After the heavy rain, the basement flooded and we had to move everything upstairs."
+          },
+          "synonyms": [
+            "cellar"
+          ],
+          "collocations": [
+            "basement flat",
+            "in the basement"
+          ]
+        },
+        {
+          "word": "research",
+          "uzb": "tadqiqot, izlanish",
+          "emoji": "🔬",
+          "examples": {
+            "easy": "She does research on climate.",
+            "normal": "Recent research shows that sleep is important for memory.",
+            "hard": "Before buying a car, it's a good idea to do some research and compare prices online."
+          },
+          "synonyms": [
+            "study"
+          ],
+          "collocations": [
+            "do research",
+            "research project"
+          ]
+        },
+        {
+          "word": "bucket",
+          "uzb": "paqir, chelak",
+          "emoji": "🪣",
+          "examples": {
+            "easy": "Fill the bucket with water.",
+            "normal": "He washed the car with a bucket and an old sponge.",
+            "hard": "People formed a line and passed buckets of water from hand to hand to put out the fire."
+          },
+          "synonyms": [
+            "pail"
+          ],
+          "collocations": [
+            "bucket of water",
+            "plastic bucket"
+          ]
+        },
+        {
+          "word": "true",
+          "uzb": "rost, haqiqat, to‘g‘ri",
+          "emoji": "✅",
+          "examples": {
+            "easy": "Is that story true?",
+            "normal": "Is it true that you're moving to Samarkand next month?",
+            "hard": "It's true that the course is expensive, but most students say it was worth every penny."
+          },
+          "synonyms": [
+            "correct",
+            "right"
+          ],
+          "collocations": [
+            "come true",
+            "true story"
+          ]
+        },
+        {
+          "word": "screen",
+          "uzb": "ekran",
+          "emoji": "🖥️",
+          "examples": {
+            "easy": "The screen is too dark.",
+            "normal": "I spend too many hours looking at a computer screen.",
+            "hard": "Doctors recommend taking a short break from the screen every twenty minutes to rest your eyes."
+          },
+          "synonyms": [
+            "display"
+          ],
+          "collocations": [
+            "computer screen",
+            "touch screen"
+          ]
+        },
+        {
+          "word": "belt",
+          "uzb": "kamar, remen",
+          "emoji": "👖",
+          "examples": {
+            "easy": "He wore a black belt.",
+            "normal": "These trousers are too big, so I need a belt.",
+            "hard": "Please keep your seat belt fastened while the plane is moving or the sign is on."
+          },
+          "synonyms": [],
+          "collocations": [
+            "leather belt",
+            "seat belt"
+          ]
+        },
+        {
+          "word": "employee",
+          "uzb": "ishchi, xizmatchi",
+          "emoji": "👷",
+          "examples": {
+            "easy": "He is a new employee.",
+            "normal": "The company has more than five hundred employees.",
+            "hard": "All employees must complete the safety training before they are allowed to use the machines."
+          },
+          "synonyms": [
+            "worker",
+            "member of staff"
+          ],
+          "collocations": [
+            "full-time employee",
+            "new employee"
+          ]
+        },
+        {
+          "word": "sibling",
+          "uzb": "aka-uka, opa-singil",
+          "emoji": "👫",
+          "examples": {
+            "easy": "Do you have any siblings?",
+            "normal": "I have three siblings: two brothers and a sister.",
+            "hard": "Growing up with several siblings taught her how to share and how to solve arguments quickly."
+          },
+          "synonyms": [],
+          "collocations": [
+            "older sibling",
+            "younger sibling"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-elementary-lesson-31",
+      "lesson": 31,
+      "name": "Lesson 31 - Holidays, homes and burglars",
+      "source": "Main Lesson (MT) p. 43",
+      "words": [
+        {
+          "word": "knock",
+          "uzb": "taqillatmoq, dukillatmoq",
+          "emoji": "🚪",
+          "examples": {
+            "easy": "Someone is knocking on the door.",
+            "normal": "Please knock before you come into my office.",
+            "hard": "He knocked three times, waited for a minute, and then left a note under the door."
+          },
+          "synonyms": [],
+          "collocations": [
+            "knock on the door",
+            "knock loudly"
+          ]
+        },
+        {
+          "word": "burglar",
+          "uzb": "o‘g‘ri (uy o‘g‘risi)",
+          "emoji": "🦹‍♂️",
+          "examples": {
+            "easy": "A burglar broke into our house.",
+            "normal": "The burglar got in through an open kitchen window.",
+            "hard": "The police caught the burglar because a neighbour noticed a stranger carrying a television at midnight."
+          },
+          "synonyms": [
+            "thief",
+            "intruder"
+          ],
+          "collocations": [
+            "burglar alarm",
+            "catch a burglar"
+          ]
+        },
+        {
+          "word": "drop",
+          "uzb": "tushirib yubormoq, tushib ketmoq",
+          "emoji": "🫳",
+          "examples": {
+            "easy": "Don't drop the glass!",
+            "normal": "I dropped my phone and now the screen is broken.",
+            "hard": "She was so surprised by the news that she dropped her keys and didn't even notice."
+          },
+          "synonyms": [],
+          "collocations": [
+            "drop the glass",
+            "drop something on the floor"
+          ]
+        },
+        {
+          "word": "honeymoon",
+          "uzb": "asal oyi",
+          "emoji": "💑",
+          "examples": {
+            "easy": "They went on honeymoon to Bali.",
+            "normal": "We spent our honeymoon in a small hotel by the sea.",
+            "hard": "Many couples save for months so that they can spend their honeymoon somewhere really special."
+          },
+          "synonyms": [],
+          "collocations": [
+            "go on honeymoon",
+            "honeymoon suite"
+          ]
+        },
+        {
+          "word": "while",
+          "uzb": "ko‘p muddat, oz muddat",
+          "emoji": "⏳",
+          "examples": {
+            "easy": "Wait here for a while.",
+            "normal": "I haven't seen my cousin for quite a while.",
+            "hard": "After a while, the noise outside stopped and the baby finally fell asleep."
+          },
+          "synonyms": [],
+          "collocations": [
+            "for a while",
+            "after a while"
+          ]
+        },
+        {
+          "word": "purse",
+          "uzb": "hamyon, kashalok",
+          "emoji": "👛",
+          "examples": {
+            "easy": "My purse is in my bag.",
+            "normal": "She took a few coins out of her purse to pay for the bus.",
+            "hard": "When she got home, she realised her purse had been stolen from her handbag on the crowded train."
+          },
+          "synonyms": [],
+          "collocations": [
+            "leather purse",
+            "open your purse"
+          ]
+        },
+        {
+          "word": "middle",
+          "uzb": "o‘rtada",
+          "emoji": "🎯",
+          "examples": {
+            "easy": "I'm the one in the middle.",
+            "normal": "There is a big old tree in the middle of the garden.",
+            "hard": "The phone rang in the middle of the night, and everyone in the house woke up in a panic."
+          },
+          "synonyms": [
+            "centre"
+          ],
+          "collocations": [
+            "in the middle of",
+            "middle of the road"
+          ]
+        },
+        {
+          "word": "popular",
+          "uzb": "keng tarqalgan, mashhur",
+          "emoji": "👍",
+          "examples": {
+            "easy": "Football is very popular here.",
+            "normal": "This café is popular with students because it's cheap.",
+            "hard": "Although the restaurant isn't in the centre of town, it has become popular thanks to its excellent reviews."
+          },
+          "synonyms": [
+            "well-liked"
+          ],
+          "collocations": [
+            "very popular",
+            "popular with"
+          ]
+        },
+        {
+          "word": "lift",
+          "uzb": "ko‘tarmoq, ko‘tarilmoq",
+          "emoji": "🏋️",
+          "examples": {
+            "easy": "Can you lift this box?",
+            "normal": "He lifted his little daughter onto his shoulders.",
+            "hard": "The bag was so heavy that it took two of us to lift it into the back of the car."
+          },
+          "synonyms": [
+            "raise",
+            "pick up"
+          ],
+          "collocations": [
+            "lift a box",
+            "lift weights"
+          ]
+        },
+        {
+          "word": "famous",
+          "uzb": "mashhur, nomdor",
+          "emoji": "🌟",
+          "examples": {
+            "easy": "She is a famous singer.",
+            "normal": "Samarkand is famous for its beautiful old buildings.",
+            "hard": "He became famous almost overnight after one of his videos was watched by millions of people."
+          },
+          "synonyms": [
+            "well-known"
+          ],
+          "collocations": [
+            "famous for",
+            "world-famous"
+          ]
+        },
+        {
+          "word": "apartment",
+          "uzb": "kvartira, ko‘p qavatli uylardagi xonadon",
+          "emoji": "🏢",
+          "examples": {
+            "easy": "We live in a small apartment.",
+            "normal": "I share a two-bedroom apartment with my sister.",
+            "hard": "The apartment is on the fifth floor, and unfortunately the building doesn't have a lift."
+          },
+          "synonyms": [
+            "flat"
+          ],
+          "collocations": [
+            "rent an apartment",
+            "two-bedroom apartment"
+          ]
+        },
+        {
+          "word": "sightseeing",
+          "uzb": "diqqatga sazovor joylarni tomosha qilish",
+          "emoji": "📸",
+          "examples": {
+            "easy": "We went sightseeing in Bukhara.",
+            "normal": "Did you have time for any sightseeing during your trip?",
+            "hard": "We spent the morning sightseeing in the old city and the afternoon relaxing by the hotel pool."
+          },
+          "synonyms": [],
+          "collocations": [
+            "go sightseeing",
+            "sightseeing tour"
+          ]
+        },
+        {
+          "word": "trek",
+          "uzb": "uzoq sayohat/yo‘l",
+          "emoji": "🥾",
+          "examples": {
+            "easy": "It was a long trek.",
+            "normal": "The trek to the mountain village took us six hours.",
+            "hard": "After a three-day trek through the mountains, we were tired but happy to see the lake at last."
+          },
+          "synonyms": [
+            "hike",
+            "journey"
+          ],
+          "collocations": [
+            "mountain trek",
+            "a long trek"
+          ]
+        },
+        {
+          "word": "capital",
+          "uzb": "poytaxt",
+          "emoji": "🏛️",
+          "examples": {
+            "easy": "Tashkent is the capital.",
+            "normal": "Madrid is the capital of Spain.",
+            "hard": "The capital has grown so quickly that many people now live in new districts far from the centre."
+          },
+          "synonyms": [],
+          "collocations": [
+            "capital city",
+            "capital of"
+          ]
+        },
+        {
+          "word": "ruin",
+          "uzb": "barbod qilmoq",
+          "emoji": "🌧️",
+          "examples": {
+            "easy": "The rain ruined our picnic.",
+            "normal": "Don't let one bad day ruin your whole holiday.",
+            "hard": "The scandal ruined his career, and he never worked in politics again."
+          },
+          "synonyms": [
+            "spoil",
+            "wreck"
+          ],
+          "collocations": [
+            "ruin a trip",
+            "ruin someone's life"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-elementary-lesson-32",
+      "lesson": 32,
+      "name": "Lesson 32 - Money, sleep and opinions",
+      "source": "Main Lesson (MT) p. 49",
+      "words": [
+        {
+          "word": "just",
+          "uzb": "aynan, ayni, rosa",
+          "emoji": "👌",
+          "examples": {
+            "easy": "This jacket is just my size.",
+            "normal": "That's just what I needed after a long day.",
+            "hard": "The hotel was just as beautiful as the photos, and the staff were incredibly friendly."
+          },
+          "synonyms": [
+            "exactly"
+          ],
+          "collocations": [
+            "just right",
+            "just what I wanted"
+          ]
+        },
+        {
+          "word": "banknote",
+          "uzb": "banknot, qog‘oz pul",
+          "emoji": "💵",
+          "examples": {
+            "easy": "He gave me a new banknote.",
+            "normal": "The cashier checked the banknote to make sure it was real.",
+            "hard": "The police found thousands of banknotes hidden inside an old suitcase in the basement."
+          },
+          "synonyms": [
+            "note",
+            "bill"
+          ],
+          "collocations": [
+            "fake banknote",
+            "new banknote"
+          ]
+        },
+        {
+          "word": "groggy",
+          "uzb": "lanj, kuchsiz, holsiz",
+          "emoji": "🥱",
+          "examples": {
+            "easy": "I feel groggy this morning.",
+            "normal": "The medicine made me feel groggy all afternoon.",
+            "hard": "After the long night flight, she felt groggy and couldn't concentrate during the morning meeting."
+          },
+          "synonyms": [
+            "drowsy",
+            "sluggish"
+          ],
+          "collocations": [
+            "feel groggy",
+            "groggy after"
+          ]
+        },
+        {
+          "word": "cashier",
+          "uzb": "kassir, kassachi",
+          "emoji": "🧾",
+          "examples": {
+            "easy": "Pay the cashier, please.",
+            "normal": "The cashier gave me the wrong change by mistake.",
+            "hard": "The supermarket has replaced some cashiers with self-service machines, but many customers still prefer a person."
+          },
+          "synonyms": [],
+          "collocations": [
+            "bank cashier",
+            "supermarket cashier"
+          ]
+        },
+        {
+          "word": "wallet",
+          "uzb": "hamyon, karmon",
+          "emoji": "👛",
+          "examples": {
+            "easy": "I lost my wallet.",
+            "normal": "He took his credit card out of his wallet and paid.",
+            "hard": "Someone found my wallet on the bus and handed it in, with all the cards and money still inside."
+          },
+          "synonyms": [],
+          "collocations": [
+            "leather wallet",
+            "lose your wallet"
+          ]
+        },
+        {
+          "word": "pronunciation",
+          "uzb": "talaffuz",
+          "emoji": "🗣️",
+          "examples": {
+            "easy": "Her pronunciation is very good.",
+            "normal": "Listening to podcasts can really help your pronunciation.",
+            "hard": "Some English words have two possible pronunciations, depending on whether the speaker is British or American."
+          },
+          "synonyms": [],
+          "collocations": [
+            "correct pronunciation",
+            "pronunciation practice"
+          ]
+        },
+        {
+          "word": "anorak",
+          "uzb": "kapyushonli kalta kurtka",
+          "emoji": "🧥",
+          "examples": {
+            "easy": "Take your anorak, it might rain.",
+            "normal": "He put on his anorak and went out into the wind.",
+            "hard": "My mum always made me take my anorak to school, even when the sky was perfectly clear."
+          },
+          "synonyms": [
+            "parka"
+          ],
+          "collocations": [
+            "waterproof anorak",
+            "put on an anorak"
+          ]
+        },
+        {
+          "word": "crayon",
+          "uzb": "rangli qalam",
+          "emoji": "🖍️",
+          "examples": {
+            "easy": "The child drew with crayons.",
+            "normal": "My daughter coloured the picture with red and yellow crayons.",
+            "hard": "The restaurant gives every child a box of crayons and a paper menu to draw on while they wait."
+          },
+          "synonyms": [],
+          "collocations": [
+            "box of crayons",
+            "coloured crayons"
+          ]
+        },
+        {
+          "word": "nightmare",
+          "uzb": "yomon tush, alahsirash",
+          "emoji": "😱",
+          "examples": {
+            "easy": "I had a nightmare last night.",
+            "normal": "The child woke up crying after a terrible nightmare.",
+            "hard": "Ever since the accident, he has had nightmares about driving on icy roads at night."
+          },
+          "synonyms": [
+            "bad dream"
+          ],
+          "collocations": [
+            "have a nightmare",
+            "terrible nightmare"
+          ]
+        },
+        {
+          "word": "respond",
+          "uzb": "javob bermoq",
+          "emoji": "↩️",
+          "examples": {
+            "easy": "She didn't respond to my email.",
+            "normal": "Please respond to the invitation by Friday.",
+            "hard": "The company responded quickly to the complaints and offered every customer a full refund."
+          },
+          "synonyms": [
+            "answer",
+            "reply"
+          ],
+          "collocations": [
+            "respond to a letter",
+            "respond quickly"
+          ]
+        },
+        {
+          "word": "reply",
+          "uzb": "javob bermoq, javob qaytarmoq",
+          "emoji": "💬",
+          "examples": {
+            "easy": "He replied with a smile.",
+            "normal": "I wrote to her last week, but she hasn't replied yet.",
+            "hard": "When the journalist asked about his plans, the minister replied that he had nothing to add."
+          },
+          "synonyms": [
+            "answer",
+            "respond"
+          ],
+          "collocations": [
+            "reply to an email",
+            "reply immediately"
+          ]
+        },
+        {
+          "word": "opinion",
+          "uzb": "fikr, nuqtai nazar",
+          "emoji": "🧠",
+          "examples": {
+            "easy": "What's your opinion?",
+            "normal": "In my opinion, the film was too long.",
+            "hard": "Everyone in the meeting had a different opinion, so it took hours to reach a decision."
+          },
+          "synonyms": [
+            "view",
+            "point of view"
+          ],
+          "collocations": [
+            "in my opinion",
+            "express an opinion"
+          ]
+        },
+        {
+          "word": "contain",
+          "uzb": "o‘z ichiga olmoq, tarkibida bo‘lmoq",
+          "emoji": "🫙",
+          "examples": {
+            "easy": "This drink contains sugar.",
+            "normal": "Try to avoid foods that contain a lot of fat.",
+            "hard": "The box contained old letters and photographs that nobody in the family had seen for years."
+          },
+          "synonyms": [
+            "include",
+            "hold"
+          ],
+          "collocations": [
+            "contain sugar",
+            "contain information"
+          ]
+        },
+        {
+          "word": "replica",
+          "uzb": "ko‘chirma nusxa, o‘xshatma",
+          "emoji": "🗿",
+          "examples": {
+            "easy": "The statue in the hall is only a replica.",
+            "normal": "The museum sells small replicas of famous statues.",
+            "hard": "The ship in the harbour is an exact replica of the one that sailed around the world four centuries ago."
+          },
+          "synonyms": [
+            "copy",
+            "model"
+          ],
+          "collocations": [
+            "exact replica",
+            "full-size replica"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-elementary-lesson-33",
+      "lesson": 33,
+      "name": "Lesson 33 - Culture, abilities and holidays",
+      "source": "Main Lesson (MT) p. 54",
+      "words": [
+        {
+          "word": "forget",
+          "uzb": "esdan chiqarmoq, unutib qo‘ymoq",
+          "emoji": "🤦",
+          "examples": {
+            "easy": "Don't forget your keys.",
+            "normal": "I always forget my colleagues' birthdays, so I set reminders now.",
+            "hard": "She had completely forgotten about the meeting until her manager called to ask where she was."
+          },
+          "synonyms": [
+            "overlook"
+          ],
+          "collocations": [
+            "forget to do something",
+            "completely forget"
+          ]
+        },
+        {
+          "word": "western",
+          "uzb": "g‘arbiy",
+          "emoji": "🧭",
+          "examples": {
+            "easy": "They live in western Uzbekistan.",
+            "normal": "Many western countries celebrate Christmas at the end of December.",
+            "hard": "Western films were extremely popular in the 1960s, especially the ones set in the American desert."
+          },
+          "synonyms": [],
+          "collocations": [
+            "western countries",
+            "western culture"
+          ]
+        },
+        {
+          "word": "length",
+          "uzb": "uzunlik",
+          "emoji": "📏",
+          "examples": {
+            "easy": "Measure the length of the table.",
+            "normal": "The length of the bridge is almost two kilometres.",
+            "hard": "Before buying curtains, we checked the length of the windows twice to make sure they would fit."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the length of",
+            "full length"
+          ]
+        },
+        {
+          "word": "horror",
+          "uzb": "dahshat, vahima",
+          "emoji": "😱",
+          "examples": {
+            "easy": "She screamed in horror.",
+            "normal": "He watched in horror as the car slid towards the river.",
+            "hard": "To our horror, we discovered that the hotel had cancelled our booking and had no free rooms left."
+          },
+          "synonyms": [
+            "terror",
+            "dread"
+          ],
+          "collocations": [
+            "in horror",
+            "to someone's horror"
+          ]
+        },
+        {
+          "word": "definition",
+          "uzb": "izoh, taʼrif, tushuntirish",
+          "emoji": "📖",
+          "examples": {
+            "easy": "Read the definition in the dictionary.",
+            "normal": "Can you give me a clear definition of this word, please?",
+            "hard": "The teacher asked us to write our own definition of success before we looked it up online."
+          },
+          "synonyms": [
+            "meaning",
+            "explanation"
+          ],
+          "collocations": [
+            "dictionary definition",
+            "clear definition"
+          ]
+        },
+        {
+          "word": "involve",
+          "uzb": "taqozo qilmoq, o‘z ichiga olmoq",
+          "emoji": "🧩",
+          "examples": {
+            "easy": "The job involves a lot of travel.",
+            "normal": "Learning a language involves practising a little every single day.",
+            "hard": "The new project will involve working closely with engineers from three different departments."
+          },
+          "synonyms": [
+            "entail",
+            "require"
+          ],
+          "collocations": [
+            "involve a lot of",
+            "involve risk"
+          ]
+        },
+        {
+          "word": "vacation",
+          "uzb": "taʼtil",
+          "emoji": "🏖️",
+          "examples": {
+            "easy": "We went on vacation in July.",
+            "normal": "They spent their summer vacation at a lake in the mountains.",
+            "hard": "After months of hard work, she finally took a two-week vacation and switched off her phone completely."
+          },
+          "synonyms": [
+            "holiday"
+          ],
+          "collocations": [
+            "summer vacation",
+            "go on vacation"
+          ]
+        },
+        {
+          "word": "tan",
+          "uzb": "qoraymoq, oftobda qoraymoq",
+          "emoji": "🌞",
+          "examples": {
+            "easy": "My skin tans very quickly.",
+            "normal": "She tanned on the beach every afternoon during the holiday.",
+            "hard": "People with fair skin rarely tan; they usually burn unless they use strong sun cream."
+          },
+          "synonyms": [],
+          "collocations": [
+            "tan easily",
+            "tan quickly"
+          ]
+        },
+        {
+          "word": "return",
+          "uzb": "qaytib kelmoq",
+          "emoji": "🔙",
+          "examples": {
+            "easy": "He returned home late.",
+            "normal": "She returned to Tashkent after five years of working abroad.",
+            "hard": "When we returned from our trip, we found that someone had broken into the garage."
+          },
+          "synonyms": [
+            "come back",
+            "go back"
+          ],
+          "collocations": [
+            "return home",
+            "return from a trip"
+          ]
+        },
+        {
+          "word": "article",
+          "uzb": "maqola",
+          "emoji": "📰",
+          "examples": {
+            "easy": "I read an interesting article today.",
+            "normal": "She writes a weekly article about health for a local newspaper.",
+            "hard": "The article he published last month caused a heated debate among teachers and parents across the country."
+          },
+          "synonyms": [],
+          "collocations": [
+            "newspaper article",
+            "write an article"
+          ]
+        },
+        {
+          "word": "ability",
+          "uzb": "qobiliyat, isteʼdod, mahorat",
+          "emoji": "💪",
+          "examples": {
+            "easy": "She has the ability to sing.",
+            "normal": "His ability to stay calm under pressure makes him a great manager.",
+            "hard": "Employers increasingly value the ability to communicate clearly, both in person and in writing."
+          },
+          "synonyms": [
+            "skill",
+            "talent"
+          ],
+          "collocations": [
+            "the ability to do something",
+            "natural ability"
+          ]
+        },
+        {
+          "word": "autistic",
+          "uzb": "autistik (odamovi)",
+          "emoji": "🧠",
+          "examples": {
+            "easy": "Their son is autistic.",
+            "normal": "The school has special classes for autistic children and their parents.",
+            "hard": "Many autistic adults find bright lights and loud noises very stressful, so quiet workplaces can help them."
+          },
+          "synonyms": [],
+          "collocations": [
+            "autistic child",
+            "autistic adult"
+          ]
+        },
+        {
+          "word": "deaf",
+          "uzb": "qulog‘i og‘ir, eshitishi zaif",
+          "emoji": "🧏",
+          "examples": {
+            "easy": "My grandfather is a little deaf.",
+            "normal": "She learnt sign language to talk with her deaf neighbour.",
+            "hard": "Although he was born deaf, he became a successful designer and now runs his own company."
+          },
+          "synonyms": [],
+          "collocations": [
+            "go deaf",
+            "partially deaf"
+          ]
+        },
+        {
+          "word": "include",
+          "uzb": "o‘z ichiga olmoq",
+          "emoji": "🧾",
+          "examples": {
+            "easy": "The price includes breakfast.",
+            "normal": "Does the ticket include a visit to the museum as well?",
+            "hard": "The tour package includes flights, hotel accommodation and a guided trip around the old city."
+          },
+          "synonyms": [
+            "contain"
+          ],
+          "collocations": [
+            "include tax",
+            "be included in"
+          ]
+        },
+        {
+          "word": "culture",
+          "uzb": "madaniyat",
+          "emoji": "🎎",
+          "examples": {
+            "easy": "I love learning about Japanese culture.",
+            "normal": "Food is an important part of the culture in every country.",
+            "hard": "Living abroad taught her to respect cultures that were very different from her own."
+          },
+          "synonyms": [],
+          "collocations": [
+            "local culture",
+            "different cultures"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-elementary-lesson-34",
+      "lesson": 34,
+      "name": "Lesson 34 - Music, childhood and competition",
+      "source": "Main Lesson (MT) p. 62",
+      "words": [
+        {
+          "word": "match",
+          "uzb": "gugurt",
+          "emoji": "🔥",
+          "examples": {
+            "easy": "He lit a match.",
+            "normal": "Keep the matches in a dry place, away from the children.",
+            "hard": "The power went off during the storm, so we lit the candles with the last box of matches we had."
+          },
+          "synonyms": [],
+          "collocations": [
+            "strike a match",
+            "box of matches"
+          ]
+        },
+        {
+          "word": "fall",
+          "uzb": "tushmoq, to‘kilmoq",
+          "emoji": "🍂",
+          "examples": {
+            "easy": "Leaves fall in autumn.",
+            "normal": "Be careful, the snow is falling off the roof onto the path.",
+            "hard": "Several rocks fell onto the road after the heavy rain, so the police closed it for the whole day."
+          },
+          "synonyms": [
+            "drop"
+          ],
+          "collocations": [
+            "fall down",
+            "fall off"
+          ]
+        },
+        {
+          "word": "worn",
+          "uzb": "eskirgan, ko‘p kiyilgan, titilgan",
+          "emoji": "👞",
+          "examples": {
+            "easy": "His shoes are very worn.",
+            "normal": "The old sofa looked comfortable but very worn and faded.",
+            "hard": "She still wears her father's worn leather jacket because it reminds her of him."
+          },
+          "synonyms": [
+            "shabby",
+            "old"
+          ],
+          "collocations": [
+            "worn shoes",
+            "worn out"
+          ]
+        },
+        {
+          "word": "violin",
+          "uzb": "skripka, g‘ijjak",
+          "emoji": "🎻",
+          "examples": {
+            "easy": "She plays the violin.",
+            "normal": "My daughter practises the violin for an hour every evening.",
+            "hard": "He started playing the violin at six and was performing with a professional orchestra by the age of twenty."
+          },
+          "synonyms": [
+            "fiddle"
+          ],
+          "collocations": [
+            "play the violin",
+            "violin lesson"
+          ]
+        },
+        {
+          "word": "vital",
+          "uzb": "muhim, zarur",
+          "emoji": "❗",
+          "examples": {
+            "easy": "Water is vital for life.",
+            "normal": "Good sleep is vital if you want to stay healthy.",
+            "hard": "It is vital that all passengers read the safety instructions before the plane takes off."
+          },
+          "synonyms": [
+            "essential",
+            "crucial"
+          ],
+          "collocations": [
+            "vital role",
+            "absolutely vital"
+          ]
+        },
+        {
+          "word": "entire",
+          "uzb": "butun, hamma",
+          "emoji": "🌍",
+          "examples": {
+            "easy": "I ate the entire cake.",
+            "normal": "We spent the entire weekend cleaning the house.",
+            "hard": "The entire team worked late every night to finish the project before the deadline."
+          },
+          "synonyms": [
+            "whole"
+          ],
+          "collocations": [
+            "the entire day",
+            "entire family"
+          ]
+        },
+        {
+          "word": "couple",
+          "uzb": "ikkita, bir juft",
+          "emoji": "✌️",
+          "examples": {
+            "easy": "Wait a couple of minutes.",
+            "normal": "I've been to London a couple of times for work.",
+            "hard": "A couple of tourists stopped me in the street to ask for directions to the old mosque."
+          },
+          "synonyms": [
+            "a few",
+            "two"
+          ],
+          "collocations": [
+            "a couple of days",
+            "a couple of times"
+          ]
+        },
+        {
+          "word": "blind",
+          "uzb": "ko‘r, ko‘zi ojiz",
+          "emoji": "🦯",
+          "examples": {
+            "easy": "His grandmother is blind.",
+            "normal": "The blind man crossed the road with the help of his dog.",
+            "hard": "Modern phones have special features that help blind people read messages and use the internet."
+          },
+          "synonyms": [],
+          "collocations": [
+            "go blind",
+            "blind person"
+          ]
+        },
+        {
+          "word": "international",
+          "uzb": "xalqaro, davlatlararo",
+          "emoji": "🌐",
+          "examples": {
+            "easy": "It's an international airport.",
+            "normal": "She works for an international company with offices in ten countries.",
+            "hard": "The international conference brought together scientists from more than fifty countries to discuss climate change."
+          },
+          "synonyms": [
+            "global"
+          ],
+          "collocations": [
+            "international company",
+            "international airport"
+          ]
+        },
+        {
+          "word": "competition",
+          "uzb": "raqobat",
+          "emoji": "🏆",
+          "examples": {
+            "easy": "There is strong competition here.",
+            "normal": "Competition between mobile phone companies keeps prices low.",
+            "hard": "Because of the fierce competition for jobs, graduates need good English and real work experience."
+          },
+          "synonyms": [
+            "rivalry"
+          ],
+          "collocations": [
+            "strong competition",
+            "competition for jobs"
+          ]
+        },
+        {
+          "word": "nearer",
+          "uzb": "yaqinroq",
+          "emoji": "📍",
+          "examples": {
+            "easy": "Come nearer to the fire.",
+            "normal": "The new flat is nearer to my office than the old one.",
+            "hard": "As the wedding day got nearer, the bride became more and more nervous about her speech."
+          },
+          "synonyms": [
+            "closer"
+          ],
+          "collocations": [
+            "nearer to",
+            "get nearer"
+          ]
+        },
+        {
+          "word": "childhood",
+          "uzb": "bolalik, yoshlik",
+          "emoji": "🧸",
+          "examples": {
+            "easy": "I had a happy childhood.",
+            "normal": "She spent her childhood in a small village near Bukhara.",
+            "hard": "Many of his childhood memories are connected with the long summers he spent at his grandparents' house."
+          },
+          "synonyms": [],
+          "collocations": [
+            "happy childhood",
+            "childhood memories"
+          ]
+        },
+        {
+          "word": "band",
+          "uzb": "estrada guruhi, qo‘shiqchilar guruhi",
+          "emoji": "🎸",
+          "examples": {
+            "easy": "My brother plays in a band.",
+            "normal": "The band played all their old songs at the concert last night.",
+            "hard": "After ten years together, the band decided to split up and each member started a solo career."
+          },
+          "synonyms": [
+            "group"
+          ],
+          "collocations": [
+            "rock band",
+            "live band"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-elementary-lesson-35",
+      "lesson": 35,
+      "name": "Lesson 35 - Present perfect and everyday words",
+      "source": "Main Lesson (MT) p. 67",
+      "words": [
+        {
+          "word": "already",
+          "uzb": "allaqachon",
+          "emoji": "✅",
+          "examples": {
+            "easy": "I have already eaten.",
+            "normal": "She has already finished her report, so she can go home.",
+            "hard": "By the time we arrived at the cinema, the film had already started and the hall was dark."
+          },
+          "synonyms": [],
+          "collocations": [
+            "already done",
+            "have already"
+          ]
+        },
+        {
+          "word": "yet",
+          "uzb": "hali, haligacha, hali ham",
+          "emoji": "⏳",
+          "examples": {
+            "easy": "Has he called yet?",
+            "normal": "I haven't replied to her email yet, but I will tonight.",
+            "hard": "The results of the exam haven't been published yet, so the students are still waiting nervously."
+          },
+          "synonyms": [],
+          "collocations": [
+            "not yet",
+            "haven't yet"
+          ]
+        },
+        {
+          "word": "still",
+          "uzb": "hali ham, hanuz, haligacha",
+          "emoji": "🕰️",
+          "examples": {
+            "easy": "She still lives here.",
+            "normal": "Are you still working at the same bank as last year?",
+            "hard": "Even after twenty years in London, he still speaks English with a strong accent."
+          },
+          "synonyms": [],
+          "collocations": [
+            "still waiting",
+            "still there"
+          ]
+        },
+        {
+          "word": "addition",
+          "uzb": "qo‘shish, qo‘shish amali",
+          "emoji": "➕",
+          "examples": {
+            "easy": "Children learn addition at school.",
+            "normal": "My son is good at addition but finds division difficult.",
+            "hard": "Before calculators became common, shop assistants had to do addition quickly in their heads."
+          },
+          "synonyms": [],
+          "collocations": [
+            "addition and subtraction",
+            "simple addition"
+          ]
+        },
+        {
+          "word": "participle",
+          "uzb": "sifatdosh",
+          "emoji": "📝",
+          "examples": {
+            "easy": "'Gone' is a participle.",
+            "normal": "We use the past participle to form the present perfect tense.",
+            "hard": "Irregular verbs are tricky because their past participles often look completely different from the base form."
+          },
+          "synonyms": [],
+          "collocations": [
+            "past participle",
+            "present participle"
+          ]
+        },
+        {
+          "word": "move",
+          "uzb": "qimirlatmoq, harakatlanmoq",
+          "emoji": "🏃",
+          "examples": {
+            "easy": "Don't move!",
+            "normal": "He couldn't move his leg after the accident.",
+            "hard": "The cat sat on the windowsill and watched the birds without moving a single muscle."
+          },
+          "synonyms": [],
+          "collocations": [
+            "move around",
+            "move slowly"
+          ]
+        },
+        {
+          "word": "confused",
+          "uzb": "tushunmaslik, chalkashib ketmoq",
+          "emoji": "😕",
+          "examples": {
+            "easy": "I'm confused.",
+            "normal": "The students were confused by the new grammar rule.",
+            "hard": "If you are confused about the instructions, ask your manager before you start the task."
+          },
+          "synonyms": [
+            "puzzled",
+            "mixed up"
+          ],
+          "collocations": [
+            "totally confused",
+            "confused about"
+          ]
+        },
+        {
+          "word": "recall",
+          "uzb": "eslamoq, yodga olmoq",
+          "emoji": "💭",
+          "examples": {
+            "easy": "I can't recall his name.",
+            "normal": "Do you recall where we parked the car this morning?",
+            "hard": "She could not recall exactly what the man looked like, but she remembered his red coat."
+          },
+          "synonyms": [
+            "remember"
+          ],
+          "collocations": [
+            "recall correctly",
+            "vaguely recall"
+          ]
+        },
+        {
+          "word": "majority",
+          "uzb": "ko‘p qismi, ko‘pchilik",
+          "emoji": "📊",
+          "examples": {
+            "easy": "The majority of people agreed.",
+            "normal": "The majority of students in our class come from Tashkent.",
+            "hard": "Although the majority voted for the new plan, a few members were strongly against it."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the majority of",
+            "vast majority"
+          ]
+        },
+        {
+          "word": "particular",
+          "uzb": "alohida, boshqacha, o‘zgacha",
+          "emoji": "🎯",
+          "examples": {
+            "easy": "Is there a particular book you want?",
+            "normal": "She doesn't like any particular type of music; she listens to everything.",
+            "hard": "On this particular occasion, the manager decided to allow everyone to leave work an hour early."
+          },
+          "synonyms": [
+            "specific"
+          ],
+          "collocations": [
+            "in particular",
+            "particular reason"
+          ]
+        },
+        {
+          "word": "first",
+          "uzb": "birinchi, avval",
+          "emoji": "1️⃣",
+          "examples": {
+            "easy": "Wash your hands first.",
+            "normal": "First, read the questions, and then listen to the recording.",
+            "hard": "Let me finish this email first, and then we can sit down and talk about your proposal."
+          },
+          "synonyms": [
+            "firstly"
+          ],
+          "collocations": [
+            "first of all",
+            "come first"
+          ]
+        },
+        {
+          "word": "real",
+          "uzb": "haqiqiy, chin, hayotiy",
+          "emoji": "💎",
+          "examples": {
+            "easy": "Is that a real diamond?",
+            "normal": "He told us a real story about his life in the army.",
+            "hard": "It was hard to believe the news was real until we saw the pictures on television."
+          },
+          "synonyms": [
+            "genuine",
+            "true"
+          ],
+          "collocations": [
+            "real life",
+            "real name"
+          ]
+        },
+        {
+          "word": "pipe",
+          "uzb": "quvur, truba",
+          "emoji": "🔧",
+          "examples": {
+            "easy": "The pipe is leaking.",
+            "normal": "A plumber came to fix the broken pipe in the kitchen.",
+            "hard": "The water pipes burst during the coldest week of winter, and the whole building was flooded."
+          },
+          "synonyms": [
+            "tube"
+          ],
+          "collocations": [
+            "water pipe",
+            "burst pipe"
+          ]
+        },
+        {
+          "word": "participate",
+          "uzb": "qatnashmoq, ishtirok etmoq",
+          "emoji": "🙋‍♀️",
+          "examples": {
+            "easy": "Everyone can participate.",
+            "normal": "All students are encouraged to participate in class discussions.",
+            "hard": "More than two hundred companies participated in the international trade fair held in Tashkent last year."
+          },
+          "synonyms": [
+            "take part"
+          ],
+          "collocations": [
+            "participate in",
+            "actively participate"
+          ]
+        },
+        {
+          "word": "inter",
+          "uzb": "ko‘mmoq, dafn etmoq",
+          "emoji": "🪦",
+          "examples": {
+            "easy": "He was interred here.",
+            "normal": "The poet was interred in the cemetery of his home town.",
+            "hard": "According to his wishes, the old general was interred next to his wife in a small village churchyard."
+          },
+          "synonyms": [
+            "bury"
+          ],
+          "collocations": [
+            "be interred in",
+            "interred beside"
+          ]
+        },
+        {
+          "word": "purse",
+          "uzb": "hamyon, koshelyok",
+          "emoji": "👛",
+          "examples": {
+            "easy": "I lost my purse.",
+            "normal": "She took some coins out of her purse to pay for the bus.",
+            "hard": "Someone stole her purse on the crowded metro, so she had to cancel all her bank cards."
+          },
+          "synonyms": [
+            "wallet"
+          ],
+          "collocations": [
+            "leather purse",
+            "lose a purse"
+          ]
+        },
+        {
+          "word": "assignment",
+          "uzb": "vazifa, topshiriq",
+          "emoji": "📋",
+          "examples": {
+            "easy": "I finished my assignment.",
+            "normal": "Our teacher gave us a difficult writing assignment for Monday.",
+            "hard": "Students who hand in their assignments late will lose ten per cent of their marks for each extra day."
+          },
+          "synonyms": [
+            "task"
+          ],
+          "collocations": [
+            "hand in an assignment",
+            "written assignment"
+          ]
+        },
+        {
+          "word": "column",
+          "uzb": "ustun",
+          "emoji": "🏛️",
+          "examples": {
+            "easy": "The building has white columns.",
+            "normal": "Tall stone columns stand at the entrance of the theatre.",
+            "hard": "The roof of the ancient palace was supported by twenty marble columns decorated with flowers."
+          },
+          "synonyms": [
+            "pillar"
+          ],
+          "collocations": [
+            "stone column",
+            "marble column"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-elementary-lesson-36",
+      "lesson": 36,
+      "name": "Lesson 36 - Hobbies, travel and jobs",
+      "source": "Main Lesson (MT) p. 74",
+      "words": [
+        {
+          "word": "cope",
+          "uzb": "bardosh bermoq, uddalamoq",
+          "emoji": "🧘",
+          "examples": {
+            "easy": "I can cope with this.",
+            "normal": "She found it hard to cope with work and two small children.",
+            "hard": "After losing his job, he coped with the stress by running every morning and talking to friends."
+          },
+          "synonyms": [
+            "manage",
+            "deal with"
+          ],
+          "collocations": [
+            "cope with",
+            "cope well"
+          ]
+        },
+        {
+          "word": "skate",
+          "uzb": "konkida uchmoq",
+          "emoji": "⛸️",
+          "examples": {
+            "easy": "We skate every winter.",
+            "normal": "The children skated on the frozen lake all afternoon.",
+            "hard": "She had never skated before, but by the end of the holiday she could move confidently on the ice."
+          },
+          "synonyms": [],
+          "collocations": [
+            "skate on ice",
+            "learn to skate"
+          ]
+        },
+        {
+          "word": "travel",
+          "uzb": "sayohat qilmoq",
+          "emoji": "✈️",
+          "examples": {
+            "easy": "I love to travel.",
+            "normal": "They travelled around Europe by train last summer.",
+            "hard": "Since he started working from home, he has been able to travel more and visit his relatives abroad."
+          },
+          "synonyms": [],
+          "collocations": [
+            "travel abroad",
+            "travel by train"
+          ]
+        },
+        {
+          "word": "report",
+          "uzb": "xabar bermoq, hisobot bermoq",
+          "emoji": "📣",
+          "examples": {
+            "easy": "Report the problem to your manager.",
+            "normal": "The accident was reported on the evening news.",
+            "hard": "Witnesses reported seeing a man in a black jacket running away from the shop just after midnight."
+          },
+          "synonyms": [],
+          "collocations": [
+            "report to the police",
+            "report a crime"
+          ]
+        },
+        {
+          "word": "engineer",
+          "uzb": "muhandis",
+          "emoji": "👷",
+          "examples": {
+            "easy": "My father is an engineer.",
+            "normal": "She works as an engineer for a large construction company.",
+            "hard": "The engineers who designed the new bridge had to make sure it could survive strong earthquakes."
+          },
+          "synonyms": [],
+          "collocations": [
+            "civil engineer",
+            "software engineer"
+          ]
+        },
+        {
+          "word": "hospital",
+          "uzb": "kasalxona, shifoxona",
+          "emoji": "🏥",
+          "examples": {
+            "easy": "He is in hospital.",
+            "normal": "My aunt was taken to hospital after she fell down the stairs.",
+            "hard": "The new hospital has modern equipment, but it still doesn't have enough nurses to treat everyone quickly."
+          },
+          "synonyms": [],
+          "collocations": [
+            "go to hospital",
+            "in hospital"
+          ]
+        },
+        {
+          "word": "draw",
+          "uzb": "chizmoq",
+          "emoji": "✏️",
+          "examples": {
+            "easy": "She likes to draw animals.",
+            "normal": "My son drew a picture of our family on the kitchen wall.",
+            "hard": "He could draw a detailed map of the city from memory after living there for only a month."
+          },
+          "synonyms": [
+            "sketch"
+          ],
+          "collocations": [
+            "draw a picture",
+            "draw a map"
+          ]
+        },
+        {
+          "word": "style",
+          "uzb": "uslub, usul",
+          "emoji": "👗",
+          "examples": {
+            "easy": "I like your style.",
+            "normal": "Her writing style is clear, simple and easy to follow.",
+            "hard": "The restaurant serves traditional dishes, but they are cooked in a modern style with fresh ingredients."
+          },
+          "synonyms": [
+            "manner",
+            "way"
+          ],
+          "collocations": [
+            "style of writing",
+            "in style"
+          ]
+        },
+        {
+          "word": "sunset",
+          "uzb": "quyosh botishi",
+          "emoji": "🌇",
+          "examples": {
+            "easy": "We watched the sunset.",
+            "normal": "The sunset over the mountains was absolutely beautiful.",
+            "hard": "We walked along the beach until sunset and then had dinner at a small fish restaurant nearby."
+          },
+          "synonyms": [
+            "dusk"
+          ],
+          "collocations": [
+            "at sunset",
+            "beautiful sunset"
+          ]
+        },
+        {
+          "word": "meticulous",
+          "uzb": "ehtiyotkor",
+          "emoji": "🔍",
+          "examples": {
+            "easy": "He is a meticulous worker.",
+            "normal": "She keeps meticulous notes on every meeting she attends.",
+            "hard": "The meticulous planning of the event meant that nothing went wrong, even when two hundred guests arrived at once."
+          },
+          "synonyms": [
+            "careful",
+            "thorough"
+          ],
+          "collocations": [
+            "meticulous attention to detail",
+            "meticulous planning"
+          ]
+        },
+        {
+          "word": "practise",
+          "uzb": "shug‘ullanmoq, amaliyot qilmoq",
+          "emoji": "🎹",
+          "examples": {
+            "easy": "Practise your English every day.",
+            "normal": "He practises the piano for two hours after work.",
+            "hard": "If you want to pass the speaking exam, you need to practise talking about familiar topics with a partner."
+          },
+          "synonyms": [
+            "rehearse"
+          ],
+          "collocations": [
+            "practise regularly",
+            "practise speaking"
+          ]
+        },
+        {
+          "word": "phrase",
+          "uzb": "ibora, ifoda",
+          "emoji": "💬",
+          "examples": {
+            "easy": "Learn a new phrase every day.",
+            "normal": "This phrase is very common in everyday English conversation.",
+            "hard": "The guidebook includes useful phrases for ordering food, asking for directions and booking a hotel room."
+          },
+          "synonyms": [
+            "expression"
+          ],
+          "collocations": [
+            "useful phrase",
+            "common phrase"
+          ]
+        },
+        {
+          "word": "design",
+          "uzb": "dizayn",
+          "emoji": "🎨",
+          "examples": {
+            "easy": "I like the design of this car.",
+            "normal": "The design of the new website is simple and modern.",
+            "hard": "The architects presented three different designs for the library, and the city council chose the cheapest one."
+          },
+          "synonyms": [],
+          "collocations": [
+            "modern design",
+            "design of"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-elementary-lesson-37",
+      "lesson": 37,
+      "name": "Lesson 37 - Rules, obligations and everyday life",
+      "source": "Main Lesson (MT) p. 80",
+      "words": [
+        {
+          "word": "must",
+          "uzb": "kerak, shart, zarur",
+          "emoji": "❗",
+          "examples": {
+            "easy": "You must wear a seatbelt.",
+            "normal": "All visitors must report to reception when they arrive.",
+            "hard": "You must renew your passport before it expires, or you won't be allowed to travel abroad."
+          },
+          "synonyms": [
+            "have to"
+          ],
+          "collocations": [
+            "must be done",
+            "you must remember"
+          ]
+        },
+        {
+          "word": "law",
+          "uzb": "qonun",
+          "emoji": "⚖️",
+          "examples": {
+            "easy": "Stealing is against the law.",
+            "normal": "Schools are required by law to publish their exam results.",
+            "hard": "The new law, which comes into force next year, will make it illegal to smoke in parks."
+          },
+          "synonyms": [],
+          "collocations": [
+            "break the law",
+            "by law"
+          ]
+        },
+        {
+          "word": "success",
+          "uzb": "omad, muvaffaqiyat",
+          "emoji": "🏆",
+          "examples": {
+            "easy": "Hard work leads to success.",
+            "normal": "What do you think is the secret of your success?",
+            "hard": "Her success in business came only after years of failure and many sleepless nights."
+          },
+          "synonyms": [
+            "achievement"
+          ],
+          "collocations": [
+            "great success",
+            "key to success"
+          ]
+        },
+        {
+          "word": "obliged",
+          "uzb": "minnatdor, qarzdor",
+          "emoji": "🙏",
+          "examples": {
+            "easy": "I'm much obliged to you.",
+            "normal": "We are very obliged to our neighbours for their help.",
+            "hard": "I would be obliged if you could send me the documents by Friday, as the deadline is close."
+          },
+          "synonyms": [
+            "grateful",
+            "thankful"
+          ],
+          "collocations": [
+            "much obliged",
+            "I'd be obliged if"
+          ]
+        },
+        {
+          "word": "disturb",
+          "uzb": "bezovta qilmoq, xalaqit bermoq",
+          "emoji": "🚪",
+          "examples": {
+            "easy": "Please don't disturb me now.",
+            "normal": "Sorry to disturb you, but there is a phone call for you.",
+            "hard": "He hung a sign on the door so that nobody would disturb him while he was studying."
+          },
+          "synonyms": [
+            "bother",
+            "interrupt"
+          ],
+          "collocations": [
+            "do not disturb",
+            "sorry to disturb you"
+          ]
+        },
+        {
+          "word": "inside",
+          "uzb": "ichkariga, ichkarida",
+          "emoji": "📦",
+          "examples": {
+            "easy": "The keys are inside my bag.",
+            "normal": "There was a gold watch inside the box on the table.",
+            "hard": "It started raining heavily, so we stayed inside the museum until the storm had passed."
+          },
+          "synonyms": [
+            "within"
+          ],
+          "collocations": [
+            "inside the house",
+            "go inside"
+          ]
+        },
+        {
+          "word": "antique",
+          "uzb": "antiqa narsa, qadimiy narsa",
+          "emoji": "🏺",
+          "examples": {
+            "easy": "He collects antiques.",
+            "normal": "This antique table belonged to my great-grandmother.",
+            "hard": "The shop sells antiques from all over Central Asia, including carpets that are over a hundred years old."
+          },
+          "synonyms": [],
+          "collocations": [
+            "antique shop",
+            "valuable antique"
+          ]
+        },
+        {
+          "word": "rush",
+          "uzb": "tez harakat, ildam harakat",
+          "emoji": "💨",
+          "examples": {
+            "easy": "There was a rush of air.",
+            "normal": "The door blew open, letting in a rush of cold air.",
+            "hard": "When the shop opened its doors, there was a sudden rush of customers looking for bargains."
+          },
+          "synonyms": [
+            "surge"
+          ],
+          "collocations": [
+            "a rush of air",
+            "sudden rush"
+          ]
+        },
+        {
+          "word": "score",
+          "uzb": "hisob, ball",
+          "emoji": "⚽",
+          "examples": {
+            "easy": "What's the score now?",
+            "normal": "A penalty in the last minute levelled the score at 2-2.",
+            "hard": "Although the final score was only 1-0, the home team had controlled the game from the very beginning."
+          },
+          "synonyms": [
+            "result"
+          ],
+          "collocations": [
+            "final score",
+            "high score"
+          ]
+        },
+        {
+          "word": "fix",
+          "uzb": "taʼmirlamoq, tuzatmoq",
+          "emoji": "🔧",
+          "examples": {
+            "easy": "Can you fix my bike?",
+            "normal": "We must get someone to fix that wheel before the trip.",
+            "hard": "It took the mechanic three hours to fix the engine, but the car has run perfectly ever since."
+          },
+          "synonyms": [
+            "repair",
+            "mend"
+          ],
+          "collocations": [
+            "fix a problem",
+            "get something fixed"
+          ]
+        },
+        {
+          "word": "price",
+          "uzb": "baho, narx",
+          "emoji": "🏷️",
+          "examples": {
+            "easy": "What is the price of this?",
+            "normal": "I'm only buying it if it's the right price.",
+            "hard": "Food prices have risen sharply this year, so many families are trying to spend less on eating out."
+          },
+          "synonyms": [
+            "cost"
+          ],
+          "collocations": [
+            "high price",
+            "full price"
+          ]
+        },
+        {
+          "word": "obligation",
+          "uzb": "burch, majburiyat, zimma",
+          "emoji": "📜",
+          "examples": {
+            "easy": "Paying tax is an obligation.",
+            "normal": "Employers have an obligation to treat all employees equally.",
+            "hard": "You are under no obligation to buy anything, but the shop will let you try the products for free."
+          },
+          "synonyms": [
+            "duty",
+            "responsibility"
+          ],
+          "collocations": [
+            "legal obligation",
+            "under no obligation"
+          ]
+        },
+        {
+          "word": "medicine",
+          "uzb": "tibbiyot, tabobat",
+          "emoji": "🩺",
+          "examples": {
+            "easy": "She wants to study medicine.",
+            "normal": "She studied medicine for six years before becoming a doctor.",
+            "hard": "Modern medicine has made huge progress, and many diseases that once killed millions can now be cured."
+          },
+          "synonyms": [],
+          "collocations": [
+            "study medicine",
+            "modern medicine"
+          ]
+        },
+        {
+          "word": "underground",
+          "uzb": "yer ostida joylashgan, yer osti",
+          "emoji": "🚇",
+          "examples": {
+            "easy": "We parked in an underground car park.",
+            "normal": "There is an underground station right next to my office.",
+            "hard": "The city is planning to build an underground railway to reduce traffic on its busy streets."
+          },
+          "synonyms": [],
+          "collocations": [
+            "underground station",
+            "underground car park"
+          ]
+        },
+        {
+          "word": "originally",
+          "uzb": "dastlab, aslida, boshida",
+          "emoji": "🌱",
+          "examples": {
+            "easy": "I'm originally from Bukhara.",
+            "normal": "The school was originally very small, with only fifty pupils.",
+            "hard": "The building was originally designed as a hospital, but it was later turned into a hotel."
+          },
+          "synonyms": [
+            "initially",
+            "at first"
+          ],
+          "collocations": [
+            "originally from",
+            "originally built"
+          ]
+        },
+        {
+          "word": "chemistry",
+          "uzb": "kimyo",
+          "emoji": "🧪",
+          "examples": {
+            "easy": "I like chemistry lessons.",
+            "normal": "She is studying chemistry at university in Tashkent.",
+            "hard": "His interest in chemistry began at school, when a teacher showed the class how to make crystals."
+          },
+          "synonyms": [],
+          "collocations": [
+            "chemistry lesson",
+            "organic chemistry"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-elementary-lesson-38",
+      "lesson": 38,
+      "name": "Lesson 38 - Character, faith and daily life",
+      "source": "Main Lesson (MT) p. 87",
+      "words": [
+        {
+          "word": "a lot of",
+          "uzb": "juda ko‘p",
+          "emoji": "🔢",
+          "examples": {
+            "easy": "She has a lot of flowers.",
+            "normal": "There are a lot of flowers in her garden this spring.",
+            "hard": "We spent a lot of time looking for a flat, but in the end we found one near my office."
+          },
+          "synonyms": [
+            "lots of",
+            "plenty of"
+          ],
+          "collocations": [
+            "a lot of money",
+            "a lot of people"
+          ]
+        },
+        {
+          "word": "zip",
+          "uzb": "zamok (kiyimdagi)",
+          "emoji": "🤐",
+          "examples": {
+            "easy": "Zip your coat up.",
+            "normal": "Zip your coat up, because it's cold outside.",
+            "hard": "I couldn't zip my suitcase because I had packed far too many clothes for a short trip."
+          },
+          "synonyms": [
+            "fasten"
+          ],
+          "collocations": [
+            "zip up a jacket",
+            "zip a bag"
+          ]
+        },
+        {
+          "word": "loyal",
+          "uzb": "vafodor, sodiq",
+          "emoji": "🐕",
+          "examples": {
+            "easy": "He is a loyal friend.",
+            "normal": "Her husband has always been really loyal to her.",
+            "hard": "The company rewards loyal customers with discounts, which is why many people have shopped there for years."
+          },
+          "synonyms": [
+            "faithful",
+            "devoted"
+          ],
+          "collocations": [
+            "loyal friend",
+            "loyal customer"
+          ]
+        },
+        {
+          "word": "on purpose",
+          "uzb": "ataylab",
+          "emoji": "🎯",
+          "examples": {
+            "easy": "He did it on purpose.",
+            "normal": "He was late to the class on purpose because he doesn't like history.",
+            "hard": "I'm sure she didn't break the vase on purpose; she just wasn't looking where she was going."
+          },
+          "synonyms": [
+            "deliberately",
+            "intentionally"
+          ],
+          "collocations": [
+            "do something on purpose",
+            "not on purpose"
+          ]
+        },
+        {
+          "word": "zealous",
+          "uzb": "g‘ayratli, ishtiyoqli",
+          "emoji": "🔥",
+          "examples": {
+            "easy": "My father is very zealous.",
+            "normal": "No one in our family is more zealous than my father.",
+            "hard": "The new manager was so zealous about saving money that he even turned off the office heating in winter."
+          },
+          "synonyms": [
+            "enthusiastic",
+            "eager"
+          ],
+          "collocations": [
+            "zealous supporter",
+            "overly zealous"
+          ]
+        },
+        {
+          "word": "witty",
+          "uzb": "gapga usta, topqir, aqlli",
+          "emoji": "😄",
+          "examples": {
+            "easy": "She is a witty woman.",
+            "normal": "She is the wittiest student in our class and always makes us laugh.",
+            "hard": "His witty comments made the long meeting much more pleasant, even though nobody agreed on anything."
+          },
+          "synonyms": [
+            "clever",
+            "funny"
+          ],
+          "collocations": [
+            "witty remark",
+            "witty sense of humour"
+          ]
+        },
+        {
+          "word": "Judgement Day",
+          "uzb": "Qiyomat kuni, Oxirat kuni",
+          "emoji": "⏳",
+          "examples": {
+            "easy": "Muslims believe in Judgement Day.",
+            "normal": "Many religions teach that everyone will be judged on Judgement Day.",
+            "hard": "He tried to live an honest life, believing that every person will answer for their actions on Judgement Day."
+          },
+          "synonyms": [
+            "Doomsday"
+          ],
+          "collocations": [
+            "the Day of Judgement",
+            "fear of Judgement Day"
+          ]
+        },
+        {
+          "word": "prophet",
+          "uzb": "payg‘ambar",
+          "emoji": "📖",
+          "examples": {
+            "easy": "He read about the Prophet.",
+            "normal": "Every Muslim child learns stories about the Prophet's life.",
+            "hard": "The teachings of the prophets have shaped the values of millions of people for many centuries."
+          },
+          "synonyms": [
+            "messenger"
+          ],
+          "collocations": [
+            "the Prophet Muhammad",
+            "the Prophet's teachings"
+          ]
+        },
+        {
+          "word": "handkerchief",
+          "uzb": "ro‘molcha",
+          "emoji": "🤧",
+          "examples": {
+            "easy": "I always carry a handkerchief.",
+            "normal": "He found his mother's old handkerchief and started to cry.",
+            "hard": "My grandfather always kept a clean, folded handkerchief in his jacket pocket, even on hot summer days."
+          },
+          "synonyms": [
+            "hankie"
+          ],
+          "collocations": [
+            "cotton handkerchief",
+            "wave a handkerchief"
+          ]
+        },
+        {
+          "word": "ablution",
+          "uzb": "tahorat",
+          "emoji": "🚰",
+          "examples": {
+            "easy": "He made ablution before prayer.",
+            "normal": "My teacher always makes ablution before he goes to the mosque.",
+            "hard": "Most mosques have a special room with taps where people can perform ablution before the prayer begins."
+          },
+          "synonyms": [],
+          "collocations": [
+            "make ablution",
+            "perform ablution"
+          ]
+        },
+        {
+          "word": "opponent",
+          "uzb": "raqib, dushman",
+          "emoji": "🤺",
+          "examples": {
+            "easy": "His opponent was very strong.",
+            "normal": "She shook hands with her opponent before the match started.",
+            "hard": "The boxer studied videos of his opponent for weeks so that he would know exactly how he fought."
+          },
+          "synonyms": [
+            "rival"
+          ],
+          "collocations": [
+            "political opponent",
+            "defeat an opponent"
+          ]
+        },
+        {
+          "word": "stunning",
+          "uzb": "chiroyli, go‘zal",
+          "emoji": "🤩",
+          "examples": {
+            "easy": "The view is stunning.",
+            "normal": "She looked absolutely stunning in her red wedding dress.",
+            "hard": "From the top of the mountain we had a stunning view of the lake and the villages in the valley below."
+          },
+          "synonyms": [
+            "beautiful",
+            "gorgeous"
+          ],
+          "collocations": [
+            "stunning view",
+            "look stunning"
+          ]
+        },
+        {
+          "word": "Eid",
+          "uzb": "Hayit (bayrami)",
+          "emoji": "🌙",
+          "examples": {
+            "easy": "We visit relatives on Eid.",
+            "normal": "Children love to get money as a gift during Eid.",
+            "hard": "During Eid, families cook special meals, wear new clothes and visit relatives and neighbours."
+          },
+          "synonyms": [],
+          "collocations": [
+            "Eid holiday",
+            "celebrate Eid"
+          ]
+        },
+        {
+          "word": "parking",
+          "uzb": "avtomobil qo‘yish, mashina qo‘yish",
+          "emoji": "🅿️",
+          "examples": {
+            "easy": "Parking is free here.",
+            "normal": "Robert is not very good at parking in small spaces.",
+            "hard": "Parking in the city centre is so expensive that many people now prefer to come in by bus."
+          },
+          "synonyms": [],
+          "collocations": [
+            "free parking",
+            "parking space"
+          ]
+        },
+        {
+          "word": "there is no telling",
+          "uzb": "biron nima deyish qiyin",
+          "emoji": "🤷",
+          "examples": {
+            "easy": "There is no telling who will win.",
+            "normal": "Andijan is losing the match, but there is no telling yet.",
+            "hard": "There is no telling how long the repairs will take, so we may have to stay in a hotel for a while."
+          },
+          "synonyms": [],
+          "collocations": [
+            "there is no telling what",
+            "there's no telling how long"
+          ]
+        },
+        {
+          "word": "hash",
+          "uzb": "chopmoq, maydalamoq, qiymalamoq",
+          "emoji": "🔪",
+          "examples": {
+            "easy": "Hash the meat finely.",
+            "normal": "My uncle is a chef, so he is good at hashing meat.",
+            "hard": "For this dish you need to hash the potatoes and onions before frying them together in a hot pan."
+          },
+          "synonyms": [
+            "chop",
+            "mince"
+          ],
+          "collocations": [
+            "hash meat",
+            "hash potatoes"
+          ]
+        },
+        {
+          "word": "sop",
+          "uzb": "shimib olmoq",
+          "emoji": "🧽",
+          "examples": {
+            "easy": "Sop up the water with a cloth.",
+            "normal": "She used some bread to sop up the sauce on her plate.",
+            "hard": "After the pipe burst, we spent the whole evening sopping up water from the kitchen floor with old towels."
+          },
+          "synonyms": [
+            "soak up",
+            "mop up"
+          ],
+          "collocations": [
+            "sop up water",
+            "sop up the sauce"
+          ]
+        },
+        {
+          "word": "mild",
+          "uzb": "yumshoq, xushfeʼl, muloyim, nafis",
+          "emoji": "🌤️",
+          "examples": {
+            "easy": "My mother has a mild voice.",
+            "normal": "He is a mild man who never raises his voice at anyone.",
+            "hard": "Despite her mild manner, she was a tough negotiator who always got what she wanted."
+          },
+          "synonyms": [
+            "gentle",
+            "soft"
+          ],
+          "collocations": [
+            "mild manner",
+            "mild voice"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-elementary-lesson-39",
+      "lesson": 39,
+      "name": "Lesson 39 - Character, travel and comparison",
+      "source": "Main Lesson (MT) p. 92",
+      "words": [
+        {
+          "word": "sour",
+          "uzb": "nordon, taxir",
+          "emoji": "🍋",
+          "examples": {
+            "easy": "Lemons are very sour.",
+            "normal": "These plums are a bit sour, so add some sugar.",
+            "hard": "The milk had been left out of the fridge all night and had turned sour by the morning."
+          },
+          "synonyms": [
+            "tart"
+          ],
+          "collocations": [
+            "sour taste",
+            "turn sour"
+          ]
+        },
+        {
+          "word": "awful",
+          "uzb": "juda yomon, yoqimsiz",
+          "emoji": "😖",
+          "examples": {
+            "easy": "The weather was awful.",
+            "normal": "She had been ill for a week and she looked awful.",
+            "hard": "The food at the hotel was awful, but the staff were so friendly that we didn't really mind."
+          },
+          "synonyms": [
+            "terrible",
+            "dreadful"
+          ],
+          "collocations": [
+            "awful weather",
+            "look awful"
+          ]
+        },
+        {
+          "word": "common",
+          "uzb": "ko‘p uchraydigan, keng tarqalgan",
+          "emoji": "🌼",
+          "examples": {
+            "easy": "Daisies are common flowers.",
+            "normal": "Colds are very common in winter, especially among children.",
+            "hard": "It is quite common for young people in big cities to share a flat with friends to save money."
+          },
+          "synonyms": [
+            "widespread",
+            "usual"
+          ],
+          "collocations": [
+            "common mistake",
+            "common problem"
+          ]
+        },
+        {
+          "word": "hardworking",
+          "uzb": "mehnatkash, mehnatsevar",
+          "emoji": "💪",
+          "examples": {
+            "easy": "My brother is very hardworking.",
+            "normal": "She was very hardworking and reliable, so they promoted her.",
+            "hard": "Our hardworking farmers get up before sunrise and often work in the fields until it is dark."
+          },
+          "synonyms": [
+            "diligent",
+            "industrious"
+          ],
+          "collocations": [
+            "hardworking student",
+            "hardworking employee"
+          ]
+        },
+        {
+          "word": "honest",
+          "uzb": "vijdonli, halol",
+          "emoji": "🤝",
+          "examples": {
+            "easy": "She is completely honest.",
+            "normal": "I want an honest answer: do you like my new haircut?",
+            "hard": "To be honest, I didn't enjoy the film, although the actors did their best with a weak story."
+          },
+          "synonyms": [
+            "truthful",
+            "sincere"
+          ],
+          "collocations": [
+            "to be honest",
+            "honest answer"
+          ]
+        },
+        {
+          "word": "discipline",
+          "uzb": "tartib-intizom, qonun-qoidaga amal qilish",
+          "emoji": "📏",
+          "examples": {
+            "easy": "Sport teaches discipline.",
+            "normal": "There should be better discipline in schools these days.",
+            "hard": "Learning a language on your own takes a lot of discipline, because nobody checks that you practise every day."
+          },
+          "synonyms": [
+            "order",
+            "self-control"
+          ],
+          "collocations": [
+            "strict discipline",
+            "self-discipline"
+          ]
+        },
+        {
+          "word": "household",
+          "uzb": "xo‘jalik, xonadon",
+          "emoji": "🏠",
+          "examples": {
+            "easy": "Our household has five people.",
+            "normal": "Most households now own at least one car.",
+            "hard": "The survey found that the average household spends almost a third of its income on food."
+          },
+          "synonyms": [
+            "family",
+            "home"
+          ],
+          "collocations": [
+            "household chores",
+            "household items"
+          ]
+        },
+        {
+          "word": "patiently",
+          "uzb": "sabr qilib, sabr bilan",
+          "emoji": "⏳",
+          "examples": {
+            "easy": "She waited patiently.",
+            "normal": "She sat patiently in the waiting room until the doctor called her.",
+            "hard": "The teacher listened patiently while the nervous student tried to explain why his homework was late again."
+          },
+          "synonyms": [],
+          "collocations": [
+            "wait patiently",
+            "listen patiently"
+          ]
+        },
+        {
+          "word": "journey",
+          "uzb": "safar, sayohat",
+          "emoji": "🚂",
+          "examples": {
+            "easy": "The journey was long.",
+            "normal": "They went on a long train journey across India.",
+            "hard": "The journey from Tashkent to Khiva takes many hours, but the views of the desert make it worthwhile."
+          },
+          "synonyms": [
+            "trip"
+          ],
+          "collocations": [
+            "long journey",
+            "train journey"
+          ]
+        },
+        {
+          "word": "bill",
+          "uzb": "to‘lov, xarajat",
+          "emoji": "🧾",
+          "examples": {
+            "easy": "Can I have the bill, please?",
+            "normal": "She always pays her bills on time, so she never has any debts.",
+            "hard": "Our electricity bill was much higher this winter because we used the heater almost every day."
+          },
+          "synonyms": [
+            "invoice",
+            "account"
+          ],
+          "collocations": [
+            "pay the bill",
+            "electricity bill"
+          ]
+        },
+        {
+          "word": "comparison",
+          "uzb": "solishtirish, qiyoslash",
+          "emoji": "📊",
+          "examples": {
+            "easy": "Let's make a comparison.",
+            "normal": "They made a comparison of different countries' eating habits.",
+            "hard": "In comparison with last year, sales have increased by twenty per cent, which is excellent news for the company."
+          },
+          "synonyms": [],
+          "collocations": [
+            "in comparison with",
+            "make a comparison"
+          ]
+        },
+        {
+          "word": "compare",
+          "uzb": "solishtirmoq, qiyoslamoq",
+          "emoji": "⚖️",
+          "examples": {
+            "easy": "Compare these two pictures.",
+            "normal": "It is interesting to compare their situation with ours.",
+            "hard": "Before you buy a new phone, it's a good idea to compare prices in several shops and online."
+          },
+          "synonyms": [],
+          "collocations": [
+            "compare prices",
+            "compared with"
+          ]
+        },
+        {
+          "word": "sake",
+          "uzb": "haqqi, haqqi-hurmati",
+          "emoji": "❤️",
+          "examples": {
+            "easy": "Do it for my sake.",
+            "normal": "They stayed together for the sake of the children.",
+            "hard": "She gave up smoking for the sake of her health, and now she feels much better than before."
+          },
+          "synonyms": [],
+          "collocations": [
+            "for the sake of",
+            "for your own sake"
+          ]
+        },
+        {
+          "word": "messy",
+          "uzb": "iflos, kir",
+          "emoji": "🧹",
+          "examples": {
+            "easy": "The kitchen is very messy.",
+            "normal": "The children got really messy playing in the woods.",
+            "hard": "Painting with small children is great fun, but it can get very messy, so cover the table first."
+          },
+          "synonyms": [
+            "dirty",
+            "untidy"
+          ],
+          "collocations": [
+            "messy room",
+            "get messy"
+          ]
+        },
+        {
+          "word": "summon",
+          "uzb": "sudga chaqirmoq",
+          "emoji": "📨",
+          "examples": {
+            "easy": "He was summoned to court.",
+            "normal": "He was summoned to appear before the magistrates on Monday.",
+            "hard": "The witness was summoned to court to give evidence about what she had seen on the night of the robbery."
+          },
+          "synonyms": [],
+          "collocations": [
+            "summon a witness",
+            "be summoned to court"
+          ]
+        },
+        {
+          "word": "proceed",
+          "uzb": "davom ettirmoq, davom etmoq",
+          "emoji": "▶️",
+          "examples": {
+            "easy": "Please proceed to gate five.",
+            "normal": "They decided to proceed with the project despite the cost.",
+            "hard": "After a short break for questions, the speaker proceeded to explain the second part of the plan."
+          },
+          "synonyms": [
+            "continue",
+            "go on"
+          ],
+          "collocations": [
+            "proceed with",
+            "proceed to"
+          ]
+        },
+        {
+          "word": "further",
+          "uzb": "uzoqroq, nariroq",
+          "emoji": "🛣️",
+          "examples": {
+            "easy": "Don't go any further.",
+            "normal": "We had walked further than I had realised.",
+            "hard": "The hotel was further from the beach than the website suggested, so we had to take a taxi every day."
+          },
+          "synonyms": [
+            "farther"
+          ],
+          "collocations": [
+            "further away",
+            "go further"
+          ]
+        },
+        {
+          "word": "care",
+          "uzb": "parvarish, qarash, ehtiyot qilish",
+          "emoji": "🩹",
+          "examples": {
+            "easy": "The baby needs a lot of care.",
+            "normal": "The standard of care at our local hospital is excellent.",
+            "hard": "Elderly people who live alone often need extra care, especially during the cold winter months."
+          },
+          "synonyms": [
+            "attention"
+          ],
+          "collocations": [
+            "take care of",
+            "medical care"
+          ]
+        },
+        {
+          "word": "become",
+          "uzb": "-ga aylanmoq",
+          "emoji": "🦋",
+          "examples": {
+            "easy": "The weather became warmer.",
+            "normal": "He became a doctor after many years of hard study.",
+            "hard": "What started as a small family business has become one of the biggest companies in the country."
+          },
+          "synonyms": [
+            "get",
+            "turn into"
+          ],
+          "collocations": [
+            "become famous",
+            "become clear"
+          ]
+        },
+        {
+          "word": "platform",
+          "uzb": "temiryo‘lga chiqish joyi, platforma",
+          "emoji": "🚉",
+          "examples": {
+            "easy": "The train is at platform two.",
+            "normal": "The train to Samarkand leaves from platform three.",
+            "hard": "We ran along the platform with our heavy bags and jumped on the train just before the doors closed."
+          },
+          "synonyms": [],
+          "collocations": [
+            "platform number",
+            "on the platform"
+          ]
+        },
+        {
+          "word": "everywhere",
+          "uzb": "hamma yoq, har yer",
+          "emoji": "🌍",
+          "examples": {
+            "easy": "I looked everywhere for my keys.",
+            "normal": "There were people everywhere in the square during the festival.",
+            "hard": "Mobile phones are everywhere these days, and it's hard to find anyone who doesn't have one."
+          },
+          "synonyms": [],
+          "collocations": [
+            "look everywhere",
+            "everywhere you go"
+          ]
+        },
+        {
+          "word": "colourful",
+          "uzb": "har xil rangli",
+          "emoji": "🌈",
+          "examples": {
+            "easy": "The market is very colourful.",
+            "normal": "The male birds are more colourful than the females.",
+            "hard": "The bazaar was full of colourful fruit, spices and silk scarves that attracted tourists from all over the world."
+          },
+          "synonyms": [
+            "bright",
+            "vivid"
+          ],
+          "collocations": [
+            "colourful clothes",
+            "colourful flowers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-elementary-lesson-40",
+      "lesson": 40,
+      "name": "Lesson 40 - Quantifiers, food and town",
+      "source": "Main Lesson (MT) p. 99",
+      "words": [
+        {
+          "word": "underscore",
+          "uzb": "taʼkidlamoq",
+          "emoji": "🖍️",
+          "examples": {
+            "easy": "The report underscores the problem.",
+            "normal": "The speaker underscored the most important points of the plan.",
+            "hard": "The recent floods underscore the need for better drainage systems in the city's older neighbourhoods."
+          },
+          "synonyms": [
+            "emphasise",
+            "stress"
+          ],
+          "collocations": [
+            "underscore the importance",
+            "underscore the need"
+          ]
+        },
+        {
+          "word": "brochure",
+          "uzb": "broshyura, risola",
+          "emoji": "📄",
+          "examples": {
+            "easy": "Take a free brochure.",
+            "normal": "You can send for a free colour brochure today.",
+            "hard": "The travel agent gave us a brochure with photos and prices of all the hotels on the coast."
+          },
+          "synonyms": [
+            "leaflet",
+            "booklet"
+          ],
+          "collocations": [
+            "travel brochure",
+            "free brochure"
+          ]
+        },
+        {
+          "word": "ingredient",
+          "uzb": "tarkibiy qism, masaliq",
+          "emoji": "🥕",
+          "examples": {
+            "easy": "Mix all the ingredients.",
+            "normal": "Mix all the ingredients in a bowl and bake for thirty minutes.",
+            "hard": "The secret of a good plov is fresh ingredients, especially high-quality rice and tender meat."
+          },
+          "synonyms": [
+            "component"
+          ],
+          "collocations": [
+            "main ingredient",
+            "fresh ingredients"
+          ]
+        },
+        {
+          "word": "mention",
+          "uzb": "aytib o‘tmoq, eslatib o‘tmoq",
+          "emoji": "🗣️",
+          "examples": {
+            "easy": "She mentioned your name.",
+            "normal": "As I mentioned earlier, there have been a lot of changes recently.",
+            "hard": "He didn't mention that he was leaving the company until the very last day, which surprised everyone."
+          },
+          "synonyms": [
+            "refer to"
+          ],
+          "collocations": [
+            "mention something to someone",
+            "not to mention"
+          ]
+        },
+        {
+          "word": "quantifier",
+          "uzb": "miqdor olmoshlari",
+          "emoji": "🔢",
+          "examples": {
+            "easy": "'Many' is a quantifier.",
+            "normal": "'Some', 'many', 'a lot of' and 'a few' are examples of quantifiers.",
+            "hard": "Learners often confuse quantifiers like 'much' and 'many', because the choice depends on whether the noun is countable."
+          },
+          "synonyms": [],
+          "collocations": [
+            "use a quantifier",
+            "common quantifiers"
+          ]
+        },
+        {
+          "word": "survey",
+          "uzb": "ko‘zdan kechirmoq, ko‘rib chiqmoq",
+          "emoji": "🔍",
+          "examples": {
+            "easy": "They surveyed the damage.",
+            "normal": "The next morning we surveyed the damage caused by the fire.",
+            "hard": "From the top of the hill, the general surveyed the valley to decide where to place his soldiers."
+          },
+          "synonyms": [
+            "examine",
+            "inspect"
+          ],
+          "collocations": [
+            "survey the damage",
+            "survey the scene"
+          ]
+        },
+        {
+          "word": "average",
+          "uzb": "o‘rtacha, o‘rtahol",
+          "emoji": "📊",
+          "examples": {
+            "easy": "He is of average height.",
+            "normal": "His average speed on the motorway was 50 miles per hour.",
+            "hard": "The average salary in the capital is higher than in the regions, but so is the cost of living."
+          },
+          "synonyms": [
+            "typical",
+            "ordinary"
+          ],
+          "collocations": [
+            "average speed",
+            "above average"
+          ]
+        },
+        {
+          "word": "accord",
+          "uzb": "kelishuv, bitim",
+          "emoji": "✍️",
+          "examples": {
+            "easy": "They signed a peace accord.",
+            "normal": "The two sides signed a peace accord last July.",
+            "hard": "The international accord on climate change was signed by almost every country, but not all of them kept their promises."
+          },
+          "synonyms": [
+            "agreement",
+            "treaty"
+          ],
+          "collocations": [
+            "peace accord",
+            "sign an accord"
+          ]
+        },
+        {
+          "word": "perhaps",
+          "uzb": "balki, ehtimol",
+          "emoji": "🤔",
+          "examples": {
+            "easy": "Perhaps it will rain.",
+            "normal": "Perhaps we could meet for coffee after work tomorrow.",
+            "hard": "Perhaps the most surprising thing about the city is how quiet it becomes once the tourists have gone home."
+          },
+          "synonyms": [
+            "maybe",
+            "possibly"
+          ],
+          "collocations": [
+            "perhaps not",
+            "perhaps because"
+          ]
+        },
+        {
+          "word": "microwave",
+          "uzb": "mikroto‘lqinli pech",
+          "emoji": "♨️",
+          "examples": {
+            "easy": "Heat it in the microwave.",
+            "normal": "Put the fish in the microwave and it will only take five minutes.",
+            "hard": "Many office workers bring food from home and warm it up in the microwave at lunchtime."
+          },
+          "synonyms": [],
+          "collocations": [
+            "microwave oven",
+            "in the microwave"
+          ]
+        },
+        {
+          "word": "mushroom",
+          "uzb": "qo‘ziqorin",
+          "emoji": "🍄",
+          "examples": {
+            "easy": "I like mushroom soup.",
+            "normal": "We picked some mushrooms in the forest near our village.",
+            "hard": "Unfortunately, some poisonous mushrooms look just like edible ones, so never pick them without an expert."
+          },
+          "synonyms": [],
+          "collocations": [
+            "mushroom soup",
+            "wild mushrooms"
+          ]
+        },
+        {
+          "word": "policeman",
+          "uzb": "zobit, militsiya xodimi",
+          "emoji": "👮",
+          "examples": {
+            "easy": "The policeman helped us.",
+            "normal": "He was one of the best policemen in the whole city.",
+            "hard": "A policeman stopped the traffic so that the children could cross the busy road safely after school."
+          },
+          "synonyms": [
+            "police officer"
+          ],
+          "collocations": [
+            "traffic policeman",
+            "ask a policeman"
+          ]
+        },
+        {
+          "word": "corner",
+          "uzb": "burchak",
+          "emoji": "📐",
+          "examples": {
+            "easy": "She sat in the corner.",
+            "normal": "She sat in the corner of the room reading a book.",
+            "hard": "There's a small bakery on the corner of our street that sells the best bread in the neighbourhood."
+          },
+          "synonyms": [],
+          "collocations": [
+            "on the corner",
+            "in the corner"
+          ]
+        },
+        {
+          "word": "opposite",
+          "uzb": "qarama-qarshi tomonda",
+          "emoji": "↔️",
+          "examples": {
+            "easy": "The bank is opposite the park.",
+            "normal": "The answers are given on the opposite page.",
+            "hard": "They live in the house opposite ours, so we see each other almost every morning on the way to work."
+          },
+          "synonyms": [],
+          "collocations": [
+            "opposite side",
+            "directly opposite"
+          ]
+        },
+        {
+          "word": "grace",
+          "uzb": "nazokat, noziklik",
+          "emoji": "🩰",
+          "examples": {
+            "easy": "She dances with grace.",
+            "normal": "She moves with the natural grace of a ballerina.",
+            "hard": "Even when she lost the final, she accepted defeat with grace and congratulated her opponent warmly."
+          },
+          "synonyms": [
+            "elegance"
+          ],
+          "collocations": [
+            "with grace",
+            "natural grace"
+          ]
+        },
+        {
+          "word": "improvement",
+          "uzb": "yaxshilanish, yuksalish",
+          "emoji": "📈",
+          "examples": {
+            "easy": "There is some improvement.",
+            "normal": "We expect to see further improvement in the road system next year.",
+            "hard": "The doctor was pleased to see a clear improvement in her health after only two weeks of treatment."
+          },
+          "synonyms": [
+            "progress"
+          ],
+          "collocations": [
+            "big improvement",
+            "room for improvement"
+          ]
+        },
+        {
+          "word": "forecast",
+          "uzb": "bashorat, oldindan aytish",
+          "emoji": "🌦️",
+          "examples": {
+            "easy": "Check the weather forecast.",
+            "normal": "The weather forecast is for a dry, sunny day tomorrow.",
+            "hard": "Economists have changed their forecast for next year because prices are rising faster than expected."
+          },
+          "synonyms": [
+            "prediction"
+          ],
+          "collocations": [
+            "weather forecast",
+            "sales forecast"
+          ]
+        },
+        {
+          "word": "junction",
+          "uzb": "chorraha, yo‘l kesishgan joy",
+          "emoji": "🚦",
+          "examples": {
+            "easy": "Turn left at the junction.",
+            "normal": "Come off the motorway at junction 6.",
+            "hard": "There was an accident at the busy junction near the station, and traffic was stopped for an hour."
+          },
+          "synonyms": [
+            "crossroads",
+            "intersection"
+          ],
+          "collocations": [
+            "road junction",
+            "busy junction"
+          ]
+        },
+        {
+          "word": "discussion",
+          "uzb": "muhokama, munozara",
+          "emoji": "💬",
+          "examples": {
+            "easy": "We had a long discussion.",
+            "normal": "Most problems can be solved by discussion.",
+            "hard": "After a long discussion, the committee finally agreed to build a new playground in the park."
+          },
+          "synonyms": [
+            "debate",
+            "talk"
+          ],
+          "collocations": [
+            "have a discussion",
+            "under discussion"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3679 @@
+{
+  "level": "Teenagers & Adults - Starter",
+  "track": "VT",
+  "source": "Starter VT.pdf",
+  "units": [
+    {
+      "id": "adult-vt-starter-lesson-1",
+      "lesson": 1,
+      "name": "Lesson 1 - Pronouns, jobs and praise",
+      "source": "Video Lesson (VT) p. 3",
+      "words": [
+        {
+          "word": "praise",
+          "uzb": "maqtov",
+          "emoji": "👏",
+          "examples": {
+            "easy": "Thank you for the praise.",
+            "normal": "The teacher gave her a lot of praise for her work.",
+            "hard": "A little praise from your manager can make a hard week feel much easier."
+          },
+          "synonyms": [
+            "compliment"
+          ],
+          "collocations": [
+            "high praise",
+            "words of praise"
+          ]
+        },
+        {
+          "word": "excellent",
+          "uzb": "zo‘r",
+          "emoji": "🌟",
+          "examples": {
+            "easy": "Your English is excellent.",
+            "normal": "We had an excellent meal at the new restaurant, and the prices were good too.",
+            "hard": "She got excellent results in her exams because she studied every evening for months."
+          },
+          "synonyms": [
+            "great",
+            "superb"
+          ],
+          "collocations": [
+            "excellent idea",
+            "excellent work"
+          ]
+        },
+        {
+          "word": "amazing",
+          "uzb": "ajoyib",
+          "emoji": "🤩",
+          "examples": {
+            "easy": "The view is amazing.",
+            "normal": "We had an amazing holiday by the sea last summer.",
+            "hard": "It is amazing how quickly children learn a new language when they live abroad."
+          },
+          "synonyms": [
+            "incredible",
+            "fantastic"
+          ],
+          "collocations": [
+            "amazing view",
+            "absolutely amazing"
+          ]
+        },
+        {
+          "word": "astonishing",
+          "uzb": "ajoyib",
+          "emoji": "😲",
+          "examples": {
+            "easy": "That is astonishing news!",
+            "normal": "The new bridge was built in an astonishing six months.",
+            "hard": "The young pianist played with astonishing skill, and the whole audience stood up to clap."
+          },
+          "synonyms": [
+            "amazing",
+            "incredible"
+          ],
+          "collocations": [
+            "astonishing speed",
+            "quite astonishing"
+          ]
+        },
+        {
+          "word": "wonderful",
+          "uzb": "ajoyib",
+          "emoji": "🌈",
+          "examples": {
+            "easy": "What a wonderful day!",
+            "normal": "Thank you for a wonderful dinner. The food was great.",
+            "hard": "My grandmother was a wonderful cook, and her kitchen always smelt of fresh bread."
+          },
+          "synonyms": [
+            "lovely",
+            "marvellous"
+          ],
+          "collocations": [
+            "wonderful time",
+            "wonderful idea"
+          ]
+        },
+        {
+          "word": "sensational",
+          "uzb": "ajoyib",
+          "emoji": "🎆",
+          "examples": {
+            "easy": "The concert was sensational.",
+            "normal": "Their new singer has a sensational voice and a lot of fans.",
+            "hard": "The team had a sensational season, winning almost every match they played at home."
+          },
+          "synonyms": [
+            "spectacular"
+          ],
+          "collocations": [
+            "sensational goal",
+            "sensational performance"
+          ]
+        },
+        {
+          "word": "fabulous",
+          "uzb": "ajoyib",
+          "emoji": "✨",
+          "examples": {
+            "easy": "You look fabulous today!",
+            "normal": "We stayed in a fabulous hotel with a big swimming pool.",
+            "hard": "The party was fabulous, with great music, delicious food and lots of old friends."
+          },
+          "synonyms": [
+            "fantastic",
+            "marvellous"
+          ],
+          "collocations": [
+            "fabulous time",
+            "fabulous food"
+          ]
+        },
+        {
+          "word": "well done",
+          "uzb": "zo‘r qildingiz",
+          "emoji": "👍",
+          "examples": {
+            "easy": "Well done, everyone! Great work.",
+            "normal": "Well done! You passed your driving test on the first try.",
+            "hard": "When I finished my first marathon, my wife hugged me and said, \"Well done, I'm so proud of you.\""
+          },
+          "synonyms": [
+            "good job",
+            "great job"
+          ],
+          "collocations": [
+            "well done to everyone",
+            "well done indeed"
+          ]
+        },
+        {
+          "word": "good job",
+          "uzb": "barakalla",
+          "emoji": "🙌",
+          "examples": {
+            "easy": "Good job, Aziz! Thank you.",
+            "normal": "Good job! Your homework has no mistakes this time.",
+            "hard": "The manager told the new workers they had done a good job and could go home early."
+          },
+          "synonyms": [
+            "well done"
+          ],
+          "collocations": [
+            "do a good job",
+            "really good job"
+          ]
+        },
+        {
+          "word": "brilliant",
+          "uzb": "zo‘r",
+          "emoji": "💎",
+          "examples": {
+            "easy": "That's a brilliant idea!",
+            "normal": "My sister is a brilliant doctor, and her patients love her.",
+            "hard": "He is a brilliant student, but he sometimes forgets to hand in his homework on time."
+          },
+          "synonyms": [
+            "excellent",
+            "great"
+          ],
+          "collocations": [
+            "brilliant idea",
+            "absolutely brilliant"
+          ]
+        },
+        {
+          "word": "write it down",
+          "uzb": "yozib oling",
+          "emoji": "✍️",
+          "examples": {
+            "easy": "Please write it down.",
+            "normal": "This word is new, so write it down in your notebook.",
+            "hard": "If you don't write it down straight away, you will probably forget the phone number by tomorrow."
+          },
+          "synonyms": [
+            "note it down",
+            "jot it down"
+          ],
+          "collocations": [
+            "write it down quickly",
+            "write it down somewhere"
+          ]
+        },
+        {
+          "word": "jot it down",
+          "uzb": "yozib oling",
+          "emoji": "📝",
+          "examples": {
+            "easy": "Here's my number. Jot it down.",
+            "normal": "I have a good idea, so let me jot it down.",
+            "hard": "Keep a small notebook in your bag, and when you hear a useful word, jot it down."
+          },
+          "synonyms": [
+            "write it down",
+            "note it down"
+          ],
+          "collocations": [
+            "jot it down quickly",
+            "jot it down somewhere"
+          ]
+        },
+        {
+          "word": "erase",
+          "uzb": "o‘chirmoq",
+          "emoji": "🧽",
+          "examples": {
+            "easy": "Please erase the board.",
+            "normal": "You can erase pencil marks easily, but not pen marks.",
+            "hard": "I accidentally erased all the photos on my phone, so I lost the pictures from our holiday."
+          },
+          "synonyms": [
+            "delete",
+            "rub out"
+          ],
+          "collocations": [
+            "erase the board",
+            "erase a file"
+          ]
+        },
+        {
+          "word": "singular",
+          "uzb": "birlik",
+          "emoji": "1️⃣",
+          "examples": {
+            "easy": "'Book' is a singular noun.",
+            "normal": "We use 'is' with a singular noun, like 'the car is'.",
+            "hard": "In English, a singular noun usually needs a word like 'a' or 'the' in front of it."
+          },
+          "synonyms": [],
+          "collocations": [
+            "singular noun",
+            "singular form"
+          ]
+        },
+        {
+          "word": "plural",
+          "uzb": "ko‘plik",
+          "emoji": "🔢",
+          "examples": {
+            "easy": "'Books' is a plural noun.",
+            "normal": "The plural of 'child' is 'children', not 'childs'.",
+            "hard": "Most English nouns form the plural with -s, but some common words, like 'man' and 'woman', are irregular."
+          },
+          "synonyms": [],
+          "collocations": [
+            "plural form",
+            "plural noun"
+          ]
+        },
+        {
+          "word": "student",
+          "uzb": "talaba",
+          "emoji": "🧑‍🎓",
+          "examples": {
+            "easy": "I am a student.",
+            "normal": "She is a student at a university in Tashkent.",
+            "hard": "As a student, he worked in a café in the evenings to pay for his books."
+          },
+          "synonyms": [
+            "learner",
+            "pupil"
+          ],
+          "collocations": [
+            "university student",
+            "medical student"
+          ]
+        },
+        {
+          "word": "dog",
+          "uzb": "it",
+          "emoji": "🐕",
+          "examples": {
+            "easy": "My dog is very friendly.",
+            "normal": "We walk our dog in the park every morning.",
+            "hard": "Our neighbours have a big dog that barks loudly whenever someone walks past their gate."
+          },
+          "synonyms": [],
+          "collocations": [
+            "walk the dog",
+            "dog food"
+          ]
+        },
+        {
+          "word": "I",
+          "uzb": "men",
+          "emoji": "🙋",
+          "examples": {
+            "easy": "I am from Uzbekistan.",
+            "normal": "I work in an office and go home at six.",
+            "hard": "I have studied English for two years, but I still want to speak more fluently."
+          },
+          "synonyms": [],
+          "collocations": [
+            "I think",
+            "I'm sorry"
+          ]
+        },
+        {
+          "word": "you",
+          "uzb": "sen/siz/sizlar",
+          "emoji": "🫵",
+          "examples": {
+            "easy": "You are my friend.",
+            "normal": "Are you a teacher or a student at this school?",
+            "hard": "If you need help with your homework, you can call me at any time this evening."
+          },
+          "synonyms": [],
+          "collocations": [
+            "thank you",
+            "see you"
+          ]
+        },
+        {
+          "word": "he",
+          "uzb": "u (o‘g‘il bola uchun)",
+          "emoji": "👨",
+          "examples": {
+            "easy": "He is my brother.",
+            "normal": "He is a doctor, and he works in a big hospital.",
+            "hard": "He lives near the station, so he usually walks to work instead of taking the bus."
+          },
+          "synonyms": [],
+          "collocations": [
+            "he says",
+            "he is"
+          ]
+        },
+        {
+          "word": "she",
+          "uzb": "u (qiz bola uchun)",
+          "emoji": "👩",
+          "examples": {
+            "easy": "She is a nurse.",
+            "normal": "She is my sister, and she lives in Samarkand.",
+            "hard": "She speaks three languages, and she wants to work for an international company one day."
+          },
+          "synonyms": [],
+          "collocations": [
+            "she says",
+            "she is"
+          ]
+        },
+        {
+          "word": "it",
+          "uzb": "u (jonsiz narsalar va hayvonlar uchun)",
+          "emoji": "📦",
+          "examples": {
+            "easy": "It is a new car.",
+            "normal": "I have a cat. It is black and very small.",
+            "hard": "I bought a new phone last week, and it takes much better photos than my old one."
+          },
+          "synonyms": [],
+          "collocations": [
+            "it is",
+            "it works"
+          ]
+        },
+        {
+          "word": "we",
+          "uzb": "biz",
+          "emoji": "👥",
+          "examples": {
+            "easy": "We are students at college.",
+            "normal": "We live in a small flat near the city centre.",
+            "hard": "We usually visit our parents on Sundays and have a big family lunch together."
+          },
+          "synonyms": [],
+          "collocations": [
+            "we are",
+            "we all"
+          ]
+        },
+        {
+          "word": "they",
+          "uzb": "ular",
+          "emoji": "🧑‍🤝‍🧑",
+          "examples": {
+            "easy": "They are my friends.",
+            "normal": "They are doctors, and they work in the same hospital.",
+            "hard": "They moved to London last year, and now they want to buy a house there."
+          },
+          "synonyms": [],
+          "collocations": [
+            "they are",
+            "they say"
+          ]
+        },
+        {
+          "word": "pronoun",
+          "uzb": "olmosh",
+          "emoji": "🔤",
+          "examples": {
+            "easy": "'He' is a pronoun.",
+            "normal": "We use a pronoun so we don't repeat the same name.",
+            "hard": "In the sentence 'Anna is a nurse and she works at night', the word 'she' is a pronoun."
+          },
+          "synonyms": [],
+          "collocations": [
+            "personal pronoun",
+            "subject pronoun"
+          ]
+        },
+        {
+          "word": "personal",
+          "uzb": "kishilik",
+          "emoji": "👤",
+          "examples": {
+            "easy": "'I' is a personal pronoun.",
+            "normal": "English has seven personal pronouns, like 'I', 'you' and 'they'.",
+            "hard": "Every English sentence needs a subject, and very often that subject is a personal pronoun such as 'he'."
+          },
+          "synonyms": [],
+          "collocations": [
+            "personal pronoun",
+            "object personal pronoun"
+          ]
+        },
+        {
+          "word": "teacher",
+          "uzb": "o‘qituvchi",
+          "emoji": "👩‍🏫",
+          "examples": {
+            "easy": "My teacher is very kind.",
+            "normal": "Our English teacher gives us homework after every lesson.",
+            "hard": "The teacher explained the new rule twice, so that everyone in the class could understand it."
+          },
+          "synonyms": [
+            "tutor",
+            "instructor"
+          ],
+          "collocations": [
+            "English teacher",
+            "school teacher"
+          ]
+        },
+        {
+          "word": "doctor",
+          "uzb": "shifokor",
+          "emoji": "👨‍⚕️",
+          "examples": {
+            "easy": "My father is a doctor.",
+            "normal": "If you feel ill, you should go to the doctor.",
+            "hard": "The doctor told him to drink more water and to rest at home for three days."
+          },
+          "synonyms": [],
+          "collocations": [
+            "see a doctor",
+            "family doctor"
+          ]
+        },
+        {
+          "word": "nurse",
+          "uzb": "hamshira",
+          "emoji": "👩‍⚕️",
+          "examples": {
+            "easy": "She is a nurse.",
+            "normal": "The nurse checked my temperature and gave me some water.",
+            "hard": "My aunt has worked as a nurse in the children's hospital for more than twenty years."
+          },
+          "synonyms": [],
+          "collocations": [
+            "hospital nurse",
+            "night nurse"
+          ]
+        },
+        {
+          "word": "football player",
+          "uzb": "futbol o‘yinchisi",
+          "emoji": "⚽",
+          "examples": {
+            "easy": "He is a football player.",
+            "normal": "My son wants to be a famous football player one day.",
+            "hard": "The football player hurt his leg in the first half, so he could not finish the match."
+          },
+          "synonyms": [
+            "footballer"
+          ],
+          "collocations": [
+            "professional football player",
+            "famous football player"
+          ]
+        },
+        {
+          "word": "dentist",
+          "uzb": "tish shifokori",
+          "emoji": "🦷",
+          "examples": {
+            "easy": "She is a dentist.",
+            "normal": "I have a toothache, so I need to see a dentist.",
+            "hard": "You should visit the dentist twice a year, even if your teeth don't hurt."
+          },
+          "synonyms": [],
+          "collocations": [
+            "go to the dentist",
+            "dentist appointment"
+          ]
+        },
+        {
+          "word": "hardworking",
+          "uzb": "mehnatsevar",
+          "emoji": "💪",
+          "examples": {
+            "easy": "Aziz is very hardworking.",
+            "normal": "She is a hardworking student and always does her homework.",
+            "hard": "My parents are hardworking people who started their own small business with very little money."
+          },
+          "synonyms": [
+            "diligent"
+          ],
+          "collocations": [
+            "hardworking student",
+            "hardworking people"
+          ]
+        },
+        {
+          "word": "car",
+          "uzb": "mashina",
+          "emoji": "🚗",
+          "examples": {
+            "easy": "This is my new car.",
+            "normal": "My brother drives his car to work every day.",
+            "hard": "We want to buy a bigger car, because our old one is too small for the family."
+          },
+          "synonyms": [],
+          "collocations": [
+            "drive a car",
+            "car park"
+          ]
+        },
+        {
+          "word": "pilot",
+          "uzb": "uchuvchi",
+          "emoji": "🧑‍✈️",
+          "examples": {
+            "easy": "Anton is a pilot.",
+            "normal": "The pilot said, \"Welcome on board. We are flying to Istanbul.\"",
+            "hard": "My cousin trained for three years to become a pilot, and now she flies all over the world."
+          },
+          "synonyms": [],
+          "collocations": [
+            "airline pilot",
+            "co-pilot"
+          ]
+        },
+        {
+          "word": "umbrella",
+          "uzb": "soyabon",
+          "emoji": "☂️",
+          "examples": {
+            "easy": "Take your umbrella. It's raining.",
+            "normal": "I always keep a small umbrella in my bag in spring.",
+            "hard": "I left my umbrella on the bus this morning, so I got completely wet on the way home."
+          },
+          "synonyms": [],
+          "collocations": [
+            "open an umbrella",
+            "beach umbrella"
+          ]
+        },
+        {
+          "word": "billionaire",
+          "uzb": "milliarder",
+          "emoji": "💰",
+          "examples": {
+            "easy": "He is a billionaire.",
+            "normal": "A billionaire bought the old football club last year.",
+            "hard": "The billionaire gave a lot of money to build new schools and hospitals in poor areas."
+          },
+          "synonyms": [],
+          "collocations": [
+            "tech billionaire",
+            "self-made billionaire"
+          ]
+        },
+        {
+          "word": "businessman",
+          "uzb": "tadbirkor",
+          "emoji": "💼",
+          "examples": {
+            "easy": "My uncle is a businessman.",
+            "normal": "The businessman travels to Dubai three or four times a year.",
+            "hard": "He started as a shop assistant, but now he is a successful businessman with ten shops."
+          },
+          "synonyms": [
+            "entrepreneur"
+          ],
+          "collocations": [
+            "successful businessman",
+            "local businessman"
+          ]
+        },
+        {
+          "word": "porter",
+          "uzb": "yuk tashuvchi",
+          "emoji": "🧳",
+          "examples": {
+            "easy": "The porter carried my bags.",
+            "normal": "A porter at the station helped me with my heavy suitcase.",
+            "hard": "When we arrived at the hotel, a friendly porter took our luggage up to the fifth floor."
+          },
+          "synonyms": [],
+          "collocations": [
+            "hotel porter",
+            "railway porter"
+          ]
+        },
+        {
+          "word": "family",
+          "uzb": "oila",
+          "emoji": "👪",
+          "examples": {
+            "easy": "We are a big family.",
+            "normal": "I have dinner with my family every Sunday evening.",
+            "hard": "My family lives in Bukhara, but I moved to Tashkent for work three years ago."
+          },
+          "synonyms": [],
+          "collocations": [
+            "big family",
+            "family name"
+          ]
+        },
+        {
+          "word": "smart",
+          "uzb": "aqlli",
+          "emoji": "🧠",
+          "examples": {
+            "easy": "My daughter is very smart.",
+            "normal": "He is a smart boy, and he learns new things quickly.",
+            "hard": "She is smart enough to fix the computer herself, so she never pays for repairs."
+          },
+          "synonyms": [
+            "clever",
+            "intelligent",
+            "bright"
+          ],
+          "collocations": [
+            "smart student",
+            "smart idea"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-vt-starter-lesson-2",
+      "lesson": 2,
+      "name": "Lesson 2 - Countries and verb to be",
+      "source": "Video Lesson (VT) p. 5, 6, 7",
+      "words": [
+        {
+          "word": "student",
+          "uzb": "talaba",
+          "emoji": "🧑‍🎓",
+          "examples": {
+            "easy": "Are you a student?",
+            "normal": "Yes, I am a student at the language centre.",
+            "hard": "My brother is a student in Moscow, and he comes home every summer."
+          },
+          "synonyms": [
+            "learner"
+          ],
+          "collocations": [
+            "university student",
+            "new student"
+          ]
+        },
+        {
+          "word": "yes",
+          "uzb": "ha",
+          "emoji": "✅",
+          "examples": {
+            "easy": "Yes, I am a teacher.",
+            "normal": "\"Is she from Canada?\" \"Yes, she is. She's from Toronto.\"",
+            "hard": "When the manager asked if I could work on Saturday, I said yes without thinking."
+          },
+          "synonyms": [],
+          "collocations": [
+            "say yes",
+            "yes, please"
+          ]
+        },
+        {
+          "word": "teacher",
+          "uzb": "o‘qituvchi",
+          "emoji": "👩‍🏫",
+          "examples": {
+            "easy": "Is he a teacher?",
+            "normal": "Our teacher is from England, and she is very friendly.",
+            "hard": "The new teacher speaks slowly and clearly, so all the students understand her easily."
+          },
+          "synonyms": [
+            "tutor"
+          ],
+          "collocations": [
+            "English teacher",
+            "maths teacher"
+          ]
+        },
+        {
+          "word": "no",
+          "uzb": "yo‘q",
+          "emoji": "❌",
+          "examples": {
+            "easy": "No, I'm not a doctor.",
+            "normal": "\"Are you from Japan?\" \"No, I'm not. I'm from Turkey.\"",
+            "hard": "I asked my boss for a day off next week, but unfortunately he said no."
+          },
+          "synonyms": [],
+          "collocations": [
+            "say no",
+            "no, thanks"
+          ]
+        },
+        {
+          "word": "where",
+          "uzb": "qayerda, qayer",
+          "emoji": "📍",
+          "examples": {
+            "easy": "Where are you from?",
+            "normal": "Where is your teacher from? Is she from England?",
+            "hard": "Where do you usually go on holiday when you want a quiet week by the sea?"
+          },
+          "synonyms": [],
+          "collocations": [
+            "where from",
+            "where exactly"
+          ]
+        },
+        {
+          "word": "be from",
+          "uzb": "…dan bo‘lmoq (kelib chiqmoq)",
+          "emoji": "🌍",
+          "examples": {
+            "easy": "I am from Uzbekistan.",
+            "normal": "My new friend is from Canada, but she lives in Tashkent.",
+            "hard": "Most of the students in my class are from Turkey, but two of them are from Japan."
+          },
+          "synonyms": [
+            "come from"
+          ],
+          "collocations": [
+            "be from abroad",
+            "be originally from"
+          ]
+        },
+        {
+          "word": "Turkey",
+          "uzb": "Turkiya",
+          "emoji": "🇹🇷",
+          "examples": {
+            "easy": "I'm from Turkey, from Istanbul.",
+            "normal": "Turkey is a big country between Europe and Asia.",
+            "hard": "Many people from Uzbekistan visit Turkey every year because the flights are short and cheap."
+          },
+          "synonyms": [],
+          "collocations": [
+            "holiday in Turkey",
+            "fly to Turkey"
+          ]
+        },
+        {
+          "word": "Canada",
+          "uzb": "Kanada",
+          "emoji": "🇨🇦",
+          "examples": {
+            "easy": "The teacher is from Canada.",
+            "normal": "Canada is a very big country with long, cold winters.",
+            "hard": "My cousin moved to Canada five years ago, and now she works as a nurse in Toronto."
+          },
+          "synonyms": [],
+          "collocations": [
+            "move to Canada",
+            "live in Canada"
+          ]
+        },
+        {
+          "word": "England",
+          "uzb": "Angliya",
+          "emoji": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          "examples": {
+            "easy": "Carol is from England.",
+            "normal": "London is the capital of England and a very busy city.",
+            "hard": "He studied in England for two years, so his English is much better than mine."
+          },
+          "synonyms": [],
+          "collocations": [
+            "study in England",
+            "the north of England"
+          ]
+        },
+        {
+          "word": "France",
+          "uzb": "Fransiya",
+          "emoji": "🇫🇷",
+          "examples": {
+            "easy": "Tony is from France.",
+            "normal": "Paris is in France, and it is a beautiful city.",
+            "hard": "We want to visit France next spring, because my wife has always wanted to see Paris."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the south of France",
+            "travel to France"
+          ]
+        },
+        {
+          "word": "Japan",
+          "uzb": "Yaponiya",
+          "emoji": "🇯🇵",
+          "examples": {
+            "easy": "Are you from Japan?",
+            "normal": "Japan is in Asia, and Tokyo is its capital city.",
+            "hard": "Cars and phones from Japan are popular all over the world because of their good quality."
+          },
+          "synonyms": [],
+          "collocations": [
+            "made in Japan",
+            "visit Japan"
+          ]
+        },
+        {
+          "word": "Spain",
+          "uzb": "Ispaniya",
+          "emoji": "🇪🇸",
+          "examples": {
+            "easy": "Is she from Spain?",
+            "normal": "Spain is a sunny country with lovely beaches and food.",
+            "hard": "Every summer, thousands of tourists go to Spain to enjoy the hot weather and the sea."
+          },
+          "synonyms": [],
+          "collocations": [
+            "holiday in Spain",
+            "the north of Spain"
+          ]
+        },
+        {
+          "word": "Holland",
+          "uzb": "Gollandiya",
+          "emoji": "🇳🇱",
+          "examples": {
+            "easy": "Mary is from Holland.",
+            "normal": "Holland is famous for its flowers, bikes and old windmills.",
+            "hard": "In Holland, many people ride their bikes to work, even when the weather is cold and wet."
+          },
+          "synonyms": [
+            "the Netherlands"
+          ],
+          "collocations": [
+            "live in Holland",
+            "flowers from Holland"
+          ]
+        },
+        {
+          "word": "sentence",
+          "uzb": "gap",
+          "emoji": "🧾",
+          "examples": {
+            "easy": "Read this sentence aloud.",
+            "normal": "Please complete these sentences with 'am', 'is' or 'are'.",
+            "hard": "Try to make a short sentence about yourself, for example where you are from and what you do."
+          },
+          "synonyms": [],
+          "collocations": [
+            "complete a sentence",
+            "make a sentence"
+          ]
+        },
+        {
+          "word": "hello",
+          "uzb": "salom",
+          "emoji": "👋",
+          "examples": {
+            "easy": "Hello! How are you?",
+            "normal": "She smiled and said hello to everyone in the room.",
+            "hard": "Every morning, our neighbour says hello to us from her balcony while she waters her flowers."
+          },
+          "synonyms": [
+            "hi"
+          ],
+          "collocations": [
+            "say hello",
+            "hello again"
+          ]
+        },
+        {
+          "word": "how are you",
+          "uzb": "qalaysiz?",
+          "emoji": "🙂",
+          "examples": {
+            "easy": "Hi, Anna! How are you?",
+            "normal": "\"How are you?\" \"I'm fine, thanks. And you?\"",
+            "hard": "When I met my old teacher in the street, she asked, \"How are you? How is your family?\""
+          },
+          "synonyms": [],
+          "collocations": [
+            "how are you today",
+            "how are you doing"
+          ]
+        },
+        {
+          "word": "fine",
+          "uzb": "yaxshi",
+          "emoji": "😊",
+          "examples": {
+            "easy": "I'm fine, thanks. And you?",
+            "normal": "\"How is your mother?\" \"She's fine, thank you for asking.\"",
+            "hard": "I felt ill yesterday, but after a good night's sleep I'm fine again today."
+          },
+          "synonyms": [
+            "well",
+            "OK"
+          ],
+          "collocations": [
+            "I'm fine",
+            "feel fine"
+          ]
+        },
+        {
+          "word": "thanks",
+          "uzb": "rahmat",
+          "emoji": "🙏",
+          "examples": {
+            "easy": "Thanks for your help.",
+            "normal": "\"Would you like some tea?\" \"Yes, thanks. With sugar, please.\"",
+            "hard": "Thanks for driving me to the airport so early in the morning on a Sunday."
+          },
+          "synonyms": [
+            "thank you"
+          ],
+          "collocations": [
+            "thanks a lot",
+            "many thanks"
+          ]
+        },
+        {
+          "word": "very well",
+          "uzb": "juda yaxshi",
+          "emoji": "💯",
+          "examples": {
+            "easy": "I'm very well, thanks.",
+            "normal": "\"How are you today?\" \"Very well, thank you. And you?\"",
+            "hard": "My grandfather is eighty years old, but he is very well and still walks every day."
+          },
+          "synonyms": [],
+          "collocations": [
+            "very well, thank you",
+            "feel very well"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-vt-starter-lesson-3",
+      "lesson": 3,
+      "name": "Lesson 3 - Nationalities and countries",
+      "source": "Video Lesson (VT) p. 8, 9, 10",
+      "words": [
+        {
+          "word": "tourist",
+          "uzb": "sayyoh",
+          "emoji": "📸",
+          "examples": {
+            "easy": "Are you a tourist here?",
+            "normal": "Lots of tourists visit Samarkand and Bukhara in the spring.",
+            "hard": "The old city is full of tourists in summer, so we prefer to go there in winter."
+          },
+          "synonyms": [
+            "visitor",
+            "traveller"
+          ],
+          "collocations": [
+            "foreign tourist",
+            "tourist attraction"
+          ]
+        },
+        {
+          "word": "businessman",
+          "uzb": "tadbirkor",
+          "emoji": "💼",
+          "examples": {
+            "easy": "Are they businessmen or tourists?",
+            "normal": "He is a businessman, and he often flies to China.",
+            "hard": "The businessmen at the next table were talking about prices and contracts all through lunch."
+          },
+          "synonyms": [
+            "entrepreneur"
+          ],
+          "collocations": [
+            "successful businessman",
+            "young businessman"
+          ]
+        },
+        {
+          "word": "on holiday",
+          "uzb": "taʼtilda",
+          "emoji": "🏖️",
+          "examples": {
+            "easy": "We are on holiday.",
+            "normal": "Is Susan at work today? No, she's on holiday this week.",
+            "hard": "When I'm on holiday, I turn off my work phone and try to forget about the office."
+          },
+          "synonyms": [
+            "on vacation"
+          ],
+          "collocations": [
+            "go on holiday",
+            "be on holiday"
+          ]
+        },
+        {
+          "word": "Scottish",
+          "uzb": "shotland, shotlandiyalik",
+          "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+          "examples": {
+            "easy": "Our teacher is Scottish.",
+            "normal": "He is Scottish, but he lives and works in London.",
+            "hard": "You can hear that she is Scottish from her accent, even though she moved south years ago."
+          },
+          "synonyms": [],
+          "collocations": [
+            "Scottish accent",
+            "Scottish food"
+          ]
+        },
+        {
+          "word": "Turkish",
+          "uzb": "turk, turkiyalik",
+          "emoji": "🇹🇷",
+          "examples": {
+            "easy": "She is Turkish, from Ankara.",
+            "normal": "My neighbour is Turkish, and he cooks wonderful Turkish food.",
+            "hard": "Many Uzbek students can understand some Turkish because the two languages have a lot in common."
+          },
+          "synonyms": [],
+          "collocations": [
+            "Turkish coffee",
+            "Turkish language"
+          ]
+        },
+        {
+          "word": "Japanese",
+          "uzb": "yapon, yaponiyalik",
+          "emoji": "🇯🇵",
+          "examples": {
+            "easy": "Are your new colleagues Japanese?",
+            "normal": "My new colleague is Japanese, and she speaks good English.",
+            "hard": "Japanese food is very healthy, and sushi has become popular in many countries around the world."
+          },
+          "synonyms": [],
+          "collocations": [
+            "Japanese food",
+            "Japanese car"
+          ]
+        },
+        {
+          "word": "Italian",
+          "uzb": "italyan, italiyalik",
+          "emoji": "🇮🇹",
+          "examples": {
+            "easy": "Sophia and Gina are Italian.",
+            "normal": "Gina is Italian, and she is from a small town near Rome.",
+            "hard": "We had dinner in an Italian restaurant last night, and the pizza was the best I've ever eaten."
+          },
+          "synonyms": [],
+          "collocations": [
+            "Italian food",
+            "Italian restaurant"
+          ]
+        },
+        {
+          "word": "American",
+          "uzb": "amerikalik",
+          "emoji": "🇺🇸",
+          "examples": {
+            "easy": "Is Carol American or English?",
+            "normal": "Tom is American. He is from New York.",
+            "hard": "My American friend was surprised by how many people in Tashkent invited him to their homes for tea."
+          },
+          "synonyms": [],
+          "collocations": [
+            "American English",
+            "American accent"
+          ]
+        },
+        {
+          "word": "English",
+          "uzb": "ingliz, angliyalik",
+          "emoji": "🇬🇧",
+          "examples": {
+            "easy": "Carol is English, not American.",
+            "normal": "No, she isn't American. She's English, from London.",
+            "hard": "Jim is English, but he has lived in Turkey for so long that he speaks Turkish perfectly."
+          },
+          "synonyms": [
+            "British"
+          ],
+          "collocations": [
+            "English people",
+            "English breakfast"
+          ]
+        },
+        {
+          "word": "Iranian",
+          "uzb": "eronlik",
+          "emoji": "🇮🇷",
+          "examples": {
+            "easy": "Reza is Iranian, from Tehran.",
+            "normal": "Are they Iranian? Yes, they are from Tehran.",
+            "hard": "Our neighbours are Iranian, and every spring they invite us to celebrate Navruz with them."
+          },
+          "synonyms": [
+            "Persian"
+          ],
+          "collocations": [
+            "Iranian food",
+            "Iranian student"
+          ]
+        },
+        {
+          "word": "Russian",
+          "uzb": "rus, rossiyalik",
+          "emoji": "🇷🇺",
+          "examples": {
+            "easy": "Is Jane Russian? No, she isn't.",
+            "normal": "My grandmother speaks Russian and Uzbek at home.",
+            "hard": "He reads Russian well, but he needs English for his new job at an international company."
+          },
+          "synonyms": [],
+          "collocations": [
+            "Russian language",
+            "speak Russian"
+          ]
+        },
+        {
+          "word": "Mexican",
+          "uzb": "meksikalik",
+          "emoji": "🇲🇽",
+          "examples": {
+            "easy": "My best friend is Mexican.",
+            "normal": "Carlos is Mexican, and he works as a chef here.",
+            "hard": "We tried Mexican food for the first time last week, and it was much spicier than we expected."
+          },
+          "synonyms": [],
+          "collocations": [
+            "Mexican food",
+            "Mexican restaurant"
+          ]
+        },
+        {
+          "word": "Spanish",
+          "uzb": "ispan, ispaniyalik",
+          "emoji": "🇪🇸",
+          "examples": {
+            "easy": "Is your teacher Spanish?",
+            "normal": "Maria is Spanish. She's from Madrid, the capital of Spain.",
+            "hard": "My daughter is learning Spanish at school because she wants to study in Madrid one day."
+          },
+          "synonyms": [],
+          "collocations": [
+            "Spanish language",
+            "learn Spanish"
+          ]
+        },
+        {
+          "word": "Chinese",
+          "uzb": "xitoy, xitoylik",
+          "emoji": "🇨🇳",
+          "examples": {
+            "easy": "Our new neighbour is Chinese.",
+            "normal": "Many of the students at this university are Chinese.",
+            "hard": "Chinese is a difficult language to learn, but more and more people are studying it today."
+          },
+          "synonyms": [],
+          "collocations": [
+            "Chinese food",
+            "Chinese restaurant"
+          ]
+        },
+        {
+          "word": "French",
+          "uzb": "fransuz, fransiyalik",
+          "emoji": "🇫🇷",
+          "examples": {
+            "easy": "David isn't French. He's English.",
+            "normal": "Betty is French, and she lives in Paris with her family.",
+            "hard": "I bought some French cheese at the market, but my children didn't like the strong smell."
+          },
+          "synonyms": [],
+          "collocations": [
+            "French bread",
+            "speak French"
+          ]
+        },
+        {
+          "word": "China",
+          "uzb": "Xitoy",
+          "emoji": "🐼",
+          "examples": {
+            "easy": "You aren't from China.",
+            "normal": "China is a very big country with a long history.",
+            "hard": "A lot of the clothes and phones in our shops are made in China and sold all over the world."
+          },
+          "synonyms": [],
+          "collocations": [
+            "made in China",
+            "travel to China"
+          ]
+        },
+        {
+          "word": "Russia",
+          "uzb": "Rossiya",
+          "emoji": "🪆",
+          "examples": {
+            "easy": "They are from Russia.",
+            "normal": "Russia is the biggest country in the world.",
+            "hard": "My uncle worked in Russia for five years and sent money home to his family every month."
+          },
+          "synonyms": [],
+          "collocations": [
+            "work in Russia",
+            "travel to Russia"
+          ]
+        },
+        {
+          "word": "Scotland",
+          "uzb": "Shotlandiya",
+          "emoji": "🏰",
+          "examples": {
+            "easy": "John is from Scotland.",
+            "normal": "Scotland is in the north of the United Kingdom.",
+            "hard": "We spent a week walking in the mountains of Scotland, and it rained almost every day."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the north of Scotland",
+            "visit Scotland"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-vt-starter-lesson-4",
+      "lesson": 4,
+      "name": "Lesson 4 - Everyday objects and plurals",
+      "source": "Video Lesson (VT) p. 11, 12, 13, 14",
+      "words": [
+        {
+          "word": "table",
+          "uzb": "stol",
+          "emoji": "🍽️",
+          "examples": {
+            "easy": "Is this a new table?",
+            "normal": "Please put the plates and glasses on the kitchen table.",
+            "hard": "We sat around the big table in my grandmother's house and talked until midnight."
+          },
+          "synonyms": [],
+          "collocations": [
+            "kitchen table",
+            "set the table"
+          ]
+        },
+        {
+          "word": "chair",
+          "uzb": "stul",
+          "emoji": "🪑",
+          "examples": {
+            "easy": "Yes, this is a chair.",
+            "normal": "There are four chairs around the table in our kitchen.",
+            "hard": "This old wooden chair is not very comfortable, but it belonged to my grandfather."
+          },
+          "synonyms": [
+            "seat"
+          ],
+          "collocations": [
+            "comfortable chair",
+            "sit on a chair"
+          ]
+        },
+        {
+          "word": "lemon",
+          "uzb": "limon",
+          "emoji": "🍋",
+          "examples": {
+            "easy": "Is this a lemon?",
+            "normal": "I like hot tea with a slice of lemon in winter.",
+            "hard": "When I have a cold, my mother makes me a drink with hot water, lemon and honey."
+          },
+          "synonyms": [],
+          "collocations": [
+            "lemon juice",
+            "slice of lemon"
+          ]
+        },
+        {
+          "word": "fork",
+          "uzb": "vilka",
+          "emoji": "🍴",
+          "examples": {
+            "easy": "Is that a fork?",
+            "normal": "Can I have a knife and fork, please? I can't use chopsticks.",
+            "hard": "In many countries, people hold the fork in the left hand and the knife in the right."
+          },
+          "synonyms": [],
+          "collocations": [
+            "knife and fork",
+            "plastic fork"
+          ]
+        },
+        {
+          "word": "spoon",
+          "uzb": "qoshiq",
+          "emoji": "🥄",
+          "examples": {
+            "easy": "Yes, that is a spoon.",
+            "normal": "I need a spoon for my soup. Where are the spoons?",
+            "hard": "Add two spoons of sugar to the flour, and mix everything together slowly with a wooden spoon."
+          },
+          "synonyms": [],
+          "collocations": [
+            "wooden spoon",
+            "soup spoon"
+          ]
+        },
+        {
+          "word": "egg",
+          "uzb": "tuxum",
+          "emoji": "🥚",
+          "examples": {
+            "easy": "Is this an egg?",
+            "normal": "I usually have two boiled eggs for breakfast every morning.",
+            "hard": "If you want to make a cake, you need three eggs, some flour, milk and sugar."
+          },
+          "synonyms": [],
+          "collocations": [
+            "boiled egg",
+            "fried egg"
+          ]
+        },
+        {
+          "word": "orange",
+          "uzb": "apelsin",
+          "emoji": "🍊",
+          "examples": {
+            "easy": "Is this an orange?",
+            "normal": "There are some oranges and apples in the bowl on the table.",
+            "hard": "In winter, I eat an orange every day because it has a lot of vitamin C."
+          },
+          "synonyms": [],
+          "collocations": [
+            "orange juice",
+            "peel an orange"
+          ]
+        },
+        {
+          "word": "clock",
+          "uzb": "soat (devor soati)",
+          "emoji": "🕰️",
+          "examples": {
+            "easy": "Is that a clock?",
+            "normal": "There is a big clock on the wall in our classroom.",
+            "hard": "The clock in the kitchen is ten minutes fast, so we are never late for work."
+          },
+          "synonyms": [],
+          "collocations": [
+            "wall clock",
+            "alarm clock"
+          ]
+        },
+        {
+          "word": "watch",
+          "uzb": "qo‘l soati",
+          "emoji": "⌚",
+          "examples": {
+            "easy": "Is this your watch?",
+            "normal": "My father gave me this watch when I finished university.",
+            "hard": "I don't wear a watch any more, because I always check the time on my phone."
+          },
+          "synonyms": [
+            "wristwatch"
+          ],
+          "collocations": [
+            "wear a watch",
+            "look at your watch"
+          ]
+        },
+        {
+          "word": "key",
+          "uzb": "kalit",
+          "emoji": "🔑",
+          "examples": {
+            "easy": "Is it a key? Yes.",
+            "normal": "I can't find my keys. Are they on the table?",
+            "hard": "Always keep a spare key with a neighbour, in case you lose yours or lock yourself out."
+          },
+          "synonyms": [],
+          "collocations": [
+            "car key",
+            "door key"
+          ]
+        },
+        {
+          "word": "house",
+          "uzb": "uy",
+          "emoji": "🏠",
+          "examples": {
+            "easy": "Are these houses? No.",
+            "normal": "My parents live in a small house with a big garden.",
+            "hard": "They sold their old house in the village and bought a modern flat near the city centre."
+          },
+          "synonyms": [
+            "home"
+          ],
+          "collocations": [
+            "big house",
+            "move house"
+          ]
+        },
+        {
+          "word": "radio",
+          "uzb": "radio",
+          "emoji": "📻",
+          "examples": {
+            "easy": "Is that a radio?",
+            "normal": "My grandfather listens to the news on the radio every morning.",
+            "hard": "I usually listen to the radio in the car, because the traffic in the city is terrible."
+          },
+          "synonyms": [],
+          "collocations": [
+            "listen to the radio",
+            "on the radio"
+          ]
+        },
+        {
+          "word": "glass",
+          "uzb": "stakan",
+          "emoji": "🥛",
+          "examples": {
+            "easy": "Can I have a glass?",
+            "normal": "Are these glasses clean? I want some water, please.",
+            "hard": "Doctors say you should drink at least six to eight glasses of water every day."
+          },
+          "synonyms": [],
+          "collocations": [
+            "glass of water",
+            "wine glass"
+          ]
+        },
+        {
+          "word": "bus",
+          "uzb": "avtobus",
+          "emoji": "🚌",
+          "examples": {
+            "easy": "Is that a bus?",
+            "normal": "I go to work by bus because I don't have a car.",
+            "hard": "The buses in our city are cheap and modern, but they are always full in the morning."
+          },
+          "synonyms": [],
+          "collocations": [
+            "take the bus",
+            "bus stop"
+          ]
+        },
+        {
+          "word": "towel",
+          "uzb": "sochiq",
+          "emoji": "🛁",
+          "examples": {
+            "easy": "Are these clean towels?",
+            "normal": "Don't forget to take a towel to the swimming pool.",
+            "hard": "The hotel gives you fresh towels every day, but you can keep the same ones if you want."
+          },
+          "synonyms": [],
+          "collocations": [
+            "bath towel",
+            "beach towel"
+          ]
+        },
+        {
+          "word": "bed",
+          "uzb": "karavot",
+          "emoji": "🛏️",
+          "examples": {
+            "easy": "Are they beds? No.",
+            "normal": "I'm very tired. I want to go to bed early tonight.",
+            "hard": "Our son's room is small, so we bought him a bed with drawers underneath for his clothes."
+          },
+          "synonyms": [],
+          "collocations": [
+            "go to bed",
+            "double bed"
+          ]
+        },
+        {
+          "word": "knife",
+          "uzb": "pichoq",
+          "emoji": "🔪",
+          "examples": {
+            "easy": "What is this? A knife.",
+            "normal": "Be careful with that knife! It is very sharp.",
+            "hard": "In the kitchen drawer there are three knives, six forks and a lot of small spoons."
+          },
+          "synonyms": [],
+          "collocations": [
+            "sharp knife",
+            "kitchen knife"
+          ]
+        },
+        {
+          "word": "lorry",
+          "uzb": "yuk mashinasi",
+          "emoji": "🚚",
+          "examples": {
+            "easy": "What is it? It's a lorry.",
+            "normal": "Big lorries carry fruit and vegetables to the city every night.",
+            "hard": "My uncle drives a lorry, so he spends a lot of time on the road between Tashkent and Moscow."
+          },
+          "synonyms": [
+            "truck"
+          ],
+          "collocations": [
+            "lorry driver",
+            "heavy lorry"
+          ]
+        },
+        {
+          "word": "plate",
+          "uzb": "tarelka",
+          "emoji": "🍲",
+          "examples": {
+            "easy": "Is this a plate?",
+            "normal": "There are some clean plates in the cupboard over there.",
+            "hard": "She filled my plate with plov twice, and I was too full to eat any dessert."
+          },
+          "synonyms": [
+            "dish"
+          ],
+          "collocations": [
+            "dinner plate",
+            "plate of food"
+          ]
+        },
+        {
+          "word": "handbag",
+          "uzb": "ayollar sumkasi",
+          "emoji": "👜",
+          "examples": {
+            "easy": "Is that your handbag?",
+            "normal": "My mother keeps her keys and phone in her handbag.",
+            "hard": "She left her handbag on the bus, but luckily the driver found it and gave it back."
+          },
+          "synonyms": [
+            "bag",
+            "purse"
+          ],
+          "collocations": [
+            "leather handbag",
+            "open your handbag"
+          ]
+        },
+        {
+          "word": "cup",
+          "uzb": "chashka",
+          "emoji": "☕",
+          "examples": {
+            "easy": "Is this a cup?",
+            "normal": "Would you like a cup of tea or coffee?",
+            "hard": "Every morning I drink a big cup of coffee before I check my emails and start work."
+          },
+          "synonyms": [
+            "mug"
+          ],
+          "collocations": [
+            "cup of tea",
+            "coffee cup"
+          ]
+        },
+        {
+          "word": "shelf",
+          "uzb": "javon, tokcha",
+          "emoji": "📚",
+          "examples": {
+            "easy": "Are those shelves? Yes, they are.",
+            "normal": "The books are on the top shelf in the living room.",
+            "hard": "We need some new shelves in the kitchen, because there is no space for all the cups."
+          },
+          "synonyms": [],
+          "collocations": [
+            "top shelf",
+            "book shelf"
+          ]
+        },
+        {
+          "word": "window",
+          "uzb": "deraza",
+          "emoji": "🪟",
+          "examples": {
+            "easy": "Is this a window?",
+            "normal": "It's hot in here. Can you open the window, please?",
+            "hard": "From the window of our flat, we can see the mountains when the weather is clear."
+          },
+          "synonyms": [],
+          "collocations": [
+            "open the window",
+            "close the window"
+          ]
+        },
+        {
+          "word": "door",
+          "uzb": "eshik",
+          "emoji": "🚪",
+          "examples": {
+            "easy": "No, it's a door.",
+            "normal": "Please close the door when you leave the room.",
+            "hard": "Someone knocked on the door at midnight, but when I opened it, nobody was there."
+          },
+          "synonyms": [],
+          "collocations": [
+            "front door",
+            "open the door"
+          ]
+        },
+        {
+          "word": "apple",
+          "uzb": "olma",
+          "emoji": "🍎",
+          "examples": {
+            "easy": "Is this an apple?",
+            "normal": "I eat an apple every day as a healthy snack.",
+            "hard": "Uzbekistan grows a lot of apples, and many of them are sold in Russia and Kazakhstan."
+          },
+          "synonyms": [],
+          "collocations": [
+            "green apple",
+            "apple juice"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-vt-starter-lesson-5",
+      "lesson": 5,
+      "name": "Lesson 5 - Possessives, family and home",
+      "source": "Video Lesson (VT) p. 15, 16",
+      "words": [
+        {
+          "word": "father",
+          "uzb": "ota",
+          "emoji": "👨‍👧",
+          "examples": {
+            "easy": "My father is a doctor.",
+            "normal": "Her father works in a bank, and he drives a red car.",
+            "hard": "My father taught me to swim when I was six, and we still go swimming together."
+          },
+          "synonyms": [
+            "dad"
+          ],
+          "collocations": [
+            "my father",
+            "father and son"
+          ]
+        },
+        {
+          "word": "school",
+          "uzb": "maktab",
+          "emoji": "🏫",
+          "examples": {
+            "easy": "Our school is very big.",
+            "normal": "Bart goes to his school by bus every morning.",
+            "hard": "The school near our house has a new sports hall, so the children play football there in winter."
+          },
+          "synonyms": [],
+          "collocations": [
+            "go to school",
+            "primary school"
+          ]
+        },
+        {
+          "word": "sister",
+          "uzb": "opa, singil",
+          "emoji": "👭",
+          "examples": {
+            "easy": "This is my sister, Rachel.",
+            "normal": "My sister is a student, and her name is Lola.",
+            "hard": "My older sister lives abroad, so we talk on video every Sunday and share family news."
+          },
+          "synonyms": [],
+          "collocations": [
+            "older sister",
+            "younger sister"
+          ]
+        },
+        {
+          "word": "apartment",
+          "uzb": "kvartira",
+          "emoji": "🏢",
+          "examples": {
+            "easy": "This is their apartment.",
+            "normal": "Jessica and Daisy live in a small apartment in the city.",
+            "hard": "Their apartment is on the ninth floor, so they have a wonderful view of the whole city."
+          },
+          "synonyms": [
+            "flat"
+          ],
+          "collocations": [
+            "rent an apartment",
+            "apartment building"
+          ]
+        },
+        {
+          "word": "job",
+          "uzb": "ish",
+          "emoji": "👷",
+          "examples": {
+            "easy": "I like my job.",
+            "normal": "What is your job? I'm a teacher at a primary school.",
+            "hard": "He lost his job last year, but now he has a better one with a much higher salary."
+          },
+          "synonyms": [
+            "work"
+          ],
+          "collocations": [
+            "new job",
+            "find a job"
+          ]
+        },
+        {
+          "word": "garden",
+          "uzb": "bog‘, bog‘cha",
+          "emoji": "🌻",
+          "examples": {
+            "easy": "This is our garden.",
+            "normal": "My grandmother grows tomatoes and flowers in her garden.",
+            "hard": "In summer we have dinner in the garden, under the old apple tree that my grandfather planted."
+          },
+          "synonyms": [],
+          "collocations": [
+            "back garden",
+            "vegetable garden"
+          ]
+        },
+        {
+          "word": "mother",
+          "uzb": "ona",
+          "emoji": "👩‍👧",
+          "examples": {
+            "easy": "My mother's name is Susan.",
+            "normal": "Their mother is a doctor, and she works at night.",
+            "hard": "My mother calls me every evening to ask how my day was and whether I have eaten."
+          },
+          "synonyms": [
+            "mum"
+          ],
+          "collocations": [
+            "my mother",
+            "mother and daughter"
+          ]
+        },
+        {
+          "word": "hat",
+          "uzb": "shlyapa, bosh kiyim",
+          "emoji": "🎩",
+          "examples": {
+            "easy": "This is her new hat.",
+            "normal": "It's very sunny today, so don't forget your hat.",
+            "hard": "He always wears his grandfather's old hat when he goes fishing at the lake on Sundays."
+          },
+          "synonyms": [
+            "cap"
+          ],
+          "collocations": [
+            "wear a hat",
+            "sun hat"
+          ]
+        },
+        {
+          "word": "bedroom",
+          "uzb": "yotoqxona",
+          "emoji": "🛏️",
+          "examples": {
+            "easy": "This is their bedroom.",
+            "normal": "Our flat has two bedrooms, a kitchen and a living room.",
+            "hard": "The children share a bedroom now, but next year we want to move to a bigger flat."
+          },
+          "synonyms": [],
+          "collocations": [
+            "main bedroom",
+            "spare bedroom"
+          ]
+        },
+        {
+          "word": "living room",
+          "uzb": "mehmonxona (uydagi xona)",
+          "emoji": "🛋️",
+          "examples": {
+            "easy": "This is our living room.",
+            "normal": "We watch TV together in the living room every evening.",
+            "hard": "Our living room is the biggest room in the house, so all the guests sit there during holidays."
+          },
+          "synonyms": [
+            "sitting room",
+            "lounge"
+          ],
+          "collocations": [
+            "in the living room",
+            "living room window"
+          ]
+        },
+        {
+          "word": "favourite",
+          "uzb": "sevimli",
+          "emoji": "⭐",
+          "examples": {
+            "easy": "This is my favourite book.",
+            "normal": "What is your favourite food? Mine is plov, of course.",
+            "hard": "My favourite season is autumn, because the weather is cool and the markets are full of fruit."
+          },
+          "synonyms": [],
+          "collocations": [
+            "favourite food",
+            "favourite colour"
+          ]
+        },
+        {
+          "word": "name",
+          "uzb": "ism",
+          "emoji": "📛",
+          "examples": {
+            "easy": "What is your name?",
+            "normal": "This is my brother. His name is Peter.",
+            "hard": "She forgot his name as soon as they were introduced, so she felt a bit embarrassed later."
+          },
+          "synonyms": [],
+          "collocations": [
+            "first name",
+            "family name"
+          ]
+        },
+        {
+          "word": "brother",
+          "uzb": "aka, uka",
+          "emoji": "👬",
+          "examples": {
+            "easy": "This is my brother.",
+            "normal": "My brother is a student in Hungary. He studies medicine.",
+            "hard": "My younger brother and I look very similar, so people often think we are twins."
+          },
+          "synonyms": [],
+          "collocations": [
+            "older brother",
+            "younger brother"
+          ]
+        },
+        {
+          "word": "friend",
+          "uzb": "do‘st",
+          "emoji": "🤝",
+          "examples": {
+            "easy": "We are good friends.",
+            "normal": "My best friend and I meet at a café every Friday.",
+            "hard": "I met my best friend at university fifteen years ago, and we are still very close."
+          },
+          "synonyms": [
+            "mate"
+          ],
+          "collocations": [
+            "best friend",
+            "old friend"
+          ]
+        },
+        {
+          "word": "hobby",
+          "uzb": "sevimli mashg‘ulot",
+          "emoji": "🎨",
+          "examples": {
+            "easy": "My hobby is gardening.",
+            "normal": "Their hobbies are gardening and walking in the mountains.",
+            "hard": "Since he retired, photography has become his favourite hobby, and he takes his camera everywhere."
+          },
+          "synonyms": [
+            "pastime"
+          ],
+          "collocations": [
+            "main hobby",
+            "take up a hobby"
+          ]
+        },
+        {
+          "word": "daughter",
+          "uzb": "qiz (farzand)",
+          "emoji": "👧",
+          "examples": {
+            "easy": "This is my daughter, Malika.",
+            "normal": "Our daughter is eight, and she loves drawing and music.",
+            "hard": "My daughter wants to be a doctor, so she studies biology and chemistry very hard."
+          },
+          "synonyms": [],
+          "collocations": [
+            "little daughter",
+            "eldest daughter"
+          ]
+        },
+        {
+          "word": "camera",
+          "uzb": "fotoapparat, kamera",
+          "emoji": "📷",
+          "examples": {
+            "easy": "This is our new camera.",
+            "normal": "Don't forget your camera. The mountains are beautiful there.",
+            "hard": "I don't use a camera much any more, because the camera on my phone is just as good."
+          },
+          "synonyms": [],
+          "collocations": [
+            "digital camera",
+            "camera phone"
+          ]
+        },
+        {
+          "word": "homework",
+          "uzb": "uy vazifasi",
+          "emoji": "📝",
+          "examples": {
+            "easy": "He is doing his homework.",
+            "normal": "Children, please do your homework before you watch TV.",
+            "hard": "Our teacher gives us a lot of homework, so I usually study for two hours every evening."
+          },
+          "synonyms": [],
+          "collocations": [
+            "do homework",
+            "homework task"
+          ]
+        },
+        {
+          "word": "bike",
+          "uzb": "velosiped",
+          "emoji": "🚲",
+          "examples": {
+            "easy": "She is riding her bike.",
+            "normal": "I ride my bike to work when the weather is nice.",
+            "hard": "Someone stole my bike from outside the shop, so now I always lock it carefully."
+          },
+          "synonyms": [
+            "bicycle"
+          ],
+          "collocations": [
+            "ride a bike",
+            "bike ride"
+          ]
+        },
+        {
+          "word": "parents",
+          "uzb": "ota-ona",
+          "emoji": "👨‍👩‍👦",
+          "examples": {
+            "easy": "We love our parents.",
+            "normal": "My parents live in Fergana, and I visit them every month.",
+            "hard": "Her parents were very proud when she became the first doctor in the family."
+          },
+          "synonyms": [],
+          "collocations": [
+            "elderly parents",
+            "visit your parents"
+          ]
+        },
+        {
+          "word": "hair",
+          "uzb": "soch",
+          "emoji": "💇",
+          "examples": {
+            "easy": "Marge's hair is blue.",
+            "normal": "My sister has long black hair, and she never cuts it short.",
+            "hard": "I need to get my hair cut before the wedding, but the hairdresser is busy all week."
+          },
+          "synonyms": [],
+          "collocations": [
+            "long hair",
+            "brush your hair"
+          ]
+        },
+        {
+          "word": "children",
+          "uzb": "bolalar",
+          "emoji": "🧒",
+          "examples": {
+            "easy": "Their children are very nice.",
+            "normal": "We have two children, a boy and a girl.",
+            "hard": "On Saturday mornings, the children play in the park while their parents have tea nearby."
+          },
+          "synonyms": [
+            "kids"
+          ],
+          "collocations": [
+            "young children",
+            "have children"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-vt-starter-lesson-6",
+      "lesson": 6,
+      "name": "Lesson 6 - Possessives, this/that and jobs",
+      "source": "Video Lesson (VT) p. 17, 18",
+      "words": [
+        {
+          "word": "name",
+          "uzb": "ism",
+          "emoji": "📛",
+          "examples": {
+            "easy": "What are their names?",
+            "normal": "Her name is Susan Smith, and she is from London.",
+            "hard": "Please write your full name and phone number at the top of the form."
+          },
+          "synonyms": [],
+          "collocations": [
+            "full name",
+            "first name"
+          ]
+        },
+        {
+          "word": "key",
+          "uzb": "kalit",
+          "emoji": "🔑",
+          "examples": {
+            "easy": "Is this your key here?",
+            "normal": "I can't open the door. Where are my keys?",
+            "hard": "He always leaves his car keys on the shelf by the door so he doesn't lose them."
+          },
+          "synonyms": [],
+          "collocations": [
+            "car keys",
+            "house key"
+          ]
+        },
+        {
+          "word": "here",
+          "uzb": "bu yerda",
+          "emoji": "👇",
+          "examples": {
+            "easy": "My bag is here.",
+            "normal": "Is this your umbrella here? No, my umbrella is red.",
+            "hard": "We have lived here for ten years, and we still love this quiet part of the city."
+          },
+          "synonyms": [],
+          "collocations": [
+            "over here",
+            "come here"
+          ]
+        },
+        {
+          "word": "there",
+          "uzb": "u yerda",
+          "emoji": "👉",
+          "examples": {
+            "easy": "Is that your towel there?",
+            "normal": "Look over there! That's my car next to the bus stop.",
+            "hard": "There was a small café on the corner, and we used to meet there after work."
+          },
+          "synonyms": [],
+          "collocations": [
+            "over there",
+            "go there"
+          ]
+        },
+        {
+          "word": "room",
+          "uzb": "xona",
+          "emoji": "🚪",
+          "examples": {
+            "easy": "Is that his room there?",
+            "normal": "Our flat has three rooms and a small kitchen.",
+            "hard": "The hotel room was clean and comfortable, but the window looked out onto a noisy street."
+          },
+          "synonyms": [],
+          "collocations": [
+            "hotel room",
+            "living room"
+          ]
+        },
+        {
+          "word": "job",
+          "uzb": "ish, kasb",
+          "emoji": "💼",
+          "examples": {
+            "easy": "What is your job?",
+            "normal": "What are their jobs? They are teachers at the same school.",
+            "hard": "She wants to change her job, because she spends three hours on the bus every day."
+          },
+          "synonyms": [
+            "work",
+            "profession"
+          ],
+          "collocations": [
+            "full-time job",
+            "change your job"
+          ]
+        },
+        {
+          "word": "secretary",
+          "uzb": "kotiba",
+          "emoji": "👩‍💼",
+          "examples": {
+            "easy": "Is she a secretary?",
+            "normal": "The secretary answers the phone and writes the manager's letters.",
+            "hard": "Our new secretary is very organised, so the office runs much more smoothly than before."
+          },
+          "synonyms": [
+            "assistant"
+          ],
+          "collocations": [
+            "school secretary",
+            "personal secretary"
+          ]
+        },
+        {
+          "word": "cook",
+          "uzb": "oshpaz",
+          "emoji": "👨‍🍳",
+          "examples": {
+            "easy": "He is a cook.",
+            "normal": "He works as a cook in a busy restaurant in the centre.",
+            "hard": "My uncle was a cook in the army, so he can make plov for fifty people."
+          },
+          "synonyms": [
+            "chef"
+          ],
+          "collocations": [
+            "head cook",
+            "good cook"
+          ]
+        },
+        {
+          "word": "receptionist",
+          "uzb": "qabulxona xodimi, resepshn xodimi",
+          "emoji": "🛎️",
+          "examples": {
+            "easy": "She is a hotel receptionist.",
+            "normal": "The receptionist at the hotel gave us the key to our room.",
+            "hard": "When you arrive at the clinic, tell the receptionist your name and the time of your appointment."
+          },
+          "synonyms": [],
+          "collocations": [
+            "hotel receptionist",
+            "friendly receptionist"
+          ]
+        },
+        {
+          "word": "cleaner",
+          "uzb": "farrosh, tozalovchi",
+          "emoji": "🧹",
+          "examples": {
+            "easy": "She is a cleaner here.",
+            "normal": "The cleaner comes to our office every evening after six.",
+            "hard": "These women are cleaners, and they start work at five in the morning before the shops open."
+          },
+          "synonyms": [],
+          "collocations": [
+            "office cleaner",
+            "school cleaner"
+          ]
+        },
+        {
+          "word": "policeman",
+          "uzb": "politsiyachi",
+          "emoji": "👮",
+          "examples": {
+            "easy": "Is he a policeman?",
+            "normal": "A policeman helped the old man cross the busy street.",
+            "hard": "When we got lost in the city, a friendly policeman showed us the way to our hotel."
+          },
+          "synonyms": [
+            "police officer"
+          ],
+          "collocations": [
+            "traffic policeman",
+            "local policeman"
+          ]
+        },
+        {
+          "word": "mechanic",
+          "uzb": "mexanik, avtousta",
+          "emoji": "🔧",
+          "examples": {
+            "easy": "Are you a mechanic?",
+            "normal": "My car is broken, so I'm taking it to the mechanic.",
+            "hard": "The mechanic said it would cost a lot to repair the old engine, so we sold the car."
+          },
+          "synonyms": [],
+          "collocations": [
+            "car mechanic",
+            "good mechanic"
+          ]
+        },
+        {
+          "word": "manager",
+          "uzb": "menejer, rahbar",
+          "emoji": "📊",
+          "examples": {
+            "easy": "My sister is a manager.",
+            "normal": "The manager of the shop is very friendly and helpful.",
+            "hard": "If you have a problem with your order, you can speak to the manager at the front desk."
+          },
+          "synonyms": [
+            "boss"
+          ],
+          "collocations": [
+            "shop manager",
+            "bank manager"
+          ]
+        },
+        {
+          "word": "waiter",
+          "uzb": "ofitsiant",
+          "emoji": "🤵",
+          "examples": {
+            "easy": "The waiter is very friendly.",
+            "normal": "The waiter brought us the menu and two glasses of water.",
+            "hard": "We left the waiter a good tip, because he was so friendly and the service was very fast."
+          },
+          "synonyms": [
+            "server"
+          ],
+          "collocations": [
+            "ask the waiter",
+            "head waiter"
+          ]
+        },
+        {
+          "word": "air hostess",
+          "uzb": "styuardessa",
+          "emoji": "🛫",
+          "examples": {
+            "easy": "Is Jane an air hostess?",
+            "normal": "She is an air hostess, and she flies to Dubai every week.",
+            "hard": "The air hostess showed us how to fasten our seat belts before the plane took off."
+          },
+          "synonyms": [
+            "flight attendant",
+            "stewardess"
+          ],
+          "collocations": [
+            "work as an air hostess",
+            "become an air hostess"
+          ]
+        },
+        {
+          "word": "taxi driver",
+          "uzb": "taksi haydovchisi",
+          "emoji": "🚕",
+          "examples": {
+            "easy": "Is Mr Cooper a taxi driver?",
+            "normal": "The taxi driver took us from the airport to our hotel.",
+            "hard": "Taxi drivers in big cities usually know every street, so they can avoid the traffic."
+          },
+          "synonyms": [
+            "cab driver"
+          ],
+          "collocations": [
+            "call a taxi driver",
+            "local taxi driver"
+          ]
+        },
+        {
+          "word": "case",
+          "uzb": "jamadon",
+          "emoji": "🧳",
+          "examples": {
+            "easy": "This is my case. It's heavy.",
+            "normal": "Where are your cases? Are they in the car?",
+            "hard": "My case was too heavy at the airport, so I had to take out some of my clothes."
+          },
+          "synonyms": [
+            "suitcase",
+            "bag"
+          ],
+          "collocations": [
+            "pack a case",
+            "carry a case"
+          ]
+        },
+        {
+          "word": "good evening",
+          "uzb": "xayrli kech",
+          "emoji": "🌆",
+          "examples": {
+            "easy": "Good evening, sir. Come in.",
+            "normal": "Good evening, everyone! Welcome to our English class tonight.",
+            "hard": "The hotel receptionist smiled and said, \"Good evening, sir. What is your name, please?\""
+          },
+          "synonyms": [],
+          "collocations": [
+            "good evening, everyone",
+            "good evening, sir"
+          ]
+        },
+        {
+          "word": "sir",
+          "uzb": "janob",
+          "emoji": "🎩",
+          "examples": {
+            "easy": "Can I help you, sir?",
+            "normal": "Excuse me, sir, is this your umbrella on the chair?",
+            "hard": "The waiter said, \"Your table is ready, sir. Please follow me to the window.\""
+          },
+          "synonyms": [],
+          "collocations": [
+            "yes, sir",
+            "excuse me, sir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-vt-starter-lesson-7",
+      "lesson": 7,
+      "name": "Lesson 7 - Adjectives and telling the time",
+      "source": "Video Lesson (VT) p. 22",
+      "words": [
+        {
+          "word": "useful",
+          "uzb": "foydali",
+          "emoji": "🛠️",
+          "examples": {
+            "easy": "This book is very useful.",
+            "normal": "A good dictionary is very useful when you learn English.",
+            "hard": "My teacher gave me some useful advice about how to remember new words more easily."
+          },
+          "synonyms": [
+            "helpful",
+            "handy"
+          ],
+          "collocations": [
+            "useful information",
+            "useful advice"
+          ]
+        },
+        {
+          "word": "although",
+          "uzb": "garchi, biroq",
+          "emoji": "⚖️",
+          "examples": {
+            "easy": "Although it's cold, I'm happy.",
+            "normal": "Although he is rich, he lives in a very small flat.",
+            "hard": "Although the hotel was cheap, the rooms were clean and the staff were very friendly."
+          },
+          "synonyms": [
+            "though",
+            "even though"
+          ],
+          "collocations": [
+            "although it is",
+            "although I know"
+          ]
+        },
+        {
+          "word": "assume",
+          "uzb": "taxmin qilmoq",
+          "emoji": "🤔",
+          "examples": {
+            "easy": "I assume you are tired.",
+            "normal": "I assume the shop is closed, because the lights are off.",
+            "hard": "We assumed the train would be on time, so we were surprised when it arrived an hour late."
+          },
+          "synonyms": [
+            "suppose",
+            "guess"
+          ],
+          "collocations": [
+            "I assume that",
+            "safe to assume"
+          ]
+        },
+        {
+          "word": "let's assume",
+          "uzb": "keling, taxmin qilamiz",
+          "emoji": "💭",
+          "examples": {
+            "easy": "Let's assume it's true.",
+            "normal": "Let's assume the trip costs five hundred dollars per person.",
+            "hard": "Let's assume that twenty people come to the party; then we will need at least five big cakes."
+          },
+          "synonyms": [
+            "let's suppose",
+            "let's say"
+          ],
+          "collocations": [
+            "let's assume that",
+            "let's just assume"
+          ]
+        },
+        {
+          "word": "what colour",
+          "uzb": "qanday rang",
+          "emoji": "🎨",
+          "examples": {
+            "easy": "What colour is your car?",
+            "normal": "What colour are her eyes? I think they are green.",
+            "hard": "What colour do you want to paint the kitchen walls, white or light yellow?"
+          },
+          "synonyms": [],
+          "collocations": [
+            "what colour is it",
+            "what colour are they"
+          ]
+        },
+        {
+          "word": "adjective",
+          "uzb": "sifat",
+          "emoji": "🏷️",
+          "examples": {
+            "easy": "'Tall' is an adjective.",
+            "normal": "In English, an adjective usually comes before the noun.",
+            "hard": "Words like 'tired', 'rich' and 'expensive' are adjectives, because they describe people and things."
+          },
+          "synonyms": [],
+          "collocations": [
+            "use an adjective",
+            "describing adjective"
+          ]
+        },
+        {
+          "word": "hair",
+          "uzb": "soch",
+          "emoji": "💇",
+          "examples": {
+            "easy": "Her hair is long.",
+            "normal": "What colour is your hair? It's dark brown.",
+            "hard": "Marge Simpson has very tall blue hair, so everyone recognises her immediately."
+          },
+          "synonyms": [],
+          "collocations": [
+            "long hair",
+            "dark hair"
+          ]
+        },
+        {
+          "word": "red",
+          "uzb": "qizil",
+          "emoji": "🟥",
+          "examples": {
+            "easy": "My car is red.",
+            "normal": "She is wearing a beautiful red dress at the party.",
+            "hard": "When the traffic light turns red, all the cars must stop and wait for green."
+          },
+          "synonyms": [],
+          "collocations": [
+            "bright red",
+            "red dress"
+          ]
+        },
+        {
+          "word": "good",
+          "uzb": "yaxshi",
+          "emoji": "👍",
+          "examples": {
+            "easy": "This tea is very good.",
+            "normal": "He is a good doctor, and all his patients like him.",
+            "hard": "It was a good idea to leave early, because the roads were empty and we arrived on time."
+          },
+          "synonyms": [
+            "fine",
+            "great"
+          ],
+          "collocations": [
+            "good idea",
+            "good news"
+          ]
+        },
+        {
+          "word": "blue",
+          "uzb": "ko‘k",
+          "emoji": "🟦",
+          "examples": {
+            "easy": "The sky is blue today.",
+            "normal": "My brother has blue eyes, but my eyes are brown.",
+            "hard": "We painted the bedroom walls light blue, because it is a calm and relaxing colour."
+          },
+          "synonyms": [],
+          "collocations": [
+            "dark blue",
+            "light blue"
+          ]
+        },
+        {
+          "word": "strong",
+          "uzb": "kuchli",
+          "emoji": "💪",
+          "examples": {
+            "easy": "My father is very strong.",
+            "normal": "Is David strong? Yes, he can carry the heavy boxes.",
+            "hard": "You need to be strong to work as a porter, because you carry heavy bags all day."
+          },
+          "synonyms": [
+            "powerful"
+          ],
+          "collocations": [
+            "strong man",
+            "strong wind"
+          ]
+        },
+        {
+          "word": "task",
+          "uzb": "topshiriq",
+          "emoji": "📋",
+          "examples": {
+            "easy": "This task is very easy.",
+            "normal": "Please read the text and then do Task 1.",
+            "hard": "Our manager gave each of us a different task, and we had to finish everything by Friday."
+          },
+          "synonyms": [
+            "exercise",
+            "job"
+          ],
+          "collocations": [
+            "do a task",
+            "difficult task"
+          ]
+        },
+        {
+          "word": "easy",
+          "uzb": "oson",
+          "emoji": "😌",
+          "examples": {
+            "easy": "This exercise is easy.",
+            "normal": "The test was easy, so everyone in the class passed.",
+            "hard": "Learning to drive was not easy for me, but after many lessons I finally passed the test."
+          },
+          "synonyms": [
+            "simple"
+          ],
+          "collocations": [
+            "easy question",
+            "easy way"
+          ]
+        },
+        {
+          "word": "o'clock",
+          "uzb": "soat rosa (…) bo‘ldi",
+          "emoji": "🕗",
+          "examples": {
+            "easy": "It's eight o'clock now.",
+            "normal": "The lesson starts at eight o'clock every morning.",
+            "hard": "I usually wake up at seven o'clock, but on Sundays I stay in bed until nine."
+          },
+          "synonyms": [],
+          "collocations": [
+            "at eight o'clock",
+            "two o'clock"
+          ]
+        },
+        {
+          "word": "past",
+          "uzb": "o‘tdi",
+          "emoji": "⏩",
+          "examples": {
+            "easy": "It's ten past six.",
+            "normal": "The bus leaves at twenty past seven, so we must hurry.",
+            "hard": "The film started at half past eight, but we arrived at ten past nine and missed the beginning."
+          },
+          "synonyms": [
+            "after"
+          ],
+          "collocations": [
+            "ten past",
+            "half past"
+          ]
+        },
+        {
+          "word": "to",
+          "uzb": "…ta kam",
+          "emoji": "⏪",
+          "examples": {
+            "easy": "It's ten to five.",
+            "normal": "The train leaves at twenty to nine, so please don't be late.",
+            "hard": "I usually finish work at five to six and then walk to the bus stop near my office."
+          },
+          "synonyms": [],
+          "collocations": [
+            "ten to",
+            "quarter to"
+          ]
+        },
+        {
+          "word": "quarter",
+          "uzb": "chorak",
+          "emoji": "⏲️",
+          "examples": {
+            "easy": "It's quarter past three.",
+            "normal": "We have a short break at quarter to eleven every day.",
+            "hard": "The meeting started at quarter past nine and finished more than two hours later, at half past eleven."
+          },
+          "synonyms": [],
+          "collocations": [
+            "quarter past",
+            "quarter to"
+          ]
+        },
+        {
+          "word": "half",
+          "uzb": "yarim",
+          "emoji": "🕧",
+          "examples": {
+            "easy": "It's half past twelve.",
+            "normal": "We have lunch at half past twelve, then go back to work.",
+            "hard": "Half of the students in my class are from Tashkent, and the other half are from other cities."
+          },
+          "synonyms": [],
+          "collocations": [
+            "half past",
+            "half an hour"
+          ]
+        },
+        {
+          "word": "minute",
+          "uzb": "minut",
+          "emoji": "⏳",
+          "examples": {
+            "easy": "Wait a minute, please.",
+            "normal": "The bus stop is only five minutes from my house.",
+            "hard": "The doctor will see you in a few minutes, so please sit down and fill in this form."
+          },
+          "synonyms": [],
+          "collocations": [
+            "five minutes",
+            "just a minute"
+          ]
+        },
+        {
+          "word": "tired",
+          "uzb": "charchagan",
+          "emoji": "😴",
+          "examples": {
+            "easy": "I'm very tired today.",
+            "normal": "Is that man angry? No, he isn't. He is tired.",
+            "hard": "After working twelve hours in the hospital, the nurses were too tired to talk."
+          },
+          "synonyms": [
+            "exhausted",
+            "sleepy"
+          ],
+          "collocations": [
+            "very tired",
+            "feel tired"
+          ]
+        },
+        {
+          "word": "light",
+          "uzb": "yengil",
+          "emoji": "🪶",
+          "examples": {
+            "easy": "My bag is very light.",
+            "normal": "This laptop is light, so I can carry it everywhere.",
+            "hard": "Take a light jacket with you, because it can get cool in the mountains in the evening."
+          },
+          "synonyms": [],
+          "collocations": [
+            "light bag",
+            "light jacket"
+          ]
+        },
+        {
+          "word": "heavy",
+          "uzb": "og‘ir",
+          "emoji": "🏋️",
+          "examples": {
+            "easy": "This box is very heavy.",
+            "normal": "Is my handbag light? No, it isn't. It's heavy.",
+            "hard": "The suitcase was so heavy that the porter needed help to carry it up the stairs."
+          },
+          "synonyms": [],
+          "collocations": [
+            "heavy bag",
+            "heavy box"
+          ]
+        },
+        {
+          "word": "hungry",
+          "uzb": "och qolgan",
+          "emoji": "🤤",
+          "examples": {
+            "easy": "I'm hungry. Let's eat.",
+            "normal": "Are those taxi drivers thirsty? No, they are hungry.",
+            "hard": "We were very hungry after the long walk, so we ordered two big plates of plov."
+          },
+          "synonyms": [
+            "starving"
+          ],
+          "collocations": [
+            "very hungry",
+            "feel hungry"
+          ]
+        },
+        {
+          "word": "new",
+          "uzb": "yangi",
+          "emoji": "🆕",
+          "examples": {
+            "easy": "Is your car new?",
+            "normal": "I have a new phone, and it takes great photos.",
+            "hard": "We moved into a new flat last month, but we still don't have any furniture in the kitchen."
+          },
+          "synonyms": [],
+          "collocations": [
+            "brand new",
+            "new car"
+          ]
+        },
+        {
+          "word": "cheap",
+          "uzb": "arzon",
+          "emoji": "🪙",
+          "examples": {
+            "easy": "This shirt is very cheap.",
+            "normal": "Is the house cheap? No, it isn't. It's expensive.",
+            "hard": "Fruit is very cheap at the market in summer, so we buy a lot and make jam."
+          },
+          "synonyms": [
+            "inexpensive"
+          ],
+          "collocations": [
+            "cheap ticket",
+            "cheap hotel"
+          ]
+        },
+        {
+          "word": "expensive",
+          "uzb": "qimmat",
+          "emoji": "💎",
+          "examples": {
+            "easy": "His car is very expensive.",
+            "normal": "This restaurant is good, but it is too expensive for us.",
+            "hard": "Flights are always more expensive in summer, so we usually travel in spring or autumn."
+          },
+          "synonyms": [
+            "costly",
+            "dear"
+          ],
+          "collocations": [
+            "very expensive",
+            "expensive car"
+          ]
+        },
+        {
+          "word": "woman",
+          "uzb": "ayol kishi",
+          "emoji": "👩",
+          "examples": {
+            "easy": "That woman is my teacher.",
+            "normal": "Are these women tall? No, they aren't. They're short.",
+            "hard": "The woman at the information desk was very helpful and showed us where to buy tickets."
+          },
+          "synonyms": [
+            "lady"
+          ],
+          "collocations": [
+            "young woman",
+            "old woman"
+          ]
+        },
+        {
+          "word": "house",
+          "uzb": "uy",
+          "emoji": "🏠",
+          "examples": {
+            "easy": "Is that house empty?",
+            "normal": "Their house is very big, and it has a lovely garden.",
+            "hard": "My grandparents built this house fifty years ago, and the whole family still meets here."
+          },
+          "synonyms": [
+            "home"
+          ],
+          "collocations": [
+            "big house",
+            "house number"
+          ]
+        },
+        {
+          "word": "different",
+          "uzb": "turli",
+          "emoji": "🔀",
+          "examples": {
+            "easy": "We are from different countries.",
+            "normal": "This shop sells many different kinds of tea and coffee.",
+            "hard": "The students in this class are from different cities, but they all want to learn English."
+          },
+          "synonyms": [
+            "various"
+          ],
+          "collocations": [
+            "different colours",
+            "different kinds"
+          ]
+        },
+        {
+          "word": "ashtray",
+          "uzb": "kuldon",
+          "emoji": "🚬",
+          "examples": {
+            "easy": "Is the ashtray empty?",
+            "normal": "There is a dirty ashtray on the table in the hall.",
+            "hard": "Smoking is not allowed in the hotel, so you won't find an ashtray in any of the rooms."
+          },
+          "synonyms": [],
+          "collocations": [
+            "empty the ashtray",
+            "glass ashtray"
+          ]
+        },
+        {
+          "word": "second",
+          "uzb": "soniya, sekund",
+          "emoji": "⏱️",
+          "examples": {
+            "easy": "Wait a second, please.",
+            "normal": "The fastest runner finished the race in ten seconds.",
+            "hard": "The lights went out for a few seconds, and then everything in the house came back on."
+          },
+          "synonyms": [
+            "moment"
+          ],
+          "collocations": [
+            "a few seconds",
+            "just a second"
+          ]
+        },
+        {
+          "word": "midday",
+          "uzb": "kun o‘rtasi, choshgoh, 12:00",
+          "emoji": "🕛",
+          "examples": {
+            "easy": "We have lunch at midday.",
+            "normal": "It is very hot here at midday, so people stay inside.",
+            "hard": "The shop closes at midday on Saturdays, so we need to buy everything in the morning."
+          },
+          "synonyms": [
+            "noon"
+          ],
+          "collocations": [
+            "at midday",
+            "the midday sun"
+          ]
+        },
+        {
+          "word": "noon",
+          "uzb": "kun o‘rtasi, choshgoh, 12:00",
+          "emoji": "🕛",
+          "examples": {
+            "easy": "The meeting is at noon.",
+            "normal": "I usually take my lunch break at noon every day.",
+            "hard": "Please check out of your hotel room by twelve noon, or you will have to pay extra."
+          },
+          "synonyms": [
+            "midday"
+          ],
+          "collocations": [
+            "at noon",
+            "twelve noon"
+          ]
+        },
+        {
+          "word": "midnight",
+          "uzb": "yarim kecha, 00:00",
+          "emoji": "🌃",
+          "examples": {
+            "easy": "We went to bed at midnight.",
+            "normal": "The last metro train leaves the station just before midnight.",
+            "hard": "We watched films and talked until midnight, so we were very tired at work the next day."
+          },
+          "synonyms": [],
+          "collocations": [
+            "at midnight",
+            "after midnight"
+          ]
+        },
+        {
+          "word": "fat",
+          "uzb": "semiz",
+          "emoji": "🐈",
+          "examples": {
+            "easy": "Our cat is very fat.",
+            "normal": "The cat is fat because it eats all day and sleeps.",
+            "hard": "The vet said our dog was too fat and told us to give it less food and more exercise."
+          },
+          "synonyms": [
+            "overweight"
+          ],
+          "collocations": [
+            "get fat",
+            "fat cat"
+          ]
+        },
+        {
+          "word": "short",
+          "uzb": "pakana",
+          "emoji": "📏",
+          "examples": {
+            "easy": "My sister is short.",
+            "normal": "Is Carol short? No, she isn't. She is tall.",
+            "hard": "He is short, but he is one of the best basketball players in our university team."
+          },
+          "synonyms": [],
+          "collocations": [
+            "quite short",
+            "short man"
+          ]
+        },
+        {
+          "word": "tall",
+          "uzb": "novcha",
+          "emoji": "🦒",
+          "examples": {
+            "easy": "Her brother is very tall.",
+            "normal": "The porter isn't short. He is a tall, strong man.",
+            "hard": "Our son is only fourteen, but he is already taller than his father and his uncle."
+          },
+          "synonyms": [],
+          "collocations": [
+            "very tall",
+            "tall man"
+          ]
+        },
+        {
+          "word": "weak",
+          "uzb": "kuchsiz",
+          "emoji": "🥀",
+          "examples": {
+            "easy": "I feel weak today.",
+            "normal": "After a long illness, my grandfather is still quite weak.",
+            "hard": "She felt weak and tired after the flu, so the doctor told her to stay at home for a week."
+          },
+          "synonyms": [],
+          "collocations": [
+            "feel weak",
+            "weak and tired"
+          ]
+        },
+        {
+          "word": "rich",
+          "uzb": "boy",
+          "emoji": "🤑",
+          "examples": {
+            "easy": "Mr Brown is very rich.",
+            "normal": "Are those businessmen poor? No, they are very rich.",
+            "hard": "He became rich by selling cars, but he still lives in the same small house as before."
+          },
+          "synonyms": [
+            "wealthy",
+            "well-off"
+          ],
+          "collocations": [
+            "very rich",
+            "rich family"
+          ]
+        },
+        {
+          "word": "plate",
+          "uzb": "tarelka",
+          "emoji": "🍽️",
+          "examples": {
+            "easy": "Are the plates full?",
+            "normal": "Please put the clean plates in the cupboard.",
+            "hard": "My grandmother always fills my plate with food, even when I tell her I'm not hungry."
+          },
+          "synonyms": [
+            "dish"
+          ],
+          "collocations": [
+            "dinner plate",
+            "empty plate"
+          ]
+        },
+        {
+          "word": "full",
+          "uzb": "to‘la",
+          "emoji": "🔋",
+          "examples": {
+            "easy": "The cup is full.",
+            "normal": "The bus is full, so we need to wait for another.",
+            "hard": "The fridge was full of food, because we were expecting twenty guests for my birthday."
+          },
+          "synonyms": [],
+          "collocations": [
+            "full of",
+            "half full"
+          ]
+        },
+        {
+          "word": "handbag",
+          "uzb": "ayollarning qo‘l sumkasi",
+          "emoji": "👜",
+          "examples": {
+            "easy": "Is that her handbag?",
+            "normal": "My wife keeps her phone and keys in her handbag.",
+            "hard": "She bought an expensive leather handbag in Istanbul, and she carries it everywhere."
+          },
+          "synonyms": [
+            "bag",
+            "purse"
+          ],
+          "collocations": [
+            "leather handbag",
+            "small handbag"
+          ]
+        },
+        {
+          "word": "porter",
+          "uzb": "yuk tashuvchi",
+          "emoji": "🛎️",
+          "examples": {
+            "easy": "The porter is tall.",
+            "normal": "The porter carried our cases to the room on the fifth floor.",
+            "hard": "At the station, a porter helped the old woman carry her heavy bags to the train."
+          },
+          "synonyms": [],
+          "collocations": [
+            "hotel porter",
+            "railway porter"
+          ]
+        },
+        {
+          "word": "describe",
+          "uzb": "tasvirlamoq",
+          "emoji": "🖼️",
+          "examples": {
+            "easy": "Describe your mother, please.",
+            "normal": "Can you describe your father? Is he tall or short?",
+            "hard": "The police asked her to describe the man, but she only remembered his red jacket."
+          },
+          "synonyms": [],
+          "collocations": [
+            "describe a person",
+            "describe in detail"
+          ]
+        },
+        {
+          "word": "man",
+          "uzb": "erkak kishi",
+          "emoji": "👨",
+          "examples": {
+            "easy": "That man is very tall.",
+            "normal": "Is that man angry? No, he isn't angry. He's tired.",
+            "hard": "The man who lives next door is a doctor, and he always helps us when the children are ill."
+          },
+          "synonyms": [],
+          "collocations": [
+            "old man",
+            "young man"
+          ]
+        },
+        {
+          "word": "angry",
+          "uzb": "jahli chiqqan",
+          "emoji": "😠",
+          "examples": {
+            "easy": "Why are you angry?",
+            "normal": "My boss was angry because I was late for the meeting.",
+            "hard": "She was angry with her son because he broke the window and then lied about it."
+          },
+          "synonyms": [
+            "cross",
+            "annoyed"
+          ],
+          "collocations": [
+            "very angry",
+            "get angry"
+          ]
+        },
+        {
+          "word": "thirsty",
+          "uzb": "chanqagan",
+          "emoji": "💧",
+          "examples": {
+            "easy": "I'm thirsty. Can I have water?",
+            "normal": "It's very hot today, so everyone is thirsty.",
+            "hard": "After playing football for two hours in the sun, the boys were hot and very thirsty."
+          },
+          "synonyms": [],
+          "collocations": [
+            "feel thirsty",
+            "very thirsty"
+          ]
+        },
+        {
+          "word": "cup",
+          "uzb": "chashka",
+          "emoji": "☕",
+          "examples": {
+            "easy": "Is the cup full?",
+            "normal": "Would you like a cup of tea with lemon?",
+            "hard": "My grandfather drinks at least six cups of green tea every day, even in summer."
+          },
+          "synonyms": [
+            "mug"
+          ],
+          "collocations": [
+            "cup of tea",
+            "coffee cup"
+          ]
+        },
+        {
+          "word": "ugly",
+          "uzb": "xunuk",
+          "emoji": "👹",
+          "examples": {
+            "easy": "That building is very ugly.",
+            "normal": "I don't like this lamp. I think it's really ugly.",
+            "hard": "The new shopping centre looks quite ugly from outside, but it is beautiful inside."
+          },
+          "synonyms": [
+            "unattractive"
+          ],
+          "collocations": [
+            "ugly building",
+            "really ugly"
+          ]
+        },
+        {
+          "word": "girl",
+          "uzb": "qiz bola",
+          "emoji": "👧",
+          "examples": {
+            "easy": "That girl is my daughter.",
+            "normal": "The little girl in the red dress is very beautiful.",
+            "hard": "The girl next door is only ten, but she already plays the piano very well."
+          },
+          "synonyms": [],
+          "collocations": [
+            "little girl",
+            "young girl"
+          ]
+        },
+        {
+          "word": "secretary",
+          "uzb": "kotiba",
+          "emoji": "👩‍💼",
+          "examples": {
+            "easy": "Is your secretary old?",
+            "normal": "The secretary works in the office from nine to five.",
+            "hard": "Please call my secretary tomorrow morning, and she will give you a time for the meeting."
+          },
+          "synonyms": [
+            "assistant"
+          ],
+          "collocations": [
+            "school secretary",
+            "office secretary"
+          ]
+        },
+        {
+          "word": "thick",
+          "uzb": "qalin",
+          "emoji": "📚",
+          "examples": {
+            "easy": "This book is very thick.",
+            "normal": "Is your book thin? No, it isn't. It's thick.",
+            "hard": "In winter, I wear a thick jacket and warm boots, because it is very cold outside."
+          },
+          "synonyms": [],
+          "collocations": [
+            "thick book",
+            "thick jacket"
+          ]
+        },
+        {
+          "word": "towel",
+          "uzb": "sochiq",
+          "emoji": "🛁",
+          "examples": {
+            "easy": "Is this my towel here?",
+            "normal": "Please take a clean towel from the bathroom shelf.",
+            "hard": "Don't forget to take a big towel to the beach, because the sand is very hot."
+          },
+          "synonyms": [],
+          "collocations": [
+            "bath towel",
+            "clean towel"
+          ]
+        },
+        {
+          "word": "glass",
+          "uzb": "stakan",
+          "emoji": "🥛",
+          "examples": {
+            "easy": "Their glasses are empty.",
+            "normal": "Can I have a glass of water, please?",
+            "hard": "He filled the glasses with cold juice and carried them carefully into the garden."
+          },
+          "synonyms": [],
+          "collocations": [
+            "glass of water",
+            "empty glass"
+          ]
+        },
+        {
+          "word": "tell",
+          "uzb": "aytmoq",
+          "emoji": "🗣️",
+          "examples": {
+            "easy": "Tell me about your family.",
+            "normal": "Can you tell me about that man? Is he rich?",
+            "hard": "My grandmother loves to tell us stories about her life in the village when she was young."
+          },
+          "synonyms": [],
+          "collocations": [
+            "tell a story",
+            "tell the truth"
+          ]
+        },
+        {
+          "word": "cook",
+          "uzb": "oshpaz; pishirmoq",
+          "emoji": "👨‍🍳",
+          "examples": {
+            "easy": "He is a cook.",
+            "normal": "My husband is a good cook, and he cooks every Sunday.",
+            "hard": "She works as a cook in a big hotel, and she cooks for more than two hundred guests a day."
+          },
+          "synonyms": [
+            "chef"
+          ],
+          "collocations": [
+            "head cook",
+            "cook dinner"
+          ]
+        },
+        {
+          "word": "case",
+          "uzb": "jamadon",
+          "emoji": "🧳",
+          "examples": {
+            "easy": "Those are my cases.",
+            "normal": "Is this your case? It's very heavy, isn't it?",
+            "hard": "I always pack my case the night before a trip, so I don't forget anything important."
+          },
+          "synonyms": [
+            "suitcase"
+          ],
+          "collocations": [
+            "pack a case",
+            "heavy case"
+          ]
+        },
+        {
+          "word": "sad",
+          "uzb": "xafa",
+          "emoji": "😢",
+          "examples": {
+            "easy": "Why are you sad today?",
+            "normal": "She is sad because her best friend is moving away.",
+            "hard": "It was a sad day for everyone when our favourite teacher left the school."
+          },
+          "synonyms": [
+            "unhappy",
+            "upset"
+          ],
+          "collocations": [
+            "feel sad",
+            "sad news"
+          ]
+        },
+        {
+          "word": "empty",
+          "uzb": "bo‘sh",
+          "emoji": "🫙",
+          "examples": {
+            "easy": "The ashtray is empty.",
+            "normal": "Is the cup full? No, it isn't. It's empty.",
+            "hard": "The streets were empty at five in the morning, so we drove to the airport very quickly."
+          },
+          "synonyms": [],
+          "collocations": [
+            "empty glass",
+            "empty room"
+          ]
+        },
+        {
+          "word": "thin",
+          "uzb": "ozg‘in",
+          "emoji": "🦴",
+          "examples": {
+            "easy": "She is tall and thin.",
+            "normal": "Those women are tall and thin, like fashion models.",
+            "hard": "He was very thin after his illness, so his mother cooked his favourite food every day."
+          },
+          "synonyms": [
+            "slim",
+            "slender"
+          ],
+          "collocations": [
+            "tall and thin",
+            "very thin"
+          ]
+        },
+        {
+          "word": "old",
+          "uzb": "eski",
+          "emoji": "🏚️",
+          "examples": {
+            "easy": "My car is very old.",
+            "normal": "Is your umbrella new? No, it isn't. It's old.",
+            "hard": "We still use my grandmother's old table, although it is more than sixty years old."
+          },
+          "synonyms": [],
+          "collocations": [
+            "old house",
+            "old car"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-vt-starter-lesson-8",
+      "lesson": 8,
+      "name": "Lesson 8 - There is / there are at home",
+      "source": "Video Lesson (VT) p. 23, 24",
+      "words": [
+        {
+          "word": "there is",
+          "uzb": "bor (birlikda)",
+          "emoji": "☝️",
+          "examples": {
+            "easy": "There is a plate here.",
+            "normal": "There is a big supermarket near our flat.",
+            "hard": "There is a small café on the corner where you can get very good coffee and cake."
+          },
+          "synonyms": [],
+          "collocations": [
+            "there is a",
+            "there is no"
+          ]
+        },
+        {
+          "word": "cupboard",
+          "uzb": "shkaf",
+          "emoji": "🗄️",
+          "examples": {
+            "easy": "The plates are in the cupboard.",
+            "normal": "There are some cups and glasses in the kitchen cupboard.",
+            "hard": "We keep the cleaning things in the cupboard under the sink, away from the children."
+          },
+          "synonyms": [
+            "cabinet"
+          ],
+          "collocations": [
+            "kitchen cupboard",
+            "in the cupboard"
+          ]
+        },
+        {
+          "word": "fridge",
+          "uzb": "muzlatkich",
+          "emoji": "🧊",
+          "examples": {
+            "easy": "Is there milk in the fridge?",
+            "normal": "Put the meat and the milk in the fridge, please.",
+            "hard": "Our old fridge is very noisy, so we want to buy a new one before the summer."
+          },
+          "synonyms": [
+            "refrigerator"
+          ],
+          "collocations": [
+            "in the fridge",
+            "fridge door"
+          ]
+        },
+        {
+          "word": "bathroom",
+          "uzb": "hammom, vannaxona",
+          "emoji": "🚿",
+          "examples": {
+            "easy": "The towels are in the bathroom.",
+            "normal": "Our flat has one bathroom, and it is quite small.",
+            "hard": "In the morning, everyone in my family wants to use the bathroom at the same time."
+          },
+          "synonyms": [],
+          "collocations": [
+            "clean the bathroom",
+            "bathroom door"
+          ]
+        },
+        {
+          "word": "kitchen",
+          "uzb": "oshxona",
+          "emoji": "🍳",
+          "examples": {
+            "easy": "The fridge is in the kitchen.",
+            "normal": "My mother is in the kitchen, cooking dinner for us.",
+            "hard": "We usually eat breakfast in the kitchen, because it is warm and close to the cooker."
+          },
+          "synonyms": [],
+          "collocations": [
+            "kitchen table",
+            "kitchen sink"
+          ]
+        },
+        {
+          "word": "telephone",
+          "uzb": "telefon",
+          "emoji": "☎️",
+          "examples": {
+            "easy": "The telephone is ringing.",
+            "normal": "Is there a telephone in your living room? Yes, there is.",
+            "hard": "My grandmother still uses the old telephone in the hall to call her friends every evening."
+          },
+          "synonyms": [
+            "phone"
+          ],
+          "collocations": [
+            "answer the telephone",
+            "telephone number"
+          ]
+        },
+        {
+          "word": "cooker",
+          "uzb": "plita",
+          "emoji": "♨️",
+          "examples": {
+            "easy": "There is a cooker here.",
+            "normal": "The soup is on the cooker. It's still hot.",
+            "hard": "We bought a new gas cooker for the kitchen, because the old one didn't work well."
+          },
+          "synonyms": [
+            "stove"
+          ],
+          "collocations": [
+            "gas cooker",
+            "electric cooker"
+          ]
+        },
+        {
+          "word": "television",
+          "uzb": "televizor",
+          "emoji": "📺",
+          "examples": {
+            "easy": "Is there a television here?",
+            "normal": "There is a big television in our living room.",
+            "hard": "My father watches the football on television every Saturday evening with his friends."
+          },
+          "synonyms": [
+            "TV"
+          ],
+          "collocations": [
+            "watch television",
+            "on television"
+          ]
+        },
+        {
+          "word": "sofa",
+          "uzb": "divan",
+          "emoji": "🛋️",
+          "examples": {
+            "easy": "The sofa is very comfortable.",
+            "normal": "Is there a sofa in the living room? No, there isn't.",
+            "hard": "After a long day at work, I like to lie on the sofa and read a good book."
+          },
+          "synonyms": [
+            "couch"
+          ],
+          "collocations": [
+            "comfortable sofa",
+            "sit on the sofa"
+          ]
+        },
+        {
+          "word": "there are",
+          "uzb": "bor (ko‘plikda)",
+          "emoji": "✌️",
+          "examples": {
+            "easy": "There are apples in the fridge.",
+            "normal": "There are some glasses on the shelf in the kitchen.",
+            "hard": "There are more than thirty students in our class, so the room is always crowded."
+          },
+          "synonyms": [],
+          "collocations": [
+            "there are some",
+            "there are no"
+          ]
+        },
+        {
+          "word": "pan",
+          "uzb": "tova, kastryul",
+          "emoji": "🥘",
+          "examples": {
+            "easy": "The pans are in the kitchen.",
+            "normal": "Wash the pans after dinner, please. They are very dirty.",
+            "hard": "She used a big pan to make plov for all the guests at the wedding."
+          },
+          "synonyms": [
+            "saucepan"
+          ],
+          "collocations": [
+            "frying pan",
+            "heavy pan"
+          ]
+        },
+        {
+          "word": "under",
+          "uzb": "ostida, tagida",
+          "emoji": "⬇️",
+          "examples": {
+            "easy": "The cat is under the table.",
+            "normal": "Is there a cupboard under the sink? Yes, there is.",
+            "hard": "I found my lost keys under the sofa when I was cleaning the living room on Sunday."
+          },
+          "synonyms": [
+            "below",
+            "beneath"
+          ],
+          "collocations": [
+            "under the table",
+            "under the bed"
+          ]
+        },
+        {
+          "word": "sink",
+          "uzb": "rakovina",
+          "emoji": "🚰",
+          "examples": {
+            "easy": "The knives are in the sink.",
+            "normal": "There are a lot of dirty plates in the kitchen sink.",
+            "hard": "Don't leave the dirty dishes in the sink all night, or the kitchen will smell bad."
+          },
+          "synonyms": [
+            "basin"
+          ],
+          "collocations": [
+            "kitchen sink",
+            "bathroom sink"
+          ]
+        },
+        {
+          "word": "bottle",
+          "uzb": "shisha, butilka",
+          "emoji": "🍾",
+          "examples": {
+            "easy": "Is there a bottle here?",
+            "normal": "There is a bottle of water on the shelf.",
+            "hard": "Please don't throw plastic bottles in the street; put them in the special bins instead."
+          },
+          "synonyms": [],
+          "collocations": [
+            "bottle of water",
+            "plastic bottle"
+          ]
+        },
+        {
+          "word": "balcony",
+          "uzb": "balkon",
+          "emoji": "🏙️",
+          "examples": {
+            "easy": "There are chairs on the balcony.",
+            "normal": "We drink tea on the balcony on warm summer evenings.",
+            "hard": "Our flat has a small balcony, where my wife grows tomatoes and flowers every summer."
+          },
+          "synonyms": [],
+          "collocations": [
+            "on the balcony",
+            "small balcony"
+          ]
+        },
+        {
+          "word": "magazine",
+          "uzb": "jurnal",
+          "emoji": "📖",
+          "examples": {
+            "easy": "There are magazines on the table.",
+            "normal": "Are there any magazines in the living room? Yes, there are.",
+            "hard": "While I was waiting at the dentist's, I read an interesting magazine article about travel."
+          },
+          "synonyms": [],
+          "collocations": [
+            "fashion magazine",
+            "read a magazine"
+          ]
+        },
+        {
+          "word": "boy",
+          "uzb": "o‘g‘il bola",
+          "emoji": "👦",
+          "examples": {
+            "easy": "There is a tall boy here.",
+            "normal": "There are some boys in the garden playing football.",
+            "hard": "The boy next door is only twelve, but he already speaks three languages very well."
+          },
+          "synonyms": [
+            "lad"
+          ],
+          "collocations": [
+            "little boy",
+            "young boy"
+          ]
+        },
+        {
+          "word": "hotel",
+          "uzb": "mehmonxona",
+          "emoji": "🏨",
+          "examples": {
+            "easy": "Is there a hotel near here?",
+            "normal": "Are there any businessmen in the hotel? Yes, there are.",
+            "hard": "We stayed in a small hotel near the old city, and the breakfast every morning was excellent."
+          },
+          "synonyms": [],
+          "collocations": [
+            "stay in a hotel",
+            "hotel room"
+          ]
+        },
+        {
+          "word": "cat",
+          "uzb": "mushuk",
+          "emoji": "🐈",
+          "examples": {
+            "easy": "There is a cat under the table.",
+            "normal": "Our cat sleeps on the sofa in the living room all day.",
+            "hard": "We found a little cat in the street, and now it is part of our family."
+          },
+          "synonyms": [],
+          "collocations": [
+            "black cat",
+            "feed the cat"
+          ]
+        },
+        {
+          "word": "look at",
+          "uzb": "qaramoq",
+          "emoji": "👀",
+          "examples": {
+            "easy": "Look at that girl!",
+            "normal": "Look at the photo. Is there a sofa in the room?",
+            "hard": "If you look at the map carefully, you will see a small hotel next to the station."
+          },
+          "synonyms": [],
+          "collocations": [
+            "look at the picture",
+            "look at me"
+          ]
+        },
+        {
+          "word": "flat",
+          "uzb": "kvartira",
+          "emoji": "🏢",
+          "examples": {
+            "easy": "Describe your flat, please.",
+            "normal": "There are three rooms and a big kitchen in our flat.",
+            "hard": "They live in a modern flat on the fifth floor, with a beautiful view of the park."
+          },
+          "synonyms": [
+            "apartment"
+          ],
+          "collocations": [
+            "rent a flat",
+            "two-bedroom flat"
+          ]
+        }
+      ]
+    }
+  ]
+}

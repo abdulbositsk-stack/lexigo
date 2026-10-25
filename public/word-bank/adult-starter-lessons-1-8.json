@@ -1,0 +1,1537 @@
+{
+  "level": "Teenagers & Adults - Starter",
+  "source": "Starter MT.pdf",
+  "units": [
+    {
+      "id": "adult-starter-lesson-1",
+      "lesson": 1,
+      "name": "Lesson 1 - People and descriptions",
+      "source": "Main Lesson (MT)",
+      "words": [
+        {
+          "word": "personal pronoun",
+          "uzb": "kishilik olmoshi",
+          "emoji": "👤",
+          "examples": {
+            "easy": "A personal pronoun replaces a name.",
+            "normal": "Use a personal pronoun instead of repeating the name.",
+            "hard": "Choose the correct personal pronoun for every person in the sentence."
+          },
+          "synonyms": [],
+          "collocations": [
+            "use a personal pronoun",
+            "subject pronoun"
+          ]
+        },
+        {
+          "word": "I",
+          "uzb": "men",
+          "emoji": "🙋",
+          "examples": {
+            "easy": "This is a i.",
+            "normal": "I can see the i in the picture.",
+            "hard": "The i is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the i",
+            "a i"
+          ]
+        },
+        {
+          "word": "he",
+          "uzb": "u (o‘g‘il bolaga)",
+          "emoji": "👨",
+          "examples": {
+            "easy": "He is my friend.",
+            "normal": "He plays football after school.",
+            "hard": "He said that he would finish the task later."
+          },
+          "synonyms": [],
+          "collocations": [
+            "he is",
+            "he can"
+          ]
+        },
+        {
+          "word": "she",
+          "uzb": "u (qiz bolaga)",
+          "emoji": "👩",
+          "examples": {
+            "easy": "She is happy.",
+            "normal": "She works in a hotel.",
+            "hard": "She explained the answer clearly to the class."
+          },
+          "synonyms": [],
+          "collocations": [
+            "she is",
+            "she can"
+          ]
+        },
+        {
+          "word": "it",
+          "uzb": "u (jonsiz narsa yoki hayvonga)",
+          "emoji": "📦",
+          "examples": {
+            "easy": "It is a cat.",
+            "normal": "It is on the table.",
+            "hard": "It looks difficult, but the task is simple."
+          },
+          "synonyms": [],
+          "collocations": [
+            "it is",
+            "it can"
+          ]
+        },
+        {
+          "word": "we",
+          "uzb": "biz",
+          "emoji": "👥",
+          "examples": {
+            "easy": "We are friends.",
+            "normal": "We learn new words together.",
+            "hard": "We will practise the dialogue before the lesson ends."
+          },
+          "synonyms": [],
+          "collocations": [
+            "we are",
+            "we can"
+          ]
+        },
+        {
+          "word": "they",
+          "uzb": "ular",
+          "emoji": "👥",
+          "examples": {
+            "easy": "They are students.",
+            "normal": "They live near the school.",
+            "hard": "They have already completed the exercise."
+          },
+          "synonyms": [],
+          "collocations": [
+            "they are",
+            "they have"
+          ]
+        },
+        {
+          "word": "you",
+          "uzb": "sen / siz",
+          "emoji": "🫵",
+          "examples": {
+            "easy": "You are kind.",
+            "normal": "You can open the book.",
+            "hard": "You should check your answers before you finish."
+          },
+          "synonyms": [],
+          "collocations": [
+            "you are",
+            "you can"
+          ]
+        },
+        {
+          "word": "teacher",
+          "uzb": "o‘qituvchi",
+          "emoji": "🧑‍🏫",
+          "examples": {
+            "easy": "The teacher is here.",
+            "normal": "Our teacher explains new words.",
+            "hard": "The teacher asked us to work in pairs."
+          },
+          "synonyms": [
+            "educator",
+            "instructor"
+          ],
+          "collocations": [
+            "English teacher",
+            "ask the teacher"
+          ]
+        },
+        {
+          "word": "student",
+          "uzb": "talaba / o‘quvchi",
+          "emoji": "🧑‍🎓",
+          "examples": {
+            "easy": "The student is ready.",
+            "normal": "Every student has a book.",
+            "hard": "The student gave a clear answer to the teacher."
+          },
+          "synonyms": [
+            "learner",
+            "pupil"
+          ],
+          "collocations": [
+            "good student",
+            "student card"
+          ]
+        },
+        {
+          "word": "sad",
+          "uzb": "hafa",
+          "emoji": "😢",
+          "examples": {
+            "easy": "I am sad.",
+            "normal": "She feels sad today.",
+            "hard": "He was sad because his friend was absent."
+          },
+          "synonyms": [
+            "unhappy",
+            "upset"
+          ],
+          "collocations": [
+            "feel sad",
+            "sad news"
+          ]
+        },
+        {
+          "word": "happy",
+          "uzb": "xursand, baxtli",
+          "emoji": "😊",
+          "examples": {
+            "easy": "I am happy.",
+            "normal": "They are happy at school.",
+            "hard": "She was happy when she heard the good news."
+          },
+          "synonyms": [
+            "glad",
+            "pleased"
+          ],
+          "collocations": [
+            "feel happy",
+            "happy day"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-starter-lesson-2",
+      "lesson": 2,
+      "name": "Lesson 2 - Questions and classroom language",
+      "source": "Main Lesson (MT)",
+      "words": [
+        {
+          "word": "question",
+          "uzb": "savol",
+          "emoji": "❓",
+          "examples": {
+            "easy": "I have a question.",
+            "normal": "Please answer the question.",
+            "hard": "The teacher wrote a difficult question on the board."
+          },
+          "synonyms": [
+            "query",
+            "problem"
+          ],
+          "collocations": [
+            "ask a question",
+            "answer a question"
+          ]
+        },
+        {
+          "word": "answer",
+          "uzb": "javob",
+          "emoji": "💡",
+          "examples": {
+            "easy": "My answer is yes.",
+            "normal": "He knows the answer.",
+            "hard": "Please give a complete answer to the question."
+          },
+          "synonyms": [
+            "reply",
+            "response"
+          ],
+          "collocations": [
+            "give an answer",
+            "correct answer"
+          ]
+        },
+        {
+          "word": "who",
+          "uzb": "kim",
+          "emoji": "👤",
+          "examples": {
+            "easy": "Who is he?",
+            "normal": "Who is your teacher?",
+            "hard": "Who will lead the group activity today?"
+          },
+          "synonyms": [],
+          "collocations": [
+            "who is",
+            "ask who"
+          ]
+        },
+        {
+          "word": "what",
+          "uzb": "nima",
+          "emoji": "❔",
+          "examples": {
+            "easy": "What is this?",
+            "normal": "What is your name?",
+            "hard": "What do you think about the new lesson?"
+          },
+          "synonyms": [],
+          "collocations": [
+            "what is",
+            "what do"
+          ]
+        },
+        {
+          "word": "when",
+          "uzb": "qachon",
+          "emoji": "⏰",
+          "examples": {
+            "easy": "When is lunch?",
+            "normal": "When do you go home?",
+            "hard": "When did you begin learning English?"
+          },
+          "synonyms": [],
+          "collocations": [
+            "when is",
+            "ask when"
+          ]
+        },
+        {
+          "word": "where",
+          "uzb": "qayerda",
+          "emoji": "📍",
+          "examples": {
+            "easy": "Where is my bag?",
+            "normal": "Where do you live?",
+            "hard": "Where should we meet after the lesson?"
+          },
+          "synonyms": [],
+          "collocations": [
+            "where is",
+            "ask where"
+          ]
+        },
+        {
+          "word": "why",
+          "uzb": "nega",
+          "emoji": "🤔",
+          "examples": {
+            "easy": "Why are you sad?",
+            "normal": "Why is the door open?",
+            "hard": "Why did you choose that answer?"
+          },
+          "synonyms": [],
+          "collocations": [
+            "ask why",
+            "reason why"
+          ]
+        },
+        {
+          "word": "which",
+          "uzb": "qaysi",
+          "emoji": "👉",
+          "examples": {
+            "easy": "Which book is yours?",
+            "normal": "Which colour do you like?",
+            "hard": "Which option gives the best answer?"
+          },
+          "synonyms": [],
+          "collocations": [
+            "which one",
+            "which colour"
+          ]
+        },
+        {
+          "word": "city",
+          "uzb": "shahar",
+          "emoji": "🏙️",
+          "examples": {
+            "easy": "This city is big.",
+            "normal": "Tashkent is a busy city.",
+            "hard": "The city has many parks and museums."
+          },
+          "synonyms": [
+            "town",
+            "metropolis"
+          ],
+          "collocations": [
+            "big city",
+            "city centre"
+          ]
+        },
+        {
+          "word": "mammal",
+          "uzb": "sut emizuvchi hayvon",
+          "emoji": "🐘",
+          "examples": {
+            "easy": "A dog is a mammal.",
+            "normal": "A whale is a large mammal.",
+            "hard": "Mammals feed their babies with milk."
+          },
+          "synonyms": [],
+          "collocations": [
+            "marine mammal",
+            "mammal species"
+          ]
+        },
+        {
+          "word": "football player",
+          "uzb": "futbolchi",
+          "emoji": "⚽",
+          "examples": {
+            "easy": "He is a football player.",
+            "normal": "The football player runs fast.",
+            "hard": "The football player scored a goal for his team."
+          },
+          "synonyms": [
+            "footballer",
+            "athlete"
+          ],
+          "collocations": [
+            "professional football player",
+            "football player"
+          ]
+        },
+        {
+          "word": "complete",
+          "uzb": "to‘ldirmoq / yakunlamoq",
+          "emoji": "✅",
+          "examples": {
+            "easy": "Complete the task.",
+            "normal": "Please complete this sentence.",
+            "hard": "Complete all the exercises before you leave."
+          },
+          "synonyms": [
+            "finish",
+            "fill in"
+          ],
+          "collocations": [
+            "complete the task",
+            "complete a form"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-starter-lesson-3",
+      "lesson": 3,
+      "name": "Lesson 3 - Countries, numbers and maths",
+      "source": "Main Lesson (MT)",
+      "words": [
+        {
+          "word": "country",
+          "uzb": "davlat",
+          "emoji": "🗺️",
+          "examples": {
+            "easy": "This is a country.",
+            "normal": "I can see the country in the picture.",
+            "hard": "The country is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the country",
+            "a country"
+          ]
+        },
+        {
+          "word": "nationality",
+          "uzb": "millat",
+          "emoji": "🌍",
+          "examples": {
+            "easy": "This is a nationality.",
+            "normal": "I can see the nationality in the picture.",
+            "hard": "The nationality is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the nationality",
+            "a nationality"
+          ]
+        },
+        {
+          "word": "cinema",
+          "uzb": "kinoteatr",
+          "emoji": "🎬",
+          "examples": {
+            "easy": "This is a cinema.",
+            "normal": "I can see the cinema in the picture.",
+            "hard": "The cinema is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the cinema",
+            "a cinema"
+          ]
+        },
+        {
+          "word": "today",
+          "uzb": "bugun",
+          "emoji": "📅",
+          "examples": {
+            "easy": "This is a today.",
+            "normal": "I can see the today in the picture.",
+            "hard": "The today is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the today",
+            "a today"
+          ]
+        },
+        {
+          "word": "Russia",
+          "uzb": "Rossiya",
+          "emoji": "🇷🇺",
+          "examples": {
+            "easy": "This is a russia.",
+            "normal": "I can see the russia in the picture.",
+            "hard": "The russia is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the russia",
+            "a russia"
+          ]
+        },
+        {
+          "word": "Turkish",
+          "uzb": "turk",
+          "emoji": "🇹🇷",
+          "examples": {
+            "easy": "This is a turkish.",
+            "normal": "I can see the turkish in the picture.",
+            "hard": "The turkish is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the turkish",
+            "a turkish"
+          ]
+        },
+        {
+          "word": "Chinese",
+          "uzb": "xitoylik / xitoy tili",
+          "emoji": "🇨🇳",
+          "examples": {
+            "easy": "This is a chinese.",
+            "normal": "I can see the chinese in the picture.",
+            "hard": "The chinese is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the chinese",
+            "a chinese"
+          ]
+        },
+        {
+          "word": "English",
+          "uzb": "ingliz tili",
+          "emoji": "🇬🇧",
+          "examples": {
+            "easy": "This is a english.",
+            "normal": "I can see the english in the picture.",
+            "hard": "The english is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the english",
+            "a english"
+          ]
+        },
+        {
+          "word": "teenager",
+          "uzb": "o‘smir",
+          "emoji": "🧑",
+          "examples": {
+            "easy": "This is a teenager.",
+            "normal": "I can see the teenager in the picture.",
+            "hard": "The teenager is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the teenager",
+            "a teenager"
+          ]
+        },
+        {
+          "word": "age",
+          "uzb": "yosh",
+          "emoji": "🎂",
+          "examples": {
+            "easy": "This is a age.",
+            "normal": "I can see the age in the picture.",
+            "hard": "The age is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the age",
+            "a age"
+          ]
+        },
+        {
+          "word": "mathematics",
+          "uzb": "matematika",
+          "emoji": "➗",
+          "examples": {
+            "easy": "This is a mathematics.",
+            "normal": "I can see the mathematics in the picture.",
+            "hard": "The mathematics is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the mathematics",
+            "a mathematics"
+          ]
+        },
+        {
+          "word": "holiday",
+          "uzb": "ta’til",
+          "emoji": "🏖️",
+          "examples": {
+            "easy": "This is a holiday.",
+            "normal": "I can see the holiday in the picture.",
+            "hard": "The holiday is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the holiday",
+            "a holiday"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-starter-lesson-4",
+      "lesson": 4,
+      "name": "Lesson 4 - Objects and demonstratives",
+      "source": "Main Lesson (MT)",
+      "words": [
+        {
+          "word": "this",
+          "uzb": "bu",
+          "emoji": "👉",
+          "examples": {
+            "easy": "This is a this.",
+            "normal": "I can see the this in the picture.",
+            "hard": "The this is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the this",
+            "a this"
+          ]
+        },
+        {
+          "word": "that",
+          "uzb": "ana u",
+          "emoji": "☝️",
+          "examples": {
+            "easy": "This is a that.",
+            "normal": "I can see the that in the picture.",
+            "hard": "The that is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the that",
+            "a that"
+          ]
+        },
+        {
+          "word": "these",
+          "uzb": "mana bular",
+          "emoji": "👇",
+          "examples": {
+            "easy": "This is a these.",
+            "normal": "I can see the these in the picture.",
+            "hard": "The these is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the these",
+            "a these"
+          ]
+        },
+        {
+          "word": "those",
+          "uzb": "ana ular",
+          "emoji": "👈",
+          "examples": {
+            "easy": "This is a those.",
+            "normal": "I can see the those in the picture.",
+            "hard": "The those is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the those",
+            "a those"
+          ]
+        },
+        {
+          "word": "toy",
+          "uzb": "o‘yinchoq",
+          "emoji": "🧸",
+          "examples": {
+            "easy": "This is a toy.",
+            "normal": "I can see the toy in the picture.",
+            "hard": "The toy is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the toy",
+            "a toy"
+          ]
+        },
+        {
+          "word": "fruit",
+          "uzb": "meva",
+          "emoji": "🍎",
+          "examples": {
+            "easy": "This is a fruit.",
+            "normal": "I can see the fruit in the picture.",
+            "hard": "The fruit is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the fruit",
+            "a fruit"
+          ]
+        },
+        {
+          "word": "bottle",
+          "uzb": "plastik idish, boklashka",
+          "emoji": "🧴",
+          "examples": {
+            "easy": "This is a bottle.",
+            "normal": "I can see the bottle in the picture.",
+            "hard": "The bottle is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the bottle",
+            "a bottle"
+          ]
+        },
+        {
+          "word": "map",
+          "uzb": "xarita",
+          "emoji": "🗺️",
+          "examples": {
+            "easy": "This is a map.",
+            "normal": "I can see the map in the picture.",
+            "hard": "The map is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the map",
+            "a map"
+          ]
+        },
+        {
+          "word": "umbrella",
+          "uzb": "soyabon",
+          "emoji": "☂️",
+          "examples": {
+            "easy": "This is a umbrella.",
+            "normal": "I can see the umbrella in the picture.",
+            "hard": "The umbrella is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the umbrella",
+            "a umbrella"
+          ]
+        },
+        {
+          "word": "hotel",
+          "uzb": "mehmonxona",
+          "emoji": "🏨",
+          "examples": {
+            "easy": "This is a hotel.",
+            "normal": "I can see the hotel in the picture.",
+            "hard": "The hotel is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the hotel",
+            "a hotel"
+          ]
+        },
+        {
+          "word": "chair",
+          "uzb": "stul",
+          "emoji": "🪑",
+          "examples": {
+            "easy": "This is a chair.",
+            "normal": "I can see the chair in the picture.",
+            "hard": "The chair is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the chair",
+            "a chair"
+          ]
+        },
+        {
+          "word": "fork",
+          "uzb": "vilka",
+          "emoji": "🍴",
+          "examples": {
+            "easy": "This is a fork.",
+            "normal": "I can see the fork in the picture.",
+            "hard": "The fork is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the fork",
+            "a fork"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-starter-lesson-5",
+      "lesson": 5,
+      "name": "Lesson 5 - Possession and meeting people",
+      "source": "Main Lesson (MT)",
+      "words": [
+        {
+          "word": "my",
+          "uzb": "mening",
+          "emoji": "🙋",
+          "examples": {
+            "easy": "This is a my.",
+            "normal": "I can see the my in the picture.",
+            "hard": "The my is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the my",
+            "a my"
+          ]
+        },
+        {
+          "word": "your",
+          "uzb": "sening / sizning",
+          "emoji": "🫵",
+          "examples": {
+            "easy": "This is a your.",
+            "normal": "I can see the your in the picture.",
+            "hard": "The your is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the your",
+            "a your"
+          ]
+        },
+        {
+          "word": "his",
+          "uzb": "uning (erkakniki)",
+          "emoji": "👨",
+          "examples": {
+            "easy": "This is a his.",
+            "normal": "I can see the his in the picture.",
+            "hard": "The his is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the his",
+            "a his"
+          ]
+        },
+        {
+          "word": "her",
+          "uzb": "uning (ayolniki)",
+          "emoji": "👩",
+          "examples": {
+            "easy": "This is a her.",
+            "normal": "I can see the her in the picture.",
+            "hard": "The her is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the her",
+            "a her"
+          ]
+        },
+        {
+          "word": "our",
+          "uzb": "bizning",
+          "emoji": "👥",
+          "examples": {
+            "easy": "This is a our.",
+            "normal": "I can see the our in the picture.",
+            "hard": "The our is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the our",
+            "a our"
+          ]
+        },
+        {
+          "word": "their",
+          "uzb": "ularning",
+          "emoji": "👥",
+          "examples": {
+            "easy": "This is a their.",
+            "normal": "I can see the their in the picture.",
+            "hard": "The their is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the their",
+            "a their"
+          ]
+        },
+        {
+          "word": "greeting",
+          "uzb": "salomlashish",
+          "emoji": "👋",
+          "examples": {
+            "easy": "This is a greeting.",
+            "normal": "I can see the greeting in the picture.",
+            "hard": "The greeting is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the greeting",
+            "a greeting"
+          ]
+        },
+        {
+          "word": "introduce",
+          "uzb": "tanishtirmoq",
+          "emoji": "🤝",
+          "examples": {
+            "easy": "Please introduce.",
+            "normal": "We can introduce this topic in class.",
+            "hard": "Try to introduce your idea clearly and confidently."
+          },
+          "synonyms": [],
+          "collocations": [
+            "introduce clearly",
+            "introduce a topic"
+          ]
+        },
+        {
+          "word": "study abroad",
+          "uzb": "chet elda o‘qimoq",
+          "emoji": "✈️",
+          "examples": {
+            "easy": "Please study abroad.",
+            "normal": "We can study abroad this topic in class.",
+            "hard": "Try to study abroad your idea clearly and confidently."
+          },
+          "synonyms": [],
+          "collocations": [
+            "study abroad clearly",
+            "study abroad a topic"
+          ]
+        },
+        {
+          "word": "nice to meet you",
+          "uzb": "tanishganimdan xursandman",
+          "emoji": "😊",
+          "examples": {
+            "easy": "This is a nice to meet you.",
+            "normal": "I can see the nice to meet you in the picture.",
+            "hard": "The nice to meet you is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the nice to meet you",
+            "a nice to meet you"
+          ]
+        },
+        {
+          "word": "team",
+          "uzb": "jamoa",
+          "emoji": "👥",
+          "examples": {
+            "easy": "This is a team.",
+            "normal": "I can see the team in the picture.",
+            "hard": "The team is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the team",
+            "a team"
+          ]
+        },
+        {
+          "word": "favourite",
+          "uzb": "sevimli",
+          "emoji": "⭐",
+          "examples": {
+            "easy": "It is favourite.",
+            "normal": "This item is favourite for me.",
+            "hard": "The word is favourite in this particular situation."
+          },
+          "synonyms": [],
+          "collocations": [
+            "very favourite",
+            "quite favourite"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-starter-lesson-6",
+      "lesson": 6,
+      "name": "Lesson 6 - Jobs and travel objects",
+      "source": "Main Lesson (MT)",
+      "words": [
+        {
+          "word": "plate",
+          "uzb": "tarelka / likop",
+          "emoji": "🍽️",
+          "examples": {
+            "easy": "This is a plate.",
+            "normal": "I can see the plate in the picture.",
+            "hard": "The plate is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the plate",
+            "a plate"
+          ]
+        },
+        {
+          "word": "suitcase",
+          "uzb": "jamadon",
+          "emoji": "🧳",
+          "examples": {
+            "easy": "This is a suitcase.",
+            "normal": "I can see the suitcase in the picture.",
+            "hard": "The suitcase is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the suitcase",
+            "a suitcase"
+          ]
+        },
+        {
+          "word": "secretary",
+          "uzb": "kotiba",
+          "emoji": "🗂️",
+          "examples": {
+            "easy": "This is a secretary.",
+            "normal": "I can see the secretary in the picture.",
+            "hard": "The secretary is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the secretary",
+            "a secretary"
+          ]
+        },
+        {
+          "word": "receptionist",
+          "uzb": "qabulxona xodimi",
+          "emoji": "🛎️",
+          "examples": {
+            "easy": "This is a receptionist.",
+            "normal": "I can see the receptionist in the picture.",
+            "hard": "The receptionist is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the receptionist",
+            "a receptionist"
+          ]
+        },
+        {
+          "word": "pilot",
+          "uzb": "uchuvchi",
+          "emoji": "🧑‍✈️",
+          "examples": {
+            "easy": "This is a pilot.",
+            "normal": "I can see the pilot in the picture.",
+            "hard": "The pilot is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the pilot",
+            "a pilot"
+          ]
+        },
+        {
+          "word": "flight attendant",
+          "uzb": "styuardessa",
+          "emoji": "✈️",
+          "examples": {
+            "easy": "This is a flight attendant.",
+            "normal": "I can see the flight attendant in the picture.",
+            "hard": "The flight attendant is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the flight attendant",
+            "a flight attendant"
+          ]
+        },
+        {
+          "word": "porter",
+          "uzb": "yuk tashuvchi",
+          "emoji": "🧳",
+          "examples": {
+            "easy": "This is a porter.",
+            "normal": "I can see the porter in the picture.",
+            "hard": "The porter is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the porter",
+            "a porter"
+          ]
+        },
+        {
+          "word": "waiter",
+          "uzb": "ofitsiant",
+          "emoji": "🧑‍🍳",
+          "examples": {
+            "easy": "This is a waiter.",
+            "normal": "I can see the waiter in the picture.",
+            "hard": "The waiter is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the waiter",
+            "a waiter"
+          ]
+        },
+        {
+          "word": "T-shirt",
+          "uzb": "futbolka",
+          "emoji": "👕",
+          "examples": {
+            "easy": "This is a t-shirt.",
+            "normal": "I can see the t-shirt in the picture.",
+            "hard": "The t-shirt is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the t-shirt",
+            "a t-shirt"
+          ]
+        },
+        {
+          "word": "robot",
+          "uzb": "robot",
+          "emoji": "🤖",
+          "examples": {
+            "easy": "This is a robot.",
+            "normal": "I can see the robot in the picture.",
+            "hard": "The robot is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the robot",
+            "a robot"
+          ]
+        },
+        {
+          "word": "short",
+          "uzb": "pakana / kalta",
+          "emoji": "📏",
+          "examples": {
+            "easy": "It is short.",
+            "normal": "This item is short for me.",
+            "hard": "The word is short in this particular situation."
+          },
+          "synonyms": [],
+          "collocations": [
+            "very short",
+            "quite short"
+          ]
+        },
+        {
+          "word": "blank",
+          "uzb": "bo‘sh joy",
+          "emoji": "⬜",
+          "examples": {
+            "easy": "This is a blank.",
+            "normal": "I can see the blank in the picture.",
+            "hard": "The blank is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the blank",
+            "a blank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-starter-lesson-7",
+      "lesson": 7,
+      "name": "Lesson 7 - Time and description",
+      "source": "Main Lesson (MT)",
+      "words": [
+        {
+          "word": "useful",
+          "uzb": "foydali",
+          "emoji": "🛠️",
+          "examples": {
+            "easy": "It is useful.",
+            "normal": "This item is useful for me.",
+            "hard": "The word is useful in this particular situation."
+          },
+          "synonyms": [],
+          "collocations": [
+            "very useful",
+            "quite useful"
+          ]
+        },
+        {
+          "word": "although",
+          "uzb": "garchi, biroq",
+          "emoji": "🔗",
+          "examples": {
+            "easy": "This is a although.",
+            "normal": "I can see the although in the picture.",
+            "hard": "The although is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the although",
+            "a although"
+          ]
+        },
+        {
+          "word": "guess",
+          "uzb": "taxmin qilmoq",
+          "emoji": "🤔",
+          "examples": {
+            "easy": "Please guess.",
+            "normal": "We can guess this topic in class.",
+            "hard": "Try to guess your idea clearly and confidently."
+          },
+          "synonyms": [],
+          "collocations": [
+            "guess clearly",
+            "guess a topic"
+          ]
+        },
+        {
+          "word": "colour",
+          "uzb": "rang",
+          "emoji": "🎨",
+          "examples": {
+            "easy": "This is a colour.",
+            "normal": "I can see the colour in the picture.",
+            "hard": "The colour is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the colour",
+            "a colour"
+          ]
+        },
+        {
+          "word": "adjective",
+          "uzb": "sifat",
+          "emoji": "📝",
+          "examples": {
+            "easy": "This is a adjective.",
+            "normal": "I can see the adjective in the picture.",
+            "hard": "The adjective is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the adjective",
+            "a adjective"
+          ]
+        },
+        {
+          "word": "cheap",
+          "uzb": "arzon",
+          "emoji": "💸",
+          "examples": {
+            "easy": "It is cheap.",
+            "normal": "This item is cheap for me.",
+            "hard": "The word is cheap in this particular situation."
+          },
+          "synonyms": [],
+          "collocations": [
+            "very cheap",
+            "quite cheap"
+          ]
+        },
+        {
+          "word": "heavy",
+          "uzb": "og‘ir",
+          "emoji": "🏋️",
+          "examples": {
+            "easy": "It is heavy.",
+            "normal": "This item is heavy for me.",
+            "hard": "The word is heavy in this particular situation."
+          },
+          "synonyms": [],
+          "collocations": [
+            "very heavy",
+            "quite heavy"
+          ]
+        },
+        {
+          "word": "poor",
+          "uzb": "kambag‘al",
+          "emoji": "💵",
+          "examples": {
+            "easy": "It is poor.",
+            "normal": "This item is poor for me.",
+            "hard": "The word is poor in this particular situation."
+          },
+          "synonyms": [],
+          "collocations": [
+            "very poor",
+            "quite poor"
+          ]
+        },
+        {
+          "word": "thick",
+          "uzb": "qalin",
+          "emoji": "📚",
+          "examples": {
+            "easy": "It is thick.",
+            "normal": "This item is thick for me.",
+            "hard": "The word is thick in this particular situation."
+          },
+          "synonyms": [],
+          "collocations": [
+            "very thick",
+            "quite thick"
+          ]
+        },
+        {
+          "word": "describe",
+          "uzb": "tasvirlamoq",
+          "emoji": "🖊️",
+          "examples": {
+            "easy": "Please describe.",
+            "normal": "We can describe this topic in class.",
+            "hard": "Try to describe your idea clearly and confidently."
+          },
+          "synonyms": [],
+          "collocations": [
+            "describe clearly",
+            "describe a topic"
+          ]
+        },
+        {
+          "word": "thirsty",
+          "uzb": "chanqagan",
+          "emoji": "🥤",
+          "examples": {
+            "easy": "It is thirsty.",
+            "normal": "This item is thirsty for me.",
+            "hard": "The word is thirsty in this particular situation."
+          },
+          "synonyms": [],
+          "collocations": [
+            "very thirsty",
+            "quite thirsty"
+          ]
+        },
+        {
+          "word": "recipe",
+          "uzb": "retsept",
+          "emoji": "📋",
+          "examples": {
+            "easy": "This is a recipe.",
+            "normal": "I can see the recipe in the picture.",
+            "hard": "The recipe is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the recipe",
+            "a recipe"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-starter-lesson-8",
+      "lesson": 8,
+      "name": "Lesson 8 - Places and things around town",
+      "source": "Main Lesson (MT)",
+      "words": [
+        {
+          "word": "octopus",
+          "uzb": "sakkizoyoq",
+          "emoji": "🐙",
+          "examples": {
+            "easy": "This is a octopus.",
+            "normal": "I can see the octopus in the picture.",
+            "hard": "The octopus is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the octopus",
+            "a octopus"
+          ]
+        },
+        {
+          "word": "starfish",
+          "uzb": "yulduz baliq",
+          "emoji": "⭐",
+          "examples": {
+            "easy": "This is a starfish.",
+            "normal": "I can see the starfish in the picture.",
+            "hard": "The starfish is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the starfish",
+            "a starfish"
+          ]
+        },
+        {
+          "word": "river",
+          "uzb": "daryo",
+          "emoji": "🏞️",
+          "examples": {
+            "easy": "This is a river.",
+            "normal": "I can see the river in the picture.",
+            "hard": "The river is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the river",
+            "a river"
+          ]
+        },
+        {
+          "word": "ocean",
+          "uzb": "okean",
+          "emoji": "🌊",
+          "examples": {
+            "easy": "This is a ocean.",
+            "normal": "I can see the ocean in the picture.",
+            "hard": "The ocean is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the ocean",
+            "a ocean"
+          ]
+        },
+        {
+          "word": "floor",
+          "uzb": "pol",
+          "emoji": "🪵",
+          "examples": {
+            "easy": "This is a floor.",
+            "normal": "I can see the floor in the picture.",
+            "hard": "The floor is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the floor",
+            "a floor"
+          ]
+        },
+        {
+          "word": "curtain",
+          "uzb": "parda",
+          "emoji": "🪟",
+          "examples": {
+            "easy": "This is a curtain.",
+            "normal": "I can see the curtain in the picture.",
+            "hard": "The curtain is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the curtain",
+            "a curtain"
+          ]
+        },
+        {
+          "word": "window",
+          "uzb": "deraza",
+          "emoji": "🪟",
+          "examples": {
+            "easy": "This is a window.",
+            "normal": "I can see the window in the picture.",
+            "hard": "The window is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the window",
+            "a window"
+          ]
+        },
+        {
+          "word": "sandwich",
+          "uzb": "sendvich",
+          "emoji": "🥪",
+          "examples": {
+            "easy": "This is a sandwich.",
+            "normal": "I can see the sandwich in the picture.",
+            "hard": "The sandwich is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the sandwich",
+            "a sandwich"
+          ]
+        },
+        {
+          "word": "choose",
+          "uzb": "tanlamoq",
+          "emoji": "✅",
+          "examples": {
+            "easy": "Please choose.",
+            "normal": "We can choose this topic in class.",
+            "hard": "Try to choose your idea clearly and confidently."
+          },
+          "synonyms": [],
+          "collocations": [
+            "choose clearly",
+            "choose a topic"
+          ]
+        },
+        {
+          "word": "museum",
+          "uzb": "muzey",
+          "emoji": "🏛️",
+          "examples": {
+            "easy": "This is a museum.",
+            "normal": "I can see the museum in the picture.",
+            "hard": "The museum is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the museum",
+            "a museum"
+          ]
+        },
+        {
+          "word": "opposite",
+          "uzb": "qarshisida",
+          "emoji": "↔️",
+          "examples": {
+            "easy": "This is a opposite.",
+            "normal": "I can see the opposite in the picture.",
+            "hard": "The opposite is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the opposite",
+            "a opposite"
+          ]
+        },
+        {
+          "word": "corridor",
+          "uzb": "koridor",
+          "emoji": "🚪",
+          "examples": {
+            "easy": "This is a corridor.",
+            "normal": "I can see the corridor in the picture.",
+            "hard": "The corridor is important in this lesson topic."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the corridor",
+            "a corridor"
+          ]
+        }
+      ]
+    }
+  ]
+}

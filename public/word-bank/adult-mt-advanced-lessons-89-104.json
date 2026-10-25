@@ -1,0 +1,3757 @@
+{
+  "level": "Teenagers & Adults - Advanced",
+  "track": "MT",
+  "source": "Advanced MT.pdf",
+  "units": [
+    {
+      "id": "adult-mt-advanced-lesson-89",
+      "lesson": 89,
+      "name": "Lesson 89 - Reputation, work and relocation",
+      "source": "Main Lesson (MT) p. 5",
+      "words": [
+        {
+          "word": "current",
+          "uzb": "ayni paytdagi",
+          "emoji": "📅",
+          "examples": {
+            "easy": "Who is the current manager?",
+            "normal": "Given current trends, more people will work from home next year.",
+            "hard": "The current situation is difficult, but the board believes prices will stabilise by the end of the year."
+          },
+          "synonyms": [
+            "present",
+            "existing"
+          ],
+          "collocations": [
+            "current situation",
+            "current trends"
+          ]
+        },
+        {
+          "word": "clarification",
+          "uzb": "izoh, oydinlik (kiritish)",
+          "emoji": "🔍",
+          "examples": {
+            "easy": "I need some clarification, please.",
+            "normal": "Could you give me some clarification on the new travel rules?",
+            "hard": "After several confusing emails, the lawyer asked for clarification on the legal position before signing anything."
+          },
+          "synonyms": [
+            "explanation"
+          ],
+          "collocations": [
+            "ask for clarification",
+            "seek clarification"
+          ]
+        },
+        {
+          "word": "reputation",
+          "uzb": "obroʼ, obroʼ-eʼtibor",
+          "emoji": "⭐",
+          "examples": {
+            "easy": "The hotel has a good reputation.",
+            "normal": "She has a reputation for being honest and very hard-working.",
+            "hard": "It took the company years to build its reputation, but one scandal damaged it almost overnight."
+          },
+          "synonyms": [
+            "standing",
+            "name"
+          ],
+          "collocations": [
+            "good reputation",
+            "damage someone's reputation"
+          ]
+        },
+        {
+          "word": "reef",
+          "uzb": "kemani kichraytirmoq (yelkanni qisqartirmoq)",
+          "emoji": "⛵",
+          "examples": {
+            "easy": "The sailors reefed the sails.",
+            "normal": "When the wind got stronger, the captain told us to reef the mainsail.",
+            "hard": "They set sail with the sails reefed, because the forecast warned of strong winds out at sea."
+          },
+          "synonyms": [],
+          "collocations": [
+            "reef the sails",
+            "reef the mainsail"
+          ]
+        },
+        {
+          "word": "coral",
+          "uzb": "marjon",
+          "emoji": "🪸",
+          "examples": {
+            "easy": "She wore a coral necklace.",
+            "normal": "Divers come from all over the world to see the coral here.",
+            "hard": "Rising sea temperatures are killing large areas of coral, which threatens the fish that depend on it."
+          },
+          "synonyms": [],
+          "collocations": [
+            "coral reef",
+            "pink coral"
+          ]
+        },
+        {
+          "word": "unlock",
+          "uzb": "ochmoq",
+          "emoji": "🔓",
+          "examples": {
+            "easy": "Please unlock the door.",
+            "normal": "I keep worrying that I left the garage door unlocked.",
+            "hard": "You need a six-digit code to unlock the phone, and it locks itself again after a few minutes."
+          },
+          "synonyms": [
+            "open"
+          ],
+          "collocations": [
+            "unlock the door",
+            "unlock a phone"
+          ]
+        },
+        {
+          "word": "lifetime",
+          "uzb": "hayot payti, umr",
+          "emoji": "⏳",
+          "examples": {
+            "easy": "He achieved a lot in his lifetime.",
+            "normal": "A trip like this is a once-in-a-lifetime experience for most people.",
+            "hard": "Over her lifetime she saw enormous changes, from the first radios in the village to smartphones in every pocket."
+          },
+          "synonyms": [
+            "life",
+            "lifespan"
+          ],
+          "collocations": [
+            "once in a lifetime",
+            "in my lifetime"
+          ]
+        },
+        {
+          "word": "attach",
+          "uzb": "biriktirmoq",
+          "emoji": "📎",
+          "examples": {
+            "easy": "I attach a copy of my CV.",
+            "normal": "Please attach your passport photo to the application form.",
+            "hard": "I have attached a copy of my notes for your information, so you can check the figures before Monday's meeting."
+          },
+          "synonyms": [
+            "fasten",
+            "fix"
+          ],
+          "collocations": [
+            "attach a file",
+            "attach a copy"
+          ]
+        },
+        {
+          "word": "advert",
+          "uzb": "reklama, eʼlon",
+          "emoji": "📢",
+          "examples": {
+            "easy": "I saw an advert for the job.",
+            "normal": "She found her flat through an advert in the local paper.",
+            "hard": "The advert said the company was an equal opportunities employer, so I decided to apply despite my lack of experience."
+          },
+          "synonyms": [
+            "advertisement",
+            "ad"
+          ],
+          "collocations": [
+            "put an advert in",
+            "job advert"
+          ]
+        },
+        {
+          "word": "relocation",
+          "uzb": "yangi joyga ko‘chish",
+          "emoji": "🚚",
+          "examples": {
+            "easy": "The relocation took two weeks.",
+            "normal": "The company paid for our relocation to the new office in Tashkent.",
+            "hard": "The firm insists that the cost of relocation will be negligible, but many staff are unwilling to move their families."
+          },
+          "synonyms": [
+            "move"
+          ],
+          "collocations": [
+            "relocation package",
+            "relocation costs"
+          ]
+        },
+        {
+          "word": "regarding",
+          "uzb": "bo‘yicha, borasida",
+          "emoji": "📝",
+          "examples": {
+            "easy": "I'm calling regarding your letter.",
+            "normal": "She has said nothing regarding your request for a day off.",
+            "hard": "Regarding the changes to the timetable, I would appreciate it if you could confirm them in writing by Friday."
+          },
+          "synonyms": [
+            "concerning",
+            "about",
+            "with regard to"
+          ],
+          "collocations": [
+            "regarding your request",
+            "questions regarding"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-advanced-lesson-90",
+      "lesson": 90,
+      "name": "Lesson 90 - Milestones, wishes and freedom",
+      "source": "Main Lesson (MT) p. 10",
+      "words": [
+        {
+          "word": "trial",
+          "uzb": "sud jarayoni, sinash, muammo",
+          "emoji": "⚖️",
+          "examples": {
+            "easy": "The trial starts on Monday.",
+            "normal": "The new drug is still at the trial stage and isn't available yet.",
+            "hard": "The book describes the trials of growing up in a small village, where everyone knew everyone else's business."
+          },
+          "synonyms": [
+            "test",
+            "hardship"
+          ],
+          "collocations": [
+            "go on trial",
+            "trial period"
+          ]
+        },
+        {
+          "word": "keep going",
+          "uzb": "davom eting, to‘xtamang",
+          "emoji": "🏃",
+          "examples": {
+            "easy": "Don't stop, keep going!",
+            "normal": "It's hard at first, but if you keep going it gets easier.",
+            "hard": "My coach told me to keep going even when my legs were aching, because the finish line was only a kilometre away."
+          },
+          "synonyms": [
+            "carry on",
+            "continue"
+          ],
+          "collocations": [
+            "keep going no matter what",
+            "keep going until the end"
+          ]
+        },
+        {
+          "word": "I wish",
+          "uzb": "qaniydi…",
+          "emoji": "🌠",
+          "examples": {
+            "easy": "I wish I had more time.",
+            "normal": "I wish I had gone to Makkah with my parents last year.",
+            "hard": "I wish I'd listened to my teacher's advice, because I'd probably have a much better job by now."
+          },
+          "synonyms": [
+            "if only"
+          ],
+          "collocations": [
+            "I wish I could",
+            "I wish I had known"
+          ]
+        },
+        {
+          "word": "milestone",
+          "uzb": "burilish, katta o‘zgarish; masofa va yo‘nalishni ko‘rsatadigan ustun",
+          "emoji": "🪧",
+          "examples": {
+            "easy": "Turning forty is a big milestone.",
+            "normal": "This film was a milestone in the history of cinema.",
+            "hard": "Getting her first full-time job was an important milestone, because it finally allowed her to rent a flat of her own."
+          },
+          "synonyms": [
+            "landmark",
+            "turning point"
+          ],
+          "collocations": [
+            "important milestone",
+            "reach a milestone"
+          ]
+        },
+        {
+          "word": "phase",
+          "uzb": "bosqich, palla, oyning turli shakllari",
+          "emoji": "🌗",
+          "examples": {
+            "easy": "It's just a phase.",
+            "normal": "The second phase of the project starts in March.",
+            "hard": "Don't worry about his strange music; I'm sure it's just a phase that most teenagers go through."
+          },
+          "synonyms": [
+            "stage",
+            "period"
+          ],
+          "collocations": [
+            "first phase",
+            "go through a phase"
+          ]
+        },
+        {
+          "word": "questionnaire",
+          "uzb": "so‘rovnoma, anketa",
+          "emoji": "📋",
+          "examples": {
+            "easy": "Please fill in this questionnaire.",
+            "normal": "Visitors were asked to complete a short questionnaire about their stay.",
+            "hard": "More than two thousand people answered the questionnaire, and most of them said they would prefer a four-day week."
+          },
+          "synonyms": [
+            "survey",
+            "form"
+          ],
+          "collocations": [
+            "fill in a questionnaire",
+            "complete a questionnaire"
+          ]
+        },
+        {
+          "word": "database",
+          "uzb": "maʼlumotlar bazasi",
+          "emoji": "🗄️",
+          "examples": {
+            "easy": "Your name is in our database.",
+            "normal": "You have to enter a password to access the database.",
+            "hard": "The hospital keeps all patient records in a secure database that only authorised staff can open."
+          },
+          "synonyms": [],
+          "collocations": [
+            "access a database",
+            "customer database"
+          ]
+        },
+        {
+          "word": "such",
+          "uzb": "shunday, shu kabi",
+          "emoji": "✨",
+          "examples": {
+            "easy": "She is such a kind person.",
+            "normal": "I never knew you were such a good dancer!",
+            "hard": "It was such a beautiful evening that we decided to walk home instead of taking a taxi."
+          },
+          "synonyms": [],
+          "collocations": [
+            "such a shame",
+            "such as"
+          ]
+        },
+        {
+          "word": "prominent",
+          "uzb": "eʼtiborga loyiq, mashhur",
+          "emoji": "🏆",
+          "examples": {
+            "easy": "He is a prominent writer.",
+            "normal": "His photo stood in a prominent place on her desk.",
+            "hard": "Several prominent politicians attended the conference, which attracted a lot of attention from the national media."
+          },
+          "synonyms": [
+            "well-known",
+            "famous",
+            "noticeable"
+          ],
+          "collocations": [
+            "prominent figure",
+            "prominent position"
+          ]
+        },
+        {
+          "word": "jealous",
+          "uzb": "rashk qilmoq (rashkchi)",
+          "emoji": "😒",
+          "examples": {
+            "easy": "He gets jealous very easily.",
+            "normal": "She feels jealous every time another woman talks to her husband.",
+            "hard": "I was a bit jealous of my brother when he got a place at a top university and I didn't."
+          },
+          "synonyms": [
+            "envious"
+          ],
+          "collocations": [
+            "feel jealous",
+            "jealous of someone"
+          ]
+        },
+        {
+          "word": "contemporary",
+          "uzb": "zamonaviy",
+          "emoji": "🖼️",
+          "examples": {
+            "easy": "I like contemporary art.",
+            "normal": "The museum has a large collection of contemporary furniture.",
+            "hard": "Although the play was written hundreds of years ago, its ideas about power still feel surprisingly contemporary."
+          },
+          "synonyms": [
+            "modern",
+            "current"
+          ],
+          "collocations": [
+            "contemporary art",
+            "contemporary music"
+          ]
+        },
+        {
+          "word": "liberty",
+          "uzb": "ozodlik, imtiyoz, haddan oshish",
+          "emoji": "🗽",
+          "examples": {
+            "easy": "Liberty is very important.",
+            "normal": "Hundreds of political prisoners are to be given their liberty.",
+            "hard": "I took the liberty of booking a table for six, as I assumed your parents would want to join us."
+          },
+          "synonyms": [
+            "freedom"
+          ],
+          "collocations": [
+            "take the liberty of",
+            "personal liberty"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-advanced-lesson-91",
+      "lesson": 91,
+      "name": "Lesson 91 - Habits, character and mentors",
+      "source": "Main Lesson (MT) p. 15",
+      "words": [
+        {
+          "word": "vague",
+          "uzb": "noaniq, tushunish qiyin, parishonxotir",
+          "emoji": "🌫️",
+          "examples": {
+            "easy": "His answer was very vague.",
+            "normal": "I had a vague idea that she lived somewhere in Liverpool.",
+            "hard": "The instructions were so vague that half the team misunderstood the task and had to start again."
+          },
+          "synonyms": [
+            "unclear",
+            "hazy"
+          ],
+          "collocations": [
+            "vague idea",
+            "vague answer"
+          ]
+        },
+        {
+          "word": "binge",
+          "uzb": "keragidan ortiq ichmoq, yemoq",
+          "emoji": "🍫",
+          "examples": {
+            "easy": "I sometimes binge on chocolate.",
+            "normal": "I tend to binge on crisps when I'm watching TV late at night.",
+            "hard": "Doctors warn that people who binge on junk food at weekends can undo all the benefits of a healthy week."
+          },
+          "synonyms": [],
+          "collocations": [
+            "binge on chocolate",
+            "binge drinking"
+          ]
+        },
+        {
+          "word": "infographic",
+          "uzb": "maʼlumotlar grafigi",
+          "emoji": "📊",
+          "examples": {
+            "easy": "Look at this infographic.",
+            "normal": "The infographic shows how much people spend on clothes each year.",
+            "hard": "Instead of a long report, the team presented their findings in a colourful infographic that everyone could understand at a glance."
+          },
+          "synonyms": [],
+          "collocations": [
+            "create an infographic",
+            "interactive infographic"
+          ]
+        },
+        {
+          "word": "twist",
+          "uzb": "burmoq, qayirmoq, buramoq, qayirib olmoq",
+          "emoji": "🌀",
+          "examples": {
+            "easy": "Twist the lid to open it.",
+            "normal": "We twisted the two pieces of wire together.",
+            "hard": "She twisted her ankle on the stairs and had to spend the rest of the holiday with her foot up."
+          },
+          "synonyms": [
+            "turn",
+            "wind"
+          ],
+          "collocations": [
+            "twist the lid",
+            "twist your ankle"
+          ]
+        },
+        {
+          "word": "binge-watch",
+          "uzb": "filmlarni (serialni) qisqa epizodlarda ketma-ket tomosha qilish",
+          "emoji": "📺",
+          "examples": {
+            "easy": "We binge-watched the whole series.",
+            "normal": "We binge-watched an entire season of Sherlock Holmes on Sunday.",
+            "hard": "After binge-watching six episodes in a row, I realised it was three in the morning and I had work the next day."
+          },
+          "synonyms": [],
+          "collocations": [
+            "binge-watch a series",
+            "binge-watch a whole season"
+          ]
+        },
+        {
+          "word": "set",
+          "uzb": "yangi natija o‘rnatmoq, joylamoq",
+          "emoji": "🥇",
+          "examples": {
+            "easy": "She set a new record.",
+            "normal": "He set the heavy books down on the kitchen table.",
+            "hard": "The young athlete set a national record in the 400 metres, beating a time that had stood for twenty years."
+          },
+          "synonyms": [
+            "establish",
+            "place",
+            "put"
+          ],
+          "collocations": [
+            "set a record",
+            "set something down"
+          ]
+        },
+        {
+          "word": "one in five",
+          "uzb": "beshtadan bittasi",
+          "emoji": "🖐️",
+          "examples": {
+            "easy": "One in five students walk to school.",
+            "normal": "Only one in five people in the group passed the test.",
+            "hard": "According to the survey, one in five adults say they have never read a book for pleasure since leaving school."
+          },
+          "synonyms": [
+            "20 per cent"
+          ],
+          "collocations": [
+            "one in five people",
+            "nearly one in five"
+          ]
+        },
+        {
+          "word": "lullaby",
+          "uzb": "alla",
+          "emoji": "🎶",
+          "examples": {
+            "easy": "My mother sang me a lullaby.",
+            "normal": "I wish I could listen to my mother's lullaby again.",
+            "hard": "Every culture seems to have its own lullabies, but they all share the same slow, gentle rhythm that helps babies sleep."
+          },
+          "synonyms": [],
+          "collocations": [
+            "sing a lullaby",
+            "old lullaby"
+          ]
+        },
+        {
+          "word": "butter up",
+          "uzb": "xushomad qilmoq, paxta qo‘ymoq",
+          "emoji": "🧈",
+          "examples": {
+            "easy": "Stop trying to butter me up!",
+            "normal": "My friend is very good at buttering up the teachers.",
+            "hard": "He spent the whole lunch buttering up his boss, hoping she would forget about the report he hadn't finished."
+          },
+          "synonyms": [
+            "flatter",
+            "sweet-talk"
+          ],
+          "collocations": [
+            "butter up the boss",
+            "try to butter someone up"
+          ]
+        },
+        {
+          "word": "zonked",
+          "uzb": "charchagan",
+          "emoji": "😴",
+          "examples": {
+            "easy": "I'm completely zonked tonight.",
+            "normal": "After a fifty-five-minute run we were too zonked to stand up.",
+            "hard": "By the time we got back from the wedding at two in the morning, the kids were absolutely zonked and fell asleep in the car."
+          },
+          "synonyms": [
+            "exhausted",
+            "worn out",
+            "shattered"
+          ],
+          "collocations": [
+            "completely zonked",
+            "zonked out"
+          ]
+        },
+        {
+          "word": "mentor",
+          "uzb": "ustoz, o‘qituvchi",
+          "emoji": "🧑‍🏫",
+          "examples": {
+            "easy": "She is my mentor at work.",
+            "normal": "Everyone in the company knows and respects my mentor.",
+            "hard": "Having a good mentor in the first year of your career can make a huge difference to your confidence and progress."
+          },
+          "synonyms": [
+            "guide",
+            "adviser"
+          ],
+          "collocations": [
+            "act as a mentor",
+            "mentor programme"
+          ]
+        },
+        {
+          "word": "at least",
+          "uzb": "kamida, hech bo‘lmaganda",
+          "emoji": "🔢",
+          "examples": {
+            "easy": "It costs at least ten pounds.",
+            "normal": "You should drink at least two litres of water a day.",
+            "hard": "The flight was delayed for hours, but at least the airline gave us free meals while we waited."
+          },
+          "synonyms": [
+            "at minimum"
+          ],
+          "collocations": [
+            "at least once",
+            "at the very least"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-advanced-lesson-92",
+      "lesson": 92,
+      "name": "Lesson 92 - Feelings and behaviour",
+      "source": "Main Lesson (MT) p. 19",
+      "words": [
+        {
+          "word": "conscience",
+          "uzb": "vijdon",
+          "emoji": "😇",
+          "examples": {
+            "easy": "My conscience is clear.",
+            "normal": "I recycle everything I can, so my conscience is clear.",
+            "hard": "He couldn't sleep for weeks because his conscience kept telling him he should have admitted the mistake."
+          },
+          "synonyms": [],
+          "collocations": [
+            "clear conscience",
+            "guilty conscience"
+          ]
+        },
+        {
+          "word": "horrified",
+          "uzb": "qattiq qo‘rqqan",
+          "emoji": "😱",
+          "examples": {
+            "easy": "I was horrified by the news.",
+            "normal": "I was horrified when I read about the old lady who was attacked.",
+            "hard": "Her parents were horrified to discover that she had hitchhiked across the country without telling anyone."
+          },
+          "synonyms": [
+            "appalled",
+            "shocked",
+            "terrified"
+          ],
+          "collocations": [
+            "absolutely horrified",
+            "horrified to discover"
+          ]
+        },
+        {
+          "word": "wreck",
+          "uzb": "vayron qilmoq",
+          "emoji": "💥",
+          "examples": {
+            "easy": "The storm wrecked the house.",
+            "normal": "The teenagers wrecked the house for no reason at all.",
+            "hard": "A single careless comment wrecked their friendship, and they didn't speak to each other for years."
+          },
+          "synonyms": [
+            "destroy",
+            "ruin",
+            "smash"
+          ],
+          "collocations": [
+            "wreck a car",
+            "wreck someone's plans"
+          ]
+        },
+        {
+          "word": "admonish",
+          "uzb": "ogohlantirmoq",
+          "emoji": "☝️",
+          "examples": {
+            "easy": "The teacher admonished him.",
+            "normal": "The teacher admonished Akmal for chewing gum in class.",
+            "hard": "The judge admonished the witness for speaking out of turn and warned him that it must not happen again."
+          },
+          "synonyms": [
+            "reprimand",
+            "scold",
+            "warn"
+          ],
+          "collocations": [
+            "gently admonish",
+            "admonish someone for"
+          ]
+        },
+        {
+          "word": "brag",
+          "uzb": "maqtanmoq",
+          "emoji": "💪",
+          "examples": {
+            "easy": "He likes to brag a lot.",
+            "normal": "He bragged to the whole class about his strong muscles.",
+            "hard": "She never brags about her achievements, so most of her colleagues had no idea she had won a national award."
+          },
+          "synonyms": [
+            "boast",
+            "show off"
+          ],
+          "collocations": [
+            "brag about",
+            "brag to someone"
+          ]
+        },
+        {
+          "word": "immense",
+          "uzb": "juda katta",
+          "emoji": "🐋",
+          "examples": {
+            "easy": "The house is immense.",
+            "normal": "An immense amount of money was needed to buy such a large boat.",
+            "hard": "Winning the scholarship gave her immense satisfaction, especially after so many years of studying in the evenings."
+          },
+          "synonyms": [
+            "enormous",
+            "huge",
+            "vast"
+          ],
+          "collocations": [
+            "immense pressure",
+            "immense amount"
+          ]
+        },
+        {
+          "word": "torment",
+          "uzb": "azob bermoq",
+          "emoji": "😖",
+          "examples": {
+            "easy": "Stop tormenting your brother!",
+            "normal": "She tormented her little brother by hiding his favourite toy.",
+            "hard": "For years he was tormented by the thought that he could have done more to help his friend."
+          },
+          "synonyms": [
+            "tease",
+            "torture",
+            "plague"
+          ],
+          "collocations": [
+            "be tormented by",
+            "torment someone"
+          ]
+        },
+        {
+          "word": "fond of",
+          "uzb": "ishqiboz, yoqtiradigan",
+          "emoji": "❤️",
+          "examples": {
+            "easy": "I'm fond of music.",
+            "normal": "My friend is fond of maths, so he never misses a class.",
+            "hard": "Over the years I've grown very fond of this little town, even though I complained about it when we first moved here."
+          },
+          "synonyms": [
+            "keen on"
+          ],
+          "collocations": [
+            "very fond of",
+            "grow fond of"
+          ]
+        },
+        {
+          "word": "oblivious of",
+          "uzb": "unutgan, yodida yo‘q",
+          "emoji": "🙈",
+          "examples": {
+            "easy": "He was oblivious of the time.",
+            "normal": "I was late for school because I was oblivious of the time.",
+            "hard": "Completely oblivious of the danger, the tourists kept walking towards the edge of the cliff to take photos."
+          },
+          "synonyms": [
+            "unaware of"
+          ],
+          "collocations": [
+            "completely oblivious of",
+            "seemingly oblivious of"
+          ]
+        },
+        {
+          "word": "perish",
+          "uzb": "o‘lmoq, vafot etmoq",
+          "emoji": "🕯️",
+          "examples": {
+            "easy": "Many people perished in the fire.",
+            "normal": "Hundreds of soldiers perished in the cold winter of that year.",
+            "hard": "Thousands of people perished in the earthquake, and many more lost their homes and everything they owned."
+          },
+          "synonyms": [
+            "die"
+          ],
+          "collocations": [
+            "perish in a fire",
+            "perish at sea"
+          ]
+        },
+        {
+          "word": "slippery",
+          "uzb": "sirpanchiq",
+          "emoji": "🧊",
+          "examples": {
+            "easy": "Be careful, the floor is slippery!",
+            "normal": "The roads were very slippery after the overnight snow.",
+            "hard": "The path down to the waterfall becomes dangerously slippery after rain, so wear proper walking boots."
+          },
+          "synonyms": [
+            "slick",
+            "icy"
+          ],
+          "collocations": [
+            "slippery floor",
+            "slippery road"
+          ]
+        },
+        {
+          "word": "soar",
+          "uzb": "baland uchmoq",
+          "emoji": "🦅",
+          "examples": {
+            "easy": "Eagles soar in the sky.",
+            "normal": "As the sun rose, two eagles soared high above the mountains.",
+            "hard": "We stood on the hilltop and watched the gliders soar silently above the valley for almost an hour."
+          },
+          "synonyms": [
+            "fly high",
+            "glide"
+          ],
+          "collocations": [
+            "soar into the sky",
+            "soar overhead"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-advanced-lesson-93",
+      "lesson": 93,
+      "name": "Lesson 93 - Feelings, people and secrets",
+      "source": "Main Lesson (MT) p. 24",
+      "words": [
+        {
+          "word": "trivial",
+          "uzb": "arzimas, ahamiyatsiz",
+          "emoji": "🤏",
+          "examples": {
+            "easy": "That is a trivial problem.",
+            "normal": "Let's not argue about such trivial details at the meeting.",
+            "hard": "What seemed like a trivial mistake in the report ended up costing the company thousands of pounds."
+          },
+          "synonyms": [
+            "minor",
+            "unimportant",
+            "insignificant"
+          ],
+          "collocations": [
+            "trivial matter",
+            "trivial detail"
+          ]
+        },
+        {
+          "word": "utterly",
+          "uzb": "butkul",
+          "emoji": "💯",
+          "examples": {
+            "easy": "I was utterly exhausted.",
+            "normal": "The film was utterly boring, so we left halfway through.",
+            "hard": "After walking for hours in the rain, we were utterly lost and had no idea where the hotel was."
+          },
+          "synonyms": [
+            "completely",
+            "totally",
+            "absolutely"
+          ],
+          "collocations": [
+            "utterly ridiculous",
+            "utterly different"
+          ]
+        },
+        {
+          "word": "weep",
+          "uzb": "yig‘lamoq",
+          "emoji": "😢",
+          "examples": {
+            "easy": "She began to weep quietly.",
+            "normal": "He wept with joy when his daughter was born.",
+            "hard": "Many people in the audience wept openly as the old soldier described the friends he had lost in the war."
+          },
+          "synonyms": [
+            "cry",
+            "sob"
+          ],
+          "collocations": [
+            "weep with joy",
+            "weep openly"
+          ]
+        },
+        {
+          "word": "ignorant",
+          "uzb": "bexabar, o‘qimagan",
+          "emoji": "🙈",
+          "examples": {
+            "easy": "I'm ignorant about cars.",
+            "normal": "Many people are ignorant of the risks of too much sugar.",
+            "hard": "He was completely ignorant of the new rules, so he was surprised when the inspector fined him."
+          },
+          "synonyms": [
+            "unaware",
+            "uninformed"
+          ],
+          "collocations": [
+            "ignorant of the facts",
+            "completely ignorant"
+          ]
+        },
+        {
+          "word": "operate",
+          "uzb": "ishlamoq, vazifasini bajarmoq",
+          "emoji": "⚙️",
+          "examples": {
+            "easy": "The lift isn't operating today.",
+            "normal": "The buses operate every twenty minutes during the day.",
+            "hard": "Because of the storm, the airport was operating at half capacity and many flights were cancelled."
+          },
+          "synonyms": [
+            "function",
+            "work",
+            "run"
+          ],
+          "collocations": [
+            "operate normally",
+            "operate a machine"
+          ]
+        },
+        {
+          "word": "resolution",
+          "uzb": "qatʼiy qaror",
+          "emoji": "📝",
+          "examples": {
+            "easy": "My resolution is to exercise daily.",
+            "normal": "Her New Year's resolution was to read one book a month.",
+            "hard": "Like most people, I made several resolutions in January, but I had broken nearly all of them by March."
+          },
+          "synonyms": [
+            "decision",
+            "commitment"
+          ],
+          "collocations": [
+            "New Year's resolution",
+            "make a resolution"
+          ]
+        },
+        {
+          "word": "typewritten",
+          "uzb": "kompyuterda yozilgan",
+          "emoji": "⌨️",
+          "examples": {
+            "easy": "The letter was typewritten.",
+            "normal": "All applications must be typewritten, not handwritten.",
+            "hard": "She found a box of old typewritten letters in the attic that her grandfather had sent from abroad."
+          },
+          "synonyms": [
+            "typed"
+          ],
+          "collocations": [
+            "typewritten letter",
+            "typewritten document"
+          ]
+        },
+        {
+          "word": "weird",
+          "uzb": "g‘ayritabiiy, qo‘rqinchli",
+          "emoji": "👻",
+          "examples": {
+            "easy": "That's a weird noise.",
+            "normal": "I had a weird dream about flying over the city last night.",
+            "hard": "There was something weird about the empty house, and none of us wanted to stay there after dark."
+          },
+          "synonyms": [
+            "strange",
+            "odd",
+            "bizarre"
+          ],
+          "collocations": [
+            "weird feeling",
+            "something weird"
+          ]
+        },
+        {
+          "word": "alas",
+          "uzb": "afsuski, attang",
+          "emoji": "😔",
+          "examples": {
+            "easy": "Alas, the shop was closed.",
+            "normal": "We hoped to see the sunset, but alas, it was too cloudy.",
+            "hard": "He had trained for the marathon for months but, alas, an injury forced him to withdraw the day before."
+          },
+          "synonyms": [
+            "unfortunately",
+            "sadly"
+          ],
+          "collocations": [
+            "but alas",
+            "alas, it was too late"
+          ]
+        },
+        {
+          "word": "folk",
+          "uzb": "odamlar, xalq",
+          "emoji": "👨‍👩‍👧‍👦",
+          "examples": {
+            "easy": "Country folk are very friendly.",
+            "normal": "Old folk in our village still tell stories about the war.",
+            "hard": "Ordinary folk often find it hard to understand the complicated language used in official documents."
+          },
+          "synonyms": [
+            "people"
+          ],
+          "collocations": [
+            "country folk",
+            "ordinary folk"
+          ]
+        },
+        {
+          "word": "spirit",
+          "uzb": "ruhiyat",
+          "emoji": "✨",
+          "examples": {
+            "easy": "She has a happy spirit.",
+            "normal": "Despite his illness, he kept a positive spirit all year.",
+            "hard": "The team showed great spirit in the second half and managed to come back from two goals down."
+          },
+          "synonyms": [
+            "mood",
+            "attitude"
+          ],
+          "collocations": [
+            "team spirit",
+            "in good spirits"
+          ]
+        },
+        {
+          "word": "conceal",
+          "uzb": "yashirmoq, berkitmoq",
+          "emoji": "🫣",
+          "examples": {
+            "easy": "He concealed the gift.",
+            "normal": "She tried hard to conceal her disappointment from her boss.",
+            "hard": "The company was accused of concealing important information about the product's safety from its customers."
+          },
+          "synonyms": [
+            "hide",
+            "cover up"
+          ],
+          "collocations": [
+            "conceal the truth",
+            "conceal your feelings"
+          ]
+        },
+        {
+          "word": "gratitude",
+          "uzb": "minnatdorchilik",
+          "emoji": "🙏",
+          "examples": {
+            "easy": "I feel deep gratitude.",
+            "normal": "We sent flowers to show our gratitude for their help.",
+            "hard": "She expressed her gratitude to the nurses who had looked after her mother during her long stay in hospital."
+          },
+          "synonyms": [
+            "thankfulness",
+            "appreciation"
+          ],
+          "collocations": [
+            "express gratitude",
+            "deep gratitude"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-advanced-lesson-94",
+      "lesson": 94,
+      "name": "Lesson 94 - Actions, places and feelings",
+      "source": "Main Lesson (MT) p. 28",
+      "words": [
+        {
+          "word": "intervene",
+          "uzb": "ajratmoq, o‘rtasiga tushmoq",
+          "emoji": "🙅",
+          "examples": {
+            "easy": "The teacher had to intervene.",
+            "normal": "The police intervened when the argument turned violent.",
+            "hard": "If the government does not intervene soon, prices will keep rising and many families will struggle to pay their bills."
+          },
+          "synonyms": [
+            "step in",
+            "interfere"
+          ],
+          "collocations": [
+            "intervene in a dispute",
+            "intervene quickly"
+          ]
+        },
+        {
+          "word": "landmark",
+          "uzb": "orientir, nishon",
+          "emoji": "🗼",
+          "examples": {
+            "easy": "The tower is a famous landmark.",
+            "normal": "Use the old church as a landmark to find our house.",
+            "hard": "The mosque is the city's best-known landmark, and tourists often photograph it from the bridge at sunset."
+          },
+          "synonyms": [],
+          "collocations": [
+            "famous landmark",
+            "local landmark"
+          ]
+        },
+        {
+          "word": "proclaim",
+          "uzb": "tantanali ravishda eʼlon qilmoq",
+          "emoji": "📢",
+          "examples": {
+            "easy": "They proclaimed him the winner.",
+            "normal": "The country proclaimed its independence in 1991.",
+            "hard": "The judges proclaimed her the champion, and the crowd stood up and cheered for several minutes."
+          },
+          "synonyms": [
+            "announce",
+            "declare"
+          ],
+          "collocations": [
+            "proclaim independence",
+            "publicly proclaim"
+          ]
+        },
+        {
+          "word": "constant",
+          "uzb": "doimiy",
+          "emoji": "🔁",
+          "examples": {
+            "easy": "The noise was constant.",
+            "normal": "Living near the airport means constant noise from planes.",
+            "hard": "Working in customer service, she was under constant pressure to answer calls quickly and keep everyone happy."
+          },
+          "synonyms": [
+            "continuous",
+            "persistent",
+            "non-stop"
+          ],
+          "collocations": [
+            "constant pressure",
+            "constant noise"
+          ]
+        },
+        {
+          "word": "crack",
+          "uzb": "darz, yoriq",
+          "emoji": "💔",
+          "examples": {
+            "easy": "There's a crack in the glass.",
+            "normal": "We noticed a long crack in the wall after the earthquake.",
+            "hard": "The engineer warned that the small cracks in the bridge could become dangerous if they were not repaired."
+          },
+          "synonyms": [
+            "split",
+            "fracture"
+          ],
+          "collocations": [
+            "a crack in the wall",
+            "hairline crack"
+          ]
+        },
+        {
+          "word": "enclose",
+          "uzb": "panjara bilan o‘ramoq",
+          "emoji": "🚧",
+          "examples": {
+            "easy": "A fence encloses the garden.",
+            "normal": "The playground is enclosed by a high wooden fence.",
+            "hard": "The old part of the city is enclosed by thick stone walls that were built to protect it from invaders."
+          },
+          "synonyms": [
+            "surround",
+            "fence in"
+          ],
+          "collocations": [
+            "enclosed by a fence",
+            "enclosed garden"
+          ]
+        },
+        {
+          "word": "grip",
+          "uzb": "mahkam ushlab olmoq",
+          "emoji": "✊",
+          "examples": {
+            "easy": "Grip the rope tightly.",
+            "normal": "She gripped the steering wheel as the car slid on the ice.",
+            "hard": "Terrified of falling, the climber gripped the edge of the rock until the rescue team reached him."
+          },
+          "synonyms": [
+            "grasp",
+            "clutch",
+            "hold"
+          ],
+          "collocations": [
+            "grip tightly",
+            "grip the handle"
+          ]
+        },
+        {
+          "word": "halt",
+          "uzb": "to‘xtatmoq",
+          "emoji": "🛑",
+          "examples": {
+            "easy": "The car halted suddenly.",
+            "normal": "The train halted outside the station for twenty minutes.",
+            "hard": "Construction of the new stadium was halted after workers discovered ancient remains on the site."
+          },
+          "synonyms": [
+            "stop"
+          ],
+          "collocations": [
+            "come to a halt",
+            "halt production"
+          ]
+        },
+        {
+          "word": "impending",
+          "uzb": "yaqinlashayotgan",
+          "emoji": "⏳",
+          "examples": {
+            "easy": "He feared the impending exam.",
+            "normal": "Dark clouds warned us of the impending storm.",
+            "hard": "Rumours of impending job cuts spread through the office, and many staff began looking for new positions."
+          },
+          "synonyms": [
+            "approaching",
+            "upcoming",
+            "imminent"
+          ],
+          "collocations": [
+            "impending disaster",
+            "impending storm"
+          ]
+        },
+        {
+          "word": "perspire",
+          "uzb": "terlamoq",
+          "emoji": "😓",
+          "examples": {
+            "easy": "I perspire in hot weather.",
+            "normal": "He always perspires heavily when he has to speak in public.",
+            "hard": "Even though the room was air-conditioned, the candidate was perspiring nervously throughout the job interview."
+          },
+          "synonyms": [
+            "sweat"
+          ],
+          "collocations": [
+            "perspire heavily",
+            "begin to perspire"
+          ]
+        },
+        {
+          "word": "whatsoever",
+          "uzb": "umuman, hech ham",
+          "emoji": "🚫",
+          "examples": {
+            "easy": "I have no idea whatsoever.",
+            "normal": "There is no reason whatsoever to be worried about it.",
+            "hard": "The minister insisted that he had no knowledge whatsoever of the secret payments made by his department."
+          },
+          "synonyms": [
+            "at all"
+          ],
+          "collocations": [
+            "no doubt whatsoever",
+            "nothing whatsoever"
+          ]
+        },
+        {
+          "word": "alongside",
+          "uzb": "yonma-yon",
+          "emoji": "🤝",
+          "examples": {
+            "easy": "She works alongside me.",
+            "normal": "Our team worked alongside local volunteers to clean the beach.",
+            "hard": "New technology will be used alongside traditional teaching methods rather than replacing them completely."
+          },
+          "synonyms": [
+            "beside",
+            "together with"
+          ],
+          "collocations": [
+            "work alongside",
+            "alongside each other"
+          ]
+        },
+        {
+          "word": "appetite",
+          "uzb": "ishtaha",
+          "emoji": "🍽️",
+          "examples": {
+            "easy": "He has a big appetite.",
+            "normal": "Walking in the mountains gave us all a huge appetite.",
+            "hard": "She lost her appetite completely during her illness and found it hard to eat even small meals."
+          },
+          "synonyms": [
+            "hunger"
+          ],
+          "collocations": [
+            "lose your appetite",
+            "healthy appetite"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-advanced-lesson-95",
+      "lesson": 95,
+      "name": "Lesson 95 - Behaviour, conflict and defence",
+      "source": "Main Lesson (MT) p. 34",
+      "words": [
+        {
+          "word": "defy",
+          "uzb": "itoat etmaslik",
+          "emoji": "🙅‍♂️",
+          "examples": {
+            "easy": "He defied his parents.",
+            "normal": "The workers defied the manager's orders and went on strike.",
+            "hard": "Thousands of protesters defied the ban and gathered in the main square to demand political change."
+          },
+          "synonyms": [
+            "disobey",
+            "resist"
+          ],
+          "collocations": [
+            "defy the rules",
+            "defy orders"
+          ]
+        },
+        {
+          "word": "feeble",
+          "uzb": "kuchsiz, nimjon",
+          "emoji": "🥀",
+          "examples": {
+            "easy": "The old dog was feeble.",
+            "normal": "After a week in bed, she felt too feeble to walk far.",
+            "hard": "The patient's voice was so feeble that the doctor had to lean close to hear what he was saying."
+          },
+          "synonyms": [
+            "weak",
+            "frail"
+          ],
+          "collocations": [
+            "feeble attempt",
+            "feeble voice"
+          ]
+        },
+        {
+          "word": "outraged",
+          "uzb": "g‘azablangan",
+          "emoji": "😡",
+          "examples": {
+            "easy": "Fans were outraged by the decision.",
+            "normal": "Local residents were outraged when the park was sold to developers.",
+            "hard": "Parents were outraged to discover that the school had cancelled the trip without giving any explanation."
+          },
+          "synonyms": [
+            "furious",
+            "enraged",
+            "angry"
+          ],
+          "collocations": [
+            "outraged by the decision",
+            "outraged public"
+          ]
+        },
+        {
+          "word": "rumour",
+          "uzb": "mish-mish",
+          "emoji": "🗣️",
+          "examples": {
+            "easy": "Don't believe that rumour.",
+            "normal": "There's a rumour that the boss is leaving next month.",
+            "hard": "The rumour about the company closing spread quickly on social media, even though there was no evidence for it."
+          },
+          "synonyms": [
+            "gossip",
+            "hearsay"
+          ],
+          "collocations": [
+            "spread a rumour",
+            "deny the rumours"
+          ]
+        },
+        {
+          "word": "slap",
+          "uzb": "tarsaki solmoq",
+          "emoji": "👋",
+          "examples": {
+            "easy": "She slapped his face.",
+            "normal": "He slapped the table angrily when he heard the news.",
+            "hard": "In the film, the heroine slaps the villain across the face after he insults her family."
+          },
+          "synonyms": [
+            "smack",
+            "hit"
+          ],
+          "collocations": [
+            "slap in the face",
+            "slap someone's face"
+          ]
+        },
+        {
+          "word": "whereas",
+          "uzb": "holbuki, ammo",
+          "emoji": "⚖️",
+          "examples": {
+            "easy": "I like tea, whereas he likes coffee.",
+            "normal": "My brother is very tall, whereas I am quite short.",
+            "hard": "Some people learn best by listening, whereas others need to see information written down before they remember it."
+          },
+          "synonyms": [
+            "while",
+            "whilst"
+          ],
+          "collocations": [
+            "whereas others",
+            "whereas in fact"
+          ]
+        },
+        {
+          "word": "concede",
+          "uzb": "tan olmoq (istamasa ham)",
+          "emoji": "🏳️",
+          "examples": {
+            "easy": "He conceded he was wrong.",
+            "normal": "The minister conceded that mistakes had been made.",
+            "hard": "After a long debate, she finally conceded that her opponent's plan was cheaper and more practical than her own."
+          },
+          "synonyms": [
+            "admit",
+            "acknowledge"
+          ],
+          "collocations": [
+            "concede defeat",
+            "concede that"
+          ]
+        },
+        {
+          "word": "plea",
+          "uzb": "iltijo, o‘tinch",
+          "emoji": "🥺",
+          "examples": {
+            "easy": "She made a plea for help.",
+            "normal": "The family made a public plea for information about their son.",
+            "hard": "Despite repeated pleas from environmental groups, the council approved the plan to cut down the old forest."
+          },
+          "synonyms": [
+            "appeal",
+            "request"
+          ],
+          "collocations": [
+            "make a plea",
+            "desperate plea"
+          ]
+        },
+        {
+          "word": "refrain",
+          "uzb": "o‘zini tiymoq",
+          "emoji": "✋",
+          "examples": {
+            "easy": "Please refrain from smoking.",
+            "normal": "Passengers are asked to refrain from using phones during take-off.",
+            "hard": "The doctor advised him to refrain from heavy lifting for at least six weeks after the operation."
+          },
+          "synonyms": [
+            "abstain",
+            "hold back"
+          ],
+          "collocations": [
+            "refrain from smoking",
+            "refrain from comment"
+          ]
+        },
+        {
+          "word": "sophisticated",
+          "uzb": "ilg‘or fikrli",
+          "emoji": "🎩",
+          "examples": {
+            "easy": "She is a sophisticated woman.",
+            "normal": "He has very sophisticated tastes in music and art.",
+            "hard": "Having lived in Paris and London, she was a sophisticated, well-read woman who could talk about almost any subject."
+          },
+          "synonyms": [
+            "refined",
+            "cultured",
+            "worldly"
+          ],
+          "collocations": [
+            "sophisticated taste",
+            "sophisticated audience"
+          ]
+        },
+        {
+          "word": "upright",
+          "uzb": "tik, tikka",
+          "emoji": "🧍",
+          "examples": {
+            "easy": "Sit upright, please.",
+            "normal": "Keep your seat upright during take-off and landing.",
+            "hard": "The injured horse struggled for several minutes before it finally managed to stand upright again."
+          },
+          "synonyms": [
+            "erect",
+            "vertical",
+            "straight"
+          ],
+          "collocations": [
+            "stand upright",
+            "sit upright"
+          ]
+        },
+        {
+          "word": "worthwhile",
+          "uzb": "arzirli, muhim",
+          "emoji": "👍",
+          "examples": {
+            "easy": "The trip was worthwhile.",
+            "normal": "Volunteering is a worthwhile way to spend your weekends.",
+            "hard": "Although the course was expensive and time-consuming, most students agreed that it was a worthwhile investment in their future."
+          },
+          "synonyms": [
+            "valuable",
+            "rewarding",
+            "beneficial"
+          ],
+          "collocations": [
+            "worthwhile cause",
+            "well worthwhile"
+          ]
+        },
+        {
+          "word": "defence",
+          "uzb": "himoya, mudofaa",
+          "emoji": "🛡️",
+          "examples": {
+            "easy": "Our defence was weak.",
+            "normal": "The lawyer prepared a strong defence for her client.",
+            "hard": "The country increased its spending on defence after tensions with its neighbours rose sharply last year."
+          },
+          "synonyms": [
+            "protection"
+          ],
+          "collocations": [
+            "in defence of",
+            "strong defence"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-advanced-lesson-96",
+      "lesson": 96,
+      "name": "Lesson 96 - Variety, motivation and character",
+      "source": "Main Lesson (MT) p. 41",
+      "words": [
+        {
+          "word": "diverse",
+          "uzb": "har xil",
+          "emoji": "🌈",
+          "examples": {
+            "easy": "Our team is very diverse.",
+            "normal": "London has a diverse population from all over the world.",
+            "hard": "The festival attracted a diverse audience, from teenagers to grandparents, and people from many different cultures."
+          },
+          "synonyms": [
+            "varied",
+            "various",
+            "mixed"
+          ],
+          "collocations": [
+            "culturally diverse",
+            "diverse range"
+          ]
+        },
+        {
+          "word": "enchant",
+          "uzb": "maftun qilmoq",
+          "emoji": "🪄",
+          "examples": {
+            "easy": "The music enchanted everyone.",
+            "normal": "The children were enchanted by the puppet show.",
+            "hard": "Visitors are often enchanted by the old town's narrow streets, colourful houses and friendly little cafés."
+          },
+          "synonyms": [
+            "charm",
+            "captivate",
+            "delight"
+          ],
+          "collocations": [
+            "enchanted by the view",
+            "enchant an audience"
+          ]
+        },
+        {
+          "word": "genre",
+          "uzb": "janr",
+          "emoji": "🎭",
+          "examples": {
+            "easy": "Comedy is my favourite genre.",
+            "normal": "Science fiction is a genre that many teenagers enjoy reading.",
+            "hard": "The director is famous for mixing genres, combining elements of horror and comedy in the same film."
+          },
+          "synonyms": [],
+          "collocations": [
+            "film genre",
+            "literary genre"
+          ]
+        },
+        {
+          "word": "equip",
+          "uzb": "taʼminlamoq",
+          "emoji": "🧰",
+          "examples": {
+            "easy": "They equipped the new lab.",
+            "normal": "The school was equipped with new computers last year.",
+            "hard": "All the rooms are fully equipped with modern kitchens, so guests can cook their own meals during their stay."
+          },
+          "synonyms": [
+            "supply",
+            "provide",
+            "fit out"
+          ],
+          "collocations": [
+            "fully equipped",
+            "equip with"
+          ]
+        },
+        {
+          "word": "lure",
+          "uzb": "qiziqtirmoq (hiyla bilan jalb qilmoq)",
+          "emoji": "🎣",
+          "examples": {
+            "easy": "Low prices lure shoppers.",
+            "normal": "The company lured him away with a much higher salary.",
+            "hard": "Criminals often use fake job adverts to lure young people abroad, where they are then forced to work for nothing."
+          },
+          "synonyms": [
+            "attract",
+            "tempt",
+            "entice"
+          ],
+          "collocations": [
+            "lure customers",
+            "lure someone away"
+          ]
+        },
+        {
+          "word": "obstacle",
+          "uzb": "to‘siq, g‘ov",
+          "emoji": "🚧",
+          "examples": {
+            "easy": "A tree was an obstacle.",
+            "normal": "Lack of money is the main obstacle to starting a business.",
+            "hard": "Despite many obstacles, including language problems and a lack of contacts, she built a successful career abroad."
+          },
+          "synonyms": [
+            "barrier",
+            "hurdle",
+            "obstruction"
+          ],
+          "collocations": [
+            "overcome an obstacle",
+            "major obstacle"
+          ]
+        },
+        {
+          "word": "vain",
+          "uzb": "kekkaygan, shuhratparast",
+          "emoji": "🪞",
+          "examples": {
+            "easy": "He is very vain.",
+            "normal": "She's so vain that she spends hours in front of the mirror.",
+            "hard": "The vain actor refused to be photographed from the left side, insisting that it was not his best angle."
+          },
+          "synonyms": [
+            "conceited",
+            "self-centred"
+          ],
+          "collocations": [
+            "vain and selfish",
+            "rather vain"
+          ]
+        },
+        {
+          "word": "conflict",
+          "uzb": "nizo, mojaro",
+          "emoji": "⚔️",
+          "examples": {
+            "easy": "They avoided conflict.",
+            "normal": "There is often conflict between work and family life.",
+            "hard": "The long conflict between the two countries finally ended when both governments signed a peace agreement."
+          },
+          "synonyms": [
+            "dispute",
+            "clash",
+            "fight"
+          ],
+          "collocations": [
+            "armed conflict",
+            "resolve a conflict"
+          ]
+        },
+        {
+          "word": "enthusiasm",
+          "uzb": "ishtiyoq",
+          "emoji": "🤩",
+          "examples": {
+            "easy": "She showed great enthusiasm.",
+            "normal": "The students greeted the new project with real enthusiasm.",
+            "hard": "Although he had little experience, his enthusiasm and willingness to learn impressed everyone on the interview panel."
+          },
+          "synonyms": [
+            "eagerness",
+            "keenness",
+            "passion"
+          ],
+          "collocations": [
+            "great enthusiasm",
+            "lack of enthusiasm"
+          ]
+        },
+        {
+          "word": "mischief",
+          "uzb": "sho‘xlik, to‘polon",
+          "emoji": "😈",
+          "examples": {
+            "easy": "The boys got into mischief.",
+            "normal": "Keep the children busy or they'll get up to mischief.",
+            "hard": "Left alone for the afternoon, the twins got up to all sorts of mischief and painted the kitchen walls."
+          },
+          "synonyms": [
+            "naughtiness",
+            "misbehaviour"
+          ],
+          "collocations": [
+            "get into mischief",
+            "up to mischief"
+          ]
+        },
+        {
+          "word": "autograph",
+          "uzb": "imzo",
+          "emoji": "✍️",
+          "examples": {
+            "easy": "Can I have your autograph?",
+            "normal": "Fans queued for hours to get the singer's autograph.",
+            "hard": "He keeps a football signed with the autographs of the whole team that won the championship that year."
+          },
+          "synonyms": [
+            "signature"
+          ],
+          "collocations": [
+            "sign an autograph",
+            "ask for an autograph"
+          ]
+        },
+        {
+          "word": "irritable",
+          "uzb": "jizzaki, jahli tez",
+          "emoji": "😤",
+          "examples": {
+            "easy": "He's irritable in the morning.",
+            "normal": "She gets irritable when she's hungry or tired.",
+            "hard": "Lack of sleep can make even the calmest people irritable and make it harder for them to concentrate at work."
+          },
+          "synonyms": [
+            "grumpy",
+            "bad-tempered",
+            "touchy"
+          ],
+          "collocations": [
+            "irritable mood",
+            "become irritable"
+          ]
+        },
+        {
+          "word": "nutritious",
+          "uzb": "ozuqaviy, to‘yimli",
+          "emoji": "🥗",
+          "examples": {
+            "easy": "Lentils are very nutritious.",
+            "normal": "Try to give your children nutritious meals every day.",
+            "hard": "Nutritious food does not have to be expensive; beans, eggs and seasonal vegetables are cheap and healthy."
+          },
+          "synonyms": [
+            "nourishing",
+            "healthy",
+            "wholesome"
+          ],
+          "collocations": [
+            "nutritious food",
+            "nutritious meal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-advanced-lesson-97",
+      "lesson": 97,
+      "name": "Lesson 97 - Body, habits and growing up",
+      "source": "Main Lesson (MT) p. 46",
+      "words": [
+        {
+          "word": "subconscious",
+          "uzb": "beixtiyor, ongli",
+          "emoji": "🧠",
+          "examples": {
+            "easy": "Fear is often subconscious.",
+            "normal": "Many of our daily habits are driven by subconscious thoughts.",
+            "hard": "Advertisers often try to influence our subconscious decisions, so we buy things without realising why."
+          },
+          "synonyms": [
+            "unconscious"
+          ],
+          "collocations": [
+            "subconscious mind",
+            "subconscious level"
+          ]
+        },
+        {
+          "word": "workout",
+          "uzb": "jismoniy mashq",
+          "emoji": "🏋️",
+          "examples": {
+            "easy": "I do a short workout every morning.",
+            "normal": "After a long workout at the gym, I always feel hungry.",
+            "hard": "Although she had a busy schedule, she never missed her evening workout, which kept her energy levels high."
+          },
+          "synonyms": [
+            "exercise",
+            "training session"
+          ],
+          "collocations": [
+            "intense workout",
+            "daily workout"
+          ]
+        },
+        {
+          "word": "crumble",
+          "uzb": "maydalamoq",
+          "emoji": "🍞",
+          "examples": {
+            "easy": "She crumbled the cheese into the salad.",
+            "normal": "He crumbled some biscuits and sprinkled them over the dessert.",
+            "hard": "If you crumble the bread too finely, the stuffing will turn into a paste rather than keeping its texture."
+          },
+          "synonyms": [
+            "break up"
+          ],
+          "collocations": [
+            "crumble bread",
+            "crumble into pieces"
+          ]
+        },
+        {
+          "word": "fist",
+          "uzb": "musht",
+          "emoji": "✊",
+          "examples": {
+            "easy": "He made a fist in anger.",
+            "normal": "She banged her fist on the table and demanded an answer.",
+            "hard": "Clenching his fist, the boxer waited for the bell, trying to stay calm in front of the noisy crowd."
+          },
+          "synonyms": [],
+          "collocations": [
+            "clench your fist",
+            "raise a fist"
+          ]
+        },
+        {
+          "word": "flush",
+          "uzb": "qizarmoq",
+          "emoji": "😳",
+          "examples": {
+            "easy": "Her face flushed with embarrassment.",
+            "normal": "He flushed bright red when the teacher praised him in public.",
+            "hard": "When she realised everyone had heard her mistake, she flushed and quickly changed the subject."
+          },
+          "synonyms": [
+            "blush",
+            "redden"
+          ],
+          "collocations": [
+            "flush with anger",
+            "flush red"
+          ]
+        },
+        {
+          "word": "reconcile",
+          "uzb": "yarashmoq, kelishmoq",
+          "emoji": "🤝",
+          "examples": {
+            "easy": "They reconciled after the argument.",
+            "normal": "The two brothers finally reconciled after years of not speaking.",
+            "hard": "It took months of honest conversations before the couple were able to reconcile and trust each other again."
+          },
+          "synonyms": [
+            "make up"
+          ],
+          "collocations": [
+            "reconcile with someone",
+            "finally reconcile"
+          ]
+        },
+        {
+          "word": "sift",
+          "uzb": "elamoq",
+          "emoji": "🥣",
+          "examples": {
+            "easy": "Sift the flour into a bowl.",
+            "normal": "For a lighter cake, sift the flour and sugar together first.",
+            "hard": "My grandmother always sifted the flour twice, insisting that it was the secret to her soft, fluffy bread."
+          },
+          "synonyms": [
+            "sieve"
+          ],
+          "collocations": [
+            "sift flour",
+            "sift through"
+          ]
+        },
+        {
+          "word": "sprinkle",
+          "uzb": "maydalab sepmoq",
+          "emoji": "🧂",
+          "examples": {
+            "easy": "Sprinkle some salt on the soup.",
+            "normal": "She sprinkled fresh herbs over the pasta just before serving.",
+            "hard": "Once the cake has cooled completely, sprinkle it with icing sugar and decorate it with a few berries."
+          },
+          "synonyms": [
+            "scatter",
+            "dust"
+          ],
+          "collocations": [
+            "sprinkle with sugar",
+            "sprinkle salt"
+          ]
+        },
+        {
+          "word": "utter",
+          "uzb": "demoq, aytmoq",
+          "emoji": "🗣️",
+          "examples": {
+            "easy": "He didn't utter a word.",
+            "normal": "She was so shocked that she couldn't utter a single sound.",
+            "hard": "Throughout the entire meeting, the new manager barely uttered a word, which made everyone wonder what he was thinking."
+          },
+          "synonyms": [
+            "say",
+            "speak"
+          ],
+          "collocations": [
+            "utter a word",
+            "utter a sound"
+          ]
+        },
+        {
+          "word": "mature",
+          "uzb": "voyaga yetmoq",
+          "emoji": "🧑",
+          "examples": {
+            "easy": "Children mature at different speeds.",
+            "normal": "He has matured a lot since he started working last year.",
+            "hard": "Living abroad on her own helped her mature quickly, as she had to make important decisions without her parents' help."
+          },
+          "synonyms": [
+            "grow up"
+          ],
+          "collocations": [
+            "mature quickly",
+            "fully mature"
+          ]
+        },
+        {
+          "word": "variety",
+          "uzb": "xilma-xil",
+          "emoji": "🌈",
+          "examples": {
+            "easy": "The shop has a variety of fruit.",
+            "normal": "Our city offers a wide variety of restaurants and cafés.",
+            "hard": "A balanced diet should include a variety of vegetables, grains and proteins to give your body everything it needs."
+          },
+          "synonyms": [
+            "range",
+            "diversity"
+          ],
+          "collocations": [
+            "a wide variety of",
+            "a great variety"
+          ]
+        },
+        {
+          "word": "disobedient",
+          "uzb": "bo‘ysunmas, qaysar",
+          "emoji": "😤",
+          "examples": {
+            "easy": "The dog is very disobedient.",
+            "normal": "Disobedient pupils were asked to stay after class.",
+            "hard": "Parents often find that a child becomes disobedient when the rules at home are not clear or consistent."
+          },
+          "synonyms": [
+            "naughty",
+            "defiant"
+          ],
+          "collocations": [
+            "disobedient child",
+            "disobedient behaviour"
+          ]
+        },
+        {
+          "word": "foresee",
+          "uzb": "oldindan payqamoq, sezmoq",
+          "emoji": "🔮",
+          "examples": {
+            "easy": "Nobody foresaw the problem.",
+            "normal": "The company didn't foresee such a big drop in sales this year.",
+            "hard": "Even experienced economists failed to foresee the crisis, which shows how unpredictable global markets can be."
+          },
+          "synonyms": [
+            "predict",
+            "anticipate"
+          ],
+          "collocations": [
+            "foresee problems",
+            "foresee the future"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-advanced-lesson-98",
+      "lesson": 98,
+      "name": "Lesson 98 - Everyday problems and trust",
+      "source": "Main Lesson (MT) p. 54",
+      "words": [
+        {
+          "word": "dew",
+          "uzb": "shabnam",
+          "emoji": "💧",
+          "examples": {
+            "easy": "The grass is wet with dew.",
+            "normal": "Early in the morning, the leaves were covered in dew.",
+            "hard": "We set off before sunrise, when the dew still sparkled on the fields and the air was cool and fresh."
+          },
+          "synonyms": [],
+          "collocations": [
+            "morning dew",
+            "covered in dew"
+          ]
+        },
+        {
+          "word": "complicated",
+          "uzb": "murakkab, murakkablashgan",
+          "emoji": "🧩",
+          "examples": {
+            "easy": "This form is very complicated.",
+            "normal": "The instructions were so complicated that I gave up after an hour.",
+            "hard": "Their relationship became even more complicated when they both applied for the same promotion at work."
+          },
+          "synonyms": [
+            "complex",
+            "difficult"
+          ],
+          "collocations": [
+            "complicated situation",
+            "a bit complicated"
+          ]
+        },
+        {
+          "word": "decline",
+          "uzb": "rad etmoq, pasaymoq",
+          "emoji": "📉",
+          "examples": {
+            "easy": "She declined the invitation.",
+            "normal": "He politely declined their offer, saying he was too busy.",
+            "hard": "Sales of printed newspapers have declined steadily over the past twenty years as more people read the news online."
+          },
+          "synonyms": [
+            "refuse",
+            "decrease"
+          ],
+          "collocations": [
+            "decline an offer",
+            "decline sharply"
+          ]
+        },
+        {
+          "word": "errand",
+          "uzb": "topshiriq",
+          "emoji": "🛒",
+          "examples": {
+            "easy": "I have a few errands to run.",
+            "normal": "She spent Saturday morning running errands around town.",
+            "hard": "Since my mother broke her leg, I've been doing all her errands, from shopping to paying the bills."
+          },
+          "synonyms": [
+            "task",
+            "chore"
+          ],
+          "collocations": [
+            "run errands",
+            "do an errand"
+          ]
+        },
+        {
+          "word": "leather",
+          "uzb": "charm",
+          "emoji": "👜",
+          "examples": {
+            "easy": "I bought a leather bag.",
+            "normal": "His leather jacket is old, but it still looks great.",
+            "hard": "Good-quality leather shoes may be expensive, but with proper care they can last for many years."
+          },
+          "synonyms": [],
+          "collocations": [
+            "leather jacket",
+            "genuine leather"
+          ]
+        },
+        {
+          "word": "reserve",
+          "uzb": "buyurtma qilmoq",
+          "emoji": "📅",
+          "examples": {
+            "easy": "I reserved a table for two.",
+            "normal": "We reserved our hotel room three months before the holiday.",
+            "hard": "If you want to see the show at the weekend, I'd recommend reserving your seats online as soon as possible."
+          },
+          "synonyms": [
+            "book"
+          ],
+          "collocations": [
+            "reserve a table",
+            "reserve a room"
+          ]
+        },
+        {
+          "word": "slam",
+          "uzb": "qarsillatib yopmoq",
+          "emoji": "🚪",
+          "examples": {
+            "easy": "He slammed the door angrily.",
+            "normal": "She slammed the window shut because of the loud noise outside.",
+            "hard": "After the argument, he stormed out of the flat and slammed the door so hard that the pictures shook."
+          },
+          "synonyms": [
+            "bang"
+          ],
+          "collocations": [
+            "slam the door",
+            "slam shut"
+          ]
+        },
+        {
+          "word": "breakdown",
+          "uzb": "buzilish, ishdan chiqish",
+          "emoji": "🚗",
+          "examples": {
+            "easy": "We had a breakdown on the motorway.",
+            "normal": "A breakdown in the system delayed all the trains this morning.",
+            "hard": "Because of an engine breakdown halfway through the journey, we had to wait three hours for a tow truck."
+          },
+          "synonyms": [
+            "failure",
+            "malfunction"
+          ],
+          "collocations": [
+            "car breakdown",
+            "breakdown service"
+          ]
+        },
+        {
+          "word": "notify",
+          "uzb": "maʼlum qilmoq",
+          "emoji": "🔔",
+          "examples": {
+            "easy": "Please notify me of any changes.",
+            "normal": "The bank will notify you by text if there is a problem.",
+            "hard": "All applicants will be notified of the decision by email within two weeks of the interview."
+          },
+          "synonyms": [
+            "inform",
+            "tell"
+          ],
+          "collocations": [
+            "notify the police",
+            "notify someone in writing"
+          ]
+        },
+        {
+          "word": "vomit",
+          "uzb": "qusmoq",
+          "emoji": "🤮",
+          "examples": {
+            "easy": "The child vomited in the car.",
+            "normal": "He felt so sick on the boat that he vomited twice.",
+            "hard": "If the patient continues to vomit and cannot keep water down, you should take him to hospital immediately."
+          },
+          "synonyms": [
+            "be sick",
+            "throw up"
+          ],
+          "collocations": [
+            "start to vomit",
+            "vomit blood"
+          ]
+        },
+        {
+          "word": "betray",
+          "uzb": "xiyonat qilmoq",
+          "emoji": "🗡️",
+          "examples": {
+            "easy": "He betrayed his best friend.",
+            "normal": "She felt deeply hurt when her colleague betrayed her trust.",
+            "hard": "The spy was accused of betraying his country by selling secret information to a foreign government."
+          },
+          "synonyms": [
+            "deceive"
+          ],
+          "collocations": [
+            "betray someone's trust",
+            "betray a friend"
+          ]
+        },
+        {
+          "word": "bait",
+          "uzb": "xo‘rak",
+          "emoji": "🪱",
+          "examples": {
+            "easy": "He put bait on the hook.",
+            "normal": "Fishermen often use worms as bait to catch fish.",
+            "hard": "The trap was ineffective at first, but once we changed the bait to cheese, we caught the mouse within a day."
+          },
+          "synonyms": [
+            "lure"
+          ],
+          "collocations": [
+            "fishing bait",
+            "live bait"
+          ]
+        },
+        {
+          "word": "disease",
+          "uzb": "kasallik",
+          "emoji": "🦠",
+          "examples": {
+            "easy": "Heart disease is very common.",
+            "normal": "Washing your hands helps prevent the spread of disease.",
+            "hard": "Scientists are developing new vaccines to fight diseases that still kill millions of people every year."
+          },
+          "synonyms": [
+            "illness",
+            "sickness"
+          ],
+          "collocations": [
+            "heart disease",
+            "infectious disease"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-advanced-lesson-99",
+      "lesson": 99,
+      "name": "Lesson 99 - History, health and trust",
+      "source": "Main Lesson (MT) p. 62",
+      "words": [
+        {
+          "word": "infect",
+          "uzb": "kasallik yuqtirmoq",
+          "emoji": "🤧",
+          "examples": {
+            "easy": "The cut became infected.",
+            "normal": "A single sick child can infect the whole class with flu.",
+            "hard": "The virus can infect people through tiny droplets in the air, so wearing a mask in crowded places is sensible."
+          },
+          "synonyms": [
+            "contaminate"
+          ],
+          "collocations": [
+            "infect a wound",
+            "infect other people"
+          ]
+        },
+        {
+          "word": "millennium",
+          "uzb": "ming yillik (1000 yil)",
+          "emoji": "⏳",
+          "examples": {
+            "easy": "The city is over a millennium old.",
+            "normal": "People around the world celebrated the new millennium in 2000.",
+            "hard": "Some of the oldest trees on Earth have survived for several millennia, outliving entire civilisations."
+          },
+          "synonyms": [],
+          "collocations": [
+            "the new millennium",
+            "the third millennium"
+          ]
+        },
+        {
+          "word": "trustworthy",
+          "uzb": "ishonchli",
+          "emoji": "🛡️",
+          "examples": {
+            "easy": "My neighbour is very trustworthy.",
+            "normal": "We need a trustworthy person to look after the money.",
+            "hard": "It's hard to find a trustworthy mechanic who will tell you honestly what your car really needs."
+          },
+          "synonyms": [
+            "reliable",
+            "dependable"
+          ],
+          "collocations": [
+            "trustworthy person",
+            "completely trustworthy"
+          ]
+        },
+        {
+          "word": "vein",
+          "uzb": "vena tomiri",
+          "emoji": "🩸",
+          "examples": {
+            "easy": "The nurse found a vein.",
+            "normal": "You can see the blue veins on the back of your hand.",
+            "hard": "The nurse had trouble finding a vein in the patient's arm, so she asked a more experienced colleague for help."
+          },
+          "synonyms": [],
+          "collocations": [
+            "blood vein",
+            "find a vein"
+          ]
+        },
+        {
+          "word": "condemn",
+          "uzb": "hukm qilmoq",
+          "emoji": "⚖️",
+          "examples": {
+            "easy": "The court condemned him to prison.",
+            "normal": "The judge condemned the man to ten years in prison.",
+            "hard": "After a long trial, the prisoner was condemned to death, although the sentence was later reduced to life imprisonment."
+          },
+          "synonyms": [
+            "sentence"
+          ],
+          "collocations": [
+            "condemn to death",
+            "condemn someone to prison"
+          ]
+        },
+        {
+          "word": "cosy",
+          "uzb": "shinam",
+          "emoji": "🛋️",
+          "examples": {
+            "easy": "Our flat is small but cosy.",
+            "normal": "We spent the evening in a cosy café near the river.",
+            "hard": "With soft lights, warm blankets and a crackling fire, the little cottage felt incredibly cosy in winter."
+          },
+          "synonyms": [
+            "snug",
+            "comfortable"
+          ],
+          "collocations": [
+            "cosy room",
+            "cosy atmosphere"
+          ]
+        },
+        {
+          "word": "goods",
+          "uzb": "mahsulotlar, tovarlar",
+          "emoji": "📦",
+          "examples": {
+            "easy": "The shop sells household goods.",
+            "normal": "The goods will be delivered to your door within three days.",
+            "hard": "Higher fuel prices have increased the cost of transporting goods, so many items in supermarkets are now more expensive."
+          },
+          "synonyms": [
+            "products",
+            "merchandise"
+          ],
+          "collocations": [
+            "consumer goods",
+            "stolen goods"
+          ]
+        },
+        {
+          "word": "heed",
+          "uzb": "maslahatga amal qilmoq",
+          "emoji": "👂",
+          "examples": {
+            "easy": "He didn't heed my advice.",
+            "normal": "If you had heeded the doctor's warning, you wouldn't be ill now.",
+            "hard": "The climbers failed to heed the warnings about the storm and had to be rescued from the mountain."
+          },
+          "synonyms": [
+            "follow",
+            "listen to"
+          ],
+          "collocations": [
+            "heed advice",
+            "heed a warning"
+          ]
+        },
+        {
+          "word": "mock",
+          "uzb": "kalaka qilmoq",
+          "emoji": "😝",
+          "examples": {
+            "easy": "Don't mock your little brother.",
+            "normal": "The other children mocked him because of his strange accent.",
+            "hard": "Instead of mocking people who make mistakes in a foreign language, we should admire their courage to speak."
+          },
+          "synonyms": [
+            "make fun of",
+            "ridicule"
+          ],
+          "collocations": [
+            "mock someone's accent",
+            "openly mock"
+          ]
+        },
+        {
+          "word": "persecute",
+          "uzb": "yomon munosabatda bo‘lmoq",
+          "emoji": "⛓️",
+          "examples": {
+            "easy": "They were persecuted for their beliefs.",
+            "normal": "Many writers were persecuted for criticising the government.",
+            "hard": "Throughout history, minority groups have been persecuted simply because their religion or language was different."
+          },
+          "synonyms": [
+            "oppress",
+            "victimise"
+          ],
+          "collocations": [
+            "persecute minorities",
+            "be persecuted for"
+          ]
+        },
+        {
+          "word": "scribe",
+          "uzb": "xattot",
+          "emoji": "✍️",
+          "examples": {
+            "easy": "The scribe copied the book.",
+            "normal": "In the past, scribes wrote important documents by hand.",
+            "hard": "Before the printing press, scribes spent years carefully copying religious texts in beautiful handwriting."
+          },
+          "synonyms": [
+            "copyist",
+            "calligrapher"
+          ],
+          "collocations": [
+            "royal scribe",
+            "ancient scribe"
+          ]
+        },
+        {
+          "word": "throne",
+          "uzb": "taxt",
+          "emoji": "👑",
+          "examples": {
+            "easy": "The king sat on his throne.",
+            "normal": "The young prince came to the throne at the age of sixteen.",
+            "hard": "After the old queen's death, several members of the royal family fought for the throne for nearly a decade."
+          },
+          "synonyms": [],
+          "collocations": [
+            "come to the throne",
+            "heir to the throne"
+          ]
+        },
+        {
+          "word": "offspring",
+          "uzb": "hayvon bolasi",
+          "emoji": "🐣",
+          "examples": {
+            "easy": "The cat cared for her offspring.",
+            "normal": "Most birds feed their offspring several times an hour.",
+            "hard": "Some animals leave their offspring soon after birth, while others protect them for years until they can survive alone."
+          },
+          "synonyms": [
+            "young",
+            "babies"
+          ],
+          "collocations": [
+            "produce offspring",
+            "protect their offspring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-advanced-lesson-100",
+      "lesson": 100,
+      "name": "Lesson 100 - Nature, danger and character",
+      "source": "Main Lesson (MT) p. 68",
+      "words": [
+        {
+          "word": "regulate",
+          "uzb": "nazorat qilmoq",
+          "emoji": "🎛️",
+          "examples": {
+            "easy": "The government regulates the banks.",
+            "normal": "New laws will regulate how companies use our personal data.",
+            "hard": "Without a thermostat to regulate the temperature, the building gets uncomfortably hot in the afternoon."
+          },
+          "synonyms": [
+            "control",
+            "govern"
+          ],
+          "collocations": [
+            "regulate prices",
+            "strictly regulate"
+          ]
+        },
+        {
+          "word": "stricken",
+          "uzb": "kasalga chalingan",
+          "emoji": "🤒",
+          "examples": {
+            "easy": "He was stricken with flu.",
+            "normal": "She was stricken with a serious illness at the age of thirty.",
+            "hard": "The village was stricken by a terrible disease, and the small local hospital could not cope with so many patients."
+          },
+          "synonyms": [
+            "affected"
+          ],
+          "collocations": [
+            "stricken with illness",
+            "grief-stricken"
+          ]
+        },
+        {
+          "word": "core",
+          "uzb": "o‘zak, markaz",
+          "emoji": "🍎",
+          "examples": {
+            "easy": "Throw the apple core away.",
+            "normal": "The core of the problem is a lack of communication.",
+            "hard": "Honesty and respect are the core values of our company, and every new employee learns about them on their first day."
+          },
+          "synonyms": [
+            "centre",
+            "heart"
+          ],
+          "collocations": [
+            "core values",
+            "the Earth's core"
+          ]
+        },
+        {
+          "word": "predator",
+          "uzb": "yirtqich hayvon",
+          "emoji": "🦁",
+          "examples": {
+            "easy": "The lion is a predator.",
+            "normal": "Small animals hide in the grass to escape from predators.",
+            "hard": "Without natural predators to control their numbers, rabbits quickly spread across Australia and destroyed farmland."
+          },
+          "synonyms": [
+            "hunter"
+          ],
+          "collocations": [
+            "natural predator",
+            "top predator"
+          ]
+        },
+        {
+          "word": "cunning",
+          "uzb": "ayyor, mug‘ombir",
+          "emoji": "🦊",
+          "examples": {
+            "easy": "The fox is a cunning animal.",
+            "normal": "He came up with a cunning plan to avoid paying the bill.",
+            "hard": "The cunning businessman persuaded everyone to invest, then disappeared with their money before anyone noticed."
+          },
+          "synonyms": [
+            "sly",
+            "crafty"
+          ],
+          "collocations": [
+            "cunning plan",
+            "cunning fox"
+          ]
+        },
+        {
+          "word": "snatch",
+          "uzb": "uzib olmoq",
+          "emoji": "🫳",
+          "examples": {
+            "easy": "A thief snatched her bag.",
+            "normal": "The boy snatched the toy from his sister's hands.",
+            "hard": "While she was waiting at the bus stop, a man on a scooter snatched her phone and rode away."
+          },
+          "synonyms": [
+            "grab",
+            "seize"
+          ],
+          "collocations": [
+            "snatch a bag",
+            "snatch away"
+          ]
+        },
+        {
+          "word": "stumble",
+          "uzb": "qoqilib tushmoq",
+          "emoji": "🚶",
+          "examples": {
+            "easy": "I stumbled on the stairs.",
+            "normal": "He stumbled over a stone and nearly dropped his coffee.",
+            "hard": "Walking home in the dark, she stumbled on the uneven pavement and twisted her ankle badly."
+          },
+          "synonyms": [
+            "trip"
+          ],
+          "collocations": [
+            "stumble over",
+            "stumble and fall"
+          ]
+        },
+        {
+          "word": "tense",
+          "uzb": "asabiy (xavotirli)",
+          "emoji": "😬",
+          "examples": {
+            "easy": "I always feel tense before exams.",
+            "normal": "The atmosphere in the room was tense while we waited for the results.",
+            "hard": "She was so tense before the job interview that she couldn't eat anything all morning."
+          },
+          "synonyms": [
+            "nervous",
+            "anxious"
+          ],
+          "collocations": [
+            "feel tense",
+            "tense atmosphere"
+          ]
+        },
+        {
+          "word": "tumble",
+          "uzb": "ag‘anab tushmoq",
+          "emoji": "🤸",
+          "examples": {
+            "easy": "The boy tumbled down the hill.",
+            "normal": "She lost her balance and tumbled down the stairs.",
+            "hard": "A rock tumbled from the cliff and landed just a few metres from where the hikers were resting."
+          },
+          "synonyms": [
+            "fall"
+          ],
+          "collocations": [
+            "tumble down",
+            "tumble to the ground"
+          ]
+        },
+        {
+          "word": "withhold",
+          "uzb": "berishdan bosh tortmoq",
+          "emoji": "✋",
+          "examples": {
+            "easy": "They withheld his salary.",
+            "normal": "The company withheld the information from its customers.",
+            "hard": "The landlord threatened to withhold our deposit until we had repaired the damage to the kitchen."
+          },
+          "synonyms": [
+            "hold back",
+            "keep back"
+          ],
+          "collocations": [
+            "withhold information",
+            "withhold payment"
+          ]
+        },
+        {
+          "word": "decisive",
+          "uzb": "ikkilanmaydigan",
+          "emoji": "🎯",
+          "examples": {
+            "easy": "Our manager is very decisive.",
+            "normal": "A decisive leader can make difficult choices quickly.",
+            "hard": "In a crisis, people expect a decisive response from the government rather than long debates and delays."
+          },
+          "synonyms": [
+            "determined",
+            "resolute"
+          ],
+          "collocations": [
+            "decisive action",
+            "decisive leader"
+          ]
+        },
+        {
+          "word": "esteemed",
+          "uzb": "hurmati bor",
+          "emoji": "🎓",
+          "examples": {
+            "easy": "He is an esteemed doctor.",
+            "normal": "An esteemed professor will give a lecture tomorrow.",
+            "hard": "The award was presented by an esteemed writer whose novels have been translated into more than thirty languages."
+          },
+          "synonyms": [
+            "respected",
+            "admired"
+          ],
+          "collocations": [
+            "highly esteemed",
+            "esteemed colleague"
+          ]
+        },
+        {
+          "word": "extinct",
+          "uzb": "yo‘q bo‘lib ketgan",
+          "emoji": "🦖",
+          "examples": {
+            "easy": "Dinosaurs are extinct.",
+            "normal": "Many animals may become extinct if we destroy their habitats.",
+            "hard": "Scientists warn that thousands of species could become extinct this century unless urgent action is taken on climate change."
+          },
+          "synonyms": [
+            "died out"
+          ],
+          "collocations": [
+            "become extinct",
+            "extinct species"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-advanced-lesson-101",
+      "lesson": 101,
+      "name": "Lesson 101 - Nature, crisis and public life",
+      "source": "Main Lesson (MT) p. 75",
+      "words": [
+        {
+          "word": "migrate",
+          "uzb": "ko‘chib ketmoq",
+          "emoji": "🕊️",
+          "examples": {
+            "easy": "Many birds migrate in autumn.",
+            "normal": "Every winter, thousands of geese migrate south to warmer lakes.",
+            "hard": "As temperatures rise, some species are being forced to migrate further north in search of suitable habitats."
+          },
+          "synonyms": [
+            "move",
+            "relocate"
+          ],
+          "collocations": [
+            "migrate south",
+            "migrate to cities"
+          ]
+        },
+        {
+          "word": "swamp",
+          "uzb": "botqoqlik",
+          "emoji": "🐊",
+          "examples": {
+            "easy": "Crocodiles live in the swamp.",
+            "normal": "We had to walk carefully because the path ran through a muddy swamp.",
+            "hard": "The developers drained the swamp to build houses, destroying the habitat of countless birds and insects."
+          },
+          "synonyms": [
+            "marsh",
+            "bog"
+          ],
+          "collocations": [
+            "mangrove swamp",
+            "drain a swamp"
+          ]
+        },
+        {
+          "word": "beast",
+          "uzb": "ulkan hayvon",
+          "emoji": "🦁",
+          "examples": {
+            "easy": "The beast roared in the forest.",
+            "normal": "The old story tells of a terrible beast living in the mountains.",
+            "hard": "Although the bear looked like a gentle beast from a distance, the guide warned us not to get any closer."
+          },
+          "synonyms": [
+            "creature"
+          ],
+          "collocations": [
+            "wild beast",
+            "savage beast"
+          ]
+        },
+        {
+          "word": "colonel",
+          "uzb": "polkovnik",
+          "emoji": "🎖️",
+          "examples": {
+            "easy": "The colonel gave the order.",
+            "normal": "My grandfather retired from the army as a colonel in 1995.",
+            "hard": "The colonel, who had served for over thirty years, was respected by every soldier in the regiment."
+          },
+          "synonyms": [],
+          "collocations": [
+            "army colonel",
+            "retired colonel"
+          ]
+        },
+        {
+          "word": "corpse",
+          "uzb": "murda, jasad",
+          "emoji": "⚰️",
+          "examples": {
+            "easy": "The police found a corpse.",
+            "normal": "The detective examined the corpse carefully for any signs of violence.",
+            "hard": "The corpse had been hidden in the woods for weeks before a hiker's dog finally discovered it."
+          },
+          "synonyms": [
+            "dead body"
+          ],
+          "collocations": [
+            "find a corpse",
+            "identify a corpse"
+          ]
+        },
+        {
+          "word": "discriminate",
+          "uzb": "kamsitmoq",
+          "emoji": "⚖️",
+          "examples": {
+            "easy": "It is wrong to discriminate against women.",
+            "normal": "The law makes it illegal to discriminate against people because of their religion.",
+            "hard": "She claimed that the company had discriminated against her by promoting less experienced men ahead of her."
+          },
+          "synonyms": [],
+          "collocations": [
+            "discriminate against",
+            "discriminate on the grounds of"
+          ]
+        },
+        {
+          "word": "crisis",
+          "uzb": "inqiroz",
+          "emoji": "📉",
+          "examples": {
+            "easy": "The economy is facing a crisis.",
+            "normal": "The government held emergency talks to deal with the energy crisis.",
+            "hard": "Many small businesses were forced to close during the financial crisis, leaving thousands of people without work."
+          },
+          "synonyms": [],
+          "collocations": [
+            "financial crisis",
+            "in crisis"
+          ]
+        },
+        {
+          "word": "embassy",
+          "uzb": "elchixona",
+          "emoji": "🏛️",
+          "examples": {
+            "easy": "We visited the embassy yesterday.",
+            "normal": "You need to apply for a visa at the embassy before you travel.",
+            "hard": "When protesters gathered outside the embassy, the staff were advised to stay inside until the situation calmed down."
+          },
+          "synonyms": [],
+          "collocations": [
+            "foreign embassy",
+            "embassy staff"
+          ]
+        },
+        {
+          "word": "cure",
+          "uzb": "davolamoq",
+          "emoji": "💊",
+          "examples": {
+            "easy": "This medicine can cure the infection.",
+            "normal": "Doctors still can't cure the common cold, but they can ease the symptoms.",
+            "hard": "The new treatment has cured hundreds of patients who had been told their disease was untreatable."
+          },
+          "synonyms": [
+            "heal"
+          ],
+          "collocations": [
+            "cure a disease",
+            "cure somebody of"
+          ]
+        },
+        {
+          "word": "extinguish",
+          "uzb": "olovni o‘chirmoq",
+          "emoji": "🧯",
+          "examples": {
+            "easy": "Please extinguish all cigarettes now.",
+            "normal": "It took the firefighters three hours to extinguish the blaze.",
+            "hard": "Before leaving the campsite, make sure you fully extinguish the fire, because even small embers can start a forest fire."
+          },
+          "synonyms": [
+            "put out"
+          ],
+          "collocations": [
+            "extinguish a fire",
+            "extinguish the flames"
+          ]
+        },
+        {
+          "word": "technician",
+          "uzb": "texnik usta",
+          "emoji": "🧑‍🔧",
+          "examples": {
+            "easy": "The technician fixed my laptop.",
+            "normal": "We called a technician because the air conditioner stopped working.",
+            "hard": "The lab technician who had been running the tests noticed an error that the scientists had completely missed."
+          },
+          "synonyms": [],
+          "collocations": [
+            "lab technician",
+            "computer technician"
+          ]
+        },
+        {
+          "word": "comprehensive",
+          "uzb": "keng qamrovli",
+          "emoji": "📚",
+          "examples": {
+            "easy": "The report is very comprehensive.",
+            "normal": "The guidebook gives a comprehensive overview of the city's history.",
+            "hard": "Before signing the contract, the company carried out a comprehensive review of all the risks involved in the project."
+          },
+          "synonyms": [
+            "thorough",
+            "complete",
+            "extensive"
+          ],
+          "collocations": [
+            "comprehensive review",
+            "comprehensive guide"
+          ]
+        },
+        {
+          "word": "conserve",
+          "uzb": "saqlamoq, asramoq",
+          "emoji": "🌿",
+          "examples": {
+            "easy": "We must conserve water in summer.",
+            "normal": "Turning off lights is a simple way to conserve energy at home.",
+            "hard": "Local volunteers have worked for decades to conserve the ancient forest and the rare species that live in it."
+          },
+          "synonyms": [
+            "preserve",
+            "protect",
+            "save"
+          ],
+          "collocations": [
+            "conserve energy",
+            "conserve water"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-advanced-lesson-102",
+      "lesson": 102,
+      "name": "Lesson 102 - Goals, solitude and history",
+      "source": "Main Lesson (MT) p. 84",
+      "words": [
+        {
+          "word": "deposit",
+          "uzb": "bankka pul qo‘ymoq",
+          "emoji": "🏦",
+          "examples": {
+            "easy": "I deposited my salary today.",
+            "normal": "You can deposit cash at any branch or through the machine.",
+            "hard": "If you deposit at least a thousand pounds each month, the bank will give you a higher interest rate."
+          },
+          "synonyms": [
+            "pay in"
+          ],
+          "collocations": [
+            "deposit money",
+            "deposit a cheque"
+          ]
+        },
+        {
+          "word": "objective",
+          "uzb": "maqsad",
+          "emoji": "🎯",
+          "examples": {
+            "easy": "Our main objective is clear.",
+            "normal": "The objective of the meeting is to agree on next year's budget.",
+            "hard": "One of the key objectives of the programme is to help young people find stable jobs after they graduate."
+          },
+          "synonyms": [
+            "aim",
+            "goal",
+            "target"
+          ],
+          "collocations": [
+            "main objective",
+            "achieve an objective"
+          ]
+        },
+        {
+          "word": "avail",
+          "uzb": "samara",
+          "emoji": "🤷",
+          "examples": {
+            "easy": "We searched, but to no avail.",
+            "normal": "She tried to repair the old printer, but it was all to no avail.",
+            "hard": "Despite repeated warnings from scientists, the government's attempts to reduce pollution have so far been of little avail."
+          },
+          "synonyms": [],
+          "collocations": [
+            "to no avail",
+            "of little avail"
+          ]
+        },
+        {
+          "word": "incredulous",
+          "uzb": "ishonmaydigan, gumoni bor",
+          "emoji": "🤨",
+          "examples": {
+            "easy": "He gave me an incredulous look.",
+            "normal": "She was incredulous when she heard she had won the competition.",
+            "hard": "The audience gave an incredulous laugh when the politician claimed that prices had not risen at all."
+          },
+          "synonyms": [
+            "disbelieving",
+            "sceptical"
+          ],
+          "collocations": [
+            "incredulous look",
+            "incredulous expression"
+          ]
+        },
+        {
+          "word": "plague",
+          "uzb": "o‘lat (odamlarda tez tarqaluvchi jiddiy kasallik)",
+          "emoji": "🦠",
+          "examples": {
+            "easy": "The plague killed many people.",
+            "normal": "In the fourteenth century, the plague spread quickly across Europe.",
+            "hard": "Historians estimate that the plague wiped out around a third of Europe's population within just a few years."
+          },
+          "synonyms": [
+            "pestilence"
+          ],
+          "collocations": [
+            "outbreak of plague",
+            "bubonic plague"
+          ]
+        },
+        {
+          "word": "shrine",
+          "uzb": "ziyoratgoh",
+          "emoji": "🕌",
+          "examples": {
+            "easy": "Pilgrims visit the shrine every year.",
+            "normal": "Thousands of pilgrims travel to the shrine in Bukhara each spring.",
+            "hard": "The ancient shrine, which had been neglected for decades, was carefully restored and now attracts visitors from all over the world."
+          },
+          "synonyms": [
+            "holy place"
+          ],
+          "collocations": [
+            "holy shrine",
+            "visit a shrine"
+          ]
+        },
+        {
+          "word": "solitude",
+          "uzb": "yolg‘izlik",
+          "emoji": "🧘",
+          "examples": {
+            "easy": "He enjoys the solitude of the mountains.",
+            "normal": "After a busy week, she needs a few hours of solitude to relax.",
+            "hard": "The writer moved to a remote village, where the peace and solitude allowed him to finish his novel."
+          },
+          "synonyms": [
+            "isolation",
+            "seclusion"
+          ],
+          "collocations": [
+            "peace and solitude",
+            "in solitude"
+          ]
+        },
+        {
+          "word": "candidate",
+          "uzb": "kandidat, nomzod",
+          "emoji": "🗳️",
+          "examples": {
+            "easy": "She is a strong candidate.",
+            "normal": "We interviewed five candidates for the manager's position.",
+            "hard": "The candidate who wins the most votes in the first round will face the runner-up in a second election."
+          },
+          "synonyms": [
+            "applicant",
+            "nominee"
+          ],
+          "collocations": [
+            "strong candidate",
+            "presidential candidate"
+          ]
+        },
+        {
+          "word": "stark",
+          "uzb": "sezilarli",
+          "emoji": "🌓",
+          "examples": {
+            "easy": "The difference is stark.",
+            "normal": "There is a stark contrast between life in the city and in the village.",
+            "hard": "The report offers a stark reminder that poverty remains a serious problem even in the richest countries."
+          },
+          "synonyms": [
+            "sharp",
+            "striking"
+          ],
+          "collocations": [
+            "stark contrast",
+            "stark reminder"
+          ]
+        },
+        {
+          "word": "summon",
+          "uzb": "chaqirmoq (kimnidir oldingizga kelishini so‘ramoq)",
+          "emoji": "🔔",
+          "examples": {
+            "easy": "The boss summoned me to her office.",
+            "normal": "The head teacher summoned the parents to discuss their son's behaviour.",
+            "hard": "Witnesses who refuse to attend after being summoned by the court can face a fine or even arrest."
+          },
+          "synonyms": [
+            "call",
+            "send for"
+          ],
+          "collocations": [
+            "summon help",
+            "summon a doctor"
+          ]
+        },
+        {
+          "word": "confidential",
+          "uzb": "maxfiy",
+          "emoji": "🔒",
+          "examples": {
+            "easy": "This letter is strictly confidential.",
+            "normal": "Please keep this information confidential until the official announcement.",
+            "hard": "Doctors are required to keep patients' medical records confidential unless there is a serious risk to public safety."
+          },
+          "synonyms": [
+            "secret",
+            "private"
+          ],
+          "collocations": [
+            "strictly confidential",
+            "confidential information"
+          ]
+        },
+        {
+          "word": "era",
+          "uzb": "era, davr",
+          "emoji": "⏳",
+          "examples": {
+            "easy": "We live in a digital era.",
+            "normal": "The fall of the Berlin Wall marked the end of an era.",
+            "hard": "During the Soviet era, many traditional crafts almost disappeared, but they have been revived in recent years."
+          },
+          "synonyms": [
+            "age",
+            "period",
+            "epoch"
+          ],
+          "collocations": [
+            "end of an era",
+            "new era"
+          ]
+        },
+        {
+          "word": "incorporate",
+          "uzb": "qo‘shmoq",
+          "emoji": "🧩",
+          "examples": {
+            "easy": "We incorporated your ideas into the plan.",
+            "normal": "The new design incorporates several features suggested by customers.",
+            "hard": "Teachers are encouraged to incorporate real-life examples into their lessons so that students see how grammar is actually used."
+          },
+          "synonyms": [
+            "include",
+            "integrate"
+          ],
+          "collocations": [
+            "incorporate into",
+            "incorporate feedback"
+          ]
+        },
+        {
+          "word": "interact",
+          "uzb": "o‘zaro suhbatlashmoq",
+          "emoji": "🤝",
+          "examples": {
+            "easy": "Children interact well in small groups.",
+            "normal": "The course gives students many chances to interact with native speakers.",
+            "hard": "Researchers observed how the monkeys interacted with one another when food was suddenly placed in their cage."
+          },
+          "synonyms": [
+            "communicate",
+            "mix"
+          ],
+          "collocations": [
+            "interact with",
+            "interact socially"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-advanced-lesson-103",
+      "lesson": 103,
+      "name": "Lesson 103 - Nature, order and attitudes",
+      "source": "Main Lesson (MT) p. 93",
+      "words": [
+        {
+          "word": "mobile",
+          "uzb": "oson harakatlanadigan",
+          "emoji": "📱",
+          "examples": {
+            "easy": "Mobile phones are easy to carry.",
+            "normal": "A mobile library visits our village every Tuesday morning.",
+            "hard": "Since the operation, my grandfather has become much more mobile and can walk to the shops without help."
+          },
+          "synonyms": [
+            "portable",
+            "movable"
+          ],
+          "collocations": [
+            "mobile phone",
+            "mobile library"
+          ]
+        },
+        {
+          "word": "phenomenon",
+          "uzb": "voqea, hodisa",
+          "emoji": "🌠",
+          "examples": {
+            "easy": "The northern lights are an amazing phenomenon.",
+            "normal": "Scientists are still studying this strange phenomenon in the ocean.",
+            "hard": "Social media addiction is a relatively recent phenomenon, yet it already affects millions of young people worldwide."
+          },
+          "synonyms": [
+            "occurrence",
+            "event"
+          ],
+          "collocations": [
+            "natural phenomenon",
+            "social phenomenon"
+          ]
+        },
+        {
+          "word": "solar",
+          "uzb": "quyoshga oid",
+          "emoji": "☀️",
+          "examples": {
+            "easy": "We put solar panels on the roof.",
+            "normal": "Solar power is becoming cheaper and more popular every year.",
+            "hard": "The solar system consists of the Sun and everything that orbits it, including eight planets and countless asteroids."
+          },
+          "synonyms": [],
+          "collocations": [
+            "solar energy",
+            "solar panel"
+          ]
+        },
+        {
+          "word": "boundary",
+          "uzb": "chegara (bir yer tugab, boshqasi boshlanadigan chiziq)",
+          "emoji": "🗺️",
+          "examples": {
+            "easy": "This fence marks our boundary.",
+            "normal": "The river forms the natural boundary between the two regions.",
+            "hard": "After years of dispute, the neighbours finally agreed on where the boundary between their gardens should be."
+          },
+          "synonyms": [
+            "border",
+            "frontier"
+          ],
+          "collocations": [
+            "national boundary",
+            "boundary line"
+          ]
+        },
+        {
+          "word": "chaos",
+          "uzb": "tartibsizlik (chalg‘ituvchi vaziyat)",
+          "emoji": "🌪️",
+          "examples": {
+            "easy": "The office was in chaos.",
+            "normal": "Heavy snow caused chaos on the roads this morning.",
+            "hard": "When the power went off during the concert, there was complete chaos as thousands of people tried to leave at once."
+          },
+          "synonyms": [
+            "disorder",
+            "confusion",
+            "mayhem"
+          ],
+          "collocations": [
+            "total chaos",
+            "cause chaos"
+          ]
+        },
+        {
+          "word": "consistent",
+          "uzb": "barqaror (bir xil xulq-atvor yoki munosabatni saqlaydigan)",
+          "emoji": "🔁",
+          "examples": {
+            "easy": "She is a very consistent player.",
+            "normal": "To improve your English, you need consistent practice every single day.",
+            "hard": "The company's results have been remarkably consistent, which reassures investors during uncertain times."
+          },
+          "synonyms": [
+            "steady",
+            "reliable"
+          ],
+          "collocations": [
+            "consistent with",
+            "consistent performance"
+          ]
+        },
+        {
+          "word": "heir",
+          "uzb": "merosxo‘r, voris",
+          "emoji": "👑",
+          "examples": {
+            "easy": "She is the only heir.",
+            "normal": "As the only child, she was the sole heir to her father's fortune.",
+            "hard": "The prince became heir to the throne after his older brother decided to give up his royal duties."
+          },
+          "synonyms": [
+            "successor"
+          ],
+          "collocations": [
+            "heir to the throne",
+            "sole heir"
+          ]
+        },
+        {
+          "word": "martial",
+          "uzb": "jangovar, harbiy",
+          "emoji": "🥋",
+          "examples": {
+            "easy": "He practises martial arts.",
+            "normal": "The government declared martial law after the violent protests.",
+            "hard": "Studying martial arts has taught me patience and self-discipline as well as how to defend myself."
+          },
+          "synonyms": [
+            "military"
+          ],
+          "collocations": [
+            "martial arts",
+            "martial law"
+          ]
+        },
+        {
+          "word": "organic",
+          "uzb": "tabiiy",
+          "emoji": "🥕",
+          "examples": {
+            "easy": "I buy organic vegetables.",
+            "normal": "Organic farmers don't use artificial chemicals on their crops.",
+            "hard": "Although organic food is usually more expensive, many families believe it is worth paying extra for their health."
+          },
+          "synonyms": [],
+          "collocations": [
+            "organic food",
+            "organic farming"
+          ]
+        },
+        {
+          "word": "sheer",
+          "uzb": "mutlaq (butunlay va juda kuchli)",
+          "emoji": "💯",
+          "examples": {
+            "easy": "It was sheer luck.",
+            "normal": "We were amazed by the sheer size of the new stadium.",
+            "hard": "She passed the exam through sheer hard work, studying every evening for six months."
+          },
+          "synonyms": [
+            "pure",
+            "utter",
+            "absolute"
+          ],
+          "collocations": [
+            "sheer luck",
+            "sheer determination"
+          ]
+        },
+        {
+          "word": "stance",
+          "uzb": "munosabat (biror masalaga nisbatan nuqtai nazar)",
+          "emoji": "📢",
+          "examples": {
+            "easy": "What is your stance on this?",
+            "normal": "The minister has taken a tough stance on illegal immigration.",
+            "hard": "The company changed its stance on remote work after employees showed they could be just as productive at home."
+          },
+          "synonyms": [
+            "position",
+            "attitude",
+            "standpoint"
+          ],
+          "collocations": [
+            "take a stance",
+            "firm stance"
+          ]
+        },
+        {
+          "word": "wail",
+          "uzb": "dod solmoq",
+          "emoji": "😭",
+          "examples": {
+            "easy": "The baby wailed all night.",
+            "normal": "We could hear the child wailing in the next room.",
+            "hard": "When she heard the terrible news, she began to wail so loudly that the neighbours came to see what had happened."
+          },
+          "synonyms": [
+            "howl"
+          ],
+          "collocations": [
+            "wail loudly",
+            "wail with grief"
+          ]
+        },
+        {
+          "word": "allot",
+          "uzb": "bermoq (ajratib bermoq)",
+          "emoji": "⏱️",
+          "examples": {
+            "easy": "Each speaker is allotted ten minutes.",
+            "normal": "The council has allotted extra money to repair the local schools.",
+            "hard": "Since we were only allotted two hours for the exam, I didn't have time to check my answers properly."
+          },
+          "synonyms": [
+            "allocate",
+            "assign"
+          ],
+          "collocations": [
+            "allot time",
+            "allot funds"
+          ]
+        },
+        {
+          "word": "cache",
+          "uzb": "maxfiy joy (qimmatli narsalar uchun berkitiladigan joy)",
+          "emoji": "💎",
+          "examples": {
+            "easy": "They found a cache of gold.",
+            "normal": "Police discovered a cache of weapons hidden under the floor.",
+            "hard": "Divers exploring the old shipwreck found a cache of silver coins that had been hidden there for centuries."
+          },
+          "synonyms": [
+            "hoard",
+            "stash"
+          ],
+          "collocations": [
+            "cache of weapons",
+            "hidden cache"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-mt-advanced-lesson-104",
+      "lesson": 104,
+      "name": "Lesson 104 - Choices, feelings and abilities",
+      "source": "Main Lesson (MT) p. 100",
+      "words": [
+        {
+          "word": "dearth",
+          "uzb": "tanqislik",
+          "emoji": "🏜️",
+          "examples": {
+            "easy": "There is a dearth of jobs.",
+            "normal": "The village suffers from a dearth of qualified doctors and nurses.",
+            "hard": "The dearth of reliable information about the disease made it difficult for the authorities to plan a response."
+          },
+          "synonyms": [
+            "shortage",
+            "lack",
+            "scarcity"
+          ],
+          "collocations": [
+            "dearth of information",
+            "dearth of talent"
+          ]
+        },
+        {
+          "word": "elapse",
+          "uzb": "o‘tmoq (vaqt haqida: soniya, daqiqa, soat)",
+          "emoji": "⏳",
+          "examples": {
+            "easy": "Three years have elapsed since then.",
+            "normal": "Several minutes elapsed before anyone spoke again.",
+            "hard": "By the time the ambulance arrived, nearly an hour had elapsed since the accident was first reported."
+          },
+          "synonyms": [
+            "pass",
+            "go by"
+          ],
+          "collocations": [
+            "time elapses",
+            "elapsed time"
+          ]
+        },
+        {
+          "word": "fanciful",
+          "uzb": "g‘alati, antiqa",
+          "emoji": "🦄",
+          "examples": {
+            "easy": "That is a fanciful idea.",
+            "normal": "Some of his fanciful stories about his travels are hard to believe.",
+            "hard": "The architect's design was criticised as fanciful, since it ignored both the budget and the basic laws of engineering."
+          },
+          "synonyms": [
+            "unrealistic",
+            "far-fetched"
+          ],
+          "collocations": [
+            "fanciful idea",
+            "fanciful notion"
+          ]
+        },
+        {
+          "word": "opt for",
+          "uzb": "tanlamoq",
+          "emoji": "✅",
+          "examples": {
+            "easy": "I opted for the cheaper car.",
+            "normal": "Many students opt for online courses because they are more flexible.",
+            "hard": "Faced with rising rents in the city, more and more young families are opting for life in the suburbs."
+          },
+          "synonyms": [
+            "choose",
+            "go for",
+            "select"
+          ],
+          "collocations": [
+            "opt for early retirement",
+            "opt for a refund"
+          ]
+        },
+        {
+          "word": "empathy",
+          "uzb": "hamdardlik",
+          "emoji": "🫂",
+          "examples": {
+            "easy": "Good nurses show great empathy.",
+            "normal": "She has deep empathy for people who have lost their jobs.",
+            "hard": "Reading novels can help children develop empathy, as they learn to see the world through other people's eyes."
+          },
+          "synonyms": [
+            "compassion",
+            "understanding"
+          ],
+          "collocations": [
+            "show empathy",
+            "empathy for"
+          ]
+        },
+        {
+          "word": "rectify",
+          "uzb": "xatoni to‘g‘rilamoq",
+          "emoji": "✏️",
+          "examples": {
+            "easy": "We will rectify the mistake.",
+            "normal": "The bank promised to rectify the error in my account as soon as possible.",
+            "hard": "Unless the government takes action to rectify these problems, public trust in the health system will continue to fall."
+          },
+          "synonyms": [
+            "correct",
+            "fix",
+            "put right"
+          ],
+          "collocations": [
+            "rectify a mistake",
+            "rectify the situation"
+          ]
+        },
+        {
+          "word": "deprive",
+          "uzb": "mahrum qilmoq",
+          "emoji": "🚫",
+          "examples": {
+            "easy": "Poverty deprives children of education.",
+            "normal": "Many prisoners are deprived of regular contact with their families.",
+            "hard": "Working night shifts for years had deprived him of proper sleep, and his health was beginning to suffer."
+          },
+          "synonyms": [],
+          "collocations": [
+            "deprive somebody of something",
+            "deprived of sleep"
+          ]
+        },
+        {
+          "word": "nonetheless",
+          "uzb": "shunga qaramay",
+          "emoji": "🔀",
+          "examples": {
+            "easy": "It was raining; nonetheless, we went out.",
+            "normal": "The film was very long, but I enjoyed it nonetheless.",
+            "hard": "The project faced serious financial difficulties; nonetheless, the team managed to finish it on time and within budget."
+          },
+          "synonyms": [
+            "nevertheless",
+            "even so"
+          ],
+          "collocations": [
+            "but nonetheless",
+            "it is nonetheless true that"
+          ]
+        },
+        {
+          "word": "oath",
+          "uzb": "qasam, ont",
+          "emoji": "✋",
+          "examples": {
+            "easy": "The president took the oath.",
+            "normal": "Witnesses must swear an oath before they give evidence in court.",
+            "hard": "When doctors graduate, many still take an oath promising to put the wellbeing of their patients above everything else."
+          },
+          "synonyms": [
+            "vow",
+            "pledge"
+          ],
+          "collocations": [
+            "take an oath",
+            "under oath"
+          ]
+        },
+        {
+          "word": "speculate",
+          "uzb": "taxmin qilmoq",
+          "emoji": "🤔",
+          "examples": {
+            "easy": "Don't speculate about his reasons.",
+            "normal": "Experts speculate that house prices will rise again next year.",
+            "hard": "Journalists have been speculating for weeks about who will replace the minister after his sudden resignation."
+          },
+          "synonyms": [
+            "guess",
+            "conjecture"
+          ],
+          "collocations": [
+            "speculate about",
+            "widely speculated"
+          ]
+        },
+        {
+          "word": "assert",
+          "uzb": "tasdiqlamoq",
+          "emoji": "❗",
+          "examples": {
+            "easy": "She asserted her right to speak.",
+            "normal": "The scientist asserted that her results were completely accurate.",
+            "hard": "Throughout the trial, the defendant continued to assert his innocence, despite the strong evidence against him."
+          },
+          "synonyms": [
+            "claim",
+            "declare",
+            "maintain"
+          ],
+          "collocations": [
+            "assert your rights",
+            "firmly assert"
+          ]
+        },
+        {
+          "word": "bachelor",
+          "uzb": "bo‘ydoq, hali uylanmagan",
+          "emoji": "🤵",
+          "examples": {
+            "easy": "My uncle is still a bachelor.",
+            "normal": "He lived the life of a bachelor until he got married at forty.",
+            "hard": "The flat was perfect for a young bachelor, with a small kitchen, a large TV and very little furniture."
+          },
+          "synonyms": [
+            "single man"
+          ],
+          "collocations": [
+            "eligible bachelor",
+            "confirmed bachelor"
+          ]
+        },
+        {
+          "word": "competent",
+          "uzb": "puxta bilimli",
+          "emoji": "🏅",
+          "examples": {
+            "easy": "She is a very competent teacher.",
+            "normal": "We need a competent accountant to look after our finances.",
+            "hard": "Although he was perfectly competent at his job, he lacked the confidence to apply for a promotion."
+          },
+          "synonyms": [
+            "capable",
+            "skilled",
+            "proficient"
+          ],
+          "collocations": [
+            "highly competent",
+            "competent authority"
+          ]
+        },
+        {
+          "word": "excel at",
+          "uzb": "biror ishda zo‘r bo‘lmoq",
+          "emoji": "🌟",
+          "examples": {
+            "easy": "She excels at mathematics.",
+            "normal": "My brother has always excelled at sports, especially football.",
+            "hard": "Students who excel at problem-solving often find it easier to adapt to new situations in the workplace."
+          },
+          "synonyms": [],
+          "collocations": [
+            "excel at sport",
+            "excel at languages"
+          ]
+        }
+      ]
+    }
+  ]
+}
