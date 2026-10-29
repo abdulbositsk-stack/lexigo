@@ -1481,6 +1481,10 @@
   .file-status-row.ok .fs-state { color:var(--green-text); }
   .file-status-row.err .fs-state { color:var(--red-text); }
   .file-status-row.warn .fs-state { color:var(--amber-text); }
+  .kids-phon { font-size: 15px; color: var(--text3); margin-top: 2px; }
+  .import-preview-item .pi-phon { color: var(--text3); font-size: 11px; }
+  .import-preview-item .pi-uzb { flex: 1; }
+  .import-preview-item .pi-dup { color: var(--amber-text); font-size: 11px; font-weight: 700; }
   .ai-autofill-card { margin-top:12px; padding:12px; border:1px solid var(--border2); border-radius:12px; background:var(--card); }
   .ai-autofill-actions .btn { min-height:36px; }
   .ai-unit-copy-list { display:flex; flex-direction:column; gap:8px; margin-top:9px; }
@@ -1568,6 +1572,7 @@
 
   /* Elements only shown in Teens/Adult mode */
   body:not(.adult-mode) .adult-only { display: none !important; }
+  body.adult-mode .kids-only { display: none !important; }
 
   /* ============================================================
      TEENS / ADULT THEME
@@ -2567,6 +2572,17 @@
       <textarea class="import-paste-area" id="pkgPasteArea" placeholder="Paste your word list here... e.g. Beautiful - byutiful - chiroyli"></textarea>
       <div style="display:flex; justify-content:flex-end; margin-top:6px;">
         <button class="btn btn-sm" onclick="pkgParseWithAI()">&#129302; Clean with AI</button>
+      </div>
+
+      <div class="ai-autofill-card" id="geminiImportCard">
+        <div class="awa-prompt-head">&#10024; Import words with Gemini AI</div>
+        <p class="hint" style="margin:6px 0 10px;">Upload a PDF, a photo of a page, a Word or text file &mdash; or use the text pasted above. Gemini keeps only the English words and skips Uzbek, transcripts and everything else, then adds <span class="kids-only">a kid-friendly pronunciation</span><span class="adult-only">an IPA transcript, examples and synonyms</span>, the Uzbek meaning and an emoji. Check the list below, then press <strong>Create Package</strong> to save it to My Library.</p>
+        <div class="row" style="flex-wrap:wrap; gap:8px;">
+          <button class="btn btn-sm btn-primary" id="geminiFileBtn" onclick="document.getElementById('geminiFileInput').click()">&#128206; Choose file for AI</button>
+          <button class="btn btn-sm" id="geminiTextBtn" onclick="geminiImportPasted()">&#10024; Use pasted text</button>
+          <input type="file" id="geminiFileInput" accept=".pdf,.png,.jpg,.jpeg,.webp,.heic,.heif,.docx,.txt,.csv,.json,image/*,application/pdf" style="display:none;" onchange="geminiImportFile(this)" />
+        </div>
+        <p class="hint" id="geminiImportStatus" style="margin:8px 0 0;" aria-live="polite"></p>
       </div>
 
       <div class="adult-only" style="margin-top:12px;">
@@ -6091,6 +6107,188 @@ function pkgDropUnit(i) {
   renderPkgPreview();
 }
 
+function pkgDropWord(i) {
+  pkgImportedWords.splice(i, 1);
+  renderPkgPreview();
+}
+
+function pkgEditWord(i) {
+  const w = pkgImportedWords[i];
+  if (!w) return;
+  const word = prompt('English word:', w.word);
+  if (word === null) return;
+  const pron = prompt(isAdultMode() ? 'Transcript:' : 'Pronunciation:', w.pronunciation || '');
+  if (pron === null) return;
+  const uzb = prompt('Uzbek meaning:', w.uzb || '');
+  if (uzb === null) return;
+  const emoji = prompt('Emoji:', w.emoji || '💬');
+  if (emoji === null) return;
+  if (!word.trim()) { pkgDropWord(i); return; }
+  w.word = word.trim();
+  w.uzb = uzb.trim();
+  w.emoji = emoji.trim() || '💬';
+  if (pron.trim()) w.pronunciation = pron.trim(); else delete w.pronunciation;
+  renderPkgPreview();
+}
+
+// Lower-cased words already saved in the selected group's units, so the
+// review list can flag words the teacher has imported before.
+function pkgKnownWordSet() {
+  const groupTypeId = (document.getElementById('pkgGroupTypeSelect') || {}).value;
+  const set = new Set();
+  if (!groupTypeId) return set;
+  loadUnits().filter(u => u.groupTypeId === groupTypeId).forEach(u =>
+    (u.words || []).forEach(w => w && w.word && set.add(String(w.word).toLowerCase())));
+  return set;
+}
+
+/* ===== GEMINI WORD IMPORT =====
+   POST /api/ai-words (netlify/edge-functions/ai-words.js)
+   body: { mode: 'kids'|'adult', text?, file?: { mimeType, data(base64) } }
+   response: Gemini server-sent events whose text joins into {"words":[...]}.
+   The Gemini key stays in Netlify's GEMINI_API_KEY; nothing is stored here. */
+const GEMINI_IMPORT_ENDPOINT = window.LEXIGO_WORDS_ENDPOINT || '/api/ai-words';
+const GEMINI_IMPORT_MAX_BYTES = 5 * 1024 * 1024;
+let geminiImportBusy = false;
+
+function setGeminiImportStatus(message, kind) {
+  const el = document.getElementById('geminiImportStatus');
+  if (!el) return;
+  el.textContent = message;
+  el.style.color = kind === 'error' ? 'var(--red-text)'
+    : kind === 'ok' ? 'var(--green-text)'
+    : kind === 'warn' ? 'var(--amber-text)'
+    : 'var(--blue-text)';
+}
+
+function setGeminiImportBusy(busy) {
+  geminiImportBusy = busy;
+  ['geminiFileBtn', 'geminiTextBtn'].forEach(id => {
+    const b = document.getElementById(id);
+    if (b) b.disabled = busy;
+  });
+}
+
+function geminiFileMimeType(file) {
+  const name = file.name.toLowerCase();
+  if (file.type) return file.type.toLowerCase();
+  if (name.endsWith('.pdf')) return 'application/pdf';
+  if (/\.jpe?g$/.test(name)) return 'image/jpeg';
+  const ext = name.split('.').pop();
+  return ['png', 'webp', 'heic', 'heif'].includes(ext) ? 'image/' + ext : '';
+}
+
+function fileToBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result).split(',')[1] || '');
+    reader.onerror = () => reject(new Error('Could not read the file'));
+    reader.readAsDataURL(file);
+  });
+}
+
+async function geminiImportFile(input) {
+  const file = input.files && input.files[0];
+  input.value = '';
+  if (!file || geminiImportBusy) return;
+  const name = file.name.toLowerCase();
+  try {
+    let payload;
+    if (name.endsWith('.docx')) {
+      if (!window.mammoth) await loadScript('https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.11.0/mammoth.browser.min.js');
+      const result = await window.mammoth.extractRawText({ arrayBuffer: await file.arrayBuffer() });
+      payload = { text: result.value || '' };
+    } else if (/\.(txt|csv|json)$/.test(name)) {
+      payload = { text: await file.text() };
+    } else {
+      const mimeType = geminiFileMimeType(file);
+      if (!/^(application\/pdf|image\/)/.test(mimeType)) throw new Error('Use a PDF, an image, a Word file or a text file');
+      if (file.size > GEMINI_IMPORT_MAX_BYTES) throw new Error('The file is larger than 5 MB. Split it or take a smaller photo');
+      payload = { file: { mimeType, data: await fileToBase64(file) } };
+    }
+    await runGeminiImport(payload, file.name);
+  } catch (err) {
+    setGeminiImportStatus('❌ ' + err.message + '.', 'error');
+  }
+}
+
+async function geminiImportPasted() {
+  const text = ((document.getElementById('pkgPasteArea') || {}).value || '').trim();
+  if (!text) { setGeminiImportStatus('⚠️ Paste some text in the box above first, or choose a file.', 'warn'); return; }
+  try { await runGeminiImport({ text }, ''); }
+  catch (err) { setGeminiImportStatus('❌ ' + err.message + '.', 'error'); }
+}
+
+async function runGeminiImport(payload, fileName) {
+  if (geminiImportBusy) return;
+  if (location.protocol === 'file:' && !window.LEXIGO_WORDS_ENDPOINT) {
+    throw new Error('AI import works on the published Netlify site, not when the file is opened directly');
+  }
+  setGeminiImportBusy(true);
+  setGeminiImportStatus('✨ Gemini is reading ' + (fileName ? '"' + fileName + '"' : 'your text') + '… this can take up to a minute.', 'info');
+  try {
+    const res = await fetch(GEMINI_IMPORT_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...payload, mode: currentSourceMode() })
+    });
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      throw new Error(data.error || ('AI service returned HTTP ' + res.status));
+    }
+    const raw = await readGeminiStream(res);
+    let parsed;
+    try { parsed = JSON.parse(raw); } catch (e) { throw new Error('Gemini returned an unreadable reply. Try again'); }
+    const seen = new Set();
+    const words = (parsed.words || []).map(w => {
+      const item = normalizeImportedWordItem(w);
+      if (item && Array.isArray(item.synonyms)) item.synonyms = item.synonyms.slice(0, 2);
+      return item;
+    }).filter(w => {
+      if (!w) return false;
+      const k = w.word.toLowerCase();
+      if (seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    });
+    if (!words.length) throw new Error('No English words were found');
+    pkgImportedUnits = null;
+    pkgImportedWords = words;
+    const nameEl = document.getElementById('pkgNameInput');
+    if (nameEl && !nameEl.value.trim() && fileName) nameEl.value = pkgUnitNameFromFileName(fileName.replace(/\.[^.]+$/, ''));
+    renderPkgPreview();
+    setGeminiImportStatus('✓ Found ' + words.length + ' word' + (words.length !== 1 ? 's' : '') + '. Check them below, then press Create Package.', 'ok');
+    const preview = document.getElementById('pkgImportPreview');
+    if (preview) preview.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  } finally {
+    setGeminiImportBusy(false);
+  }
+}
+
+// Joins the text parts of Gemini's server-sent events into one string.
+async function readGeminiStream(res) {
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = '', text = '';
+  const take = line => {
+    if (!line.startsWith('data:')) return;
+    const chunk = JSON.parse(line.slice(5).trim());
+    if (chunk.error) throw new Error(chunk.error.message || 'Gemini failed');
+    const parts = (((chunk.candidates || [])[0] || {}).content || {}).parts || [];
+    parts.forEach(p => { if (p.text && !p.thought) text += p.text; });
+  };
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+    const lines = buffer.split('\n');
+    buffer = lines.pop();
+    lines.forEach(take);
+  }
+  take(buffer.trim());
+  return text.trim();
+}
+
 /* ============================================================
    MULTI-UNIT GENERATOR (Library -> inside a group-type folder)
    Step 1 collects sources, step 2 hands prompt+sources to the
@@ -7474,6 +7672,7 @@ function renderQuiz() {
     + '<span class="word-front">' + esc(frontText) + '</span>'
     + (dir === 'en2uz' ? '<button class="btn-speak" onclick="speakWord(this)" data-word="' + esc(w.word) + '" title="Pronounce">&#128266;</button>' : '')
     + '</div>'
+    + (dir === 'en2uz' && w.pronunciation ? '<div class="kids-phon">' + esc(w.pronunciation) + '</div>' : '')
     + timerHtml
     + kidsQuizHintHtml(w, i, dir)
     + '</div>'
@@ -11417,8 +11616,14 @@ function renderPkgPreview() {
     if (actions) actions.style.display = 'none';
     return;
   }
-  el.innerHTML = pkgImportedWords.map(w =>
-    '<div class="import-preview-item"><span>' + (w.emoji || '💬') + '</span><strong>' + esc(w.word) + '</strong><span>' + esc(w.uzb) + '</span></div>'
+  const known = pkgKnownWordSet();
+  el.innerHTML = pkgImportedWords.map((w, i) =>
+    '<div class="import-preview-item"><span>' + (w.emoji || '💬') + '</span><strong>' + esc(w.word) + '</strong>'
+    + (w.pronunciation ? '<span class="pi-phon">' + esc(w.pronunciation) + '</span>' : '')
+    + '<span class="pi-uzb">' + esc(w.uzb) + '</span>'
+    + (known.has(String(w.word).toLowerCase()) ? '<span class="pi-dup" title="Already in this group\'s library">already saved</span>' : '')
+    + '<button class="roster-x" onclick="pkgEditWord(' + i + ')" title="Edit this word">&#9998;</button>'
+    + '<button class="roster-x" onclick="pkgDropWord(' + i + ')" title="Remove this word">&#10005;</button></div>'
   ).join('');
   if (actions) actions.style.display = 'flex';
 }
