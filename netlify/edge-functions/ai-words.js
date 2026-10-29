@@ -4,7 +4,7 @@
 // The Gemini key lives only in the GEMINI_API_KEY environment variable.
 
 const GEMINI_API = 'https://generativelanguage.googleapis.com/v1beta/models';
-const DEFAULT_MODEL = 'gemini-3.8-flash';
+const DEFAULT_MODEL = 'gemini-3.5-flash-lite';
 const MAX_FILE_BYTES = 5 * 1024 * 1024;
 const MAX_TEXT_CHARS = 60000;
 const FILE_TYPES = /^(application\/pdf|image\/(png|jpe?g|webp|heic|heif))$/;
