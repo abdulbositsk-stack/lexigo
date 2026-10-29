@@ -2954,10 +2954,34 @@
     <div class="import-form">
       <button class="import-toggle" onclick="toggleUnitImport()" id="unitImportToggleBtn">&#129302; Import vocab with AI</button>
       <div class="import-body" id="unitImportBody" style="display:none;">
+        <div class="ai-autofill-card" id="unitAiCard" style="margin:0 0 12px;">
+          <div class="awa-prompt-head">&#10024; Generate words with AI</div>
+          <p class="hint" style="margin:6px 0 10px;">Paste text, or upload or drop any file &mdash; a PDF, a photo of a page, a Word or text file. The AI keeps only the English words and skips Uzbek, transcripts and everything else, then adds <span class="kids-only">a kid-friendly pronunciation</span><span class="adult-only">an IPA transcript, examples and synonyms</span>, the Uzbek meaning and an emoji.</p>
+          <div class="import-drop-zone" id="unitAiDropZone" onclick="document.getElementById('unitAiFileInput').click()" ondragover="unitAiDragOver(event)" ondragleave="unitAiDragLeave(event)" ondrop="unitAiDrop(event)">
+            <span class="drop-icon">&#128206;</span>
+            <strong>Click to choose a file</strong> or drag &amp; drop it here<br/>
+            <span style="font-size:11px;color:var(--text3);">PDF, image, .docx, .txt or .csv &middot; up to 5 MB</span>
+            <input type="file" id="unitAiFileInput" accept=".pdf,.png,.jpg,.jpeg,.webp,.heic,.heif,.docx,.txt,.csv,.json,.md,image/*,application/pdf,text/*" onchange="unitAiFileChosen(this)" />
+          </div>
+          <div class="row" style="align-items:center; gap:8px; margin:6px 0;">
+            <span class="hint" id="unitAiFileName" style="margin:0;"></span>
+            <button class="roster-x" id="unitAiFileClear" style="display:none;" onclick="setUnitAiFile(null)" title="Remove file">&#10005;</button>
+          </div>
+          <textarea class="import-paste-area" id="unitAiText" rows="4" onpaste="unitAiPaste(event)" placeholder="...or paste the text here, e.g. 1. Beautiful - byutiful - chiroyli"></textarea>
+          <div style="display:flex; justify-content:flex-end; margin-top:6px;">
+            <button class="btn btn-primary btn-sm" id="unitAiGenerateBtn" onclick="unitAiGenerate()">&#10024; Generate with AI</button>
+          </div>
+          <p class="hint" id="unitAiStatus" style="margin:6px 0 0;" aria-live="polite"></p>
+          <div id="unitAiPreview" class="import-preview" style="margin-top:8px;"></div>
+          <div id="unitAiActions" style="display:none; gap:8px; margin-top:8px; justify-content:flex-end;">
+            <button class="btn btn-sm" onclick="unitAiClear()">&#10005; Clear</button>
+            <button class="btn btn-primary btn-sm" onclick="unitAiSave()">&#10003; Save to this unit</button>
+          </div>
+        </div>
         <p class="hint" style="margin-bottom:8px;">Pick your AI tool below &mdash; the prompt is copied automatically and the tool opens in a new tab. Just paste it in (Ctrl/Cmd+V), attach your lesson material, then paste the JSON it gives back below. You can also upload a vocabulary file exported by another teacher &mdash; it will be added to this unit.</p>
         <div class="row" style="margin-bottom:8px; flex-wrap:wrap;">
           <div class="ai-tool-dropdown">
-            <button class="btn btn-sm btn-primary" id="aiToolMenuBtn" onclick="toggleAIToolMenu(event)">&#129302; Generate with AI &#9662;</button>
+            <button class="btn btn-sm btn-primary" id="aiToolMenuBtn" onclick="toggleAIToolMenu(event)">&#129302; Open another AI tool &#9662;</button>
             <div class="ai-tool-menu" id="aiToolMenu" style="display:none;">
               <button onclick="openAIToolWithPrompt('copilot')">&#129302; Copilot</button>
               <button onclick="openAIToolWithPrompt('gemini')">&#10024; Gemini AI</button>
@@ -5682,6 +5706,7 @@ function openUnit(id) {
   if (label) label.textContent = u.name;
   const search = document.getElementById('unitWordSearch');
   if (search) search.value = '';
+  if (unitAiWords.length || unitAiFile) unitAiClear();
   renderUnitWordList();
   showSection('sec-unit-editor');
 }
@@ -6187,26 +6212,28 @@ function fileToBase64(file) {
   });
 }
 
+// Turns a chosen file into the request body: Word and text files are read
+// here, PDFs and images go to Gemini as they are.
+async function geminiPayloadFromFile(file) {
+  const name = file.name.toLowerCase();
+  if (name.endsWith('.docx')) {
+    if (!window.mammoth) await loadScript('https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.11.0/mammoth.browser.min.js');
+    const result = await window.mammoth.extractRawText({ arrayBuffer: await file.arrayBuffer() });
+    return { text: result.value || '' };
+  }
+  if (/\.(txt|csv|json|md)$/.test(name) || /^text\//.test(file.type)) return { text: await file.text() };
+  const mimeType = geminiFileMimeType(file);
+  if (!/^(application\/pdf|image\/)/.test(mimeType)) throw new Error('Use a PDF, an image, a Word file or a text file');
+  if (file.size > GEMINI_IMPORT_MAX_BYTES) throw new Error('The file is larger than 5 MB. Split it or take a smaller photo');
+  return { file: { mimeType, data: await fileToBase64(file) } };
+}
+
 async function geminiImportFile(input) {
   const file = input.files && input.files[0];
   input.value = '';
   if (!file || geminiImportBusy) return;
-  const name = file.name.toLowerCase();
   try {
-    let payload;
-    if (name.endsWith('.docx')) {
-      if (!window.mammoth) await loadScript('https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.11.0/mammoth.browser.min.js');
-      const result = await window.mammoth.extractRawText({ arrayBuffer: await file.arrayBuffer() });
-      payload = { text: result.value || '' };
-    } else if (/\.(txt|csv|json)$/.test(name)) {
-      payload = { text: await file.text() };
-    } else {
-      const mimeType = geminiFileMimeType(file);
-      if (!/^(application\/pdf|image\/)/.test(mimeType)) throw new Error('Use a PDF, an image, a Word file or a text file');
-      if (file.size > GEMINI_IMPORT_MAX_BYTES) throw new Error('The file is larger than 5 MB. Split it or take a smaller photo');
-      payload = { file: { mimeType, data: await fileToBase64(file) } };
-    }
-    await runGeminiImport(payload, file.name);
+    await runGeminiImport(await geminiPayloadFromFile(file), file.name);
   } catch (err) {
     setGeminiImportStatus('❌ ' + err.message + '.', 'error');
   }
@@ -6219,39 +6246,46 @@ async function geminiImportPasted() {
   catch (err) { setGeminiImportStatus('❌ ' + err.message + '.', 'error'); }
 }
 
-async function runGeminiImport(payload, fileName) {
-  if (geminiImportBusy) return;
+// Sends one file or text to Gemini and returns cleaned, de-duplicated
+// LexiGo word items for the current Kids/Adult mode.
+async function geminiGenerateWords(payload) {
   if (location.protocol === 'file:' && !window.LEXIGO_WORDS_ENDPOINT) {
     throw new Error('AI import works on the published Netlify site, not when the file is opened directly');
   }
+  const res = await fetch(GEMINI_IMPORT_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ...payload, mode: currentSourceMode() })
+  });
+  if (!res.ok) {
+    const data = await res.json().catch(() => ({}));
+    throw new Error(data.error || ('AI service returned HTTP ' + res.status));
+  }
+  const raw = await readGeminiStream(res);
+  let parsed;
+  try { parsed = JSON.parse(raw); } catch (e) { throw new Error('Gemini returned an unreadable reply. Try again'); }
+  const seen = new Set();
+  const words = (parsed.words || []).map(w => {
+    const item = normalizeImportedWordItem(w);
+    if (item && Array.isArray(item.synonyms)) item.synonyms = item.synonyms.slice(0, 2);
+    return item;
+  }).filter(w => {
+    if (!w) return false;
+    const k = w.word.toLowerCase();
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
+  if (!words.length) throw new Error('No English words were found');
+  return words;
+}
+
+async function runGeminiImport(payload, fileName) {
+  if (geminiImportBusy) return;
   setGeminiImportBusy(true);
   setGeminiImportStatus('✨ Gemini is reading ' + (fileName ? '"' + fileName + '"' : 'your text') + '… this can take up to a minute.', 'info');
   try {
-    const res = await fetch(GEMINI_IMPORT_ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ...payload, mode: currentSourceMode() })
-    });
-    if (!res.ok) {
-      const data = await res.json().catch(() => ({}));
-      throw new Error(data.error || ('AI service returned HTTP ' + res.status));
-    }
-    const raw = await readGeminiStream(res);
-    let parsed;
-    try { parsed = JSON.parse(raw); } catch (e) { throw new Error('Gemini returned an unreadable reply. Try again'); }
-    const seen = new Set();
-    const words = (parsed.words || []).map(w => {
-      const item = normalizeImportedWordItem(w);
-      if (item && Array.isArray(item.synonyms)) item.synonyms = item.synonyms.slice(0, 2);
-      return item;
-    }).filter(w => {
-      if (!w) return false;
-      const k = w.word.toLowerCase();
-      if (seen.has(k)) return false;
-      seen.add(k);
-      return true;
-    });
-    if (!words.length) throw new Error('No English words were found');
+    const words = await geminiGenerateWords(payload);
     pkgImportedUnits = null;
     pkgImportedWords = words;
     const nameEl = document.getElementById('pkgNameInput');
@@ -6263,6 +6297,146 @@ async function runGeminiImport(payload, fileName) {
   } finally {
     setGeminiImportBusy(false);
   }
+}
+
+/* ===== GEMINI IMPORT INSIDE A VOCABULARY UNIT =====
+   Same AI call, but the reviewed words are added to the unit open in the
+   unit editor instead of a new package. */
+let unitAiFile = null;
+let unitAiWords = [];
+let unitAiBusy = false;
+
+function setUnitAiStatus(message, kind) {
+  const el = document.getElementById('unitAiStatus');
+  if (!el) return;
+  el.textContent = message;
+  el.style.color = kind === 'error' ? 'var(--red-text)'
+    : kind === 'ok' ? 'var(--green-text)'
+    : kind === 'warn' ? 'var(--amber-text)'
+    : 'var(--blue-text)';
+}
+
+function setUnitAiFile(file) {
+  unitAiFile = file || null;
+  const label = document.getElementById('unitAiFileName');
+  if (label) label.textContent = unitAiFile ? '📎 ' + unitAiFile.name : '';
+  const clear = document.getElementById('unitAiFileClear');
+  if (clear) clear.style.display = unitAiFile ? 'inline-flex' : 'none';
+}
+
+function unitAiFileChosen(input) {
+  setUnitAiFile(input.files && input.files[0]);
+  input.value = '';
+}
+
+function unitAiDragOver(e) { e.preventDefault(); e.currentTarget.classList.add('drag-over'); }
+function unitAiDragLeave(e) { e.currentTarget.classList.remove('drag-over'); }
+function unitAiDrop(e) {
+  e.preventDefault();
+  e.currentTarget.classList.remove('drag-over');
+  const file = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+  if (file) setUnitAiFile(file);
+}
+
+// Pasting a screenshot (Ctrl+V) into the text box uses it as the file.
+function unitAiPaste(e) {
+  const items = (e.clipboardData && e.clipboardData.items) || [];
+  for (const it of items) {
+    if (it.kind === 'file' && /^image\//.test(it.type)) {
+      const f = it.getAsFile();
+      if (f) { e.preventDefault(); setUnitAiFile(new File([f], 'pasted-image.png', { type: f.type })); return; }
+    }
+  }
+}
+
+async function unitAiGenerate() {
+  if (unitAiBusy) return;
+  const text = ((document.getElementById('unitAiText') || {}).value || '').trim();
+  if (!unitAiFile && !text) { setUnitAiStatus('⚠️ Paste some text, or choose or drop a file first.', 'warn'); return; }
+  const btn = document.getElementById('unitAiGenerateBtn');
+  unitAiBusy = true;
+  if (btn) btn.disabled = true;
+  setUnitAiStatus('✨ Gemini is reading ' + (unitAiFile ? '"' + unitAiFile.name + '"' : 'your text') + '… this can take up to a minute.', 'info');
+  try {
+    const payload = unitAiFile ? await geminiPayloadFromFile(unitAiFile) : {};
+    if (text) payload.text = payload.text ? payload.text + '\n\n' + text : text;
+    unitAiWords = await geminiGenerateWords(payload);
+    renderUnitAiPreview();
+    setUnitAiStatus('✓ Found ' + unitAiWords.length + ' word' + (unitAiWords.length !== 1 ? 's' : '') + '. Check them, then press "Save to this unit".', 'ok');
+  } catch (err) {
+    setUnitAiStatus('❌ ' + err.message + '.', 'error');
+  } finally {
+    unitAiBusy = false;
+    if (btn) btn.disabled = false;
+  }
+}
+
+function renderUnitAiPreview() {
+  const el = document.getElementById('unitAiPreview');
+  const actions = document.getElementById('unitAiActions');
+  if (!el) return;
+  const u = getCurrentUnit();
+  const known = new Set(((u && u.words) || []).map(w => String(w.word).trim().toLowerCase()));
+  el.innerHTML = unitAiWords.map((w, i) =>
+    '<div class="import-preview-item"><span>' + (w.emoji || '💬') + '</span><strong>' + esc(w.word) + '</strong>'
+    + (w.pronunciation ? '<span class="pi-phon">' + esc(w.pronunciation) + '</span>' : '')
+    + '<span class="pi-uzb">' + esc(w.uzb) + '</span>'
+    + (known.has(String(w.word).toLowerCase()) ? '<span class="pi-dup" title="Already in this unit">already in unit</span>' : '')
+    + '<button class="roster-x" onclick="unitAiEditWord(' + i + ')" title="Edit this word">&#9998;</button>'
+    + '<button class="roster-x" onclick="unitAiDropWord(' + i + ')" title="Remove this word">&#10005;</button></div>'
+  ).join('');
+  if (actions) actions.style.display = unitAiWords.length ? 'flex' : 'none';
+}
+
+function unitAiDropWord(i) {
+  unitAiWords.splice(i, 1);
+  renderUnitAiPreview();
+}
+
+function unitAiEditWord(i) {
+  const w = unitAiWords[i];
+  if (!w) return;
+  const word = prompt('English word:', w.word);
+  if (word === null) return;
+  const pron = prompt(isAdultMode() ? 'Transcript:' : 'Pronunciation:', w.pronunciation || '');
+  if (pron === null) return;
+  const uzb = prompt('Uzbek meaning:', w.uzb || '');
+  if (uzb === null) return;
+  const emoji = prompt('Emoji:', w.emoji || '💬');
+  if (emoji === null) return;
+  if (!word.trim()) { unitAiDropWord(i); return; }
+  w.word = word.trim();
+  w.uzb = uzb.trim();
+  w.emoji = emoji.trim() || '💬';
+  if (pron.trim()) w.pronunciation = pron.trim(); else delete w.pronunciation;
+  renderUnitAiPreview();
+}
+
+function unitAiClear() {
+  unitAiWords = [];
+  setUnitAiFile(null);
+  const t = document.getElementById('unitAiText');
+  if (t) t.value = '';
+  renderUnitAiPreview();
+  setUnitAiStatus('', 'info');
+}
+
+function unitAiSave() {
+  const u = getCurrentUnit();
+  if (!u || !unitAiWords.length) return;
+  const existingKeys = new Set(u.words.map(w => String(w.word).trim().toLowerCase()));
+  let added = 0, skipped = 0;
+  unitAiWords.forEach(w => {
+    const key = w.word.toLowerCase();
+    if (existingKeys.has(key)) { skipped++; return; }
+    existingKeys.add(key);
+    u.words.push({ ...w, id: w.id || generateId() });
+    added++;
+  });
+  saveUnits();
+  renderUnitWordList();
+  unitAiClear();
+  setUnitAiStatus('✅ Added ' + added + ' word' + (added !== 1 ? 's' : '') + ' to "' + u.name + '"' + (skipped ? ', skipped ' + skipped + ' already in the unit' : '') + '.', 'ok');
 }
 
 // Joins the text parts of Gemini's server-sent events into one string.
