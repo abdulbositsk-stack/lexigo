@@ -6273,7 +6273,10 @@ async function readGeminiStream(res) {
   const take = line => {
     if (!line.startsWith('data:')) return;
     const chunk = JSON.parse(line.slice(5).trim());
-    if (chunk.error) throw new Error(chunk.error.message || 'Gemini failed');
+    if (chunk.error) {
+      const msg = String(chunk.error.message || 'Gemini failed');
+      throw new Error(/quota|rate limit/i.test(msg) ? 'Gemini\'s free limit is used up for now. Try again later, or turn on billing in Google AI Studio' : msg);
+    }
     const parts = (((chunk.candidates || [])[0] || {}).content || {}).parts || [];
     parts.forEach(p => { if (p.text && !p.thought) text += p.text; });
   };

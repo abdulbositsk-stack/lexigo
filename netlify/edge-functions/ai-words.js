@@ -81,7 +81,7 @@ export default async (request) => {
   parts.push({ text: RULES + '\n' + MODE_RULES[mode] });
 
   const model = Netlify.env.get('GEMINI_MODEL') || DEFAULT_MODEL;
-  const upstream = await fetch(`${GEMINI_API}/${model}:streamGenerateContent?alt=sse`, {
+  const request_ = fetch(`${GEMINI_API}/${model}:streamGenerateContent?alt=sse`, {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-goog-api-key': key },
     body: JSON.stringify({
@@ -89,15 +89,40 @@ export default async (request) => {
       generationConfig: { temperature: 0.2, responseMimeType: 'application/json', responseSchema: schema(mode) }
     })
   });
-  if (!upstream.ok || !upstream.body) {
-    const detail = await upstream.text().catch(() => '');
-    let message = 'Gemini returned HTTP ' + upstream.status;
-    try { message = JSON.parse(detail).error.message || message; } catch {}
-    return json(502, { ok: false, error: message });
-  }
 
-  // Pass Gemini's server-sent events straight through; the browser joins the text.
-  return new Response(upstream.body, {
+  // Start the response straight away and keep it alive with SSE comments while
+  // Gemini reads the file, so a slow first reply doesn't time out the function.
+  // Failures are sent as an SSE error event, which the browser shows as a message.
+  const encoder = new TextEncoder();
+  const { readable, writable } = new TransformStream();
+  const writer = writable.getWriter();
+  const ping = setInterval(() => writer.write(encoder.encode(': ping\n\n')).catch(() => {}), 5000);
+  (async () => {
+    try {
+      const upstream = await request_;
+      if (!upstream.ok || !upstream.body) {
+        const detail = await upstream.text().catch(() => '');
+        let message = 'Gemini returned HTTP ' + upstream.status;
+        try { message = JSON.parse(detail).error.message || message; } catch {}
+        throw new Error(message);
+      }
+      const reader = upstream.body.getReader();
+      let first = true;
+      for (;;) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        if (first) { clearInterval(ping); first = false; }
+        await writer.write(value);
+      }
+    } catch (err) {
+      await writer.write(encoder.encode('data: ' + JSON.stringify({ error: { message: err.message } }) + '\n\n')).catch(() => {});
+    } finally {
+      clearInterval(ping);
+      await writer.close().catch(() => {});
+    }
+  })();
+
+  return new Response(readable, {
     headers: { 'content-type': 'text/event-stream; charset=utf-8', 'cache-control': 'no-store' }
   });
 };
