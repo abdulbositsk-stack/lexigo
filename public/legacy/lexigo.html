@@ -7894,7 +7894,9 @@ function markWord(i, pass) {
   marks[i] = pass;
   lastMark = { index: i };
   stopWordTimer();
-  if (pass) { launchConfetti(); playClap(); } else { playSad(); showSadFace(); }
+  // No confetti on a correct answer: the full-screen burst froze the quiz
+  // on classroom laptops, so a correct answer now just plays the chime.
+  if (pass) { playClap(); } else { playSad(); showSadFace(); }
   // Auto-advance to next unmarked word
   const next = marks.findIndex((m, idx) => m === null && idx > i);
   const nextAny = marks.findIndex(m => m === null);
@@ -8870,127 +8872,6 @@ function showSadFace() {
     el.style.opacity = '0';
   }, 900);
   setTimeout(() => el.remove(), 1700);
-}
-
-/* ===== CONFETTI ===== */
-// One shared canvas and one animation loop for every burst. Pressing
-// "correct" several times in a row used to stack a new full-screen canvas
-// (and a new loop drawing rotated emoji text) per press, which froze the
-// screen. Now each burst just adds pieces to the same pool, the pool is
-// capped, emoji are pre-rendered once, and the canvas is removed when
-// the last piece has faded.
-const CONFETTI_COLORS = ['#ff595e','#ffca3a','#6a4c93','#1982c4','#8ac926','#ff6b6b','#f9c74f','#43aa8b','#f3722c','#90be6d','#ff99c8','#a8dadc'];
-const CONFETTI_EMOJIS = ['🎉','⭐','✨','🌟','🎊','💥','🏆','🎈'];
-const CONFETTI_MAX_PIECES = 160;
-const _confetti = { canvas: null, ctx: null, pieces: [], raf: 0, emojiSprites: {} };
-
-function confettiEmojiSprite(emoji, size) {
-  const key = emoji + size;
-  let sprite = _confetti.emojiSprites[key];
-  if (!sprite) {
-    sprite = document.createElement('canvas');
-    sprite.width = sprite.height = Math.ceil(size * 1.3);
-    const sctx = sprite.getContext('2d');
-    sctx.font = size + 'px serif';
-    sctx.textAlign = 'center';
-    sctx.textBaseline = 'middle';
-    sctx.fillText(emoji, sprite.width / 2, sprite.height / 2);
-    _confetti.emojiSprites[key] = sprite;
-  }
-  return sprite;
-}
-
-function confettiCanvas() {
-  if (_confetti.canvas && _confetti.canvas.isConnected) return _confetti.canvas;
-  const canvas = document.createElement('canvas');
-  canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;';
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  document.body.appendChild(canvas);
-  _confetti.canvas = canvas;
-  _confetti.ctx = canvas.getContext('2d');
-  return canvas;
-}
-
-function launchConfetti() {
-  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const canvas = confettiCanvas();
-  const pieces = _confetti.pieces;
-  // Drop the oldest pieces if a quick run of bursts would exceed the cap.
-  const count = reduceMotion ? 30 : 80;
-  const overflow = pieces.length + count - CONFETTI_MAX_PIECES;
-  if (overflow > 0) pieces.splice(0, overflow);
-
-  for (let k = 0; k < count; k++) {
-    const isEmoji = Math.random() < 0.15;
-    const fontSize = Math.floor(Math.random() * 3) * 6 + 18; // 18/24/30: few sprite sizes
-    pieces.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height * 0.4 - canvas.height * 0.1,
-      r: Math.random() * 7 + 4,
-      color: CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)],
-      sprite: isEmoji ? confettiEmojiSprite(CONFETTI_EMOJIS[Math.floor(Math.random() * CONFETTI_EMOJIS.length)], fontSize) : null,
-      shape: Math.floor(Math.random() * 3), // 0 rect, 1 circle, 2 strip
-      vx: (Math.random() - 0.5) * 5,
-      vy: Math.random() * 4 + 2,
-      va: (Math.random() - 0.5) * 0.2,
-      angle: Math.random() * Math.PI * 2,
-      alpha: 1,
-      age: 0,
-      w: Math.random() * 10 + 5,
-      h: Math.random() * 5 + 3
-    });
-  }
-  if (!_confetti.raf) _confetti.raf = requestAnimationFrame(drawConfetti);
-}
-
-function drawConfetti() {
-  const canvas = _confetti.canvas, ctx = _confetti.ctx;
-  if (!canvas || !ctx) { _confetti.raf = 0; return; }
-  ctx.setTransform(1, 0, 0, 1, 0, 0);
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  const pieces = _confetti.pieces;
-  let alive = 0;
-  for (let i = 0; i < pieces.length; i++) {
-    const p = pieces[i];
-    p.x += p.vx;
-    p.y += p.vy;
-    p.vy += 0.12;
-    p.vx *= 0.995;
-    p.angle += p.va;
-    p.age++;
-    if (p.age > 55) p.alpha -= 0.022;
-    if (p.alpha <= 0 || p.y > canvas.height + 40) continue;
-    pieces[alive++] = p;
-    const cos = Math.cos(p.angle), sin = Math.sin(p.angle);
-    ctx.globalAlpha = p.alpha;
-    ctx.setTransform(cos, sin, -sin, cos, p.x, p.y);
-    if (p.sprite) {
-      ctx.drawImage(p.sprite, -p.sprite.width / 2, -p.sprite.height / 2);
-    } else {
-      ctx.fillStyle = p.color;
-      if (p.shape === 1) {
-        ctx.beginPath();
-        ctx.arc(0, 0, p.r, 0, Math.PI * 2);
-        ctx.fill();
-      } else if (p.shape === 2) {
-        ctx.fillRect(-p.h / 2, -p.w / 2, p.h, p.w);
-      } else {
-        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
-      }
-    }
-  }
-  pieces.length = alive;
-  ctx.setTransform(1, 0, 0, 1, 0, 0);
-  ctx.globalAlpha = 1;
-  if (alive > 0) {
-    _confetti.raf = requestAnimationFrame(drawConfetti);
-  } else {
-    _confetti.raf = 0;
-    canvas.remove();
-    _confetti.canvas = null;
-    _confetti.ctx = null;
-  }
 }
 
 // SAVE RESULTS AND FINISH THE QUIZ — the one button shown once every word
