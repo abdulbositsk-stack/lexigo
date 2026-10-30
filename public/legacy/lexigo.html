@@ -2570,9 +2570,6 @@
       <div id="pkgFileStatuses" class="file-status-list" aria-live="polite"></div>
       <div class="import-sep">— or paste text directly —</div>
       <textarea class="import-paste-area" id="pkgPasteArea" placeholder="Paste your word list here... e.g. Beautiful - byutiful - chiroyli"></textarea>
-      <div style="display:flex; justify-content:flex-end; margin-top:6px;">
-        <button class="btn btn-sm" onclick="pkgParseWithAI()">&#129302; Clean with AI</button>
-      </div>
 
       <div class="ai-autofill-card" id="geminiImportCard">
         <div class="awa-prompt-head">&#10024; Import words with Gemini AI</div>
@@ -2583,55 +2580,6 @@
           <input type="file" id="geminiFileInput" accept=".pdf,.png,.jpg,.jpeg,.webp,.heic,.heif,.docx,.txt,.csv,.json,image/*,application/pdf" style="display:none;" onchange="geminiImportFile(this)" />
         </div>
         <p class="hint" id="geminiImportStatus" style="margin:8px 0 0;" aria-live="polite"></p>
-      </div>
-
-      <div class="adult-only" style="margin-top:12px;">
-        <div class="awa-prompt-box">
-          <div class="awa-prompt-head">&#127891; Enhanced adult vocabulary</div>
-          <p class="hint" style="margin:6px 0 10px;">Generate rich word data &mdash; pronunciation, Uzbek meaning with an emoji, easy/normal/hard examples, two collocations and a synonym. <strong>Generate with AI</strong> opens your AI tool with the ready prompt (your pasted word list is already inside it). When the AI replies, paste the JSON into the box above &mdash; or upload the .json file &mdash; and the word preview appears instantly.</p>
-          <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
-            <div style="position:relative; display:inline-block;">
-              <button class="btn btn-sm btn-primary" id="pkgAdultAiBtn" onclick="toggleAdultAiMenu(event)">&#129302; Generate with AI &#9662;</button>
-              <div class="ai-tool-menu" id="pkgAdultAiMenu" style="display:none;">
-                <button onclick="openAdultAiTool('copilot')">&#129302; Copilot</button>
-                <button onclick="openAdultAiTool('gemini')">&#10024; Gemini AI</button>
-                <button onclick="openAdultAiTool('claude')">&#127775; Claude AI</button>
-                <button onclick="openAdultAiTool('chatgpt')">&#128172; ChatGPT <span style="font-weight:400; color:var(--text3); font-size:11px;">(auto-fills)</span></button>
-              </div>
-            </div>
-            <button class="btn btn-sm" onclick="copyAdultVocabPrompt('pkg')">&#128203; Copy Ready Prompt</button>
-            <button class="btn btn-sm" onclick="document.getElementById('pkgAdultJsonInput').click()" title="Pick several .json files at once &#8212; each file becomes its own unit">&#11014;&#65039; Upload .json file(s)</button>
-            <input type="file" id="pkgAdultJsonInput" accept=".json,application/json" multiple style="display:none;" onchange="pkgAdultJsonFileChosen(this)" />
-          </div>
-          <label class="qs-toggle" style="margin-top:10px;">
-            <input type="checkbox" id="pkgMultiUnitMode" onchange="onPkgMultiModeToggle()" />
-            &#128230; <strong>Multi-unit mode</strong> &mdash; paste several lists (a name line before each) and get ALL units from ONE AI reply
-          </label>
-          <p class="hint" id="pkgAdultPromptStatus" style="margin:8px 0 0;"></p>
-        </div>
-      </div>
-
-      <div class="ai-autofill-card" id="aiAutofillCard">
-        <div class="awa-prompt-head">&#10024; ChatGPT Auto-fill</div>
-        <p class="hint" style="margin:6px 0 10px;">Generate editable teaching text or LexiGo-ready JSON. LexiGo uses a secure server endpoint when available; no OpenAI API key is stored in this HTML file. If the endpoint is unavailable, ChatGPT opens with the prompt pre-filled and you can paste the reply back here.</p>
-        <textarea class="import-paste-area" id="aiAutofillPrompt" rows="3" placeholder="Topic or instruction, e.g. Generate Teenager Month 12 vocabulary examples about travel."></textarea>
-        <div class="row ai-autofill-actions" style="margin-top:8px; flex-wrap:wrap; gap:8px;">
-          <button class="btn btn-sm btn-primary" id="aiTextBtn" onclick="runLexigoAiAutofill('text')">&#128172; ChatGPT &mdash; Auto-fill Text</button>
-          <button class="btn btn-sm" id="aiJsonBtn" onclick="runLexigoAiAutofill('json')">&#123;&#125; ChatGPT &mdash; Generate JSON</button>
-        </div>
-        <p class="hint" id="aiAutofillStatus" style="margin:8px 0 0;" aria-live="polite"></p>
-        <div id="aiAutofillResultWrap" style="display:none; margin-top:10px;">
-          <div class="row" style="align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:6px;">
-            <strong id="aiAutofillResultLabel" style="font-size:13px;">Generated content</strong>
-            <span style="flex:1;"></span>
-            <button class="btn btn-sm" onclick="copyAiAutofillAll()">&#128203; Copy All</button>
-            <button class="btn btn-sm ai-json-only" onclick="validateAiAutofillJson()">&#10003; Validate JSON</button>
-            <button class="btn btn-sm ai-json-only" onclick="downloadAiAutofillJson()">&#11015;&#65039; Download JSON</button>
-            <button class="btn btn-sm btn-primary" onclick="applyAiAutofillToPackage()">Use in Package</button>
-          </div>
-          <textarea class="import-paste-area" id="aiAutofillResult" rows="9" placeholder="Generated content appears here. You can edit it before using or saving it." oninput="onAiAutofillResultEdited()"></textarea>
-          <div id="aiUnitCopyList" class="ai-unit-copy-list"></div>
-        </div>
       </div>
 
       <div id="pkgImportPreview" class="import-preview"></div>
@@ -2660,17 +2608,6 @@
       <p class="add-form-title">&#128256; Teaching mode</p>
       <p class="hint" style="margin-bottom:10px;">LexiGo is currently in <strong id="settingsModeName">Kids</strong> mode. You can switch modes anytime.</p>
       <button class="btn btn-primary btn-sm" onclick="menuSwitchMode()">Switch mode</button>
-    </div>
-
-    <div class="card">
-      <p class="add-form-title">&#128273; AI import key</p>
-      <p class="hint" style="margin-bottom:10px;">Powers the "Clean with AI" button when importing vocabulary lists. Get a key from console.anthropic.com.</p>
-      <div class="api-banner" style="display:flex;">
-        <span class="api-banner-icon">&#128272;</span>
-        <input type="password" id="apiKeyInput" placeholder="sk-ant-..." autocomplete="off" oninput="onApiKeyInput()" style="flex:1;" />
-        <button class="btn btn-primary btn-sm" onclick="saveApiKey()">Save</button>
-        <span class="api-key-status missing" id="apiKeyStatus">Not set</span>
-      </div>
     </div>
 
     <div class="card" style="margin-top:12px;" id="backupRestoreCard">
@@ -2922,7 +2859,6 @@
     </div>
     <div class="card" style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
       <p class="hint" style="margin:0; flex:1; min-width:180px;">&#128228; Share vocabulary with other teachers: export a unit (or all units here) to a file, or import a file someone sent you.</p>
-      <button class="btn btn-sm btn-primary" onclick="openMultiGen()">&#10024; Generate Multiple Units</button>
       <button class="btn btn-sm" onclick="exportGroupTypeUnits()">&#11015;&#65039; Export all units</button>
       <button class="btn btn-sm" onclick="document.getElementById('unitFileImportInput').click()">&#11014;&#65039; Import unit file</button>
       <input type="file" id="unitFileImportInput" accept="application/json" style="display:none;" onchange="handleUnitFileImport(event)" />
@@ -2952,7 +2888,7 @@
     </div>
 
     <div class="import-form">
-      <button class="import-toggle" onclick="toggleUnitImport()" id="unitImportToggleBtn">&#129302; Import vocab with AI</button>
+      <button class="import-toggle" onclick="toggleUnitImport()" id="unitImportToggleBtn">&#10024; Generate words with AI</button>
       <div class="import-body" id="unitImportBody" style="display:none;">
         <div class="ai-autofill-card" id="unitAiCard" style="margin:0 0 12px;">
           <div class="awa-prompt-head">&#10024; Generate words with AI</div>
@@ -2978,26 +2914,10 @@
             <button class="btn btn-primary btn-sm" onclick="unitAiSave()">&#10003; Save to this unit</button>
           </div>
         </div>
-        <p class="hint" style="margin-bottom:8px;">Pick your AI tool below &mdash; the prompt is copied automatically and the tool opens in a new tab. Just paste it in (Ctrl/Cmd+V), attach your lesson material, then paste the JSON it gives back below. You can also upload a vocabulary file exported by another teacher &mdash; it will be added to this unit.</p>
-        <div class="row" style="margin-bottom:8px; flex-wrap:wrap;">
-          <div class="ai-tool-dropdown">
-            <button class="btn btn-sm btn-primary" id="aiToolMenuBtn" onclick="toggleAIToolMenu(event)">&#129302; Open another AI tool &#9662;</button>
-            <div class="ai-tool-menu" id="aiToolMenu" style="display:none;">
-              <button onclick="openAIToolWithPrompt('copilot')">&#129302; Copilot</button>
-              <button onclick="openAIToolWithPrompt('gemini')">&#10024; Gemini AI</button>
-              <button onclick="openAIToolWithPrompt('claude')">&#127775; Claude AI</button>
-              <button onclick="openAIToolWithPrompt('chatgpt')">&#128172; ChatGPT <span style="font-weight:400; color:var(--text3); font-size:11px;">(auto-fills)</span></button>
-            </div>
-          </div>
-          <button class="btn btn-sm" onclick="copyUnitImportPrompt()">&#128203; Just copy prompt</button>
+        <div class="row" style="align-items:center; gap:8px; flex-wrap:wrap;">
+          <span class="hint" style="margin:0; flex:1; min-width:180px;">Got a unit file exported by another teacher? Upload it to add its words to this unit.</span>
           <button class="btn btn-sm" onclick="document.getElementById('unitImportFileInput').click()">&#11014;&#65039; Upload .json file</button>
-        </div>
-        <p class="hint adult-only" style="margin:2px 0 10px;">In Teens/Adult mode these buttons use the <strong>enhanced</strong> prompt &mdash; pronunciation, Uzbek meaning with an emoji, easy/normal/hard examples, two collocations and a synonym &mdash; and the JSON it returns imports here automatically.</p>
-        <input type="file" id="unitImportFileInput" accept="application/json" style="display:none;" onchange="handleUnitJsonFile(event)" />
-        <div class="import-sep">— or paste JSON directly —</div>
-        <textarea class="import-paste-area" id="unitImportPasteArea" placeholder='[{"word":"Apple","uzb":"Olma","emoji":"🍎","examples":["I eat an apple every day."]}]'></textarea>
-        <div style="display:flex; justify-content:flex-end; margin-top:6px;">
-          <button class="btn btn-primary btn-sm" onclick="importUnitJsonFromTextarea()">&#43; Add to unit</button>
+          <input type="file" id="unitImportFileInput" accept="application/json" style="display:none;" onchange="handleUnitJsonFile(event)" />
         </div>
         <p class="hint" id="unitImportStatus" style="margin:6px 0 0;"></p>
       </div>
@@ -3171,11 +3091,8 @@
           </div>
           <div class="import-sep">— or paste text directly —</div>
           <textarea class="import-paste-area" id="importPasteArea" placeholder="Paste your word list here... e.g. Beautiful - byutiful - chiroyli" oninput="parseImportText(this.value)"></textarea>
-          <div style="display:flex; justify-content:flex-end; margin-top:6px;">
-            <button class="btn btn-sm" onclick="aiParsePastedText()">&#129302; Clean with AI</button>
-          </div>
           <p class="import-hint">
-            &#9432; Messy lists are fine — mixed separators (<code>-</code>, <code>—</code>, <code>:</code>, <code>()</code>, <code>=</code>), childish pronunciation, missing translations. Click <strong>&#129302; Clean with AI</strong> to have Claude sort it out, or upload a <strong>.txt</strong>, <strong>.csv</strong>, <strong>.pdf</strong> or <strong>.docx</strong> file to have it cleaned automatically. Written pronunciation is always removed (use the audio button instead). Set your AI key once in <strong>&#9881;&#65039; Settings</strong> (Home menu).<br/>
+            &#9432; Messy lists are fine — mixed separators (<code>-</code>, <code>—</code>, <code>:</code>, <code>()</code>, <code>=</code>), childish pronunciation, missing translations. You can also upload a <strong>.txt</strong>, <strong>.csv</strong>, <strong>.pdf</strong> or <strong>.docx</strong> file. To generate words with AI, use <strong>&#10024; Generate words with AI</strong> inside a Vocabulary Library unit.<br/>
             Quick preview also understands:<br/>
             &bull; <code>word, translation</code>&nbsp;&nbsp;e.g. <em>Apple, Olma</em><br/>
             &bull; <code>emoji, word, translation</code>&nbsp;&nbsp;e.g. <em>&#127822;, Apple, Olma</em><br/>
@@ -11599,22 +11516,7 @@ async function pkgProcessText(rawText, label) {
       } catch (e) { /* not valid JSON — fall through to the normal pipeline */ }
     }
   }
-  if (!getApiKey()) {
-    pkgSetStatus('⚠️ No API key set — using basic parsing. Add one in ⚙️ Settings for smarter cleanup.', 'warn');
-    pkgLocalParse(rawText);
-    return;
-  }
-  pkgSetStatus('🤖 Extracting vocabulary with AI…', 'info');
-  try {
-    const items = await aiParseVocab(rawText);
-    pkgImportedWords = dedupeVocabItems(items).map(toImportedWordItem);
-    renderPkgPreview();
-    pkgSetStatus('✓ Found ' + pkgImportedWords.length + ' word' + (pkgImportedWords.length !== 1 ? 's' : '') + ' from ' + label, 'ok');
-  } catch (err) {
-    pkgSetStatus('❌ ' + err.message + ' — falling back to basic parsing.', 'error');
-    console.error(err);
-    pkgLocalParse(rawText);
-  }
+  pkgLocalParse(rawText);
 }
 
 // Best-effort local parser, same heuristics as the class importer's fallback.
@@ -13398,26 +13300,9 @@ function createImportStatus() {
 // Falls back to the fast local parser if no API key is set or the AI call fails.
 async function processExtractedText(rawText, label, statusSpan) {
   statusSpan = statusSpan || createImportStatus();
-  if (!getApiKey()) {
-    statusSpan.textContent = '⚠️ No API key set — using basic parsing. Add your API key above for smarter AI cleanup.';
-    statusSpan.style.color = 'var(--amber-text)';
-    parseImportText(rawText);
-    return;
-  }
-  statusSpan.textContent = '🤖 Extracting vocabulary with AI…';
-  statusSpan.style.color = 'var(--blue-text)';
-  try {
-    const items = await aiParseVocab(rawText);
-    importedWords = dedupeVocabItems(items).map(toImportedWordItem);
-    renderImportPreview();
-    statusSpan.textContent = '✓ Found ' + importedWords.length + ' word' + (importedWords.length !== 1 ? 's' : '') + ' from ' + label;
-    statusSpan.style.color = 'var(--green-text)';
-  } catch (err) {
-    statusSpan.textContent = '❌ ' + err.message + ' — falling back to basic parsing.';
-    statusSpan.style.color = 'var(--red-text)';
-    console.error(err);
-    parseImportText(rawText);
-  }
+  statusSpan.textContent = '✓ Read ' + label + '. Check the list below.';
+  statusSpan.style.color = 'var(--green-text)';
+  parseImportText(rawText);
 }
 
 async function aiParsePastedText() {
