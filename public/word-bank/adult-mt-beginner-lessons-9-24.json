@@ -217,7 +217,7 @@
         {
           "word": "water",
           "uzb": "suv",
-          "emoji": "💧",
+          "emoji": "🚰",
           "examples": {
             "easy": "Can I have some water?",
             "normal": "It is important to drink enough water when the weather is hot.",
@@ -277,7 +277,7 @@
         {
           "word": "container",
           "uzb": "konteyner, idish",
-          "emoji": "📦",
+          "emoji": "🫙",
           "examples": {
             "easy": "Put the soup in a container.",
             "normal": "I keep rice and flour in plastic containers in the kitchen.",
@@ -889,7 +889,7 @@
         {
           "word": "magazine",
           "uzb": "jurnal",
-          "emoji": "📖",
+          "emoji": "📰",
           "examples": {
             "easy": "She is reading a magazine.",
             "normal": "I buy a fashion magazine every month at the newsagent's.",
@@ -2333,7 +2333,7 @@
         {
           "word": "conversation",
           "uzb": "suhbat",
-          "emoji": "💬",
+          "emoji": "🗣️",
           "examples": {
             "easy": "We had a nice conversation.",
             "normal": "I had a long conversation with my neighbour about the new school.",
@@ -2988,7 +2988,7 @@
         {
           "word": "button up",
           "uzb": "tugma qadamoq",
-          "emoji": "🔘",
+          "emoji": "🧥",
           "examples": {
             "easy": "Button up your coat.",
             "normal": "It's very windy, so button up your jacket before you go out.",
@@ -5018,7 +5018,7 @@
         {
           "word": "spelling changes",
           "uzb": "yozishda harflarning o‘zgarishi",
-          "emoji": "🔄",
+          "emoji": "🔤",
           "examples": {
             "easy": "Learn these spelling changes well.",
             "normal": "Some verbs have spelling changes when you add -ing to them.",
@@ -6737,7 +6737,7 @@
         {
           "word": "option",
           "uzb": "tanlov",
-          "emoji": "🔘",
+          "emoji": "☑️",
           "examples": {
             "easy": "We have two options.",
             "normal": "The cheapest option is to go by bus, not by taxi.",
@@ -8018,7 +8018,7 @@
         {
           "word": "magazine",
           "uzb": "jurnal",
-          "emoji": "📖",
+          "emoji": "📰",
           "examples": {
             "easy": "I'm reading a fashion magazine.",
             "normal": "She buys a cooking magazine every month at the station.",
@@ -10184,7 +10184,7 @@
         {
           "word": "package",
           "uzb": "posilka, pochta",
-          "emoji": "📦",
+          "emoji": "📮",
           "examples": {
             "easy": "A package came for you.",
             "normal": "There is a package from Bristol for you at reception.",
@@ -10280,7 +10280,7 @@
         {
           "word": "meaning",
           "uzb": "maʼno, mazmun",
-          "emoji": "📖",
+          "emoji": "🔎",
           "examples": {
             "easy": "What's the meaning of this word?",
             "normal": "If you don't know the meaning, look it up in a dictionary.",
@@ -11528,7 +11528,7 @@
         {
           "word": "dictionary",
           "uzb": "lug‘at kitobi",
-          "emoji": "📖",
+          "emoji": "📕",
           "examples": {
             "easy": "Use a dictionary at home.",
             "normal": "I always look up new words in my English dictionary.",

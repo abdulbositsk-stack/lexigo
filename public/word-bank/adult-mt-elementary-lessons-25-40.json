@@ -3162,7 +3162,7 @@
         {
           "word": "reply",
           "uzb": "javob bermoq, javob qaytarmoq",
-          "emoji": "💬",
+          "emoji": "↩️",
           "examples": {
             "easy": "He replied with a smile.",
             "normal": "I wrote to her last week, but she hasn't replied yet.",
@@ -3307,7 +3307,7 @@
         {
           "word": "definition",
           "uzb": "izoh, taʼrif, tushuntirish",
-          "emoji": "📖",
+          "emoji": "🔎",
           "examples": {
             "easy": "Read the definition in the dictionary.",
             "normal": "Can you give me a clear definition of this word, please?",
@@ -4204,7 +4204,7 @@
         {
           "word": "phrase",
           "uzb": "ibora, ifoda",
-          "emoji": "💬",
+          "emoji": "🔤",
           "examples": {
             "easy": "Learn a new phrase every day.",
             "normal": "This phrase is very common in everyday English conversation.",
@@ -5516,7 +5516,7 @@
         {
           "word": "discussion",
           "uzb": "muhokama, munozara",
-          "emoji": "💬",
+          "emoji": "🗣️",
           "examples": {
             "easy": "We had a long discussion.",
             "normal": "Most problems can be solved by discussion.",

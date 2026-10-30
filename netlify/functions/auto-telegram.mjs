@@ -154,22 +154,34 @@ export default async request => {
       const group = (record.groups || {})[classId];
       const text = String(body.text || '').trim();
       const shortText = String(body.shortText || '').trim();
-      if (!group || !/^-?\d+$/.test(String(group.id))) return reply(400, { ok: false, error: 'No Telegram group is saved for this class. Open Settings → Auto Send with My Bot first.' });
+      if (!group || !/^-?\d+$/.test(String(group.id))) return reply(400, { ok: false, error: 'No Telegram group is saved for this class. Open Settings → Telegram reports and link a group first.' });
       if (!text) return reply(400, { ok: false, error: 'Report text is empty.' });
 
-      const dataUrl = String(body.imageDataUrl || '');
-      if (dataUrl) {
+      const images = [];
+      for (const [name, value] of [['report', body.imageDataUrl], ['chart', body.chartDataUrl]]) {
+        const dataUrl = String(value || '');
+        if (!dataUrl) continue;
         const match = dataUrl.match(/^data:image\/png;base64,([A-Za-z0-9+/=]+)$/);
         if (!match) return reply(400, { ok: false, error: 'The report image is invalid.' });
         const bytes = Buffer.from(match[1], 'base64');
         if (bytes.length > 9 * 1024 * 1024) return reply(400, { ok: false, error: 'The report image is too large. Try a shorter report.' });
-        const form = new FormData();
-        form.append('chat_id', String(group.id));
-        form.append('caption', (shortText || text).slice(0, 1000));
-        form.append('photo', new Blob([bytes], { type: 'image/png' }), 'lexigo-report.png');
-        await telegramForm(token, 'sendPhoto', form);
+        images.push({ name, bytes });
       }
-      const shouldSendText = !dataUrl || text !== shortText;
+      const caption = (shortText || text).slice(0, 1000);
+      const form = new FormData();
+      form.append('chat_id', String(group.id));
+      if (images.length === 1) {
+        form.append('caption', caption);
+        form.append('photo', new Blob([images[0].bytes], { type: 'image/png' }), 'lexigo-' + images[0].name + '.png');
+        await telegramForm(token, 'sendPhoto', form);
+      } else if (images.length > 1) {
+        form.append('media', JSON.stringify(images.map((image, index) => ({
+          type: 'photo', media: 'attach://' + image.name, ...(index === 0 ? { caption } : {})
+        }))));
+        images.forEach(image => form.append(image.name, new Blob([image.bytes], { type: 'image/png' }), 'lexigo-' + image.name + '.png'));
+        await telegramForm(token, 'sendMediaGroup', form);
+      }
+      const shouldSendText = !images.length || text !== shortText;
       if (shouldSendText) {
         for (const part of messageChunks(text)) await telegram(token, 'sendMessage', { chat_id: group.id, text: part });
       }

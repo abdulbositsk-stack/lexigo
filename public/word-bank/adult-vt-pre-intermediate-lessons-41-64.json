@@ -2094,7 +2094,7 @@
         {
           "word": "discuss",
           "uzb": "muhokama qilmoq",
-          "emoji": "💬",
+          "emoji": "🗣️",
           "examples": {
             "easy": "Let's discuss your plan.",
             "normal": "We discussed all our problems with him over dinner.",
@@ -4155,7 +4155,7 @@
         {
           "word": "war story",
           "uzb": "urush hikoyasi",
-          "emoji": "📖",
+          "emoji": "📜",
           "examples": {
             "easy": "Grandpa told a war story.",
             "normal": "My grandfather loved telling us war stories after dinner.",
@@ -6128,7 +6128,7 @@
         {
           "word": "novel",
           "uzb": "roman (badiiy asar)",
-          "emoji": "📖",
+          "emoji": "📕",
           "examples": {
             "easy": "She is reading a novel.",
             "normal": "He wrote a great novel about life in ancient China.",
@@ -8270,7 +8270,7 @@
         {
           "word": "recipe",
           "uzb": "retsept, tayyorlash usuli",
-          "emoji": "📖",
+          "emoji": "📝",
           "examples": {
             "easy": "This is my mum's recipe.",
             "normal": "I found an easy recipe for soup on the internet.",
@@ -8795,7 +8795,7 @@
         {
           "word": "conversation",
           "uzb": "suhbat, muloqot",
-          "emoji": "💬",
+          "emoji": "🗣️",
           "examples": {
             "easy": "We had a nice conversation.",
             "normal": "I had a long conversation with my grandfather about his childhood.",
