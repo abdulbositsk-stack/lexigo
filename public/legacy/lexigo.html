@@ -4413,29 +4413,6 @@ function weightedSample(words, weights, count) {
   return chosen;
 }
 
-// Words asked recently in THIS CLASS (any student). Keeping this per class,
-// not per student, is what stops every student in a lesson from being asked
-// the same handful of words.
-const LS_RECENT_WORDS_KEY = 'vqt_recent_words_v1';
-function recentWordsKeyFor(classId) { return LS_RECENT_WORDS_KEY + '__' + classId; }
-function loadRecentClassWords() {
-  if (!currentClassId) return [];
-  try {
-    const v = JSON.parse(localStorage.getItem(recentWordsKeyFor(currentClassId)) || '[]');
-    return Array.isArray(v) ? v : [];
-  } catch (e) { return []; }
-}
-function pushRecentClassWords(ids) {
-  if (!currentClassId) return;
-  // Hold everything except one quiz's worth of words. That leaves at least
-  // quizWordCount words outside the log at all times, so the next student can
-  // always be served entirely from words the class hasn't just had.
-  const cap = Math.max(quizWordCount, allWords.length - quizWordCount);
-  const merged = loadRecentClassWords().filter(id => ids.indexOf(id) === -1).concat(ids);
-  const trimmed = merged.slice(Math.max(0, merged.length - cap));
-  try { localStorage.setItem(recentWordsKeyFor(currentClassId), JSON.stringify(trimmed)); } catch (e) {}
-}
-
 function shuffleArray(arr) {
   const a = arr.slice();
   for (let i = a.length - 1; i > 0; i--) {
@@ -4445,60 +4422,69 @@ function shuffleArray(arr) {
   return a;
 }
 
+// Class-wide word cycle. Every selected word is asked once (to any
+// student) before any word is asked again; when the list runs out a new
+// cycle starts. The same word text is never asked twice in one turn, even
+// when it sits in two different units.
+const LS_WORD_CYCLE_KEY = 'vqt_word_cycle_v1';
+function wordCycleKeyFor(classId) { return LS_WORD_CYCLE_KEY + '__' + classId; }
+function quizWordKey(w) { return String((w && w.word) || '').trim().toLowerCase(); }
+function uniqueQuizWords(list) {
+  const seen = Object.create(null), out = [];
+  (list || []).forEach(w => { const k = quizWordKey(w); if (k && !seen[k]) { seen[k] = 1; out.push(w); } });
+  return out;
+}
+function loadWordCycle() {
+  if (!currentClassId) return [];
+  try { const v = JSON.parse(localStorage.getItem(wordCycleKeyFor(currentClassId)) || '[]'); return Array.isArray(v) ? v : []; }
+  catch (e) { return []; }
+}
+function saveWordCycle(keys) {
+  if (!currentClassId) return;
+  try { localStorage.setItem(wordCycleKeyFor(currentClassId), JSON.stringify(keys)); } catch (e) {}
+}
+// Marks words as used in the current cycle (also used by Word Battle).
+function markWordsUsedInCycle(words) {
+  const pool = uniqueQuizWords(allWords).map(quizWordKey);
+  let used = loadWordCycle().filter(k => pool.indexOf(k) !== -1);
+  (words || []).forEach(w => { const k = quizWordKey(w); if (k && used.indexOf(k) === -1) used.push(k); });
+  if (pool.length && pool.every(k => used.indexOf(k) !== -1)) used = [];
+  saveWordCycle(used);
+}
+
 function pickWordsForStudent(name) {
-  const n = Math.min(quizWordCount, allWords.length);
-  if (!smartReviewEnabled) return pickRandom(allWords, n);
-
+  const pool = uniqueQuizWords(shuffleArray(allWords));
+  const n = Math.min(quizWordCount, pool.length);
   const hist = wordHistory[studentKey(name)] || {};
-  const recent = loadRecentClassWords();
-  const isRecent = id => recent.indexOf(id) !== -1;
-
-  // Never asked to THIS student.
-  const fresh = allWords.filter(w => !hist[w.id]);
-  // Asked before and got wrong — worth repeating.
-  const weak = allWords.filter(w => hist[w.id] && hist[w.id].lastResult === false);
-  // Asked before and got right — repeat only rarely, oldest and least-seen first.
-  const known = allWords
-    .filter(w => hist[w.id] && hist[w.id].lastResult !== false)
-    .sort((a, b) => ((hist[a.id].lastSeen || 0) - (hist[b.id].lastSeen || 0))
-                 || ((hist[a.id].totalSeen || 0) - (hist[b.id].totalSeen || 0)));
-
-  // Within each pool, words not used recently in this class come first. The
-  // most recently used words sink to the very bottom, so if a small word list
-  // forces a repeat it is the oldest one that comes back, never the word the
-  // student before just had.
-  const rank = id => { const i = recent.indexOf(id); return i === -1 ? -1 : (recent.length - i); };
-  const stage = list => {
-    const s = shuffleArray(list);
-    return s.filter(w => !isRecent(w.id))
-            .concat(s.filter(w => isRecent(w.id)).sort((a, b) => rank(a.id) - rank(b.id)));
+  const histOf = w => hist[w.id];
+  // Within a group of unused words: words this student missed before come
+  // first (a small share), then words new to the student, then the rest.
+  const order = list => {
+    if (!smartReviewEnabled) return shuffleArray(list);
+    const weak = list.filter(w => histOf(w) && histOf(w).lastResult === false);
+    const fresh = list.filter(w => !histOf(w));
+    const known = list.filter(w => histOf(w) && histOf(w).lastResult !== false)
+      .sort((a, b) => ((histOf(a).lastSeen || 0) - (histOf(b).lastSeen || 0)));
+    const quota = Math.min(weak.length, Math.max(1, Math.round(n * 0.2)));
+    return weak.slice(0, quota).concat(fresh, weak.slice(quota), known);
   };
-
-  const chosen = [];
-  const seenIds = Object.create(null);
-  const add = (list, limit) => {
-    for (let i = 0; i < list.length; i++) {
-      if (chosen.length >= n) return;
-      if (limit !== undefined && limit <= 0) return;
-      const w = list[i];
-      if (seenIds[w.id]) continue;
-      seenIds[w.id] = 1; chosen.push(w);
-      if (limit !== undefined) limit--;
-    }
-  };
-
-  // A deliberate but small share of repeats: while there is still plenty of
-  // new material, at most ~20% of the quiz revisits previously-missed words.
-  const reviewQuota = fresh.length >= n
-    ? Math.min(weak.length, Math.max(1, Math.round(n * 0.2)))
-    : weak.length;
-  if (reviewQuota > 0) add(stage(weak), reviewQuota);
-
-  add(stage(fresh));   // new to this student, and not just used in class
-  add(stage(weak));    // then anything missed before
-  add(stage(known));   // finally, mastered words as a last resort
-
-  return shuffleArray(chosen).slice(0, n);
+  const poolKeys = pool.map(quizWordKey);
+  let used = loadWordCycle().filter(k => poolKeys.indexOf(k) !== -1);
+  if (used.length >= pool.length) used = [];
+  const chosen = order(pool.filter(w => used.indexOf(quizWordKey(w)) === -1)).slice(0, n);
+  chosen.forEach(w => used.push(quizWordKey(w)));
+  if (chosen.length < n) {
+    // Every word has been asked: start a new cycle and fill the turn from
+    // words this student does not already have.
+    const have = chosen.map(quizWordKey);
+    const fill = order(pool.filter(w => have.indexOf(quizWordKey(w)) === -1)).slice(0, n - chosen.length);
+    fill.forEach(w => chosen.push(w));
+    used = fill.map(quizWordKey);
+  } else if (used.length >= pool.length) {
+    used = [];
+  }
+  saveWordCycle(used);
+  return shuffleArray(chosen);
 }
 
 /* ===== PERSISTENT QUIZ RESULTS (per class) ===== */
@@ -7757,7 +7743,7 @@ function startQuiz() {
     name = input.value.trim();
     if (!name) { input.focus(); return; }
   }
-  if (allWords.length < quizWordCount) {
+  if (uniqueQuizWords(allWords).length < quizWordCount) {
     alert('This class needs at least ' + quizWordCount + ' words. Open Vocabulary Selection and tick some units first.');
     openUnitPicker();
     return;
@@ -7768,8 +7754,8 @@ function startQuiz() {
   // level and earlier lesson first), so keep the picked words in that order.
   const wordOrder = new Map(allWords.map((w, i) => [w, i]));
   currentWords.sort((a, b) => (wordOrder.has(a) ? wordOrder.get(a) : 1e9) - (wordOrder.has(b) ? wordOrder.get(b) : 1e9));
-  // Reserve immediately, so an abandoned quiz still rotates the words.
-  pushRecentClassWords(currentWords.map(w => w.id));
+  // pickWordsForStudent already reserved these words in the class cycle,
+  // so an abandoned quiz still rotates the words.
   marks = Array(quizWordCount).fill(null);
   revealed = Array(quizWordCount).fill(false);
   adultFacetState = {};
@@ -9374,7 +9360,7 @@ function saveResultsAndFinishQuiz() {
     });
     saveHistory();
     // NOTE: words were already reserved into the rotation log at quiz
-    // START (see startQuiz's pushRecentClassWords call) — not repeated
+    // START (see pickWordsForStudent's word cycle) — not repeated
     // here, so they're never counted twice.
 
     // The actual saved result record. This write must succeed for the
@@ -9905,10 +9891,11 @@ function battleAlreadyRunToday() {
 // same battle, so nobody can pick up an answer from watching the fighter
 // before them. Words the class has just used are avoided first.
 function pickBattleWords(n) {
-  const recent = loadRecentClassWords();
-  const fresh = allWords.filter(w => recent.indexOf(w.id) === -1);
-  const rest = allWords.filter(w => recent.indexOf(w.id) !== -1);
-  return shuffleArray(fresh).concat(shuffleArray(rest)).slice(0, Math.min(n, allWords.length));
+  const used = loadWordCycle();
+  const pool = uniqueQuizWords(shuffleArray(allWords));
+  const fresh = pool.filter(w => used.indexOf(quizWordKey(w)) === -1);
+  const rest = pool.filter(w => used.indexOf(quizWordKey(w)) !== -1);
+  return fresh.concat(rest).slice(0, Math.min(n, pool.length));
 }
 
 function battleWordsNeeded(fighters, wordsEach) { return fighters * wordsEach; }
@@ -10182,7 +10169,7 @@ function finishBattle() {
     rows: ranked.map(r => ({ name: r.name, score: r.score, total: r.total, ms: r.ms, words: r.words }))
   };
   if (currentClassId) saveBattleResult(currentClassId, entry);
-  pushRecentClassWords(usedWords.map(w => w.id));
+  markWordsUsedInCycle(usedWords);
   b.result = entry;
   stopBattleMusic();
   _battleMusicMode = 'march';      // fight is over — unmuting now brings back the calm march
