@@ -7815,19 +7815,125 @@ function exampleHtml(text, word) {
     return safe.replace(new RegExp('\\b(' + core + '[a-z]*)', 'gi'), '<b class="ex-hl">$1</b>');
   } catch (e) { return safe; }
 }
+// A "weak" example only names the word ("This is a book.", "I like book.")
+// or talks about the lesson instead of using the word in real life
+// ("This word is very important for today's lesson."). Those are hidden
+// and, for Kids words, replaced with the Word Bank's real-life sentence.
+function isWeakExample(text, word) {
+  const W = String(word || '').trim().toLowerCase();
+  let t = String(text || '').trim().toLowerCase().replace(/[‘’`]/g, "'").replace(/\s+/g, ' ');
+  if (!t) return true;
+  if (/\bthis word\b|today's lesson|this lesson|our lesson|\b(important|key|useful) words?\b|\bvocabulary (word|list)\b|\bthis example\b|\bword list\b/.test(t)) return true;
+  if (!W) return false;
+  const esc = W.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  t = t.replace(new RegExp('\\b' + esc + '(s|es)?\\b', 'g'), '§');
+  if (/^§[.?"]*$/.test(t)) return true;
+  t = t.replace(/[.!?"]+$/g, '').trim();
+  if (/^(this|that|it) is (a |an |the |my |our )?§$/.test(t)) return true;
+  if (/^(here is|here's|look at|look,|i see|i have|i like|i want|i know|i use|i learn|we learn|let's learn|say|write|read|spell) (a |an |the |my )?§$/.test(t)) return true;
+  if (/^(i|we|you) (can )?(say|spell|write|learn|use|practise|practice|remember) (the word )?§/.test(t)) return true;
+  if (/^§ (is|means) (a |an )?(word|noun|verb|important|useful)\b/.test(t)) return true;
+  return false;
+}
+let _kidsBankIndex = null, _kidsBankIndexPromise = null;
+function loadKidsBankIndex() {
+  if (_kidsBankIndex) return Promise.resolve(_kidsBankIndex);
+  if (_kidsBankIndexPromise) return _kidsBankIndexPromise;
+  const files = WORD_BANK_FILES.filter(f => /^kids-/.test(f.category));
+  _kidsBankIndexPromise = Promise.allSettled(files.map(f => fetch(f.path).then(r => r.ok ? r.json() : null)))
+    .then(results => {
+      const idx = {};
+      results.forEach(r => {
+        const data = r.status === 'fulfilled' ? r.value : null;
+        ((data && data.units) || []).forEach(u => (u.words || []).forEach(bw => {
+          const k = String(bw.word || '').trim().toLowerCase();
+          if (!k || !bw.examples) return;
+          (idx[k] = idx[k] || []).push({ uzb: String(bw.uzb || '').trim().toLowerCase(), examples: bw.examples });
+        }));
+      });
+      _kidsBankIndex = idx;
+      return idx;
+    }).finally(() => { _kidsBankIndexPromise = null; });
+  return _kidsBankIndexPromise;
+}
+function bankExamplesFor(w, idx) {
+  const list = idx[String(w.word || '').trim().toLowerCase()];
+  if (!list || !list.length) return null;
+  const uz = String(w.uzb || '').trim().toLowerCase();
+  const hit = (uz && list.find(x => x.uzb === uz)) || list[0];
+  return hit.examples;
+}
+// Fixes one word in place. Returns true when something changed.
+function repairWordExamples(w, idx) {
+  if (!w || !w.word) return false;
+  const lev = (w.examples && !Array.isArray(w.examples) && typeof w.examples === 'object') ? w.examples : null;
+  const legacy = Array.isArray(w.examples) ? w.examples : null;
+  const levels = ['easy', 'normal', 'hard'];
+  const weak = lev ? levels.filter(k => lev[k] && isWeakExample(lev[k], w.word))
+                   : (legacy || []).filter(e => isWeakExample(e, w.word));
+  const empty = lev ? !levels.some(k => lev[k]) : !(legacy && legacy.length);
+  if (!weak.length && !empty) return false;
+  const bank = idx ? bankExamplesFor(w, idx) : null;
+  if (bank) {
+    const next = {};
+    levels.forEach(k => {
+      const mine = lev && lev[k] && !isWeakExample(lev[k], w.word) ? lev[k] : '';
+      const theirs = bank[k] && !isWeakExample(bank[k], w.word) ? bank[k] : '';
+      if (mine || theirs) next[k] = mine || theirs;
+    });
+    if (!lev && legacy) legacy.filter(e => !isWeakExample(e, w.word)).forEach(e => {
+      const slot = levels.find(k => !next[k]); if (slot) next[slot] = e;
+    });
+    w.examples = next;
+    return true;
+  }
+  if (!weak.length) return false;
+  if (lev) weak.forEach(k => { delete lev[k]; });
+  else w.examples = legacy.filter(e => !isWeakExample(e, w.word));
+  return true;
+}
+// Runs once after the page loads: cleans saved Library words that carry
+// placeholder examples, using the Kids Word Bank when the word is there.
+async function repairWeakLibraryExamples() {
+  try {
+    const saved = loadUnits();
+    const needs = saved.some(u => (u.words || []).some(w => {
+      const lev = getLeveledExamplesRaw(w), leg = Array.isArray(w.examples) ? w.examples : [];
+      return lev ? Object.values(lev).some(e => e && isWeakExample(e, w.word)) : leg.some(e => isWeakExample(e, w.word));
+    }));
+    if (!needs) return;
+    let idx = null;
+    try { idx = await loadKidsBankIndex(); } catch (e) {}
+    let changed = false;
+    saved.forEach(u => (u.words || []).forEach(w => { if (repairWordExamples(w, idx)) changed = true; }));
+    if (!changed) return;
+    try { localStorage.setItem(LS_UNITS_KEY, JSON.stringify(saved)); } catch (e) {}
+    const byId = {};
+    saved.forEach(u => (u.words || []).forEach(w => { if (w.id) byId[w.id] = w.examples; }));
+    const patch = w => { if (w && w.id && byId[w.id] !== undefined) w.examples = byId[w.id]; };
+    (units || []).forEach(u => (u.words || []).forEach(patch));
+    (allWords || []).forEach(patch);
+    (currentWords || []).forEach(patch);
+  } catch (e) { console.warn('Example clean-up skipped:', e); }
+}
+setTimeout(repairWeakLibraryExamples, 1500);
+function getLeveledExamplesRaw(w) {
+  return (w && w.examples && !Array.isArray(w.examples) && typeof w.examples === 'object') ? w.examples : null;
+}
 function getLeveledExamples(w) {
   const src = (w && w.examples && !Array.isArray(w.examples) && typeof w.examples === 'object') ? w.examples
             : (w && w.examplesLeveled && typeof w.examplesLeveled === 'object') ? w.examplesLeveled
             : null;
   if (!src) return null;
-  const easy = (src.easy || '').toString().trim();
-  const normal = (src.normal || '').toString().trim();
-  const hard = (src.hard || '').toString().trim();
+  const keep = v => { const t = (v || '').toString().trim(); return t && !isWeakExample(t, w.word) ? t : ''; };
+  const easy = keep(src.easy);
+  const normal = keep(src.normal);
+  const hard = keep(src.hard);
   if (!easy && !normal && !hard) return null;
   return { easy: easy, normal: normal, hard: hard };
 }
 function getLegacyExamples(w) {
-  return (w && Array.isArray(w.examples)) ? w.examples.filter(Boolean) : [];
+  return (w && Array.isArray(w.examples)) ? w.examples.filter(e => e && !isWeakExample(e, w.word)) : [];
 }
 function getCollocations(w) {
   return (w && Array.isArray(w.collocations)) ? w.collocations.map(s => String(s).trim()).filter(Boolean) : [];
@@ -8202,7 +8308,8 @@ function askedPanelHtml(list, offset, showTitle, hidden) {
     lastWho = it.who;
     // Show what the class saw first, then the answer under it.
     const front = it.uz2en ? (it.mean || it.word) : it.word;
-    const back = it.uz2en ? it.word : it.mean;
+    // The answer of the word being asked right now stays hidden until it is marked.
+    const back = it.state === 'now' ? '' : (it.uz2en ? it.word : it.mean);
     return who + '<div class="asked-item' + (it.state === 'now' ? ' current' : '') + '">'
       + '<span class="a-num">' + (offset + n + 1) + '.</span>'
       + '<span class="a-text"><span class="a-word">' + esc(front) + '</span>'

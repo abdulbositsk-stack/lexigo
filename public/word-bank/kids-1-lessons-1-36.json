@@ -101,7 +101,7 @@
           "uzb": "uy",
           "emoji": "🏠",
           "examples": {
-            "easy": "This is my house.",
+            "easy": "Our house is next to the park.",
             "normal": "My house has a big green door."
           }
         },
@@ -137,7 +137,7 @@
           "uzb": "oila",
           "emoji": "👨‍👩‍👧‍👦",
           "examples": {
-            "easy": "I love my family.",
+            "easy": "My family goes to the zoo on Sunday.",
             "normal": "My family has dinner together every evening."
           }
         }
@@ -197,7 +197,7 @@
           "uzb": "olti",
           "emoji": "6️⃣",
           "examples": {
-            "easy": "I am six.",
+            "easy": "I have six coloured pencils.",
             "normal": "There are six eggs in the box."
           }
         },
@@ -242,7 +242,7 @@
           "uzb": "raqam",
           "emoji": "🔢",
           "examples": {
-            "easy": "Say a number.",
+            "easy": "My lucky number is seven.",
             "normal": "My favourite number is seven."
           }
         },
@@ -392,7 +392,7 @@
           "uzb": "popkorn",
           "emoji": "🍿",
           "examples": {
-            "easy": "I like popcorn.",
+            "easy": "The popcorn at the cinema is warm.",
             "normal": "We eat popcorn and watch a film."
           }
         },
@@ -401,7 +401,7 @@
           "uzb": "o'g'il bola",
           "emoji": "👦",
           "examples": {
-            "easy": "He is a boy.",
+            "easy": "A boy in my class has a red bike.",
             "normal": "The boy is playing with a ball."
           }
         },
@@ -410,7 +410,7 @@
           "uzb": "qiz bola",
           "emoji": "👧",
           "examples": {
-            "easy": "She is a girl.",
+            "easy": "The girl next door has a cat.",
             "normal": "The girl has long brown hair."
           }
         },
@@ -479,7 +479,7 @@
           "uzb": "binafsha",
           "emoji": "🟣",
           "examples": {
-            "easy": "I like purple.",
+            "easy": "Purple is my favourite colour.",
             "normal": "My sister has a purple bike."
           }
         },
@@ -497,7 +497,7 @@
           "uzb": "kamalak",
           "emoji": "🌈",
           "examples": {
-            "easy": "Look, a rainbow!",
+            "easy": "After the rain we see a rainbow.",
             "normal": "After the rain we see a beautiful rainbow."
           }
         },
@@ -524,7 +524,7 @@
           "uzb": "mo'yqalam",
           "emoji": "🖌️",
           "examples": {
-            "easy": "Here is a paintbrush.",
+            "easy": "Wash your paintbrush in water.",
             "normal": "Wash your paintbrush in the water."
           }
         },
@@ -533,7 +533,7 @@
           "uzb": "musiqa",
           "emoji": "🎵",
           "examples": {
-            "easy": "I like music.",
+            "easy": "We have music class on Tuesday.",
             "normal": "We listen to music in the car."
           }
         },
@@ -560,7 +560,7 @@
           "uzb": "yulduz",
           "emoji": "⭐",
           "examples": {
-            "easy": "I see a star.",
+            "easy": "Look, a star in the sky!",
             "normal": "At night the sky is full of stars."
           }
         }
@@ -584,7 +584,7 @@
           "uzb": "park",
           "emoji": "🏞️",
           "examples": {
-            "easy": "Let's go to the park.",
+            "easy": "Let's walk the dog in the park.",
             "normal": "We play football in the park on Saturday."
           }
         },
@@ -638,7 +638,7 @@
           "uzb": "kapalak",
           "emoji": "🦋",
           "examples": {
-            "easy": "Look at the butterfly!",
+            "easy": "The butterfly has pretty wings.",
             "normal": "A yellow butterfly sits on the flower."
           }
         },
@@ -716,7 +716,7 @@
           "uzb": "o'yinchoq",
           "emoji": "🧸",
           "examples": {
-            "easy": "This is my toy.",
+            "easy": "Put your toys in the box, please.",
             "normal": "My favourite toy is a teddy bear."
           }
         },
@@ -779,7 +779,7 @@
           "uzb": "lug'at",
           "emoji": "📔",
           "examples": {
-            "easy": "Use a dictionary.",
+            "easy": "Find the word in the dictionary.",
             "normal": "I look for new words in my dictionary."
           }
         },
@@ -797,7 +797,7 @@
           "uzb": "so'z",
           "emoji": "🔤",
           "examples": {
-            "easy": "Say the word.",
+            "easy": "\"Cat\" is a short word.",
             "normal": "\"Cat\" is a short word."
           }
         },
@@ -824,7 +824,7 @@
           "uzb": "qo'rqqan",
           "emoji": "😨",
           "examples": {
-            "easy": "I am afraid.",
+            "easy": "I am afraid of big spiders.",
             "normal": "My little sister is afraid of the dark."
           }
         },
@@ -866,7 +866,7 @@
           "uzb": "qalam",
           "emoji": "✏️",
           "examples": {
-            "easy": "I have a pencil.",
+            "easy": "Can I borrow your pencil?",
             "normal": "I write in my notebook with a pencil."
           }
         },
@@ -920,7 +920,7 @@
           "uzb": "sumka",
           "emoji": "🎒",
           "examples": {
-            "easy": "This is my bag.",
+            "easy": "My bag is very heavy today.",
             "normal": "My books are in my school bag."
           }
         },
@@ -998,7 +998,7 @@
           "uzb": "sinfxona",
           "emoji": "🏫",
           "examples": {
-            "easy": "This is our classroom.",
+            "easy": "Our classroom has big windows.",
             "normal": "Our classroom has big windows."
           }
         },
@@ -1007,7 +1007,7 @@
           "uzb": "doska",
           "emoji": "🟩",
           "examples": {
-            "easy": "Look at the board.",
+            "easy": "Look at the board, please.",
             "normal": "The teacher writes new words on the board."
           }
         },
@@ -1016,7 +1016,7 @@
           "uzb": "o'qituvchi",
           "emoji": "🧑‍🏫",
           "examples": {
-            "easy": "She is my teacher.",
+            "easy": "The teacher says, \"Good morning!\"",
             "normal": "Our teacher reads us a story every day."
           }
         },
@@ -1034,7 +1034,7 @@
           "uzb": "soat",
           "emoji": "🕐",
           "examples": {
-            "easy": "Look at the clock.",
+            "easy": "The clock in the kitchen is fast.",
             "normal": "The clock says it's time for lunch."
           }
         },
@@ -1184,7 +1184,7 @@
           "uzb": "o'yin maydoni",
           "emoji": "🛝",
           "examples": {
-            "easy": "Let's go to the playground.",
+            "easy": "The playground has two swings.",
             "normal": "We play tag in the playground."
           }
         },
@@ -1229,7 +1229,7 @@
           "uzb": "gaplashmoq",
           "emoji": "💬",
           "examples": {
-            "easy": "Let's talk.",
+            "easy": "Please don't talk in the library.",
             "normal": "I talk to my best friend on the phone."
           }
         },
@@ -1280,7 +1280,7 @@
           "uzb": "o'qimoq",
           "emoji": "📖",
           "examples": {
-            "easy": "I can read.",
+            "easy": "I read a story to my little brother.",
             "normal": "I read a book before bed."
           }
         },
@@ -1334,7 +1334,7 @@
           "uzb": "qo'g'irchoq",
           "emoji": "🧸",
           "examples": {
-            "easy": "This is my puppet.",
+            "easy": "The puppet talks in a funny voice.",
             "normal": "We make a puppet from an old sock."
           }
         },
@@ -1421,7 +1421,7 @@
           "uzb": "pitsa",
           "emoji": "🍕",
           "examples": {
-            "easy": "I like pizza.",
+            "easy": "This pizza has a lot of cheese.",
             "normal": "We eat pizza on Friday evening."
           }
         },
@@ -1484,7 +1484,7 @@
           "uzb": "meva",
           "emoji": "🍎",
           "examples": {
-            "easy": "I like fruit.",
+            "easy": "Eat some fruit after lunch.",
             "normal": "Apples and bananas are my favourite fruit."
           }
         },
@@ -1502,7 +1502,7 @@
           "uzb": "tomchi",
           "emoji": "💧",
           "examples": {
-            "easy": "A drop of water.",
+            "easy": "A drop of water falls on my hand.",
             "normal": "Drops of rain fall on the window."
           }
         },
@@ -1511,7 +1511,7 @@
           "uzb": "yomg'ir",
           "emoji": "🌧️",
           "examples": {
-            "easy": "I like the rain.",
+            "easy": "Take your umbrella, the rain is heavy.",
             "normal": "Take an umbrella, the rain is very heavy."
           }
         },
@@ -1529,7 +1529,7 @@
           "uzb": "gazak",
           "emoji": "🍪",
           "examples": {
-            "easy": "I have a snack.",
+            "easy": "I take a snack to school.",
             "normal": "An apple is a healthy snack after school."
           }
         },
@@ -1598,7 +1598,7 @@
           "uzb": "baqirmoq",
           "emoji": "📢",
           "examples": {
-            "easy": "Don't shout!",
+            "easy": "Please don't shout in class.",
             "normal": "We shout \"Goal!\" when our team scores."
           }
         },
@@ -1661,7 +1661,7 @@
           "uzb": "yiqilmoq",
           "emoji": "🍂",
           "examples": {
-            "easy": "Don't fall!",
+            "easy": "Be careful, don't fall!",
             "normal": "Leaves fall from the trees in autumn."
           }
         },
@@ -1679,7 +1679,7 @@
           "uzb": "qo'rqqan",
           "emoji": "😨",
           "examples": {
-            "easy": "I am scared.",
+            "easy": "I am scared of thunder.",
             "normal": "The little girl is scared of big dogs."
           }
         },
@@ -1688,7 +1688,7 @@
           "uzb": "hayron",
           "emoji": "😮",
           "examples": {
-            "easy": "I am surprised!",
+            "easy": "I am surprised by the big present.",
             "normal": "Mum is surprised when she sees the cake."
           }
         }
@@ -1775,7 +1775,7 @@
           "uzb": "san'at",
           "emoji": "🎨",
           "examples": {
-            "easy": "I love art.",
+            "easy": "We hang our art on the wall.",
             "normal": "We paint and draw in our art lesson."
           }
         },
@@ -1802,7 +1802,7 @@
           "uzb": "birinchi",
           "emoji": "🥇",
           "examples": {
-            "easy": "I am first!",
+            "easy": "I am first in the line!",
             "normal": "Monday is the first day of the school week."
           }
         },
@@ -1829,7 +1829,7 @@
           "uzb": "palitra",
           "emoji": "🎨",
           "examples": {
-            "easy": "Here is my palette.",
+            "easy": "I mix blue and yellow on my palette.",
             "normal": "The artist mixes colours on a palette."
           }
         }
@@ -1844,7 +1844,7 @@
           "uzb": "do'st",
           "emoji": "🧑‍🤝‍🧑",
           "examples": {
-            "easy": "She is my friend.",
+            "easy": "My friend lives next to me.",
             "normal": "My best friend sits next to me in class."
           }
         },
@@ -1898,7 +1898,7 @@
           "uzb": "bo'lishmoq",
           "emoji": "🤲",
           "examples": {
-            "easy": "Let's share.",
+            "easy": "Let's share the crayons.",
             "normal": "I share my sandwich with my friend."
           }
         },
@@ -1907,7 +1907,7 @@
           "uzb": "birga",
           "emoji": "🧑‍🤝‍🧑",
           "examples": {
-            "easy": "Let's play together.",
+            "easy": "We walk to school together.",
             "normal": "My family eats dinner together."
           }
         },
@@ -2075,7 +2075,7 @@
           "uzb": "shlyapa",
           "emoji": "👒",
           "examples": {
-            "easy": "I have a hat.",
+            "easy": "Put on your hat, it's sunny.",
             "normal": "Wear a hat when it's sunny."
           }
         },
@@ -2084,7 +2084,7 @@
           "uzb": "savol",
           "emoji": "❓",
           "examples": {
-            "easy": "I have a question.",
+            "easy": "Can I ask a question?",
             "normal": "Raise your hand if you have a question."
           }
         },
@@ -2093,7 +2093,7 @@
           "uzb": "o'yin xonasi",
           "emoji": "🧸",
           "examples": {
-            "easy": "This is our playroom.",
+            "easy": "We keep our toys in the playroom.",
             "normal": "All our toys are in the playroom."
           }
         },
@@ -2102,7 +2102,7 @@
           "uzb": "shisha",
           "emoji": "🍼",
           "examples": {
-            "easy": "A bottle of water.",
+            "easy": "My water bottle is in my bag.",
             "normal": "I take a bottle of water to school."
           }
         },
@@ -2171,7 +2171,7 @@
           "uzb": "kompyuter",
           "emoji": "💻",
           "examples": {
-            "easy": "I use a computer.",
+            "easy": "I do my homework on the computer.",
             "normal": "We play a game on the computer."
           }
         },
@@ -2180,7 +2180,7 @@
           "uzb": "poyezd",
           "emoji": "🚂",
           "examples": {
-            "easy": "I see a train.",
+            "easy": "The train is very fast.",
             "normal": "We go to Samarkand by train."
           }
         },
@@ -2189,7 +2189,7 @@
           "uzb": "qo'g'irchoq",
           "emoji": "🪆",
           "examples": {
-            "easy": "This is my doll.",
+            "easy": "My doll has a blue dress.",
             "normal": "My sister's doll has long hair."
           }
         },
@@ -2207,7 +2207,7 @@
           "uzb": "ekran",
           "emoji": "🖥️",
           "examples": {
-            "easy": "Look at the screen.",
+            "easy": "Don't sit too close to the screen.",
             "normal": "The screen of my tablet is broken."
           }
         },
@@ -2294,7 +2294,7 @@
           "uzb": "dinozavr",
           "emoji": "🦖",
           "examples": {
-            "easy": "I like dinosaurs.",
+            "easy": "The dinosaur in the museum is huge.",
             "normal": "The dinosaur in the museum is very big."
           }
         },
@@ -2303,7 +2303,7 @@
           "uzb": "vulqon",
           "emoji": "🌋",
           "examples": {
-            "easy": "Look at the volcano!",
+            "easy": "Smoke comes out of the volcano.",
             "normal": "Hot lava comes out of a volcano."
           }
         },
@@ -2348,7 +2348,7 @@
           "uzb": "xona",
           "emoji": "🏠",
           "examples": {
-            "easy": "This is my room.",
+            "easy": "Please tidy your room.",
             "normal": "My room has a bed and a desk."
           }
         },
@@ -2453,7 +2453,7 @@
           "uzb": "plakat",
           "emoji": "🖼️",
           "examples": {
-            "easy": "I have a poster.",
+            "easy": "I have a dinosaur poster.",
             "normal": "There is a big poster on my bedroom wall."
           }
         },
@@ -2507,7 +2507,7 @@
           "uzb": "piramida",
           "emoji": "🔺",
           "examples": {
-            "easy": "Look at the pyramid.",
+            "easy": "The pyramid is very old.",
             "normal": "We build a pyramid with blocks."
           }
         },
@@ -2549,7 +2549,7 @@
           "uzb": "ayiqcha",
           "emoji": "🧸",
           "examples": {
-            "easy": "I love my teddy.",
+            "easy": "My teddy sleeps on my bed.",
             "normal": "I sleep with my teddy bear."
           }
         },
@@ -2594,7 +2594,7 @@
           "uzb": "do'kon",
           "emoji": "🏪",
           "examples": {
-            "easy": "Let's go to the shop.",
+            "easy": "The shop opens at nine.",
             "normal": "I buy bread at the shop."
           }
         },
@@ -2603,7 +2603,7 @@
           "uzb": "tutun",
           "emoji": "💨",
           "examples": {
-            "easy": "I see smoke.",
+            "easy": "Smoke comes out of the chimney.",
             "normal": "Smoke comes out of the chimney."
           }
         },
@@ -2612,7 +2612,7 @@
           "uzb": "shamol tegirmoni",
           "emoji": "🌀",
           "examples": {
-            "easy": "Look at the windmill.",
+            "easy": "The windmill is on the hill.",
             "normal": "The windmill turns in the wind."
           }
         },
@@ -2690,7 +2690,7 @@
           "uzb": "oy",
           "emoji": "🌙",
           "examples": {
-            "easy": "I see the moon.",
+            "easy": "The moon is bright tonight.",
             "normal": "The moon is very bright tonight."
           }
         },
@@ -2708,7 +2708,7 @@
           "uzb": "olim",
           "emoji": "🧑‍🔬",
           "examples": {
-            "easy": "She is a scientist.",
+            "easy": "The scientist looks into a microscope.",
             "normal": "The scientist works in a big lab."
           }
         },
@@ -2780,7 +2780,7 @@
           "uzb": "tirmashmoq",
           "emoji": "🧗",
           "examples": {
-            "easy": "I can climb.",
+            "easy": "Monkeys climb trees.",
             "normal": "The cat climbs up the tree."
           }
         },
@@ -2789,7 +2789,7 @@
           "uzb": "orzu",
           "emoji": "💭",
           "examples": {
-            "easy": "I have a dream.",
+            "easy": "I have a dream to fly a plane.",
             "normal": "Last night I had a dream about a dragon."
           }
         },
@@ -2807,7 +2807,7 @@
           "uzb": "takrorlash",
           "emoji": "🔄",
           "examples": {
-            "easy": "Let's review.",
+            "easy": "Let's review the words from yesterday.",
             "normal": "We review the new words on Friday."
           }
         },
@@ -2831,7 +2831,7 @@
           "uzb": "aka",
           "emoji": "👦",
           "examples": {
-            "easy": "This is my brother.",
+            "easy": "My brother plays football.",
             "normal": "My brother is older than me."
           }
         },
@@ -2840,7 +2840,7 @@
           "uzb": "opa",
           "emoji": "👧",
           "examples": {
-            "easy": "She is my sister.",
+            "easy": "My sister helps me with homework.",
             "normal": "My little sister is three years old."
           }
         },
@@ -2858,7 +2858,7 @@
           "uzb": "ona",
           "emoji": "👩",
           "examples": {
-            "easy": "I love my mother.",
+            "easy": "My mother works in a hospital.",
             "normal": "My mother reads me a story every night."
           }
         },
@@ -2894,7 +2894,7 @@
           "uzb": "albom",
           "emoji": "📔",
           "examples": {
-            "easy": "Look at the album.",
+            "easy": "Look at the photos in this album.",
             "normal": "We keep our photos in a big album."
           }
         },
@@ -2930,7 +2930,7 @@
           "uzb": "qo'shiqchi",
           "emoji": "🎙️",
           "examples": {
-            "easy": "She is a singer.",
+            "easy": "The singer sings on the stage.",
             "normal": "My favourite singer has a beautiful voice."
           }
         },
@@ -3062,7 +3062,7 @@
           "uzb": "lug'at",
           "emoji": "📔",
           "examples": {
-            "easy": "Use a dictionary.",
+            "easy": "Find the word in the dictionary.",
             "normal": "I look for new words in my dictionary."
           }
         },
@@ -3113,7 +3113,7 @@
           "uzb": "xursand",
           "emoji": "😀",
           "examples": {
-            "easy": "I am happy.",
+            "easy": "I am happy on my birthday.",
             "normal": "I am happy when I play with my friends."
           }
         },
@@ -3254,7 +3254,7 @@
           "uzb": "raqsga tushmoq",
           "emoji": "💃",
           "examples": {
-            "easy": "Let's dance!",
+            "easy": "Let's dance at the party!",
             "normal": "We dance to music at the party."
           }
         },
@@ -3290,7 +3290,7 @@
           "uzb": "keks",
           "emoji": "🧁",
           "examples": {
-            "easy": "I want a cupcake.",
+            "easy": "The cupcake has a cherry on top.",
             "normal": "Mum makes chocolate cupcakes for my birthday."
           }
         },
@@ -3299,7 +3299,7 @@
           "uzb": "sendvich",
           "emoji": "🥪",
           "examples": {
-            "easy": "I have a sandwich.",
+            "easy": "Mum makes me a sandwich.",
             "normal": "I eat a cheese sandwich for lunch."
           }
         },
@@ -3308,7 +3308,7 @@
           "uzb": "salat",
           "emoji": "🥗",
           "examples": {
-            "easy": "I like salad.",
+            "easy": "I eat salad with my dinner.",
             "normal": "Grandma makes a salad with tomatoes and cucumbers."
           }
         },
@@ -3317,7 +3317,7 @@
           "uzb": "chips",
           "emoji": "🥔",
           "examples": {
-            "easy": "I like crisps.",
+            "easy": "These crisps are very salty.",
             "normal": "We share a bag of crisps at the party."
           }
         },
@@ -3326,7 +3326,7 @@
           "uzb": "kosa",
           "emoji": "🥣",
           "examples": {
-            "easy": "A bowl of soup.",
+            "easy": "I eat a bowl of soup for lunch.",
             "normal": "I eat my cereal from a big bowl."
           }
         },
@@ -3353,7 +3353,7 @@
           "uzb": "och",
           "emoji": "🍽️",
           "examples": {
-            "easy": "I am hungry.",
+            "easy": "I am hungry. Can I have a banana?",
             "normal": "I am very hungry after football."
           }
         },
@@ -3404,7 +3404,7 @@
           "uzb": "oyi",
           "emoji": "👩",
           "examples": {
-            "easy": "I love my mum.",
+            "easy": "My mum takes me to school.",
             "normal": "My mum makes breakfast every morning."
           }
         },
@@ -3413,7 +3413,7 @@
           "uzb": "krujka",
           "emoji": "☕",
           "examples": {
-            "easy": "This is my mug.",
+            "easy": "My mug has hot milk in it.",
             "normal": "Dad drinks coffee from a big mug."
           }
         },
@@ -3422,7 +3422,7 @@
           "uzb": "piyola",
           "emoji": "🍵",
           "examples": {
-            "easy": "A cup of tea.",
+            "easy": "Grandma drinks a cup of tea.",
             "normal": "Can I have a cup of water, please?"
           }
         },
@@ -3545,7 +3545,7 @@
           "uzb": "rubashka",
           "emoji": "👕",
           "examples": {
-            "easy": "This is my shirt.",
+            "easy": "My shirt has a pocket.",
             "normal": "I wear a white shirt to school."
           }
         },
@@ -3626,7 +3626,7 @@
           "uzb": "xarita",
           "emoji": "🗺️",
           "examples": {
-            "easy": "Look at the map.",
+            "easy": "Look at the map of Uzbekistan.",
             "normal": "We use a map to find the museum."
           }
         },
@@ -3635,7 +3635,7 @@
           "uzb": "buvijon",
           "emoji": "👵",
           "examples": {
-            "easy": "I love my grandma.",
+            "easy": "My grandma tells me stories.",
             "normal": "My grandma makes the best soup."
           }
         },
@@ -3653,7 +3653,7 @@
           "uzb": "lug'at",
           "emoji": "📔",
           "examples": {
-            "easy": "Use a dictionary.",
+            "easy": "Find the word in the dictionary.",
             "normal": "I look for new words in my dictionary."
           }
         },
@@ -3785,7 +3785,7 @@
           "uzb": "fan",
           "emoji": "🔬",
           "examples": {
-            "easy": "I like science.",
+            "easy": "I like science because we do experiments.",
             "normal": "In science class we learn about plants."
           }
         },
@@ -3863,7 +3863,7 @@
           "uzb": "yaxshi",
           "emoji": "👍",
           "examples": {
-            "easy": "That's nice!",
+            "easy": "What a nice day!",
             "normal": "We have a nice teacher."
           }
         },
@@ -3908,7 +3908,7 @@
           "uzb": "latta",
           "emoji": "🧽",
           "examples": {
-            "easy": "Use a cloth.",
+            "easy": "Use this cloth to clean the board.",
             "normal": "Clean the table with a wet cloth."
           }
         },
@@ -3935,7 +3935,7 @@
           "uzb": "maydon",
           "emoji": "🏟️",
           "examples": {
-            "easy": "Let's go to the court.",
+            "easy": "The tennis court is behind the school.",
             "normal": "We play basketball on the school court."
           }
         },
@@ -3986,7 +3986,7 @@
           "uzb": "ko'cha",
           "emoji": "🛣️",
           "examples": {
-            "easy": "This is my street.",
+            "easy": "Hold my hand when we cross the street.",
             "normal": "There are many shops on my street."
           }
         },
@@ -4004,7 +4004,7 @@
           "uzb": "marjon",
           "emoji": "📿",
           "examples": {
-            "easy": "I have a necklace.",
+            "easy": "Grandma gives me a necklace.",
             "normal": "Mum wears a beautiful necklace."
           }
         },
@@ -4127,7 +4127,7 @@
           "uzb": "yelim",
           "emoji": "🧴",
           "examples": {
-            "easy": "Use the glue.",
+            "easy": "I need glue for my picture.",
             "normal": "Glue the picture into your book."
           }
         },
@@ -4208,7 +4208,7 @@
           "uzb": "boshlamoq",
           "emoji": "🏁",
           "examples": {
-            "easy": "Let's start!",
+            "easy": "Let's start the game!",
             "normal": "The race starts at ten o'clock."
           }
         },
@@ -4241,7 +4241,7 @@
           "uzb": "it",
           "emoji": "🐶",
           "examples": {
-            "easy": "I have a dog.",
+            "easy": "The dog barks at the cat.",
             "normal": "My dog likes to play in the garden."
           }
         },
@@ -4322,7 +4322,7 @@
           "uzb": "medal",
           "emoji": "🏅",
           "examples": {
-            "easy": "I have a medal.",
+            "easy": "She gets a gold medal.",
             "normal": "He wins a medal in the race."
           }
         },
@@ -4331,7 +4331,7 @@
           "uzb": "lenta",
           "emoji": "🎀",
           "examples": {
-            "easy": "A red ribbon.",
+            "easy": "My present has a red ribbon.",
             "normal": "She ties her hair with a ribbon."
           }
         },
@@ -4340,7 +4340,7 @@
           "uzb": "lavha",
           "emoji": "🏳️",
           "examples": {
-            "easy": "Look at the banner.",
+            "easy": "The banner says \"Happy Birthday!\"",
             "normal": "We make a banner for the school party."
           }
         },
@@ -4391,7 +4391,7 @@
           "uzb": "kuchukcha",
           "emoji": "🐶",
           "examples": {
-            "easy": "I want a puppy.",
+            "easy": "The puppy wags its tail.",
             "normal": "The puppy runs after the ball."
           }
         },
@@ -4427,7 +4427,7 @@
           "uzb": "oltin baliq",
           "emoji": "🐠",
           "examples": {
-            "easy": "I have a goldfish.",
+            "easy": "Feed the goldfish every day.",
             "normal": "My goldfish swims in a round bowl."
           }
         },
@@ -4595,7 +4595,7 @@
           "uzb": "vanna",
           "emoji": "🛁",
           "examples": {
-            "easy": "I have a bath.",
+            "easy": "The baby has a bath every evening.",
             "normal": "I have a warm bath before bed."
           }
         },
@@ -4640,7 +4640,7 @@
           "uzb": "sochiq",
           "emoji": "🧖",
           "examples": {
-            "easy": "Here is a towel.",
+            "easy": "Dry your hands with a towel.",
             "normal": "Dry your hands with a towel."
           }
         },
@@ -4736,7 +4736,7 @@
           "uzb": "misol",
           "emoji": "💡",
           "examples": {
-            "easy": "Here is an example.",
+            "easy": "The teacher gives us an example on the board.",
             "normal": "The teacher gives us an example on the board."
           }
         },
@@ -4964,7 +4964,7 @@
           "uzb": "fikr",
           "emoji": "💡",
           "examples": {
-            "easy": "I have an idea!",
+            "easy": "I have an idea! Let's play a game.",
             "normal": "Let's go to the park. Good idea!"
           }
         },
@@ -5036,7 +5036,7 @@
           "uzb": "hayron",
           "emoji": "😮",
           "examples": {
-            "easy": "I am surprised!",
+            "easy": "I am surprised by the big present.",
             "normal": "Mum is surprised when she sees the cake."
           }
         },
