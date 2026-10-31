@@ -1540,6 +1540,24 @@
   .mg-sec-name { font-weight:700; color:var(--text); flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   .mg-sec-x { border:none; background:none; color:var(--red-text); cursor:pointer; font-size:13px; padding:2px 4px; }
 
+
+  /* Bulk select (select several, then delete together) */
+  .bulk-bar { display:none; align-items:center; gap:8px; flex-wrap:wrap; margin:0 0 10px; }
+  .bulk-bar .bulk-all { display:inline-flex; align-items:center; gap:6px; font-weight:600; cursor:pointer; }
+  .bulk-bar .bulk-all input { width:18px; height:18px; cursor:pointer; }
+  .bulk-bar .bulk-count { flex:1; min-width:120px; opacity:.8; font-size:.92em; }
+  .bulk-bar .btn[disabled] { opacity:.45; pointer-events:none; }
+  .bulk-mode [data-bulk-kind] { cursor:pointer; position:relative; user-select:none; }
+  .bulk-mode .class-card-actions, .bulk-mode .class-card-report,
+  .bulk-mode .att-row button, .bulk-mode .wli-actions, .bulk-mode .history-row-actions { display:none !important; }
+  .bulk-mode [data-bulk-picked] { outline:3px solid #2f6fed; outline-offset:-3px; background-color:rgba(47,111,237,.10); }
+  .bulk-tick { display:inline-flex; align-items:center; justify-content:center; flex:0 0 auto; width:22px; height:22px;
+    border-radius:6px; border:2px solid rgba(47,111,237,.6); background:#fff; color:#fff; font-size:14px; font-weight:800; margin-right:8px; }
+  .bulk-tick.on { background:#2f6fed; border-color:#2f6fed; }
+  .class-card > .bulk-tick { position:absolute; top:10px; right:10px; margin:0; z-index:2; }
+  body.adult-mode .bulk-tick { background:rgba(255,255,255,.08); border-color:rgba(212,166,74,.55); }
+  body.adult-mode .bulk-tick.on { background:#d4a64a; border-color:#d4a64a; color:#1a1408; }
+  body.adult-mode .bulk-mode [data-bulk-picked] { outline-color:#d4a64a; background-color:rgba(212,166,74,.12); }
 </style>
 <style id="mode-and-adult-theme">
   /* ============================================================
@@ -3163,7 +3181,7 @@
         </button>
         <div class="att-body" id="attBody" style="display:none;">
           <div class="row att-add-row">
-            <input type="text" id="rosterNameInput" placeholder="Add student name..." />
+            <input type="text" id="rosterNameInput" placeholder="Add names (Ali, Vali, Hasan...)" />
             <button class="btn" onclick="addRosterName()">&#43; Add</button>
           </div>
           <div class="row att-search-row" id="attSearchRow" style="display:none;">
@@ -4166,14 +4184,27 @@ function renderQuizModePanels() {
     : '&#127922; Back to random Pick One';
 }
 
+document.addEventListener('paste', function (e) {
+  const t = e.target;
+  if (!t || t.id !== 'rosterNameInput') return;
+  const text = (e.clipboardData || window.clipboardData).getData('text');
+  if (!/[\r\n]/.test(text)) return;
+  e.preventDefault();
+  const joined = text.split(/[\r\n]+/).map(x => x.trim()).filter(Boolean).join(', ');
+  t.value = t.value ? t.value.replace(/[,\s]*$/, '') + ', ' + joined : joined;
+});
+
 function addRosterName() {
   const input = document.getElementById('rosterNameInput');
-  const name = input.value.trim();
-  if (!name) { input.focus(); return; }
-  const exists = roster.some(s => studentKey(s.name) === studentKey(name));
-  if (exists) { input.value = ''; input.focus(); return; }
-  roster.push({ name: name, sourceMode: currentSourceMode() });
-  saveRoster();
+  const names = splitManyNames(input.value, false);
+  if (!names.length) { input.focus(); return; }
+  let added = 0;
+  names.forEach(name => {
+    if (roster.some(s => studentKey(s.name) === studentKey(name))) return;
+    roster.push({ name: name, sourceMode: currentSourceMode() });
+    added++;
+  });
+  if (added) saveRoster();
   input.value = '';
   input.focus();
   renderRosterPanel();
@@ -4216,6 +4247,170 @@ function openClassList() {
   if (inp && roster.length === 0) setTimeout(() => inp.focus(), 350);
 }
 
+/* ===== BULK SELECT — pick several items, then delete them together =====
+   Works the same way in every list: "Select several" turns on tick mode,
+   tapping a row/card ticks it, "Select all" ticks everything shown, and
+   "Delete selected" removes them in one go after a single confirmation. */
+const BULK_KINDS = {
+  roster:    { container: 'attRows',                  noun: 'student',    render: () => renderRosterList() },
+  classes:   { container: 'classGrid',                noun: 'group',      render: () => renderDashboard() },
+  groups:    { container: 'groupTypeGrid',            noun: 'group type', render: () => renderGroupTypeGrid() },
+  units:     { container: 'unitGrid',                 noun: 'unit',       render: () => renderUnitGrid() },
+  unitWords: { container: 'unit-word-list-container', noun: 'word',       render: () => renderUnitWordList() },
+  archives:  { container: 'historyList',              noun: 'snapshot',   render: () => renderHistoryPanel() }
+};
+const bulkState = {};
+Object.keys(BULK_KINDS).forEach(k => { bulkState[k] = { on: false, sel: new Set(), ids: [] }; });
+
+function bulkOn(kind) { return !!(bulkState[kind] && bulkState[kind].on); }
+function bulkReset(kind) { const st = bulkState[kind]; if (st) { st.on = false; st.sel.clear(); } }
+function bulkStart(kind) { bulkState[kind].on = true; bulkState[kind].sel.clear(); BULK_KINDS[kind].render(); }
+function bulkStop(kind) { bulkReset(kind); BULK_KINDS[kind].render(); }
+function bulkAll(kind, checked) {
+  const st = bulkState[kind];
+  st.sel = new Set(checked ? st.ids : []);
+  BULK_KINDS[kind].render();
+}
+// Attributes for one selectable row/card.
+function bulkAttrs(kind, id) {
+  const picked = bulkOn(kind) && bulkState[kind].sel.has(String(id));
+  return ' data-bulk-kind="' + kind + '" data-bulk-id="' + esc(String(id)) + '"' + (picked ? ' data-bulk-picked="1"' : '');
+}
+// Tick-mark shown on each item while selecting.
+function bulkTick(kind, id) {
+  if (!bulkOn(kind)) return '';
+  const picked = bulkState[kind].sel.has(String(id));
+  return '<span class="bulk-tick' + (picked ? ' on' : '') + '" aria-hidden="true">' + (picked ? '&#10003;' : '') + '</span>';
+}
+// Called from an item's onclick. Returns true when the click was used for
+// ticking (so the item's normal action, like opening it, is skipped).
+function bulkClick(el, ev) {
+  const kind = el && el.dataset ? el.dataset.bulkKind : '';
+  if (!kind || !bulkOn(kind)) return false;
+  if (ev) { ev.stopPropagation(); ev.preventDefault(); }
+  const id = el.dataset.bulkId;
+  const st = bulkState[kind];
+  if (st.sel.has(id)) st.sel.delete(id); else st.sel.add(id);
+  const picked = st.sel.has(id);
+  if (picked) el.setAttribute('data-bulk-picked', '1'); else el.removeAttribute('data-bulk-picked');
+  const tick = el.querySelector('.bulk-tick');
+  if (tick) { tick.classList.toggle('on', picked); tick.innerHTML = picked ? '&#10003;' : ''; }
+  bulkRenderBar(kind);
+  return true;
+}
+// Each render passes the ids it shows; this draws the toolbar above the list.
+function bulkSync(kind, ids) {
+  const st = bulkState[kind];
+  st.ids = ids.map(String);
+  const keep = new Set(st.ids);
+  st.sel.forEach(id => { if (!keep.has(id)) st.sel.delete(id); });
+  if (!st.ids.length) st.on = false;
+  const box = document.getElementById(BULK_KINDS[kind].container);
+  if (box) box.classList.toggle('bulk-mode', st.on);
+  bulkRenderBar(kind);
+}
+function bulkRenderBar(kind) {
+  const cfg = BULK_KINDS[kind], st = bulkState[kind];
+  const box = document.getElementById(cfg.container);
+  if (!box || !box.parentNode) return;
+  let bar = document.getElementById('bulkBar-' + kind);
+  if (!bar) {
+    bar = document.createElement('div');
+    bar.id = 'bulkBar-' + kind;
+    bar.className = 'bulk-bar';
+    box.parentNode.insertBefore(bar, box);
+  }
+  if (st.ids.length < 2 && !st.on) { bar.innerHTML = ''; bar.style.display = 'none'; return; }
+  bar.style.display = 'flex';
+  if (!st.on) {
+    bar.innerHTML = '<button type="button" class="btn btn-sm bulk-start" onclick="bulkStart(\'' + kind + '\')">&#9745; Select several</button>';
+    return;
+  }
+  const n = st.sel.size, all = n > 0 && n === st.ids.length;
+  const plural = cfg.noun + (n !== 1 ? 's' : '');
+  bar.innerHTML = '<label class="bulk-all"><input type="checkbox"' + (all ? ' checked' : '') + ' onchange="bulkAll(\'' + kind + '\', this.checked)"> Select all</label>'
+    + '<span class="bulk-count">' + n + ' ' + plural + ' selected</span>'
+    + '<button type="button" class="btn btn-sm btn-del bulk-del" onclick="bulkDeleteSelected(\'' + kind + '\')"' + (n ? '' : ' disabled') + '>&#128465; Delete selected</button>'
+    + '<button type="button" class="btn btn-sm" onclick="bulkStop(\'' + kind + '\')">Cancel</button>';
+}
+function bulkDeleteSelected(kind) {
+  const cfg = BULK_KINDS[kind], st = bulkState[kind];
+  const sel = new Set(st.sel);
+  const n = sel.size;
+  if (!n) return;
+  const label = n + ' ' + cfg.noun + (n !== 1 ? 's' : '');
+  if (kind === 'roster') {
+    if (!confirm('Remove ' + label + ' from this class list?')) return;
+    roster = roster.filter(s => !sel.has(studentKey(s.name)));
+    saveRoster();
+    if (nextRandomStudent && sel.has(studentKey(nextRandomStudent))) pickNextRandomStudent();
+    bulkReset(kind);
+    renderRosterPanel();
+    return;
+  }
+  if (kind === 'classes') {
+    if (classes.length - n < 1) { alert('You need at least one class. Leave at least one unselected.'); return; }
+    if (!confirm('Delete ' + label + '? This also deletes their saved word lists and quiz history.')) return;
+    sel.forEach(id => removeClassData(id));
+    bulkReset(kind);
+    renderDashboard();
+    return;
+  }
+  if (kind === 'groups') {
+    const unitCount = units.filter(u => sel.has(u.groupTypeId)).length;
+    if (!confirm('Delete ' + label + '? This also deletes their ' + unitCount + ' unit(s) and all their words.')) return;
+    groupTypes = groupTypes.filter(g => !sel.has(g.id));
+    units = units.filter(u => !sel.has(u.groupTypeId));
+    saveGroupTypes();
+    saveUnits();
+    bulkReset(kind);
+    renderGroupTypeGrid();
+    return;
+  }
+  if (kind === 'units') {
+    if (!confirm('Delete ' + label + '? This deletes all their words.')) return;
+    units = units.filter(u => !sel.has(u.id));
+    saveUnits();
+    bulkReset(kind);
+    renderUnitGrid();
+    return;
+  }
+  if (kind === 'unitWords') {
+    const u = getCurrentUnit();
+    if (!u) return;
+    if (!confirm('Delete ' + label + ' from this unit?')) return;
+    u.words = u.words.filter(w => !sel.has(String(w.id)));
+    saveUnits();
+    bulkReset(kind);
+    renderUnitWordList();
+    return;
+  }
+  if (kind === 'archives') {
+    const classId = currentProgressGroupId;
+    if (!classId) return;
+    if (!confirm('Permanently delete ' + label + '? This cannot be undone.')) return;
+    saveArchives(classId, loadArchives(classId).filter(a => !sel.has(String(a.id))));
+    if (viewingArchiveId && sel.has(String(viewingArchiveId))) viewingArchiveId = null;
+    bulkReset(kind);
+    renderHistoryPanel();
+  }
+}
+// Splits "Ali, Vali; Hasan" (or one name per line) into separate names.
+// "Unit 1-5" style ranges expand to Unit 1 … Unit 5 when allowRange is set.
+function splitManyNames(text, allowRange) {
+  const out = [];
+  String(text || '').split(/[,;\n\r]+/).map(t => t.trim()).filter(Boolean).forEach(t => {
+    const m = allowRange ? t.match(/^(.*?)(\d+)\s*[-–]\s*(\d+)$/) : null;
+    if (m) {
+      const a = parseInt(m[2], 10), b = parseInt(m[3], 10);
+      if (b >= a && b - a < 60) { for (let i = a; i <= b; i++) out.push((m[1] + i).trim()); return; }
+    }
+    out.push(t);
+  });
+  const seen = new Set();
+  return out.filter(n => { const k = n.toLowerCase(); if (seen.has(k)) return false; seen.add(k); return true; });
+}
+
 function renderRosterList() {
   const body = document.getElementById('attBody');
   const rows = document.getElementById('attRows');
@@ -4242,12 +4437,14 @@ function renderRosterList() {
   const q = ((document.getElementById('attSearch') || {}).value || '').trim().toLowerCase();
 
   if (roster.length === 0) {
-    rows.innerHTML = '<div class="roster-empty">No students added yet &mdash; add each name once above.</div>';
+    bulkSync('roster', []);
+    rows.innerHTML = '<div class="roster-empty">No students added yet &mdash; add names above (several at once: separate them with commas).</div>';
     return;
   }
   const list = roster
     .map((s, i) => ({ s, i }))
     .filter(x => !q || x.s.name.toLowerCase().includes(q));
+  bulkSync('roster', list.map(x => studentKey(x.s.name)));
   if (list.length === 0) {
     rows.innerHTML = '<div class="roster-empty">No student matches &ldquo;' + esc(q) + '&rdquo;.</div>';
     return;
@@ -4257,7 +4454,8 @@ function renderRosterList() {
     const abs = isAbsent(x.s.name);
     const num = String(x.i + 1).padStart(2, '0');
     const nameArg = esc(x.s.name).replace(/'/g, "\\'");
-    return '<div class="att-row' + (used ? ' used' : '') + (abs ? ' absent' : '') + '">'
+    return '<div class="att-row' + (used ? ' used' : '') + (abs ? ' absent' : '') + '"' + bulkAttrs('roster', studentKey(x.s.name)) + ' onclick="bulkClick(this, event)">'
+      + bulkTick('roster', studentKey(x.s.name))
       + '<span class="att-num">' + num + '</span>'
       + '<span class="att-name">' + esc(x.s.name) + '</span>'
       + (abs ? '<span class="att-abs-tag">absent</span>' : (used ? '<span class="att-tick" title="Picked today">&#10003;</span>' : ''))
@@ -4594,7 +4792,7 @@ function resetAllGroupResults(classId) {
   try { localStorage.removeItem(resultsKeyFor(classId)); } catch (e) {}
   try { localStorage.removeItem(archiveKeyFor(classId)); } catch (e) {}
   try { localStorage.removeItem(historyKeyFor(classId)); } catch (e) {}
-  try { localStorage.removeItem(recentWordsKeyFor(classId)); } catch (e) {}
+  try { localStorage.removeItem(wordCycleKeyFor(classId)); } catch (e) {}
   try { localStorage.removeItem(usedTodayKeyFor(classId)); } catch (e) {}
   try { localStorage.removeItem(battleResultsKeyFor(classId)); } catch (e) {}
 
@@ -4667,6 +4865,7 @@ function renderHistoryPanel() {
   const list = document.getElementById('historyList');
   if (!classId || !list) return;
   const archives = loadArchives(classId);
+  bulkSync('archives', archives.map(a => a.id));
   if (!archives.length) {
     list.innerHTML = '<p class="hint">No saved snapshots yet. Snapshots are created automatically whenever you clear history.</p>';
     return;
@@ -4680,7 +4879,8 @@ function renderHistoryPanel() {
       const entries = computeGroupEntries(classId, a.results).filter(e => e.attempted).sort((x, y) => y.pct - x.pct);
       previewHtml = '<div class="history-preview">' + (entries.length ? buildGroupBarsHTML(entries, entries, false) : '<p class="hint">No attempts in this snapshot.</p>') + '</div>';
     }
-    return '<div class="history-row">'
+    return '<div class="history-row"' + bulkAttrs('archives', a.id) + ' onclick="bulkClick(this, event)">'
+      + bulkTick('archives', a.id)
       + '<div class="history-row-main">'
       + '<div class="history-row-date">' + formatArchiveDate(a.archivedAt) + '</div>'
       + '<div class="hint">' + count + ' quiz result' + (count !== 1 ? 's' : '') + ' · ' + studentCount + ' student' + (studentCount !== 1 ? 's' : '') + '</div>'
@@ -5216,7 +5416,8 @@ function renderDashboard() {
   const modeClasses = visibleClasses();
   grid.innerHTML = (modeClasses.length ? modeClasses.map(c => {
     const count = wordCountForClass(c.id);
-    return '<div class="class-card" onclick="openClass(\'' + c.id + '\')">'
+    return '<div class="class-card"' + bulkAttrs('classes', c.id) + ' onclick="if (bulkClick(this, event)) return; openClass(\'' + c.id + '\')">'
+      + bulkTick('classes', c.id)
       + '<div class="class-card-actions">'
       + '<button class="btn-icon" onclick="renameClass(\'' + c.id + '\', event)" title="Rename class">&#9999;&#65039;</button>'
       + '<button class="btn-icon btn-del" onclick="deleteClassPrompt(\'' + c.id + '\', event)" title="Delete class">&#128465;&#65039;</button>'
@@ -5239,12 +5440,15 @@ function renderDashboard() {
   + '<div class="class-card-meta">Add a class block</div>'
   + '</div>'
   + '</div>';
+  bulkSync('classes', modeClasses.map(c => c.id));
 }
 
 function openClass(id) {
   const cls = classes.find(c => c.id === id);
   if (!cls || !recordVisibleInMode(cls)) return;
   currentClassId = id;
+  bulkReset('roster');
+  bulkReset('archives');
 
   groupTypes = loadGroupTypes();
   units = loadUnits();
@@ -5311,6 +5515,7 @@ function renderHubProgressSummary() {
 
 function goToDashboard() {
   stopBgMusic();
+  bulkReset('classes');
   currentClassId = null;
   const classBar = document.getElementById('classBar');
   if (classBar) classBar.style.display = 'none';
@@ -5321,9 +5526,10 @@ function goToDashboard() {
 }
 
 function addClass() {
-  const name = prompt('Name for the new class (e.g. "Wednesday 9:00"):');
-  if (!name || !name.trim()) return;
-  classes.push({ id: generateId(), name: name.trim(), sourceMode: currentSourceMode() });
+  const text = prompt('Name for the new class (e.g. "Wednesday 9:00").\nTo add several at once, separate them with commas:');
+  const names = splitManyNames(text, false);
+  if (!names.length) return;
+  names.forEach(name => classes.push({ id: generateId(), name: name, sourceMode: currentSourceMode() }));
   saveClasses();
   renderDashboard();
 }
@@ -5349,15 +5555,19 @@ function deleteClassPrompt(id, event) {
   const cls = classes.find(c => c.id === id);
   if (!cls) return;
   if (!confirm('Delete "' + cls.name + '"? This will also delete its saved word list and quiz history.')) return;
+  removeClassData(id);
+  renderDashboard();
+}
+
+function removeClassData(id) {
   classes = classes.filter(c => c.id !== id);
   saveClasses();
   [wordsKeyFor, historyKeyFor, resultsKeyFor, rosterKeyFor, usedTodayKeyFor,
-   selectedUnitsKeyFor, recentWordsKeyFor, battleResultsKeyFor, archiveKeyFor,
+   selectedUnitsKeyFor, wordCycleKeyFor, battleResultsKeyFor, archiveKeyFor,
    telegramChatIdKeyFor, telegramMetaKeyFor].forEach(fn => {
     try { localStorage.removeItem(fn(id)); } catch (e) {}
   });
   if (currentClassId === id) { currentClassId = null; }
-  renderDashboard();
 }
 
 function addWord() {
@@ -5643,6 +5853,7 @@ function saveUnits() {
 }
 
 function openLibrary() {
+  bulkReset('groups');
   groupTypes = loadGroupTypes();
   units = loadUnits();
   renderGroupTypeGrid();
@@ -5654,7 +5865,8 @@ function renderGroupTypeGrid() {
   if (!grid) return;
   grid.innerHTML = visibleGroupTypes().map(g => {
     const unitCount = units.filter(u => u.groupTypeId === g.id && unitUsableInMode(u)).length;
-    return '<div class="class-card" data-id="' + g.id + '" onclick="openGroupType(\'' + g.id + '\')">'
+    return '<div class="class-card" data-id="' + g.id + '"' + bulkAttrs('groups', g.id) + ' onclick="if (bulkClick(this, event)) return; openGroupType(\'' + g.id + '\')">'
+      + bulkTick('groups', g.id)
       + '<div class="class-card-actions">'
       + '<button class="btn-icon drag-handle" title="Drag to reorder">&#8942;&#8942;</button>'
       + '<button class="btn-icon" onclick="renameGroupType(\'' + g.id + '\', event)" title="Rename">&#9999;&#65039;</button>'
@@ -5670,13 +5882,15 @@ function renderGroupTypeGrid() {
   + '<div class="class-card-icon">&#43;</div>'
   + '<div class="class-card-body"><div class="class-card-name">New group type</div>'
   + '<div class="class-card-meta">e.g. Kids 1, Kids 2</div></div></div>';
+  bulkSync('groups', visibleGroupTypes().map(g => g.id));
   initGroupTypeSortable();
 }
 
 function addGroupType() {
-  const name = prompt('Name for the new group type (e.g. "Kids 1"):');
-  if (!name || !name.trim()) return;
-  groupTypes.push({ id: generateId(), name: name.trim(), sourceMode: currentSourceMode() });
+  const text = prompt('Name for the new group type (e.g. "Kids 1").\nTo add several at once, separate them with commas (Kids 1, Kids 2) or use a range (Kids 1-4):');
+  const names = splitManyNames(text, true);
+  if (!names.length) return;
+  names.forEach(name => groupTypes.push({ id: generateId(), name: name, sourceMode: currentSourceMode() }));
   saveGroupTypes();
   renderGroupTypeGrid();
 }
@@ -5708,6 +5922,7 @@ function deleteGroupType(id, event) {
 function openGroupType(id) {
   const g = groupTypes.find(x => x.id === id);
   if (!g || !recordVisibleInMode(g)) return;
+  if (currentGroupTypeId !== id) bulkReset('units');
   currentGroupTypeId = id;
   const label = document.getElementById('currentGroupTypeLabel');
   if (label) label.textContent = g.name;
@@ -5721,7 +5936,8 @@ function renderUnitGrid() {
   const list = sortUnitsNaturally(units.filter(u => u.groupTypeId === currentGroupTypeId && unitUsableInMode(u)));
   grid.innerHTML = list.map(u => {
     const count = (u.words || []).length;
-    return '<div class="class-card" data-id="' + u.id + '" onclick="openUnit(\'' + u.id + '\')">'
+    return '<div class="class-card" data-id="' + u.id + '"' + bulkAttrs('units', u.id) + ' onclick="if (bulkClick(this, event)) return; openUnit(\'' + u.id + '\')">'
+      + bulkTick('units', u.id)
       + '<div class="class-card-actions">'
       + '<button class="btn-icon drag-handle" title="Drag to reorder">&#8942;&#8942;</button>'
       + '<button class="btn-icon" onclick="renameUnit(\'' + u.id + '\', event)" title="Rename">&#9999;&#65039;</button>'
@@ -5737,13 +5953,15 @@ function renderUnitGrid() {
   + '<div class="class-card-icon">&#43;</div>'
   + '<div class="class-card-body"><div class="class-card-name">New unit</div>'
   + '<div class="class-card-meta">e.g. Unit 1</div></div></div>';
+  bulkSync('units', list.map(u => u.id));
   initUnitSortable();
 }
 
 function addUnit() {
-  const name = prompt('Name for the new unit (e.g. "Unit 1"):');
-  if (!name || !name.trim()) return;
-  units.push({ id: generateId(), groupTypeId: currentGroupTypeId, name: name.trim(), words: [], sourceMode: currentSourceMode() });
+  const text = prompt('Name for the new unit (e.g. "Unit 1").\nTo add several at once, separate them with commas (Unit 1, Unit 2) or use a range (Unit 1-10):');
+  const names = splitManyNames(text, true);
+  if (!names.length) return;
+  names.forEach(name => units.push({ id: generateId(), groupTypeId: currentGroupTypeId, name: name, words: [], sourceMode: currentSourceMode() }));
   saveUnits();
   renderUnitGrid();
 }
@@ -5833,6 +6051,8 @@ function backToUnits() {
 }
 
 function openUnit(id) {
+  bulkReset('unitWords');
+  bulkReset('units');
   currentUnitId = id;
   const u = units.find(x => x.id === id);
   if (!u) return;
@@ -5924,12 +6144,14 @@ function renderUnitWordList() {
   const q = searchEl ? searchEl.value.trim().toLowerCase() : '';
   const list = q ? u.words.filter(w => w.word.toLowerCase().includes(q) || (w.uzb || '').toLowerCase().includes(q)) : u.words;
   if (countLabel) countLabel.textContent = u.words.length + ' word' + (u.words.length !== 1 ? 's' : '');
+  bulkSync('unitWords', list.map(w => w.id));
   if (list.length === 0) {
     container.innerHTML = '<div class="roster-empty">No words yet. Add one above, or import a list.</div>';
     return;
   }
   container.innerHTML = list.map(w => {
-    return '<div class="wli">'
+    return '<div class="wli"' + bulkAttrs('unitWords', w.id) + ' onclick="bulkClick(this, event)">'
+      + bulkTick('unitWords', w.id)
       + '<span class="wli-emoji">' + esc(w.emoji || '💬') + '</span>'
       + '<span class="wli-word">' + esc(w.word) + adultWordMetaChips(w) + '</span>'
       + '<span class="wli-uzb">' + esc(w.uzb || '') + '</span>'
@@ -10665,7 +10887,7 @@ function gatherBackupData() {
       usedToday: loadUsedToday(c.id) || { date: '', names: [] },
       battles: loadBattleResults(c.id, true),
       recentWords: (function () {
-        try { return JSON.parse(localStorage.getItem(recentWordsKeyFor(c.id)) || '[]'); } catch (e) { return []; }
+        try { return JSON.parse(localStorage.getItem(wordCycleKeyFor(c.id)) || '[]'); } catch (e) { return []; }
       })()
     };
   });
@@ -10756,7 +10978,7 @@ function restoreBackup(event) {
         localStorage.setItem(resultsKeyFor(classId), JSON.stringify(c.results || []));
         localStorage.setItem(rosterKeyFor(classId), JSON.stringify(c.roster || []));
         localStorage.setItem(usedTodayKeyFor(classId), JSON.stringify(c.usedToday || { date: '', names: [] }));
-        if (Array.isArray(c.recentWords)) localStorage.setItem(recentWordsKeyFor(classId), JSON.stringify(c.recentWords));
+        if (Array.isArray(c.recentWords)) localStorage.setItem(wordCycleKeyFor(classId), JSON.stringify(c.recentWords));
         if (Array.isArray(c.battles)) localStorage.setItem(battleResultsKeyFor(classId), JSON.stringify(c.battles));
       });
       if (Array.isArray(data.groupTypes)) localStorage.setItem(LS_GROUP_TYPES_KEY, JSON.stringify(data.groupTypes));
