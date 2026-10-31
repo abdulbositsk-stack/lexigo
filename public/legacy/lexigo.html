@@ -2291,7 +2291,7 @@
   .og-card .lg-pic { width: clamp(124px, 13vw, 172px); height: clamp(124px, 13vw, 172px); margin-bottom: 8px; position: relative; z-index: 1; }
   .og-card-name { font-family: 'Poppins', 'Inter', sans-serif; font-weight: 700; font-size: clamp(26px, 2.6vw, 34px); letter-spacing: -.02em; line-height: 1.1; position: relative; }
   .og-card-name::after { content: ''; display: block; width: 72px; height: 3px; border-radius: 3px; margin: 14px auto 0; background: currentColor; }
-  .og-card-desc { max-width: 300px; font-size: 16px; line-height: 1.55; min-height: 3.1em; }
+  .og-card-desc { max-width: 300px; font-size: 16px; line-height: 1.55; }
   .og-card-btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; margin-top: 12px; min-width: 76%; height: 58px; padding: 0 28px; border-radius: 999px;
       font-family: 'Poppins', 'Inter', sans-serif; font-weight: 600; font-size: 19px; color: #fff; transition: filter .15s; }
   .og-card-btn .lg-i { width: 22px; height: 22px; }
@@ -2326,14 +2326,14 @@
 
   /* ---------- 2a. Adult start: desk by the window ---------- */
   .og-aw { background: #0a1228; overflow-x: hidden; }
-  .og-aw::before { content: ''; position: absolute; z-index: 0; top: 0; right: 0; width: 58%; height: min(78vh, 720px); min-height: 520px;
+  .og-aw::before { content: ''; position: absolute; z-index: 0; top: 0; right: 0; width: 58%; height: 100%;
       background: var(--og-desk) center 40% / cover no-repeat;
-      -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 34%), linear-gradient(180deg, #000 70%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 34%), linear-gradient(180deg, #000 82%, transparent);
       -webkit-mask-composite: source-in; mask-image: linear-gradient(90deg, transparent 0%, #000 34%), linear-gradient(180deg, #000 70%, transparent); mask-composite: intersect; }
   .og-aw::after { content: ''; position: absolute; z-index: 0; inset: 0; pointer-events: none;
       background: radial-gradient(700px 500px at 0% 30%, rgba(40,70,160,.25), transparent 70%); }
   .og-aw .og-head { border-bottom: 1px solid rgba(255,255,255,.06); }
-  .og-aw-main { flex: 1; display: flex; flex-direction: column; width: 100%; max-width: 1360px; margin: 0 auto; padding: clamp(28px, 6vh, 64px) clamp(16px, 3.4vw, 40px) 32px; }
+  .og-aw-main { flex: 1; display: flex; flex-direction: column; justify-content: center; width: 100%; max-width: 1360px; margin: 0 auto; padding: clamp(28px, 6vh, 64px) clamp(16px, 3.4vw, 40px) 32px; }
   .og-aw-hero { max-width: 600px; }
   .og-kicker { display: inline-flex; align-items: center; gap: 12px; padding: 9px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.04);
       font-size: 14px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #cdd6f0; }
@@ -2492,7 +2492,7 @@
     .og-music { top: 16px; bottom: auto; right: 16px; }
     body.landing-page #made-by-credit { display: none; }
     .og-home-main { padding-bottom: 56px; }
-    .og-utils { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+    .og-utils { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
     .og-util { flex-direction: column; justify-content: center; height: auto; padding: 10px 6px; gap: 6px; border-radius: 16px; }
     .og-util .lg-tl { font-size: 13.5px; }
     .og-quote { padding: 18px; gap: 14px; flex-wrap: wrap; }
@@ -2616,18 +2616,17 @@
             <span class="og-deco og-d1" aria-hidden="true">A</span><span class="og-deco og-d2" aria-hidden="true">B</span><span class="og-deco og-d3" aria-hidden="true">C</span>
             <span class="lg-pic lg-owl" role="img" aria-label="LexiGo owl"></span>
             <span class="og-card-name">Kids Mode</span>
-            <span class="og-card-desc">Fun and engaging vocabulary learning for children aged 7&ndash;12.</span>
+            <span class="og-card-desc">For children aged 7&ndash;12.</span>
             <span class="og-card-btn"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="12" r="6"/><circle cx="16" cy="12" r="6"/><path d="M5.8 13.6a2.6 2.6 0 0 0 4.4 0M13.8 13.6a2.6 2.6 0 0 0 4.4 0"/></svg><span>Kids Mode</span><svg class="lg-i og-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </button>
           <button class="og-card og-adultc" onclick="selectAppMode('adult')" aria-label="Adult Mode: advanced tools for teenage and adult learners">
             <span class="og-ghost og-g1"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span class="og-ghost og-g2"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></svg></span><span class="og-ghost og-g3"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></svg></span><span class="og-ghost og-g4"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg></span>
             <span class="lg-pic lg-desk" role="img" aria-label="Books under a desk lamp"></span>
             <span class="og-card-name">Adult Mode</span>
-            <span class="og-card-desc">Advanced tools and features designed for teenage and adult learners.</span>
+            <span class="og-card-desc">For teenage and adult learners.</span>
             <span class="og-card-btn"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Adult Mode</span><svg class="lg-i og-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </button>
         </div>
-        <p class="og-note"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.01"/></svg><span>You can switch modes anytime in settings.</span></p>
       </main>
       <button class="og-chip og-music" id="msMusicBtn" onclick="toggleModeMusic(event)" title="Music on or off"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span>Music</span></button>
     </div>
@@ -2642,15 +2641,8 @@
           <span class="og-kicker">Welcome, teacher</span>
           <h1 class="og-aw-h1">Teach Smarter.<span>Track Better.</span></h1>
           <p class="og-aw-lead">Powerful tools to build vocabulary, assess students, and achieve real progress.</p>
-          <div class="og-aw-cta"><button class="og-btn og-btn-blue" onclick="adultGo('start')">Get Started <svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><button class="og-btn og-btn-ghost" onclick="try{stopAdultBgMusic()}catch(e){}; menuGoWordBank()"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M9 21V10M15 21V10M19 21V10M2 10l10-6 10 6"/></svg> Word Bank</button></div>
+          <div class="og-aw-cta"><button class="og-btn og-btn-blue" onclick="adultGo('start')">Get Started <svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
         </div>
-        <div class="og-feats">
-          <button class="og-feat" onclick="adultGo('build')"><span class="og-fic og-c-blue"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5.5C4.5 4 8 4 12 6c4-2 7.5-2 10-.5V19c-2.5-1.5-6-1.5-10 .5-4-2-7.5-2-10-.5z"/><path d="M12 6v13.5"/></svg></span><b>Build Vocabulary</b><small>Create, import and manage your vocabulary lists.</small><svg class="lg-i og-farr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-          <button class="og-feat" onclick="adultGo('practice')"><span class="og-fic og-c-green"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg></span><b>Smart Practice</b><small>Use smart review and questions to reinforce learning.</small><svg class="lg-i og-farr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-          <button class="og-feat" onclick="adultGo('track')"><span class="og-fic og-c-purple"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><b>Track Progress</b><small>Monitor student performance and class improvement.</small><svg class="lg-i og-farr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-          <button class="og-feat" onclick="adultGo('classes')"><span class="og-fic og-c-indigo"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.2a5 5 0 0 1 6 4.8"/></svg></span><b>Manage Classes</b><small>Organize students, groups and teaching materials.</small><svg class="lg-i og-farr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-        </div>
-        <div class="og-quote"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 18v-5.5C4 8.4 6 6 9.5 5l.8 1.6C8.2 7.5 7.4 9 7.3 11H10v7zm9 0v-5.5c0-4.1 2-6.5 5.5-7.5l.8 1.6c-2.1.9-2.9 2.4-3 4.4H19v7z"/></svg><p>The beautiful thing about learning is that no one can take it away from you.</p><cite>&ndash; B.B. King</cite></div>
       </main>
     </div>
   </div>
@@ -2660,15 +2652,9 @@
     <div class="lg-screen og og-light og-kw">
       <header class="og-head"><button class="og-chip" onclick="showModeSelect()" title="Change mode"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg><span>Change mode</span></button></header>
       <main class="og-kw-body">
-        <span class="og-banner"><span><b>Lexi</b><b>Go</b></span> Where Words Come Alive</span>
         <h1 class="og-word" aria-label="LexiGo"><span class="l">Lexi</span><span class="g">Go</span></h1>
         <p class="og-kw-tag">Learn words. Practise smarter. Track your progress.</p>
         <button class="og-go" onclick="heroGo('start')">Get Started <i><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></button>
-        <div class="og-pills">
-          <button class="og-pill" onclick="heroGo('build')"><span class="og-fic og-c-blue"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5.5C4.5 4 8 4 12 6c4-2 7.5-2 10-.5V19c-2.5-1.5-6-1.5-10 .5-4-2-7.5-2-10-.5z"/><path d="M12 6v13.5"/></svg></span>Build Vocabulary</button>
-          <button class="og-pill" onclick="heroGo('practice')"><span class="og-fic og-c-green"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg></span>Smart Practice</button>
-          <button class="og-pill" onclick="heroGo('track')"><span class="og-fic og-c-purple"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span>Track Progress</button>
-        </div>
       </main>
     </div>
   </div>
@@ -2681,7 +2667,6 @@
         <div class="og-panel">
           <div class="og-ph">
             <div><span class="og-eyebrow" id="lgHomeMode">Dashboard</span><h1 class="og-greet" id="lgGreeting">Welcome back</h1></div>
-            <p><b>Lexi</b><b>Go</b> &middot; Where Words Come Alive</p>
           </div>
           <button class="og-create" onclick="menuGoCreatePackage()"><i><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></i><span><b>Create Package</b><small>Build a new word set from the Word Bank or import your own list.</small></span><svg class="lg-i og-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           <div class="og-tiles">
@@ -2691,7 +2676,6 @@
             <button class="og-tile" onclick="menuGoAllProgress()"><span class="og-fic og-c-purple"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><span><b>Students&rsquo; Progress</b><small>Results, graphs and reports.</small></span></button>
           </div>
           <div class="og-utils">
-            <button class="og-util" onclick="menuReplayIntro()"><span class="lg-ti"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l5 3.5-5 3.5z"/></svg></span><span class="lg-tl">Replay intro</span></button>
             <button class="og-util" id="muteToggleBtn" onclick="toggleWelcomeMute()"><span class="lg-ti"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></span><span class="lg-tl">Sound</span></button>
             <button class="og-util" onclick="menuGoSettings()"><span class="lg-ti"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span><span class="lg-tl">Settings</span></button>
           </div>
