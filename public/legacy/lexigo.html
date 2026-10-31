@@ -2507,6 +2507,121 @@
   }
   @media (prefers-reduced-motion: reduce) { .lg-screen, .lg-screen * { animation: none !important; transition: none !important; } }
 </style>
+<style id="lg-pro-pages">
+  /* Professional landing pages (mode select, start pages, home). Builds on lg-clean-pages. */
+  .lg-pro { background:
+      radial-gradient(900px 520px at 88% -10%, color-mix(in srgb, var(--lg-acc) 14%, transparent), transparent 70%),
+      radial-gradient(700px 480px at -10% 110%, color-mix(in srgb, var(--lg-acc) 10%, transparent), transparent 70%),
+      var(--lg-bg); }
+  .lg-pro::before { content:''; position:fixed; inset:0; pointer-events:none; opacity:.5;
+      background-image: radial-gradient(rgba(15,20,48,.07) 1px, transparent 1px); background-size: 22px 22px;
+      -webkit-mask-image: linear-gradient(180deg, #000, transparent 70%); mask-image: linear-gradient(180deg, #000, transparent 70%); }
+  .lg-pro > * { position: relative; }
+  .lg-adultc { --lg-acc: #3552f2; --lg-acc-deep: #2440d8; --lg-acc-soft: #e8ecff; }
+  .lg-kidsc { --lg-acc-soft: #fff1e4; }
+  .lg-wide { width: 100%; max-width: 1180px; margin: 0 auto; padding: 12px clamp(16px,4vw,40px) 48px; }
+  .lg-eyebrow { display:inline-flex; align-items:center; gap:8px; padding:7px 14px; border-radius:999px; background:var(--lg-card); border:1px solid var(--lg-line);
+      font-size:13px; font-weight:700; color:var(--lg-mute); box-shadow:0 6px 16px -12px rgba(15,20,48,.35); }
+  .lg-pulse { width:8px; height:8px; border-radius:50%; background:#22c55e; box-shadow:0 0 0 4px rgba(34,197,94,.18); }
+  .lg-pro .lg-h1 { margin-top:18px; }
+  .lg-pro .lg-sub { max-width: 620px; line-height:1.55; font-size: clamp(16px,1.6vw,18.5px); }
+  .lg-intro { display:flex; flex-direction:column; align-items:center; }
+  .lg-intro .lg-sub { margin-left:auto; margin-right:auto; }
+  .lg-foot { display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; padding:18px 16px 26px; color:var(--lg-mute); font-size:13px; font-weight:600; }
+  .lg-dot { width:4px; height:4px; border-radius:50%; background:currentColor; opacity:.5; }
+  .lg-btn .lg-i { width:18px; height:18px; }
+  .lg-btn { box-shadow: 0 12px 24px -14px color-mix(in srgb, var(--lg-acc) 80%, transparent); }
+  .lg-btn.lg-sec { box-shadow: 0 8px 18px -14px rgba(15,20,48,.4); }
+  .lg-btn.lg-sec .lg-i { color: var(--lg-acc); }
+
+  /* Page 1 */
+  .lg-pro .lg-modes { grid-template-columns: repeat(2, minmax(0, 440px)); gap: 28px; margin-top: 40px; }
+  .lg-pro .lg-mode { align-items: stretch; text-align: left; gap: 14px; padding: 28px; border-radius: 26px; position: relative; overflow: hidden; }
+  .lg-pro .lg-mode::after { content:''; position:absolute; inset:0 0 auto 0; height:4px; background: var(--lg-acc); }
+  .lg-mtop { display:flex; align-items:center; gap:18px; }
+  .lg-pro .lg-mode .lg-pic { width: 92px; height: 92px; margin: 0; flex: none; box-shadow: 0 14px 28px -18px rgba(15,20,48,.55); }
+  .lg-mhead { display:flex; flex-direction:column; gap:6px; align-items:flex-start; }
+  .lg-tag { font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color: var(--lg-acc-deep); background: var(--lg-acc-soft); padding:4px 10px; border-radius:999px; }
+  .lg-pro .lg-mname { font-size: 30px; line-height: 1; }
+  .lg-mdesc { color: var(--lg-mute); font-size: 15.5px; line-height: 1.5; font-weight: 500; }
+  .lg-list { list-style:none; margin: 2px 0 8px; padding: 0; display:flex; flex-direction:column; gap:9px; }
+  .lg-list li { display:flex; align-items:flex-start; gap:10px; font-size:15px; font-weight:600; color: var(--lg-ink); }
+  .lg-list .lg-i { width:18px; height:18px; padding:3px; border-radius:50%; background: var(--lg-acc-soft); color: var(--lg-acc); margin-top:1px; }
+  .lg-mode .lg-btn { margin-top: auto; }
+
+  /* Page 2 */
+  .lg-hero-grid { display:grid; grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr); align-items:center; gap: clamp(24px,5vw,72px); width:100%; text-align:left; }
+  .lg-hero-text { display:flex; flex-direction:column; align-items:flex-start; }
+  .lg-hero-text .lg-row { justify-content:flex-start; margin-top:30px; }
+  .lg-pro .lg-hero-text .lg-h1 { font-size: clamp(40px, 5.6vw, 66px); }
+  .lg-hero-art { position:relative; display:grid; place-items:center; min-height: 380px; }
+  .lg-blob { position:absolute; width: min(400px, 90%); aspect-ratio:1; border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, color-mix(in srgb, var(--lg-acc) 26%, #fff), color-mix(in srgb, var(--lg-acc) 8%, transparent) 70%); }
+  .lg-pro .lg-hero, .lg-pro .lg-hero.lg-big { width: min(300px, 70vw); height: min(300px, 70vw); margin: 0; border: 8px solid #fff; box-shadow: 0 30px 60px -30px rgba(15,20,48,.55); position:relative; }
+  .lg-badge { position:absolute; display:flex; align-items:center; gap:10px; padding:10px 14px 10px 10px; border-radius:16px; background:#fff; border:1px solid var(--lg-line);
+      box-shadow:0 18px 36px -22px rgba(15,20,48,.5); font-size:14px; animation: lg-float 6s ease-in-out infinite; }
+  .lg-badge b { display:block; font-weight:800; color: var(--lg-ink); }
+  .lg-badge small { display:block; font-size:12px; color: var(--lg-mute); font-weight:600; }
+  .lg-bi { width:36px; height:36px; border-radius:11px; display:grid; place-items:center; background: var(--lg-acc-soft); color: var(--lg-acc); }
+  .lg-bi .lg-i { width:19px; height:19px; }
+  .lg-b1 { top: 8%; left: 0; }
+  .lg-b2 { bottom: 8%; right: 0; animation-delay: -3s; }
+  @keyframes lg-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  .lg-feats { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; width:100%; margin-top: clamp(28px,5vw,56px); text-align:left; }
+  .lg-feat { display:flex; gap:14px; padding:20px; border-radius:20px; background: color-mix(in srgb, var(--lg-card) 86%, transparent); border:1px solid var(--lg-line); backdrop-filter: blur(6px); }
+  .lg-feat b { display:block; font-size:16px; margin-bottom:4px; }
+  .lg-feat p { margin:0; color: var(--lg-mute); font-size:14.5px; line-height:1.5; font-weight:500; }
+  .lg-fi { flex:none; width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background: var(--lg-acc-soft); color: var(--lg-acc); }
+
+  /* Page 3 */
+  .lg-home-head { display:flex; flex-direction:column; align-items:center; }
+  .lg-home-head .lg-sub { margin-top:10px; }
+  .lg-pro .lg-grid { grid-template-columns: repeat(4, minmax(0,1fr)); max-width: 1040px; gap: 18px; margin-top: 34px; }
+  .lg-pro .lg-tile { height: auto; min-height: 196px; padding: 22px; gap: 16px; position: relative; justify-content: flex-start; border-radius: 22px; box-shadow: 0 10px 26px -22px rgba(15,20,48,.4); }
+  .lg-tt { display:flex; flex-direction:column; gap:6px; }
+  .lg-pro .lg-tl { font-size: 18px; font-weight: 800; letter-spacing: -.01em; }
+  .lg-td { font-size: 14px; line-height: 1.45; color: var(--lg-mute); font-weight: 500; }
+  .lg-tarrow { position:absolute; right:20px; bottom:20px; width:34px; height:34px; border-radius:50%; display:grid; place-items:center; border:1px solid var(--lg-line); color: var(--lg-mute); transition: transform .15s, background .15s, color .15s; }
+  .lg-tarrow .lg-i { width:16px; height:16px; }
+  .lg-tile:hover .lg-tarrow { background: var(--lg-acc); color:#fff; border-color: transparent; transform: translateX(2px); }
+  .lg-tile.lg-main { background: linear-gradient(145deg, var(--lg-acc), var(--lg-acc-deep)); box-shadow: 0 24px 40px -24px color-mix(in srgb, var(--lg-acc) 85%, transparent); }
+  .lg-tile.lg-main .lg-td { color: rgba(255,255,255,.85); }
+  .lg-tile.lg-main .lg-tarrow { border-color: rgba(255,255,255,.4); color:#fff; }
+  .lg-utils { display:flex; flex-wrap:wrap; justify-content:center; gap: 12px; margin-top: 22px; }
+  .lg-pro .lg-utils .lg-tile { flex-direction: row; align-items: center; min-height: 0; height: 52px; padding: 0 18px 0 8px; gap: 10px; border-radius: 999px; box-shadow:none; }
+  .lg-pro .lg-utils .lg-ti { width: 36px; height: 36px; border-radius: 50%; }
+  .lg-pro .lg-utils .lg-ti .lg-i { width: 18px; height: 18px; }
+  .lg-pro .lg-utils .lg-tl { font-size: 15px; font-weight: 700; }
+
+  @media (max-width: 1020px) {
+    .lg-pro .lg-grid { grid-template-columns: repeat(2, minmax(0,1fr)); max-width: 640px; }
+  }
+  @media (max-width: 860px) {
+    .lg-hero-grid { grid-template-columns: 1fr; text-align:center; }
+    .lg-hero-text { align-items:center; order: 2; }
+    .lg-hero-text .lg-row { justify-content:center; }
+    .lg-hero-art { min-height: 300px; order: 1; }
+    .lg-pro .lg-hero, .lg-pro .lg-hero.lg-big { width: 210px; height: 210px; }
+    .lg-feats { grid-template-columns: 1fr; max-width: 560px; margin-left:auto; margin-right:auto; }
+    .lg-pro .lg-modes { grid-template-columns: minmax(0, 520px); }
+  }
+  @media (max-width: 640px) {
+    .lg-pro .lg-modes { gap: 16px; margin-top: 26px; }
+    .lg-pro .lg-mode { padding: 22px; }
+    .lg-pro .lg-mode .lg-pic { width: 72px; height: 72px; }
+    .lg-pro .lg-mname { font-size: 26px; }
+    .lg-badge { font-size: 13px; padding: 8px 12px 8px 8px; }
+    .lg-bi { width: 30px; height: 30px; }
+    .lg-b1 { left: 2%; top: 4%; } .lg-b2 { right: 2%; bottom: 4%; }
+    .lg-pro .lg-grid { gap: 12px; margin-top: 24px; }
+    .lg-pro .lg-tile { min-height: 168px; padding: 16px; }
+    .lg-td { font-size: 13px; }
+    .lg-tarrow { right: 14px; bottom: 14px; width: 30px; height: 30px; }
+    .lg-pro .lg-utils .lg-tile { height: 46px; }
+    .lg-chip span { display: none; }
+    .lg-chip { padding: 0 12px; }
+  }
+</style>
 <style id="lexigo-word-card-polish">
   /* ============================================================
      WORD CARD POLISH — readable meanings and examples in both modes.
@@ -2596,66 +2711,106 @@
   <!-- ===== MODE SELECTION (shown when LexiGo opens) =====
        Real responsive page: two "worlds" (Kids meadow / Adult study).
        Direct child of <body> so the fixed overlay is never confined. -->
+  <!-- ===== PAGE 1: MODE SELECTION (shown when LexiGo opens) ===== -->
   <div id="sec-mode-select" class="section">
-    <div class="lg-screen">
+    <div class="lg-screen lg-pro">
       <header class="lg-top"><div class="lg-logo"><b>L</b><span>Lexi<em>Go</em></span></div><button class="lg-chip" id="msMusicBtn" onclick="toggleModeMusic(event)" title="Music on or off"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span>Music</span></button></header>
-      <main class="lg-body">
-        <h1 class="lg-h1">Choose a mode</h1>
+      <main class="lg-body lg-wide">
+        <div class="lg-intro">
+          <span class="lg-eyebrow"><span class="lg-pulse"></span>Vocabulary platform for English teachers</span>
+          <h1 class="lg-h1">Teach vocabulary <span class="lg-acc">that sticks.</span></h1>
+          <p class="lg-sub">Ready-made word banks, live quizzes, word battles and clear progress reports, in one place. Choose who you are teaching today.</p>
+        </div>
         <div class="lg-modes">
-          <button class="lg-mode lg-kidsc" onclick="selectAppMode('kids')"><span class="lg-pic lg-owl" role="img" aria-label="LexiGo owl"></span><span class="lg-mname">Kids</span><span class="lg-msub">Ages 7&ndash;12</span><span class="lg-btn lg-full">Enter <svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
-          <button class="lg-mode" onclick="selectAppMode('adult')"><span class="lg-pic lg-desk" role="img" aria-label="Books under a desk lamp"></span><span class="lg-mname">Adults</span><span class="lg-msub">Teens &amp; adults</span><span class="lg-btn lg-full">Enter <svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+          <button class="lg-mode lg-kidsc" onclick="selectAppMode('kids')">
+            <span class="lg-mtop"><span class="lg-pic lg-owl" role="img" aria-label="LexiGo owl"></span><span class="lg-mhead"><span class="lg-tag">Ages 7&ndash;12</span><span class="lg-mname">Kids</span></span></span>
+            <span class="lg-mdesc">Picture word cards, friendly battles and cheerful music for young learners.</span>
+            <ul class="lg-list"><li><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>3,200+ words with emojis and real-life examples</span></li><li><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Kids 1 and Kids 2 lessons ready to use</span></li><li><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Word Battle and name-call quizzes</span></li></ul>
+            <span class="lg-btn lg-full">Enter Kids mode <svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </button>
+          <button class="lg-mode lg-adultc" onclick="selectAppMode('adult')">
+            <span class="lg-mtop"><span class="lg-pic lg-desk" role="img" aria-label="Books under a desk lamp"></span><span class="lg-mhead"><span class="lg-tag">Teens &amp; adults</span><span class="lg-mname">Adults</span></span></span>
+            <span class="lg-mdesc">A calm, focused space for general English courses from Starter to Advanced.</span>
+            <ul class="lg-list"><li><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>3,400+ words with collocations and leveled examples</span></li><li><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Six levels, Starter to Advanced</span></li><li><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Progress graphs and Telegram reports</span></li></ul>
+            <span class="lg-btn lg-full">Enter Adult mode <svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </button>
         </div>
       </main>
+      <footer class="lg-foot"><span>&copy; LexiGo</span><span class="lg-dot"></span><span>Vocabulary platform for English teachers</span></footer>
     </div>
   </div>
 
-  <!-- ===== TEENS/ADULT LANDING (the first page of Adult mode) ===== -->
+  <!-- ===== PAGE 2 (Adults): start page ===== -->
   <div id="sec-adult-welcome" class="section">
-    <div class="lg-screen">
-      <header class="lg-top"><div class="lg-logo"><b>L</b><span>Lexi<em>Go</em></span></div><button class="lg-chip" onclick="showModeSelect()"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg><span>Adults</span></button></header>
-      <main class="lg-body">
-        <span class="lg-pic lg-desk lg-hero" role="img" aria-label="Books under a desk lamp"></span>
-        <h1 class="lg-h1">Teach smarter.<br><span class="lg-acc">Track better.</span></h1>
-        <p class="lg-sub">Vocabulary, quizzes and progress in one place.</p>
-        <div class="lg-row">
-          <button class="lg-btn" onclick="adultGo('start')">Get started <svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-          <button class="lg-btn lg-sec" onclick="try{stopAdultBgMusic()}catch(e){}; menuGoWordBank()">Word Bank</button>
+    <div class="lg-screen lg-pro lg-adultp">
+      <header class="lg-top"><div class="lg-logo"><b>L</b><span>Lexi<em>Go</em></span></div><button class="lg-chip" onclick="showModeSelect()"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg><span>Change mode</span></button></header>
+      <main class="lg-body lg-wide">
+        <div class="lg-hero-grid">
+          <div class="lg-hero-text">
+            <span class="lg-eyebrow">Teens &amp; adults &middot; Starter to Advanced</span>
+            <h1 class="lg-h1">Teach smarter.<br><span class="lg-acc">Track better.</span></h1>
+            <p class="lg-sub">Plan lessons from a leveled word bank, run quizzes in class and see every student&rsquo;s progress in clear graphs.</p>
+            <div class="lg-row"><button class="lg-btn" onclick="adultGo('start')">Get started <svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><button class="lg-btn lg-sec" onclick="try{stopAdultBgMusic()}catch(e){}; menuGoWordBank()"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M9 21V10M15 21V10M19 21V10M2 10l10-6 10 6"/></svg> Browse Word Bank</button></div>
+          </div>
+          <div class="lg-hero-art">
+            <span class="lg-blob"></span><span class="lg-pic lg-desk lg-hero" role="img" aria-label="LexiGo"></span>
+            <span class="lg-badge lg-b1"><span class="lg-bi"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l10 5-10 5L2 7z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span><span><b>6 levels</b><small>Starter &rarr; Advanced</small></span></span>
+            <span class="lg-badge lg-b2"><span class="lg-bi"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><span><b>Progress graphs</b><small>Per student, per day</small></span></span>
+          </div>
         </div>
+        <div class="lg-feats"><div class="lg-feat"><span class="lg-fi"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M9 21V10M15 21V10M19 21V10M2 10l10-6 10 6"/></svg></span><div><b>Leveled word bank</b><p>Meanings, collocations and easy, normal and hard examples.</p></div></div><div class="lg-feat"><span class="lg-fi"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M7 9h10M7 13h6"/></svg></span><div><b>Live quizzes</b><p>Ask words in class, mark answers and keep every result.</p></div></div><div class="lg-feat"><span class="lg-fi"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg></span><div><b>Telegram reports</b><p>Send today&rsquo;s progress to your group with one tap.</p></div></div></div>
       </main>
+      <footer class="lg-foot"><span>&copy; LexiGo</span><span class="lg-dot"></span><span>Vocabulary platform for English teachers</span></footer>
     </div>
   </div>
 
-  <!-- ===== KIDS WELCOME (first page of Kids mode) ===== -->
+  <!-- ===== PAGE 2 (Kids): start page ===== -->
   <div id="sec-welcome" class="section">
-    <div class="lg-screen lg-kids">
-      <header class="lg-top"><div class="lg-logo"><b>L</b><span>Lexi<em>Go</em></span></div><button class="lg-chip" onclick="showModeSelect()"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg><span>Kids</span></button></header>
-      <main class="lg-body">
-        <span class="lg-pic lg-owl lg-hero lg-big" role="img" aria-label="LexiGo owl"></span>
-        <h1 class="lg-h1">Learn. Practise. <span class="lg-acc">Grow!</span></h1>
-        <div class="lg-row">
-          <button class="lg-btn lg-lg" onclick="heroGo('start')">Let's go <svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    <div class="lg-screen lg-pro lg-kids">
+      <header class="lg-top"><div class="lg-logo"><b>L</b><span>Lexi<em>Go</em></span></div><button class="lg-chip" onclick="showModeSelect()"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg><span>Change mode</span></button></header>
+      <main class="lg-body lg-wide">
+        <div class="lg-hero-grid">
+          <div class="lg-hero-text">
+            <span class="lg-eyebrow">Kids &middot; Ages 7&ndash;12</span>
+            <h1 class="lg-h1">Learn. Practise.<br><span class="lg-acc">Grow!</span></h1>
+            <p class="lg-sub">Colourful word cards, fun quizzes and friendly battles that help every child remember new English words.</p>
+            <div class="lg-row"><button class="lg-btn lg-lg" onclick="heroGo('start')">Let&rsquo;s go <svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><button class="lg-btn lg-sec lg-lg" onclick="menuGoWordBank()"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M9 21V10M15 21V10M19 21V10M2 10l10-6 10 6"/></svg> Word Bank</button></div>
+          </div>
+          <div class="lg-hero-art">
+            <span class="lg-blob"></span><span class="lg-pic lg-owl lg-hero" role="img" aria-label="LexiGo"></span>
+            <span class="lg-badge lg-b1"><span class="lg-bi"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span><span><b>3,200+ words</b><small>With pictures and examples</small></span></span>
+            <span class="lg-badge lg-b2"><span class="lg-bi"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4M19 21l2-2"/></svg></span><span><b>Word Battle</b><small>Team games in class</small></span></span>
+          </div>
         </div>
+        <div class="lg-feats"><div class="lg-feat"><span class="lg-fi"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M7 9h10M7 13h6"/></svg></span><div><b>Picture word cards</b><p>Every word has an emoji, its meaning and a real-life example.</p></div></div><div class="lg-feat"><span class="lg-fi"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4M19 21l2-2"/></svg></span><div><b>Games and battles</b><p>Name-call quizzes and Word Battle keep the whole class active.</p></div></div><div class="lg-feat"><span class="lg-fi"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><div><b>Progress for parents</b><p>Line graphs and reports you can download or send to Telegram.</p></div></div></div>
       </main>
+      <footer class="lg-foot"><span>&copy; LexiGo</span><span class="lg-dot"></span><span>Vocabulary platform for English teachers</span></footer>
     </div>
   </div>
 
-  <!-- ===== HOME MENU (page 3). Direct child of <body>, like the other landing pages. ===== -->
+  <!-- ===== PAGE 3: HOME MENU ===== -->
   <div id="sec-main-menu" class="section">
-    <div class="lg-screen lg-menu">
-      <header class="lg-top"><div class="lg-logo"><b>L</b><span>Lexi<em>Go</em></span></div><button class="lg-chip" id="switchModeLabel" onclick="menuSwitchMode()"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg><span>Adults</span></button></header>
-      <main class="lg-body">
-        <h1 class="lg-h1 lg-h1s">Home</h1>
+    <div class="lg-screen lg-pro lg-menu">
+      <header class="lg-top"><div class="lg-logo"><b>L</b><span>Lexi<em>Go</em></span></div><button class="lg-chip" id="switchModeLabel" onclick="menuSwitchMode()"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg><span>Mode</span></button></header>
+      <main class="lg-body lg-wide lg-home">
+        <div class="lg-home-head">
+          <span class="lg-eyebrow" id="lgHomeMode">Dashboard</span>
+          <h1 class="lg-h1 lg-h1s" id="lgGreeting">Welcome back</h1>
+          <p class="lg-sub">What would you like to do today?</p>
+        </div>
         <div class="lg-grid">
-          <button class="lg-tile lg-main" onclick="menuGoLibrary()"><span class="lg-ti"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></span><span class="lg-tl">Library</span></button>
-          <button class="lg-tile" onclick="menuGoWordBank()"><span class="lg-ti"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-7 10 7z"/></svg></span><span class="lg-tl">Word Bank</span></button>
-          <button class="lg-tile" onclick="menuGoGroups()"><span class="lg-ti"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.2A5 5 0 0 1 21.5 20"/></svg></span><span class="lg-tl">Groups</span></button>
-          <button class="lg-tile" onclick="menuGoAllProgress()"><span class="lg-ti"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><span class="lg-tl">Progress</span></button>
-          <button class="lg-tile lg-soft" onclick="menuReplayIntro()"><span class="lg-ti"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5z"/></svg></span><span class="lg-tl">Intro</span></button>
+          <button class="lg-tile lg-main" onclick="menuGoLibrary()"><span class="lg-ti"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5V21h16"/></svg></span><span class="lg-tt"><span class="lg-tl">Library</span><span class="lg-td">Your vocabulary units and packages</span></span><span class="lg-tarrow"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+          <button class="lg-tile" onclick="menuGoWordBank()"><span class="lg-ti"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M9 21V10M15 21V10M19 21V10M2 10l10-6 10 6"/></svg></span><span class="lg-tt"><span class="lg-tl">Word Bank</span><span class="lg-td">Ready-made words for every level</span></span><span class="lg-tarrow"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+          <button class="lg-tile" onclick="menuGoGroups()"><span class="lg-ti"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.2a5 5 0 0 1 6 4.8"/></svg></span><span class="lg-tt"><span class="lg-tl">My Groups</span><span class="lg-td">Classes, quizzes and word battles</span></span><span class="lg-tarrow"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+          <button class="lg-tile" onclick="menuGoAllProgress()"><span class="lg-ti"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><span class="lg-tt"><span class="lg-tl">Progress</span><span class="lg-td">Results, graphs and reports</span></span><span class="lg-tarrow"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        </div>
+        <div class="lg-utils">
+          <button class="lg-tile lg-soft" onclick="menuReplayIntro()"><span class="lg-ti"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l5 3.5-5 3.5z"/></svg></span><span class="lg-tl">Intro</span></button>
           <button class="lg-tile lg-soft" id="muteToggleBtn" onclick="toggleWelcomeMute()"><span class="lg-ti"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></span><span class="lg-tl">Sound</span></button>
           <button class="lg-tile lg-soft" onclick="menuGoSettings()"><span class="lg-ti"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span><span class="lg-tl">Settings</span></button>
-          <button class="lg-tile lg-soft" onclick="menuSwitchMode()"><span class="lg-ti"><svg class="lg-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg></span><span class="lg-tl">Mode</span></button>
         </div>
       </main>
+      <footer class="lg-foot"><span>&copy; LexiGo</span><span class="lg-dot"></span><span>Vocabulary platform for English teachers</span></footer>
     </div>
   </div>
 
@@ -14574,6 +14729,22 @@ function copyCurrentUnitToOtherMode() {
     renderTelegramSettingsCard();
   };
   renderTelegramSettingsCard();
+})();
+</script>
+<script>
+/* Home-page greeting and mode label. */
+(function () {
+  function setGreeting() {
+    var h = new Date().getHours();
+    var g = h < 5 ? 'Good evening' : h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening';
+    var el = document.getElementById('lgGreeting');
+    if (el) el.textContent = g + ' \u{1F44B}';
+    var m = document.getElementById('lgHomeMode');
+    if (m) m.textContent = document.body.classList.contains('adult-mode') ? 'Teens & adults dashboard' : 'Kids dashboard';
+  }
+  setGreeting();
+  setInterval(setGreeting, 60000);
+  new MutationObserver(setGreeting).observe(document.body, { attributes: true, attributeFilter: ['class'] });
 })();
 </script>
 </body>
