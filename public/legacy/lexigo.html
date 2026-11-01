@@ -1667,6 +1667,64 @@
   .tgv2 .tgv2-col-sub { font-size: 11px; font-weight: 800; color: #8a93ad; }
   .tgv2 .tgv2-growth-note { margin-top: 14px; padding: 10px 14px; border-radius: 12px; font-weight: 900; font-size: 15px; }
   .tgv2 .tgv2-growth-note.up { background: #e3f7ec; color: #17733f; } .tgv2 .tgv2-growth-note.down { background: #fff0ee; color: #b42318; }
+
+  /* ===== Quick Word Quiz ===== */
+  .qwq-cta { margin-bottom:14px; padding:18px 18px 16px; border-radius:var(--radius); text-align:center;
+    background:linear-gradient(135deg, #1f47c4, #5b3fd6); color:#fff; box-shadow:0 10px 30px rgba(31,71,196,.28); }
+  .qwq-cta-top { display:flex; align-items:center; justify-content:center; gap:10px; }
+  .qwq-cta-icon { font-size:24px; }
+  .qwq-cta-title { font-family:'Poppins',sans-serif; font-size:19px; font-weight:800; letter-spacing:.14em; }
+  .qwq-cta-sub { font-size:13px; opacity:.88; margin:6px 0 12px; }
+  .qwq-cta-btn { background:#ffd76a !important; color:#1b2a6b !important; border:none !important; font-weight:800 !important; padding:10px 22px !important; }
+  body.adult-mode .qwq-cta { background:linear-gradient(135deg, rgba(40,34,22,.95), rgba(24,22,30,.95)); border:1px solid rgba(233,196,106,.35); color:#f3efe7; }
+  body.adult-mode .qwq-cta-title { color:#e9c46a; }
+  body.adult-mode .qwq-cta-btn { background:#e9c46a !important; color:#1a1408 !important; }
+  .qwq-lead { font-size:14px; color:var(--text2); margin-bottom:6px; line-height:1.5; }
+  .qwq-pool { margin-top:14px !important; }
+  .qwq-go { margin-top:12px; font-size:16px; padding:12px 26px; }
+  .qwq-bar { display:flex; align-items:center; gap:16px; flex-wrap:wrap; justify-content:space-between; position:sticky; top:8px; z-index:5; }
+  .qwq-timer { font-family:'Poppins',sans-serif; font-size:clamp(42px,7vw,64px); font-weight:800; color:var(--blue-text); line-height:1; min-width:150px; font-variant-numeric:tabular-nums; }
+  .qwq-timer.urgent { color:#e0453f; animation:qwqPulse 1s infinite; }
+  @keyframes qwqPulse { 50% { transform:scale(1.06); } }
+  .qwq-actions { display:flex; gap:8px; flex-wrap:wrap; }
+  .qwq-reveal { background:#ffd76a !important; color:#3a2a00 !important; border:none !important; font-weight:800 !important; }
+  .qwq-banner { margin:0 0 14px; padding:14px 18px; border-radius:var(--radius); background:var(--amber-bg); color:var(--amber-text); border:1px solid var(--amber-border); font-weight:700; font-size:15px; }
+  .qwq-banner.good { background:var(--green-bg); color:var(--green-text); border-color:var(--green-border); }
+  .qwq-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:14px; }
+  .qwq-card { --qc:#2f6fed; background:var(--surface); border:2px solid var(--border2); border-top:8px solid var(--qc); border-radius:18px; padding:14px 16px 16px; box-shadow:var(--shadow); min-height:220px; }
+  .qwq-cA { --qc:#2f6fed; } .qwq-cB { --qc:#1e9e57; } .qwq-cC { --qc:#f08a00; } .qwq-cD { --qc:#8b5cf6; }
+  .qwq-cE { --qc:#e0453f; } .qwq-cF { --qc:#0ea5a5; } .qwq-cG { --qc:#d946ef; } .qwq-cH { --qc:#64748b; }
+  .qwq-card-head { display:flex; align-items:center; gap:10px; font-weight:800; font-size:15px; color:var(--text2); margin-bottom:10px; }
+  .qwq-badge { width:40px; height:40px; border-radius:12px; background:var(--qc); color:#fff; display:inline-flex; align-items:center; justify-content:center; font-family:'Poppins',sans-serif; font-size:22px; font-weight:800; }
+  .qwq-count { margin-left:auto; font-size:12px; color:var(--text3); }
+  .qwq-words { list-style:none; counter-reset:q; display:flex; flex-direction:column; gap:8px; }
+  .qwq-words li { counter-increment:q; display:flex; align-items:baseline; gap:10px; font-size:clamp(18px,2.2vw,24px); font-weight:800; color:var(--text); flex-wrap:wrap; }
+  .qwq-words li::before { content:counter(q) "."; color:var(--qc); font-size:.8em; min-width:22px; }
+  .qwq-line { flex:1; min-width:60px; border-bottom:2px dashed var(--border2); margin-left:6px; }
+  .qwq-ans { color:var(--green-text); background:var(--green-bg); padding:2px 10px; border-radius:999px; font-size:.85em; }
+  .qwq-card.closed { background:repeating-linear-gradient(45deg, var(--surface), var(--surface) 14px, var(--surface2) 14px, var(--surface2) 28px); }
+  .qwq-shut { display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:150px; gap:6px; }
+  .qwq-shut-letter { font-family:'Poppins',sans-serif; font-size:72px; font-weight:800; color:var(--qc); line-height:1; }
+  .qwq-shut-text { font-weight:800; color:var(--text3); }
+  .qwq-srow { display:grid; grid-template-columns:minmax(110px,1.2fr) auto 2fr 54px; gap:12px; align-items:center; padding:10px 6px; border-bottom:1px solid var(--border2); }
+  .qwq-srow.scored .qwq-sname { color:var(--green-text); }
+  .qwq-sname { font-weight:800; font-size:17px; color:var(--text); }
+  .qwq-scards { display:flex; gap:4px; }
+  .qwq-cpick { width:32px; height:32px; border-radius:9px; border:2px solid var(--qc); background:transparent; color:var(--qc); font-weight:800; cursor:pointer; }
+  .qwq-cpick.on { background:var(--qc); color:#fff; }
+  .qwq-stars { display:flex; gap:4px; flex-wrap:wrap; align-items:center; }
+  .qwq-star, .qwq-zero { width:38px; height:38px; border-radius:50%; border:2px solid var(--border2); background:var(--surface2); color:#c8cede; font-size:20px; line-height:1; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; }
+  .qwq-zero { font-size:14px; font-weight:800; color:var(--text3); }
+  .qwq-star.on { background:#ffd76a; border-color:#f5a623; color:#b86e00; }
+  .qwq-zero.on { background:var(--red-bg); border-color:var(--red-border); color:var(--red-text); }
+  .qwq-sval { font-weight:800; text-align:right; color:var(--text2); }
+  .qwq-add { margin-top:14px; }
+  .qwq-save-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; margin-top:16px; }
+  .qwq-done { text-align:center; padding:30px 20px; }
+  .qwq-done-ic { font-size:52px; }
+  .qwq-done-t { font-family:'Poppins',sans-serif; font-weight:800; font-size:22px; color:var(--text); margin:6px 0; }
+  .qwq-done .qwq-save-row { justify-content:center; }
+  @media (max-width: 640px) { .qwq-srow { grid-template-columns:1fr auto; } .qwq-stars { grid-column:1 / -1; } }
 </style>
 <style id="mode-and-adult-theme">
   /* ============================================================
@@ -3235,6 +3293,8 @@
   </div>
 
 
+  <div id="sec-qwq" class="section"><div id="qwqRoot"></div></div>
+
   <div id="sec-home" class="section">
     <!-- ======================================================
          GROUP PAGE — teacher control center (spec §3–§11, §14)
@@ -3342,6 +3402,13 @@
       <div class="secondary-controls">
         <button class="btn btn-sm" onclick="resetTodaysPicks()">&#128260; Reset Today's Picks</button>
         <button class="btn btn-sm nameCallMuteBtn" onclick="toggleNameCallMute()"></button>
+      </div>
+
+      <!-- QUICK WORD QUIZ — paper cards for the whole class -->
+      <div class="qwq-cta">
+        <div class="qwq-cta-top"><span class="qwq-cta-icon">&#9889;</span><span class="qwq-cta-title">QUICK WORD QUIZ</span></div>
+        <div class="qwq-cta-sub">Cards A, B, C, D for the whole class &middot; timer &middot; partners check &middot; stars</div>
+        <button class="btn qwq-cta-btn" onclick="openQuickWordQuiz()">&#9889; Start Quick Word Quiz</button>
       </div>
 
       <!-- BATTLE ROUND (spec §10) — existing logic, prominent card -->
@@ -14025,7 +14092,9 @@ function buildTelegramReportDOM(report) {
     const band = e.pct >= 80 ? 'good' : (e.pct >= 50 ? 'mid' : 'low');
     const missed = e.missedWords.length
       ? '<div class="tgv2-miss"><span class="tgv2-miss-label">Xato so\'zlar:</span>' + e.missedWords.map(w => '<span class="tgv2-word">' + q(w) + '</span>').join('') + '</div>'
-      : '<div class="tgv2-miss tgv2-clean">✓ Xato yo\'q</div>';
+      : (e.correctSum < e.totalSum
+          ? '<div class="tgv2-miss"><span class="tgv2-miss-label">' + (e.totalSum - e.correctSum) + ' ta so\'z xato</span></div>'
+          : '<div class="tgv2-miss tgv2-clean">✓ Xato yo\'q</div>');
     const trend = multi ? reportStudentTrend(report, e.name) : null;
     const meta = multi
       ? '<div class="tgv2-meta">' + e.attempts + ' ta mashq'
@@ -15284,6 +15353,213 @@ function copyCurrentUnitToOtherMode() {
   setInterval(setGreeting, 60000);
   new MutationObserver(setGreeting).observe(document.body, { attributes: true, attributeFilter: ['class'] });
 })();
+</script>
+<script>
+/* ===== QUICK WORD QUIZ — paper cards A, B, C, D for the whole class =====
+   The teacher makes N cards from the selected units, each with its own
+   words. Students write translations on paper until the timer ends, then
+   the cards close so papers can be swapped, answers are revealed, and the
+   teacher gives each student stars. Results are saved like normal quizzes. */
+const QWQ_SETTINGS_KEY = 'lexigo_qwq_settings_v1';
+const QWQ_LETTERS = 'ABCDEFGH'.split('');
+const qwq = { step: 'setup', cards: [], timer: null, remaining: 0, running: false, closed: false, revealed: false, scores: {}, savedCount: 0 };
+function qwqSettings() {
+  let st = {};
+  try { st = JSON.parse(localStorage.getItem(QWQ_SETTINGS_KEY) || '{}') || {}; } catch (e) {}
+  return {
+    cards: [2, 3, 4, 5, 6, 8].includes(st.cards) ? st.cards : 4,
+    perCard: [3, 4, 5, 6, 8, 10].includes(st.perCard) ? st.perCard : 5,
+    seconds: [30, 60, 90, 120, 180, 300].includes(st.seconds) ? st.seconds : 90,
+    dir: st.dir === 'uz2en' ? 'uz2en' : 'en2uz'
+  };
+}
+function qwqSave(patch) {
+  const st = Object.assign(qwqSettings(), patch || {});
+  try { localStorage.setItem(QWQ_SETTINGS_KEY, JSON.stringify(st)); } catch (e) {}
+  return st;
+}
+function qwqSet(key, value) { const p = {}; p[key] = value; qwqSave(p); qwqRender(); }
+function qwqTime(sec) { sec = Math.max(0, Math.ceil(sec)); return Math.floor(sec / 60) + ':' + String(sec % 60).padStart(2, '0'); }
+function qwqPool() { return uniqueQuizWords(allWords || []).filter(w => w && w.word); }
+
+function openQuickWordQuiz() {
+  if (!currentClassId) return;
+  qwqStopTimer();
+  Object.assign(qwq, { step: 'setup', cards: [], closed: false, revealed: false, scores: {}, running: false });
+  qwqRender();
+  showSection('sec-qwq');
+}
+function qwqBack() {
+  qwqStopTimer();
+  showSection('sec-home');
+}
+function qwqMakeCards() {
+  const st = qwqSettings();
+  const pool = shuffleArray(qwqPool());
+  if (!pool.length) { alert('Select units with words for this group first (Vocabulary Selection).'); return; }
+  const need = st.cards * st.perCard;
+  let list = pool.slice(0, need);
+  while (list.length < need) list = list.concat(shuffleArray(pool).slice(0, need - list.length));
+  qwq.cards = QWQ_LETTERS.slice(0, st.cards).map((letter, i) => ({ letter, words: list.slice(i * st.perCard, (i + 1) * st.perCard) }));
+  qwq.perCard = st.perCard; qwq.dir = st.dir; qwq.seconds = st.seconds;
+  qwq.remaining = st.seconds; qwq.running = false; qwq.closed = false; qwq.revealed = false; qwq.scores = {};
+  qwq.step = 'run';
+  qwqRender();
+}
+function qwqStopTimer() { if (qwq.timer) { clearInterval(qwq.timer); qwq.timer = null; } qwq.running = false; }
+function qwqToggleTimer() {
+  if (qwq.running) { qwqStopTimer(); qwqRender(); return; }
+  if (qwq.remaining <= 0) qwq.remaining = qwq.seconds;
+  qwq.closed = false; qwq.revealed = false; qwq.running = true;
+  let last = Date.now();
+  qwq.timer = setInterval(() => {
+    const now = Date.now();
+    qwq.remaining -= (now - last) / 1000; last = now;
+    if (qwq.remaining <= 10.05 && qwq.remaining > 0 && Math.ceil(qwq.remaining) !== qwq._lastBeep) { qwq._lastBeep = Math.ceil(qwq.remaining); qwqBeep(880, 0.08, 0.12); }
+    if (qwq.remaining <= 0) {
+      qwq.remaining = 0; qwqStopTimer(); qwq.closed = true; qwqBeep(330, 0.7, 0.3); qwqRender(); return;
+    }
+    const t = document.getElementById('qwqTimer');
+    if (t) { t.textContent = qwqTime(qwq.remaining); t.classList.toggle('urgent', qwq.remaining <= 10); }
+  }, 200);
+  qwqRender();
+}
+function qwqBeep(freq, dur, vol) {
+  try {
+    const ctx = getAudioCtx(); const o = ctx.createOscillator(); const g = ctx.createGain();
+    o.type = 'triangle'; o.frequency.value = freq; g.gain.value = vol;
+    g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + dur);
+    o.connect(g); g.connect(ctx.destination); o.start(); o.stop(ctx.currentTime + dur);
+  } catch (e) {}
+}
+function qwqToggleClosed() { qwq.closed = !qwq.closed; qwqRender(); }
+function qwqReveal() { qwqStopTimer(); qwq.closed = false; qwq.revealed = true; qwqRender(); }
+function qwqStartScoring() {
+  qwqStopTimer();
+  const names = roster.filter(s => !isAbsent(s.name)).map(s => s.name);
+  names.forEach((n, i) => {
+    const k = studentKey(n);
+    if (!qwq.scores[k]) qwq.scores[k] = { name: n, card: qwq.cards[i % qwq.cards.length].letter, stars: null };
+  });
+  qwq.step = 'score';
+  qwqRender();
+}
+function qwqSetCard(key, letter) { if (qwq.scores[key]) { qwq.scores[key].card = letter; qwqRender(); } }
+function qwqSetStars(key, n) {
+  const s = qwq.scores[key]; if (!s) return;
+  s.stars = (s.stars === n) ? null : n;
+  qwqRender();
+}
+function qwqAddStudent() {
+  const inp = document.getElementById('qwqNewName');
+  const names = splitManyNames(inp ? inp.value : '', false);
+  names.forEach(n => {
+    const k = studentKey(n);
+    if (!qwq.scores[k]) qwq.scores[k] = { name: n, card: qwq.cards[Object.keys(qwq.scores).length % qwq.cards.length].letter, stars: null };
+  });
+  qwqRender();
+}
+function qwqSaveResults() {
+  const scored = Object.values(qwq.scores).filter(s => s.stars != null);
+  if (!scored.length) { alert('Give at least one student their stars first.'); return; }
+  const now = Date.now();
+  scored.forEach((s, i) => {
+    const card = qwq.cards.find(c => c.letter === s.card) || qwq.cards[0];
+    const rec = {
+      name: s.name, sourceMode: currentSourceMode(), words: [], score: s.stars, total: qwq.perCard,
+      date: now + i, durationMs: qwq.seconds * 1000, quizType: 'quick', card: card.letter,
+      cardWords: card.words.map(w => ({ word: w.word, uzb: w.uzb || '' }))
+    };
+    students.push(rec);
+    try { syncQuizResultToServer(currentClassId, { name: rec.name, score: rec.score, total: rec.total, date: rec.date }); } catch (e) {}
+  });
+  saveResultsData();
+  ['renderResults', 'renderProgressPanel', 'renderReporter', 'renderHubProgressSummary', 'renderBattleBanner'].forEach(fn => {
+    try { if (typeof window[fn] === 'function') window[fn](); } catch (e) {}
+  });
+  qwq.savedCount = scored.length;
+  qwq.step = 'done';
+  qwqRender();
+}
+
+function qwqChips(key, values, current, label) {
+  return '<div class="qs-chips">' + values.map(v => '<button type="button" class="btn btn-sm' + (v === current ? ' btn-primary' : '') + '" onclick="qwqSet(\'' + key + '\', ' + (typeof v === 'string' ? '\'' + v + '\'' : v) + ')">' + label(v) + '</button>').join('') + '</div>';
+}
+function qwqCardHtml(card) {
+  const shut = qwq.closed;
+  const body = shut
+    ? '<div class="qwq-shut"><div class="qwq-shut-letter">' + card.letter + '</div><div class="qwq-shut-text">&#128274; Card closed</div></div>'
+    : '<ol class="qwq-words">' + card.words.map(w => {
+        const ask = qwq.dir === 'uz2en' && w.uzb ? w.uzb : w.word;
+        const ans = qwq.dir === 'uz2en' && w.uzb ? w.word : (w.uzb || '—');
+        return '<li><span class="qwq-ask">' + esc(ask) + '</span>' + (qwq.revealed ? '<span class="qwq-ans">' + esc(ans) + '</span>' : '<span class="qwq-line"></span>') + '</li>';
+      }).join('') + '</ol>';
+  return '<div class="qwq-card qwq-c' + card.letter + (shut ? ' closed' : '') + '">'
+    + '<div class="qwq-card-head"><span class="qwq-badge">' + card.letter + '</span><span>Card ' + card.letter + '</span><span class="qwq-count">' + card.words.length + ' words</span></div>'
+    + body + '</div>';
+}
+function qwqRender() {
+  const root = document.getElementById('qwqRoot');
+  if (!root) return;
+  const cls = classes.find(c => c.id === currentClassId);
+  const head = '<div class="class-bar"><button class="btn btn-sm" onclick="qwqBack()">&#8592; Group</button>'
+    + '<span class="class-bar-name">&#9889; Quick Word Quiz' + (cls ? ' &middot; ' + esc(cls.name) : '') + '</span></div>';
+  const st = qwqSettings();
+  let html = '';
+  if (qwq.step === 'setup') {
+    const pool = qwqPool().length, need = st.cards * st.perCard;
+    html = '<div class="card qwq-setup">'
+      + '<p class="qwq-lead">Make paper cards for the whole class. Give each student a card letter, start the timer, and they write the translations on paper.</p>'
+      + '<div class="qs-row"><span class="qs-label">Cards</span>' + qwqChips('cards', [2, 3, 4, 5, 6, 8], st.cards, v => QWQ_LETTERS.slice(0, v).join(' ')) + '</div>'
+      + '<div class="qs-row"><span class="qs-label">Words per card</span>' + qwqChips('perCard', [3, 4, 5, 6, 8, 10], st.perCard, v => v) + '</div>'
+      + '<div class="qs-row"><span class="qs-label">Time</span>' + qwqChips('seconds', [30, 60, 90, 120, 180, 300], st.seconds, v => qwqTime(v)) + '</div>'
+      + '<div class="qs-row"><span class="qs-label">Students write</span>' + qwqChips('dir', ['en2uz', 'uz2en'], st.dir, v => v === 'en2uz' ? 'English &rarr; Uzbek' : 'Uzbek &rarr; English') + '</div>'
+      + '<p class="hint qwq-pool">' + pool + ' selected words &middot; ' + need + ' needed'
+      + (pool && pool < need ? ' &mdash; some words will repeat on different cards.' : '') + (pool ? '' : ' &mdash; select units in Vocabulary Selection first.') + '</p>'
+      + '<button class="btn btn-primary qwq-go" onclick="qwqMakeCards()"' + (pool ? '' : ' disabled') + '>&#9889; Make the cards</button>'
+      + '</div>';
+  } else if (qwq.step === 'run') {
+    const done = !qwq.running && qwq.remaining <= 0;
+    html = '<div class="card qwq-bar">'
+      + '<div class="qwq-timer' + (qwq.remaining <= 10 && qwq.running ? ' urgent' : '') + '" id="qwqTimer">' + qwqTime(qwq.remaining) + '</div>'
+      + '<div class="qwq-actions">'
+      + (qwq.revealed ? '' : '<button class="btn btn-primary" onclick="qwqToggleTimer()">' + (qwq.running ? '&#9208; Pause' : (done ? '&#128260; Restart timer' : '&#9654; Start timer')) + '</button>')
+      + (!qwq.running && !qwq.revealed && qwq.remaining === qwq.seconds ? '<button class="btn" onclick="qwqMakeCards()">&#128256; New cards</button>' : '')
+      + (qwq.revealed ? '' : '<button class="btn" onclick="qwqToggleClosed()">' + (qwq.closed ? '&#128065; Open cards' : '&#128584; Close cards') + '</button>')
+      + (qwq.revealed ? '<button class="btn btn-primary" onclick="qwqStartScoring()">&#11088; Give stars</button>' : '<button class="btn qwq-reveal" onclick="qwqReveal()">&#128161; Reveal answers</button>')
+      + '</div></div>'
+      + (done && qwq.closed ? '<div class="qwq-banner">&#9200; Time is up! Collect the papers and swap them with a partner, then press <b>Reveal answers</b>.</div>' : '')
+      + (qwq.revealed ? '<div class="qwq-banner good">&#128161; Answers are shown. Partners check each other\'s papers, then press <b>Give stars</b>.</div>' : '')
+      + '<div class="qwq-grid">' + qwq.cards.map(qwqCardHtml).join('') + '</div>';
+  } else if (qwq.step === 'score') {
+    const rows = Object.entries(qwq.scores).map(([k, s]) => {
+      const kk = esc(k).replace(/'/g, "\\'");
+      const stars = Array.from({ length: qwq.perCard }, (_, i) => i + 1).map(n =>
+        '<button type="button" class="qwq-star' + (s.stars != null && n <= s.stars ? ' on' : '') + '" onclick="qwqSetStars(\'' + kk + '\', ' + n + ')" aria-label="' + n + ' stars">&#9733;</button>').join('');
+      return '<div class="qwq-srow' + (s.stars != null ? ' scored' : '') + '">'
+        + '<div class="qwq-sname">' + esc(s.name) + '</div>'
+        + '<div class="qwq-scards">' + qwq.cards.map(c => '<button type="button" class="qwq-cpick qwq-c' + c.letter + (c.letter === s.card ? ' on' : '') + '" onclick="qwqSetCard(\'' + kk + '\', \'' + c.letter + '\')">' + c.letter + '</button>').join('') + '</div>'
+        + '<div class="qwq-stars"><button type="button" class="qwq-zero' + (s.stars === 0 ? ' on' : '') + '" onclick="qwqSetStars(\'' + kk + '\', 0)">0</button>' + stars + '</div>'
+        + '<div class="qwq-sval">' + (s.stars == null ? '&ndash;' : s.stars + '/' + qwq.perCard) + '</div>'
+        + '</div>';
+    }).join('');
+    const scored = Object.values(qwq.scores).filter(s => s.stars != null).length;
+    html = '<div class="card qwq-score">'
+      + '<p class="qwq-lead">Read each name, tap their card letter, then tap as many stars as words they got right.</p>'
+      + (rows || '<p class="hint">No students in the class list yet. Add names below.</p>')
+      + '<div class="row qwq-add"><input type="text" id="qwqNewName" placeholder="Add a student (Ali, Vali...)" /><button class="btn" onclick="qwqAddStudent()">&#43; Add</button></div>'
+      + '<div class="qwq-save-row"><button class="btn" onclick="qwq.step=\'run\';qwqRender()">&#8592; Back to cards</button>'
+      + '<button class="btn btn-primary" onclick="qwqSaveResults()">&#128190; Save ' + scored + ' result' + (scored === 1 ? '' : 's') + '</button></div>'
+      + '</div>';
+  } else {
+    html = '<div class="card qwq-done"><div class="qwq-done-ic">&#127881;</div>'
+      + '<p class="qwq-done-t">' + qwq.savedCount + ' result' + (qwq.savedCount === 1 ? '' : 's') + ' saved</p>'
+      + '<p class="hint">They are in Students\' Progress and in the report you send to Telegram.</p>'
+      + '<div class="qwq-save-row"><button class="btn" onclick="openQuickWordQuiz()">&#128260; New round</button>'
+      + '<button class="btn btn-primary" onclick="qwqBack();setTimeout(()=>{const c=document.getElementById(\'reporterCard\');if(c)c.scrollIntoView({behavior:\'smooth\',block:\'center\'});},120)">&#128228; Send report</button></div></div>';
+  }
+  root.innerHTML = head + html;
+}
 </script>
 </body>
 </html>
