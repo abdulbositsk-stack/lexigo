@@ -46,14 +46,68 @@ async function telegram(token, method, payload) {
     method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload)
   });
   const data = await response.json().catch(() => ({}));
-  if (!response.ok || !data.ok) throw new Error(data.description || `Telegram ${method} failed.`);
+  if (!response.ok || !data.ok) throw telegramError(data, method);
   return data.result;
+}
+
+function telegramError(data, method) {
+  const error = new Error(data.description || `Telegram ${method} failed.`);
+  if (data.parameters && data.parameters.migrate_to_chat_id) error.migrateTo = String(data.parameters.migrate_to_chat_id);
+  return error;
+}
+
+// The shared LexiGo bot: its token lives only in the Netlify environment
+// variable TELEGRAM_BOT_TOKEN, so teachers never need BotFather at all.
+function sharedToken() {
+  const token = String(process.env.TELEGRAM_BOT_TOKEN || '').trim();
+  return /^\d{6,}:[A-Za-z0-9_-]{20,}$/.test(token) ? token : '';
+}
+
+let sharedBotCache = null;
+async function sharedBotInfo() {
+  const token = sharedToken();
+  if (!token) return null;
+  if (!sharedBotCache) {
+    const me = await telegram(token, 'getMe', {});
+    sharedBotCache = { username: me.username || '', name: me.first_name || 'LexiGo bot' };
+  }
+  return sharedBotCache;
+}
+
+function pairCommand(text) {
+  const m = String(text || '').match(/^\/connect(?:@\w+)?\s+(\d{6})\b/i);
+  return m ? m[1] : '';
+}
+
+// Reads new updates of the shared bot once (moving the offset forward so the
+// queue never fills up) and remembers every "/connect 123456" seen in a group.
+async function collectSharedPairs(store, token) {
+  const state = await store.get('shared/offset.json', { type: 'json' }) || {};
+  const updates = await telegram(token, 'getUpdates', {
+    offset: state.next || 0, limit: 100, timeout: 0, allowed_updates: ['message', 'channel_post']
+  });
+  let next = state.next || 0;
+  for (const update of updates || []) {
+    next = Math.max(next, update.update_id + 1);
+    const message = update.message || update.channel_post;
+    if (!message || !message.chat || !['group', 'supergroup'].includes(message.chat.type)) continue;
+    const code = pairCommand(message.text);
+    if (!code) continue;
+    const pending = await store.get('pending/' + code + '.json', { type: 'json' });
+    if (!pending || pending.exp < Date.now()) continue;
+    await store.delete('pending/' + code + '.json').catch(() => {});
+    await store.set('pair/' + code + '.json', JSON.stringify({
+      id: String(message.chat.id), title: String(message.chat.title || 'Telegram group'), at: Date.now()
+    }));
+    telegram(token, 'sendMessage', { chat_id: message.chat.id, text: '✅ LexiGo is connected to this group. Reports will arrive here.' }).catch(() => {});
+  }
+  if (next !== (state.next || 0)) await store.set('shared/offset.json', JSON.stringify({ next, at: Date.now() }));
 }
 
 async function telegramForm(token, method, form) {
   const response = await fetch(`${TELEGRAM_API}/bot${token}/${method}`, { method: 'POST', body: form });
   const data = await response.json().catch(() => ({}));
-  if (!response.ok || !data.ok) throw new Error(data.description || `Telegram ${method} failed.`);
+  if (!response.ok || !data.ok) throw telegramError(data, method);
   return data.result;
 }
 
@@ -79,15 +133,13 @@ function groupFromUpdate(update) {
   return { id: String(chat.id), title: String(chat.title || 'Unnamed Telegram group') };
 }
 
-async function readRecord(store, teacherKey) {
-  const record = await store.get(recordKey(teacherKey), { type: 'json' });
-  if (!record || !record.token) throw new Error('No bot is connected in this browser yet. Save your BotFather token first.');
-  return record;
-}
-
+// A teacher's own bot (advanced) wins; otherwise the shared LexiGo bot is used.
 async function readBot(store, teacherKey) {
-  const record = await readRecord(store, teacherKey);
-  return { record, token: decrypt(record.token) };
+  const record = await store.get(recordKey(teacherKey), { type: 'json' }) || { groups: {} };
+  if (record.token) return { record, token: decrypt(record.token), shared: false };
+  const token = sharedToken();
+  if (!token) throw new Error('Telegram is not set up on this LexiGo site yet. The site owner needs to add TELEGRAM_BOT_TOKEN in Netlify.');
+  return { record, token, shared: true };
 }
 
 export default async request => {
@@ -116,9 +168,72 @@ export default async request => {
       return reply(200, { ok: true, bot: { username: bot.username || '', name: bot.first_name || 'Your bot' } });
     }
 
-    const { record, token } = await readBot(store, teacherKey);
+    if (body.action === 'info') {
+      const record = await store.get(recordKey(teacherKey), { type: 'json' }) || {};
+      let bot = null;
+      try { bot = await sharedBotInfo(); } catch (e) { bot = null; }
+      return reply(200, { ok: true, shared: !!bot, ownBot: !!record.token, bot, groups: record.groups || {} });
+    }
+
+    const { record, token, shared } = await readBot(store, teacherKey);
+
+    // Step 1 of the simple flow: LexiGo shows "/connect 123456" for the class.
+    if (body.action === 'pair-start') {
+      const classId = String(body.classId || '').trim();
+      if (!classId) return reply(400, { ok: false, error: 'Choose a LexiGo group first.' });
+      let code = '';
+      for (let i = 0; i < 6 && !code; i++) {
+        const candidate = String(100000 + (randomBytes(4).readUInt32BE(0) % 900000));
+        if (!(await store.get('pending/' + candidate + '.json', { type: 'json' }))) code = candidate;
+      }
+      if (!code) return reply(503, { ok: false, error: 'Please try again.' });
+      const pairing = { code, classId, exp: Date.now() + 30 * 60 * 1000 };
+      if (record.pairing && record.pairing.code) await store.delete('pending/' + record.pairing.code + '.json').catch(() => {});
+      await store.set('pending/' + code + '.json', JSON.stringify({ exp: pairing.exp }));
+      await store.set(recordKey(teacherKey), JSON.stringify({ ...record, groups: record.groups || {}, pairing, updatedAt: Date.now() }));
+      let bot = null;
+      if (shared) bot = await sharedBotInfo();
+      else { const me = await telegram(token, 'getMe', {}); bot = { username: me.username || '', name: me.first_name || 'Your bot' }; }
+      return reply(200, { ok: true, code, bot });
+    }
+
+    // Step 2: once "/connect 123456" was sent in the Telegram group, link it.
+    if (body.action === 'pair-check') {
+      const pairing = record.pairing;
+      if (!pairing || pairing.exp < Date.now()) return reply(200, { ok: true, linked: false, expired: true });
+      let found = await store.get('pair/' + pairing.code + '.json', { type: 'json' });
+      if (!found) {
+        if (shared) await collectSharedPairs(store, token);
+        else {
+          const updates = await telegram(token, 'getUpdates', { limit: 100, allowed_updates: ['message', 'channel_post'] });
+          for (const update of updates || []) {
+            const message = update.message || update.channel_post;
+            if (message && message.chat && ['group', 'supergroup'].includes(message.chat.type) && pairCommand(message.text) === pairing.code) {
+              await store.set('pair/' + pairing.code + '.json', JSON.stringify({ id: String(message.chat.id), title: String(message.chat.title || 'Telegram group'), at: Date.now() }));
+            }
+          }
+        }
+        found = await store.get('pair/' + pairing.code + '.json', { type: 'json' });
+      }
+      if (!found) return reply(200, { ok: true, linked: false });
+      const group = { id: found.id, title: found.title, savedAt: Date.now() };
+      const groups = { ...(record.groups || {}), [pairing.classId]: group };
+      const { pairing: _done, ...rest } = record;
+      await store.set(recordKey(teacherKey), JSON.stringify({ ...rest, groups, updatedAt: Date.now() }));
+      await store.delete('pair/' + pairing.code + '.json').catch(() => {});
+      return reply(200, { ok: true, linked: true, classId: pairing.classId, group });
+    }
+
+    if (body.action === 'unlink') {
+      const classId = String(body.classId || '').trim();
+      const groups = { ...(record.groups || {}) };
+      delete groups[classId];
+      await store.set(recordKey(teacherKey), JSON.stringify({ ...record, groups, updatedAt: Date.now() }));
+      return reply(200, { ok: true });
+    }
 
     if (body.action === 'groups') {
+      if (shared) return reply(200, { ok: true, groups: Object.values(record.groups || {}) });
       const updates = await telegram(token, 'getUpdates', {
         limit: 100, allowed_updates: ['message', 'channel_post', 'my_chat_member']
       });
@@ -146,7 +261,7 @@ export default async request => {
     if (body.action === 'status') {
       const classId = String(body.classId || '').trim();
       const group = classId ? (record.groups || {})[classId] : null;
-      return reply(200, { ok: true, connected: true, group: group || null });
+      return reply(200, { ok: true, connected: true, shared, group: group || null, groups: record.groups || {} });
     }
 
     if (body.action === 'send') {
@@ -168,28 +283,49 @@ export default async request => {
         images.push({ name, bytes });
       }
       const caption = (shortText || text).slice(0, 1000);
-      const form = new FormData();
-      form.append('chat_id', String(group.id));
-      if (images.length === 1) {
-        form.append('caption', caption);
-        form.append('photo', new Blob([images[0].bytes], { type: 'image/png' }), 'lexigo-' + images[0].name + '.png');
-        await telegramForm(token, 'sendPhoto', form);
-      } else if (images.length > 1) {
-        form.append('media', JSON.stringify(images.map((image, index) => ({
-          type: 'photo', media: 'attach://' + image.name, ...(index === 0 ? { caption } : {})
-        }))));
-        images.forEach(image => form.append(image.name, new Blob([image.bytes], { type: 'image/png' }), 'lexigo-' + image.name + '.png'));
-        await telegramForm(token, 'sendMediaGroup', form);
-      }
-      const shouldSendText = !images.length || text !== shortText;
-      if (shouldSendText) {
-        for (const part of messageChunks(text)) await telegram(token, 'sendMessage', { chat_id: group.id, text: part });
+      try {
+        await sendReport(token, String(group.id), images, caption, text, shortText);
+      } catch (error) {
+        if (!error.migrateTo) throw error;
+        // The Telegram group became a supergroup: follow it to its new id.
+        group.id = error.migrateTo;
+        const groups = { ...(record.groups || {}), [classId]: group };
+        await store.set(recordKey(teacherKey), JSON.stringify({ ...record, groups, updatedAt: Date.now() }));
+        await sendReport(token, String(group.id), images, caption, text, shortText);
       }
       return reply(200, { ok: true, group: { id: String(group.id), title: group.title } });
     }
 
     return reply(400, { ok: false, error: 'Unknown Auto Bot action.' });
   } catch (error) {
-    return reply(502, { ok: false, error: error.message || 'Telegram connection failed.' });
+    return reply(502, { ok: false, error: friendlyError(error.message) });
   }
 };
+
+function friendlyError(message) {
+  const text = String(message || '');
+  if (/chat not found|bot was kicked|not a member|have no rights|need administrator/i.test(text)) {
+    return 'LexiGo bot cannot post in that Telegram group. Make sure the bot is still in the group and allowed to send messages, or connect the group again.';
+  }
+  return text || 'Telegram connection failed.';
+}
+
+async function sendReport(token, chatId, images, caption, text, shortText) {
+  const form = new FormData();
+  form.append('chat_id', chatId);
+  if (images.length === 1) {
+    form.append('caption', caption);
+    form.append('photo', new Blob([images[0].bytes], { type: 'image/png' }), 'lexigo-' + images[0].name + '.png');
+    await telegramForm(token, 'sendPhoto', form);
+  } else if (images.length > 1) {
+    form.append('media', JSON.stringify(images.map((image, index) => ({
+      type: 'photo', media: 'attach://' + image.name, ...(index === 0 ? { caption } : {})
+    }))));
+    images.forEach(image => form.append(image.name, new Blob([image.bytes], { type: 'image/png' }), 'lexigo-' + image.name + '.png'));
+    await telegramForm(token, 'sendMediaGroup', form);
+  }
+  const shouldSendText = !images.length || text !== shortText;
+  if (shouldSendText) {
+    for (const part of messageChunks(text)) await telegram(token, 'sendMessage', { chat_id: chatId, text: part });
+  }
+}

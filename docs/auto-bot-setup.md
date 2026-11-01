@@ -1,27 +1,30 @@
-# LexiGo Auto Send with My Bot
+# LexiGo Telegram reports
 
-The app is ready for a teacher to connect their own BotFather bot. Before the
-first production use, add one secret in Netlify:
+Teachers send each group's report (poster + caption) to its Telegram group
+with one tap. By default everyone uses one shared LexiGo bot, so teachers
+never need BotFather.
 
-1. Open **Netlify → your LexiGo site → Project configuration → Environment variables**.
-2. Add `LEXIGO_TELEGRAM_ENCRYPTION_KEY` with a long, private random value (at least 32 characters).
-3. Mark it as a secret and redeploy the site.
+## One-time setup (site owner)
 
-LexiGo stores each teacher's bot token encrypted in Netlify Blobs. It never
-returns a saved token to the browser and the token must never be committed to
-GitHub. A teacher's browser holds only a random connection key, which lets that
-browser manage its own encrypted bot record.
+1. In Telegram, open **@BotFather**, create the LexiGo bot (`/newbot`) and copy
+   its token. Never paste the token in chat, code or GitHub.
+2. In **Netlify → the LexiGo site → Project configuration → Environment
+   variables**, add `TELEGRAM_BOT_TOKEN` with that token and mark it secret.
+3. Redeploy the site.
 
-Teacher flow:
+`LEXIGO_TELEGRAM_ENCRYPTION_KEY` is only needed if teachers use the optional
+"Use my own bot instead" setting.
 
-1. Create a bot in BotFather and copy the token.
-2. In **Settings → Auto Send with My Bot**, paste the token and save.
-3. Add that bot to the desired Telegram group.
-4. Send `/connect` inside the Telegram group.
-5. In LexiGo, choose **Find my groups**, pick the detected group, and save it
-   for the class.
-6. After a quiz, press **Auto send report**.
+## Teacher flow
 
-The `/connect` command is required so LexiGo can identify the correct group.
-Groups are saved by Telegram's unique chat ID, not only by their title, so two
-groups with the same name cannot be mixed up.
+1. Open a group in LexiGo and press **Connect Telegram group** (or press
+   **Send Report** on a group card that is not connected yet).
+2. Press **Add @bot to your Telegram group** and pick the group.
+3. Send the shown message, for example `/connect 482913`, in that group.
+4. LexiGo links the group by itself within a few seconds.
+5. From then on, **Send Report** posts the report poster, caption and
+   7-day graph straight to that Telegram group.
+
+Codes are single-use and expire after 30 minutes. Groups are saved by
+Telegram's unique chat ID, so groups with the same name never mix. The link is
+remembered per browser; on a new device, connect once again.

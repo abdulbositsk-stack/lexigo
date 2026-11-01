@@ -1558,6 +1558,16 @@
   body.adult-mode .bulk-tick { background:rgba(255,255,255,.08); border-color:rgba(212,166,74,.55); }
   body.adult-mode .bulk-tick.on { background:#d4a64a; border-color:#d4a64a; color:#1a1408; }
   body.adult-mode .bulk-mode [data-bulk-picked] { outline-color:#d4a64a; background-color:rgba(212,166,74,.12); }
+  .tg-pair { margin:12px 0 4px; padding:14px; border-radius:14px; border:1.5px dashed rgba(47,111,237,.45); background:rgba(47,111,237,.06); }
+  .tg-pair-step { display:flex; gap:10px; align-items:flex-start; margin-bottom:10px; }
+  .tg-pair-n { flex:0 0 24px; height:24px; border-radius:50%; background:#2f6fed; color:#fff; font-weight:800; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+  .tg-pair-code { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-top:6px; }
+  .tg-pair-code code { font-size:20px; font-weight:800; letter-spacing:1px; padding:6px 12px; border-radius:10px; background:#fff; border:1px solid rgba(47,111,237,.35); user-select:all; }
+  .tg-pair-wait { margin:4px 0 8px !important; }
+  .tg-pair a.btn { text-decoration:none; }
+  body.adult-mode .tg-pair { border-color:rgba(212,166,74,.5); background:rgba(212,166,74,.07); }
+  body.adult-mode .tg-pair-n { background:#d4a64a; color:#1a1408; }
+  body.adult-mode .tg-pair-code code { background:rgba(255,255,255,.06); border-color:rgba(212,166,74,.45); color:inherit; }
 </style>
 <style id="mode-and-adult-theme">
   /* ============================================================
@@ -5428,7 +5438,7 @@ function renderDashboard() {
       + '<div class="class-card-meta">' + count + ' word' + (count !== 1 ? 's' : '') + '</div>'
       + '</div>'
       + '<div class="class-card-report">'
-      + '<button class="btn btn-sm btn-primary" onclick="sendReportFromCard(\'' + c.id + '\', event)">&#128228; Share Report</button>'
+      + '<button class="btn btn-sm btn-primary" onclick="sendReportFromCard(\'' + c.id + '\', event)">&#128228; Send Report</button>'
       + '<span class="class-card-report-status" id="cardReportStatus-' + c.id + '"></span>'
       + '</div>'
       + '</div>';
@@ -14665,7 +14675,7 @@ function copyCurrentUnitToOtherMode() {
       const data = await autoBotRequest('configure', { token });
       if (input) input.value = '';
       for (const key in autoBotGroupCache) delete autoBotGroupCache[key];
-      autoBotStatus('✅ ' + (data.bot.name || 'Your bot') + ' is connected. Next: add it to your Telegram group and send /connect there.', true);
+      autoBotStatus('✅ ' + (data.bot.name || 'Your bot') + ' is connected. Now press Connect Telegram group above.', true);
     } catch (error) { autoBotStatus('⚠️ ' + error.message, false); }
   };
   window.autoBotFindGroups = async function () {
@@ -14698,10 +14708,98 @@ function copyCurrentUnitToOtherMode() {
     try {
       const data = await autoBotRequest('status', { classId });
       autoBotGroupCache[classId] = data.group || null;
-      if (data.group) autoBotStatus('✅ This group sends to ' + data.group.title + '.', true);
-      else autoBotStatus('Bot connected. Now link a Telegram group (step 3).');
-    } catch (error) { autoBotStatus('Not connected yet. Start with step 1.'); }
+      const panel = document.getElementById('autoBotPairPanel');
+      if (panel) panel.innerHTML = autoBotPairHtml(classId);
+      if (data.group) autoBotStatus('✅ This group sends its reports to ' + data.group.title + '.', true);
+      else autoBotStatus('No Telegram group linked yet. Press Connect Telegram group.');
+    } catch (error) { autoBotStatus(String(error.message || 'Telegram is not available right now.'), false); }
   };
+  /* ===== ONE-TAP TELEGRAM WITH THE SHARED LEXIGO BOT =====
+     The site owner's bot token stays in Netlify (TELEGRAM_BOT_TOKEN). A
+     teacher adds that bot to a Telegram group and sends "/connect 123456"
+     there; LexiGo notices the code and links the group to the class. After
+     that, Send Report posts the poster and caption straight to the group. */
+  const autoBotPair = { classId: '', code: '', bot: null, where: '', timer: null, until: 0 };
+  function autoBotPairNotify(message, good) {
+    autoBotStatus(message, good);
+    setSimpleReportStatus('reporterStatus', message);
+  }
+  function autoBotPairHtml(classId) {
+    const pair = autoBotPair;
+    if (!pair.code || pair.classId !== classId) return '';
+    const user = pair.bot && pair.bot.username;
+    const command = '/connect ' + pair.code;
+    return '<div class="tg-pair">'
+      + '<div class="tg-pair-step"><span class="tg-pair-n">1</span><div>'
+      + (user
+          ? '<a class="btn btn-sm btn-primary" href="https://t.me/' + encodeURIComponent(user) + '?startgroup=lexigo" target="_blank" rel="noopener">&#10133; Add @' + esc(user) + ' to your Telegram group</a>'
+          : 'Add the LexiGo bot to your Telegram group.')
+      + '</div></div>'
+      + '<div class="tg-pair-step"><span class="tg-pair-n">2</span><div>Send this message in that group:'
+      + '<div class="tg-pair-code"><code>' + esc(command) + '</code>'
+      + '<button class="btn btn-sm" onclick="autoBotCopyPair()">&#128203; Copy</button></div></div></div>'
+      + '<p class="hint tg-pair-wait">&#9203; Waiting for the message. The group links by itself, keep this page open.</p>'
+      + '<button class="btn btn-sm" onclick="autoBotPairCancel()">Cancel</button>'
+      + '</div>';
+  }
+  function autoBotPairRefresh() {
+    const panel = document.getElementById('autoBotPairPanel');
+    if (panel) panel.innerHTML = autoBotPairHtml(autoBotClassId());
+    if (currentClassId) window.renderReporter();
+  }
+  window.autoBotPairStart = async function (classId, where) {
+    classId = String(classId || autoBotClassId() || '').trim();
+    if (!classId) { autoBotPairNotify('Choose a LexiGo group first.', false); return; }
+    autoBotPairNotify('⏳ Preparing your connect code…');
+    try {
+      const data = await autoBotRequest('pair-start', { classId });
+      clearTimeout(autoBotPair.timer);
+      Object.assign(autoBotPair, { classId, code: data.code, bot: data.bot || null, where: where || '', until: Date.now() + 29 * 60 * 1000 });
+      autoBotPairRefresh();
+      autoBotPairNotify('');
+      autoBotPairPoll();
+    } catch (error) { autoBotPairNotify('⚠️ ' + error.message, false); }
+  };
+  window.autoBotCopyPair = async function () {
+    const ok = await copySimpleReportText('/connect ' + autoBotPair.code);
+    autoBotPairNotify(ok ? '✅ Copied. Paste it in the Telegram group and send.' : 'Type /connect ' + autoBotPair.code + ' in the group.', ok || undefined);
+  };
+  function autoBotPairStop() {
+    clearTimeout(autoBotPair.timer);
+    autoBotPair.code = '';
+    autoBotPair.timer = null;
+    autoBotPairRefresh();
+  }
+  window.autoBotPairCancel = function () { autoBotPairStop(); autoBotPairNotify(''); };
+  function autoBotPairPoll() {
+    clearTimeout(autoBotPair.timer);
+    if (!autoBotPair.code) return;
+    if (Date.now() > autoBotPair.until) { autoBotPairStop(); autoBotPairNotify('The connect code expired. Press Connect Telegram group again.', false); return; }
+    autoBotPair.timer = setTimeout(async () => {
+      if (!autoBotPair.code) return;
+      try {
+        const data = await autoBotRequest('pair-check');
+        if (data.linked && data.group) {
+          autoBotGroupCache[data.classId] = data.group;
+          autoBotPairStop();
+          autoBotPairNotify('✅ Connected to ' + data.group.title + '. Send Report now posts there with one tap.', true);
+          return;
+        }
+        if (data.expired) { autoBotPairStop(); autoBotPairNotify('The connect code expired. Press Connect Telegram group again.', false); return; }
+      } catch (error) {}
+      autoBotPairPoll();
+    }, document.hidden ? 8000 : 3000);
+  }
+  window.autoBotUnlink = async function (classId) {
+    if (!confirm('Disconnect this group from its Telegram chat? Reports will stop until you connect again.')) return;
+    try {
+      await autoBotRequest('unlink', { classId });
+      autoBotGroupCache[classId] = null;
+      if (classId === currentClassId) window.renderReporter();
+      autoBotLoadStatus();
+    } catch (error) { autoBotPairNotify('⚠️ ' + error.message, false); }
+  };
+
   // Last 7 days of this class as the same line graph the Results page shows,
   // rendered to a PNG so the Telegram group gets the trend with the report.
   function weeklyChartPng(classId) {
@@ -14809,17 +14907,19 @@ function copyCurrentUnitToOtherMode() {
     const options = classesForMode.length
       ? classesForMode.map(cls => '<option value="' + esc(cls.id) + '"' + (cls.id === selected ? ' selected' : '') + '>' + esc(cls.name) + '</option>').join('')
       : '<option value="">Create a group first</option>';
-    return '<ol class="tg-steps" id="autoBotDetails">'
+    return '<div class="row tg-row"><select id="autoBotClassSelect" onchange="autoBotLoadStatus()">' + options + '</select>'
+      + '<button class="btn btn-primary btn-sm" onclick="autoBotPairStart(\'\', \'settings\')">&#128279; Connect Telegram group</button></div>'
+      + '<div id="autoBotPairPanel"></div>'
+      + '<p class="hint tg-status" id="autoBotStatus"></p>'
+      + '<p class="hint" style="margin:8px 0 0;">After connecting, press <b>Send Report</b> on the group page or on the My Groups card. The poster and caption go straight to the Telegram group.</p>'
+      + '<details class="rep-advanced" style="margin-top:12px;"><summary>Use my own bot instead (advanced)</summary>'
+      + '<ol class="tg-steps" id="autoBotDetails">'
       + '<li><div class="tg-step-title">Connect your bot</div>'
       + '<p class="hint">In Telegram, open <b>@BotFather</b>, create a bot and copy its token. Paste it here once. It is encrypted on the LexiGo server and is never shown again, stored in this browser, or put in GitHub.</p>'
       + '<div class="row tg-row"><input id="autoBotTokenInput" type="password" autocomplete="off" placeholder="Bot token from BotFather"><button class="btn btn-primary btn-sm" onclick="autoBotConfigure()">Save bot</button></div></li>'
-      + '<li><div class="tg-step-title">Add the bot to your Telegram group</div>'
-      + '<p class="hint">Add it as an <b>admin</b>, then send <code>/connect</code> in that group.</p></li>'
-      + '<li><div class="tg-step-title">Link the group to a LexiGo group</div>'
-      + '<div class="row tg-row"><select id="autoBotClassSelect" onchange="autoBotLoadStatus()">' + options + '</select><button class="btn btn-sm" onclick="autoBotFindGroups()">🔎 Find my Telegram groups</button></div>'
-      + '<div id="autoBotGroupChoices"></div></li>'
-      + '</ol><p class="hint tg-status" id="autoBotStatus"></p>'
-      + '<p class="hint" style="margin:8px 0 0;">Done? On the group page, after asking words, press <b>Send today’s progress</b>. Each browser or device connects its bot once.</p>';
+      + '<li><div class="tg-step-title">Then use Connect Telegram group above</div>'
+      + '<p class="hint">Your own bot is used instead of the LexiGo bot for this browser.</p></li>'
+      + '</ol></details>';
   }
 
   // On supported desktop/mobile systems this opens the operating system's
@@ -14874,16 +14974,18 @@ function copyCurrentUnitToOtherMode() {
         + (sent ? '✓ Sent today at ' + sentAt + ' · Send again' : '📤 Send today’s progress') + '</button>';
       hint = 'Sends today’s scores, missed words and a 7-day progress graph to <b>' + esc(group.title) + '</b>.';
     } else {
-      badge = group === null ? '<span class="rep-status off">Bot not connected</span>' : '<span class="rep-status off">Checking…</span>';
-      main = '<button class="btn btn-primary rep-main" onclick="' + call('shareGroupReport') + '">📤 Share to Telegram</button>'
-        + '<button class="btn btn-sm" onclick="openTelegramBotSetup(\'' + classId + '\')">⚙️ Set up one-tap sending</button>';
-      hint = 'Opens Telegram with today’s report ready. Connect your bot once to send it to the group with one tap.';
+      badge = group === null ? '<span class="rep-status off">Telegram not connected</span>' : '<span class="rep-status off">Checking…</span>';
+      const pairing = autoBotPair.code && autoBotPair.classId === id;
+      main = pairing ? '' : '<button class="btn btn-primary rep-main" onclick="autoBotPairStart(\'' + classId + '\', \'reporter\')">&#128279; Connect Telegram group</button>';
+      hint = 'Connect this group’s Telegram chat once. After that, one tap sends the report poster and caption there.';
     }
     host.innerHTML = '<div class="rep-head"><span class="rep-title">📨 Today’s report</span>' + badge + '</div>'
       + '<p class="hint rep-hint">' + hint + '</p>'
-      + '<div class="rep-send-row">' + main + '</div>'
+      + (main ? '<div class="rep-send-row">' + main + '</div>' : '')
+      + (group ? '' : '<div id="reporterPairPanel">' + autoBotPairHtml(id) + '</div>')
       + '<details class="rep-more"><summary>More ways to share</summary><div class="rep-more-row">'
-      + (group ? '<button class="btn btn-sm" onclick="' + call('shareGroupReport') + '">📤 Open in Telegram</button>' : '')
+      + '<button class="btn btn-sm" onclick="' + call('shareGroupReport') + '">📤 Open in Telegram</button>'
+      + (group ? '<button class="btn btn-sm" onclick="autoBotUnlink(\'' + classId + '\')">&#128268; Disconnect group</button>' : '')
       + '<button class="btn btn-sm" onclick="' + call('shareGroupReportImage') + '">🖼️ Share image</button>'
       + '<button class="btn btn-sm" onclick="' + call('downloadGroupReportImages') + '">⬇️ Download image</button>'
       + '<button class="btn btn-sm" onclick="' + call('copyGroupReport') + '">📋 Copy text</button>'
@@ -14891,11 +14993,22 @@ function copyCurrentUnitToOtherMode() {
   };
 
   isClassTelegramReady = function () { return true; };
-  window.sendReportFromCard = function (classId, event) {
+  // My Groups card: a linked group sends straight to Telegram; an unlinked
+  // one opens the group page with the connect steps ready.
+  window.sendReportFromCard = async function (classId, event) {
     if (event) event.stopPropagation();
-    window.shareGroupReport(classId, 'today', 'cardReportStatus-' + classId);
+    const target = 'cardReportStatus-' + classId;
+    let group = autoBotGroupCache[classId];
+    if (group === undefined) { setSimpleReportStatus(target, '⏳ Checking Telegram…'); group = await refreshAutoBotGroup(classId); setSimpleReportStatus(target, ''); }
+    if (group) return window.autoBotSendGroupReport(classId, 'today', target);
+    openClass(classId);
+    window.autoBotPairStart(classId, 'reporter');
+    setTimeout(() => { const card = document.getElementById('reporterCard'); if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 120);
   };
-  window.reporterSend = function (mode) { return window.shareGroupReport(currentClassId, mode || 'today', 'reporterStatus'); };
+  window.reporterSend = function (mode) {
+    if (autoBotGroupCache[currentClassId]) return window.autoBotSendGroupReport(currentClassId, mode || 'today', 'reporterStatus');
+    return window.shareGroupReport(currentClassId, mode || 'today', 'reporterStatus');
+  };
   window.sendTelegramReportNow = function (statusEl) {
     return window.shareGroupReport(currentClassId || currentProgressGroupId, 'today', statusEl);
   };
@@ -14904,7 +15017,7 @@ function copyCurrentUnitToOtherMode() {
     const settingsCard = document.getElementById('telegramSyncCard');
     if (!settingsCard) return;
     settingsCard.innerHTML = '<p class="add-form-title">📨 Telegram reports</p>'
-      + '<p class="hint" style="margin:0 0 12px;">Send each group’s daily progress to its Telegram group with one tap. Set it up once in three steps.</p>'
+      + '<p class="hint" style="margin:0 0 12px;">Link each LexiGo group to its Telegram group once. Then one tap on Send Report posts the report poster and caption there.</p>'
       + renderAutoBotSettings();
     autoBotLoadStatus();
   }
