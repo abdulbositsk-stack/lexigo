@@ -1730,6 +1730,20 @@
 
 
   .qwq-head-name .qwq-logo { font-size:22px; margin-right:4px; }
+  .qwq-panel { margin:8px 0 10px; padding:12px; border:1px solid var(--border2); border-radius:14px; background:var(--surface2); }
+  .qwq-panel-head { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .qwq-set-head { margin-top:14px; }
+  .qwq-gsel { max-width:260px; font-weight:800; }
+  .qwq-tgchip { margin-left:auto; }
+  .qwq-tg.on { display:inline-block; padding:5px 12px; border-radius:999px; background:var(--green-bg); color:var(--green-text); border:1px solid var(--green-border); font-weight:800; font-size:13px; }
+  .qwq-panel-sub { margin:6px 0 8px; }
+  .qwq-roster { display:flex; flex-wrap:wrap; gap:6px; max-height:180px; overflow:auto; }
+  .qwq-st { display:inline-flex; align-items:center; border:1px solid var(--border2); background:var(--surface); border-radius:999px; overflow:hidden; }
+  .qwq-st-name { border:0; background:transparent; padding:6px 4px 6px 12px; font-weight:800; color:var(--text); cursor:pointer; font-size:14px; }
+  .qwq-st-x { border:0; background:transparent; padding:6px 10px 6px 6px; color:var(--text3); cursor:pointer; font-size:12px; }
+  .qwq-st-x:hover { color:var(--red-text); }
+  .qwq-st.absent { opacity:.55; } .qwq-st.absent .qwq-st-name { text-decoration:line-through; }
+  .qwq-roster-add { margin-top:10px; }
   .qwq-lessons { margin:6px 0 4px; padding:12px; border:1px solid var(--border2); border-radius:14px; background:var(--surface2); }
   .qwq-lessons-head { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
   .qwq-lessons-tools { margin-left:auto; display:flex; gap:6px; flex-wrap:wrap; }
@@ -15507,6 +15521,35 @@ function qwqPool() {
   }));
   return out.length ? out : uniqueQuizWords(allWords || []).filter(w => w && w.word);
 }
+// Group management inside Quick Word Quiz: switch group, add / remove
+// students, mark who is absent today. Same groups and lists as My Groups.
+function qwqSwitchGroup(id) { if (!id || id === currentClassId) return; openClass(id); openQuickWordQuiz(); }
+function qwqAddNames() {
+  const inp = document.getElementById('qwqRosterInput');
+  const names = splitManyNames(inp ? inp.value : '', false);
+  let added = 0;
+  names.forEach(n => { if (!roster.some(x => studentKey(x.name) === studentKey(n))) { roster.push({ name: n, sourceMode: currentSourceMode() }); added++; } });
+  if (added) saveRoster();
+  qwqRender();
+  setTimeout(() => { const i = document.getElementById('qwqRosterInput'); if (i) i.focus(); }, 0);
+}
+function qwqRemoveName(i) {
+  const st = roster[i]; if (!st) return;
+  if (!confirm('Remove ' + st.name + ' from this group?')) return;
+  removeRosterName(st.name);
+  qwqRender();
+}
+function qwqToggleAbsentAt(i) { const st = roster[i]; if (st) { toggleAbsent(st.name); qwqRender(); } }
+function qwqTgChip() {
+  const el = document.getElementById('qwqTgChip');
+  if (!el || typeof window.autoBotLinkedGroup !== 'function') return;
+  const id = currentClassId;
+  window.autoBotLinkedGroup(id).then(g => {
+    const e = document.getElementById('qwqTgChip'); if (!e || id !== currentClassId) return;
+    e.innerHTML = g ? '<span class="qwq-tg on">&#9989; Telegram: ' + esc(g.title || 'connected') + '</span>'
+      : '<button type="button" class="btn btn-sm" onclick="qwqConnectTelegram()">&#128279; Connect Telegram group</button>';
+  }).catch(() => {});
+}
 function qwqToggleUnit(id) { toggleUnitSelection(id); qwqRender(); }
 function qwqAllUnits(on) { if (on) selectAllUnits(); else selectNoUnits(); qwqRender(); }
 function qwqOpenWordBank() { qwqBack(); setTimeout(() => { try { openUnitPicker(); } catch (e) {} }, 60); }
@@ -15783,6 +15826,7 @@ function qwqMusicStop() {
 function qwqToggleClosed() { qwq.closed = !qwq.closed; qwqRender(); }
 function qwqReveal() { qwqStopTimer(); qwq.closed = false; qwq.revealed = true; qwqRender(); }
 function qwqStartScoring() {
+  if (!qwq.cards.length) return;
   qwqStopTimer();
   qwqFullscreen(false);
   const names = roster.filter(s => !isAbsent(s.name)).map(s => s.name);
@@ -15958,9 +16002,25 @@ function qwqRender() {
           return '<button type="button" class="up-chip up-unit' + (on ? ' selected' : '') + '" onclick="qwqToggleUnit(\'' + u.id + '\')">' + (on ? '&#10003; ' : '') + esc(u.name) + ' <span class="up-count">(' + (u.words || []).length + ')</span></button>';
         }).join('') + '</div>' : '<p class="hint">No lessons in this group yet. Add some from the Word Bank.</p>')
       + '</div>';
+    const groups = visibleClasses();
+    const absentN = roster.filter(x => isAbsent(x.name)).length;
+    const groupHtml = '<div class="qwq-panel">'
+      + '<div class="qwq-panel-head"><span class="qs-label">&#128101; Group</span>'
+      + '<select class="qwq-gsel" onchange="qwqSwitchGroup(this.value)">' + groups.map(g => '<option value="' + esc(g.id) + '"' + (g.id === currentClassId ? ' selected' : '') + '>' + esc(g.name) + '</option>').join('') + '</select>'
+      + '<span id="qwqTgChip" class="qwq-tgchip"></span></div>'
+      + '<div class="qwq-panel-sub"><span class="hint">' + roster.length + ' student' + (roster.length === 1 ? '' : 's') + (absentN ? ' &middot; ' + absentN + ' absent today' : '') + ' &middot; tap a name to mark absent</span></div>'
+      + (roster.length ? '<div class="qwq-roster">' + roster.map((x, i) => {
+          const ab = isAbsent(x.name);
+          return '<span class="qwq-st' + (ab ? ' absent' : '') + '"><button type="button" class="qwq-st-name" onclick="qwqToggleAbsentAt(' + i + ')" title="' + (ab ? 'Absent today, tap to mark present' : 'Tap to mark absent today') + '">' + (ab ? '&#128164; ' : '') + esc(x.name) + '</button>'
+            + '<button type="button" class="qwq-st-x" onclick="qwqRemoveName(' + i + ')" aria-label="Remove">&#10005;</button></span>';
+        }).join('') + '</div>' : '<p class="hint">No students yet. Add their names below.</p>')
+      + '<div class="row qwq-roster-add"><input type="text" id="qwqRosterInput" placeholder="Add students: Aliyev Ali, Karimova Malika..." onkeydown="if(event.key===\'Enter\')qwqAddNames()" /><button type="button" class="btn" onclick="qwqAddNames()">&#43; Add</button></div>'
+      + '</div>';
     html = '<div class="card qwq-setup">'
       + '<p class="qwq-lead">Make paper cards for the whole class. Give each student a card letter, start the timer, and they write the translations on paper.</p>'
+      + groupHtml
       + lessonHtml
+      + '<div class="qwq-panel-head qwq-set-head"><span class="qs-label">&#9881;&#65039; Quiz settings</span></div>'
       + '<div class="qs-row"><span class="qs-label">Cards</span>' + qwqChips('cards', [2, 3, 4, 5, 6, 8], st.cards, v => QWQ_LETTERS.slice(0, v).join(' ')) + '</div>'
       + '<div class="qs-row"><span class="qs-label">Words per card</span>' + qwqChips('perCard', [3, 4, 5, 6, 8, 10], st.perCard, v => v) + '</div>'
       + '<div class="qs-row"><span class="qs-label">Time</span>' + qwqChips('seconds', [30, 60, 90, 120, 180, 300], st.seconds, v => qwqTime(v)) + '</div>'
@@ -16053,6 +16113,7 @@ function qwqRender() {
   root.classList.toggle('qwq-dark', fs && qwqTheme() === 'dark');
   root.innerHTML = (qwq.step === 'run' ? '' : head) + html;
   if (fs) qwqApplyFit();
+  if (qwq.step === 'setup') qwqTgChip();
 }
 </script>
 </body>
