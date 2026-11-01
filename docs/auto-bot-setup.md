@@ -8,8 +8,9 @@ never need BotFather.
 
 1. In Telegram, open **@BotFather**, create the LexiGo bot (`/newbot`) and copy
    its token. Never paste the token in chat, code or GitHub.
-2. In **Netlify → the LexiGo site → Project configuration → Environment
-   variables**, add `TELEGRAM_BOT_TOKEN` with that token and mark it secret.
+2. In **Cloudflare → Workers & Pages → the LexiGo project → Settings →
+   Variables and Secrets**, add `TELEGRAM_BOT_TOKEN` as a **Secret**.
+   (See `docs/cloudflare-pages.md` for the full hosting setup.)
 3. Redeploy the site.
 
 `LEXIGO_TELEGRAM_ENCRYPTION_KEY` is only needed if teachers use the optional

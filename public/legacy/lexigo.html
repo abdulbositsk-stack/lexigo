@@ -6968,7 +6968,7 @@ async function geminiImportPasted() {
 // LexiGo word items for the current Kids/Adult mode.
 async function geminiGenerateWords(payload) {
   if (location.protocol === 'file:' && !window.LEXIGO_WORDS_ENDPOINT) {
-    throw new Error('AI import works on the published Netlify site, not when the file is opened directly');
+    throw new Error('AI import works on the published site, not when the file is opened directly');
   }
   const res = await fetch(GEMINI_IMPORT_ENDPOINT, {
     method: 'POST',
@@ -14970,7 +14970,7 @@ function copyCurrentUnitToOtherMode() {
      TELEGRAM_BOT_TOKEN environment variable and return only safe results. */
   function telegramRelay(payload) {
     const relayKey = localStorage.getItem('lexigo_telegram_relay_key') || '';
-    return fetch('/.netlify/functions/telegram', {
+    return fetch('/api/telegram', {
       method: 'POST', headers: { 'Content-Type': 'application/json', 'x-lexigo-relay-key': relayKey }, body: JSON.stringify(payload)
     }).then(async r => {
       const data = await r.json().catch(() => ({}));
@@ -15017,7 +15017,7 @@ function copyCurrentUnitToOtherMode() {
     const card = document.getElementById('telegramSyncCard');
     if (!card) return;
     const key = localStorage.getItem('lexigo_telegram_relay_key') || '';
-    card.innerHTML = '<p class="add-form-title">📱 Telegram reports</p><p class="hint">LexiGo keeps the bot token only in Netlify’s protected environment. Add the bot to a teacher group, send <code>/connect</code> in that group, then choose it here. Each class is linked by Telegram chat ID, so identical group names stay separate.</p><div class="row" style="margin-top:10px;"><input id="telegramRelayKeyInput" type="password" placeholder="Telegram report access key" value="' + esc(key) + '" style="flex:1;"/><button class="btn btn-sm btn-primary" onclick="localStorage.setItem(\'lexigo_telegram_relay_key\',document.getElementById(\'telegramRelayKeyInput\').value.trim());alert(\'Telegram access key saved in this browser.\');">Save</button></div><p class="hint" style="margin:8px 0 0;">Admin setup: add <code>TELEGRAM_BOT_TOKEN</code> and <code>TELEGRAM_RELAY_KEY</code> in Netlify environment variables, then redeploy. The bot token is never stored in LexiGo or GitHub.</p>';
+    card.innerHTML = '<p class="add-form-title">📱 Telegram reports</p><p class="hint">LexiGo keeps the bot token only in the site’s protected environment. Add the bot to a teacher group, send <code>/connect</code> in that group, then choose it here. Each class is linked by Telegram chat ID, so identical group names stay separate.</p><div class="row" style="margin-top:10px;"><input id="telegramRelayKeyInput" type="password" placeholder="Telegram report access key" value="' + esc(key) + '" style="flex:1;"/><button class="btn btn-sm btn-primary" onclick="localStorage.setItem(\'lexigo_telegram_relay_key\',document.getElementById(\'telegramRelayKeyInput\').value.trim());alert(\'Telegram access key saved in this browser.\');">Save</button></div><p class="hint" style="margin:8px 0 0;">Admin setup: add <code>TELEGRAM_BOT_TOKEN</code> and <code>TELEGRAM_RELAY_KEY</code> in Netlify environment variables, then redeploy. The bot token is never stored in LexiGo or GitHub.</p>';
   }
   secureTelegramCard();
 })();
@@ -15155,7 +15155,7 @@ function copyCurrentUnitToOtherMode() {
     return key;
   }
   async function autoBotRequest(action, payload) {
-    const response = await fetch('/.netlify/functions/auto-telegram', {
+    const response = await fetch('/api/auto-telegram', {
       method: 'POST', headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ action, teacherKey: autoBotTeacherKey(), ...(payload || {}) })
     });
@@ -16412,7 +16412,7 @@ function qwqRender() {
    ============================================================ */
 (function () {
   const STATE_KEY = 'lexigo_cloud_sync_v1';
-  const ENDPOINT = '/.netlify/functions/cloud-sync';
+  const ENDPOINT = '/api/cloud-sync';
   const EXCLUDE = /^lexigo_cloud_|api_key|bot_token|^vqt_api_key/i;
   let applying = false, timer = null, pushing = false;
 
