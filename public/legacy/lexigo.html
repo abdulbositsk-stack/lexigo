@@ -2902,13 +2902,9 @@
       <span class="class-bar-name">Settings</span>
     </div>
 
-    <div class="card">
-      <p class="add-form-title">&#128256; Teaching mode</p>
-      <p class="hint" style="margin-bottom:10px;">LexiGo is currently in <strong id="settingsModeName">Kids</strong> mode. You can switch modes anytime.</p>
-      <button class="btn btn-primary btn-sm" onclick="menuSwitchMode()">Switch mode</button>
-    </div>
+    
 
-    <div class="card adult-only" style="margin-top:12px;">
+    <div class="card adult-only">
       <p class="add-form-title">&#127925; Quiz background music</p>
       <p class="hint" style="margin-bottom:10px;">Plays quietly while a student answers. Tap a style to hear a short preview.</p>
       <div class="adult-music-picker row" style="gap:6px;flex-wrap:wrap;"></div>
@@ -14946,7 +14942,7 @@ function copyCurrentUnitToOtherMode() {
       if (panel) panel.innerHTML = autoBotPairHtml(classId);
       if (data.group) autoBotStatus('✅ This group sends its reports to ' + data.group.title + '.', true);
       else autoBotStatus('No Telegram group linked yet. Press Connect Telegram group.');
-    } catch (error) { autoBotStatus(String(error.message || 'Telegram is not available right now.'), false); }
+    } catch (error) { autoBotStatus('No Telegram group linked yet. Press Connect Telegram group.'); }
   };
   /* ===== ONE-TAP TELEGRAM WITH THE SHARED LEXIGO BOT =====
      The site owner's bot token stays in Netlify (TELEGRAM_BOT_TOKEN). A
@@ -15145,14 +15141,7 @@ function copyCurrentUnitToOtherMode() {
       + '<div id="autoBotPairPanel"></div>'
       + '<p class="hint tg-status" id="autoBotStatus"></p>'
       + '<p class="hint" style="margin:8px 0 0;">After connecting, press <b>Send Report</b> on the group page or on the My Groups card. The poster and caption go straight to the Telegram group.</p>'
-      + '<details class="rep-advanced" style="margin-top:12px;"><summary>Use my own bot instead (advanced)</summary>'
-      + '<ol class="tg-steps" id="autoBotDetails">'
-      + '<li><div class="tg-step-title">Connect your bot</div>'
-      + '<p class="hint">In Telegram, open <b>@BotFather</b>, create a bot and copy its token. Paste it here once. It is encrypted on the LexiGo server and is never shown again, stored in this browser, or put in GitHub.</p>'
-      + '<div class="row tg-row"><input id="autoBotTokenInput" type="password" autocomplete="off" placeholder="Bot token from BotFather"><button class="btn btn-primary btn-sm" onclick="autoBotConfigure()">Save bot</button></div></li>'
-      + '<li><div class="tg-step-title">Then use Connect Telegram group above</div>'
-      + '<p class="hint">Your own bot is used instead of the LexiGo bot for this browser.</p></li>'
-      + '</ol></details>';
+      ;
   }
 
   // On supported desktop/mobile systems this opens the operating system's
