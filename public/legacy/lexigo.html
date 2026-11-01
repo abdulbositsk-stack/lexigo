@@ -5574,7 +5574,7 @@ async function downloadProgressChartPDF() {
   }
 
   try {
-    await loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
+    await loadHtml2canvas();
     const canvas = await html2canvas(wrap, { backgroundColor: '#ffffff', scale: 2 });
     await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
     const { jsPDF } = window.jspdf;
@@ -11922,7 +11922,7 @@ function computeStudentInsights(classId, studentName, range) {
   const quizzesCompleted = inRange.length;
   const avgScore = quizzesCompleted ? Math.round(inRange.reduce((a, r) => a + (r.score / r.total * 100), 0) / quizzesCompleted) : 0;
   const smartCards = inRange.filter(r => (r.score / r.total * 100) >= 80).length;
-  const warningCards = inRange.filter(r => (r.score / r.total * 100) < 50).length;
+  const warningCards = inRange.filter(r => (r.score / r.total * 100) <= WARNING_CARD_MAX).length;
   const timeSpentMs = inRange.reduce((a, r) => a + (r.durationMs || (r.total * 10000)), 0);
 
   const vocabSet = new Set();
@@ -12269,7 +12269,7 @@ function renderStudentProgress() {
       + '<div class="gp-summary-card"><div class="gp-summary-num">' + s.avgScore + '%</div><div class="gp-summary-label">Average score</div></div>'
       + '<div class="gp-summary-card"><div class="gp-summary-num">' + s.streak + '</div><div class="gp-summary-label">Current streak (days)</div></div>'
       + '<div class="gp-summary-card"><div class="gp-summary-num">' + s.smartCards + '</div><div class="gp-summary-label">Smart Cards (80%+)</div></div>'
-      + '<div class="gp-summary-card"><div class="gp-summary-num">' + s.warningCards + '</div><div class="gp-summary-label">Warning Cards (&lt;50%)</div></div>'
+      + '<div class="gp-summary-card"><div class="gp-summary-num">' + s.warningCards + '</div><div class="gp-summary-label">Warning Cards (20% and below)</div></div>'
       + '<div class="gp-summary-card"><div class="gp-summary-num">' + formatDuration(s.timeSpentMs) + '</div><div class="gp-summary-label">Time spent learning</div></div>'
       + '<div class="gp-summary-card"><div class="gp-summary-num">' + s.completionPct + '%</div><div class="gp-summary-label">Completion</div></div>';
   }
@@ -12339,7 +12339,7 @@ async function downloadGroupReportPDF() {
   const reportEl = buildGroupReportDOM(cls, stats);
   document.body.appendChild(reportEl);
   try {
-    await loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
+    await loadHtml2canvas();
     const canvas = await html2canvas(reportEl, { backgroundColor: '#ffffff', scale: 2 });
     await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
     const { jsPDF } = window.jspdf;
@@ -13868,6 +13868,7 @@ function isSameLocalDay(ts, ref) {
 // custom range). Includes every student's score AND their missed words,
 // plus the class's overall hardest words for that period — everything the
 // spec calls for in one place, reused by both the caption and the image.
+const WARNING_CARD_MAX = 20;
 function computeTelegramReportForRange(classId, range) {
   const cls = classes.find(c => c.id === classId);
   const rosterNames = loadRoster(classId).map(s => s.name);
@@ -13908,8 +13909,8 @@ function computeTelegramReportForRange(classId, range) {
   }));
   const noRanking = distinctPcts.length <= 1;
   const smartCard = completedEntries.filter(e => e.pct >= 80);
-  // Quick Word Quiz rounds warn only at 20% and below; other reports below 50%.
-  const warningCard = completedEntries.filter(e => range.quick ? e.pct <= 20 : e.pct < 50);
+  // Smart Card 80–100%, Warning Card 20% and below (same rule everywhere).
+  const warningCard = completedEntries.filter(e => e.pct <= WARNING_CARD_MAX);
   const average = completedEntries.length ? Math.round(completedEntries.reduce((a, e) => a + e.pct, 0) / completedEntries.length) : 0;
   const highest = completedEntries.length ? Math.max(...completedEntries.map(e => e.pct)) : 0;
   const lowest = completedEntries.length ? Math.min(...completedEntries.map(e => e.pct)) : 0;
@@ -13935,7 +13936,7 @@ function computeTelegramReportForRange(classId, range) {
     smartCard: smartCard.map(e => e.name),
     warningCard: warningCard.map(e => e.name),
     quick: !!range.quick,
-    warnLabel: range.quick ? '20% va past' : '50% dan past',
+    warnLabel: '20% va past',
     podiumTiers,
     noRanking,
     battle: (function () {
@@ -14376,7 +14377,7 @@ async function sendTelegramReportNow(statusEl) {
   const dom = buildTelegramReportDOM(report);
   document.body.appendChild(dom);
   try {
-    await loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
+    await loadHtml2canvas();
     const canvas = await html2canvas(dom, { backgroundColor: '#ffffff', scale: 2 });
     const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
     if (!blob) throw new Error('Could not render the report image.');
@@ -14666,6 +14667,14 @@ function toImportedWordItem(it) {
   return base;
 }
 
+// The poster maker ships with the app, so posters still work when the CDN
+// is blocked; the CDN copy is only a fallback.
+function loadHtml2canvas() {
+  if (window.html2canvas) return Promise.resolve();
+  return loadScript('/assets/html2canvas.min.js')
+    .then(() => { if (!window.html2canvas) throw new Error('html2canvas missing'); })
+    .catch(() => loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js'));
+}
 function loadScript(src) {
   return new Promise((resolve, reject) => {
     if (document.querySelector('script[src="' + src + '"]')) { resolve(); return; }
@@ -15079,7 +15088,7 @@ function copyCurrentUnitToOtherMode() {
     document.body.appendChild(dom);
     setSimpleReportStatus(statusTarget, '⏳ Creating report image…');
     try {
-      await loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
+      await loadHtml2canvas();
       const canvas = await html2canvas(dom, { backgroundColor: '#ffffff', scale: 2 });
       const pageHeight = Math.round(canvas.width * 1.35);
       const totalPages = Math.max(1, Math.ceil(canvas.height / pageHeight));
@@ -15339,7 +15348,7 @@ function copyCurrentUnitToOtherMode() {
     if (!classId) return Promise.resolve(null);
     return autoBotRequest('status', { classId })
       .then(data => { autoBotGroupCache[classId] = data.group || null; })
-      .catch(() => { autoBotGroupCache[classId] = null; })
+      .catch(e => { autoBotGroupCache[classId] = navigator.onLine && !(e && e.name === 'TypeError') ? null : undefined; })
       .then(() => autoBotGroupCache[classId]);
   }
 
@@ -15348,22 +15357,24 @@ function copyCurrentUnitToOtherMode() {
     if (autoBotGroupCache[classId] === undefined) await refreshAutoBotGroup(classId);
     return autoBotGroupCache[classId] || null;
   };
-  window.autoBotSendGroupReport = async function (classId, mode, statusTarget) {
-    if (autoBotSending) return;
+  window.autoBotSendGroupReport = async function (classId, mode, statusTarget, opts) {
+    opts = opts || {};
+    if (autoBotSending) return 'busy';
+    if (!navigator.onLine) { queueOffline(classId, mode, statusTarget, opts); return 'network'; }
     const data = simpleReport(classId, mode);
     if (!data) {
       const r = mode && typeof mode === 'object' ? mode : reporterRangeFor(mode || 'today', classId);
       setSimpleReportStatus(statusTarget, r ? 'Tanlangan davrda (' + uzDateLabel({ dateLabel: r.label, range: r }) + ') natija yo\'q.' : 'Avval sanani tanlang.');
-      return;
+      return 'empty';
     }
-    const already = (mode || 'today') === 'today' ? sentToday(classId) : null;
+    const already = (mode || 'today') === 'today' && !opts.fromQueue ? sentToday(classId) : null;
     if (already && !confirm('Today\'s report was already sent at ' + new Date(already.at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + '. Send an updated one?')) return;
     autoBotSending = true;
     setSimpleReportStatus(statusTarget, '⏳ Preparing the report poster…');
     const dom = buildTelegramReportDOM(data.report);
     document.body.appendChild(dom);
     try {
-      await loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
+      await loadHtml2canvas();
       const scale = dom.offsetHeight > 2600 ? 1.5 : 2;
       const canvas = await html2canvas(dom, { backgroundColor: '#ffffff', scale });
       const imageDataUrl = canvas.toDataURL('image/png');
@@ -15374,9 +15385,57 @@ function copyCurrentUnitToOtherMode() {
       if ((mode || 'today') === 'today') markSentToday(classId, title);
       if (classId === currentClassId) window.renderReporter();
       setSimpleReportStatus(statusTarget, '✅ Sent to ' + title + '.');
-    } catch (error) { setSimpleReportStatus(statusTarget, '⚠️ ' + error.message); }
+      return 'sent';
+    } catch (error) {
+      if (isNetworkError(error)) { queueOffline(classId, mode, statusTarget, opts); return 'network'; }
+      setSimpleReportStatus(statusTarget, '⚠️ ' + error.message);
+      return 'error';
+    }
     finally { dom.remove(); autoBotSending = false; }
   };
+
+  /* Offline queue: a report that could not go out because the internet was
+     down is remembered and sent by itself when the connection is back (or
+     the next time LexiGo opens). "Today" is saved as that day's dates, so a
+     report sent tomorrow still shows the right day. */
+  const TG_QUEUE_KEY = 'lexigo_tg_queue_v1';
+  function tgQueueLoad() { try { const v = JSON.parse(localStorage.getItem(TG_QUEUE_KEY) || '[]'); return Array.isArray(v) ? v : []; } catch (e) { return []; } }
+  function tgQueueSave(q) { try { localStorage.setItem(TG_QUEUE_KEY, JSON.stringify(q.slice(-20))); } catch (e) {} }
+  function isNetworkError(e) {
+    return !navigator.onLine || !!(e && (e.name === 'TypeError' || /Failed to fetch|NetworkError|Load failed|network/i.test(e.message || '')));
+  }
+  function queueOffline(classId, mode, statusTarget, opts) {
+    if (!opts || !opts.fromQueue) {
+      let item = mode || 'today';
+      if (typeof item === 'string') {
+        const r = reporterRangeFor(item, classId);
+        if (r && isFinite(r.endTs)) item = r;
+      }
+      const q = tgQueueLoad();
+      const key = JSON.stringify([classId, item]);
+      if (!q.some(x => JSON.stringify([x.classId, x.mode]) === key)) q.push({ classId, mode: item, at: Date.now() });
+      tgQueueSave(q);
+    }
+    setSimpleReportStatus(statusTarget, '📴 No internet. The report is saved and will go to Telegram automatically when the connection is back.');
+  }
+  window.tgQueueAdd = function (classId, mode, statusTarget) { queueOffline(classId, mode, statusTarget, {}); };
+  window.tgQueueCount = function () { return tgQueueLoad().length; };
+  let tgFlushing = false;
+  window.tgQueueFlush = async function () {
+    if (tgFlushing || !navigator.onLine || !tgQueueLoad().length) return;
+    tgFlushing = true;
+    try {
+      for (let guard = 0; guard < 25; guard++) {
+        const list = tgQueueLoad();
+        if (!list.length) break;
+        const res = await window.autoBotSendGroupReport(list[0].classId, list[0].mode, null, { fromQueue: true });
+        if (res === 'network' || res === 'busy') break;
+        tgQueueSave(tgQueueLoad().slice(1));
+      }
+    } finally { tgFlushing = false; }
+  };
+  window.addEventListener('online', () => setTimeout(() => window.tgQueueFlush(), 1500));
+  setTimeout(() => window.tgQueueFlush(), 6000);
 
   window.openTelegramBotSetup = function (classId) {
     menuGoSettings();
@@ -15416,7 +15475,7 @@ function copyCurrentUnitToOtherMode() {
     document.body.appendChild(dom);
     setSimpleReportStatus(statusTarget, '⏳ Preparing image and caption…');
     try {
-      await loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
+      await loadHtml2canvas();
       const canvas = await html2canvas(dom, { backgroundColor: '#ffffff', scale: 1.5 });
       const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
       if (!blob) throw new Error('Image could not be created.');
@@ -16000,6 +16059,7 @@ async function qwqSendReport() {
     const c = document.getElementById('qwqConnectTg'); if (c) c.style.display = state === 'unlinked' ? '' : 'none';
   };
   if (typeof window.autoBotLinkedGroup !== 'function' || typeof window.autoBotSendGroupReport !== 'function') return set('unlinked', '');
+  if (!navigator.onLine && typeof window.tgQueueAdd === 'function') { set('queued', ''); window.tgQueueAdd(classId, range, 'qwqSendStatus'); return; }
   set('checking', '⏳ Checking Telegram…');
   let group = null;
   try { group = await window.autoBotLinkedGroup(classId); } catch (e) {}
