@@ -1375,6 +1375,10 @@
   .reporter-card .rep-main { font-size:15px; padding:11px 18px; }
   .reporter-card .rep-status.on { max-width:60%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   .rep-more { margin-top:10px; }
+  .rep-period { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:10px; }
+  .rep-period-label { font-weight:800; font-size:14px; }
+  .rep-period select, .rep-period input[type=date] { padding:8px 10px; border-radius:10px; border:1.5px solid var(--border, #d6dcef); font:inherit; font-weight:700; background:var(--surface, #fff); color:inherit; }
+  body.adult-mode .rep-period select, body.adult-mode .rep-period input[type=date] { background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.18); color-scheme:dark; }
   .rep-more summary { cursor:pointer; font-size:13px; font-weight:700; color:var(--text3); list-style:none; }
   .rep-more summary::-webkit-details-marker { display:none; }
   .rep-more summary::before { content:'\25B8'; display:inline-block; margin-right:6px; transition:transform .15s; }
@@ -9836,7 +9840,79 @@ function quickSendRangeFor(mode) {
   return rangePreset(mode);
 }
 
-function reporterRangeFor(mode) {
+// Report periods a teacher can pick before sending (labels in Uzbek).
+const REPORT_PERIODS = [
+  ['today', 'Bugun'], ['yesterday', 'Kecha'], ['lastsession', 'Oxirgi dars'], ['day', 'Aniq bir kun…'],
+  ['lastweek', "O'tgan hafta"], ['last7', "So'nggi 7 kun"], ['thismonth', 'Shu oy'], ['lastmonth', "O'tgan oy"],
+  ['year', 'Shu yil'], ['custom', 'Oraliq (dan – gacha)…']
+];
+let reportPeriod = 'today';
+function reportPeriodNow() { return reportPeriod; }
+function setReportPeriod(value) { reportPeriod = value || 'today'; if (typeof renderReporter === 'function') renderReporter(); }
+function uzDay(ts, withYear) {
+  const d = new Date(ts);
+  const months = ['yanvar', 'fevral', 'mart', 'aprel', 'may', 'iyun', 'iyul', 'avgust', 'sentabr', 'oktabr', 'noyabr', 'dekabr'];
+  return d.getDate() + '-' + months[d.getMonth()] + (withYear ? ' ' + d.getFullYear() : '');
+}
+function uzMonthName(d) {
+  const m = ['Yanvar', 'Fevral', 'Mart', 'Aprel', 'May', 'Iyun', 'Iyul', 'Avgust', 'Sentabr', 'Oktabr', 'Noyabr', 'Dekabr'][d.getMonth()];
+  return m + ' ' + d.getFullYear();
+}
+function parseDayInput(v) {
+  const m = String(v || '').match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  return m ? new Date(+m[1], +m[2] - 1, +m[3]).getTime() : null;
+}
+function lgReportRange(mode, classId) {
+  const DAY = 86400000;
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+  const val = id => (document.getElementById(id) || {}).value;
+  switch (mode) {
+    case 'yesterday': return { startTs: today - DAY, endTs: today, label: 'Kecha, ' + uzDay(today - DAY), slug: 'yesterday' };
+    case 'lastsession': {
+      const list = (classId && classId !== currentClassId ? loadResultsData(classId) : students).filter(r => r.date).map(r => r.date);
+      if (!list.length) return null;
+      const last = new Date(Math.max.apply(null, list));
+      const start = new Date(last.getFullYear(), last.getMonth(), last.getDate()).getTime();
+      return { startTs: start, endTs: start + DAY, label: 'Oxirgi dars, ' + uzDay(start), slug: 'last-session' };
+    }
+    case 'day': {
+      const start = parseDayInput(val('reporterDay'));
+      if (start == null) return null;
+      return { startTs: start, endTs: start + DAY, label: uzDay(start, true), slug: 'day-' + val('reporterDay') };
+    }
+    case 'lastweek': {
+      const dow = (now.getDay() + 6) % 7; // Monday = 0
+      const thisMon = today - dow * DAY;
+      const start = thisMon - 7 * DAY;
+      return { startTs: start, endTs: thisMon, label: "O'tgan hafta (" + uzDay(start) + ' – ' + uzDay(thisMon - DAY) + ')', slug: 'last-week' };
+    }
+    case 'last7': return { startTs: today - 6 * DAY, endTs: today + DAY, label: "So'nggi 7 kun (" + uzDay(today - 6 * DAY) + ' – ' + uzDay(today) + ')', slug: 'last-7-days' };
+    case 'thismonth': {
+      const start = new Date(now.getFullYear(), now.getMonth(), 1).getTime();
+      return { startTs: start, endTs: today + DAY, label: uzMonthName(now), slug: 'this-month' };
+    }
+    case 'lastmonth': {
+      const first = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+      const end = new Date(now.getFullYear(), now.getMonth(), 1).getTime();
+      return { startTs: first.getTime(), endTs: end, label: uzMonthName(first), slug: 'last-month' };
+    }
+    case 'year': {
+      const start = new Date(now.getFullYear(), 0, 1).getTime();
+      return { startTs: start, endTs: today + DAY, label: now.getFullYear() + '-yil', slug: 'this-year' };
+    }
+    case 'custom': {
+      const a = parseDayInput(val('reporterFrom')), b = parseDayInput(val('reporterTo'));
+      if (a == null || b == null) return null;
+      const start = Math.min(a, b), last = Math.max(a, b);
+      return { startTs: start, endTs: last + DAY, label: uzDay(start, true) + ' – ' + uzDay(last, true), slug: 'range' };
+    }
+    default: return { startTs: today, endTs: today + DAY, label: 'Today', slug: 'today' };
+  }
+}
+
+function reporterRangeFor(mode, classId) {
+  if (REPORT_PERIODS.some(p => p[0] === mode)) return lgReportRange(mode, classId);
   if (mode === 'custom') {
     const f = (document.getElementById('reporterFrom') || {}).value;
     const t = (document.getElementById('reporterTo') || {}).value;
@@ -14599,7 +14675,7 @@ function copyCurrentUnitToOtherMode() {
   telegramSyncPost = function () {};
 
   function simpleReport(classId, mode) {
-    const range = reporterRangeFor(mode || 'today');
+    const range = reporterRangeFor(mode || 'today', classId);
     if (!range) return null;
     const report = computeTelegramReportForRange(classId, range);
     if (!report.completed.length) return null;
@@ -14933,8 +15009,12 @@ function copyCurrentUnitToOtherMode() {
   window.autoBotSendGroupReport = async function (classId, mode, statusTarget) {
     if (autoBotSending) return;
     const data = simpleReport(classId, mode);
-    if (!data) { setSimpleReportStatus(statusTarget, 'No completed quiz results today yet. Ask some words first, then send the report.'); return; }
-    const already = sentToday(classId);
+    if (!data) {
+      const r = reporterRangeFor(mode || 'today', classId);
+      setSimpleReportStatus(statusTarget, r ? 'Tanlangan davrda (' + uzDateLabel({ dateLabel: r.label, range: r }) + ') natija yo\'q.' : 'Avval sanani tanlang.');
+      return;
+    }
+    const already = (mode || 'today') === 'today' ? sentToday(classId) : null;
     if (already && !confirm('Today\'s report was already sent at ' + new Date(already.at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + '. Send an updated one?')) return;
     autoBotSending = true;
     setSimpleReportStatus(statusTarget, '⏳ Preparing the report poster…');
@@ -14949,7 +15029,7 @@ function copyCurrentUnitToOtherMode() {
       const caption = buildTelegramPosterCaption(data.report);
       const result = await autoBotRequest('send', { classId, text: caption, shortText: caption, imageDataUrl });
       const title = result.group && result.group.title ? result.group.title : 'your Telegram group';
-      markSentToday(classId, title);
+      if ((mode || 'today') === 'today') markSentToday(classId, title);
       if (classId === currentClassId) window.renderReporter();
       setSimpleReportStatus(statusTarget, '✅ Sent to ' + title + '.');
     } catch (error) { setSimpleReportStatus(statusTarget, '⚠️ ' + error.message); }
@@ -15031,21 +15111,39 @@ function copyCurrentUnitToOtherMode() {
     if (group === undefined) refreshAutoBotGroup(id).then(() => { if (currentClassId === id) window.renderReporter(); });
     const sent = sentToday(id);
     const sentAt = sent ? new Date(sent.at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '';
-    const call = fn => fn + '(\'' + classId + '\',\'today\',\'reporterStatus\')';
+    const call = fn => fn + '(\'' + classId + '\',reportPeriodNow(),\'reporterStatus\')';
+    const today = new Date();
+    const iso = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+    const keep = id => { const el = document.getElementById(id); return el && el.value ? el.value : ''; };
+    const dayVal = keep('reporterDay') || iso(new Date(today.getTime() - 86400000));
+    const fromVal = keep('reporterFrom') || iso(new Date(today.getTime() - 6 * 86400000));
+    const toVal = keep('reporterTo') || iso(today);
+    const periodRow = '<div class="rep-period">'
+      + '<label class="rep-period-label" for="reporterPeriod">📅 Davr</label>'
+      + '<select id="reporterPeriod" onchange="setReportPeriod(this.value)">'
+      + REPORT_PERIODS.map(p => '<option value="' + p[0] + '"' + (p[0] === reportPeriod ? ' selected' : '') + '>' + p[1] + '</option>').join('')
+      + '</select>'
+      + (reportPeriod === 'day' ? '<input type="date" id="reporterDay" max="' + iso(today) + '" value="' + dayVal + '">' : '')
+      + (reportPeriod === 'custom' ? '<input type="date" id="reporterFrom" max="' + iso(today) + '" value="' + fromVal + '"><span>–</span><input type="date" id="reporterTo" max="' + iso(today) + '" value="' + toVal + '">' : '')
+      + '</div>';
+    const periodName = (REPORT_PERIODS.find(p => p[0] === reportPeriod) || REPORT_PERIODS[0])[1].replace('…', '');
     let badge, main, hint;
     if (group) {
       badge = '<span class="rep-status on">● ' + esc(group.title) + '</span>';
       main = '<button class="btn btn-primary rep-main" onclick="' + call('autoBotSendGroupReport') + '">'
-        + (sent ? '✓ Sent today at ' + sentAt + ' · Send again' : '📤 Send today’s progress') + '</button>';
-      hint = 'Sends today’s scores, missed words and a 7-day progress graph to <b>' + esc(group.title) + '</b>.';
+        + (reportPeriod === 'today'
+            ? (sent ? '✓ Sent today at ' + sentAt + ' · Send again' : '📤 Send today’s report')
+            : '📤 Send report · ' + esc(periodName)) + '</button>';
+      hint = 'Choose a period, then send the report poster to <b>' + esc(group.title) + '</b>.';
     } else {
       badge = group === null ? '<span class="rep-status off">Telegram not connected</span>' : '<span class="rep-status off">Checking…</span>';
       const pairing = autoBotPair.code && autoBotPair.classId === id;
       main = pairing ? '' : '<button class="btn btn-primary rep-main" onclick="autoBotPairStart(\'' + classId + '\', \'reporter\')">&#128279; Connect Telegram group</button>';
       hint = 'Connect this group’s Telegram chat once. After that, one tap sends the report poster and caption there.';
     }
-    host.innerHTML = '<div class="rep-head"><span class="rep-title">📨 Today’s report</span>' + badge + '</div>'
+    host.innerHTML = '<div class="rep-head"><span class="rep-title">📨 Progress report</span>' + badge + '</div>'
       + '<p class="hint rep-hint">' + hint + '</p>'
+      + periodRow
       + (main ? '<div class="rep-send-row">' + main + '</div>' : '')
       + (group ? '' : '<div id="reporterPairPanel">' + autoBotPairHtml(id) + '</div>')
       + '<details class="rep-more"><summary>More ways to share</summary><div class="rep-more-row">'
