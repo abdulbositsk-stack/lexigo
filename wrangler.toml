@@ -1,0 +1,7 @@
+name = "lexigo"
+pages_build_output_dir = "dist"
+compatibility_date = "2024-09-23"
+
+[[kv_namespaces]]
+binding = "LEXIGO_KV"
+id = "fb62efd073574b9297c2c8bc15897304"
