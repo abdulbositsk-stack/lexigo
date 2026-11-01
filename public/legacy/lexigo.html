@@ -1621,6 +1621,8 @@
   .tgv2 .tgv2-row.good { border-left-color: #1e9e57; } .tgv2 .tgv2-row.low { border-left-color: #d64430; }
   .tgv2 .tgv2-row-top { display: grid; grid-template-columns: 30px 180px 1fr 78px; align-items: center; gap: 12px; }
   .tgv2 .tgv2-num { width: 28px; height: 28px; border-radius: 50%; background: #eef2ff; color: #2651c8; font-weight: 900; font-size: 13px; display: flex; align-items: center; justify-content: center; }
+  .tgv2 .tgv2-tag { display:inline-block; margin:0; padding:2px 8px; border-radius:999px; font-size:11px; font-weight:900; vertical-align:middle; }
+  .tgv2 .tgv2-tag.smart { background:#dcfce7; color:#166534; } .tgv2 .tgv2-tag.warn { background:#fee2e2; color:#991b1b; }
   .tgv2 .tgv2-name { font-weight: 900; font-size: 17px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .tgv2 .tgv2-track { height: 14px; background: #edf0f7; border-radius: 999px; overflow: hidden; }
   .tgv2 .tgv2-fill { height: 100%; border-radius: 999px; }
@@ -1747,6 +1749,10 @@
   .qwq-rk-bar i { display:block; height:100%; border-radius:99px; background:var(--qc); }
   .qwq-rk-names { font-size:13px; color:var(--text3); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .qwq-perfect { margin:10px 0 0; color:var(--text2); }
+  .qwq-cardline { margin:8px auto 0; max-width:560px; padding:8px 12px; border-radius:12px; font-size:14px; }
+  .qwq-cardline.smart { background:var(--green-bg); color:var(--green-text); border:1px solid var(--green-border); }
+  .qwq-cardline.warn { background:var(--red-bg); color:var(--red-text); border:1px solid var(--red-border); }
+  .qwq-send-status { margin-top:10px; font-weight:700; }
   .qwq-wrongs { margin:8px auto 0; color:var(--text2); max-width:560px; }
   .qwq-wrongs span { display:inline-block; margin:3px; padding:3px 10px; border-radius:999px; background:var(--red-bg); color:var(--red-text); font-weight:800; font-size:13px; }
   @keyframes qwqRise { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
@@ -13822,7 +13828,8 @@ function computeTelegramReportForRange(classId, range) {
   }));
   const noRanking = distinctPcts.length <= 1;
   const smartCard = completedEntries.filter(e => e.pct >= 80);
-  const warningCard = completedEntries.filter(e => e.pct < 50);
+  // Quick Word Quiz rounds warn only at 20% and below; other reports below 50%.
+  const warningCard = completedEntries.filter(e => range.quick ? e.pct <= 20 : e.pct < 50);
   const average = completedEntries.length ? Math.round(completedEntries.reduce((a, e) => a + e.pct, 0) / completedEntries.length) : 0;
   const highest = completedEntries.length ? Math.max(...completedEntries.map(e => e.pct)) : 0;
   const lowest = completedEntries.length ? Math.min(...completedEntries.map(e => e.pct)) : 0;
@@ -13847,6 +13854,8 @@ function computeTelegramReportForRange(classId, range) {
     average, highest, lowest,
     smartCard: smartCard.map(e => e.name),
     warningCard: warningCard.map(e => e.name),
+    quick: !!range.quick,
+    warnLabel: range.quick ? '20% va past' : '50% dan past',
     podiumTiers,
     noRanking,
     battle: (function () {
@@ -13961,6 +13970,7 @@ function reportIsMultiDay(report) {
 }
 function reportHeadline(report) {
   const slug = (report.range && report.range.slug) || '';
+  if (report.quick) return 'Quick Word Quiz natijalari';
   if (!reportIsMultiDay(report)) return "Kunlik lug'at hisoboti";
   if (slug === 'last-week' || slug === 'last-7-days') return "7 kunlik lug'at hisoboti";
   if (slug === 'this-month' || slug === 'last-month' || slug === 'monthly') return "Oylik lug'at hisoboti";
@@ -14014,16 +14024,27 @@ function buildTelegramPosterCaption(report) {
     best,
     tgBattleLine(report),
     reportIsMultiDay(report) ? `🗓 Darslar soni: ${reportTimeline(report).length} · mashqlar: ${(report.results || []).length} ta` : null,
-    report.smartCard.length ? `🟩 Smart Card: ${report.smartCard.length} nafar` : null,
-    report.warningCard.length ? `🟥 Qo'shimcha mashq kerak: ${report.warningCard.length} nafar` : null,
     report.missing.length ? `❌ Topshirmadi: ${report.missing.join(', ')}` : null,
-    hard,
-    '',
-    "Har bir o'quvchining natijasi va xato so'zlari rasmda 👆",
-    'Smart Education 🦉'
+    hard
   ].filter(l => l !== null);
-  let text = lines.join('\n');
-  if (text.length > 1000) text = lines.filter(l => !/^❌ Topshirmadi/.test(l)).join('\n').slice(0, 1000);
+  const names = list => list.slice(0, 8).join(', ') + (list.length > 8 ? ' +' + (list.length - 8) : '');
+  // Each student's score, when it fits in Telegram's caption limit.
+  const studentLines = report.quick
+    ? [''].concat(report.perStudent.map(e => `👤 ${e.name} — ${e.correctSum}/${e.totalSum}` + (report.smartCard.includes(e.name) ? ' 🟩' : report.warningCard.includes(e.name) ? ' 🟥' : '')))
+    : [];
+  // Messages for parents: thanks for a Smart Card, a request to follow up
+  // at home for a Warning Card.
+  const parentLines = [];
+  if (report.smartCard.length) parentLines.push('', `🟩 Smart Card (80–100%): ${names(report.smartCard)}`,
+    "Hurmatli ota-onalar, farzandingiz a'lo natija ko'rsatdi. Uydagi qo'llab-quvvatlashingiz uchun rahmat! 🙏");
+  if (report.warningCard.length) parentLines.push('', `🟥 Warning Card (${report.warnLabel || '50% dan past'}): ${names(report.warningCard)}`,
+    "Hurmatli ota-onalar, farzandingiz bu so'zlarni hali yaxshi o'zlashtirmadi. Iltimos, uyda so'zlarni takrorlashini nazorat qiling. 🤝");
+  const tail = ['', "Har bir o'quvchining natijasi va xato so'zlari rasmda 👆", 'Smart Education 🦉'];
+  const build = (a, b, c) => a.concat(b, c, tail).join('\n');
+  let text = build(lines, studentLines, parentLines);
+  if (text.length > 1000) text = build(lines, [], parentLines);
+  if (text.length > 1000) text = build(lines.filter(l => !/^❌ Topshirmadi/.test(l)), [], parentLines);
+  if (text.length > 1000) text = text.slice(0, 1000);
   return text;
 }
 
@@ -14190,7 +14211,8 @@ function buildTelegramReportDOM(report) {
       +   '<div class="tgv2-name">' + q(e.name) + meta + '</div>'
       +   '<div class="tgv2-track"><div class="tgv2-fill ' + band + '" style="width:' + Math.max(3, Math.min(100, e.pct)) + '%"></div></div>'
       +   '<div class="tgv2-pct">' + e.pct + '%<small>' + e.correctSum + '/' + e.totalSum + '</small></div>'
-      + '</div>' + missed + '</div>';
+      + '</div>'
+      + missed.replace(/^(<div[^>]*>)/, '$1' + (report.smartCard.includes(e.name) ? '<span class="tgv2-tag smart">🟩 Smart Card</span>' : report.warningCard.includes(e.name) ? '<span class="tgv2-tag warn">🟥 Warning Card</span>' : '')) + '</div>';
   }).join('');
   const students = report.perStudent.length
     ? section('📋', 'Har bir o\'quvchi natijasi', '<div class="tgv2-rows">' + rows + '</div>'
@@ -14199,10 +14221,10 @@ function buildTelegramReportDOM(report) {
 
   const needs = report.warningCard.length || report.missing.length
     ? section('⚠️', 'E\'tibor kerak', '<div class="tgv2-two">'
-        + (report.warningCard.length ? '<div class="tgv2-box warn"><div class="tgv2-box-t">Qo\'shimcha mashq kerak (50% dan past)</div>' + chips(report.warningCard, 'warn') + '</div>' : '')
+        + (report.warningCard.length ? '<div class="tgv2-box warn"><div class="tgv2-box-t">🟥 Warning Card (' + (report.warnLabel || '50% dan past') + ')</div>' + chips(report.warningCard, 'warn') + '</div>' : '')
         + (report.missing.length ? '<div class="tgv2-box gray"><div class="tgv2-box-t">' + (multi ? 'Bu davrda qatnashmaganlar' : 'Topshirmaganlar') + '</div>' + chips(report.missing, 'gray') + '</div>' : '')
         + '</div>')
-    : '<div class="tgv2-allgood">🎉 Hamma topshirdi va hech kim 50% dan past emas!</div>';
+    : '<div class="tgv2-allgood">🎉 Hamma topshirdi va hech kim Warning Card olmadi!</div>';
 
   const hard = report.overallDifficult.length
     ? section('😖', 'Eng qiyin so\'zlar', '<div class="tgv2-chips">' + report.overallDifficult.map(w =>
@@ -14911,7 +14933,7 @@ function copyCurrentUnitToOtherMode() {
   telegramSyncPost = function () {};
 
   function simpleReport(classId, mode) {
-    const range = reporterRangeFor(mode || 'today', classId);
+    const range = mode && typeof mode === 'object' ? mode : reporterRangeFor(mode || 'today', classId);
     if (!range) return null;
     const report = computeTelegramReportForRange(classId, range);
     if (!report.completed.length) return null;
@@ -15242,11 +15264,15 @@ function copyCurrentUnitToOtherMode() {
   }
 
   let autoBotSending = false;
+  window.autoBotLinkedGroup = async function (classId) {
+    if (autoBotGroupCache[classId] === undefined) await refreshAutoBotGroup(classId);
+    return autoBotGroupCache[classId] || null;
+  };
   window.autoBotSendGroupReport = async function (classId, mode, statusTarget) {
     if (autoBotSending) return;
     const data = simpleReport(classId, mode);
     if (!data) {
-      const r = reporterRangeFor(mode || 'today', classId);
+      const r = mode && typeof mode === 'object' ? mode : reporterRangeFor(mode || 'today', classId);
       setSimpleReportStatus(statusTarget, r ? 'Tanlangan davrda (' + uzDateLabel({ dateLabel: r.label, range: r }) + ') natija yo\'q.' : 'Avval sanani tanlang.');
       return;
     }
@@ -15832,11 +15858,48 @@ function qwqSaveResults() {
   });
   qwq.wrong = wrong;
   qwqMissedSave(qwqMissedLoad().concat(wrong.map(quizWordKey)));
+  // Smart Card 80–100%, Warning Card 20% and below.
+  const pctOf = s => Math.round(s.stars / qwq.perCard * 100);
+  qwq.smart = scored.filter(s => pctOf(s) >= 80).map(s => s.name);
+  qwq.warn = scored.filter(s => pctOf(s) <= 20).map(s => s.name);
+  // This round only, for the Telegram report.
+  const t = new Date(now);
+  qwq.roundRange = { startTs: now, endTs: now + scored.length, slug: 'qwq', quick: true,
+    label: uzDay(now) + ', ' + String(t.getHours()).padStart(2, '0') + ':' + String(t.getMinutes()).padStart(2, '0') };
+  qwq.tgState = 'checking';
   qwq.step = 'done';
   qwqRender();
   qwqConfetti();
+  qwqSendReport();
 }
 
+// Sends this round's poster and caption to the group's linked Telegram
+// group. Runs by itself after saving; the button sends it again.
+async function qwqSendReport() {
+  const classId = currentClassId, range = qwq.roundRange;
+  if (!classId || !range) return;
+  const set = (state, msg) => {
+    qwq.tgState = state;
+    const el = document.getElementById('qwqSendStatus');
+    if (el) el.textContent = msg || '';
+    const c = document.getElementById('qwqConnectTg'); if (c) c.style.display = state === 'unlinked' ? '' : 'none';
+  };
+  if (typeof window.autoBotLinkedGroup !== 'function' || typeof window.autoBotSendGroupReport !== 'function') return set('unlinked', '');
+  set('checking', '⏳ Checking Telegram…');
+  let group = null;
+  try { group = await window.autoBotLinkedGroup(classId); } catch (e) {}
+  if (!group) return set('unlinked', 'This group is not connected to Telegram yet.');
+  set('sending', '');
+  await window.autoBotSendGroupReport(classId, range, 'qwqSendStatus');
+}
+function qwqConnectTelegram() {
+  const id = currentClassId;
+  qwqBack();
+  setTimeout(() => {
+    try { window.autoBotPairStart(id, 'reporter'); } catch (e) {}
+    const card = document.getElementById('reporterCard'); if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, 120);
+}
 function qwqConfetti() {
   try {
     const box = document.createElement('div'); box.className = 'qwq-confetti';
@@ -15973,10 +16036,14 @@ function qwqRender() {
       + '<p class="qwq-done-t">' + qwq.savedCount + ' result' + (qwq.savedCount === 1 ? '' : 's') + ' saved</p>'
       + (rank ? '<div class="qwq-rank">' + rank + '</div>' : '')
       + ((qwq.perfect || []).length ? '<p class="qwq-perfect">&#11088; All correct: <b>' + qwq.perfect.map(esc).join(', ') + '</b></p>' : '')
+      + ((qwq.smart || []).length ? '<p class="qwq-cardline smart">&#129001; <b>Smart Card</b> (80&ndash;100%): ' + qwq.smart.map(esc).join(', ') + '</p>' : '')
+      + ((qwq.warn || []).length ? '<p class="qwq-cardline warn">&#128997; <b>Warning Card</b> (20% and below): ' + qwq.warn.map(esc).join(', ') + '</p>' : '')
       + ((qwq.wrong || []).length ? '<p class="qwq-wrongs">&#128257; Coming back next round: ' + qwq.wrong.map(w => '<span>' + esc(w.word) + '</span>').join('') + '</p>' : '')
-      + '<p class="hint">They are in Students\' Progress and in the report you send to Telegram.</p>'
+      + '<p class="hint">Saved to Students\' Progress. The poster and caption for this round go to the group\'s Telegram automatically.</p>'
       + '<div class="qwq-save-row"><button class="btn" onclick="openQuickWordQuiz()">&#128260; New round</button>'
-      + '<button class="btn btn-primary" onclick="qwqBack();setTimeout(()=>{const c=document.getElementById(\'reporterCard\');if(c)c.scrollIntoView({behavior:\'smooth\',block:\'center\'});},120)">&#128228; Send report</button></div></div>';
+      + '<button class="btn" id="qwqConnectTg" onclick="qwqConnectTelegram()"' + (qwq.tgState === 'unlinked' ? '' : ' style="display:none"') + '>&#128279; Connect Telegram group</button>'
+      + '<button class="btn btn-primary" onclick="qwqSendReport()">&#128228; Send report again</button></div>'
+      + '<p class="hint qwq-send-status" id="qwqSendStatus"></p></div>';
   }
   const fs = qwq.step === 'run';
   const sec = document.getElementById('sec-qwq');
