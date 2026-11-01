@@ -1651,6 +1651,22 @@
   .tgv2 .tgv2-quote { margin: 20px 28px 0; padding: 16px 20px; border-radius: 18px; background: #13204a; color: #fff; font-size: 16px; font-weight: 700; font-style: italic; }
   .tgv2 .tgv2-foot { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 18px; font-size: 13px; font-weight: 800; color: #6b7699; }
   .tgv2 .tgv2-foot .lg-owl { width: 24px; height: 24px; }
+  .tgv2 .tgv2-class { font-size: 34px; }
+  .tgv2 .tgv2-date { display: inline-block; margin-top: 10px; font-size: 15px; padding: 7px 14px; }
+  .tgv2 .tgv2-meta { font-size: 12.5px; font-weight: 800; color: #6b7699; margin-top: 1px; }
+  .tgv2 .tgv2-trend.up { color: #1e9e57; } .tgv2 .tgv2-trend.down { color: #d64430; } .tgv2 .tgv2-trend.flat { color: #8a93ad; }
+  .tgv2 .tgv2-chart { display: flex; align-items: flex-end; gap: 10px; height: 210px; padding: 4px 4px 0; }
+  .tgv2 .tgv2-col { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; height: 100%; }
+  .tgv2 .tgv2-col-pct { font-weight: 900; font-size: 14px; margin-bottom: 4px; }
+  .tgv2 .tgv2-col-bar { flex: 1; width: 100%; max-width: 54px; background: #edf0f7; border-radius: 10px; display: flex; align-items: flex-end; overflow: hidden; }
+  .tgv2 .tgv2-col-bar .tgv2-fill { width: 100%; border-radius: 10px; }
+  .tgv2 .tgv2-col-bar .tgv2-fill.good { background: linear-gradient(0deg, #1e9e57, #4fd690); }
+  .tgv2 .tgv2-col-bar .tgv2-fill.mid { background: linear-gradient(0deg, #f5a623, #ffd36b); }
+  .tgv2 .tgv2-col-bar .tgv2-fill.low { background: linear-gradient(0deg, #d64430, #ff9d8e); }
+  .tgv2 .tgv2-col-label { font-size: 12.5px; font-weight: 900; margin-top: 6px; white-space: nowrap; }
+  .tgv2 .tgv2-col-sub { font-size: 11px; font-weight: 800; color: #8a93ad; }
+  .tgv2 .tgv2-growth-note { margin-top: 14px; padding: 10px 14px; border-radius: 12px; font-weight: 900; font-size: 15px; }
+  .tgv2 .tgv2-growth-note.up { background: #e3f7ec; color: #17733f; } .tgv2 .tgv2-growth-note.down { background: #fff0ee; color: #b42318; }
 </style>
 <style id="mode-and-adult-theme">
   /* ============================================================
@@ -13677,6 +13693,7 @@ function computeTelegramReportForRange(classId, range) {
     unitName: cls ? getClassUnitLabel(cls.id) : '',
     dateLabel: range.label,
     range: range,
+    results: inRange,
     total: totalStudents,
     completed: completedEntries.map(e => e.name),
     perStudent: sorted,
@@ -13786,6 +13803,53 @@ function uzDateLabel(report) {
   return label;
 }
 
+// Multi-day reports get a headline such as "7 kunlik lug'at hisoboti".
+function reportSpanDays(report) {
+  const r = report.range || {};
+  if (!isFinite(r.endTs) || !r.startTs) return 0;
+  return Math.max(1, Math.round((r.endTs - r.startTs) / 86400000));
+}
+function reportIsMultiDay(report) {
+  const r = report.range || {};
+  return !isFinite(r.endTs) || reportSpanDays(report) > 1;
+}
+function reportHeadline(report) {
+  const slug = (report.range && report.range.slug) || '';
+  if (!reportIsMultiDay(report)) return "Kunlik lug'at hisoboti";
+  if (slug === 'last-week' || slug === 'last-7-days') return "7 kunlik lug'at hisoboti";
+  if (slug === 'this-month' || slug === 'last-month' || slug === 'monthly') return "Oylik lug'at hisoboti";
+  if (slug === 'this-year' || slug === 'yearly') return "Yillik lug'at hisoboti";
+  if (slug === 'all-time') return "Umumiy lug'at hisoboti";
+  return reportSpanDays(report) + " kunlik lug'at hisoboti";
+}
+// Average score per lesson day (per month for a yearly report).
+function reportTimeline(report) {
+  const byMonth = reportSpanDays(report) > 62 || !isFinite((report.range || {}).endTs);
+  const buckets = {};
+  (report.results || []).forEach(r => {
+    if (!r.date || !r.total) return;
+    const d = new Date(r.date);
+    const key = byMonth ? d.getFullYear() * 100 + d.getMonth() : new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
+    const b = buckets[key] || (buckets[key] = { key, ts: r.date, pctSum: 0, n: 0, names: new Set() });
+    b.pctSum += (r.score / r.total) * 100; b.n++; b.names.add(studentKey(r.name));
+  });
+  const months = ['yan', 'fev', 'mar', 'apr', 'may', 'iyun', 'iyul', 'avg', 'sen', 'okt', 'noy', 'dek'];
+  return Object.values(buckets).sort((a, b) => a.key - b.key).map(b => {
+    const d = new Date(b.ts);
+    return { label: byMonth ? months[d.getMonth()] + ' ' + d.getFullYear() : d.getDate() + '-' + months[d.getMonth()],
+             pct: Math.round(b.pctSum / b.n), students: b.names.size };
+  });
+}
+// First vs last quiz score of each student inside the period.
+function reportStudentTrend(report, name) {
+  const key = studentKey(name);
+  const list = (report.results || []).filter(r => r.total && studentKey(r.name) === key).sort((a, b) => a.date - b.date);
+  if (list.length < 2) return null;
+  const first = Math.round(list[0].score / list[0].total * 100);
+  const last = Math.round(list[list.length - 1].score / list[list.length - 1].total * 100);
+  return last - first;
+}
+
 // The one caption that goes under the poster: short, fixed size, Uzbek.
 function buildTelegramPosterCaption(report) {
   const top = (report.podiumTiers || [])[0];
@@ -13796,13 +13860,14 @@ function buildTelegramPosterCaption(report) {
     ? `😖 Eng qiyin so'zlar: ${report.overallDifficult.slice(0, 6).map(w => w.word).join(', ')}`
     : null;
   const lines = [
-    `📚 ${report.className} — lug'at mashqi hisoboti`,
+    `📚 ${report.className} — ${reportHeadline(report)}`,
     `📅 ${uzDateLabel(report)}`,
     '',
     `✅ Topshirdi: ${report.completed.length} / ${report.total}`,
     `📊 Guruh o'rtacha natijasi: ${report.average}%`,
     best,
     tgBattleLine(report),
+    reportIsMultiDay(report) ? `🗓 Darslar soni: ${reportTimeline(report).length} · mashqlar: ${(report.results || []).length} ta` : null,
     report.smartCard.length ? `🟩 Smart Card: ${report.smartCard.length} nafar` : null,
     report.warningCard.length ? `🟥 Qo'shimcha mashq kerak: ${report.warningCard.length} nafar` : null,
     report.missing.length ? `❌ Topshirmadi: ${report.missing.join(', ')}` : null,
@@ -13914,23 +13979,24 @@ function buildTelegramReportDOM(report) {
   wrap.style.left = '-99999px';
   wrap.style.top = '0';
   const q = s => esc(String(s == null ? '' : s));
+  const multi = reportIsMultiDay(report);
   const section = (icon, title, body, extra) => '<section class="tgv2-sec' + (extra ? ' ' + extra : '') + '">'
     + '<h3 class="tgv2-h"><span class="tgv2-h-ic">' + icon + '</span>' + title + '</h3>' + body + '</section>';
   const chips = (list, cls) => '<div class="tgv2-chips">' + list.map(n => '<span class="tgv2-chip ' + cls + '">' + q(n) + '</span>').join('') + '</div>';
 
   const header = '<header class="tgv2-hero">'
     + '<div class="tgv2-hero-left"><div class="tgv2-owl"><span class="lg-owl"></span></div>'
-    +   '<div><div class="tgv2-brand">LexiGo · Lug\'at mashqi hisoboti</div>'
-    +   '<div class="tgv2-class">' + q(report.className) + '</div>'
+    +   '<div><div class="tgv2-brand">LexiGo · ' + q(report.className) + '</div>'
+    +   '<div class="tgv2-class">' + q(reportHeadline(report)) + '</div>'
     +   (report.unitName ? '<div class="tgv2-unit">' + q(report.unitName) + '</div>' : '')
+    +   '<div class="tgv2-date">📅 ' + q(uzDateLabel(report)) + '</div>'
     + '</div></div>'
-    + '<div class="tgv2-date">📅 ' + q(uzDateLabel(report)) + '</div>'
     + '</header>';
 
   const tile = (icon, num, label, tone) => '<div class="tgv2-tile ' + tone + '"><div class="tgv2-tile-ic">' + icon + '</div>'
     + '<div class="tgv2-tile-num">' + num + '</div><div class="tgv2-tile-label">' + label + '</div></div>';
   const tiles = '<div class="tgv2-tiles">'
-    + tile('👨‍🎓', report.completed.length + '/' + report.total, 'Topshirdi', 'blue')
+    + tile('👨‍🎓', report.completed.length + '/' + report.total, multi ? 'Qatnashdi' : 'Topshirdi', 'blue')
     + tile('📊', report.average + '%', 'Guruh o\'rtachasi', 'violet')
     + tile('🏆', report.highest + '%', 'Eng yuqori natija', 'gold')
     + tile('🟩', report.smartCard.length, 'Smart Card (80%+)', 'green')
@@ -13943,15 +14009,37 @@ function buildTelegramReportDOM(report) {
       + '<div class="tgv2-best-names">' + top.names.map(q).join(', ') + '</div></div></div>'
     : '';
 
+  const timeline = multi ? reportTimeline(report) : [];
+  const growth = timeline.length > 1
+    ? section('📈', (reportSpanDays(report) > 62 ? 'Oylar' : 'Darslar') + ' bo\'yicha o\'sish',
+        '<div class="tgv2-chart">' + timeline.map(t => {
+          const band = t.pct >= 80 ? 'good' : (t.pct >= 50 ? 'mid' : 'low');
+          return '<div class="tgv2-col"><div class="tgv2-col-pct">' + t.pct + '%</div>'
+            + '<div class="tgv2-col-bar"><div class="tgv2-fill ' + band + '" style="height:' + Math.max(4, t.pct) + '%"></div></div>'
+            + '<div class="tgv2-col-label">' + q(t.label) + '</div><div class="tgv2-col-sub">' + t.students + ' o\'q.</div></div>';
+        }).join('') + '</div>'
+        + (function () {
+            const d = timeline[timeline.length - 1].pct - timeline[0].pct;
+            return '<div class="tgv2-growth-note ' + (d >= 0 ? 'up' : 'down') + '">'
+              + (d > 0 ? '▲ Guruh natijasi ' + d + '% ga oshdi' : d < 0 ? '▼ Guruh natijasi ' + (-d) + '% ga pasaydi' : '● Guruh natijasi barqaror')
+              + ' (' + timeline[0].pct + '% → ' + timeline[timeline.length - 1].pct + '%)</div>';
+          })())
+    : '';
   const rows = report.perStudent.map((e, i) => {
     const band = e.pct >= 80 ? 'good' : (e.pct >= 50 ? 'mid' : 'low');
     const missed = e.missedWords.length
       ? '<div class="tgv2-miss"><span class="tgv2-miss-label">Xato so\'zlar:</span>' + e.missedWords.map(w => '<span class="tgv2-word">' + q(w) + '</span>').join('') + '</div>'
       : '<div class="tgv2-miss tgv2-clean">✓ Xato yo\'q</div>';
+    const trend = multi ? reportStudentTrend(report, e.name) : null;
+    const meta = multi
+      ? '<div class="tgv2-meta">' + e.attempts + ' ta mashq'
+        + (trend != null ? ' · <span class="tgv2-trend ' + (trend > 0 ? 'up' : trend < 0 ? 'down' : 'flat') + '">'
+          + (trend > 0 ? '▲ +' + trend : trend < 0 ? '▼ ' + trend : '● 0') + '%</span>' : '') + '</div>'
+      : '';
     return '<div class="tgv2-row ' + band + '">'
       + '<div class="tgv2-row-top">'
       +   '<div class="tgv2-num">' + (i + 1) + '</div>'
-      +   '<div class="tgv2-name">' + q(e.name) + '</div>'
+      +   '<div class="tgv2-name">' + q(e.name) + meta + '</div>'
       +   '<div class="tgv2-track"><div class="tgv2-fill ' + band + '" style="width:' + Math.max(3, Math.min(100, e.pct)) + '%"></div></div>'
       +   '<div class="tgv2-pct">' + e.pct + '%<small>' + e.correctSum + '/' + e.totalSum + '</small></div>'
       + '</div>' + missed + '</div>';
@@ -13964,7 +14052,7 @@ function buildTelegramReportDOM(report) {
   const needs = report.warningCard.length || report.missing.length
     ? section('⚠️', 'E\'tibor kerak', '<div class="tgv2-two">'
         + (report.warningCard.length ? '<div class="tgv2-box warn"><div class="tgv2-box-t">Qo\'shimcha mashq kerak (50% dan past)</div>' + chips(report.warningCard, 'warn') + '</div>' : '')
-        + (report.missing.length ? '<div class="tgv2-box gray"><div class="tgv2-box-t">Topshirmaganlar</div>' + chips(report.missing, 'gray') + '</div>' : '')
+        + (report.missing.length ? '<div class="tgv2-box gray"><div class="tgv2-box-t">' + (multi ? 'Bu davrda qatnashmaganlar' : 'Topshirmaganlar') + '</div>' + chips(report.missing, 'gray') + '</div>' : '')
         + '</div>')
     : '<div class="tgv2-allgood">🎉 Hamma topshirdi va hech kim 50% dan past emas!</div>';
 
@@ -13984,7 +14072,7 @@ function buildTelegramReportDOM(report) {
         + '<div class="tgv2-chips">' + bs.fighters.map(f => '<span class="tgv2-chip blue">' + q(f.name) + ' · ' + f.pct + '%' + (f.wins ? ' 🏆' : '') + '</span>').join('') + '</div>')
     : '';
 
-  wrap.innerHTML = header + tiles + best + students + needs + hard + battle
+  wrap.innerHTML = header + tiles + best + growth + students + needs + hard + battle
     + '<div class="tgv2-quote">💬 ' + q(report.quote) + '</div>'
     + '<footer class="tgv2-foot"><span class="lg-owl"></span>Smart Education · LexiGo</footer>';
   return wrap;
