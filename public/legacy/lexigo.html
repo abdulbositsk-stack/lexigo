@@ -1810,6 +1810,8 @@
   .qwq-confetti i { position:absolute; top:-20px; width:10px; height:16px; border-radius:2px; animation:qwqFall linear forwards; }
   @keyframes qwqFall { to { transform:translate(var(--dx), 110vh) rotate(var(--rot)); } }
   /* Quick Word Quiz — full-screen cards */
+  .cloud-code { display:flex; align-items:center; gap:10px; flex-wrap:wrap; padding:10px 12px; border-radius:12px; background:var(--blue-bg); border:1px solid var(--blue-border); }
+  .cloud-code b { font-family:ui-monospace,Menlo,Consolas,monospace; font-size:16px; letter-spacing:.06em; color:var(--blue-text); }
   .qwq-logo { width:1em; height:1em; display:inline-block; vertical-align:middle; flex:none; }
   .qwq-cta-icon { font-size:40px; line-height:0; filter:drop-shadow(0 4px 10px rgba(0,0,0,.25)); }
   #qwqRoot.qwq-fs { position:fixed; inset:0; z-index:9000; display:flex; flex-direction:column; gap:12px; padding:12px 14px 14px; overflow:hidden;
@@ -3116,6 +3118,12 @@
       </div>
       <input type="file" id="restoreFileInput" accept="application/json" style="display:none;" onchange="restoreBackup(event)" />
       <p class="hint" id="backupStatus" style="margin:8px 0 0;"></p>
+    </div>
+
+    <div class="card" style="margin-top:12px;" id="cloudSyncCard">
+      <p class="add-form-title">&#9729;&#65039; Cloud sync</p>
+      <p class="hint">Keep your groups, names, words and results safe online, and open them on another computer or phone with one code.</p>
+      <div id="cloudSyncBody"></div>
     </div>
 
     <div class="card" style="margin-top:12px;" id="telegramSyncCard">
@@ -16263,6 +16271,208 @@ function qwqRender() {
   if (fs) qwqApplyFit();
   if (qwq.step === 'setup') qwqTgChip();
 }
+</script>
+<script>
+/* ============================================================
+   CLOUD SYNC — the whole LexiGo data of this browser is saved online
+   under a private sync code, a few seconds after every change. Another
+   device that enters the same code gets the same data. On start, a newer
+   cloud copy is loaded automatically (when this device has no unsaved
+   changes of its own). Secrets (API keys, bot tokens) never leave the
+   device.
+   ============================================================ */
+(function () {
+  const STATE_KEY = 'lexigo_cloud_sync_v1';
+  const ENDPOINT = '/.netlify/functions/cloud-sync';
+  const EXCLUDE = /^lexigo_cloud_|api_key|bot_token|^vqt_api_key/i;
+  let applying = false, timer = null, pushing = false;
+
+  function state() { try { return JSON.parse(localStorage.getItem(STATE_KEY) || 'null') || {}; } catch (e) { return {}; } }
+  function setState(patch) {
+    const st = Object.assign(state(), patch);
+    applying = true;
+    try { localStorage.setItem(STATE_KEY, JSON.stringify(st)); } catch (e) {}
+    applying = false;
+    return st;
+  }
+  function fmtCode(c) { return String(c || '').replace(/(.{4})(?=.)/g, '$1-'); }
+  function device() {
+    const ua = navigator.userAgent || '';
+    return (/Android/i.test(ua) ? 'Android' : /iPhone|iPad/i.test(ua) ? 'iPhone/iPad' : /Windows/i.test(ua) ? 'Windows' : /Mac/i.test(ua) ? 'Mac' : 'Browser')
+      + (/Edg\//.test(ua) ? ' · Edge' : /Chrome\//.test(ua) ? ' · Chrome' : /Firefox\//.test(ua) ? ' · Firefox' : /Safari\//.test(ua) ? ' · Safari' : '');
+  }
+  async function api(action, payload) {
+    const res = await fetch(ENDPOINT, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(Object.assign({ action }, payload || {})) });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || data.ok === false) { const e = new Error(data.error || 'Cloud sync failed.'); e.status = res.status; e.data = data; throw e; }
+    return data;
+  }
+
+  function snapshot() {
+    const out = {};
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && !EXCLUDE.test(k)) out[k] = localStorage.getItem(k);
+    }
+    return out;
+  }
+  async function encode(obj) {
+    const json = JSON.stringify({ app: 'LexiGo', v: 1, keys: obj });
+    if (typeof CompressionStream === 'undefined') return { enc: 'json', data: json };
+    const stream = new Blob([json]).stream().pipeThrough(new CompressionStream('gzip'));
+    const buf = new Uint8Array(await new Response(stream).arrayBuffer());
+    let bin = ''; for (let i = 0; i < buf.length; i += 0x8000) bin += String.fromCharCode.apply(null, buf.subarray(i, i + 0x8000));
+    return { enc: 'gzip64', data: btoa(bin) };
+  }
+  async function decode(enc, data) {
+    if (enc !== 'gzip64') return JSON.parse(data);
+    const bin = atob(data); const buf = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) buf[i] = bin.charCodeAt(i);
+    const stream = new Blob([buf]).stream().pipeThrough(new DecompressionStream('gzip'));
+    return JSON.parse(await new Response(stream).text());
+  }
+  function applySnapshot(payload) {
+    const keys = (payload && payload.keys) || {};
+    applying = true;
+    try {
+      const drop = [];
+      for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k && !EXCLUDE.test(k)) drop.push(k); }
+      drop.forEach(k => localStorage.removeItem(k));
+      Object.keys(keys).forEach(k => { if (!EXCLUDE.test(k)) localStorage.setItem(k, keys[k]); });
+    } finally { applying = false; }
+  }
+
+  // Any change to LexiGo data marks this device as changed and schedules a save.
+  const origSet = Storage.prototype.setItem, origRemove = Storage.prototype.removeItem;
+  function touched(storage, key) {
+    if (applying || storage !== window.localStorage || EXCLUDE.test(String(key))) return;
+    const st = state();
+    if (!st.code) return;
+    if (!st.dirty) setState({ dirty: true });
+    clearTimeout(timer);
+    timer = setTimeout(() => window.cloudSyncPush(), 4000);
+  }
+  Storage.prototype.setItem = function (k, v) { const r = origSet.call(this, k, v); touched(this, k); return r; };
+  Storage.prototype.removeItem = function (k) { const r = origRemove.call(this, k); touched(this, k); return r; };
+
+  function status(msg) { const el = document.getElementById('cloudSyncStatus'); if (el) el.textContent = msg; }
+
+  window.cloudSyncPush = async function (force) {
+    const st = state();
+    if (!st.code || pushing) return;
+    if (!navigator.onLine) { status('📴 Offline. Changes will be saved to the cloud when the internet is back.'); return; }
+    pushing = true;
+    try {
+      const body = await encode(snapshot());
+      const res = await api('push', { code: st.code, baseRev: st.rev || 0, data: body.data, enc: body.enc, device: device(), force: !!force });
+      setState({ rev: res.rev, syncedAt: res.updatedAt, dirty: false });
+      status('✅ Saved to the cloud just now.');
+      renderCloudSync();
+    } catch (e) {
+      if (e.status === 409) {
+        const d = e.data || {};
+        const when = d.updatedAt ? new Date(d.updatedAt).toLocaleString() : '';
+        if (confirm('Another device' + (d.device ? ' (' + d.device + ')' : '') + ' saved newer LexiGo data' + (when ? ' on ' + when : '') + '.\n\nOK = load that newer data here (changes made on this device since then are dropped).\nCancel = keep this device\'s data and replace the cloud copy.')) {
+          pushing = false; await window.cloudSyncPull(true); return;
+        }
+        pushing = false; await window.cloudSyncPush(true); return;
+      }
+      status('⚠️ ' + e.message);
+    } finally { pushing = false; }
+  };
+
+  window.cloudSyncPull = async function (reload) {
+    const st = state();
+    if (!st.code) return false;
+    const res = await api('pull', { code: st.code });
+    if (!res.data) return false;
+    const payload = await decode(res.enc, res.data);
+    applySnapshot(payload);
+    setState({ code: st.code, rev: res.rev, syncedAt: res.updatedAt, dirty: false });
+    if (reload !== false) { try { sessionStorage.setItem('lexigo_cloud_just_loaded', '1'); } catch (e) {} location.reload(); }
+    return true;
+  };
+
+  window.cloudSyncEnable = async function () {
+    status('⏳ Creating your sync code…');
+    try {
+      const res = await api('create');
+      setState({ code: res.code, rev: 0, dirty: true, syncedAt: 0 });
+      await window.cloudSyncPush();
+      renderCloudSync();
+    } catch (e) { status('⚠️ ' + e.message); }
+  };
+  window.cloudSyncJoin = async function () {
+    const inp = document.getElementById('cloudSyncCodeInput');
+    const code = String(inp ? inp.value : '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+    if (code.length !== 24) { status('⚠️ The code has 24 letters and numbers, like ABCD-EFGH-…'); return; }
+    status('⏳ Checking the code…');
+    try {
+      const meta = await api('meta', { code });
+      if (!meta.rev) { status('⚠️ That code has no saved data yet.'); return; }
+      if (!confirm('Load the LexiGo data saved with this code?\n\nIt replaces the groups, names, words and results in this browser.')) { status(''); return; }
+      setState({ code, rev: 0, dirty: false });
+      await window.cloudSyncPull(true);
+    } catch (e) { status('⚠️ ' + e.message); }
+  };
+  window.cloudSyncDisable = function () {
+    if (!confirm('Turn off cloud sync on this device?\n\nYour data stays in this browser and in the cloud. You can turn it on again with the same code.')) return;
+    applying = true; try { localStorage.removeItem(STATE_KEY); } finally { applying = false; }
+    renderCloudSync();
+  };
+  window.cloudSyncCopy = function () {
+    const st = state(); if (!st.code) return;
+    const text = fmtCode(st.code);
+    (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(() => status('📋 Code copied.'), () => status('Code: ' + text));
+  };
+
+  function renderCloudSync() {
+    const el = document.getElementById('cloudSyncBody');
+    if (!el) return;
+    const st = state();
+    if (!st.code) {
+      el.innerHTML = '<div class="row" style="flex-wrap:wrap;gap:8px;">'
+        + '<button class="btn btn-primary" onclick="cloudSyncEnable()">&#9729;&#65039; Turn on cloud sync</button></div>'
+        + '<p class="hint" style="margin:12px 0 6px;">Already use cloud sync on another device? Enter its code:</p>'
+        + '<div class="row" style="gap:8px;"><input type="text" id="cloudSyncCodeInput" placeholder="ABCD-EFGH-JKLM-NPQR-STUV-WXYZ" autocomplete="off" />'
+        + '<button class="btn" onclick="cloudSyncJoin()">Load my data</button></div>'
+        + '<p class="hint" id="cloudSyncStatus" style="margin:8px 0 0;"></p>';
+      return;
+    }
+    el.innerHTML = '<div class="cloud-code"><span class="hint">Your sync code</span><b>' + fmtCode(st.code) + '</b>'
+      + '<button class="btn btn-sm" onclick="cloudSyncCopy()">&#128203; Copy</button></div>'
+      + '<p class="hint" style="margin:8px 0;">Keep this code private. Enter it on another device (Settings &rarr; Cloud sync) to open the same data there.</p>'
+      + '<p class="hint" style="margin:0 0 10px;">' + (st.dirty ? '&#9203; Changes waiting to be saved&hellip;' : (st.syncedAt ? '&#9989; Last saved ' + new Date(st.syncedAt).toLocaleString() : '')) + '</p>'
+      + '<div class="row" style="gap:8px;flex-wrap:wrap;"><button class="btn btn-primary" onclick="cloudSyncPush()">&#128260; Sync now</button>'
+      + '<button class="btn" onclick="cloudSyncDisable()">Turn off on this device</button></div>'
+      + '<p class="hint" id="cloudSyncStatus" style="margin:8px 0 0;"></p>';
+  }
+  window.renderCloudSync = renderCloudSync;
+
+  // On start: load a newer cloud copy, or save local changes made offline.
+  async function startup() {
+    renderCloudSync();
+    const st = state();
+    if (!st.code || !navigator.onLine) return;
+    let justLoaded = false;
+    try { justLoaded = sessionStorage.getItem('lexigo_cloud_just_loaded') === '1'; sessionStorage.removeItem('lexigo_cloud_just_loaded'); } catch (e) {}
+    try {
+      const meta = await api('meta', { code: st.code });
+      if (meta.rev > (st.rev || 0) && !justLoaded) {
+        if (!st.dirty) { await window.cloudSyncPull(true); return; }
+        window.cloudSyncPush(); // conflict prompt explains the choice
+        return;
+      }
+      if (st.dirty) window.cloudSyncPush();
+    } catch (e) {}
+  }
+  window.addEventListener('online', () => { if (state().dirty) window.cloudSyncPush(); });
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden' && state().dirty) { clearTimeout(timer); window.cloudSyncPush(); }
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => setTimeout(startup, 800));
+  else setTimeout(startup, 800);
+})();
 </script>
 </body>
 </html>
