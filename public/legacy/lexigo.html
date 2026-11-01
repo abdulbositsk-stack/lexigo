@@ -1727,30 +1727,60 @@
   @media (max-width: 640px) { .qwq-srow { grid-template-columns:1fr auto; } .qwq-stars { grid-column:1 / -1; } }
 
   /* Quick Word Quiz — full-screen cards */
-  #qwqRoot.qwq-fs { position:fixed; inset:0; z-index:9000; display:flex; flex-direction:column; gap:10px; padding:10px 14px 14px;
-    background:linear-gradient(160deg, #eaf1ff, #f7f3ff); overflow:hidden; }
-  body.adult-mode #qwqRoot.qwq-fs { background:linear-gradient(160deg, #15130f, #1d1a24); }
-  .qwq-fs .qwq-fbar { display:flex; align-items:center; gap:12px; flex-wrap:wrap; background:var(--surface); border:1px solid var(--border2); border-radius:16px; padding:8px 12px; box-shadow:var(--shadow); }
+  .qwq-logo { width:1em; height:1em; display:inline-block; vertical-align:middle; flex:none; }
+  .qwq-cta-icon { font-size:40px; line-height:0; filter:drop-shadow(0 4px 10px rgba(0,0,0,.25)); }
+  #qwqRoot.qwq-fs { position:fixed; inset:0; z-index:9000; display:flex; flex-direction:column; gap:12px; padding:12px 14px 14px; overflow:hidden;
+    --qbg:radial-gradient(1200px 700px at 10% -10%, #dfe8ff 0%, transparent 60%), radial-gradient(900px 600px at 110% 110%, #efe4ff 0%, transparent 55%), #f3f6fc;
+    --qbar:rgba(255,255,255,.86); --qbarb:rgba(20,33,61,.08); --qt:#14213d; --qt2:#5b6683; --qbtn:#fff; --qbtnb:rgba(20,33,61,.14);
+    --qcard:#ffffff; --qmix:#ffffff; --qwm:.08; --qshadow:0 14px 34px rgba(20,33,61,.10);
+    background:var(--qbg); color:var(--qt); font-family:'Poppins','Inter',system-ui,sans-serif; }
+  #qwqRoot.qwq-fs.qwq-dark { --qbg:radial-gradient(1100px 700px at 0% -10%, #1b2a5c 0%, transparent 60%), radial-gradient(900px 600px at 110% 110%, #3a1d5c 0%, transparent 55%), #0b1020;
+    --qbar:rgba(17,24,45,.82); --qbarb:rgba(255,255,255,.08); --qt:#f2f5ff; --qt2:#9aa6c7; --qbtn:rgba(255,255,255,.06); --qbtnb:rgba(255,255,255,.16);
+    --qcard:#121a30; --qmix:#121a30; --qwm:.10; --qshadow:0 16px 40px rgba(0,0,0,.45); }
+  .qwq-fs .qwq-fbar { display:flex; align-items:center; gap:12px; flex-wrap:wrap; background:var(--qbar); border:1px solid var(--qbarb); border-radius:18px; padding:8px 12px; box-shadow:var(--qshadow); backdrop-filter:blur(10px); }
+  .qwq-fs .qwq-brand { display:flex; align-items:center; gap:8px; font-weight:800; font-size:15px; letter-spacing:.08em; color:var(--qt); white-space:nowrap; }
+  .qwq-fs .qwq-brand .qwq-logo { font-size:34px; }
+  .qwq-fs .qwq-fbar .btn { background:var(--qbtn); color:var(--qt); border:1px solid var(--qbtnb); box-shadow:none; }
+  .qwq-fs .qwq-fbar .btn-primary { background:linear-gradient(135deg,#3b82f6,#6d4aff); color:#fff; border-color:transparent; }
+  .qwq-fs .qwq-fbar .qwq-reveal { background:linear-gradient(135deg,#ffe27a,#ffb020) !important; color:#3a2600 !important; }
+  .qwq-fs .qwq-ico { width:40px; height:40px; padding:0; border-radius:12px; font-size:18px; display:inline-flex; align-items:center; justify-content:center; }
+  .qwq-fs .qwq-ico.off { opacity:.45; }
   .qwq-fs .qwq-tbox { display:flex; align-items:center; gap:8px; }
-  .qwq-fs .qwq-timer { font-size:clamp(34px,5vw,54px); min-width:0; }
-  .qwq-tadj { width:44px; height:44px; border-radius:50%; border:2px solid var(--blue-border); background:var(--blue-bg); color:var(--blue-text); font-size:26px; font-weight:800; cursor:pointer; line-height:1; }
+  .qwq-fs .qwq-timer { font-size:clamp(34px,4.6vw,54px); min-width:0; color:var(--qt); }
+  .qwq-fs .qwq-timer.urgent { color:#ff4d4f; }
+  .qwq-tadj { width:42px; height:42px; border-radius:50%; border:1px solid var(--qbtnb, var(--blue-border)); background:var(--qbtn, var(--blue-bg)); color:var(--qt, var(--blue-text)); font-size:24px; font-weight:800; cursor:pointer; line-height:1; }
   .qwq-tpresets { display:flex; gap:4px; flex-wrap:wrap; }
+  .qwq-fs .qwq-tpresets .btn { padding:6px 10px; }
   .qwq-fs .qwq-actions { margin-left:auto; }
-  .qwq-fs .qwq-banner { margin:0; padding:8px 14px; font-size:16px; }
-  .qwq-fs .qwq-grid { flex:1; min-height:0; display:grid; grid-template-columns:repeat(var(--cols), 1fr); grid-template-rows:repeat(var(--rows), minmax(0, 1fr)); gap:12px; }
-  .qwq-fs .qwq-card { min-height:0; display:flex; flex-direction:column; overflow:hidden; padding:10px 16px 12px; }
-  .qwq-fs .qwq-card-head { margin-bottom:6px; font-size:calc(var(--wf) * 0.6); }
-  .qwq-fs .qwq-badge { width:calc(var(--wf) * 1.5); height:calc(var(--wf) * 1.5); font-size:calc(var(--wf) * 0.95); border-radius:12px; }
-  .qwq-fs .qwq-count { font-size:calc(var(--wf) * 0.45); }
-  .qwq-fs .qwq-words { flex:1; justify-content:space-evenly; gap:0; }
-  .qwq-fs .qwq-words li { font-size:var(--wf); line-height:1.15; }
-  .qwq-fs .qwq-shut { flex:1; min-height:0; }
-  .qwq-lv { font-size:.5em; font-weight:800; padding:2px 7px; border-radius:6px; background:var(--blue-bg); color:var(--blue-text); align-self:center; }
-  .qwq-dots { display:inline-flex; gap:3px; vertical-align:middle; margin-left:4px; }
-  .qwq-dots i { width:7px; height:7px; border-radius:50%; background:var(--border2); display:inline-block; }
-  .qwq-dots i.on { background:var(--qc); }
-  .qwq-fs .qwq-shut-letter { font-size:calc(var(--wf) * 4); }
-  .qwq-fs .qwq-shut-text { font-size:calc(var(--wf) * 0.7); }
+  .qwq-fs .qwq-banner { margin:0; padding:8px 14px; font-size:16px; text-align:center; border-radius:14px; }
+  .qwq-fs .qwq-grid { flex:1; min-height:0; width:100%; display:flex; flex-wrap:wrap; justify-content:center; align-content:center; gap:var(--gap); }
+  .qwq-fs .qwq-card { --qc2:var(--qc); position:relative; flex:none; width:var(--cw); height:var(--ch); min-height:0; display:flex; flex-direction:column; overflow:hidden;
+    padding:calc(var(--wf) * .35) calc(var(--wf) * .55); border-radius:22px; border:2px solid color-mix(in srgb, var(--qc) 38%, transparent); border-top-width:2px;
+    background:linear-gradient(165deg, color-mix(in srgb, var(--qc) 16%, var(--qmix)) 0%, var(--qcard) 46%); box-shadow:var(--qshadow), inset 0 1px 0 rgba(255,255,255,.08); }
+  .qwq-fs .qwq-card::before { content:""; position:absolute; left:0; right:0; top:0; height:7px; background:linear-gradient(90deg, var(--qc), var(--qc2)); }
+  .qwq-fs .qwq-card::after { content:attr(data-letter); position:absolute; right:-.06em; bottom:-.28em; font-size:calc(var(--wf) * 6.5); font-weight:900; line-height:1; color:var(--qc); opacity:var(--qwm); pointer-events:none; }
+  .qwq-fs .qwq-cA { --qc:#3b82f6; --qc2:#6366f1; } .qwq-fs .qwq-cB { --qc:#10b981; --qc2:#22c55e; } .qwq-fs .qwq-cC { --qc:#f59e0b; --qc2:#f97316; } .qwq-fs .qwq-cD { --qc:#8b5cf6; --qc2:#a855f7; }
+  .qwq-fs .qwq-cE { --qc:#f43f5e; --qc2:#ef4444; } .qwq-fs .qwq-cF { --qc:#14b8a6; --qc2:#06b6d4; } .qwq-fs .qwq-cG { --qc:#ec4899; --qc2:#d946ef; } .qwq-fs .qwq-cH { --qc:#84cc16; --qc2:#65a30d; }
+  .qwq-fs .qwq-card-head { position:relative; z-index:1; display:flex; align-items:center; gap:calc(var(--wf) * .3); margin:0 0 calc(var(--wf) * .15); font-size:calc(var(--wf) * .5); color:var(--qt2); }
+  .qwq-fs .qwq-badge { width:calc(var(--wf) * 1.25); height:calc(var(--wf) * 1.25); font-size:calc(var(--wf) * .8); border-radius:calc(var(--wf) * .32); background:linear-gradient(135deg, var(--qc), var(--qc2)); box-shadow:0 6px 16px color-mix(in srgb, var(--qc) 40%, transparent); }
+  .qwq-fs .qwq-cname { font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--qc); }
+  .qwq-fs .qwq-count { margin-left:auto; font-size:calc(var(--wf) * .42); color:var(--qt2); font-weight:700; }
+  .qwq-fs .qwq-words { position:relative; z-index:1; list-style:none; flex:1; min-height:0; display:flex; flex-direction:column; justify-content:space-evenly; gap:0; margin:0; padding:0; }
+  .qwq-fs .qwq-words li { display:block; font-size:var(--wf); line-height:1.22; font-weight:800; color:var(--qt); letter-spacing:-.01em; }
+  .qwq-fs .qwq-words li::before { content:none; }
+  .qwq-fs .qwq-wrow { display:flex; align-items:center; gap:calc(var(--wf) * .3); min-width:0; }
+  .qwq-fs .qwq-ask { min-width:0; white-space:nowrap; }
+  .qwq-fs .qwq-lv { flex:none; font-size:calc(var(--wf) * .36); line-height:1; font-weight:800; padding:.32em .55em; border-radius:.5em; letter-spacing:.04em; color:#fff; background:#64748b; align-self:center; }
+  .qwq-lv-A1 { background:#16a34a !important; } .qwq-lv-A2 { background:#0d9488 !important; } .qwq-lv-B1 { background:#2563eb !important; }
+  .qwq-lv-B2 { background:#7c3aed !important; } .qwq-lv-C1, .qwq-lv-C2 { background:#dc2626 !important; }
+  .qwq-fs .qwq-ans { display:block; margin-left:auto; text-align:right; white-space:nowrap; font-size:.7em; line-height:1.25; padding:.12em .55em; border-radius:999px; font-weight:800;
+    color:color-mix(in srgb, var(--qc) 70%, var(--qt)); background:color-mix(in srgb, var(--qc) 16%, transparent); }
+  .qwq-fs .qwq-card.closed { background:linear-gradient(150deg, var(--qc), var(--qc2)); border-color:transparent; }
+  .qwq-fs .qwq-card.closed::after { color:#fff; opacity:.12; }
+  .qwq-fs .qwq-card.closed .qwq-card-head { visibility:hidden; }
+  .qwq-fs .qwq-shut { position:relative; z-index:1; flex:1; min-height:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; }
+  .qwq-fs .qwq-shut-letter { font-size:calc(var(--wf) * 3.6); color:#fff; text-shadow:0 8px 24px rgba(0,0,0,.25); }
+  .qwq-fs .qwq-shut-text { font-size:calc(var(--wf) * .55); color:rgba(255,255,255,.88); }
 </style>
 <style id="mode-and-adult-theme">
   /* ============================================================
@@ -3432,7 +3462,7 @@
 
       <!-- QUICK WORD QUIZ — paper cards for the whole class -->
       <div class="qwq-cta">
-        <div class="qwq-cta-top"><span class="qwq-cta-icon">&#9889;</span><span class="qwq-cta-title">QUICK WORD QUIZ</span></div>
+        <div class="qwq-cta-top"><span class="qwq-cta-icon"><svg class="qwq-logo" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="qwqLgBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#7c3aed"/></linearGradient><linearGradient id="qwqLgBolt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe27a"/><stop offset="1" stop-color="#ffaa1f"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#qwqLgBg)"/><rect x="14" y="16" width="24" height="32" rx="5" fill="#fff" opacity=".42" transform="rotate(-15 26 32)"/><rect x="26" y="16" width="24" height="32" rx="5" fill="#fff" opacity=".68" transform="rotate(13 38 32)"/><rect x="20" y="14" width="24" height="34" rx="5" fill="#fff"/><path d="M35 18 L25 33 H31.5 L28 45 L39 28.5 H32.5 Z" fill="url(#qwqLgBolt)" stroke="#e08a00" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="qwq-cta-title">QUICK WORD QUIZ</span></div>
         <div class="qwq-cta-sub">Cards A, B, C, D for the whole class &middot; timer &middot; partners check &middot; stars</div>
         <button class="btn qwq-cta-btn" onclick="openQuickWordQuiz()">&#9889; Start Quick Word Quiz</button>
       </div>
@@ -15396,7 +15426,10 @@ function qwqSettings() {
     cards: [2, 3, 4, 5, 6, 8].includes(st.cards) ? st.cards : 4,
     perCard: [3, 4, 5, 6, 8, 10].includes(st.perCard) ? st.perCard : 5,
     seconds: [30, 60, 90, 120, 180, 300].includes(st.seconds) ? st.seconds : 90,
-    dir: st.dir === 'uz2en' ? 'uz2en' : 'en2uz'
+    dir: st.dir === 'uz2en' ? 'uz2en' : 'en2uz',
+    themeKids: st.themeKids === 'dark' ? 'dark' : (st.themeKids === 'light' ? 'light' : ''),
+    themeAdult: st.themeAdult === 'light' ? 'light' : (st.themeAdult === 'dark' ? 'dark' : ''),
+    music: st.music !== false
   };
 }
 function qwqSave(patch) {
@@ -15444,25 +15477,39 @@ function qwqMakeCards() {
   const st = qwqSettings();
   const pool = shuffleArray(qwqPool());
   if (!pool.length) { alert('Select units with words for this group first (Vocabulary Selection).'); return; }
-  const need = st.cards * st.perCard;
-  let list = pool.slice(0, need);
-  while (list.length < need) list = list.concat(shuffleArray(pool).slice(0, need - list.length));
-  // Sort by difficulty, then deal each band of N similar words one per
-  // card, so card A, B, C, D all get the same mix of easy and hard words.
-  list = list.map(w => ({ w, d: qwqDifficulty(w), r: Math.random() })).sort((x, y) => x.d - y.d || x.r - y.r);
+  // Row by row, every card gets a word of the same level (A1 … C1), so
+  // card A, B, C, D are equally hard. Levels are spread over the rows in
+  // proportion to how many words of each level were selected.
   const decks = Array.from({ length: st.cards }, () => []);
-  for (let i = 0; i < list.length; i += st.cards) {
-    const band = shuffleArray(list.slice(i, i + st.cards));
-    band.forEach((item, j) => decks[j].push(item));
+  const byLv = {};
+  pool.forEach(w => { const l = qwqLevelLabel(w); (byLv[l] = byLv[l] || []).push(w); });
+  const used = {}, rowsLv = [];
+  for (let r = 0; r < st.perCard; r++) {
+    const ok = Object.keys(byLv).filter(l => byLv[l].length >= st.cards);
+    if (!ok.length) break;
+    ok.sort((x, y) => byLv[y].length / ((used[y] || 0) + 1) - byLv[x].length / ((used[x] || 0) + 1));
+    const l = ok[0]; used[l] = (used[l] || 0) + 1;
+    rowsLv.push(byLv[l].splice(0, st.cards));
   }
-  qwq.cards = QWQ_LETTERS.slice(0, st.cards).map((letter, i) => ({ letter, words: shuffleArray(decks[i]).map(x => x.w), level: decks[i].reduce((a, x) => a + x.d, 0) / decks[i].length }));
+  if (rowsLv.length < st.perCard) {
+    // Not enough words of one level: fill the remaining rows with the
+    // closest-difficulty words, as evenly as possible.
+    let rest = Object.values(byLv).flat();
+    const missing = (st.perCard - rowsLv.length) * st.cards;
+    while (rest.length < missing) rest = rest.concat(shuffleArray(pool).slice(0, missing - rest.length));
+    rest = rest.slice(0, missing).map(w => ({ w, d: qwqDifficulty(w), r: Math.random() })).sort((x, y) => x.d - y.d || x.r - y.r).map(x => x.w);
+    for (let i = 0; i < rest.length; i += st.cards) rowsLv.push(rest.slice(i, i + st.cards));
+  }
+  rowsLv.sort((x, y) => qwqDifficulty(x[0]) - qwqDifficulty(y[0]));
+  rowsLv.forEach(row => shuffleArray(row).forEach((w, j) => decks[j].push({ w, d: qwqDifficulty(w) })));
+  qwq.cards = QWQ_LETTERS.slice(0, st.cards).map((letter, i) => ({ letter, words: decks[i].map(x => x.w), level: decks[i].reduce((a, x) => a + x.d, 0) / decks[i].length }));
   qwq.perCard = st.perCard; qwq.dir = st.dir; qwq.seconds = st.seconds;
   qwq.remaining = st.seconds; qwq.running = false; qwq.closed = false; qwq.revealed = false; qwq.scores = {};
   qwq.step = 'run';
   qwqFullscreen(true);
   qwqRender();
 }
-function qwqStopTimer() { if (qwq.timer) { clearInterval(qwq.timer); qwq.timer = null; } qwq.running = false; }
+function qwqStopTimer() { if (qwq.timer) { clearInterval(qwq.timer); qwq.timer = null; } qwq.running = false; qwqMusicStop(); }
 function qwqToggleTimer() {
   if (qwq.running) { qwqStopTimer(); qwqRender(); return; }
   if (qwq.remaining <= 0) qwq.remaining = qwq.seconds;
@@ -15477,7 +15524,9 @@ function qwqToggleTimer() {
     }
     const t = document.getElementById('qwqTimer');
     if (t) { t.textContent = qwqTime(qwq.remaining); t.classList.toggle('urgent', qwq.remaining <= 10); }
+    if (qwq.remaining <= 10 && _qwqMusic.on) qwqMusicStop();
   }, 200);
+  qwqMusicStart();
   qwqRender();
 }
 function qwqBeep(freq, dur, vol) {
@@ -15501,8 +15550,136 @@ function qwqFullscreen(on) {
     if (!on && document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(() => {});
   } catch (e) {}
 }
-function qwqLayout(n) {
-  return ({ 1: [1, 1], 2: [2, 1], 3: [3, 1], 4: [2, 2], 5: [3, 2], 6: [3, 2], 7: [4, 2], 8: [4, 2] })[n] || [4, 2];
+let _qwqLogoN = 0;
+function qwqLogo() { const k = 'q' + (++_qwqLogoN); return QWQ_LOGO.replace(/qwqLg(Bg|Bolt)/g, (m) => m + k); }
+const QWQ_LOGO = '<svg class="qwq-logo" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="qwqLgBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#7c3aed"/></linearGradient><linearGradient id="qwqLgBolt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe27a"/><stop offset="1" stop-color="#ffaa1f"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#qwqLgBg)"/><rect x="14" y="16" width="24" height="32" rx="5" fill="#fff" opacity=".42" transform="rotate(-15 26 32)"/><rect x="26" y="16" width="24" height="32" rx="5" fill="#fff" opacity=".68" transform="rotate(13 38 32)"/><rect x="20" y="14" width="24" height="34" rx="5" fill="#fff"/><path d="M35 18 L25 33 H31.5 L28 45 L39 28.5 H32.5 Z" fill="url(#qwqLgBolt)" stroke="#e08a00" stroke-width="1.2" stroke-linejoin="round"/></svg>';
+const QWQ_CEFR = ['A1', 'A2', 'B1', 'B2', 'C1'];
+// A real CEFR tag on the word wins; otherwise the difficulty band is shown
+// as its CEFR estimate (band 1 = A1 … band 5 = C1).
+function qwqLevelLabel(w) {
+  const lv = String((w && w.level) || '').toUpperCase().match(/^(A1|A2|B1|B2|C1|C2)/);
+  return lv ? lv[1] : QWQ_CEFR[Math.max(1, Math.min(5, qwqDifficulty(w))) - 1];
+}
+function qwqAsk(w) { return qwq.dir === 'uz2en' && w.uzb ? w.uzb : w.word; }
+function qwqAnswer(w) { return qwq.dir === 'uz2en' && w.uzb ? w.word : (w.uzb || '—'); }
+// Measure the free area under the toolbar, try 1, 2 and 3 rows and keep
+// the layout that gives the biggest words. Every card is the same size; a
+// short last row is centred, so 5 cards show as 3 + 2 with no empty slot.
+function qwqApplyFit() {
+  const grid = document.querySelector('#qwqRoot.qwq-fs .qwq-grid');
+  if (!grid) return;
+  const n = qwq.cards.length || 1, gap = 14, W = grid.clientWidth, H = grid.clientHeight;
+  const longest = qwq.cards.reduce((m, c) => Math.max(m, ...c.words.map(w => String(qwqAsk(w)).length)), 4);
+  const longAns = qwq.revealed ? qwq.cards.reduce((m, c) => Math.max(m, ...c.words.map(w => String(qwqAnswer(w)).length)), 0) : 0;
+  let best = null;
+  for (let r = 1; r <= Math.min(n, 3); r++) {
+    const c = Math.ceil(n / r);
+    const cw = Math.floor((W - gap * (c - 1)) / c), ch = Math.floor((H - gap * (r - 1)) / r);
+    const fH = (ch - 16) / (qwq.perCard * 1.3 + 2.3);
+    const fW = (cw - 12) / (longest * 0.62 + 2.6 + (longAns ? longAns * 0.62 * 0.7 + 1.4 : 0));
+    const f = Math.max(14, Math.min(fH, fW, 120));
+    const score = f * (1 - 0.15 * Math.abs(Math.log((cw / ch) / 1.4)));
+    if (!best || score > best.score) best = { c, cw, ch, f, score };
+  }
+  grid.style.setProperty('--cw', best.cw + 'px');
+  grid.style.setProperty('--ch', best.ch + 'px');
+  let f = best.f;
+  for (let i = 0; i < 12; i++) {
+    grid.style.setProperty('--wf', f.toFixed(1) + 'px');
+    const over = [...grid.querySelectorAll('.qwq-wrow')].some(el => el.scrollWidth > el.clientWidth + 1)
+      || [...grid.querySelectorAll('.qwq-words li')].some(li => li.offsetTop + li.offsetHeight > li.parentNode.clientHeight + 1);
+    if (!over) break;
+    f *= 0.93;
+  }
+}
+window.addEventListener('resize', () => { if (qwq.step === 'run') qwqApplyFit(); });
+function qwqTheme() {
+  const st = qwqSettings(), adult = document.body.classList.contains('adult-mode');
+  return (adult ? st.themeAdult : st.themeKids) || (adult ? 'dark' : 'light');
+}
+function qwqToggleTheme() {
+  const adult = document.body.classList.contains('adult-mode');
+  const next = qwqTheme() === 'dark' ? 'light' : 'dark';
+  qwqSave(adult ? { themeAdult: next } : { themeKids: next });
+  qwqRender();
+}
+
+/* Quick Word Quiz music: a focused "thinking" groove that plays only while
+   the timer runs. Kids get a bright marimba with a tick-tock clock; adults
+   get a soft, minimal pulse. It stops on pause, at time up, and on exit. */
+let _qwqMusic = { on: false, timers: [] };
+function qwqMusicEnabled() { return qwqSettings().music !== false; }
+function qwqToggleMusic() {
+  const on = !qwqMusicEnabled();
+  qwqSave({ music: on });
+  if (!on) qwqMusicStop(); else if (qwq.running) qwqMusicStart();
+  qwqRender();
+}
+function qwqMusicStart() {
+  if (_qwqMusic.on || !qwqMusicEnabled()) return;
+  try { if (typeof stopBgMusic === 'function') stopBgMusic(); } catch (e) {}
+  try { if (typeof stopModeMusic === 'function') stopModeMusic(); } catch (e) {}
+  try {
+    const ctx = getAudioCtx(); try { ctx.resume(); } catch (e) {}
+    const adult = document.body.classList.contains('adult-mode');
+    _qwqMusic.on = true;
+    const master = ctx.createGain(); master.gain.value = adult ? 0.10 : 0.11;
+    const tone = ctx.createBiquadFilter(); tone.type = 'lowpass'; tone.frequency.value = adult ? 2400 : 6000;
+    master.connect(tone); tone.connect(ctx.destination);
+    _qwqMusic.master = master;
+    try { const rev = makeReverb(ctx, 1.8, 3); const rg = ctx.createGain(); rg.gain.value = adult ? 0.35 : 0.22; master.connect(rev); rev.connect(rg); rg.connect(ctx.destination); } catch (e) {}
+    const bpm = adult ? 84 : 104, beat = 60 / bpm, bar = beat * 4;
+    // Am – F – C – G (kids, in a higher register) / Dm9 – Bbmaj7 – Fmaj7 – C (adults)
+    const CH = adult
+      ? [[146.83, 174.61, 220.00, 261.63], [116.54, 146.83, 174.61, 220.00], [174.61, 220.00, 261.63, 329.63], [130.81, 164.81, 196.00, 246.94]]
+      : [[220.00, 261.63, 329.63], [174.61, 220.00, 261.63], [261.63, 329.63, 392.00], [196.00, 246.94, 293.66]];
+    const BASS = adult ? [73.42, 58.27, 87.31, 65.41] : [110.00, 87.31, 130.81, 98.00];
+    const mallet = (f, t, d, v) => {
+      const o = ctx.createOscillator(), o2 = ctx.createOscillator(), g = ctx.createGain();
+      o.type = 'sine'; o.frequency.value = f; o2.type = 'sine'; o2.frequency.value = f * 4;
+      const g2 = ctx.createGain(); g2.gain.value = 0.18;
+      g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(v, t + 0.006); g.gain.exponentialRampToValueAtTime(0.0001, t + d);
+      o.connect(g); o2.connect(g2); g2.connect(g); g.connect(master);
+      o.start(t); o2.start(t); o.stop(t + d + 0.05); o2.stop(t + d + 0.05);
+    };
+    const tick = (t, hi, v) => {
+      const o = ctx.createOscillator(), g = ctx.createGain(), bp = ctx.createBiquadFilter();
+      o.type = 'square'; o.frequency.value = hi ? 1900 : 1400; bp.type = 'bandpass'; bp.frequency.value = hi ? 2400 : 1800; bp.Q.value = 6;
+      g.gain.setValueAtTime(v, t); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.04);
+      o.connect(bp); bp.connect(g); g.connect(master); o.start(t); o.stop(t + 0.06);
+    };
+    const pad = (f, t, d, v) => {
+      const o = ctx.createOscillator(), g = ctx.createGain(); o.type = 'triangle'; o.frequency.value = f;
+      g.gain.setValueAtTime(0.0001, t); g.gain.linearRampToValueAtTime(v, t + 0.4); g.gain.linearRampToValueAtTime(0.0001, t + d);
+      o.connect(g); g.connect(master); o.start(t); o.stop(t + d + 0.1);
+    };
+    const ARP = [0, 1, 2, 1, 2, 0, 1, 2];
+    let n = 0, next = ctx.currentTime + 0.08;
+    const schedule = () => {
+      if (!_qwqMusic.on) return;
+      if (next < ctx.currentTime + 0.05) next = ctx.currentTime + 0.05;
+      const t0 = next, ch = CH[n % 4];
+      for (let i = 0; i < 4; i++) tick(t0 + i * beat, i === 0, adult ? 0.05 : 0.08);
+      if (adult) {
+        ch.forEach(f => pad(f, t0, bar * 1.02, 0.045));
+        mallet(BASS[n % 4], t0, beat * 1.6, 0.35); mallet(BASS[n % 4], t0 + beat * 2.5, beat * 1.2, 0.22);
+        if (n % 2) [0, 1.5, 3].forEach((b, i) => mallet(ch[(i + 1) % ch.length] * 2, t0 + b * beat, beat * 1.4, 0.10));
+      } else {
+        mallet(BASS[n % 4], t0, beat * 1.4, 0.32); mallet(BASS[n % 4], t0 + beat * 2, beat * 1.4, 0.26);
+        ARP.forEach((k, i) => mallet(ch[k] * 2, t0 + i * beat / 2, beat * 0.9, i % 2 ? 0.10 : 0.15));
+        if (n % 4 === 3) mallet(ch[2] * 4, t0 + beat * 3.5, beat, 0.08);
+      }
+      n++; next = t0 + bar;
+      _qwqMusic.timers.push(setTimeout(schedule, Math.max(50, (next - ctx.currentTime - 0.25) * 1000)));
+    };
+    schedule();
+  } catch (e) { _qwqMusic.on = false; }
+}
+function qwqMusicStop() {
+  _qwqMusic.on = false;
+  _qwqMusic.timers.forEach(t => clearTimeout(t)); _qwqMusic.timers = [];
+  const m = _qwqMusic.master; _qwqMusic.master = null;
+  if (m) { try { const c = getAudioCtx(); m.gain.setTargetAtTime(0.0001, c.currentTime, 0.15); setTimeout(() => { try { m.disconnect(); } catch (e) {} }, 900); } catch (e) {} }
 }
 function qwqToggleClosed() { qwq.closed = !qwq.closed; qwqRender(); }
 function qwqReveal() { qwqStopTimer(); qwq.closed = false; qwq.revealed = true; qwqRender(); }
@@ -15567,13 +15744,12 @@ function qwqCardHtml(card) {
   const body = shut
     ? '<div class="qwq-shut"><div class="qwq-shut-letter">' + card.letter + '</div><div class="qwq-shut-text">&#128274; Card closed</div></div>'
     : '<ol class="qwq-words">' + card.words.map(w => {
-        const ask = qwq.dir === 'uz2en' && w.uzb ? w.uzb : w.word;
-        const ans = qwq.dir === 'uz2en' && w.uzb ? w.word : (w.uzb || '—');
-        const lv = String(w.level || '').toUpperCase().match(/^(A1|A2|B1|B2|C1|C2)/);
-        return '<li><span class="qwq-ask">' + esc(ask) + '</span>' + (lv ? '<span class="qwq-lv">' + lv[1] + '</span>' : '') + (qwq.revealed ? '<span class="qwq-ans">' + esc(ans) + '</span>' : '<span class="qwq-line"></span>') + '</li>';
+        const lv = qwqLevelLabel(w);
+        return '<li><div class="qwq-wrow"><span class="qwq-ask">' + esc(qwqAsk(w)) + '</span><span class="qwq-lv qwq-lv-' + lv + '">' + lv + '</span>'
+          + (qwq.revealed ? '<span class="qwq-ans">' + esc(qwqAnswer(w)) + '</span>' : '') + '</div></li>';
       }).join('') + '</ol>';
-  return '<div class="qwq-card qwq-c' + card.letter + (shut ? ' closed' : '') + '">'
-    + '<div class="qwq-card-head"><span class="qwq-badge">' + card.letter + '</span><span>Card ' + card.letter + '</span><span class="qwq-count">' + card.words.length + ' words &middot; ' + qwqLevelDots(card.level) + '</span></div>'
+  return '<div class="qwq-card qwq-c' + card.letter + (shut ? ' closed' : '') + '" data-letter="' + card.letter + '">'
+    + '<div class="qwq-card-head"><span class="qwq-badge">' + card.letter + '</span><span class="qwq-cname">Card ' + card.letter + '</span><span class="qwq-count">' + card.words.length + ' words</span></div>'
     + body + '</div>';
 }
 function qwqRender() {
@@ -15599,11 +15775,10 @@ function qwqRender() {
   } else if (qwq.step === 'run') {
     const done = !qwq.running && qwq.remaining <= 0;
     const editable = !qwq.running && !qwq.revealed && !done;
-    const [cols, rows] = qwqLayout(qwq.cards.length);
-    const lines = qwq.perCard + 1.6;
-    const font = 'min(calc((100vh - 120px) / ' + rows + ' / ' + lines + ' * 0.56), calc((100vw - 40px) / ' + cols + ' / 9))';
+    const dark = qwqTheme() === 'dark', music = qwqMusicEnabled();
     html = '<div class="qwq-fbar">'
-      + '<button class="btn btn-sm" onclick="qwqBack()" title="Back to the group">&#10005;</button>'
+      + '<button class="btn qwq-ico" onclick="qwqBack()" title="Back to the group">&#10005;</button>'
+      + '<div class="qwq-brand">' + qwqLogo() + '<span>QUICK WORD QUIZ</span></div>'
       + '<div class="qwq-tbox">'
       + (editable ? '<button class="qwq-tadj" onclick="qwqAdjust(-15)" aria-label="15 seconds less">&minus;</button>' : '')
       + '<div class="qwq-timer' + (qwq.remaining <= 10 && qwq.running ? ' urgent' : '') + '" id="qwqTimer">' + qwqTime(qwq.remaining) + '</div>'
@@ -15611,13 +15786,15 @@ function qwqRender() {
       + '</div>'
       + (editable ? '<div class="qwq-tpresets">' + [30, 60, 90, 120, 180, 300].map(v => '<button class="btn btn-sm' + (v === qwq.seconds ? ' btn-primary' : '') + '" onclick="qwqAdjust(0,' + v + ')">' + qwqTime(v) + '</button>').join('') + '</div>' : '')
       + '<div class="qwq-actions">'
+      + '<button class="btn qwq-ico qwq-theme-btn" onclick="qwqToggleTheme()" title="' + (dark ? 'Light mode' : 'Dark mode') + '">' + (dark ? '&#9728;&#65039;' : '&#127769;') + '</button>'
+      + '<button class="btn qwq-ico qwq-music-btn' + (music ? '' : ' off') + '" onclick="qwqToggleMusic()" title="' + (music ? 'Music on' : 'Music off') + '">' + (music ? '&#127925;' : '&#128263;') + '</button>'
       + (qwq.revealed ? '' : '<button class="btn btn-primary" onclick="qwqToggleTimer()">' + (qwq.running ? '&#9208; Pause' : (done ? '&#128260; Restart' : '&#9654; Start')) + '</button>')
       + (editable && qwq.remaining === qwq.seconds ? '<button class="btn" onclick="qwqMakeCards()">&#128256; New cards</button>' : '')
       + (qwq.revealed ? '' : '<button class="btn" onclick="qwqToggleClosed()">' + (qwq.closed ? '&#128065; Open' : '&#128584; Close') + '</button>')
       + (qwq.revealed ? '<button class="btn btn-primary" onclick="qwqStartScoring()">&#11088; Give stars</button>' : '<button class="btn qwq-reveal" onclick="qwqReveal()">&#128161; Reveal answers</button>')
       + '</div></div>'
       + (done && qwq.closed ? '<div class="qwq-banner">&#9200; Time is up! Collect the papers and swap them, then press <b>Reveal answers</b>.</div>' : '')
-      + '<div class="qwq-grid" style="--cols:' + cols + ';--rows:' + rows + ';--wf:' + font + ';">' + qwq.cards.map(qwqCardHtml).join('') + '</div>';
+      + '<div class="qwq-grid" style="--gap:14px;">' + qwq.cards.map(qwqCardHtml).join('') + '</div>';
   } else if (qwq.step === 'score') {
     const rows = Object.entries(qwq.scores).map(([k, s]) => {
       const kk = esc(k).replace(/'/g, "\\'");
@@ -15650,7 +15827,9 @@ function qwqRender() {
   if (fs && root.parentNode !== document.body) document.body.appendChild(root);
   if (!fs && sec && root.parentNode !== sec) sec.appendChild(root);
   root.classList.toggle('qwq-fs', fs);
+  root.classList.toggle('qwq-dark', fs && qwqTheme() === 'dark');
   root.innerHTML = (qwq.step === 'run' ? '' : head) + html;
+  if (fs) qwqApplyFit();
 }
 </script>
 </body>
