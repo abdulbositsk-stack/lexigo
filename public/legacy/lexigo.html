@@ -1730,6 +1730,41 @@
 
 
   .qwq-head-name .qwq-logo { font-size:22px; margin-right:4px; }
+  .qwq-tiles { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; }
+  .qwq-tile { --t1:#3b82f6; --t2:#6366f1; position:relative; display:flex; flex-direction:column; align-items:flex-start; gap:6px; text-align:left; min-height:170px; padding:18px 18px 16px; border:0; border-radius:20px; cursor:pointer; color:#fff;
+    background:linear-gradient(140deg, var(--t1), var(--t2)); box-shadow:0 12px 28px color-mix(in srgb, var(--t2) 35%, transparent); transition:transform .15s, box-shadow .15s; overflow:hidden; }
+  .qwq-tile::after { content:""; position:absolute; right:-30px; top:-30px; width:120px; height:120px; border-radius:50%; background:rgba(255,255,255,.12); }
+  .qwq-tile:hover { transform:translateY(-2px); }
+  .qwq-tile.open { box-shadow:0 0 0 4px color-mix(in srgb, var(--t1) 35%, transparent), 0 14px 30px color-mix(in srgb, var(--t2) 40%, transparent); }
+  .qwq-tile-vocab { --t1:#10b981; --t2:#0d9488; } .qwq-tile-settings { --t1:#f59e0b; --t2:#ef4466; }
+  .qwq-tile-ic { width:48px; height:48px; border-radius:14px; background:rgba(255,255,255,.22); display:inline-flex; align-items:center; justify-content:center; font-size:26px; }
+  .qwq-tile-t { font-family:'Poppins',sans-serif; font-size:20px; font-weight:800; letter-spacing:.01em; }
+  .qwq-tile-s { font-size:13px; line-height:1.45; opacity:.95; font-weight:600; }
+  .qwq-tile-go { margin-top:auto; font-size:12px; font-weight:800; padding:4px 12px; border-radius:999px; background:rgba(255,255,255,.22); }
+  .qwq-pane { --t1:#3b82f6; margin:14px 0 4px; padding:16px; border-radius:18px; border:1px solid var(--border2); border-top:5px solid var(--t1); background:var(--surface); box-shadow:var(--shadow); animation:qwqRise .25s both; }
+  .qwq-pane-vocab { --t1:#10b981; } .qwq-pane-settings { --t1:#f59e0b; }
+  .qwq-pane .qs-row:first-child { margin-top:0; }
+  .qwq-pane-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:12px; }
+  .qwq-listhead { width:100%; display:flex; justify-content:space-between; align-items:center; padding:12px 14px; border-radius:14px; border:1px solid var(--border2); background:var(--surface2); color:var(--text); font-size:15px; font-weight:700; cursor:pointer; }
+  .qwq-abs { margin-left:8px; font-size:12px; padding:2px 8px; border-radius:999px; background:var(--amber-bg); color:var(--amber-text); }
+  .qwq-caret { font-size:16px; color:var(--text3); }
+  .qwq-list { list-style:none; margin:8px 0 0; padding:0; max-height:340px; overflow:auto; border:1px solid var(--border2); border-radius:14px; }
+  .qwq-li { display:flex; align-items:center; gap:10px; padding:8px 12px; border-bottom:1px solid var(--border2); }
+  .qwq-li:last-child { border-bottom:0; }
+  .qwq-li:nth-child(even) { background:var(--surface2); }
+  .qwq-li-n { width:28px; height:28px; border-radius:50%; background:var(--blue-bg); color:var(--blue-text); font-weight:800; font-size:13px; display:inline-flex; align-items:center; justify-content:center; flex:none; }
+  .qwq-li-name { flex:1; min-width:0; font-weight:800; color:var(--text); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .qwq-li.absent .qwq-li-name { color:var(--text3); text-decoration:line-through; }
+  .qwq-li-att { border-radius:999px; padding:5px 12px; font-size:12px; font-weight:800; cursor:pointer; border:1px solid; }
+  .qwq-li-att.on { background:var(--green-bg); color:var(--green-text); border-color:var(--green-border); }
+  .qwq-li-att.off { background:var(--amber-bg); color:var(--amber-text); border-color:var(--amber-border); }
+  .qwq-li-x { width:30px; height:30px; border-radius:50%; border:1px solid var(--border2); background:transparent; color:var(--text3); cursor:pointer; }
+  .qwq-li-x:hover { background:var(--red-bg); color:var(--red-text); border-color:var(--red-border); }
+  .qwq-list-empty { margin:8px 2px 0; }
+  .qwq-gobar { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:16px; padding-top:14px; border-top:1px solid var(--border2); }
+  .qwq-gobar .qwq-pool { margin:0 !important; }
+  .qwq-gobar .qwq-go { margin:0; font-size:17px; padding:14px 30px; }
+  @media (max-width: 760px) { .qwq-tiles { grid-template-columns:1fr; } .qwq-tile { min-height:0; } }
   .qwq-panel { margin:8px 0 10px; padding:12px; border:1px solid var(--border2); border-radius:14px; background:var(--surface2); }
   .qwq-panel-head { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
   .qwq-set-head { margin-top:14px; }
@@ -15539,13 +15574,18 @@ function qwqRemoveName(i) {
   removeRosterName(st.name);
   qwqRender();
 }
+function qwqPanel(id) { qwq.panel = qwq.panel === id ? '' : id; if (id === 'groups' && qwq.panel && roster.length <= 40 && qwq.listOpen == null) qwq.listOpen = true; qwqRender(); }
+function qwqToggleList() { qwq.listOpen = !qwq.listOpen; qwqRender(); }
 function qwqToggleAbsentAt(i) { const st = roster[i]; if (st) { toggleAbsent(st.name); qwqRender(); } }
 function qwqTgChip() {
-  const el = document.getElementById('qwqTgChip');
+  const el = document.getElementById('qwqTgChip') || document.getElementById('qwqTgMini');
   if (!el || typeof window.autoBotLinkedGroup !== 'function') return;
   const id = currentClassId;
   window.autoBotLinkedGroup(id).then(g => {
-    const e = document.getElementById('qwqTgChip'); if (!e || id !== currentClassId) return;
+    const e = document.getElementById('qwqTgChip') || document.getElementById('qwqTgMini'); if (!e || id !== currentClassId) return;
+    const m = document.getElementById('qwqTgMini');
+    if (m) m.innerHTML = g ? '&#9989; ' + esc(g.title || 'Telegram') : '&#9888;&#65039; Telegram not connected';
+    if (e.id !== 'qwqTgChip') return;
     e.innerHTML = g ? '<span class="qwq-tg on">&#9989; Telegram: ' + esc(g.title || 'connected') + '</span>'
       : '<button type="button" class="btn btn-sm" onclick="qwqConnectTelegram()">&#128279; Connect Telegram group</button>';
   }).catch(() => {});
@@ -15993,42 +16033,59 @@ function qwqRender() {
   if (qwq.step === 'setup') {
     const pool = qwqPool().length, need = st.cards * st.perCard;
     const lessons = qwqUnits(), nSel = lessons.filter(u => selectedUnitIds.includes(u.id)).length, nMissed = qwqMissedLoad().length;
-    const lessonHtml = '<div class="qwq-lessons">'
-      + '<div class="qwq-lessons-head"><span class="qs-label">Lessons</span><span class="hint">' + nSel + ' of ' + lessons.length + ' selected &middot; each card gets the same share of every lesson</span>'
-      + '<span class="qwq-lessons-tools"><button type="button" class="btn btn-sm" onclick="qwqAllUnits(true)">All</button><button type="button" class="btn btn-sm" onclick="qwqAllUnits(false)">None</button>'
-      + '<button type="button" class="btn btn-sm" onclick="qwqOpenWordBank()">&#127974; Word Bank</button></span></div>'
-      + (lessons.length ? '<div class="up-chip-row qwq-lesson-chips">' + lessons.map(u => {
-          const on = selectedUnitIds.includes(u.id);
-          return '<button type="button" class="up-chip up-unit' + (on ? ' selected' : '') + '" onclick="qwqToggleUnit(\'' + u.id + '\')">' + (on ? '&#10003; ' : '') + esc(u.name) + ' <span class="up-count">(' + (u.words || []).length + ')</span></button>';
-        }).join('') + '</div>' : '<p class="hint">No lessons in this group yet. Add some from the Word Bank.</p>')
-      + '</div>';
     const groups = visibleClasses();
     const absentN = roster.filter(x => isAbsent(x.name)).length;
-    const groupHtml = '<div class="qwq-panel">'
-      + '<div class="qwq-panel-head"><span class="qs-label">&#128101; Group</span>'
-      + '<select class="qwq-gsel" onchange="qwqSwitchGroup(this.value)">' + groups.map(g => '<option value="' + esc(g.id) + '"' + (g.id === currentClassId ? ' selected' : '') + '>' + esc(g.name) + '</option>').join('') + '</select>'
-      + '<span id="qwqTgChip" class="qwq-tgchip"></span></div>'
-      + '<div class="qwq-panel-sub"><span class="hint">' + roster.length + ' student' + (roster.length === 1 ? '' : 's') + (absentN ? ' &middot; ' + absentN + ' absent today' : '') + ' &middot; tap a name to mark absent</span></div>'
-      + (roster.length ? '<div class="qwq-roster">' + roster.map((x, i) => {
-          const ab = isAbsent(x.name);
-          return '<span class="qwq-st' + (ab ? ' absent' : '') + '"><button type="button" class="qwq-st-name" onclick="qwqToggleAbsentAt(' + i + ')" title="' + (ab ? 'Absent today, tap to mark present' : 'Tap to mark absent today') + '">' + (ab ? '&#128164; ' : '') + esc(x.name) + '</button>'
-            + '<button type="button" class="qwq-st-x" onclick="qwqRemoveName(' + i + ')" aria-label="Remove">&#10005;</button></span>';
-        }).join('') + '</div>' : '<p class="hint">No students yet. Add their names below.</p>')
-      + '<div class="row qwq-roster-add"><input type="text" id="qwqRosterInput" placeholder="Add students: Aliyev Ali, Karimova Malika..." onkeydown="if(event.key===\'Enter\')qwqAddNames()" /><button type="button" class="btn" onclick="qwqAddNames()">&#43; Add</button></div>'
+    const open = qwq.panel || '';
+    const tile = (id, icon, title, sub) => '<button type="button" class="qwq-tile qwq-tile-' + id + (open === id ? ' open' : '') + '" onclick="qwqPanel(\'' + id + '\')" aria-expanded="' + (open === id) + '">'
+      + '<span class="qwq-tile-ic">' + icon + '</span><span class="qwq-tile-t">' + title + '</span><span class="qwq-tile-s">' + sub + '</span>'
+      + '<span class="qwq-tile-go">' + (open === id ? 'Close &#9652;' : 'Open &#9662;') + '</span></button>';
+    const tiles = '<div class="qwq-tiles">'
+      + tile('groups', '&#128101;', 'My Groups', esc(cls ? cls.name : '') + '<br>' + roster.length + ' student' + (roster.length === 1 ? '' : 's') + (absentN ? ' &middot; ' + absentN + ' absent' : '') + '<br><span id="qwqTgMini">Telegram&hellip;</span>')
+      + tile('vocab', '&#128218;', 'Vocab Selection', nSel + ' of ' + lessons.length + ' lesson' + (lessons.length === 1 ? '' : 's') + '<br>' + pool + ' words' + (nMissed ? '<br>&#128257; ' + nMissed + ' coming back' : ''))
+      + tile('settings', '&#9881;&#65039;', 'Quiz Settings', st.cards + ' cards &middot; ' + st.perCard + ' words<br>' + qwqTime(st.seconds) + ' &middot; ' + (st.dir === 'en2uz' ? 'EN &rarr; UZ' : 'UZ &rarr; EN'))
       + '</div>';
+    let panel = '';
+    if (open === 'groups') {
+      const list = roster.map((x, i) => {
+        const ab = isAbsent(x.name);
+        return '<li class="qwq-li' + (ab ? ' absent' : '') + '"><span class="qwq-li-n">' + (i + 1) + '</span><span class="qwq-li-name">' + esc(x.name) + '</span>'
+          + '<button type="button" class="qwq-li-att ' + (ab ? 'off' : 'on') + '" onclick="qwqToggleAbsentAt(' + i + ')">' + (ab ? '&#128164; Absent' : '&#10003; Present') + '</button>'
+          + '<button type="button" class="qwq-li-x" onclick="qwqRemoveName(' + i + ')" aria-label="Remove ' + esc(x.name) + '">&#10005;</button></li>';
+      }).join('');
+      panel = '<div class="qwq-pane qwq-pane-groups">'
+        + '<div class="qwq-pane-row"><label class="qs-label">Group</label>'
+        + '<select class="qwq-gsel" onchange="qwqSwitchGroup(this.value)">' + groups.map(g => '<option value="' + esc(g.id) + '"' + (g.id === currentClassId ? ' selected' : '') + '>' + esc(g.name) + '</option>').join('') + '</select>'
+        + '<span id="qwqTgChip" class="qwq-tgchip"></span></div>'
+        + '<button type="button" class="qwq-listhead" onclick="qwqToggleList()" aria-expanded="' + !!qwq.listOpen + '">'
+        + '<span>&#128203; Students <b>' + roster.length + '</b>' + (absentN ? ' <span class="qwq-abs">' + absentN + ' absent today</span>' : '') + '</span>'
+        + '<span class="qwq-caret">' + (qwq.listOpen ? '&#9652;' : '&#9662;') + '</span></button>'
+        + (qwq.listOpen ? (roster.length ? '<ol class="qwq-list">' + list + '</ol>' : '<p class="hint qwq-list-empty">No students yet. Add their names below.</p>') : '')
+        + '<div class="row qwq-roster-add"><input type="text" id="qwqRosterInput" placeholder="Add students: Aliyev Ali, Karimova Malika..." onkeydown="if(event.key===\'Enter\')qwqAddNames()" /><button type="button" class="btn btn-primary" onclick="qwqAddNames()">&#43; Add</button></div>'
+        + '</div>';
+    } else if (open === 'vocab') {
+      panel = '<div class="qwq-pane qwq-pane-vocab">'
+        + '<div class="qwq-pane-row"><span class="hint">' + nSel + ' of ' + lessons.length + ' selected &middot; every card gets the same share of each lesson</span>'
+        + '<span class="qwq-lessons-tools"><button type="button" class="btn btn-sm" onclick="qwqAllUnits(true)">All</button><button type="button" class="btn btn-sm" onclick="qwqAllUnits(false)">None</button>'
+        + '<button type="button" class="btn btn-sm" onclick="qwqOpenWordBank()">&#127974; Word Bank</button></span></div>'
+        + (lessons.length ? '<div class="up-chip-row qwq-lesson-chips">' + lessons.map(u => {
+            const on = selectedUnitIds.includes(u.id);
+            return '<button type="button" class="up-chip up-unit' + (on ? ' selected' : '') + '" onclick="qwqToggleUnit(\'' + u.id + '\')">' + (on ? '&#10003; ' : '') + esc(u.name) + ' <span class="up-count">(' + (u.words || []).length + ')</span></button>';
+          }).join('') + '</div>' : '<p class="hint">No lessons in this group yet. Add some from the Word Bank.</p>')
+        + (nMissed ? '<p class="hint">&#128257; ' + nMissed + ' word' + (nMissed === 1 ? '' : 's') + ' missed last time will come back in the next cards.</p>' : '')
+        + '</div>';
+    } else if (open === 'settings') {
+      panel = '<div class="qwq-pane qwq-pane-settings">'
+        + '<div class="qs-row"><span class="qs-label">Cards</span>' + qwqChips('cards', [2, 3, 4, 5, 6, 8], st.cards, v => QWQ_LETTERS.slice(0, v).join(' ')) + '</div>'
+        + '<div class="qs-row"><span class="qs-label">Words per card</span>' + qwqChips('perCard', [3, 4, 5, 6, 8, 10], st.perCard, v => v) + '</div>'
+        + '<div class="qs-row"><span class="qs-label">Time</span>' + qwqChips('seconds', [30, 60, 90, 120, 180, 300], st.seconds, v => qwqTime(v)) + '</div>'
+        + '<div class="qs-row"><span class="qs-label">Students write</span>' + qwqChips('dir', ['en2uz', 'uz2en'], st.dir, v => v === 'en2uz' ? 'English &rarr; Uzbek' : 'Uzbek &rarr; English') + '</div>'
+        + '</div>';
+    }
     html = '<div class="card qwq-setup">'
-      + '<p class="qwq-lead">Make paper cards for the whole class. Give each student a card letter, start the timer, and they write the translations on paper.</p>'
-      + groupHtml
-      + lessonHtml
-      + '<div class="qwq-panel-head qwq-set-head"><span class="qs-label">&#9881;&#65039; Quiz settings</span></div>'
-      + '<div class="qs-row"><span class="qs-label">Cards</span>' + qwqChips('cards', [2, 3, 4, 5, 6, 8], st.cards, v => QWQ_LETTERS.slice(0, v).join(' ')) + '</div>'
-      + '<div class="qs-row"><span class="qs-label">Words per card</span>' + qwqChips('perCard', [3, 4, 5, 6, 8, 10], st.perCard, v => v) + '</div>'
-      + '<div class="qs-row"><span class="qs-label">Time</span>' + qwqChips('seconds', [30, 60, 90, 120, 180, 300], st.seconds, v => qwqTime(v)) + '</div>'
-      + '<div class="qs-row"><span class="qs-label">Students write</span>' + qwqChips('dir', ['en2uz', 'uz2en'], st.dir, v => v === 'en2uz' ? 'English &rarr; Uzbek' : 'Uzbek &rarr; English') + '</div>'
-      + '<p class="hint qwq-pool">' + pool + ' selected words &middot; ' + need + ' needed'
-      + (pool && pool < need ? ' &mdash; some words will repeat on different cards.' : '') + (pool ? '' : ' &mdash; tick at least one lesson above.')
-      + (nMissed ? ' &middot; &#128257; ' + nMissed + ' word' + (nMissed === 1 ? '' : 's') + ' missed last time will come back' : '') + '</p>'
-      + '<button class="btn btn-primary qwq-go" onclick="qwqMakeCards()"' + (pool ? '' : ' disabled') + '>&#9889; Make the cards</button>'
+      + tiles + panel
+      + '<div class="qwq-gobar"><p class="hint qwq-pool">' + pool + ' selected words &middot; ' + need + ' needed'
+      + (pool && pool < need ? ' &mdash; some words will repeat on different cards.' : '') + (pool ? '' : ' &mdash; open Vocab Selection and tick a lesson.') + '</p>'
+      + '<button class="btn btn-primary qwq-go" onclick="qwqMakeCards()"' + (pool ? '' : ' disabled') + '>&#9889; Make the cards</button></div>'
       + '</div>';
   } else if (qwq.step === 'run') {
     const done = !qwq.running && qwq.remaining <= 0;
