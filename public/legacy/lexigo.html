@@ -812,6 +812,17 @@
 
   /* Progress bar chart — replaces the 1st/2nd/3rd podium */
   .tg-bars { display: flex; flex-direction: column; gap: 9px; }
+  .tgp-list { display: flex; flex-direction: column; gap: 10px; }
+  .tgp-row { background: #f9fafc; border: 1px solid #e5e9f4; border-radius: 14px; padding: 12px 16px; }
+  .tgp-top { display: grid; grid-template-columns: 190px 1fr 86px; align-items: center; gap: 14px; }
+  .tgp-name { font-weight: 800; font-size: 17px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tgp-score { text-align: right; line-height: 1.1; }
+  .tgp-score b { display: block; font-size: 18px; font-weight: 900; }
+  .tgp-score span { font-size: 13px; color: #5b6b8c; font-weight: 700; }
+  .tgp-miss { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 14px; }
+  .tgp-miss-label { color: #b42318; font-weight: 800; margin-right: 2px; }
+  .tgp-word { background: #fdecec; color: #b42318; border-radius: 999px; padding: 3px 10px; font-weight: 700; }
+  .tgp-clean { color: #1f8a4c; font-weight: 800; }
   .tg-bar-row { display: grid; grid-template-columns: 200px 1fr 52px; align-items: center; gap: 14px; }
   .tg-bar-name { font-weight: 800; font-size: 13.5px; color: #22315e; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .tg-bar-track { position: relative; height: 22px; background: #eef1f8; border-radius: 999px; }
@@ -13521,6 +13532,7 @@ function computeTelegramReportForRange(classId, range) {
     className: cls ? cls.name : 'Class',
     unitName: cls ? getClassUnitLabel(cls.id) : '',
     dateLabel: range.label,
+    range: range,
     total: totalStudents,
     completed: completedEntries.map(e => e.name),
     perStudent: sorted,
@@ -13613,6 +13625,51 @@ function tgBattleDetailLines(report) {
   });
   lines.push('');
   return lines;
+}
+
+// Period label in Uzbek, with the real date for one-day reports.
+const UZ_MONTHS = ['yanvar', 'fevral', 'mart', 'aprel', 'may', 'iyun', 'iyul', 'avgust', 'sentabr', 'oktabr', 'noyabr', 'dekabr'];
+function uzDateLabel(report) {
+  const label = String(report.dateLabel || '');
+  const day = ts => { const d = new Date(ts); return d.getDate() + '-' + UZ_MONTHS[d.getMonth()]; };
+  const start = report.range && report.range.startTs;
+  if (label === 'Today') return 'Bugun, ' + day(Date.now());
+  if (label === 'Yesterday') return 'Kecha, ' + day(Date.now() - 86400000);
+  if (label === 'Last 7 days') return "So'nggi 7 kun";
+  if (label === 'All time') return 'Barcha vaqt';
+  if (/^Last session/.test(label) && start) return "Oxirgi dars, " + day(start);
+  if (report.range && report.range.slug === 'monthly' && start) { const d = new Date(start); return UZ_MONTHS[d.getMonth()].replace(/^./, c => c.toUpperCase()) + ' ' + d.getFullYear(); }
+  return label;
+}
+
+// The one caption that goes under the poster: short, fixed size, Uzbek.
+function buildTelegramPosterCaption(report) {
+  const top = (report.podiumTiers || [])[0];
+  const best = top && top.names.length
+    ? `🌟 Eng yaxshi natija (${top.pct}%): ${top.names.slice(0, 5).join(', ')}${top.names.length > 5 ? ' +' + (top.names.length - 5) : ''}`
+    : null;
+  const hard = report.overallDifficult.length
+    ? `😖 Eng qiyin so'zlar: ${report.overallDifficult.slice(0, 6).map(w => w.word).join(', ')}`
+    : null;
+  const lines = [
+    `📚 ${report.className} — lug'at mashqi hisoboti`,
+    `📅 ${uzDateLabel(report)}`,
+    '',
+    `✅ Topshirdi: ${report.completed.length} / ${report.total}`,
+    `📊 Guruh o'rtacha natijasi: ${report.average}%`,
+    best,
+    tgBattleLine(report),
+    report.smartCard.length ? `🟩 Smart Card: ${report.smartCard.length} nafar` : null,
+    report.warningCard.length ? `🟥 Qo'shimcha mashq kerak: ${report.warningCard.length} nafar` : null,
+    report.missing.length ? `❌ Topshirmadi: ${report.missing.join(', ')}` : null,
+    hard,
+    '',
+    "Har bir o'quvchining natijasi va xato so'zlari rasmda 👆",
+    'Smart Education 🦉'
+  ].filter(l => l !== null);
+  let text = lines.join('\n');
+  if (text.length > 1000) text = lines.filter(l => !/^❌ Topshirmadi/.test(l)).join('\n').slice(0, 1000);
+  return text;
 }
 
 function buildTelegramCaptionShort(report) {
@@ -13710,29 +13767,36 @@ function buildTelegramReportDOM(report) {
   wrap.style.left = '-99999px';
   wrap.style.top = '0';
 
-  // No places awarded — just each student's percentage as a bar, measured
-  // against the class average, so ties simply look like equal bars.
+  // One row per student: name, a bar for the score, the score itself and the
+  // words they missed, so parents find everything about their child at once.
   const podiumHtml = report.perStudent.length ? (
     '<div class="tg-report-section">'
-    + '<div class="gp-report-section-title">📊 ' + esc(report.dateLabel) + ' — every student</div>'
-    + '<div class="tg-bars">'
+    + '<div class="gp-report-section-title">📋 Har bir o\'quvchi natijasi</div>'
+    + '<div class="tgp-list">'
     + report.perStudent.map(e => {
         const band = e.pct >= 80 ? 'good' : (e.pct >= 50 ? 'mid' : 'low');
-        return '<div class="tg-bar-row">'
-          + '<div class="tg-bar-name">' + esc(e.name) + '</div>'
-          + '<div class="tg-bar-track">'
-          +   '<div class="tg-bar-fill ' + band + '" style="width:' + Math.max(2, Math.min(100, e.pct)) + '%;"></div>'
-          +   '<div class="tg-bar-avg-line" style="left:' + Math.max(0, Math.min(100, report.average)) + '%;"></div>'
+        const scoreLabel = e.correctSum + '/' + e.totalSum;
+        const missed = e.missedWords.length
+          ? '<div class="tgp-miss"><span class="tgp-miss-label">Xato so\'zlar:</span>' + e.missedWords.map(w => '<span class="tgp-word">' + esc(w) + '</span>').join('') + '</div>'
+          : '<div class="tgp-miss tgp-clean">Xato yo\'q 🎉</div>';
+        return '<div class="tgp-row">'
+          + '<div class="tgp-top">'
+          +   '<div class="tgp-name">' + esc(e.name) + '</div>'
+          +   '<div class="tg-bar-track">'
+          +     '<div class="tg-bar-fill ' + band + '" style="width:' + Math.max(2, Math.min(100, e.pct)) + '%;"></div>'
+          +     '<div class="tg-bar-avg-line" style="left:' + Math.max(0, Math.min(100, report.average)) + '%;"></div>'
+          +   '</div>'
+          +   '<div class="tgp-score"><b>' + e.pct + '%</b><span>' + scoreLabel + '</span></div>'
           + '</div>'
-          + '<div class="tg-bar-pct">' + e.pct + '%</div>'
+          + missed
           + '</div>';
       }).join('')
     + '</div>'
     + '<div class="tg-bar-legend">'
-    +   '<span><i class="good"></i>80% and above</span>'
+    +   '<span><i class="good"></i>80% va undan yuqori</span>'
     +   '<span><i class="mid"></i>50–79%</span>'
-    +   '<span><i class="low"></i>Below 50%</span>'
-    +   '<span><i class="avg"></i>Class average ' + report.average + '%</span>'
+    +   '<span><i class="low"></i>50% dan past</span>'
+    +   '<span><i class="avg"></i>Guruh o\'rtachasi ' + report.average + '%</span>'
     + '</div></div>'
   ) : '';
 
@@ -13741,16 +13805,16 @@ function buildTelegramReportDOM(report) {
   const bs = report.battleSummary;
   const battleHtml = bs && bs.fighters.length ? (
     '<div class="tg-report-section">'
-    + '<div class="gp-report-section-title">⚔️ Battle progress'
-    +   (bs.count > 1 ? ' — ' + bs.count + ' battles' : '') + '</div>'
+    + '<div class="gp-report-section-title">⚔️ Battle natijalari'
+    +   (bs.count > 1 ? ' — ' + bs.count + ' ta battle' : '') + '</div>'
     + (bs.latestChampions.length && bs.latestTop
         ? '<div class="tg-battle">'
           + '<div class="tg-battle-emoji">🏆</div>'
           + '<div><div class="tg-battle-name">' + bs.latestChampions.map(esc).join(' & ')
-          +   (bs.latestChampions.length > 1 ? ' — joint champions' : '') + '</div>'
+          +   (bs.latestChampions.length > 1 ? ' — teng g\'oliblar' : '') + '</div>'
           +   '<div class="tg-battle-sub">' + bs.latestTop.score + ' / ' + bs.latestTop.total
-          +   ' correct in ' + fmtBattleTime(bs.latestTop.ms)
-          +   (bs.count > 1 ? ' · most recent battle' : '') + '</div></div>'
+          +   ' to\'g\'ri, ' + fmtBattleTime(bs.latestTop.ms)
+          +   (bs.count > 1 ? ' · oxirgi battle' : '') + '</div></div>'
           + '</div>'
         : '')
     + '<div class="tg-bars" style="margin-top:14px;">'
@@ -13769,28 +13833,28 @@ function buildTelegramReportDOM(report) {
     + '</div>'
     + '<div class="tg-battle-others">'
     +   bs.fighters.map(f => esc(f.name) + ' ' + f.correct + '/' + f.possible
-        + (f.battles > 1 ? ' (' + f.battles + ' battles)' : '')
-        + (f.bestMs != null ? ' · best ' + fmtBattleTime(f.bestMs) : '')).join(' · ')
+        + (f.battles > 1 ? ' (' + f.battles + ' ta battle)' : '')
+        + (f.bestMs != null ? ' · eng tez ' + fmtBattleTime(f.bestMs) : '')).join(' · ')
     + '</div>'
     + '</div>'
   ) : '';
 
-  const smartHtml = '<div class="tg-report-section"><div class="gp-report-section-title">🟩 Smart Card (80%+)</div>'
+  const smartHtml = '<div class="tg-report-section"><div class="gp-report-section-title">🟩 Smart Card olganlar (80%+)</div>'
     + (report.smartCard.length
         ? '<div class="tg-chip-row">' + report.smartCard.map(n => '<span class="tg-chip tg-chip-good">' + esc(n) + '</span>').join('') + '</div>'
-        : '<p class="hint">No one yet — encourage them tomorrow!</p>')
+        : '<p class="hint">Hozircha hech kim. Ertaga albatta! 💪</p>')
     + '</div>';
 
-  const warningHtml = '<div class="tg-report-section"><div class="gp-report-section-title">🟥 Needs more practice (&lt;50%)</div>'
+  const warningHtml = '<div class="tg-report-section"><div class="gp-report-section-title">🟥 Qo\'shimcha mashq kerak (50% dan past)</div>'
     + (report.warningCard.length
         ? '<div class="tg-chip-row">' + report.warningCard.map(n => '<span class="tg-chip tg-chip-warn">' + esc(n) + '</span>').join('') + '</div>'
-        : '<p class="hint">Nobody in this range today. 🎉</p>')
+        : '<p class="hint">Bunday o\'quvchi yo\'q. 🎉</p>')
     + '</div>';
 
-  const missingHtml = '<div class="tg-report-section"><div class="gp-report-section-title">❌ Did not do the quiz</div>'
+  const missingHtml = '<div class="tg-report-section"><div class="gp-report-section-title">❌ Topshirmaganlar</div>'
     + (report.missing.length
         ? '<div class="tg-chip-row">' + report.missing.map(n => '<span class="tg-chip tg-chip-missing">' + esc(n) + '</span>').join('') + '</div>'
-        : '<p class="hint">Everyone completed it! 🎉</p>')
+        : '<p class="hint">Hamma topshirdi! 🎉</p>')
     + '</div>';
 
   // Per-student scores only. The missed words deliberately do NOT appear in
@@ -13813,22 +13877,22 @@ function buildTelegramReportDOM(report) {
         : '<p class="hint">No quizzes completed in this range.</p>')
     + '</div>';
 
-  const overallDifficultHtml = '<div class="tg-report-section"><div class="gp-report-section-title">😖 Overall most difficult words</div>'
+  const overallDifficultHtml = '<div class="tg-report-section"><div class="gp-report-section-title">😖 Eng qiyin so\'zlar</div>'
     + (report.overallDifficult.length
         ? '<div class="tg-chip-row">' + report.overallDifficult.map(w => '<span class="tg-chip tg-chip-warn">' + esc(w.word) + ' (' + w.wrong + '&#10007;)</span>').join('') + '</div>'
-        : '<p class="hint">No missed words in this range. 🎉</p>')
+        : '<p class="hint">Xato so\'z yo\'q. 🎉</p>')
     + '</div>';
 
   wrap.innerHTML =
     '<div class="gp-report-header">'
     + '<div class="gp-report-brand">'
     + '<div class="gp-report-logo">📘</div>'
-    + '<div><div class="gp-report-brand-text">LexiGo</div><div class="gp-report-brand-sub">English Vocabulary Learning</div></div>'
+    + '<div><div class="gp-report-brand-text">LexiGo</div><div class="gp-report-brand-sub">Ingliz tili lug\'at mashqi</div></div>'
     + '</div>'
-    + '<div class="gp-report-meta">Report<br/>' + esc(report.dateLabel) + '</div>'
+    + '<div class="gp-report-meta">Hisobot<br/>' + esc(uzDateLabel(report)) + '</div>'
     + '</div>'
     + '<div class="gp-report-title">' + esc(report.className) + '</div>'
-    + '<div class="gp-report-subtitle">' + (report.unitName ? esc(report.unitName) + ' — ' : '') + report.total + ' student' + (report.total !== 1 ? 's' : '') + '</div>'
+    + '<div class="gp-report-subtitle">' + (report.unitName ? esc(report.unitName) + ' — ' : '') + report.total + ' nafar o\'quvchi · topshirdi ' + report.completed.length + ' · o\'rtacha ' + report.average + '%</div>'
     + '<div class="gp-report-summary" style="display:none;">'
     + '<div class="gp-report-summary-card"><div class="gp-report-summary-num">' + report.completed.length + '/' + report.total + '</div><div class="gp-report-summary-label">Completed</div></div>'
     + '<div class="gp-report-summary-card"><div class="gp-report-summary-num">' + report.average + '%</div><div class="gp-report-summary-label">Average</div></div>'
@@ -13836,11 +13900,10 @@ function buildTelegramReportDOM(report) {
     + '<div class="gp-report-summary-card"><div class="gp-report-summary-num">' + report.lowest + '%</div><div class="gp-report-summary-label">Lowest</div></div>'
     + '<div class="gp-report-summary-card"><div class="gp-report-summary-num">' + report.completionRate + '%</div><div class="gp-report-summary-label">Completion</div></div>'
     + '</div>'
-    + podiumHtml + battleHtml + smartHtml + warningHtml + missingHtml + studentsHtml + overallDifficultHtml
+    + podiumHtml + battleHtml + smartHtml + warningHtml + missingHtml + overallDifficultHtml
     + '<div class="tg-quote">' + esc(report.quote) + '</div>'
     + '<div class="tg-brand-owl">Smart Education 🦉</div>'
-    + '<div class="gp-report-footer">' + esc(report.className) + ' &middot; average ' + report.average
-    + '% &middot; ' + report.perStudent.length + ' of ' + report.total + ' students &middot; LexiGo</div>';
+    + '<div class="gp-report-footer">' + esc(report.className) + ' &middot; ' + esc(uzDateLabel(report)) + ' &middot; LexiGo</div>';
   return wrap;
 }
 
@@ -14867,22 +14930,17 @@ function copyCurrentUnitToOtherMode() {
     const already = sentToday(classId);
     if (already && !confirm('Today\'s report was already sent at ' + new Date(already.at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + '. Send an updated one?')) return;
     autoBotSending = true;
-    setSimpleReportStatus(statusTarget, '⏳ Preparing the report and progress graph…');
+    setSimpleReportStatus(statusTarget, '⏳ Preparing the report poster…');
     const dom = buildTelegramReportDOM(data.report);
     document.body.appendChild(dom);
     try {
       await loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
-      const canvas = await html2canvas(dom, { backgroundColor: '#ffffff', scale: 1 });
+      const scale = dom.offsetHeight > 2600 ? 1.5 : 2;
+      const canvas = await html2canvas(dom, { backgroundColor: '#ffffff', scale });
       const imageDataUrl = canvas.toDataURL('image/png');
-      const chartDataUrl = await weeklyChartPng(classId);
       setSimpleReportStatus(statusTarget, '⏳ Sending to Telegram…');
-      const result = await autoBotRequest('send', {
-        classId,
-        text: buildTelegramCaption(data.report),
-        shortText: buildTelegramCaptionShort(data.report),
-        imageDataUrl,
-        chartDataUrl
-      });
+      const caption = buildTelegramPosterCaption(data.report);
+      const result = await autoBotRequest('send', { classId, text: caption, shortText: caption, imageDataUrl });
       const title = result.group && result.group.title ? result.group.title : 'your Telegram group';
       markSentToday(classId, title);
       if (classId === currentClassId) window.renderReporter();

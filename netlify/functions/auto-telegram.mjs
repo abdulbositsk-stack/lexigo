@@ -99,7 +99,7 @@ async function collectSharedPairs(store, token) {
     await store.set('pair/' + code + '.json', JSON.stringify({
       id: String(message.chat.id), title: String(message.chat.title || 'Telegram group'), at: Date.now()
     }));
-    telegram(token, 'sendMessage', { chat_id: message.chat.id, text: '✅ LexiGo is connected to this group. Reports will arrive here.' }).catch(() => {});
+    telegram(token, 'sendMessage', { chat_id: message.chat.id, text: '✅ LexiGo ushbu guruhga ulandi. Hisobotlar shu yerga keladi.' }).catch(() => {});
   }
   if (next !== (state.next || 0)) await store.set('shared/offset.json', JSON.stringify({ next, at: Date.now() }));
 }
