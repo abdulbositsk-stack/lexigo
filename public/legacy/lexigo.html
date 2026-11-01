@@ -1298,13 +1298,14 @@
     border-bottom:1px solid rgba(180,190,220,.25);
   }
   .att-row:last-child { border-bottom:none; }
-  .att-row.used { opacity:.62; }
+  .att-row.used > :not(.att-again) { opacity:.62; }
   .att-num {
     width:26px; text-align:right; font-variant-numeric:tabular-nums;
     font-size:12px; font-weight:800; color:var(--text3);
   }
   .att-name { flex:1; font-size:14.5px; font-weight:700; color:var(--text); }
   .att-tick { color:var(--green-text); font-weight:800; }
+  .att-again { margin-left:6px; padding:3px 10px; border-radius:999px; border:1px solid var(--blue-border); background:var(--blue-bg); color:var(--blue-text); font-size:12px; font-weight:800; cursor:pointer; white-space:nowrap; }
 
   /* --- Pick One --- */
   .pick-card { margin-bottom:14px; text-align:center; }
@@ -4768,11 +4769,41 @@ function renderRosterList() {
       + bulkTick('roster', studentKey(x.s.name))
       + '<span class="att-num">' + num + '</span>'
       + '<span class="att-name">' + esc(x.s.name) + '</span>'
-      + (abs ? '<span class="att-abs-tag">absent</span>' : (used ? '<span class="att-tick" title="Picked today">&#10003;</span>' : ''))
+      + (abs ? '<span class="att-abs-tag">absent</span>' : (used ? '<span class="att-tick" title="Picked today">&#10003;</span>'
+          + '<button class="att-again" onclick="askStudentAgain(\'' + nameArg + '\')" title="Ask this student again">&#8635; Ask again</button>' : ''))
       + '<button class="att-abs-btn' + (abs ? ' is-absent' : '') + '" onclick="toggleAbsent(\'' + nameArg + '\')" title="' + (abs ? 'Mark as present' : 'Mark as absent today') + '">' + (abs ? '&#128694;' : '&#128587;') + '</button>'
       + '<button class="roster-x" onclick="removeRosterName(\'' + nameArg + '\')" title="Remove">&#10005;</button>'
       + '</div>';
   }).join('');
+}
+
+// "Ask again": a student already asked today (for example after a mistake)
+// becomes the next pick. Their earlier quiz result from today is removed, so
+// the new one replaces it in progress and in the report.
+function askStudentAgain(name) {
+  const key = studentKey(name);
+  const now = new Date();
+  const dayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+  const todays = students.filter(r => studentKey(r.name) === key && r.date >= dayStart && r.quizType !== 'quick');
+  const msg = name + ' was already asked today.\n\nAsk them again now?'
+    + (todays.length ? '\nTheir earlier result from today (' + todays.map(r => r.score + '/' + r.total).join(', ') + ') will be replaced by the new one.' : '');
+  if (!confirm(msg)) return;
+  if (todays.length) {
+    students = students.filter(r => todays.indexOf(r) === -1);
+    saveResultsData();
+    ['renderResults', 'renderProgressPanel', 'renderReporter', 'renderHubProgressSummary', 'renderBattleBanner'].forEach(fn => {
+      try { if (typeof window[fn] === 'function') window[fn](); } catch (e) {}
+    });
+  }
+  usedToday.names = usedToday.names.filter(n => studentKey(n) !== key);
+  saveUsedToday();
+  if (quizMode !== 'random' && typeof setQuizMode === 'function') { try { setQuizMode('random'); } catch (e) {} }
+  nextRandomStudent = name;
+  renderRosterPanel();
+  renderNextStudentBox();
+  announceNextStudent();
+  const box = document.getElementById('pickOneBody');
+  if (box) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 function pickNextRandomStudent() {
