@@ -49,3 +49,10 @@ Settings, and restore it on the new address.
 npm run build
 npx wrangler pages dev dist --kv LEXIGO_KV
 ```
+
+## Check the settings
+
+Open `/api/health` on the site. It shows `true`/`false` for each secret and
+binding (never the values). Secrets only apply to a new deployment, and the
+project must be connected to Git (Settings → Build → Git repository) for a push
+to `main` to deploy.
