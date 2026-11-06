@@ -10,6 +10,7 @@ and also on Netlify (`netlify/`, kept as a fallback).
 | `/api/telegram`     | Older relay-key Telegram sender           | `TELEGRAM_BOT_TOKEN`, `TELEGRAM_RELAY_KEY` |
 | `/api/cloud-sync`   | Cloud sync with a private code            | `LEXIGO_KV`                            |
 | `/api/ai-words`     | AI word import (Gemini)                   | `GEMINI_API_KEY` (optional `GEMINI_MODEL`) |
+| `/api/health`       | Shows which settings are set (true/false only) | nothing |
 
 ## One-time setup
 
